@@ -1,10 +1,24 @@
 import { z } from "zod";
 
-export const preorderSchema = z.object({
-  fullName: z.string().min(2, "Vui long nhap ten hop le"),
-  email: z.email("Email khong hop le"),
-  phone: z.string().min(9, "So dien thoai khong hop le"),
-  note: z.string().max(300, "Ghi chu toi da 300 ky tu").optional()
-});
+interface ValidationMessages {
+  fullName: string;
+  email: string;
+  phone: string;
+  note: string;
+}
 
-export type PreorderInput = z.infer<typeof preorderSchema>;
+export function getPreorderSchema(validation: ValidationMessages) {
+  return z.object({
+    fullName: z.string().min(2, validation.fullName),
+    email: z.email(validation.email),
+    phone: z.string().min(9, validation.phone),
+    note: z.string().max(300, validation.note).optional()
+  });
+}
+
+export type PreorderInput = {
+  fullName: string;
+  email: string;
+  phone: string;
+  note?: string;
+};

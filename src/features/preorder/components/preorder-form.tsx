@@ -2,19 +2,24 @@
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useMutation } from "@tanstack/react-query";
+import { useMemo } from "react";
 import { useForm } from "react-hook-form";
 import { Button } from "@/components/ui/button";
-import { preorderSchema, type PreorderInput } from "@/features/preorder/schema/preorder-schema";
+import { getPreorderSchema, type PreorderInput } from "@/features/preorder/schema/preorder-schema";
 import { submitPreorder } from "@/features/preorder/services/preorder-service";
+import { useI18n } from "@/lib/i18n/provider";
 
 export function PreorderForm() {
+  const { t } = useI18n();
+  const schema = useMemo(() => getPreorderSchema(t.validation), [t.validation]);
+
   const {
     register,
     handleSubmit,
     reset,
     formState: { errors }
   } = useForm<PreorderInput>({
-    resolver: zodResolver(preorderSchema),
+    resolver: zodResolver(schema),
     defaultValues: { fullName: "", email: "", phone: "", note: "" }
   });
 
@@ -22,50 +27,50 @@ export function PreorderForm() {
     mutationFn: submitPreorder,
     onSuccess: () => {
       reset();
-      window.alert("Dang ky pre-order thanh cong.");
+      window.alert(t.success);
     },
     onError: () => {
-      window.alert("Dang ky that bai. Thu lai sau.");
+      window.alert(t.error);
     }
   });
 
   return (
     <form
       onSubmit={handleSubmit((values) => preorderMutation.mutate(values))}
-      className="space-y-4 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"
+      className="space-y-5"
     >
-      <h2 className="text-xl font-semibold text-slate-900">Dat truoc AIva Smart Glasses</h2>
+      <h2 className="text-lg font-bold uppercase tracking-[0.1em] text-on-surface">{t.preorderTitle}</h2>
       <FieldError message={errors.fullName?.message}>
         <input
           {...register("fullName")}
-          placeholder="Ho va ten"
-          className="w-full rounded-xl border border-slate-300 px-4 py-3 outline-none ring-brand-300 focus:ring"
+          placeholder={t.fullName}
+          className="w-full rounded-xl border border-white/20 bg-white/5 px-4 py-3 text-sm text-on-surface outline-none transition-all placeholder:text-on-surface-variant/40 focus-visible:border-brand-gold/40 focus-visible:ring-1 focus-visible:ring-brand-gold/20"
         />
       </FieldError>
       <FieldError message={errors.email?.message}>
         <input
           {...register("email")}
-          placeholder="Email"
-          className="w-full rounded-xl border border-slate-300 px-4 py-3 outline-none ring-brand-300 focus:ring"
+          placeholder={t.email}
+          className="w-full rounded-xl border border-white/20 bg-white/5 px-4 py-3 text-sm text-on-surface outline-none transition-all placeholder:text-on-surface-variant/40 focus-visible:border-brand-gold/40 focus-visible:ring-1 focus-visible:ring-brand-gold/20"
         />
       </FieldError>
       <FieldError message={errors.phone?.message}>
         <input
           {...register("phone")}
-          placeholder="So dien thoai"
-          className="w-full rounded-xl border border-slate-300 px-4 py-3 outline-none ring-brand-300 focus:ring"
+          placeholder={t.phone}
+          className="w-full rounded-xl border border-white/20 bg-white/5 px-4 py-3 text-sm text-on-surface outline-none transition-all placeholder:text-on-surface-variant/40 focus-visible:border-brand-gold/40 focus-visible:ring-1 focus-visible:ring-brand-gold/20"
         />
       </FieldError>
       <FieldError message={errors.note?.message}>
         <textarea
           {...register("note")}
-          placeholder="Nhu cau su dung (tuy chon)"
+          placeholder={t.note}
           rows={3}
-          className="w-full rounded-xl border border-slate-300 px-4 py-3 outline-none ring-brand-300 focus:ring"
+          className="w-full resize-none rounded-xl border border-white/20 bg-white/5 px-4 py-3 text-sm text-on-surface outline-none transition-all placeholder:text-on-surface-variant/40 focus-visible:border-brand-gold/40 focus-visible:ring-1 focus-visible:ring-brand-gold/20"
         />
       </FieldError>
       <Button fullWidth type="submit" disabled={preorderMutation.isPending}>
-        {preorderMutation.isPending ? "Dang gui..." : "Gui dang ky"}
+        {preorderMutation.isPending ? t.submitting : t.submit}
       </Button>
     </form>
   );
@@ -75,7 +80,7 @@ function FieldError({ message, children }: { message?: string; children: React.R
   return (
     <div className="space-y-1">
       {children}
-      {message ? <p className="text-sm text-red-600">{message}</p> : null}
+      {message ? <p className="text-sm text-[#ff8f8f]">{message}</p> : null}
     </div>
   );
 }
