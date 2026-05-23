@@ -61,13 +61,13 @@ export function Home3DScroll() {
           <AivaGlasses3D scrollY={scrollY} />
         </div>
 
-        <div className="relative h-full flex items-center">
-          <div className="w-full max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center pointer-events-none">
-            <div className="relative h-[55vh]">
+        <div className="relative h-full flex items-start pt-32 md:pt-40">
+          <div className="w-full max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-start pointer-events-none">
+            <div className="relative h-[35vh]">
               {SECTIONS.map((s, i) => (
                 <div
                   key={s.tag}
-                  className="absolute inset-0 flex flex-col justify-center transition-all duration-700"
+                  className="absolute inset-0 flex flex-col justify-start pt-16 transition-all duration-700"
                   style={{
                     opacity: i === active ? 1 : 0,
                     transform: `translateY(${(i - active) * 30}px)`
