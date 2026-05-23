@@ -7,22 +7,26 @@ const SECTIONS = [
   {
     tag: "Giới thiệu",
     title: "Gặp AIva — đôi mắt AI của bạn",
-    desc: "AIva là chiếc kính thông minh nhìn vào màn hình của bạn, hiểu bạn đang ở đâu trong ứng dụng, và nói cho bạn biết bước tiếp theo."
+    desc: "AIva là chiếc kính thông minh nhìn vào màn hình của bạn, hiểu bạn đang ở đâu trong ứng dụng, và nói cho bạn biết bước tiếp theo.",
+    position: "top-24 right-[15%]"
   },
   {
     tag: "Camera",
     title: "Camera đọc màn hình thời gian thực",
-    desc: "Cảm biến 12MP chống loá hướng xuống màn hình điện thoại hoặc laptop."
+    desc: "Cảm biến 12MP chống loá hướng xuống màn hình điện thoại hoặc laptop.",
+    position: "top-[30%] left-16"
   },
   {
     tag: "AI xử lý",
     title: "Phân tích bằng Neural Engine",
-    desc: "Chip AIva NPU phân tích layout, OCR đa ngôn ngữ và đối chiếu ngữ cảnh ứng dụng."
+    desc: "Chip AIva NPU phân tích layout, OCR đa ngôn ngữ và đối chiếu ngữ cảnh ứng dụng.",
+    position: "top-[22%] right-16"
   },
   {
     tag: "Loa định hướng",
     title: "Hướng dẫn từng bước qua loa",
-    desc: "Hai loa MEMS định hướng thì thầm chỉ dẫn ngay khi bạn thao tác sai hoặc bị kẹt luồng."
+    desc: "Hai loa MEMS định hướng thì thầm chỉ dẫn ngay khi bạn thao tác sai hoặc bị kẹt luồng.",
+    position: "bottom-24 left-[15%]"
   }
 ];
 
@@ -61,30 +65,6 @@ export function Home3DScroll() {
           <AivaGlasses3D scrollY={scrollY} />
         </div>
 
-        <div className="relative h-full flex items-start pt-32 md:pt-40">
-          <div className="w-full max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-start pointer-events-none">
-            <div className="relative h-[35vh]">
-              {SECTIONS.map((s, i) => (
-                <div
-                  key={s.tag}
-                  className="absolute inset-0 flex flex-col justify-start pt-16 transition-all duration-700"
-                  style={{
-                    opacity: i === active ? 1 : 0,
-                    transform: `translateY(${(i - active) * 30}px)`
-                  }}
-                >
-                  <div className="inline-block w-fit px-3 py-1 rounded-full bg-[var(--accent)]/15 text-[var(--accent)] text-xs font-medium tracking-wider uppercase mb-5">
-                    {s.tag}
-                  </div>
-                  <h2 className="text-4xl md:text-6xl font-bold leading-[1.05] mb-6">{s.title}</h2>
-                  <p className="text-lg text-gray-300 max-w-lg">{s.desc}</p>
-                </div>
-              ))}
-            </div>
-            <div />
-          </div>
-        </div>
-
         <div className="absolute right-6 top-1/2 -translate-y-1/2 flex flex-col gap-3 z-10">
           {SECTIONS.map((_, i) => (
             <div
@@ -95,6 +75,23 @@ export function Home3DScroll() {
             />
           ))}
         </div>
+
+        {SECTIONS.map((s, i) => (
+          <div
+            key={s.tag}
+            className={`absolute z-10 transition-all duration-700 ${
+              i === active ? "opacity-100 scale-100" : "opacity-0 scale-95 pointer-events-none"
+            } ${s.position}`}
+          >
+            <div className="glass-panel rounded-2xl p-6 backdrop-blur-xl bg-black/40">
+              <span className="inline-block px-3 py-0.5 rounded-full bg-[var(--accent)]/15 text-[var(--accent)] text-xs font-medium tracking-wider uppercase mb-4">
+                {s.tag}
+              </span>
+              <h2 className="text-2xl md:text-3xl font-bold mb-3 leading-snug">{s.title}</h2>
+              <p className="text-sm md:text-base text-white/60 leading-relaxed max-w-xs">{s.desc}</p>
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );

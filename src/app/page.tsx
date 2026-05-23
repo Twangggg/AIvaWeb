@@ -55,6 +55,7 @@ function Nav() {
         </div>
 
         <div className="hidden md:flex items-center gap-8 text-sm text-gray-300">
+          <a href="#features" className="hover:text-white transition">Chức năng</a>
           <a href="#how" className="hover:text-white transition">Cách hoạt động</a>
           <a href="#specs" className="hover:text-white transition">Thông số</a>
           <a href="#reserve" className="hover:text-white transition">Đặt trước</a>
@@ -73,25 +74,29 @@ function Nav() {
 
 function Hero() {
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden grid-bg pt-24 pb-16 px-6">
+    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden pt-24 pb-16 px-6">
+      <div className="absolute inset-0 pointer-events-none bg-grid-pattern" />
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/4 -left-32 w-96 h-96 rounded-full bg-[var(--ocean)]/30 blur-3xl" />
-        <div className="absolute bottom-1/4 -right-32 w-96 h-96 rounded-full bg-[var(--accent)]/15 blur-3xl" />
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-[var(--ocean)]/20 blur-[100px]" />
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full bg-[var(--accent)]/10 blur-[80px]" />
       </div>
 
       <div className="relative z-10 text-center max-w-4xl">
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/20 bg-white/5 backdrop-blur text-xs text-gray-300 mb-6">
-          <span className="w-2 h-2 rounded-full bg-[var(--accent)] animate-pulse" />
-          Trợ lý hình ảnh thế hệ mới · 2026
+        <div className="inline-flex items-center gap-3 mb-8">
+          <span className="h-px w-6 bg-gradient-to-r from-transparent to-white/30" />
+          <span className="text-xs uppercase tracking-[0.15em] text-white/40 font-medium">
+            Trợ lý hình ảnh thế hệ mới
+          </span>
+          <span className="h-px w-6 bg-gradient-to-l from-transparent to-white/30" />
         </div>
 
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-[0.95] mb-6">
-          AI<span className="text-gradient-sun">va</span>
+        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-[0.92] mb-6">
+          <span className="text-gradient-sun">AIva</span>
           <br />
           <span className="text-gradient-ocean">nhìn cùng bạn.</span>
         </h1>
 
-        <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-10">
+        <p className="text-lg md:text-xl text-white/60 max-w-2xl mx-auto mb-10 leading-relaxed">
           Mắt kính AIva dùng camera đọc màn hình điện thoại của bạn, phân tích giao diện
           và hướng dẫn từng bước qua loa định hướng.
         </p>
@@ -101,7 +106,7 @@ function Hero() {
             href="#reserve"
             className="px-8 py-3.5 rounded-full bg-[var(--accent)] text-black font-semibold hover:scale-105 transition-transform glow-sun"
           >
-            Đặt trước · 9.990.000 ₫
+            Đặt trước
           </a>
           <a
             href="#how"
@@ -109,6 +114,19 @@ function Hero() {
           >
             Xem chi tiết ↓
           </a>
+        </div>
+
+        <div className="mt-16 grid grid-cols-3 gap-4 max-w-lg mx-auto">
+          {[
+            ["42g", "Siêu nhẹ"],
+            ["100ms", "Phản hồi AI"],
+            ["14h", "Pin liên tục"]
+          ].map(([v, l]) => (
+            <div key={l} className="glass-panel rounded-xl py-3 px-2">
+              <p className="text-lg font-bold text-white">{v}</p>
+              <p className="text-xs text-white/40 mt-1">{l}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
@@ -170,7 +188,7 @@ function Specs() {
 function Preorder() {
   return (
     <section id="reserve" className="py-28 px-6">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-2xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-6">
           Sẵn sàng <span className="text-gradient-ocean">trải nghiệm AIva?</span>
         </h2>
