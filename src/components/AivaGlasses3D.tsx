@@ -1,7 +1,7 @@
 "use client";
 
 import { Canvas, useFrame } from "@react-three/fiber";
-import { Environment, useGLTF, useProgress } from "@react-three/drei";
+import { Environment, Html, useGLTF, useProgress } from "@react-three/drei";
 import { Suspense, useRef } from "react";
 import type { MutableRefObject } from "react";
 import type * as THREE from "three";
@@ -11,10 +11,12 @@ useGLTF.preload("/models/glasses.glb");
 function Loader() {
   const { progress } = useProgress();
   return (
-    <div className="absolute inset-0 flex flex-col items-center justify-center gap-3">
-      <div className="w-8 h-8 rounded-full border-2 border-[var(--accent)] border-t-transparent animate-spin" />
-      <p className="text-xs text-white/40">{Math.round(progress)}%</p>
-    </div>
+    <Html center>
+      <div className="flex flex-col items-center gap-3">
+        <div className="w-8 h-8 rounded-full border-2 border-[var(--accent)] border-t-transparent animate-spin" />
+        <p className="text-xs text-white/60">{Math.round(progress)}%</p>
+      </div>
+    </Html>
   );
 }
 
