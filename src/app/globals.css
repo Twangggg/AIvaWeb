@@ -106,3 +106,46 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #5b5e66;
 }
+
+:root {
+  --ocean: #2f86ff;
+  --ocean-glow: #74b3ff;
+  --accent: #ffd84d;
+  --gradient-ocean: linear-gradient(135deg, var(--ocean), var(--ocean-glow));
+  --gradient-sun: linear-gradient(135deg, var(--accent), #ffbf3f);
+  --shadow-glow: 0 0 80px -10px rgba(47, 134, 255, 0.45);
+  --shadow-sun: 0 0 60px -10px rgba(255, 216, 77, 0.4);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.text-gradient-ocean {
+  background: var(--gradient-ocean);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.text-gradient-sun {
+  background: var(--gradient-sun);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.glow-ocean {
+  box-shadow: var(--shadow-glow);
+}
+
+.glow-sun {
+  box-shadow: var(--shadow-sun);
+}
+
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(47, 134, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(47, 134, 255, 0.1) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
