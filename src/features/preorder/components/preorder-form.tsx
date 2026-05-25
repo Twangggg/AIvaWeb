@@ -5,7 +5,6 @@ import { useMutation } from "@tanstack/react-query";
 import { useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
 import { Button } from "@/components/ui/button";
-import { clsx } from "clsx";
 import { getPreorderSchema, type PreorderInput } from "@/features/preorder/schema/preorder-schema";
 import { submitPreorder } from "@/features/preorder/services/preorder-service";
 import { useI18n } from "@/lib/i18n/provider";
@@ -46,19 +45,21 @@ export function PreorderForm({ onClose }: PreorderFormProps) {
         </div>
 
         <div className="space-y-1">
-          <p className="text-2xl font-bold text-white">{t.successTitle}</p>
-          <p className="text-sm text-white/50">{t.successDesc}</p>
+          <p className="text-2xl font-bold" style={{ color: "var(--text-on-glass)" }}>{t.successTitle}</p>
+          <p className="text-sm" style={{ color: "var(--text-dim)" }}>{t.successDesc}</p>
         </div>
 
-        <div className="w-full space-y-3 rounded-xl border border-white/10 bg-white/5 p-5 text-left">
+        <div className="w-full space-y-3 rounded-xl p-5 text-left"
+          style={{ border: "1px solid", borderColor: "var(--border-subtle)", backgroundColor: "var(--bg-subtle)" }}
+        >
           <InfoRow label={t.fullName} value={submittedData.fullName} />
-          <div className="h-px bg-white/5" />
+          <div style={{ height: 1, backgroundColor: "var(--border-subtle)" }} />
           <InfoRow label={t.email} value={submittedData.email} />
-          <div className="h-px bg-white/5" />
+          <div style={{ height: 1, backgroundColor: "var(--border-subtle)" }} />
           <InfoRow label={t.phone} value={submittedData.phone} />
           {submittedData.note && (
             <>
-              <div className="h-px bg-white/5" />
+              <div style={{ height: 1, backgroundColor: "var(--border-subtle)" }} />
               <InfoRow label={t.note} value={submittedData.note} />
             </>
           )}
@@ -89,30 +90,38 @@ export function PreorderForm({ onClose }: PreorderFormProps) {
       <FieldError message={errors.fullName?.message}>
         <input
           {...register("fullName")}
+          disabled={preorderMutation.isPending}
           placeholder={t.fullName}
-          className="w-full rounded-xl border border-white/20 bg-white/5 px-4 py-3 text-sm text-on-surface outline-none transition-all placeholder:text-on-surface-variant/40 focus-visible:border-brand-gold/40 focus-visible:ring-1 focus-visible:ring-brand-gold/20"
+          className="w-full rounded-xl border px-4 py-3 text-sm outline-none transition-all placeholder:text-[var(--text-dim)] disabled:opacity-50 focus-visible:border-brand-gold/40 focus-visible:ring-1 focus-visible:ring-brand-gold/20"
+          style={{ borderColor: "var(--border-subtle)", backgroundColor: "var(--bg-subtle)", color: "var(--text-on-glass)" }}
         />
       </FieldError>
       <FieldError message={errors.email?.message}>
         <input
           {...register("email")}
+          disabled={preorderMutation.isPending}
           placeholder={t.email}
-          className="w-full rounded-xl border border-white/20 bg-white/5 px-4 py-3 text-sm text-on-surface outline-none transition-all placeholder:text-on-surface-variant/40 focus-visible:border-brand-gold/40 focus-visible:ring-1 focus-visible:ring-brand-gold/20"
+          className="w-full rounded-xl border px-4 py-3 text-sm outline-none transition-all placeholder:text-[var(--text-dim)] disabled:opacity-50 focus-visible:border-brand-gold/40 focus-visible:ring-1 focus-visible:ring-brand-gold/20"
+          style={{ borderColor: "var(--border-subtle)", backgroundColor: "var(--bg-subtle)", color: "var(--text-on-glass)" }}
         />
       </FieldError>
       <FieldError message={errors.phone?.message}>
         <input
           {...register("phone")}
+          disabled={preorderMutation.isPending}
           placeholder={t.phone}
-          className="w-full rounded-xl border border-white/20 bg-white/5 px-4 py-3 text-sm text-on-surface outline-none transition-all placeholder:text-on-surface-variant/40 focus-visible:border-brand-gold/40 focus-visible:ring-1 focus-visible:ring-brand-gold/20"
+          className="w-full rounded-xl border px-4 py-3 text-sm outline-none transition-all placeholder:text-[var(--text-dim)] disabled:opacity-50 focus-visible:border-brand-gold/40 focus-visible:ring-1 focus-visible:ring-brand-gold/20"
+          style={{ borderColor: "var(--border-subtle)", backgroundColor: "var(--bg-subtle)", color: "var(--text-on-glass)" }}
         />
       </FieldError>
       <FieldError message={errors.note?.message}>
         <textarea
           {...register("note")}
+          disabled={preorderMutation.isPending}
           placeholder={t.note}
           rows={3}
-          className="w-full resize-none rounded-xl border border-white/20 bg-white/5 px-4 py-3 text-sm text-on-surface outline-none transition-all placeholder:text-on-surface-variant/40 focus-visible:border-brand-gold/40 focus-visible:ring-1 focus-visible:ring-brand-gold/20"
+          className="w-full resize-none rounded-xl border px-4 py-3 text-sm outline-none transition-all placeholder:text-[var(--text-dim)] disabled:opacity-50 focus-visible:border-brand-gold/40 focus-visible:ring-1 focus-visible:ring-brand-gold/20"
+          style={{ borderColor: "var(--border-subtle)", backgroundColor: "var(--bg-subtle)", color: "var(--text-on-glass)" }}
         />
       </FieldError>
       <Button fullWidth type="submit" disabled={preorderMutation.isPending}>
@@ -134,8 +143,8 @@ function FieldError({ message, children }: { message?: string; children: React.R
 function InfoRow({ label, value }: { label: string; value: string }) {
   return (
     <div className="flex items-center justify-between gap-4">
-      <span className="text-xs uppercase tracking-wider text-white/40">{label}</span>
-      <span className="text-sm font-medium text-white">{value}</span>
+      <span className="text-xs uppercase tracking-wider" style={{ color: "var(--text-dim)" }}>{label}</span>
+      <span className="text-sm font-medium" style={{ color: "var(--text-on-glass)" }}>{value}</span>
     </div>
   );
 }

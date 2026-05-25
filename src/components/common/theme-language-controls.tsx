@@ -5,28 +5,34 @@ import { useI18n } from "@/lib/i18n/provider";
 import type { Locale } from "@/lib/i18n/messages";
 
 export function ThemeLanguageControls() {
-  const { t, locale, setLocale } = useI18n();
+  const { locale, setLocale } = useI18n();
   const { theme, setTheme } = useTheme();
 
   return (
-    <div className="flex items-center gap-2">
-      <select
-        value={locale}
-        onChange={(event) => setLocale(event.target.value as Locale)}
-        className="rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-xs uppercase tracking-[0.08em] text-on-surface-variant outline-none transition-all focus-visible:border-brand-gold/30"
+    <div className="flex items-center gap-1.5">
+      <button
+        type="button"
+        onClick={() => setLocale(locale === "vi" ? "en" : "vi")}
+        className="flex h-8 w-8 items-center justify-center rounded-lg text-xs font-bold uppercase tracking-wide transition-all"
+        style={{ color: "var(--text-muted)" }}
+        onMouseEnter={(e) => e.currentTarget.style.color = "var(--text-on-glass)"}
+        onMouseLeave={(e) => e.currentTarget.style.color = "var(--text-muted)"}
       >
-        <option value="vi">VI</option>
-        <option value="en">EN</option>
-      </select>
+        {locale === "vi" ? "EN" : "VI"}
+      </button>
 
-      <select
-        value={theme ?? "light"}
-        onChange={(event) => setTheme(event.target.value)}
-        className="rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-xs uppercase tracking-[0.08em] text-on-surface-variant outline-none transition-all focus-visible:border-brand-gold/30"
+      <button
+        type="button"
+        onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+        className="flex h-8 w-8 items-center justify-center rounded-lg transition-all"
+        style={{ color: "var(--text-muted)" }}
+        onMouseEnter={(e) => e.currentTarget.style.color = "var(--text-on-glass)"}
+        onMouseLeave={(e) => e.currentTarget.style.color = "var(--text-muted)"}
       >
-        <option value="light">{t.light}</option>
-        <option value="dark">{t.dark}</option>
-      </select>
+        <span className="material-symbols-outlined text-lg">
+          {theme === "dark" ? "light_mode" : "dark_mode"}
+        </span>
+      </button>
     </div>
   );
 }

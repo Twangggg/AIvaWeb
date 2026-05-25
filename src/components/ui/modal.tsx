@@ -1,6 +1,5 @@
 "use client";
 
-import { clsx } from "clsx";
 import { useCallback, useEffect, useRef, type ReactNode } from "react";
 
 interface ModalProps {
@@ -39,32 +38,38 @@ export function Modal({ open, onClose, children, title }: ModalProps) {
       onClick={(e) => {
         if (e.target === overlayRef.current) onClose();
       }}
-      className={clsx(
-        "fixed inset-0 z-[100] flex items-center justify-center p-4",
-        "bg-black/60 backdrop-blur-sm"
-      )}
+      className="fixed inset-0 z-[100] flex items-center justify-center p-4 backdrop-blur-sm"
+        style={{ backgroundColor: "var(--overlay-bg)" }}
     >
       <div
-        className={clsx(
-          "relative w-full max-w-md rounded-2xl",
-          "border border-white/10 bg-[#0d0d0d]/95 backdrop-blur-xl",
-          "shadow-2xl shadow-black/50",
-          "animate-in fade-in zoom-in-95 duration-200"
-        )}
+        className="relative w-full max-w-md rounded-2xl border animate-in fade-in zoom-in-95 duration-200"
+        style={{
+          backgroundColor: "var(--modal-bg)",
+          borderColor: "var(--border-subtle)",
+          boxShadow: "var(--shadow-modal)"
+        }}
       >
-        <div className="flex items-center justify-between border-b border-white/10 px-6 py-4">
+        <div className="flex items-center justify-between px-6 py-4"
+          style={{ borderBottom: "1px solid", borderColor: "var(--border-subtle)" }}
+        >
           {title ? (
-            <h3 className="text-lg font-bold tracking-[0.05em] text-white">{title}</h3>
+            <h3 className="text-lg font-bold tracking-[0.05em]" style={{ color: "var(--text-on-glass)" }}>{title}</h3>
           ) : (
             <div />
           )}
           <button
             type="button"
             onClick={onClose}
-            className={clsx(
-              "flex h-8 w-8 items-center justify-center rounded-lg",
-              "text-white/40 transition-all hover:bg-white/10 hover:text-white"
-            )}
+            className="flex h-8 w-8 items-center justify-center rounded-lg transition-all"
+            style={{ color: "var(--text-dim)" }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.backgroundColor = "var(--bg-subtle)";
+              e.currentTarget.style.color = "var(--text-on-glass)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.backgroundColor = "transparent";
+              e.currentTarget.style.color = "var(--text-dim)";
+            }}
           >
             <span className="material-symbols-outlined text-xl">close</span>
           </button>

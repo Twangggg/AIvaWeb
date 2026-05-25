@@ -15,15 +15,16 @@ const montserrat = Montserrat({
   display: "swap"
 });
 
-export const metadata: Metadata = {
-  title: "AIva | Kỷ Nguyên Tương Lai",
-  description:
-    "Trải nghiệm sự tích hợp liền mạch giữa phần cứng và thực tế. Bước tiến hóa tiếp theo của điện toán không gian đã đến."
+const defaultMeta = {
+  vi: { title: "AIva | Kỷ Nguyên Tương Lai", description: "Trải nghiệm sự tích hợp liền mạch giữa phần cứng và thực tế. Bước tiến hóa tiếp theo của điện toán không gian đã đến." },
+  en: { title: "AIva | A New Era", description: "Experience the seamless integration of hardware and reality. The next evolution of spatial computing has arrived." }
 };
+
+export const metadata: Metadata = defaultMeta.vi;
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="vi" className="dark" suppressHydrationWarning>
+    <html lang="vi" suppressHydrationWarning>
       <head>
         {/* eslint-disable-next-line @next/next/no-page-custom-font */}
         <link
