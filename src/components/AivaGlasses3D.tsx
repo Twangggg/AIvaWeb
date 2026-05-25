@@ -1,12 +1,10 @@
 "use client";
 
 import { Canvas, useFrame } from "@react-three/fiber";
-import { Environment, Html, useGLTF, useProgress } from "@react-three/drei";
-import { Suspense, useEffect, useRef } from "react";
+import { Html, useGLTF, useProgress } from "@react-three/drei";
+import { Suspense, useEffect, useMemo, useRef } from "react";
 import type { MutableRefObject } from "react";
 import type * as THREE from "three";
-
-useGLTF.preload("/models/glasses.glb");
 
 function Loader() {
   const { progress } = useProgress();
@@ -24,6 +22,21 @@ function Model({ scrollY }: { scrollY: MutableRefObject<number> }) {
   const { scene } = useGLTF("/models/glasses.glb");
   const group = useRef<THREE.Group>(null!);
   const lastScroll = useRef(-1);
+  const optimizedScene = useMemo(() => scene, [scene]);
+
+  useEffect(() => {
+    optimizedScene.traverse((obj) => {
+      const mesh = obj as THREE.Mesh;
+      if (!mesh.isMesh) return;
+
+      mesh.castShadow = false;
+      mesh.receiveShadow = false;
+
+      // Meshes are static in local space; parent group handles motion.
+      mesh.matrixAutoUpdate = false;
+      mesh.updateMatrix();
+    });
+  }, [optimizedScene]);
 
   useFrame(() => {
     const s = scrollY.current;
@@ -42,15 +55,17 @@ function Model({ scrollY }: { scrollY: MutableRefObject<number> }) {
     group.current.scale.setScalar(baseScale * scrollScale);
   });
 
-  return <primitive ref={group} object={scene} />;
+  return <primitive ref={group} object={optimizedScene} />;
 }
 
 export default function AivaGlasses3D({
   scrollY,
-  onInvalidateReady
+  onInvalidateReady,
+  active
 }: {
   scrollY: MutableRefObject<number>;
   onInvalidateReady?: (invalidate: () => void) => void;
+  active?: boolean;
 }) {
   const invalidateRef = useRef<(() => void) | null>(null);
 
@@ -62,22 +77,28 @@ export default function AivaGlasses3D({
   return (
     <Canvas
       frameloop="demand"
+      flat
       camera={{ position: [0, 0, 3.0], fov: 45, near: 0.5, far: 20 }}
-      dpr={[1, 1.5]}
-      gl={{ antialias: false, alpha: true, powerPreference: "high-performance" }}
+      dpr={[1, 1.25]}
+      gl={{
+        antialias: false,
+        alpha: true,
+        powerPreference: "high-performance",
+        stencil: false,
+        depth: true,
+        preserveDrawingBuffer: false
+      }}
       onCreated={({ invalidate }) => {
         invalidateRef.current = invalidate;
         onInvalidateReady?.(invalidate);
         invalidate();
       }}
     >
-      <ambientLight intensity={0.7} />
-      <directionalLight position={[3, 4, 5]} intensity={1.6} color="#facc15" />
-      <directionalLight position={[-4, -2, 3]} intensity={1.3} color="#0ea5e9" />
-      <pointLight position={[0, 0, 2]} intensity={0.9} color="#38bdf8" />
+      <ambientLight intensity={0.85} />
+      <directionalLight position={[2.5, 3, 4]} intensity={1.2} color="#facc15" />
+      <directionalLight position={[-3, -1, 2.5]} intensity={0.8} color="#0ea5e9" />
       <Suspense fallback={<Loader />}>
-        <Model scrollY={scrollY} />
-        <Environment preset="night" environmentIntensity={1.5} />
+        {active ? <Model scrollY={scrollY} /> : null}
       </Suspense>
     </Canvas>
   );
