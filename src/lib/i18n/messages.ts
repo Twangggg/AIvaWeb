@@ -78,6 +78,10 @@ export const messages = {
     submitting: "Đang gửi...",
     success: "Đăng ký pre-order thành công.",
     error: "Đăng ký thất bại. Thử lại sau.",
+    successTitle: "Đăng ký thành công!",
+    successDesc: "Thông tin của bạn đã được ghi nhận.",
+    notifySent: "Chúng tôi sẽ gửi thông báo qua email khi có hàng.",
+    close: "Đóng",
     validation: {
       fullName: "Vui lòng nhập tên hợp lệ",
       email: "Email không hợp lệ",
@@ -164,6 +168,10 @@ export const messages = {
     submitting: "Submitting...",
     success: "Pre-order submitted successfully.",
     error: "Submission failed. Please try again.",
+    successTitle: "Registration successful!",
+    successDesc: "Your information has been recorded.",
+    notifySent: "We will send a notification via email when stock is available.",
+    close: "Close",
     validation: {
       fullName: "Please enter a valid name",
       email: "Invalid email address",

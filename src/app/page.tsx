@@ -1,5 +1,8 @@
+"use client";
+
+import { useState } from "react";
 import { Home3DScroll } from "@/components/home-3d-scroll";
-import { PreorderFormNoSSR } from "@/features/preorder/components/preorder-form-no-ssr";
+import { PreorderModal } from "@/features/preorder/components/preorder-modal";
 
 const STEPS = [
   {
@@ -29,21 +32,24 @@ const SPECS = [
 ];
 
 export default function HomePage() {
+  const [preorderOpen, setPreorderOpen] = useState(false);
+
   return (
     <>
-      <Nav />
+      <Nav onPreorder={() => setPreorderOpen(true)} />
       <main className="min-h-screen">
-        <Hero />
+        <Hero onPreorder={() => setPreorderOpen(true)} />
         <Home3DScroll />
         <HowItWorks />
         <Specs />
-        <Preorder />
+        <PreorderTrigger onPreorder={() => setPreorderOpen(true)} />
       </main>
+      <PreorderModal open={preorderOpen} onClose={() => setPreorderOpen(false)} />
     </>
   );
 }
 
-function Nav() {
+function Nav({ onPreorder }: { onPreorder: () => void }) {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-black/30 border-b border-white/10">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -58,21 +64,21 @@ function Nav() {
           <a href="#features" className="hover:text-white transition">Chức năng</a>
           <a href="#how" className="hover:text-white transition">Cách hoạt động</a>
           <a href="#specs" className="hover:text-white transition">Thông số</a>
-          <a href="#reserve" className="hover:text-white transition">Đặt trước</a>
+          <button onClick={onPreorder} className="hover:text-white transition">Đặt trước</button>
         </div>
 
-        <a
-          href="#reserve"
+        <button
+          onClick={onPreorder}
           className="px-5 py-2 rounded-full bg-[var(--accent)] text-black font-medium text-sm hover:scale-105 transition-transform glow-sun"
         >
           Đặt trước
-        </a>
+        </button>
       </div>
     </nav>
   );
 }
 
-function Hero() {
+function Hero({ onPreorder }: { onPreorder: () => void }) {
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden pt-24 pb-16 px-6">
       <div className="absolute inset-0 pointer-events-none bg-grid-pattern" />
@@ -102,12 +108,12 @@ function Hero() {
         </p>
 
         <div className="flex flex-wrap gap-4 justify-center">
-          <a
-            href="#reserve"
+          <button
+            onClick={onPreorder}
             className="px-8 py-3.5 rounded-full bg-[var(--accent)] text-black font-semibold hover:scale-105 transition-transform glow-sun"
           >
             Đặt trước
-          </a>
+          </button>
           <a
             href="#how"
             className="px-8 py-3.5 rounded-full border border-white/20 bg-white/5 backdrop-blur font-medium hover:bg-white/10 transition"
@@ -185,17 +191,22 @@ function Specs() {
   );
 }
 
-function Preorder() {
+function PreorderTrigger({ onPreorder }: { onPreorder: () => void }) {
   return (
     <section id="reserve" className="py-28 px-6">
-      <div className="max-w-2xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-6">
+      <div className="max-w-2xl mx-auto text-center">
+        <h2 className="text-4xl md:text-5xl font-bold mb-6">
           Sẵn sàng <span className="text-gradient-ocean">trải nghiệm AIva?</span>
         </h2>
-        <p className="text-center text-gray-300 mb-10">
+        <p className="text-gray-300 mb-10">
           Để lại thông tin để nhận ưu đãi đợt mở bán đầu tiên.
         </p>
-        <PreorderFormNoSSR />
+        <button
+          onClick={onPreorder}
+          className="px-10 py-4 rounded-full bg-[var(--accent)] text-black font-semibold text-lg hover:scale-105 transition-transform glow-sun"
+        >
+          Đặt trước ngay
+        </button>
       </div>
     </section>
   );
