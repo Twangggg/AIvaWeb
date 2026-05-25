@@ -20,12 +20,12 @@ const STEPS = [
 ];
 
 const SPECS = [
-  ["Cảm biến", "Sony IMX 12MP, 120° FOV"],
-  ["Chip xử lý", "AIva NPU 8-core"],
-  ["Loa", "Stereo MEMS định hướng"],
-  ["Pin", "14 giờ sử dụng liên tục"],
-  ["Kết nối", "Wi-Fi 6E · Bluetooth 5.4"],
-  ["Trọng lượng", "42 gram"]
+  ["Cảm biến", "Đang cập nhật"],
+  ["Chip xử lý", "Đang cập nhật"],
+  ["Loa", "Đang cập nhật"],
+  ["Pin", "Đang cập nhật"],
+  ["Kết nối", "Đang cập nhật"],
+  ["Trọng lượng", "Đang cập nhật"]
 ];
 
 export default function HomePage() {
@@ -118,9 +118,9 @@ function Hero() {
 
         <div className="mt-16 grid grid-cols-3 gap-4 max-w-lg mx-auto">
           {[
-            ["42g", "Siêu nhẹ"],
-            ["100ms", "Phản hồi AI"],
-            ["14h", "Pin liên tục"]
+            ["Đang cập nhật", "Siêu nhẹ"],
+            ["Đang cập nhật", "Phản hồi AI"],
+            ["Đang cập nhật", "Pin liên tục"]
           ].map(([v, l]) => (
             <div key={l} className="glass-panel rounded-xl py-3 px-2">
               <p className="text-lg font-bold text-white">{v}</p>
