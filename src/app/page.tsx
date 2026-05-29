@@ -61,9 +61,9 @@ function Hero({ onPreorder }: { onPreorder: () => void }) {
 
         <div className="mt-16 grid grid-cols-3 gap-4 max-w-lg mx-auto">
           {[
-            [t.statsUpdating, t.stat1Label],
-            [t.statsUpdating, t.stat2Label],
-            [t.statsUpdating, t.stat3Label]
+            [t.stat1Value, t.stat1Label],
+            [t.stat2Value, t.stat2Label],
+            [t.stat3Value, t.stat3Label]
           ].map(([v, l]) => (
             <div key={l} className="glass-panel rounded-xl py-3 px-2">
               <p className="text-lg font-bold" style={{ color: "var(--text-on-glass)" }}>{v}</p>
@@ -125,12 +125,12 @@ function Specs() {
   const { t } = useI18n();
 
   const SPECS: [string, string][] = [
-    [t.specLabel1, t.specValue],
-    [t.specLabel2, t.specValue],
-    [t.specLabel3, t.specValue],
-    [t.specLabel4, t.specValue],
-    [t.specLabel5, t.specValue],
-    [t.specLabel6, t.specValue]
+    [t.specLabel1, t.specValue1],
+    [t.specLabel2, t.specValue2],
+    [t.specLabel3, t.specValue3],
+    [t.specLabel4, t.specValue4],
+    [t.specLabel5, t.specValue5],
+    [t.specLabel6, t.specValue6]
   ];
 
   return (

@@ -17,8 +17,11 @@ export const en = {
   ctaPrimary: "RESERVE NOW",
   ctaSecondary: "LEARN MORE",
   statsUpdating: "Updating",
+  stat1Value: "Updating",
   stat1Label: "Ultra-light",
+  stat2Value: "Updating",
   stat2Label: "AI Response",
+  stat3Value: "Updating",
   stat3Label: "Long Battery",
 
   /* Highlights */
@@ -97,6 +100,12 @@ export const en = {
   specLabel5: "Connectivity",
   specLabel6: "Weight",
   specValue: "Updating",
+  specValue1: "Camera, Microphone",
+  specValue2: "ESP32-S3",
+  specValue3: "Speaker or headphones",
+  specValue4: "Updating",
+  specValue5: "Wi-Fi (4G SIM & GPS expandable in later phases)",
+  specValue6: "Updating",
 
   /* Preorder */
   preorderHeading: "Ready to",

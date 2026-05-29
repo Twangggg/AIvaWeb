@@ -17,8 +17,11 @@ export const vi = {
   ctaPrimary: "ĐẶT TRƯỚC NGAY",
   ctaSecondary: "TÌM HIỂU THÊM",
   statsUpdating: "Đang cập nhật",
+  stat1Value: "Đang cập nhật",
   stat1Label: "Siêu nhẹ",
+  stat2Value: "Đang cập nhật",
   stat2Label: "Phản hồi AI",
+  stat3Value: "Đang cập nhật",
   stat3Label: "Pin liên tục",
 
   /* Highlights */
@@ -97,6 +100,12 @@ export const vi = {
   specLabel5: "Kết nối",
   specLabel6: "Trọng lượng",
   specValue: "Đang cập nhật",
+  specValue1: "Camera, Microphone",
+  specValue2: "ESP32-S3",
+  specValue3: "Loa hoặc tai nghe",
+  specValue4: "Đang cập nhật",
+  specValue5: "Wi-Fi (Mở rộng 4G/GPS ở phase sau)",
+  specValue6: "Đang cập nhật",
 
   /* Preorder */
   preorderHeading: "Sẵn sàng",

@@ -21,7 +21,10 @@ const defaultMeta = {
   en: { title: "AIva | A New Era", description: "Experience the seamless integration of hardware and reality. The next evolution of spatial computing has arrived." }
 };
 
-export const metadata: Metadata = defaultMeta.vi;
+export const metadata: Metadata = {
+  ...defaultMeta.vi,
+  icons: [{ rel: "icon", url: "/favicon.png", type: "image/png" }]
+};
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
