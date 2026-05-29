@@ -1,6 +1,6 @@
 "use client";
 
-import { useTheme } from "next-themes";
+import { useTheme } from "@/lib/providers/theme-provider";
 import { useI18n } from "@/lib/i18n/provider";
 import type { Locale } from "@/lib/i18n/messages";
 

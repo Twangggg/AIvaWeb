@@ -2,6 +2,7 @@
 
 import { useI18n } from "@/lib/i18n/provider";
 import { ThemeLanguageControls } from "@/components/common/theme-language-controls";
+import Image from "next/image";
 
 interface NavProps {
   onPreorder: () => void;
@@ -16,11 +17,15 @@ export function Nav({ onPreorder }: NavProps) {
       style={{ backgroundColor: "var(--nav-bg)", borderColor: "var(--nav-border)" }}
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-md bg-gradient-to-br from-[var(--ocean)] to-[var(--accent)]" />
-          <span className="font-bold tracking-tight text-lg">
-            AI<span className="text-[var(--accent)]">va</span>
-          </span>
+        <div className="flex items-center">
+          <Image
+            src="/AIVALogo.png"
+            alt="AIVA Logo"
+            width={156}
+            height={32}
+            className="object-contain"
+            priority
+          />
         </div>
 
         <div

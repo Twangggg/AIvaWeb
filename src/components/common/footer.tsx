@@ -1,6 +1,7 @@
 "use client";
 
 import { useI18n } from "@/lib/i18n/provider";
+import Image from "next/image";
 
 export function Footer() {
   const { t } = useI18n();
@@ -11,11 +12,14 @@ export function Footer() {
       style={{ backgroundColor: "var(--nav-bg)", borderColor: "var(--nav-border)" }}
     >
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-        <div className="flex items-center gap-2">
-          <div className="w-6 h-6 rounded-md bg-gradient-to-br from-[var(--ocean)] to-[var(--accent)]" />
-          <span className="font-bold tracking-tight">
-            AI<span className="text-[var(--accent)]">va</span>
-          </span>
+        <div className="flex items-center">
+          <Image
+            src="/AIVALogo.png"
+            alt="AIVA Logo"
+            width={117}
+            height={24}
+            className="object-contain"
+          />
         </div>
 
         <div className="flex items-center gap-6 text-xs tracking-wider uppercase" style={{ color: "var(--text-dim)" }}>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Montserrat } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import { AppProviders } from "@/lib/providers/app-providers";
 
@@ -31,6 +32,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
         />
+        <Script id="theme-init" strategy="beforeInteractive">
+          {`document.documentElement.classList.add(localStorage.getItem("theme")||"dark")`}
+        </Script>
       </head>
       <body className={`${inter.variable} ${montserrat.variable}`} suppressHydrationWarning>
         <AppProviders>{children}</AppProviders>
