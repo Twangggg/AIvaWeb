@@ -1,5 +1,4 @@
 import type { PreorderInput } from "@/features/preorder/schema/preorder-schema";
-import { getSupabaseClient } from "@/lib/supabase/client";
 
 interface PreorderResponse {
   success: boolean;
@@ -7,24 +6,23 @@ interface PreorderResponse {
 }
 
 export async function submitPreorder(payload: PreorderInput, locale: string = "vi"): Promise<PreorderResponse> {
-  const supabase = getSupabaseClient();
-
-  const { error } = await supabase.from("preorders").insert({
-    full_name: payload.fullName,
-    email: payload.email,
-    phone: payload.phone,
-    note: payload.note ?? null
-  });
-
-  if (error) {
-    throw new Error(error.message);
-  }
-
-  fetch("/api/send-confirmation", {
+  const res = await fetch("/api/preorder", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ email: payload.email, fullName: payload.fullName, locale })
-  }).catch(() => {});
+    body: JSON.stringify({
+      fullName: payload.fullName,
+      email: payload.email,
+      phone: payload.phone,
+      note: payload.note ?? null,
+      locale
+    })
+  });
+
+  const data = await res.json();
+
+  if (!res.ok) {
+    throw new Error(data.error ?? "Failed to submit pre-order");
+  }
 
   return {
     success: true,

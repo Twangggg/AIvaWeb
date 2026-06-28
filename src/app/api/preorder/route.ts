@@ -1,4 +1,14 @@
+import { createClient } from "@supabase/supabase-js";
 import { Resend } from "resend";
+
+function getSupabaseAdmin() {
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+  if (!url || !key) {
+    throw new Error("Missing Supabase env vars");
+  }
+  return createClient(url, key);
+}
 
 function getResend() {
   const key = process.env.RESEND_API_KEY;
@@ -29,15 +39,27 @@ const CONTENT: Record<string, { subject: string; heading: string; message: strin
 
 export async function POST(request: Request) {
   try {
-    const { email, fullName, locale = "vi" } = await request.json();
+    const { fullName, email, phone, note, locale = "vi" } = await request.json();
 
-    if (!email || !fullName) {
+    if (!fullName || !email || !phone) {
       return Response.json({ error: "Missing required fields" }, { status: 400 });
+    }
+
+    const supabase = getSupabaseAdmin();
+    const { error: dbError } = await supabase.from("preorders").insert({
+      full_name: fullName,
+      email,
+      phone,
+      note: note ?? null
+    });
+
+    if (dbError) {
+      return Response.json({ error: dbError.message }, { status: 500 });
     }
 
     const content = CONTENT[locale] ?? CONTENT.vi;
 
-    const { data, error } = await getResend().emails.send({
+    await getResend().emails.send({
       from: "AIVA <onboarding@resend.dev>",
       to: email,
       subject: content.subject,
@@ -69,14 +91,10 @@ export async function POST(request: Request) {
           </p>
         </div>
       `
-    });
+    }).catch(() => {});
 
-    if (error) {
-      return Response.json({ error: error.message }, { status: 500 });
-    }
-
-    return Response.json({ success: true, data });
-  } catch {
-    return Response.json({ error: "Internal server error" }, { status: 500 });
+    return Response.json({ success: true });
+  } catch (error) {
+    return Response.json({ error: error instanceof Error ? error.message : "Internal server error" }, { status: 500 });
   }
 }
