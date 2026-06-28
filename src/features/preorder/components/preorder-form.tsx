@@ -14,7 +14,7 @@ interface PreorderFormProps {
 }
 
 export function PreorderForm({ onClose }: PreorderFormProps) {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
   const schema = useMemo(() => getPreorderSchema(t.validation), [t.validation]);
   const [submittedData, setSubmittedData] = useState<PreorderInput | null>(null);
 
@@ -29,7 +29,7 @@ export function PreorderForm({ onClose }: PreorderFormProps) {
   });
 
   const preorderMutation = useMutation({
-    mutationFn: submitPreorder,
+    mutationFn: (data: PreorderInput) => submitPreorder(data, locale),
     onSuccess: (_data, variables) => {
       reset();
       setSubmittedData(variables);

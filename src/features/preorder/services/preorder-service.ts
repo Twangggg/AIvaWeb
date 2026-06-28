@@ -6,7 +6,7 @@ interface PreorderResponse {
   message: string;
 }
 
-export async function submitPreorder(payload: PreorderInput): Promise<PreorderResponse> {
+export async function submitPreorder(payload: PreorderInput, locale: string = "vi"): Promise<PreorderResponse> {
   const supabase = getSupabaseClient();
 
   const { error } = await supabase.from("preorders").insert({
@@ -23,7 +23,7 @@ export async function submitPreorder(payload: PreorderInput): Promise<PreorderRe
   fetch("/api/send-confirmation", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ email: payload.email, fullName: payload.fullName })
+    body: JSON.stringify({ email: payload.email, fullName: payload.fullName, locale })
   }).catch(() => {});
 
   return {
