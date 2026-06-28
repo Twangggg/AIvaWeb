@@ -170,6 +170,25 @@ export const vi = {
   metaTitle: "AIva | Kỷ Nguyên Tương Lai",
   metaDesc: "Trải nghiệm sự tích hợp liền mạch giữa phần cứng và thực tế. Bước tiến hóa tiếp theo của điện toán không gian đã đến.",
 
+  /* For Kids Section */
+  kidsTag: "Giới Thiệu Thương Hiệu",
+  kidsTitle: "AIVA dành cho trẻ em",
+  kidsDesc: "Chiếc kính AI giúp con học mà không cần màn hình",
+
+  kidsPost1Title: "Gặp gỡ AIVA",
+  kidsPost1Desc: "Giữa thời đại trẻ em \"cắm mặt\" vào điện thoại và đối mặt với nguy cơ cận thị ngày càng cao, AIVA mang đến một hướng đi khác: một chiếc kính thông minh tích hợp AI nhưng hoàn toàn không có màn hình. Thay vì giữ trẻ trong không gian ảo, AIVA khuyến khích con ngẩng đầu lên và khám phá thế giới thật.",
+  kidsPost1HL1: "Không màn hình, bảo vệ thị lực cho trẻ",
+  kidsPost1HL2: "Nhận diện môi trường và giải thích bằng giọng nói theo độ tuổi",
+  kidsPost1HL3: "Hỗ trợ học tiếng Anh qua tương tác thực tế",
+  kidsPost1HL4: "App cho phụ huynh theo dõi và đồng hành cùng con",
+  kidsPost1HL5: "Gọn nhẹ dưới 50g, thiết kế nhiều màu thân thiện với trẻ",
+
+  kidsPost2Title: "Công nghệ thông minh, an toàn cho trẻ",
+  kidsPost2Desc: "Camera hướng ra ngoài nhận diện vật thể, khung cảnh xung quanh; loa dẫn truyền an toàn cho thính giác giải thích cho con bằng giọng nói phù hợp theo độ tuổi. Con nhìn thấy gì, tò mò điều gì, chỉ cần hỏi — AIVA giải đáp ngay. Công nghệ giúp con tự do khám phá mà vẫn được bảo vệ dưới sự đồng hành của ba mẹ.",
+
+  kidsPost3Title: "Công nghệ là cầu nối",
+  kidsPost3Desc: "Với AIVA, công nghệ không còn giam giữ tầm nhìn của con, mà trở thành cầu nối đưa con trở về với thế giới thật. Không màn hình, không lo âu — chỉ có những khám phá đầy bất ngờ. AIVA — Học từ thế giới thật.",
+
   /* 3D Loader */
   loading3d: "Đang tải mô hình 3D..."
 } as const;

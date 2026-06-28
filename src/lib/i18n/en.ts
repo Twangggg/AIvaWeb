@@ -170,6 +170,25 @@ export const en = {
   metaTitle: "AIva | A New Era",
   metaDesc: "Experience the seamless integration of hardware and reality. The next evolution of spatial computing has arrived.",
 
+  /* For Kids Section */
+  kidsTag: "Brand Introduction",
+  kidsTitle: "AIVA for Kids",
+  kidsDesc: "AI glasses that help your child learn without a screen",
+
+  kidsPost1Title: "Meet AIVA",
+  kidsPost1Desc: "In an age where children are glued to screens with rising myopia risks, AIVA offers a different path: smart AI-powered glasses with no screen. Instead of keeping kids in virtual spaces, AIVA encourages them to look up and explore the real world.",
+  kidsPost1HL1: "No screen, protecting children's eyesight",
+  kidsPost1HL2: "Environment recognition with age-appropriate voice explanations",
+  kidsPost1HL3: "English learning through real-world interaction",
+  kidsPost1HL4: "Parent app for monitoring and companionship",
+  kidsPost1HL5: "Lightweight under 50g, kid-friendly multi-color design",
+
+  kidsPost2Title: "Smart technology, safe for kids",
+  kidsPost2Desc: "The outward-facing camera recognizes objects and surroundings; safe bone-conduction speakers explain them with age-appropriate voice. Whatever your child sees or is curious about, just ask — AIVA answers instantly. Technology that lets children explore freely while staying protected with parental guidance.",
+
+  kidsPost3Title: "Technology as a bridge",
+  kidsPost3Desc: "With AIVA, technology no longer traps your child's vision — it becomes a bridge back to the real world. No screen, no worry — only unexpected discoveries. AIVA — Learn from the real world.",
+
   /* 3D Loader */
   loading3d: "Loading 3D model..."
 } as const;
