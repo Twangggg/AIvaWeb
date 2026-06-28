@@ -3,6 +3,8 @@ export const en = {
   tagline: "OPTIC ELITE",
 
   /* Nav */
+  navAbout: "About AIVA",
+  navKids: "For Kids",
   navExperience: "Experience",
   navTech: "Technology",
   navSpecs: "Specifications",
@@ -169,6 +171,51 @@ export const en = {
   /* Meta */
   metaTitle: "AIva | A New Era",
   metaDesc: "Experience the seamless integration of hardware and reality. The next evolution of spatial computing has arrived.",
+
+  /* About Us */
+  aboutTag: "About Us",
+  aboutTitle: "AIVA –",
+  aboutTitleAccent: "AI, Vision & Assistant",
+  aboutDesc: "Technology as a bridge back to the real world",
+
+  aboutStoryTitle: "Our Story",
+  aboutStoryDesc1: "In an age where children are exposed to smartphones and tablets from a very early age, the risks of myopia and reduced real-world interaction are increasing. AIVA was born with a mission to create a new technological solution — not keeping children in virtual spaces, but encouraging them to look up, observe, ask questions, and interact with the world around them.",
+  aboutStoryDesc2: "AIVA stands for AI (Artificial Intelligence), Vision, and Assistant. AI serves as a dedicated guide sparking curiosity and creating adventures that challenge children to seek answers from the real world. Vision acts as an exploration lens, helping children observe and appreciate the beauty of their surroundings. Assistant fulfills the goal by transforming visual experiences into friendly voice instructions, encouraging children to run, play, and interact directly with nature.",
+
+  aboutMissionTitle: "Our Mission",
+  aboutMissionDesc: "To develop smart glasses for children that function as a learning and exploration tool through images and voice. The product has no electronic display, using an outward-facing camera for context recognition and bone-conduction audio for voice feedback, allowing children to receive information without looking at a screen.",
+
+  aboutTeamTitle: "Our Team",
+
+  teamMember1Name: "Tiên Quốc Bảo",
+  teamMember1Role: "CEO – Product Development",
+  teamMember1Desc: "Artificial Intelligence Major. Sets the vision and direction of the product, coordinates all departments to achieve project objectives.",
+
+  teamMember2Name: "Nguyễn Thành Công",
+  teamMember2Role: "COO – Operations",
+  teamMember2Desc: "Artificial Intelligence Major. Manages daily operations and team, monitors prototype development, supports system integration.",
+
+  teamMember3Name: "Trương Khải Toàn",
+  teamMember3Role: "CPO – Software Technology",
+  teamMember3Desc: "Information Technology Major. Website and software development, backend support, and hardware-software integration.",
+
+  teamMember4Name: "Đặng Ngọc Thảo Lan",
+  teamMember4Role: "CMO – Marketing & Branding",
+  teamMember4Desc: "Digital Marketing Major. Market research, brand promotion, and visual identity support.",
+
+  teamMember5Name: "Thạch Tố Quyên",
+  teamMember5Role: "CFO – Finance",
+  teamMember5Desc: "Digital Marketing Major. Budgeting, expense management, and resource allocation.",
+
+  teamMember6Name: "Hồ Mai Chí Bảo",
+  teamMember6Role: "CCO – Customer Service & Sales",
+  teamMember6Desc: "English Language Major. Customer communication, sales support, and user feedback analysis.",
+
+  aboutContact: "Contact Information",
+  aboutAddress: "600 Nguyen Van Cu street, Ninh Kieu ward, Can Tho city",
+  aboutEmail: "aivisionassistance@gmail.com",
+  aboutWebsite: "aiva.id.vn",
+  aboutFanpage: "Follow AIVA on Facebook",
 
   /* For Kids Section */
   kidsTag: "Brand Introduction",

@@ -3,6 +3,8 @@ export const vi = {
   tagline: "OPTIC ELITE",
 
   /* Nav */
+  navAbout: "Về AIVA",
+  navKids: "Cho trẻ em",
   navExperience: "Trải nghiệm",
   navTech: "Công nghệ",
   navSpecs: "Thông số kỹ thuật",
@@ -169,6 +171,51 @@ export const vi = {
   /* Meta */
   metaTitle: "AIva | Kỷ Nguyên Tương Lai",
   metaDesc: "Trải nghiệm sự tích hợp liền mạch giữa phần cứng và thực tế. Bước tiến hóa tiếp theo của điện toán không gian đã đến.",
+
+  /* About Us */
+  aboutTag: "Về Chúng Tôi",
+  aboutTitle: "AIVA –",
+  aboutTitleAccent: "AI, Vision & Assistant",
+  aboutDesc: "Công nghệ là cầu nối đưa trẻ về với thế giới thật",
+
+  aboutStoryTitle: "Câu chuyện của chúng tôi",
+  aboutStoryDesc1: "Giữa thời đại trẻ em tiếp xúc với điện thoại, máy tính bảng từ rất sớm, nguy cơ cận thị và giảm khả năng tương tác với môi trường thực đang ngày càng gia tăng. AIVA ra đời với sứ mệnh tạo ra một giải pháp công nghệ mới — không giữ trẻ trong không gian ảo, mà khuyến khích con ngẩng đầu lên, quan sát, đặt câu hỏi và tương tác với thế giới xung quanh.",
+  aboutStoryDesc2: "AIVA là viết tắt của AI (Artificial Intelligence), Vision (Thị giác) và Assistant (Trợ lý). AI đóng vai trò như người hướng dẫn tận tâm, thắp lên trí tò mò và tạo ra những cuộc phiêu lưu thử thách trẻ tìm kiếm câu trả lời từ thế giới thực. Vision là ống kính khám phá, giúp trẻ quan sát và trân trọng vẻ đẹp xung quanh. Assistant biến những trải nghiệm thị giác thành hướng dẫn giọng nói thân thiện, khuyến khích trẻ chạy nhảy và tương tác trực tiếp với thiên nhiên.",
+
+  aboutMissionTitle: "Sứ mệnh",
+  aboutMissionDesc: "Phát triển một chiếc kính thông minh cho trẻ em, hoạt động như một công cụ học tập và khám phá qua hình ảnh và giọng nói. Sản phẩm không có màn hình điện tử, sử dụng camera nhận diện ngữ cảnh và âm thanh dẫn truyền qua xương để cung cấp phản hồi bằng giọng nói, giúp trẻ tiếp nhận thông tin mà không cần nhìn vào màn hình.",
+
+  aboutTeamTitle: "Đội ngũ sáng lập",
+
+  teamMember1Name: "Tiên Quốc Bảo",
+  teamMember1Role: "CEO – Phát triển Sản phẩm",
+  teamMember1Desc: "Chuyên ngành Trí tuệ Nhân tạo. Định hướng tầm nhìn và chiến lược sản phẩm, kết nối các phòng ban để đạt mục tiêu dự án.",
+
+  teamMember2Name: "Nguyễn Thành Công",
+  teamMember2Role: "COO – Vận hành",
+  teamMember2Desc: "Chuyên ngành Trí tuệ Nhân tạo. Quản lý vận hành hàng ngày, giám sát phát triển nguyên mẫu và hỗ trợ tích hợp hệ thống.",
+
+  teamMember3Name: "Trương Khải Toàn",
+  teamMember3Role: "CPO – Công nghệ Phần mềm",
+  teamMember3Desc: "Chuyên ngành Công nghệ Thông tin. Phát triển website và ứng dụng, hỗ trợ backend và tích hợp phần cứng-phần mềm.",
+
+  teamMember4Name: "Đặng Ngọc Thảo Lan",
+  teamMember4Role: "CMO – Marketing & Thương hiệu",
+  teamMember4Desc: "Chuyên ngành Digital Marketing. Nghiên cứu thị trường, quảng bá thương hiệu và hỗ trợ nhận diện thị giác.",
+
+  teamMember5Name: "Thạch Tố Quyên",
+  teamMember5Role: "CFO – Tài chính",
+  teamMember5Desc: "Chuyên ngành Digital Marketing. Lập ngân sách, quản lý chi phí và phân bổ nguồn lực.",
+
+  teamMember6Name: "Hồ Mai Chí Bảo",
+  teamMember6Role: "CCO – Chăm sóc Khách hàng & Bán hàng",
+  teamMember6Desc: "Chuyên ngành Ngôn ngữ Anh. Xử lý giao tiếp khách hàng, hỗ trợ bán hàng và thu thập phản hồi người dùng.",
+
+  aboutContact: "Thông tin liên hệ",
+  aboutAddress: "600 Nguyễn Văn Cừ, phường Ninh Kiều, thành phố Cần Thơ",
+  aboutEmail: "aivisionassistance@gmail.com",
+  aboutWebsite: "aiva.id.vn",
+  aboutFanpage: "Theo dõi AIVA trên Facebook",
 
   /* For Kids Section */
   kidsTag: "Giới Thiệu Thương Hiệu",

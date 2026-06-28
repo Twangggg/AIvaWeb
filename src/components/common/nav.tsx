@@ -34,6 +34,8 @@ export function Nav({ onPreorder }: NavProps) {
         >
           <a href="#features" className="transition-colors hover:text-[var(--text-on-glass)]">{t.navExperience}</a>
           <a href="#how" className="transition-colors hover:text-[var(--text-on-glass)]">{t.navTech}</a>
+          <a href="#about" className="transition-colors hover:text-[var(--text-on-glass)]">{t.navAbout}</a>
+          <a href="#for-kids" className="transition-colors hover:text-[var(--text-on-glass)]">{t.navKids}</a>
           <a href="#specs" className="transition-colors hover:text-[var(--text-on-glass)]">{t.navSpecs}</a>
           <button onClick={onPreorder} className="transition-colors hover:text-[var(--text-on-glass)]">{t.navReserve}</button>
         </div>

@@ -20,6 +20,12 @@ export async function submitPreorder(payload: PreorderInput): Promise<PreorderRe
     throw new Error(error.message);
   }
 
+  fetch("/api/send-confirmation", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ email: payload.email, fullName: payload.fullName })
+  }).catch(() => {});
+
   return {
     success: true,
     message: "Pre-order submitted"
