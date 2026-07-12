@@ -1,9 +1,9 @@
 import { Resend } from "resend";
 
-function getResend() {
+function getResendClient() {
   const key = process.env.RESEND_API_KEY;
   if (!key) {
-    throw new Error("Missing RESEND_API_KEY");
+    return null;
   }
   return new Resend(key);
 }
@@ -35,9 +35,15 @@ export async function POST(request: Request) {
       return Response.json({ error: "Missing required fields" }, { status: 400 });
     }
 
+    const resend = getResendClient();
+    if (!resend) {
+      console.warn("RESEND_API_KEY not configured, skipping email");
+      return Response.json({ success: true, skipped: true });
+    }
+
     const content = CONTENT[locale] ?? CONTENT.vi;
 
-    const { data, error } = await getResend().emails.send({
+    const { data, error } = await resend.emails.send({
       from: "AIVA <onboarding@resend.dev>",
       to: email,
       subject: content.subject,
@@ -72,11 +78,13 @@ export async function POST(request: Request) {
     });
 
     if (error) {
+      console.error("Failed to send confirmation email:", error);
       return Response.json({ error: error.message }, { status: 500 });
     }
 
     return Response.json({ success: true, data });
-  } catch {
+  } catch (error) {
+    console.error("Send confirmation error:", error);
     return Response.json({ error: "Internal server error" }, { status: 500 });
   }
 }

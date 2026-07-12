@@ -10,10 +10,10 @@ function getSupabaseAdmin() {
   return createClient(url, key);
 }
 
-function getResend() {
+function getResendClient() {
   const key = process.env.RESEND_API_KEY;
   if (!key) {
-    throw new Error("Missing RESEND_API_KEY");
+    return null;
   }
   return new Resend(key);
 }
@@ -45,6 +45,7 @@ export async function POST(request: Request) {
       return Response.json({ error: "Missing required fields" }, { status: 400 });
     }
 
+    // Step 1: Insert into Supabase
     const supabase = getSupabaseAdmin();
     const { error: dbError } = await supabase.from("preorders").insert({
       full_name: fullName,
@@ -54,47 +55,61 @@ export async function POST(request: Request) {
     });
 
     if (dbError) {
+      console.error("Supabase insert error:", dbError);
       return Response.json({ error: dbError.message }, { status: 500 });
     }
 
-    const content = CONTENT[locale] ?? CONTENT.vi;
-
-    await getResend().emails.send({
-      from: "AIVA <onboarding@resend.dev>",
-      to: email,
-      subject: content.subject,
-      html: `
-        <div style="font-family: 'Inter', sans-serif; max-width: 560px; margin: 0 auto; padding: 32px;">
-          <div style="text-align: center; margin-bottom: 32px;">
-            <img src="https://aiva.id.vn/AIVALogo.png" alt="AIVA" style="height: 40px;" />
-          </div>
-          <h1 style="font-size: 24px; font-weight: 700; color: #1a1a1a; margin-bottom: 16px;">
-            ${content.heading.replace("{{name}}", fullName)}
-          </h1>
-          <p style="font-size: 16px; color: #6b7280; line-height: 1.6; margin-bottom: 24px;">
-            ${content.message}
-          </p>
-          <div style="background: #f9fafb; border-radius: 12px; padding: 24px; margin-bottom: 24px;">
-            <p style="font-size: 14px; color: #6b7280; margin: 0 0 8px;">
-              ${content.notice}
-            </p>
-          </div>
-          <p style="font-size: 14px; color: #9ca3af; line-height: 1.6; margin-bottom: 8px;">
-            ${content.follow}
-          </p>
-          <a href="https://www.facebook.com/AIVAGlass/" style="color: #eab308; font-size: 14px;">
-            facebook.com/AIVAGlass
-          </a>
-          <hr style="border: none; border-top: 1px solid #e5e7eb; margin: 32px 0;" />
-          <p style="font-size: 12px; color: #9ca3af; text-align: center;">
-            AIVA — AI, Vision &amp; Assistant
-          </p>
-        </div>
-      `
-    }).catch(() => {});
+    // Step 2: Send confirmation email (best-effort, don't fail the request)
+    const resend = getResendClient();
+    if (resend) {
+      const content = CONTENT[locale] ?? CONTENT.vi;
+      try {
+        await resend.emails.send({
+          from: "AIVA <onboarding@resend.dev>",
+          to: email,
+          subject: content.subject,
+          html: `
+            <div style="font-family: 'Inter', sans-serif; max-width: 560px; margin: 0 auto; padding: 32px;">
+              <div style="text-align: center; margin-bottom: 32px;">
+                <img src="https://aiva.id.vn/AIVALogo.png" alt="AIVA" style="height: 40px;" />
+              </div>
+              <h1 style="font-size: 24px; font-weight: 700; color: #1a1a1a; margin-bottom: 16px;">
+                ${content.heading.replace("{{name}}", fullName)}
+              </h1>
+              <p style="font-size: 16px; color: #6b7280; line-height: 1.6; margin-bottom: 24px;">
+                ${content.message}
+              </p>
+              <div style="background: #f9fafb; border-radius: 12px; padding: 24px; margin-bottom: 24px;">
+                <p style="font-size: 14px; color: #6b7280; margin: 0 0 8px;">
+                  ${content.notice}
+                </p>
+              </div>
+              <p style="font-size: 14px; color: #9ca3af; line-height: 1.6; margin-bottom: 8px;">
+                ${content.follow}
+              </p>
+              <a href="https://www.facebook.com/AIVAGlass/" style="color: #eab308; font-size: 14px;">
+                facebook.com/AIVAGlass
+              </a>
+              <hr style="border: none; border-top: 1px solid #e5e7eb; margin: 32px 0;" />
+              <p style="font-size: 12px; color: #9ca3af; text-align: center;">
+                AIVA — AI, Vision &amp; Assistant
+              </p>
+            </div>
+          `
+        });
+      } catch (emailError) {
+        console.error("Failed to send confirmation email:", emailError);
+      }
+    } else {
+      console.warn("RESEND_API_KEY not configured, skipping email");
+    }
 
     return Response.json({ success: true });
   } catch (error) {
-    return Response.json({ error: error instanceof Error ? error.message : "Internal server error" }, { status: 500 });
+    console.error("Preorder API error:", error);
+    return Response.json(
+      { error: error instanceof Error ? error.message : "Internal server error" },
+      { status: 500 }
+    );
   }
 }
