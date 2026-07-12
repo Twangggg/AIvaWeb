@@ -238,7 +238,6 @@ export const en = {
   kidsPost4Title: "Learn English through real experiences",
   kidsPost4Desc: "AIVA doesn't just help children explore the world — it supports natural language learning. When a child looks at an object, AIVA names it in both Vietnamese and English, helping children remember vocabulary through real experiences rather than rote memorization.",
   kidsPost4HL1: "Object recognition with bilingual naming",
-  kidsPost4HL2: "Native pronunciation with AI voice synthesis",
   kidsPost4HL3: "Build vocabulary through everyday exploration",
   kidsPost4HL4: "Suitable for children aged 4-12",
 

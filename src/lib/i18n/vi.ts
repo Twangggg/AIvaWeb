@@ -238,7 +238,6 @@ export const vi = {
   kidsPost4Title: "Học tiếng Anh qua trải nghiệm thực tế",
   kidsPost4Desc: "AIVA không chỉ giúp con khám phá thế giới, mà còn hỗ trợ học ngôn ngữ một cách tự nhiên. Con chỉ cần nhìn vào một vật thể, AIVA sẽ gọi tên bằng cả tiếng Việt và tiếng Anh, giúp con ghi nhớ từ vựng qua trải nghiệm thực tế thay vì học vẹt.",
   kidsPost4HL1: "Nhận diện vật thể và gọi tên bằng 2 ngôn ngữ",
-  kidsPost4HL2: "Phát âm chuẩn bản địa với AI语音 synthesis",
   kidsPost4HL3: "Xây dựng vốn từ vựng qua khám phá hàng ngày",
   kidsPost4HL4: "Phù hợp với trẻ từ 4-12 tuổi",
 

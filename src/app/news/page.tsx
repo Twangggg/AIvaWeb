@@ -23,7 +23,6 @@ export default function NewsPage() {
 
   const HIGHLIGHTS4 = [
     t.kidsPost4HL1,
-    t.kidsPost4HL2,
     t.kidsPost4HL3,
     t.kidsPost4HL4
   ];
