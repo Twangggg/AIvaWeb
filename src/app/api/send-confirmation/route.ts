@@ -60,7 +60,7 @@ export async function POST(request: Request) {
           <p style="font-size: 14px; color: #9ca3af; line-height: 1.6; margin-bottom: 8px;">
             ${content.follow}
           </p>
-          <a href="https://www.facebook.com/AIVAGlass/" style="color: #2f86ff; font-size: 14px;">
+          <a href="https://www.facebook.com/AIVAGlass/" style="color: #eab308; font-size: 14px;">
             facebook.com/AIVAGlass
           </a>
           <hr style="border: none; border-top: 1px solid #e5e7eb; margin: 32px 0;" />

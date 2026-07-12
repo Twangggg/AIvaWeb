@@ -19,11 +19,11 @@ export const en = {
   ctaPrimary: "RESERVE NOW",
   ctaSecondary: "LEARN MORE",
   statsUpdating: "Updating",
-  stat1Value: "Updating",
+  stat1Value: "~60g",
   stat1Label: "Ultra-light",
-  stat2Value: "Updating",
+  stat2Value: "<100ms",
   stat2Label: "AI Response",
-  stat3Value: "Updating",
+  stat3Value: "800 mAh",
   stat3Label: "Long Battery",
 
   /* Highlights */
@@ -101,13 +101,12 @@ export const en = {
   specLabel4: "Battery",
   specLabel5: "Connectivity",
   specLabel6: "Weight",
-  specValue: "Updating",
   specValue1: "Camera, Microphone",
   specValue2: "ESP32-S3",
-  specValue3: "Speaker or headphones",
-  specValue4: "Updating",
-  specValue5: "Wi-Fi (4G SIM & GPS expandable in later phases)",
-  specValue6: "Updating",
+  specValue3: "Speaker 8 ohm 2W N14",
+  specValue4: "LiPo 8mm 800 mAh",
+  specValue5: "Wi-Fi, Bluetooth",
+  specValue6: "~60g",
 
   /* Preorder */
   preorderHeading: "Ready to",
@@ -235,6 +234,26 @@ export const en = {
 
   kidsPost3Title: "Technology as a bridge",
   kidsPost3Desc: "With AIVA, technology no longer traps your child's vision — it becomes a bridge back to the real world. No screen, no worry — only unexpected discoveries. AIVA — Learn from the real world.",
+
+  kidsPost4Title: "Learn English through real experiences",
+  kidsPost4Desc: "AIVA doesn't just help children explore the world — it supports natural language learning. When a child looks at an object, AIVA names it in both Vietnamese and English, helping children remember vocabulary through real experiences rather than rote memorization.",
+  kidsPost4HL1: "Object recognition with bilingual naming",
+  kidsPost4HL2: "Native pronunciation with AI voice synthesis",
+  kidsPost4HL3: "Build vocabulary through everyday exploration",
+  kidsPost4HL4: "Suitable for children aged 4-12",
+
+  kidsPost5Title: "Parents stay connected, worry-free",
+  kidsPost5Desc: "With the companion app, parents can track their child's exploration journey, see what they've learned, and manage screen time. AIVA is not meant to replace parents — it's a tool to help parents accompany their child in every step of development.",
+  kidsPost5HL1: "View activity logs and vocabulary learned",
+  kidsPost5HL2: "Set daily usage time limits",
+  kidsPost5HL3: "Choose age-appropriate discovery topics",
+  kidsPost5HL4: "Receive notifications when children ask new questions",
+
+  kidsPost6Title: "The future of education starts today",
+  kidsPost6Desc: "Children need to learn from the real world, not just from books or screens. AIVA opens up a new educational approach — where every outing, every meal, every walk becomes an exciting lesson. That's how education should be: natural, fun, and inspiring.",
+  kidsPost6HL1: "Stimulate curiosity and creative thinking",
+  kidsPost6HL2: "Learn anytime, anywhere — no classroom limits",
+  kidsPost6HL3: "Develop observation and critical thinking skills",
 
   /* 3D Loader */
   loading3d: "Loading 3D model..."

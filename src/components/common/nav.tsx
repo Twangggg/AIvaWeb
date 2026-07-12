@@ -1,8 +1,9 @@
 "use client";
 
+import Link from "next/link";
+import Image from "next/image";
 import { useI18n } from "@/lib/i18n/provider";
 import { ThemeLanguageControls } from "@/components/common/theme-language-controls";
-import Image from "next/image";
 
 interface NavProps {
   onPreorder: () => void;
@@ -17,7 +18,7 @@ export function Nav({ onPreorder }: NavProps) {
       style={{ backgroundColor: "var(--nav-bg)", borderColor: "var(--nav-border)" }}
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <div className="flex items-center">
+        <Link href="/" className="flex items-center">
           <Image
             src="/AIVALogo.png"
             alt="AIVA Logo"
@@ -26,17 +27,15 @@ export function Nav({ onPreorder }: NavProps) {
             className="object-contain"
             priority
           />
-        </div>
+        </Link>
 
         <div
           className="hidden md:flex items-center gap-6 text-sm transition-colors"
           style={{ color: "var(--text-muted)" }}
         >
-          <a href="#features" className="transition-colors hover:text-[var(--text-on-glass)]">{t.navExperience}</a>
-          <a href="#how" className="transition-colors hover:text-[var(--text-on-glass)]">{t.navTech}</a>
-          <a href="#about" className="transition-colors hover:text-[var(--text-on-glass)]">{t.navAbout}</a>
-          <a href="#for-kids" className="transition-colors hover:text-[var(--text-on-glass)]">{t.navKids}</a>
-          <a href="#specs" className="transition-colors hover:text-[var(--text-on-glass)]">{t.navSpecs}</a>
+          <Link href="/product" className="transition-colors hover:text-[var(--text-on-glass)]">{t.navExperience}</Link>
+          <Link href="/news" className="transition-colors hover:text-[var(--text-on-glass)]">{t.navKids}</Link>
+          <Link href="/about" className="transition-colors hover:text-[var(--text-on-glass)]">{t.navAbout}</Link>
           <button onClick={onPreorder} className="transition-colors hover:text-[var(--text-on-glass)]">{t.navReserve}</button>
         </div>
 

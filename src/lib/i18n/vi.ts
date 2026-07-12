@@ -19,11 +19,11 @@ export const vi = {
   ctaPrimary: "ĐẶT TRƯỚC NGAY",
   ctaSecondary: "TÌM HIỂU THÊM",
   statsUpdating: "Đang cập nhật",
-  stat1Value: "Đang cập nhật",
+  stat1Value: "~60g",
   stat1Label: "Siêu nhẹ",
-  stat2Value: "Đang cập nhật",
+  stat2Value: "<100ms",
   stat2Label: "Phản hồi AI",
-  stat3Value: "Đang cập nhật",
+  stat3Value: "800 mAh",
   stat3Label: "Pin liên tục",
 
   /* Highlights */
@@ -101,13 +101,12 @@ export const vi = {
   specLabel4: "Pin",
   specLabel5: "Kết nối",
   specLabel6: "Trọng lượng",
-  specValue: "Đang cập nhật",
   specValue1: "Camera, Microphone",
   specValue2: "ESP32-S3",
-  specValue3: "Loa hoặc tai nghe",
-  specValue4: "Đang cập nhật",
-  specValue5: "Wi-Fi (Mở rộng 4G/GPS ở phase sau)",
-  specValue6: "Đang cập nhật",
+  specValue3: "Loa 8 ohm 2W N14",
+  specValue4: "LiPo 8mm 800 mAh",
+  specValue5: "Wi-Fi, Bluetooth",
+  specValue6: "~60g",
 
   /* Preorder */
   preorderHeading: "Sẵn sàng",
@@ -235,6 +234,26 @@ export const vi = {
 
   kidsPost3Title: "Công nghệ là cầu nối",
   kidsPost3Desc: "Với AIVA, công nghệ không còn giam giữ tầm nhìn của con, mà trở thành cầu nối đưa con trở về với thế giới thật. Không màn hình, không lo âu — chỉ có những khám phá đầy bất ngờ. AIVA — Học từ thế giới thật.",
+
+  kidsPost4Title: "Học tiếng Anh qua trải nghiệm thực tế",
+  kidsPost4Desc: "AIVA không chỉ giúp con khám phá thế giới, mà còn hỗ trợ học ngôn ngữ một cách tự nhiên. Con chỉ cần nhìn vào một vật thể, AIVA sẽ gọi tên bằng cả tiếng Việt và tiếng Anh, giúp con ghi nhớ từ vựng qua trải nghiệm thực tế thay vì học vẹt.",
+  kidsPost4HL1: "Nhận diện vật thể và gọi tên bằng 2 ngôn ngữ",
+  kidsPost4HL2: "Phát âm chuẩn bản địa với AI语音 synthesis",
+  kidsPost4HL3: "Xây dựng vốn từ vựng qua khám phá hàng ngày",
+  kidsPost4HL4: "Phù hợp với trẻ từ 4-12 tuổi",
+
+  kidsPost5Title: "Ba mẹ đồng hành, an tâm",
+  kidsPost5Desc: "Với ứng dụng đi kèm, ba mẹ có thể theo dõi hành trình khám phá của con, xem con đã học được gì, và kiểm soát thời gian sử dụng. AIVA không phải để thay thế ba mẹ, mà là trợ giúp ba mẹ đồng hành cùng con trong mỗi bước phát triển.",
+  kidsPost5HL1: "Xem nhật ký hoạt động và từ vựng đã học",
+  kidsPost5HL2: "Cài đặt giới hạn thời gian sử dụng hàng ngày",
+  kidsPost5HL3: "Chọn chủ đề khám phá phù hợp với độ tuổi",
+  kidsPost5HL4: "Nhận thông báo khi con đặt câu hỏi mới",
+
+  kidsPost6Title: "Tương lai giáo dục bắt đầu từ hôm nay",
+  kidsPost6Desc: "Trẻ em cần học hỏi từ thế giới thực, không chỉ từ sách vở hay màn hình. AIVA mở ra một phương pháp giáo dục mới — nơi mỗi chuyến đi chơi, mỗi bữa ăn, mỗi buổi dạo chơi đều trở thành bài học thú vị. Đó là cách giáo dục nên được: tự nhiên, vui vẻ và đầy cảm hứng.",
+  kidsPost6HL1: "Kích thích sự tò mò và tư duy sáng tạo",
+  kidsPost6HL2: "Học mọi lúc mọi nơi, không giới hạn lớp học",
+  kidsPost6HL3: "Phát triển kỹ năng quan sát và tư duy phản biện",
 
   /* 3D Loader */
   loading3d: "Đang tải mô hình 3D..."

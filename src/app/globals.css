@@ -22,12 +22,12 @@ body {
 }
 
 :root {
-  --ocean: #2f86ff;
-  --ocean-glow: #74b3ff;
+  --ocean: #eab308;
+  --ocean-glow: #fbbf24;
   --accent: #ffd84d;
   --gradient-ocean: linear-gradient(135deg, var(--ocean), var(--ocean-glow));
   --gradient-sun: linear-gradient(135deg, var(--accent), #ffbf3f);
-  --shadow-glow: 0 0 80px -10px rgba(47, 134, 255, 0.25);
+  --shadow-glow: 0 0 80px -10px rgba(234, 179, 8, 0.25);
   --shadow-sun: 0 0 60px -10px rgba(255, 216, 77, 0.25);
   --glass-bg: rgba(255, 255, 255, 0.7);
   --glass-border: rgba(0, 0, 0, 0.08);
@@ -41,16 +41,16 @@ body {
   --bg-subtle: rgba(0, 0, 0, 0.03);
   --bg-card: rgba(0, 0, 0, 0.03);
   --border-subtle: rgba(0, 0, 0, 0.08);
-  --ocean-alpha: rgba(47, 134, 255, 0.1);
+  --ocean-alpha: rgba(234, 179, 8, 0.1);
   --modal-bg: rgba(255, 255, 255, 0.97);
   --overlay-bg: rgba(0, 0, 0, 0.3);
   --shadow-modal: 0 25px 50px -12px rgba(0, 0, 0, 0.2);
-  --glow-ocean: rgba(47, 134, 255, 0.15);
+  --glow-ocean: rgba(234, 179, 8, 0.15);
   --glow-sun: rgba(255, 216, 77, 0.15);
 }
 
 :root.dark {
-  --shadow-glow: 0 0 80px -10px rgba(47, 134, 255, 0.45);
+  --shadow-glow: 0 0 80px -10px rgba(234, 179, 8, 0.45);
   --shadow-sun: 0 0 60px -10px rgba(255, 216, 77, 0.4);
   --glass-bg: rgba(255, 255, 255, 0.03);
   --glass-border: rgba(255, 255, 255, 0.1);
@@ -64,11 +64,11 @@ body {
   --bg-subtle: rgba(255, 255, 255, 0.05);
   --bg-card: rgba(0, 0, 0, 0.3);
   --border-subtle: rgba(255, 255, 255, 0.1);
-  --ocean-alpha: rgba(47, 134, 255, 0.2);
+  --ocean-alpha: rgba(234, 179, 8, 0.2);
   --modal-bg: rgba(13, 13, 13, 0.97);
   --overlay-bg: rgba(0, 0, 0, 0.6);
   --shadow-modal: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-  --glow-ocean: rgba(47, 134, 255, 0.45);
+  --glow-ocean: rgba(234, 179, 8, 0.45);
   --glow-sun: rgba(255, 216, 77, 0.4);
 }
 

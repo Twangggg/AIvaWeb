@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { Home3DScroll } from "@/components/home-3d-scroll";
+import Link from "next/link";
 import { Nav } from "@/components/common/nav";
 import { Footer } from "@/components/common/footer";
 import { PreorderModal } from "@/features/preorder/components/preorder-modal";
@@ -29,7 +29,7 @@ function Hero({ onPreorder }: { onPreorder: () => void }) {
         </div>
 
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-[0.92] mb-6">
-          <span className="text-gradient-sun">AIva</span>
+          <span className="text-gradient-ocean">AIva</span>
           <br />
           <span className="text-gradient-ocean">{t.heroSuffix}</span>
         </h1>
@@ -46,8 +46,8 @@ function Hero({ onPreorder }: { onPreorder: () => void }) {
           >
             {t.ctaPrimary}
           </button>
-          <a
-            href="#how"
+          <Link
+            href="/product"
             className="px-8 py-3.5 rounded-full backdrop-blur font-medium transition-colors"
             style={{
               backgroundColor: "var(--bg-subtle)",
@@ -57,7 +57,7 @@ function Hero({ onPreorder }: { onPreorder: () => void }) {
             }}
           >
             {t.ctaSecondary}
-          </a>
+          </Link>
         </div>
 
         <div className="mt-16 grid grid-cols-3 gap-4 max-w-lg mx-auto">
@@ -77,348 +77,74 @@ function Hero({ onPreorder }: { onPreorder: () => void }) {
   );
 }
 
-function HowItWorks() {
+function OverviewSection() {
   const { t } = useI18n();
 
-  const STEPS = [
-    { num: "01", title: t.step1Title, desc: t.step1Desc },
-    { num: "02", title: t.step2Title, desc: t.step2Desc },
-    { num: "03", title: t.step3Title, desc: t.step3Desc }
+  const sections = [
+    {
+      title: t.navExperience,
+      desc: "Khám phá công nghệ đằng sau AIva với trải nghiệm 3D tương tác.",
+      href: "/product",
+      image: "/bai-dang-1.png"
+    },
+    {
+      title: t.navKids,
+      desc: "Tìm hiểu cách AIVA giúp trẻ em học hỏi từ thế giới thực.",
+      href: "/news",
+      image: "/bai-dang-2.png"
+    },
+    {
+      title: t.navAbout,
+      desc: "Gặp gỡ đội ngũ đằng sau sứ mệnh đưa công nghệ đến với trẻ em.",
+      href: "/about",
+      image: "/3.png"
+    }
   ];
 
   return (
-    <section id="how" className="py-28 px-6 relative">
+    <section className="py-28 px-6">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-20">
-          <div className="inline-block px-3 py-1 rounded-full text-xs font-medium tracking-wider uppercase mb-5"
-            style={{ backgroundColor: "var(--ocean-alpha)", color: "var(--ocean-glow)" }}
-          >
-            {t.howTitle}
-          </div>
-          <h2 className="text-4xl md:text-6xl font-bold">
-            {t.howHeading} <span className="text-gradient-ocean">{t.howHeadingAccent}</span>
-          </h2>
-        </div>
-
-        <div className="grid md:grid-cols-3 gap-6">
-          {STEPS.map((s, i) => (
-            <div
-              key={s.num}
-              className="relative p-8 rounded-2xl backdrop-blur transition-colors"
-              style={{
-                backgroundColor: "var(--bg-subtle)",
-                border: "1px solid",
-                borderColor: "var(--border-subtle)"
-              }}
-            >
-              <div className="text-6xl font-bold text-gradient-sun mb-4">{s.num}</div>
-              <h3 className="text-2xl font-bold mb-3" style={{ color: "var(--text-on-glass)" }}>{s.title}</h3>
-              <p style={{ color: "var(--text-dim)" }}>{s.desc}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function AboutUs() {
-  const { t } = useI18n();
-
-  const TEAM = [
-    { image: "/3.png", name: t.teamMember1Name, role: t.teamMember1Role, desc: t.teamMember1Desc },
-    { image: "/6.png", name: t.teamMember2Name, role: t.teamMember2Role, desc: t.teamMember2Desc },
-    { image: "/4.png", name: t.teamMember3Name, role: t.teamMember3Role, desc: t.teamMember3Desc },
-    { image: "/1.png", name: t.teamMember4Name, role: t.teamMember4Role, desc: t.teamMember4Desc },
-    { image: "/2.png", name: t.teamMember5Name, role: t.teamMember5Role, desc: t.teamMember5Desc },
-    { image: "/5.png", name: t.teamMember6Name, role: t.teamMember6Role, desc: t.teamMember6Desc }
-  ];
-
-  return (
-    <section id="about" className="py-28 px-6 relative">
-      <div className="absolute inset-0 grid-bg opacity-60" />
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] rounded-full bg-[var(--ocean)]/10 blur-[100px]" />
-        <div className="absolute bottom-1/4 right-1/4 w-72 h-72 rounded-full bg-[var(--accent)]/8 blur-[80px]" />
-      </div>
-
-      <div className="max-w-6xl mx-auto relative z-10">
         <div className="text-center mb-16">
-          <div className="inline-block px-3 py-1 rounded-full text-xs font-medium tracking-wider uppercase mb-5"
-            style={{ backgroundColor: "var(--ocean-alpha)", color: "var(--ocean-glow)" }}
-          >
-            {t.aboutTag}
-          </div>
-          <h2 className="text-4xl md:text-6xl font-bold mb-4">
-            {t.aboutTitle} <span className="text-gradient-ocean">{t.aboutTitleAccent}</span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            Khám phá <span className="text-gradient-ocean">AIva</span>
           </h2>
-          <p className="text-lg md:text-xl max-w-2xl mx-auto" style={{ color: "var(--text-dim)" }}>
-            {t.aboutDesc}
+          <p className="text-lg max-w-2xl mx-auto" style={{ color: "var(--text-dim)" }}>
+            Tìm hiểu thêm về sản phẩm, sứ mệnh và đội ngũ của chúng tôi
           </p>
         </div>
 
-        <div className="text-center mb-12">
-          <div className="inline-block px-3 py-1 rounded-full text-xs font-medium tracking-wider uppercase mb-5"
-            style={{ backgroundColor: "var(--ocean-alpha)", color: "var(--ocean-glow)" }}
-          >
-            {t.aboutTeamTitle}
-          </div>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {TEAM.map((member) => (
-            <div
-              key={member.name}
-              className="rounded-2xl p-6 backdrop-blur transition-transform hover:scale-[1.02]"
+        <div className="grid md:grid-cols-3 gap-6">
+          {sections.map((section) => (
+            <Link
+              key={section.href}
+              href={section.href}
+              className="group rounded-2xl overflow-hidden backdrop-blur transition-transform hover:scale-[1.02]"
               style={{
                 backgroundColor: "var(--glass-bg)",
                 border: "1px solid",
                 borderColor: "var(--glass-border)"
               }}
             >
-              <div className="rounded-xl overflow-hidden mb-5 aspect-[4/3] bg-[var(--bg-subtle)]"
-                style={{ border: "1px solid", borderColor: "var(--glass-border)" }}
-              >
+              <div className="aspect-video overflow-hidden">
                 <Image
-                  src={member.image}
-                  alt={member.name}
+                  src={section.image}
+                  alt={section.title}
                   width={400}
-                  height={300}
-                  className="w-full h-full object-cover"
+                  height={225}
+                  className="w-full h-full object-cover transition-transform group-hover:scale-105"
                 />
               </div>
-              <h4 className="text-lg font-bold mb-1" style={{ color: "var(--text-on-glass)" }}>
-                {member.name}
-              </h4>
-              <p className="text-sm font-medium mb-3 text-gradient-ocean">
-                {member.role}
-              </p>
-              <p className="text-sm" style={{ color: "var(--text-dim)" }}>
-                {member.desc}
-              </p>
-            </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-2" style={{ color: "var(--text-on-glass)" }}>
+                  {section.title}
+                </h3>
+                <p className="text-sm" style={{ color: "var(--text-dim)" }}>
+                  {section.desc}
+                </p>
+              </div>
+            </Link>
           ))}
         </div>
-
-        <div className="mt-20 text-center">
-          <div className="inline-block px-3 py-1 rounded-full text-xs font-medium tracking-wider uppercase mb-8"
-            style={{ backgroundColor: "var(--ocean-alpha)", color: "var(--ocean-glow)" }}
-          >
-            {t.aboutContact}
-          </div>
-          <div className="rounded-2xl p-8 backdrop-blur max-w-2xl mx-auto"
-            style={{
-              backgroundColor: "var(--glass-bg)",
-              border: "1px solid",
-              borderColor: "var(--glass-border)"
-            }}
-          >
-            <div className="flex flex-col gap-3 text-left">
-              <div className="flex items-start gap-3">
-                <span className="material-symbols-outlined text-lg shrink-0 mt-0.5" style={{ color: "var(--ocean-glow)" }}>location_on</span>
-                <span style={{ color: "var(--text-dim)" }}>{t.aboutAddress}</span>
-              </div>
-              <div className="flex items-start gap-3">
-                <span className="material-symbols-outlined text-lg shrink-0 mt-0.5" style={{ color: "var(--ocean-glow)" }}>mail</span>
-                <span style={{ color: "var(--text-dim)" }}>{t.aboutEmail}</span>
-              </div>
-              <div className="flex items-start gap-3">
-                <span className="material-symbols-outlined text-lg shrink-0 mt-0.5" style={{ color: "var(--ocean-glow)" }}>language</span>
-                <span style={{ color: "var(--text-dim)" }}>{t.aboutWebsite}</span>
-              </div>
-              <div className="flex items-start gap-3">
-                <span className="material-symbols-outlined text-lg shrink-0 mt-0.5" style={{ color: "var(--ocean-glow)" }}>facebook</span>
-                <a href="https://www.facebook.com/AIVAGlass/" target="_blank" rel="noopener noreferrer"
-                  className="hover:underline" style={{ color: "var(--ocean-glow)" }}
-                >
-                  {t.aboutFanpage}
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function ForKids() {
-  const { t } = useI18n();
-
-  const HIGHLIGHTS = [
-    t.kidsPost1HL1,
-    t.kidsPost1HL2,
-    t.kidsPost1HL3,
-    t.kidsPost1HL4,
-    t.kidsPost1HL5
-  ];
-
-  const POSTS = [
-    {
-      image: "/bai-dang-1.png",
-      title: t.kidsPost1Title,
-      desc: t.kidsPost1Desc,
-      highlights: HIGHLIGHTS,
-      imageLeft: true
-    },
-    {
-      image: "/bai-dang-2.png",
-      title: t.kidsPost2Title,
-      desc: t.kidsPost2Desc,
-      highlights: null,
-      imageLeft: false
-    },
-    {
-      image: "/bai-dang-3.png",
-      title: t.kidsPost3Title,
-      desc: t.kidsPost3Desc,
-      highlights: null,
-      imageLeft: true
-    }
-  ];
-
-  return (
-    <section id="for-kids" className="py-28 px-6 relative">
-      <div className="absolute inset-0 grid-bg opacity-60" />
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] rounded-full bg-[var(--ocean)]/10 blur-[100px]" />
-        <div className="absolute bottom-1/4 left-1/4 w-72 h-72 rounded-full bg-[var(--accent)]/8 blur-[80px]" />
-      </div>
-
-      <div className="max-w-6xl mx-auto relative z-10">
-        <div className="text-center mb-16">
-          <div
-            className="inline-block px-3 py-1 rounded-full text-xs font-medium tracking-wider uppercase mb-5"
-            style={{ backgroundColor: "var(--ocean-alpha)", color: "var(--ocean-glow)" }}
-          >
-            {t.kidsTag}
-          </div>
-          <h2 className="text-4xl md:text-6xl font-bold mb-4">
-            {t.kidsTitle}
-          </h2>
-          <p className="text-lg md:text-xl max-w-2xl mx-auto" style={{ color: "var(--text-dim)" }}>
-            {t.kidsDesc}
-          </p>
-        </div>
-
-        <div className="flex flex-col gap-12">
-          {POSTS.map((post, i) => (
-            <div
-              key={post.title}
-              className="flex flex-col md:flex-row gap-8 items-center"
-              style={{ flexDirection: post.imageLeft ? undefined : "row-reverse" }}
-            >
-              <div className="w-full md:w-1/2">
-                <div
-                  className="rounded-2xl overflow-hidden"
-                  style={{
-                    border: "1px solid",
-                    borderColor: "var(--glass-border)"
-                  }}
-                >
-                  <Image
-                    src={post.image}
-                    alt={post.title}
-                    width={600}
-                    height={400}
-                    className="w-full h-auto object-cover"
-                  />
-                </div>
-              </div>
-
-              <div className="w-full md:w-1/2">
-                <div
-                  className="rounded-2xl p-8 backdrop-blur"
-                  style={{
-                    backgroundColor: "var(--glass-bg)",
-                    border: "1px solid",
-                    borderColor: "var(--glass-border)"
-                  }}
-                >
-                  <h3 className="text-2xl md:text-3xl font-bold mb-4 leading-snug" style={{ color: "var(--text-on-glass)" }}>
-                    {post.title}
-                  </h3>
-                  <p style={{ color: "var(--text-dim)" }}>
-                    {post.desc}
-                  </p>
-                  {post.highlights && (
-                    <ul className="mt-6 flex flex-col gap-3">
-                      {post.highlights.map((hl) => (
-                        <li key={hl} className="flex items-start gap-3">
-                          <span
-                            className="mt-1.5 w-2 h-2 rounded-full shrink-0"
-                            style={{ backgroundColor: "var(--accent)" }}
-                          />
-                          <span className="text-sm" style={{ color: "var(--text-on-glass)" }}>{hl}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function Specs() {
-  const { t } = useI18n();
-
-  const SPECS: [string, string][] = [
-    [t.specLabel1, t.specValue1],
-    [t.specLabel2, t.specValue2],
-    [t.specLabel3, t.specValue3],
-    [t.specLabel4, t.specValue4],
-    [t.specLabel5, t.specValue5],
-    [t.specLabel6, t.specValue6]
-  ];
-
-  return (
-    <section id="specs" className="py-28 px-6">
-      <div className="max-w-5xl mx-auto">
-        <h2 className="text-4xl md:text-6xl font-bold text-center mb-14">
-          {t.specsTitle} <span className="text-gradient-sun">{t.specsTitleAccent}</span>
-        </h2>
-
-        <div className="grid md:grid-cols-2 gap-px rounded-2xl overflow-hidden"
-          style={{ backgroundColor: "var(--border-subtle)" }}
-        >
-          {SPECS.map(([k, v]) => (
-            <div key={k} className="p-6 flex justify-between items-center"
-              style={{ backgroundColor: "var(--bg-card)" }}
-            >
-              <span style={{ color: "var(--text-dim)" }}>{k}</span>
-              <span className="font-medium" style={{ color: "var(--text-on-glass)" }}>{v}</span>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function PreorderTrigger({ onPreorder }: { onPreorder: () => void }) {
-  const { t } = useI18n();
-
-  return (
-    <section id="reserve" className="py-28 px-6">
-      <div className="max-w-2xl mx-auto text-center">
-        <h2 className="text-4xl md:text-5xl font-bold mb-6">
-          {t.preorderHeading} <span className="text-gradient-ocean">{t.preorderHeadingAccent}</span>
-        </h2>
-        <p className="mb-10" style={{ color: "var(--text-dim)" }}>
-          {t.preorderDesc}
-        </p>
-        <button
-          onClick={onPreorder}
-          className="px-10 py-4 rounded-full font-semibold text-lg hover:scale-105 transition-transform glow-sun"
-          style={{ backgroundColor: "var(--accent)", color: "var(--text-on-accent)" }}
-        >
-          {t.preorderCta}
-        </button>
       </div>
     </section>
   );
@@ -432,12 +158,7 @@ export default function HomePage() {
       <Nav onPreorder={() => setPreorderOpen(true)} />
       <main className="min-h-screen">
         <Hero onPreorder={() => setPreorderOpen(true)} />
-        <Home3DScroll />
-        <HowItWorks />
-        <AboutUs />
-        <ForKids />
-        <Specs />
-        <PreorderTrigger onPreorder={() => setPreorderOpen(true)} />
+        <OverviewSection />
       </main>
       <Footer />
       <PreorderModal open={preorderOpen} onClose={() => setPreorderOpen(false)} />
