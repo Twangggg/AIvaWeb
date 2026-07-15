@@ -19,7 +19,7 @@ export const en = {
   ctaPrimary: "RESERVE NOW",
   ctaSecondary: "LEARN MORE",
   statsUpdating: "Updating",
-  stat1Value: "~60g",
+  stat1Value: "~100g",
   stat1Label: "Ultra-light",
   stat2Value: "<100ms",
   stat2Label: "AI Response",
@@ -106,7 +106,7 @@ export const en = {
   specValue3: "Speaker 8 ohm 2W N14",
   specValue4: "LiPo 8mm 800 mAh",
   specValue5: "Wi-Fi, Bluetooth",
-  specValue6: "~60g",
+  specValue6: "~100g",
 
   /* Preorder */
   preorderHeading: "Ready to",

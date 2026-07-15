@@ -19,7 +19,7 @@ export const vi = {
   ctaPrimary: "ĐẶT TRƯỚC NGAY",
   ctaSecondary: "TÌM HIỂU THÊM",
   statsUpdating: "Đang cập nhật",
-  stat1Value: "~60g",
+  stat1Value: "~100g",
   stat1Label: "Siêu nhẹ",
   stat2Value: "<100ms",
   stat2Label: "Phản hồi AI",
@@ -106,7 +106,7 @@ export const vi = {
   specValue3: "Loa 8 ohm 2W N14",
   specValue4: "LiPo 8mm 800 mAh",
   specValue5: "Wi-Fi, Bluetooth",
-  specValue6: "~60g",
+  specValue6: "~100g",
 
   /* Preorder */
   preorderHeading: "Sẵn sàng",
