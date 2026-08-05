@@ -19,6 +19,7 @@ import { PageMouseGlow } from "@/components/ui/page-mouse-glow";
 import { Magnetic } from "@/components/ui/magnetic";
 import { Button } from "@/components/ui/button";
 import { useI18n } from "@/lib/i18n/provider";
+import { SiteIntro, useSiteIntro } from "@/components/home/site-intro";
 
 function Hero({ onPreorder }: { onPreorder: () => void }) {
   const { t } = useI18n();
@@ -95,6 +96,12 @@ function FinalCta({ onPreorder }: { onPreorder: () => void }) {
 
 export default function HomePage() {
   const [preorderOpen, setPreorderOpen] = useState(false);
+  const { showIntro, completeIntro } = useSiteIntro();
+
+  if (showIntro) {
+    return <SiteIntro onComplete={completeIntro} />;
+  }
+
   return (
     <>
       <PageMouseGlow />

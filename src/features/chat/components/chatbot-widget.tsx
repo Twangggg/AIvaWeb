@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useI18n } from "@/lib/i18n/provider";
 import { ChatMascotButton } from "./chat-mascot-button";
+import { useHomeIntroBlocking } from "@/components/home/site-intro";
 
 interface ChatMessage {
   id: string;
@@ -21,6 +22,7 @@ function uid() {
 
 export function ChatbotWidget() {
   const { locale, t } = useI18n();
+  const introBlocking = useHomeIntroBlocking();
   const [open, setOpen] = useState(false);
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState<ChatMessage[]>([]);
@@ -81,6 +83,8 @@ export function ChatbotWidget() {
   );
 
   const suggestions = SUGGESTIONS[locale];
+
+  if (introBlocking) return null;
 
   return (
     <>

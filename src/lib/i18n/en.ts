@@ -339,5 +339,10 @@ export const en = {
   chatOpen: "Open chat assistant",
   chatClose: "Close chat assistant",
   chatDisclaimer: "Answers AIva questions only. Do not share personal information.",
-  chatError: "Unable to connect. Please try again later."
+  chatError: "Unable to connect. Please try again later.",
+
+  /* Site intro */
+  introAriaLabel: "AIva introduction",
+  introDiscover: "AIva, what is this?",
+  introBrand: "AIva",
 } as const;

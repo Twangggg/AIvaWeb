@@ -339,5 +339,10 @@ export const vi = {
   chatOpen: "Mở trợ lý chat",
   chatClose: "Đóng trợ lý chat",
   chatDisclaimer: "Chỉ trả lời câu hỏi về AIva. Không chia sẻ thông tin cá nhân.",
-  chatError: "Không thể kết nối. Vui lòng thử lại sau."
+  chatError: "Không thể kết nối. Vui lòng thử lại sau.",
+
+  /* Site intro */
+  introAriaLabel: "Giới thiệu AIva",
+  introDiscover: "AIva ơi, đây là gì vậy",
+  introBrand: "AIva",
 } as const;

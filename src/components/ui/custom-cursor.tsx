@@ -105,7 +105,7 @@ export function CustomCursor() {
   return (
     <div
       ref={cursorRef}
-      className="aiva-cursor pointer-events-none fixed top-0 left-0 z-[9999]"
+      className="aiva-cursor pointer-events-none fixed top-0 left-0 z-[10050]"
       data-clickable="false"
       aria-hidden
     >
