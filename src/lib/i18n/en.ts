@@ -255,5 +255,89 @@ export const en = {
   kidsPost6HL3: "Develop observation and critical thinking skills",
 
   /* 3D Loader */
-  loading3d: "Loading 3D model..."
+  loading3d: "Loading 3D model...",
+
+  /* Nav mobile */
+  navMenuOpen: "Open menu",
+  navMenuClose: "Close menu",
+
+  /* Sticky CTA */
+  stickyCtaText: "Pre-order AIva today",
+  stickyCtaButton: "Pre-order",
+
+  /* Home explore */
+  homeExploreTitle: "Explore",
+  homeExploreDesc: "Learn more about our product, mission, and team",
+  homeExploreExperienceDesc: "Discover the technology behind AIva with an interactive 3D experience.",
+  homeExploreKidsDesc: "See how AIVA helps children learn from the real world.",
+  homeExploreAboutDesc: "Meet the team behind the mission to bring technology to children.",
+
+  /* Home features */
+  homeFeaturesTag: "Key Features",
+  homeFeaturesTitle: "Real",
+  homeFeaturesTitleAccent: "product",
+  homeFeaturesDesc: "AI glasses for children — no screen, learning from the real world",
+  homeFeature1Title: "No electronic display",
+  homeFeature1Desc: "No screen — information is delivered through speakers, protecting eyesight and encouraging real-world interaction.",
+  homeFeature2Title: "Camera & Microphone",
+  homeFeature2Desc: "Outward-facing camera recognizes objects, combined with a microphone so AI responds with age-appropriate voice feedback.",
+  homeFeature3Title: "ESP32-S3 chip",
+  homeFeature3Desc: "ESP32-S3 processor with integrated Wi-Fi and Bluetooth, capable of context recognition and voice response.",
+  homeFeature4Title: "800 mAh LiPo battery",
+  homeFeature4Desc: "8mm LiPo 800 mAh battery, weighing approximately 100g — lightweight enough for children to wear all day.",
+
+  /* Vision demo */
+  homeVisionTag: "AIva's View",
+  homeVisionTitle: "The world through",
+  homeVisionTitleAccent: "AI eyes",
+  homeVisionDesc: "No screen — AIva sees the real world, then tells children about it through voice.",
+  homeVisionRec: "LIVE",
+  homeVisionScanning: "Recognizing...",
+  homeVisionScenario: "Scenario",
+  homeVisionDemoBadge: "Illustration",
+  homeVisionDetect1: "Green plant",
+  homeVisionDetect2: "Leaf",
+  homeVisionDetect3: "Book",
+  homeVisionDetect4: "Toy",
+  homeVisionDetect5: "Hand",
+  homeVisionVoice1: "This is a green plant! Plants absorb CO₂ and make oxygen for us to breathe.",
+  homeVisionVoice2: "You're holding a book. Would you like me to read the title for you?",
+  homeVisionVoice3: "That's a toy! Do you know what material it's made from?",
+
+  /* Mission */
+  homeMissionHeadline: "Technology as a bridge",
+  homeMissionHeadlineAccent: "to the real world",
+  homeMissionAILabel: "Artificial Intelligence",
+  homeMissionVisionLabel: "Vision",
+  homeMissionAssistantLabel: "Assistant",
+  homeMissionAIDesc: "AI acts as a guide, sparking curiosity and helping children find answers from their surroundings.",
+  homeMissionVisionDesc: "Vision is the exploration lens — helping children observe and appreciate the beauty of the real world.",
+  homeMissionAssistantDesc: "The voice assistant transforms visual experiences into friendly guidance, encouraging direct interaction.",
+
+  /* FAQ */
+  homeFaqTag: "FAQ",
+  homeFaqTitle: "Frequently",
+  homeFaqTitleAccent: "asked questions",
+  faq1Q: "What age is AIva suitable for?",
+  faq1A: "AIva is designed for children aged 4–12, with voice content and interaction levels tailored to each age group.",
+  faq2Q: "Does AIva have a screen?",
+  faq2A: "No. AIva has no electronic display. Information is delivered through safe bone-conduction speakers, protecting children's eyesight.",
+  faq3Q: "Can parents control usage?",
+  faq3A: "Yes. The companion app lets parents track activity, view learned vocabulary, and set daily usage time limits.",
+  faq4Q: "How long does the battery last?",
+  faq4A: "The 800 mAh LiPo battery provides all-day continuous use. A full charge takes about 1 hour.",
+  faq5Q: "How do I pre-order AIva?",
+  faq5A: "Click \"Pre-order Now\" on the website and fill in your contact details. We'll email you when official sales open.",
+
+  /* Chatbot */
+  chatTitle: "AIva Assistant",
+  chatSubtitle: "Ask about product & pre-order",
+  chatWelcome:
+    "Hello! I'm the AIva assistant. I can help you learn about AIva smart glasses, pre-order, features, and support.",
+  chatPlaceholder: "Ask about AIva...",
+  chatSend: "Send",
+  chatOpen: "Open chat assistant",
+  chatClose: "Close chat assistant",
+  chatDisclaimer: "Answers AIva questions only. Do not share personal information.",
+  chatError: "Unable to connect. Please try again later."
 } as const;

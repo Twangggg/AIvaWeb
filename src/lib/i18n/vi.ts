@@ -255,5 +255,89 @@ export const vi = {
   kidsPost6HL3: "Phát triển kỹ năng quan sát và tư duy phản biện",
 
   /* 3D Loader */
-  loading3d: "Đang tải mô hình 3D..."
+  loading3d: "Đang tải mô hình 3D...",
+
+  /* Nav mobile */
+  navMenuOpen: "Mở menu",
+  navMenuClose: "Đóng menu",
+
+  /* Sticky CTA */
+  stickyCtaText: "Đặt trước AIva ngay hôm nay",
+  stickyCtaButton: "Đặt trước",
+
+  /* Home explore */
+  homeExploreTitle: "Khám phá",
+  homeExploreDesc: "Tìm hiểu thêm về sản phẩm, sứ mệnh và đội ngũ của chúng tôi",
+  homeExploreExperienceDesc: "Khám phá công nghệ đằng sau AIva với trải nghiệm 3D tương tác.",
+  homeExploreKidsDesc: "Tìm hiểu cách AIVA giúp trẻ em học hỏi từ thế giới thực.",
+  homeExploreAboutDesc: "Gặp gỡ đội ngũ đằng sau sứ mệnh đưa công nghệ đến với trẻ em.",
+
+  /* Home features */
+  homeFeaturesTag: "Tính năng nổi bật",
+  homeFeaturesTitle: "Sản phẩm",
+  homeFeaturesTitleAccent: "thực tế",
+  homeFeaturesDesc: "Chiếc kính AI dành cho trẻ em — không màn hình, học từ thế giới thật",
+  homeFeature1Title: "Không màn hình điện tử",
+  homeFeature1Desc: "Sản phẩm không có màn hình, thông tin truyền qua loa — giúp bảo vệ thị lực và khuyến khích trẻ tương tác với môi trường thực.",
+  homeFeature2Title: "Camera & Microphone",
+  homeFeature2Desc: "Camera hướng ra ngoài nhận diện vật thể, kết hợp micro thu âm để AI phản hồi bằng giọng nói phù hợp độ tuổi.",
+  homeFeature3Title: "Chip ESP32-S3",
+  homeFeature3Desc: "Vi xử lý ESP32-S3 tích hợp Wi-Fi và Bluetooth, đủ sức xử lý nhận diện ngữ cảnh và phản hồi giọng nói.",
+  homeFeature4Title: "Pin LiPo 800 mAh",
+  homeFeature4Desc: "Pin LiPo 8mm dung lượng 800 mAh, trọng lượng khoảng 100g — gọn nhẹ cho trẻ mang cả ngày.",
+
+  /* Vision demo */
+  homeVisionTag: "Góc nhìn AIva",
+  homeVisionTitle: "Thế giới qua",
+  homeVisionTitleAccent: "đôi mắt AI",
+  homeVisionDesc: "Không màn hình — AIva nhìn thế giới thật, rồi kể cho trẻ nghe bằng giọng nói.",
+  homeVisionRec: "LIVE",
+  homeVisionScanning: "Đang nhận diện...",
+  homeVisionScenario: "Kịch bản",
+  homeVisionDemoBadge: "Minh họa",
+  homeVisionDetect1: "Cây xanh",
+  homeVisionDetect2: "Lá cây",
+  homeVisionDetect3: "Cuốn sách",
+  homeVisionDetect4: "Đồ chơi",
+  homeVisionDetect5: "Bàn tay",
+  homeVisionVoice1: "Đây là cây xanh! Cây hấp thụ CO₂ và tạo ra ôxy cho chúng ta thở nhé.",
+  homeVisionVoice2: "Bạn đang cầm một cuốn sách. Muốn mình đọc tên sách cho bạn không?",
+  homeVisionVoice3: "Đây là đồ chơi! Bạn có biết nó được làm từ chất liệu gì không?",
+
+  /* Mission */
+  homeMissionHeadline: "Công nghệ là cầu nối",
+  homeMissionHeadlineAccent: "về thế giới thật",
+  homeMissionAILabel: "Artificial Intelligence",
+  homeMissionVisionLabel: "Vision (Thị giác)",
+  homeMissionAssistantLabel: "Assistant (Trợ lý)",
+  homeMissionAIDesc: "AI đóng vai trò người hướng dẫn, thắp lên trí tò mò và giúp trẻ tìm câu trả lời từ môi trường xung quanh.",
+  homeMissionVisionDesc: "Thị giác là ống kính khám phá — giúp trẻ quan sát và trân trọng vẻ đẹp thế giới thực.",
+  homeMissionAssistantDesc: "Trợ lý giọng nói biến trải nghiệm thị giác thành hướng dẫn thân thiện, khuyến khích trẻ tương tác trực tiếp.",
+
+  /* FAQ */
+  homeFaqTag: "Hỏi đáp",
+  homeFaqTitle: "Câu hỏi",
+  homeFaqTitleAccent: "thường gặp",
+  faq1Q: "AIva phù hợp với trẻ từ mấy tuổi?",
+  faq1A: "AIva được thiết kế cho trẻ từ 4–12 tuổi, với nội dung giọng nói và mức độ tương tác phù hợp theo từng độ tuổi.",
+  faq2Q: "AIva có màn hình không?",
+  faq2A: "Không. AIva hoàn toàn không có màn hình điện tử. Thông tin được truyền qua loa dẫn truyền an toàn, giúp bảo vệ thị lực cho trẻ.",
+  faq3Q: "Phụ huynh có thể kiểm soát được không?",
+  faq3A: "Có. Ứng dụng đi kèm cho phép phụ huynh theo dõi hoạt động, xem từ vựng đã học và cài đặt giới hạn thời gian sử dụng.",
+  faq4Q: "Pin AIva dùng được bao lâu?",
+  faq4A: "Pin LiPo 800 mAh cho thời gian sử dụng liên tục cả ngày. Sạc đầy mất khoảng 1 giờ.",
+  faq5Q: "Làm sao để đặt trước AIva?",
+  faq5A: "Nhấn nút \"Đặt trước ngay\" trên trang web, điền thông tin liên hệ. Chúng tôi sẽ gửi email thông báo khi mở bán chính thức.",
+
+  /* Chatbot */
+  chatTitle: "Trợ lý AIva",
+  chatSubtitle: "Hỏi về sản phẩm & đặt trước",
+  chatWelcome:
+    "Xin chào! Tôi là trợ lý AIva. Tôi có thể giúp bạn tìm hiểu về kính thông minh AIva, đặt trước, tính năng và liên hệ hỗ trợ.",
+  chatPlaceholder: "Hỏi về AIva...",
+  chatSend: "Gửi",
+  chatOpen: "Mở trợ lý chat",
+  chatClose: "Đóng trợ lý chat",
+  chatDisclaimer: "Chỉ trả lời câu hỏi về AIva. Không chia sẻ thông tin cá nhân.",
+  chatError: "Không thể kết nối. Vui lòng thử lại sau."
 } as const;

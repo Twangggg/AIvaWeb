@@ -1,22 +1,26 @@
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+import { clsx } from "clsx";
+import type { ButtonHTMLAttributes, ReactNode } from "react";
+
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  variant?: "primary" | "ghost";
   fullWidth?: boolean;
+  children: ReactNode;
+  className?: string;
 }
 
-export function Button({ className, fullWidth, ...props }: ButtonProps) {
+export function Button({ variant = "primary", fullWidth, children, className, ...props }: ButtonProps) {
   return (
     <button
-      className={[
-        "rounded-xl border border-brand-gold/80 bg-brand-gold px-6 py-3.5 text-sm font-bold uppercase tracking-[0.08em]",
-        "shadow-lg shadow-brand-gold/15 transition-all hover:brightness-110 hover:shadow-xl hover:shadow-brand-gold/25",
-        "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold/50 focus-visible:ring-offset-2",
-        "disabled:cursor-not-allowed disabled:opacity-50 disabled:shadow-none",
+      className={clsx(
+        "inline-flex items-center justify-center font-semibold transition-all duration-300",
+        variant === "primary" && "btn-primary px-8 py-3.5",
+        variant === "ghost" && "btn-ghost px-8 py-3.5",
         fullWidth && "w-full",
         className
-      ]
-        .filter(Boolean)
-        .join(" ")}
-      style={{ color: "var(--text-on-accent)" }}
+      )}
       {...props}
-    />
+    >
+      {children}
+    </button>
   );
 }
