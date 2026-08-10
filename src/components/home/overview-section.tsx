@@ -35,7 +35,7 @@ export function OverviewSection() {
             <Reveal key={section.href} delay={i * 80} className="h-full">
               <Link href={section.href} className="group block h-full">
                 <article
-                  className="h-full flex flex-col rounded-2xl overflow-hidden transition-colors duration-300 group-hover:border-[rgba(234,179,8,0.28)]"
+                  className="tilt-card h-full flex flex-col rounded-2xl overflow-hidden transition-colors duration-300 group-hover:border-[rgba(234,179,8,0.28)]"
                   style={{
                     backgroundColor: "var(--glass-bg)",
                     border: "1px solid",
@@ -48,7 +48,7 @@ export function OverviewSection() {
                       alt={section.title}
                       fill
                       sizes="(max-width: 768px) 100vw, 33vw"
-                      className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
+                      className="object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.06]"
                     />
                   </div>
 

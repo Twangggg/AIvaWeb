@@ -1,38 +1,45 @@
 "use client";
 
 import { Canvas, useFrame } from "@react-three/fiber";
-import { Bounds, useAnimations, useGLTF } from "@react-three/drei";
+import { Bounds, useGLTF } from "@react-three/drei";
 import { Suspense, useEffect, useRef } from "react";
 import * as THREE from "three";
 import type * as THREE_NS from "three";
 
 useGLTF.preload("/models/mascot.glb");
 
-function MascotModel({ hovering }: { hovering: boolean }) {
+function MascotModel({
+  hovering,
+  talking,
+  onReady
+}: {
+  hovering: boolean;
+  talking: boolean;
+  onReady?: () => void;
+}) {
   const group = useRef<THREE_NS.Group>(null!);
-  const { scene, animations } = useGLTF("/models/mascot.glb");
-  const { actions } = useAnimations(animations, scene);
+  const { scene } = useGLTF("/models/mascot.glb");
 
   useEffect(() => {
-    if (!animations.length || !actions) return;
-    const action = Object.values(actions).find(Boolean);
-    action?.reset().fadeIn(0.3).play();
-    return () => {
-      action?.fadeOut(0.3);
-    };
-  }, [actions, animations.length]);
+    onReady?.();
+  }, [onReady]);
 
   useFrame(({ clock }) => {
     if (!group.current) return;
     const t = clock.getElapsedTime();
-    const targetScale = hovering ? 1.05 : 1;
-    const current = group.current.scale.x;
-    group.current.scale.setScalar(THREE.MathUtils.lerp(current, targetScale, 0.12));
 
-    if (animations.length === 0) {
-      group.current.position.y = Math.sin(t * 2.2) * 0.03;
-      group.current.rotation.y = Math.sin(t * 0.6) * 0.1;
-    }
+    const targetScale = hovering ? 1.08 : talking ? 1.04 : 1;
+    const current = group.current.scale.x;
+    group.current.scale.setScalar(THREE.MathUtils.lerp(current, targetScale, 0.14));
+
+    const bobAmp = talking ? 0.055 : hovering ? 0.04 : 0.028;
+    const bobSpeed = talking ? 5.2 : hovering ? 3.2 : 2.1;
+    group.current.position.y = Math.sin(t * bobSpeed) * bobAmp;
+
+    const sway = talking ? 0.18 : hovering ? 0.14 : 0.1;
+    group.current.rotation.y = Math.sin(t * 0.7) * sway;
+    group.current.rotation.z = Math.sin(t * 1.1) * (talking ? 0.05 : 0.025);
+    group.current.rotation.x = Math.sin(t * 0.9) * 0.04 + (hovering ? -0.06 : 0);
   });
 
   return (
@@ -44,10 +51,14 @@ function MascotModel({ hovering }: { hovering: boolean }) {
 
 export default function ChatMascotCanvas({
   hovering,
-  active
+  talking = false,
+  active,
+  onReady
 }: {
   hovering: boolean;
+  talking?: boolean;
   active: boolean;
+  onReady?: () => void;
 }) {
   return (
     <Canvas
@@ -70,7 +81,7 @@ export default function ChatMascotCanvas({
       <directionalLight position={[-4, 2, 3]} intensity={0.6} color="#38bdf8" />
       <Suspense fallback={null}>
         <Bounds fit observe margin={1.3}>
-          <MascotModel hovering={hovering} />
+          <MascotModel hovering={hovering} talking={talking} onReady={onReady} />
         </Bounds>
       </Suspense>
     </Canvas>

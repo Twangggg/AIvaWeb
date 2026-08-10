@@ -240,6 +240,7 @@ export function ChatbotWidget() {
 
       <ChatMascotButton
         open={open}
+        talking={loading}
         onClick={toggleOpen}
         ariaLabel={open ? t.chatClose : t.chatOpen}
       />

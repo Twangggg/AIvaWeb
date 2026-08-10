@@ -1,23 +1,34 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 const ChatMascotCanvas = dynamic(() => import("./chat-mascot-canvas"), { ssr: false });
 
 interface ChatMascotButtonProps {
   open: boolean;
+  talking?: boolean;
   onClick: () => void;
   ariaLabel: string;
 }
 
-export function ChatMascotButton({ open, onClick, ariaLabel }: ChatMascotButtonProps) {
+export function ChatMascotButton({
+  open,
+  talking = false,
+  onClick,
+  ariaLabel
+}: ChatMascotButtonProps) {
   const [hovering, setHovering] = useState(false);
-  const [ready, setReady] = useState(false);
+  const [mounted, setMounted] = useState(false);
+  const [modelReady, setModelReady] = useState(false);
 
   useEffect(() => {
-    const timer = window.setTimeout(() => setReady(true), 300);
+    const timer = window.setTimeout(() => setMounted(true), 300);
     return () => window.clearTimeout(timer);
+  }, []);
+
+  const handleReady = useCallback(() => {
+    setModelReady(true);
   }, []);
 
   return (
@@ -50,12 +61,27 @@ export function ChatMascotButton({ open, onClick, ariaLabel }: ChatMascotButtonP
       />
 
       <div className="relative w-full h-full" style={{ overflow: "visible" }}>
-        {!ready && (
-          <div className="absolute inset-0 flex items-center justify-center">
+        {!modelReady && (
+          <div className="absolute inset-0 z-0 flex items-center justify-center">
             <div className="w-8 h-8 rounded-full border-2 border-[var(--accent)] border-t-transparent animate-spin" />
           </div>
         )}
-        {ready && <ChatMascotCanvas hovering={hovering} active />}
+        {mounted && (
+          <div
+            className="relative z-10 h-full w-full"
+            style={{
+              opacity: modelReady ? 1 : 0,
+              transition: "opacity 180ms ease-out"
+            }}
+          >
+            <ChatMascotCanvas
+              hovering={hovering}
+              talking={talking}
+              active
+              onReady={handleReady}
+            />
+          </div>
+        )}
       </div>
     </button>
   );
