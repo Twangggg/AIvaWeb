@@ -87,7 +87,6 @@ export function FeaturesSection() {
       <div className="max-w-6xl mx-auto relative z-10">
         <Reveal>
           <SectionHeader
-            tag={t.homeFeaturesTag}
             title={
               <>
                 {t.homeFeaturesTitle}{" "}

@@ -13,6 +13,11 @@ interface TextRevealProps {
   immediate?: boolean;
 }
 
+function sectionIsIn(section: HTMLElement) {
+  const transit = section.dataset.fpTransit ?? "";
+  return section.dataset.fpActive === "true" || transit.startsWith("enter");
+}
+
 export function TextReveal({
   text,
   className = "",
@@ -26,17 +31,51 @@ export function TextReveal({
     if (typeof window === "undefined") return false;
     return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   });
+  const [playKey, setPlayKey] = useState(0);
 
   const words = useMemo(() => text.split(/(\s+)/).filter(Boolean), [text]);
 
   useEffect(() => {
-    if (visible) return;
     const el = ref.current;
     if (!el) return;
+
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      return;
+    }
 
     if (immediate) {
       const id = window.setTimeout(() => setVisible(true), 40);
       return () => window.clearTimeout(id);
+    }
+
+    const section = el.closest<HTMLElement>("[data-fp-section]");
+    if (section) {
+      let wasIn = false;
+      const mo = new MutationObserver(() => {
+        const nowIn = sectionIsIn(section);
+        if (nowIn && !wasIn) {
+          setVisible(false);
+          requestAnimationFrame(() => {
+            setPlayKey((k) => k + 1);
+            setVisible(true);
+          });
+        } else if (!nowIn) {
+          setVisible(false);
+        }
+        wasIn = nowIn;
+      });
+      mo.observe(section, {
+        attributes: true,
+        attributeFilter: ["data-fp-active", "data-fp-transit"]
+      });
+      const boot = window.setTimeout(() => {
+        wasIn = sectionIsIn(section);
+        if (wasIn) setVisible(true);
+      }, 0);
+      return () => {
+        window.clearTimeout(boot);
+        mo.disconnect();
+      };
     }
 
     const observer = new IntersectionObserver(
@@ -50,10 +89,11 @@ export function TextReveal({
     );
     observer.observe(el);
     return () => observer.disconnect();
-  }, [visible, immediate]);
+  }, [immediate]);
 
   return (
     <Tag
+      key={playKey}
       ref={ref as never}
       className={`text-reveal ${visible ? "is-visible" : ""} ${className}`}
       aria-label={text}

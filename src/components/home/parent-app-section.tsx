@@ -34,16 +34,15 @@ export function ParentAppSection() {
   const screen = SCREENS.find((s) => s.id === active) ?? SCREENS[0];
 
   return (
-    <section className="py-24 px-6 relative overflow-hidden">
+    <section className="cx-fp-panel relative overflow-hidden">
       <div className="absolute inset-0 pointer-events-none" aria-hidden>
         <div className="absolute top-1/3 right-0 w-[420px] h-[420px] rounded-full bg-[var(--ocean)]/10 blur-[110px]" />
         <div className="absolute bottom-0 left-1/4 w-72 h-72 rounded-full bg-sky-400/10 blur-[90px]" />
       </div>
 
-      <div className="max-w-6xl mx-auto relative z-10">
+      <div className="max-w-6xl mx-auto relative z-10 w-full">
         <Reveal>
           <SectionHeader
-            tag={t.homeAppTag}
             title={
               <>
                 {t.homeAppTitle}{" "}

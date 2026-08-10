@@ -18,11 +18,13 @@ export function FaqSection() {
   ];
 
   return (
-    <section className="py-24 px-6">
-      <div className="max-w-2xl mx-auto">
+    <section
+      data-fp-scroll
+      className="faq-section h-full w-full py-12 md:py-16 px-6 flex flex-col justify-center overflow-y-auto"
+    >
+      <div className="max-w-2xl mx-auto w-full">
         <Reveal>
           <SectionHeader
-            tag={t.homeFaqTag}
             title={
               <>
                 {t.homeFaqTitle}{" "}

@@ -3,8 +3,8 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useI18n } from "@/lib/i18n/provider";
-import { Reveal } from "@/components/ui/reveal";
-import { SectionHeader } from "@/components/ui/section-header";
+import { useFpSceneSync } from "@/hooks/use-fp-scene-sync";
+import { useFpSectionEnter } from "@/hooks/use-fp-section-enter";
 
 interface Detection {
   label: string;
@@ -22,18 +22,22 @@ interface Scenario {
   voice: string;
 }
 
+/**
+ * Vision chapter — 3 frames on a depth circle.
+ * Scroll rotates the ring; the front card is the active scene.
+ */
 export function VisionDemoSection() {
   const { t } = useI18n();
-  const [active, setActive] = useState(0);
   const [phase, setPhase] = useState(0);
+  const [userDriven, setUserDriven] = useState(false);
 
   const scenarios: Scenario[] = [
     {
       id: "plant",
       image: "/vision/cayxanh.jpg",
       detections: [
-        { label: t.homeVisionDetect1, confidence: 97, top: "16%", left: "6%", width: "44%", height: "72%" },
-        { label: t.homeVisionDetect2, confidence: 91, top: "6%", left: "20%", width: "20%", height: "24%" }
+        { label: t.homeVisionDetect1, confidence: 97, top: "18%", left: "8%", width: "42%", height: "70%" },
+        { label: t.homeVisionDetect2, confidence: 91, top: "8%", left: "22%", width: "18%", height: "22%" }
       ],
       voice: t.homeVisionVoice1
     },
@@ -41,7 +45,7 @@ export function VisionDemoSection() {
       id: "book",
       image: "/vision/quyensach.jpg",
       detections: [
-        { label: t.homeVisionDetect3, confidence: 95, top: "10%", left: "18%", width: "64%", height: "82%" }
+        { label: t.homeVisionDetect3, confidence: 95, top: "10%", left: "18%", width: "64%", height: "78%" }
       ],
       voice: t.homeVisionVoice2
     },
@@ -49,137 +53,151 @@ export function VisionDemoSection() {
       id: "toy",
       image: "/vision/dochoi.jpg",
       detections: [
-        { label: t.homeVisionDetect4, confidence: 93, top: "26%", left: "36%", width: "30%", height: "38%" },
-        { label: t.homeVisionDetect5, confidence: 88, top: "48%", left: "14%", width: "68%", height: "44%" }
+        { label: t.homeVisionDetect4, confidence: 93, top: "22%", left: "34%", width: "30%", height: "42%" },
+        { label: t.homeVisionDetect5, confidence: 88, top: "48%", left: "14%", width: "62%", height: "42%" }
       ],
       voice: t.homeVisionVoice3
     }
   ];
 
-  const scenario = scenarios[active];
+  const { step: active, dir, setScene } = useFpSceneSync("vision", scenarios.length);
+  const { entered } = useFpSectionEnter("vision");
+  const scenario = scenarios[active] ?? scenarios[0];
+  const stepDeg = 360 / scenarios.length;
 
   useEffect(() => {
-    const timers = [
-      window.setTimeout(() => setPhase(1), 400),
-      window.setTimeout(() => setPhase(2), 1200),
-      window.setTimeout(() => setPhase(3), 2200)
-    ];
-    return () => timers.forEach(clearTimeout);
+    const reset = window.setTimeout(() => setPhase(0), 0);
+    const id = window.setTimeout(() => setPhase(3), 700);
+    return () => {
+      window.clearTimeout(reset);
+      window.clearTimeout(id);
+    };
   }, [active]);
 
   useEffect(() => {
+    if (userDriven) return;
     const interval = window.setInterval(() => {
-      setPhase(0);
-      setActive((prev) => (prev + 1) % scenarios.length);
+      setScene((active + 1) % scenarios.length);
     }, 7000);
-    return () => clearInterval(interval);
-  }, [scenarios.length]);
+    return () => window.clearInterval(interval);
+  }, [active, scenarios.length, setScene, userDriven]);
 
-  const selectScenario = (index: number) => {
-    setPhase(0);
-    setActive(index);
-  };
+  useEffect(() => {
+    const el = document.getElementById("vision");
+    if (!el) return;
+    const onScene = () => setUserDriven(true);
+    el.addEventListener("fp-scene", onScene);
+    return () => el.removeEventListener("fp-scene", onScene);
+  }, []);
 
   return (
-    <section className="py-24 px-6 relative overflow-hidden">
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-[var(--ocean)]/8 blur-[120px]" />
+    <section className="vision-orbit cx-fp-panel" data-entered={entered ? "true" : "false"}>
+      <div className="vision-orbit-glow" aria-hidden />
+
+      <header className="vision-orbit-head" data-fp-rise style={{ ["--fp-delay" as string]: "40ms" }}>
+        <h2 className="font-display font-bold tracking-tight leading-[1.1]">
+          {t.homeVisionTitle}{" "}
+          <span className="text-gradient-ocean">{t.homeVisionTitleAccent}</span>
+        </h2>
+        <p>{t.homeVisionDesc}</p>
+      </header>
+
+      <div
+        className="vision-ring-stage"
+        data-dir={dir}
+        data-fp-rise="scale"
+        style={{ ["--fp-delay" as string]: "140ms" }}
+      >
+        <div className="vision-ring-floor" aria-hidden />
+        <div className="vision-ring-orbit" aria-hidden />
+
+        <div
+          className="vision-ring"
+          style={{ transform: `rotateY(${-active * stepDeg}deg)` }}
+        >
+          {scenarios.map((s, i) => {
+            const isActive = i === active;
+            return (
+              <button
+                key={s.id}
+                type="button"
+                className="vision-ring-card"
+                data-active={isActive ? "true" : "false"}
+                aria-label={`${t.homeVisionScenario} ${i + 1}`}
+                aria-current={isActive}
+                style={{
+                  transform: `rotateY(${i * stepDeg}deg) translateZ(var(--ring-r))`
+                }}
+                onClick={() => {
+                  setUserDriven(true);
+                  setScene(i);
+                }}
+              >
+                <span className="vision-ring-card-face">
+                  <Image
+                    src={s.image}
+                    alt={s.detections[0]?.label ?? t.homeVisionTitle}
+                    fill
+                    sizes="(max-width: 768px) 70vw, 420px"
+                    priority={i === 0}
+                    className="object-cover object-center"
+                  />
+
+                  {isActive && (
+                    <>
+                      <div className="vision-ring-hud" aria-hidden>
+                        <div className="vision-scanline" />
+                        {s.detections.map((det, di) => (
+                          <div
+                            key={det.label}
+                            className="vision-detection"
+                            style={{
+                              top: det.top,
+                              left: det.left,
+                              width: det.width,
+                              height: det.height,
+                              transitionDelay: `${di * 80}ms`
+                            }}
+                          >
+                            <span className="vision-detection-label">
+                              {det.label}
+                              <em>{det.confidence}%</em>
+                            </span>
+                          </div>
+                        ))}
+                        <div className="vision-hud-corner vision-hud-corner-tl" />
+                        <div className="vision-hud-corner vision-hud-corner-tr" />
+                        <div className="vision-hud-corner vision-hud-corner-bl" />
+                        <div className="vision-hud-corner vision-hud-corner-br" />
+                      </div>
+                    </>
+                  )}
+
+                  <span className="vision-ring-card-num">{String(i + 1).padStart(2, "0")}</span>
+                </span>
+              </button>
+            );
+          })}
+        </div>
       </div>
 
-      <div className="max-w-6xl mx-auto relative z-10">
-        <Reveal>
-          <SectionHeader
-            tag={t.homeVisionTag}
-            title={
-              <>
-                {t.homeVisionTitle}{" "}
-                <span className="text-gradient-ocean">{t.homeVisionTitleAccent}</span>
-              </>
-            }
-            description={t.homeVisionDesc}
-          />
-        </Reveal>
-
-        <div className="mt-12 grid lg:grid-cols-[1fr_1.2fr] gap-10 items-center">
-          <Reveal direction="left">
-            <div className="flex flex-col gap-3">
-              {scenarios.map((s, i) => (
-                <button
-                  key={s.id}
-                  type="button"
-                  onClick={() => selectScenario(i)}
-                  className="vision-scenario-tab text-left p-4 rounded-xl transition-all duration-300"
-                  style={{
-                    backgroundColor: active === i ? "var(--glass-bg)" : "transparent",
-                    border: "1px solid",
-                    borderColor: active === i ? "rgba(234, 179, 8, 0.35)" : "var(--glass-border)"
-                  }}
-                >
-                  <span className="text-xs uppercase tracking-wider font-semibold" style={{ color: "var(--ocean-glow)" }}>
-                    {t.homeVisionScenario} {i + 1}
-                  </span>
-                  <p className="text-sm mt-1 leading-relaxed" style={{ color: "var(--text-dim)" }}>
-                    {s.voice}
-                  </p>
-                </button>
-              ))}
-            </div>
-          </Reveal>
-
-          <Reveal direction="right" delay={100}>
-            <div className="vision-hud relative rounded-2xl overflow-hidden glass-panel">
-              <div className="relative aspect-[4/3] bg-[var(--bg-subtle)]">
-                <Image
-                  src={scenario.image}
-                  alt={scenario.detections[0]?.label ?? t.homeVisionTitle}
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 60vw"
-                  className="object-cover object-center transition-opacity duration-500"
-                  priority={active === 0}
-                />
-
-                <div className="vision-scanline" style={{ opacity: phase >= 1 ? 1 : 0 }} />
-
-                {scenario.detections.map((det, i) => (
-                  <div
-                    key={det.label}
-                    className="vision-detection"
-                    style={{
-                      top: det.top,
-                      left: det.left,
-                      width: det.width,
-                      height: det.height,
-                      opacity: phase >= 2 ? 1 : 0,
-                      transitionDelay: `${i * 200}ms`
-                    }}
-                  >
-                    <span className="vision-detection-label">
-                      {det.label}
-                      <em>{det.confidence}%</em>
-                    </span>
-                  </div>
-                ))}
-
-                <div
-                  className="vision-voice-bubble"
-                  style={{ opacity: phase >= 3 ? 1 : 0, transform: phase >= 3 ? "translateY(0)" : "translateY(12px)" }}
-                >
-                  <div className="voice-wave-bars" aria-hidden>
-                    {Array.from({ length: 5 }).map((_, i) => (
-                      <span key={i} className="voice-wave-bar" style={{ animationDelay: `${i * 0.12}s` }} />
-                    ))}
-                  </div>
-                  <p className="text-sm leading-relaxed">{scenario.voice}</p>
-                </div>
-
-                <div className="vision-hud-corner vision-hud-corner-tl" />
-                <div className="vision-hud-corner vision-hud-corner-tr" />
-                <div className="vision-hud-corner vision-hud-corner-bl" />
-                <div className="vision-hud-corner vision-hud-corner-br" />
-              </div>
-            </div>
-          </Reveal>
+      <div
+        key={`voice-${scenario.id}`}
+        className="vision-orbit-voice"
+        data-fp-rise
+        style={{
+          ["--fp-delay" as string]: "260ms",
+          ...(phase >= 3
+            ? {}
+            : { opacity: 0, transform: "translateY(14px)" })
+        }}
+      >
+        <div className="voice-wave-bars" aria-hidden>
+          {Array.from({ length: 5 }).map((_, i) => (
+            <span key={i} className="voice-wave-bar" style={{ animationDelay: `${i * 0.12}s` }} />
+          ))}
         </div>
+        <p>{scenario.voice}</p>
       </div>
     </section>
   );

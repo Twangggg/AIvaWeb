@@ -12,6 +12,11 @@ interface RevealProps {
   once?: boolean;
 }
 
+function sectionIsIn(section: HTMLElement) {
+  const transit = section.dataset.fpTransit ?? "";
+  return section.dataset.fpActive === "true" || transit.startsWith("enter");
+}
+
 export function Reveal({
   children,
   className = "",
@@ -27,10 +32,32 @@ export function Reveal({
   });
 
   useEffect(() => {
-    if (visible && once) return;
-
     const el = ref.current;
     if (!el) return;
+
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      return;
+    }
+
+    const section = el.closest<HTMLElement>("[data-fp-section]");
+
+    // Fullpage chapters: replay every time the section is entered.
+    if (section) {
+      const sync = () => setVisible(sectionIsIn(section));
+      const mo = new MutationObserver(sync);
+      mo.observe(section, {
+        attributes: true,
+        attributeFilter: ["data-fp-active", "data-fp-transit"]
+      });
+      // Defer initial sync so we don't setState synchronously in the effect body.
+      const boot = window.setTimeout(sync, 0);
+      return () => {
+        window.clearTimeout(boot);
+        mo.disconnect();
+      };
+    }
+
+    if (visible && once) return;
 
     const observer = new IntersectionObserver(
       ([entry]) => {

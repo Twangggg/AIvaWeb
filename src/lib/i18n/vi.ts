@@ -312,6 +312,22 @@ export const vi = {
   homeVideoComingSoon: "Đang cập nhật",
   scrollCue: "Cuộn xuống",
 
+  /* Cinematic experience */
+  cxStatementTag: "Tuyên ngôn",
+  cxStatement1: "Trẻ em đang cúi đầu vào màn hình.",
+  cxStatement2: "AIva đưa ánh nhìn trở lại thế giới thật.",
+  cxStatement3: "Không màn hình – chỉ giọng nói và khám phá.",
+  cxCtaTag: "Bắt đầu hành trình",
+  cxNavLabel: "Điều hướng chương",
+  cxNavHero: "Mở đầu",
+  cxNavStatement: "Tuyên ngôn",
+  cxNavVision: "Góc nhìn",
+  cxNavFeatures: "Tính năng",
+  cxNavCompare: "So sánh",
+  cxNavApp: "Ứng dụng",
+  cxNavMission: "Sứ mệnh",
+  cxNavCta: "Đặt trước",
+
   /* Parent companion app */
   homeAppTag: "Ứng dụng phụ huynh",
   homeAppTitle: "Đồng hành cùng con",

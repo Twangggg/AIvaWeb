@@ -15,8 +15,11 @@ export function Footer() {
   ];
 
   return (
-    <footer className="border-t py-12 px-6" style={{ backgroundColor: "var(--nav-bg)", borderColor: "var(--nav-border)" }}>
-      <div className="max-w-7xl mx-auto">
+    <footer
+      className="site-footer w-full shrink-0 border-t py-8 md:py-10 px-6"
+      style={{ backgroundColor: "var(--nav-bg)", borderColor: "var(--nav-border)" }}
+    >
+      <div className="max-w-7xl mx-auto w-full">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8 mb-8">
           <Image src="/AIVALogo.png" alt="AIVA Logo" width={117} height={24} className="object-contain" />
           <div className="flex flex-wrap items-center justify-center gap-6 text-xs tracking-wider uppercase" style={{ color: "var(--text-dim)" }}>

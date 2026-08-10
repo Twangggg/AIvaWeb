@@ -66,7 +66,7 @@ export function ColorPickerSection() {
   const active = COLORS.find((c) => c.id === activeId) ?? COLORS[0];
 
   return (
-    <section className="py-24 px-6 relative overflow-hidden">
+    <section className="py-12 md:py-16 px-6 relative overflow-hidden h-full w-full flex flex-col justify-center">
       <div className="absolute inset-0 pointer-events-none" aria-hidden>
         <div
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[520px] h-[520px] rounded-full blur-[120px] transition-colors duration-500"
@@ -77,7 +77,6 @@ export function ColorPickerSection() {
       <div className="max-w-4xl mx-auto relative z-10">
         <Reveal>
           <SectionHeader
-            tag={t.homeColorTag}
             title={
               <>
                 {t.homeColorTitle}{" "}

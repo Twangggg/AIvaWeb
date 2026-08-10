@@ -16,13 +16,12 @@ export function VideoDemoSection() {
   const hasVideo = Boolean(HOME_DEMO_VIDEO_SRC);
 
   return (
-    <section className="py-24 px-6 relative overflow-hidden">
+    <section className="py-12 md:py-16 px-6 relative overflow-hidden h-full w-full flex flex-col justify-center">
       <AmbientBg variant="section" />
 
       <div className="max-w-5xl mx-auto relative z-10">
         <Reveal>
           <SectionHeader
-            tag={t.homeVideoTag}
             title={
               <>
                 {t.homeVideoTitle}{" "}

@@ -312,6 +312,22 @@ export const en = {
   homeVideoComingSoon: "Coming soon",
   scrollCue: "Scroll down",
 
+  /* Cinematic experience */
+  cxStatementTag: "Manifesto",
+  cxStatement1: "Children are bowed into screens.",
+  cxStatement2: "AIva turns their gaze back to the real world.",
+  cxStatement3: "No screens – only voice and discovery.",
+  cxCtaTag: "Begin the journey",
+  cxNavLabel: "Chapter navigation",
+  cxNavHero: "Opening",
+  cxNavStatement: "Manifesto",
+  cxNavVision: "Vision",
+  cxNavFeatures: "Features",
+  cxNavCompare: "Compare",
+  cxNavApp: "Companion",
+  cxNavMission: "Mission",
+  cxNavCta: "Pre-order",
+
   /* Parent companion app */
   homeAppTag: "Parent companion app",
   homeAppTitle: "Stay close to",
