@@ -177,9 +177,9 @@ body {
   transform: var(--reveal-hidden, translate3d(0, 40px, 0));
   filter: blur(var(--reveal-blur, 8px));
   transition:
-    opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1) var(--reveal-delay, 0ms),
-    transform 0.85s cubic-bezier(0.16, 1, 0.3, 1) var(--reveal-delay, 0ms),
-    filter 0.85s cubic-bezier(0.16, 1, 0.3, 1) var(--reveal-delay, 0ms);
+    opacity 0.9s cubic-bezier(0.33, 1, 0.68, 1) var(--reveal-delay, 0ms),
+    transform 0.9s cubic-bezier(0.33, 1, 0.68, 1) var(--reveal-delay, 0ms),
+    filter 0.9s cubic-bezier(0.33, 1, 0.68, 1) var(--reveal-delay, 0ms);
   will-change: opacity, transform, filter;
 }
 
@@ -193,12 +193,10 @@ body {
 [data-fp-section] [data-fp-rise] {
   opacity: 0;
   transform: translate3d(0, 28px, 0);
-  filter: blur(8px);
   transition:
-    opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1) var(--fp-delay, 0ms),
-    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1) var(--fp-delay, 0ms),
-    filter 0.7s cubic-bezier(0.16, 1, 0.3, 1) var(--fp-delay, 0ms);
-  will-change: opacity, transform, filter;
+    opacity 0.8s cubic-bezier(0.33, 1, 0.68, 1) var(--fp-delay, 0ms),
+    transform 0.8s cubic-bezier(0.33, 1, 0.68, 1) var(--fp-delay, 0ms);
+  will-change: opacity, transform;
 }
 
 [data-fp-section] [data-fp-rise="left"] {
@@ -217,14 +215,12 @@ body {
 [data-fp-section][data-fp-transit^="enter"] [data-fp-rise] {
   opacity: 1;
   transform: none;
-  filter: blur(0);
 }
 
 [data-fp-section][data-fp-transit^="leave"] [data-fp-rise] {
   opacity: 0;
   transform: translate3d(0, -12px, 0);
-  filter: blur(6px);
-  transition-duration: 0.35s;
+  transition-duration: 0.4s;
   transition-delay: 0ms;
 }
 
@@ -232,7 +228,6 @@ body {
   [data-fp-section] [data-fp-rise] {
     opacity: 1 !important;
     transform: none !important;
-    filter: none !important;
     transition: none !important;
   }
 }
@@ -245,14 +240,15 @@ body {
   display: inline-block;
   overflow: hidden;
   vertical-align: bottom;
-  padding-bottom: 0.08em;
-  margin-bottom: -0.08em;
+  /* Room for Vietnamese diacritics (top) + descenders g/y/p (bottom) */
+  padding: 0.32em 0.04em 0.42em;
+  margin: -0.32em -0.04em -0.42em;
 }
 
 .text-reveal-inner {
   display: inline-block;
-  transform: translate3d(0, 110%, 0);
-  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translate3d(0, 120%, 0);
+  transition: transform 0.8s cubic-bezier(0.33, 1, 0.68, 1);
   transition-delay: calc(
     var(--text-reveal-delay, 0ms) + (var(--i, 0) * var(--stagger, 45ms))
   );
@@ -260,6 +256,11 @@ body {
 
 .text-reveal.is-visible .text-reveal-inner {
   transform: translate3d(0, 0, 0);
+}
+
+/* After the slide finishes, stop clipping so descenders stay crisp */
+.text-reveal.is-visible .text-reveal-word {
+  overflow: visible;
 }
 
 .text-reveal-space {
@@ -1062,7 +1063,7 @@ body.custom-cursor-active canvas {
   position: absolute;
   inset: 0;
   transform-style: preserve-3d;
-  transition: transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.8s cubic-bezier(0.45, 0.05, 0.55, 0.95);
 }
 
 .vision-ring-card {
@@ -1094,10 +1095,10 @@ body.custom-cursor-active canvas {
     0 18px 40px rgba(0, 0, 0, 0.45),
     inset 0 0 0 1px rgba(255, 255, 255, 0.04);
   transition:
-    filter 0.55s ease,
-    box-shadow 0.55s ease,
-    border-color 0.55s ease,
-    scale 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+    filter 0.55s cubic-bezier(0.33, 1, 0.68, 1),
+    box-shadow 0.55s cubic-bezier(0.33, 1, 0.68, 1),
+    border-color 0.55s cubic-bezier(0.33, 1, 0.68, 1),
+    scale 0.55s cubic-bezier(0.33, 1, 0.68, 1);
   filter: brightness(0.55) saturate(0.75);
   scale: 0.82;
 }
@@ -1167,8 +1168,8 @@ body.custom-cursor-active canvas {
   opacity: 0;
   transform: scale(0.92);
   transition:
-    opacity 0.4s ease,
-    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    opacity 0.45s cubic-bezier(0.33, 1, 0.68, 1),
+    transform 0.45s cubic-bezier(0.33, 1, 0.68, 1);
 }
 
 /* Reveal AI frames only on hover / keyboard focus of the front card */
@@ -1227,8 +1228,8 @@ body.custom-cursor-active canvas {
   flex-shrink: 0;
   text-align: left;
   transition:
-    opacity 0.45s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+    opacity 0.5s cubic-bezier(0.33, 1, 0.68, 1),
+    transform 0.5s cubic-bezier(0.33, 1, 0.68, 1);
 }
 
 .vision-orbit-voice .voice-wave-bars {
@@ -1967,9 +1968,9 @@ body.custom-cursor-active canvas {
 .cx-statement-line {
   margin: 0;
   transition:
-    opacity 0.55s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.55s cubic-bezier(0.16, 1, 0.3, 1),
-    filter 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+    opacity 0.65s cubic-bezier(0.33, 1, 0.68, 1),
+    transform 0.65s cubic-bezier(0.33, 1, 0.68, 1),
+    filter 0.65s cubic-bezier(0.33, 1, 0.68, 1);
   will-change: opacity, transform, filter;
 }
 
@@ -2051,8 +2052,8 @@ body.custom-cursor-active canvas {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: clamp(0.85rem, 2vh, 1.5rem);
-  padding: 6.25rem 1.5rem 2.5rem;
+  gap: clamp(0.65rem, 1.6vh, 1.25rem);
+  padding: 5.75rem 1.5rem 2rem;
   box-sizing: border-box;
   overflow: hidden;
   text-align: center;
@@ -2090,8 +2091,8 @@ body.custom-cursor-active canvas {
   opacity: 0;
   transform: translateY(-12px);
   transition:
-    opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+    opacity 0.7s cubic-bezier(0.33, 1, 0.68, 1),
+    transform 0.7s cubic-bezier(0.33, 1, 0.68, 1);
 }
 
 .feature-wheel[data-entered="true"] .feature-wheel-head {
@@ -2114,20 +2115,23 @@ body.custom-cursor-active canvas {
 }
 
 .feature-wheel-stage {
-  --wheel-r: clamp(7.5rem, 22vw, 11.5rem);
+  --wheel-r: clamp(6.75rem, 20vw, 10.5rem);
   position: relative;
   z-index: 2;
-  width: calc(var(--wheel-r) * 2 + 7.5rem);
-  height: calc(var(--wheel-r) * 2 + 7.5rem);
-  max-width: min(100%, 34rem);
-  max-height: min(52vh, 34rem);
+  width: calc(var(--wheel-r) * 2 + 8.5rem);
+  height: calc(var(--wheel-r) * 2 + 8.5rem);
+  max-width: min(100%, 32rem);
+  max-height: min(48vh, 32rem);
   margin: 0 auto;
   flex-shrink: 0;
+  overflow: visible;
   opacity: 0;
-  transform: scale(0.94);
+  transform: scale(0.96);
+  /* No blur — dashed/SVG rings break under filter during enter */
+  filter: none !important;
   transition:
-    opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.1s,
-    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.1s;
+    opacity 0.7s cubic-bezier(0.33, 1, 0.68, 1) 0.08s,
+    transform 0.7s cubic-bezier(0.33, 1, 0.68, 1) 0.08s;
 }
 
 .feature-wheel[data-entered="true"] .feature-wheel-stage {
@@ -2138,31 +2142,42 @@ body.custom-cursor-active canvas {
 .feature-wheel-disc {
   position: absolute;
   inset: 0;
-  transition: transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: visible;
+  transition: transform 0.95s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+}
+
+.feature-wheel-rings {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: calc(var(--wheel-r) * 2);
+  height: calc(var(--wheel-r) * 2);
+  translate: -50% -50%;
+  overflow: visible;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.feature-wheel-ring-outer {
+  fill: none;
+  stroke: color-mix(in srgb, var(--ocean) 52%, transparent);
+  stroke-width: 1.25;
+  stroke-dasharray: 3.2 4.2;
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.feature-wheel-ring-inner {
+  fill: none;
+  stroke: color-mix(in srgb, var(--ocean) 26%, transparent);
+  stroke-width: 1;
+  opacity: 0.7;
+  vector-effect: non-scaling-stroke;
 }
 
 .feature-wheel-rim,
 .feature-wheel-rim-inner {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  border-radius: 50%;
-  translate: -50% -50%;
-  pointer-events: none;
-}
-
-.feature-wheel-rim {
-  width: calc(var(--wheel-r) * 2);
-  height: calc(var(--wheel-r) * 2);
-  border: 1.5px dashed color-mix(in srgb, var(--ocean) 48%, transparent);
-  box-shadow: 0 0 40px color-mix(in srgb, var(--ocean) 12%, transparent);
-}
-
-.feature-wheel-rim-inner {
-  width: calc(var(--wheel-r) * 1.15);
-  height: calc(var(--wheel-r) * 1.15);
-  border: 1px solid color-mix(in srgb, var(--ocean) 22%, transparent);
-  opacity: 0.55;
+  display: none;
 }
 
 .feature-wheel-hub {
@@ -2221,11 +2236,11 @@ body.custom-cursor-active canvas {
   backdrop-filter: blur(12px);
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.28);
   transition:
-    transform 0.85s cubic-bezier(0.16, 1, 0.3, 1),
-    border-color 0.35s ease,
-    box-shadow 0.35s ease,
-    scale 0.45s cubic-bezier(0.16, 1, 0.3, 1),
-    filter 0.35s ease;
+    transform 0.95s cubic-bezier(0.45, 0.05, 0.55, 0.95),
+    border-color 0.45s cubic-bezier(0.33, 1, 0.68, 1),
+    box-shadow 0.45s cubic-bezier(0.33, 1, 0.68, 1),
+    scale 0.55s cubic-bezier(0.33, 1, 0.68, 1),
+    filter 0.45s cubic-bezier(0.33, 1, 0.68, 1);
   filter: brightness(0.72);
   scale: 0.88;
 }
@@ -2265,8 +2280,8 @@ body.custom-cursor-active canvas {
   opacity: 0;
   transform: translateY(12px);
   transition:
-    opacity 0.55s ease 0.18s,
-    transform 0.55s ease 0.18s;
+    opacity 0.6s cubic-bezier(0.33, 1, 0.68, 1) 0.14s,
+    transform 0.6s cubic-bezier(0.33, 1, 0.68, 1) 0.14s;
 }
 
 .feature-wheel[data-entered="true"] .feature-wheel-detail-wrap {
@@ -2286,7 +2301,7 @@ body.custom-cursor-active canvas {
   border: 1px solid color-mix(in srgb, var(--ocean) 34%, var(--glass-border));
   backdrop-filter: blur(16px);
   box-shadow: 0 20px 48px rgba(0, 0, 0, 0.28);
-  animation: feature-wheel-detail-in 0.55s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation: feature-wheel-detail-in 0.6s cubic-bezier(0.33, 1, 0.68, 1) both;
 }
 
 .feature-wheel-detail[data-dir="-1"] {
@@ -2340,14 +2355,14 @@ body.custom-cursor-active canvas {
 
 @media (max-width: 640px) {
   .feature-wheel {
-    padding: 5.75rem 1rem 2.25rem;
-    gap: 0.75rem;
+    padding: 5.5rem 1rem 1.75rem;
+    gap: 0.65rem;
   }
 
   .feature-wheel-stage {
-    --wheel-r: clamp(6.25rem, 28vw, 8.5rem);
-    width: calc(var(--wheel-r) * 2 + 6rem);
-    height: calc(var(--wheel-r) * 2 + 6rem);
+    --wheel-r: clamp(5.75rem, 26vw, 8rem);
+    width: calc(var(--wheel-r) * 2 + 7rem);
+    height: calc(var(--wheel-r) * 2 + 7rem);
   }
 
   .feature-wheel-slot {
@@ -2416,7 +2431,7 @@ html {
 .cx-fp-section[data-fp-transit="leave-back"] > *,
 .cx-fp-section[data-fp-transit="enter-fwd"] > *,
 .cx-fp-section[data-fp-transit="enter-back"] > * {
-  will-change: opacity, transform, filter;
+  will-change: opacity, transform;
 }
 
 .cx-fp-section[data-fp-transit="leave-fwd"] > * {
@@ -2424,7 +2439,7 @@ html {
 }
 
 .cx-fp-section[data-fp-transit="enter-fwd"] > * {
-  animation: cx-fp-enter-fwd 0.75s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation: cx-fp-enter-fwd 0.8s cubic-bezier(0.33, 1, 0.68, 1) both;
 }
 
 .cx-fp-section[data-fp-transit="leave-back"] > * {
@@ -2432,14 +2447,13 @@ html {
 }
 
 .cx-fp-section[data-fp-transit="enter-back"] > * {
-  animation: cx-fp-enter-back 0.75s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation: cx-fp-enter-back 0.8s cubic-bezier(0.33, 1, 0.68, 1) both;
 }
 
 @keyframes cx-fp-leave-fwd {
   to {
     opacity: 0;
     transform: translate3d(0, -36px, 0) scale(0.985);
-    filter: blur(8px);
   }
 }
 
@@ -2447,12 +2461,10 @@ html {
   from {
     opacity: 0;
     transform: translate3d(0, 48px, 0) scale(0.985);
-    filter: blur(10px);
   }
   to {
     opacity: 1;
     transform: none;
-    filter: none;
   }
 }
 
@@ -2460,7 +2472,6 @@ html {
   to {
     opacity: 0;
     transform: translate3d(0, 36px, 0) scale(0.985);
-    filter: blur(8px);
   }
 }
 
@@ -2468,12 +2479,10 @@ html {
   from {
     opacity: 0;
     transform: translate3d(0, -48px, 0) scale(0.985);
-    filter: blur(10px);
   }
   to {
     opacity: 1;
     transform: none;
-    filter: none;
   }
 }
 
@@ -2541,6 +2550,43 @@ html {
   opacity: 0.45;
 }
 
+/* Parent app — phone screen swap on fullpage scene steps */
+.parent-app-screen {
+  animation: parent-app-screen-in 0.55s cubic-bezier(0.33, 1, 0.68, 1) both;
+}
+
+.parent-app-screen[data-dir="-1"] {
+  animation-name: parent-app-screen-in-back;
+}
+
+@keyframes parent-app-screen-in {
+  from {
+    opacity: 0;
+    transform: translate3d(12%, 0, 0) scale(1.02);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes parent-app-screen-in-back {
+  from {
+    opacity: 0;
+    transform: translate3d(-12%, 0, 0) scale(1.02);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .parent-app-screen {
+    animation: none !important;
+  }
+}
+
 .cx-cta {
   isolation: isolate;
 }
@@ -2550,6 +2596,7 @@ html {
   border-radius: 50%;
   filter: blur(100px);
   pointer-events: none;
+  z-index: 0;
 }
 
 .cx-cta-orb-a {
@@ -2573,21 +2620,63 @@ html {
 .cx-cta-ring {
   position: absolute;
   left: 50%;
-  top: 50%;
-  width: min(420px, 62vw);
-  height: min(420px, 62vw);
+  top: 48%;
+  width: min(640px, 88vw);
+  height: min(640px, 88vw);
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  border: 1px solid rgba(234, 179, 8, 0.2);
-  box-shadow: 0 0 80px -20px rgba(234, 179, 8, 0.35);
+  border: 1px solid rgba(234, 179, 8, 0.16);
+  box-shadow: 0 0 80px -20px rgba(234, 179, 8, 0.28);
   animation: cx-ring 10s linear infinite;
   pointer-events: none;
+  z-index: 0;
+}
+
+.cx-cta-copy {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  padding-inline: 0.75rem;
+}
+
+.cx-cta-title {
+  margin: 0 0 1.15rem;
+  overflow: visible;
+  line-height: 1.28;
+  padding-block: 0.2em 0.28em;
+}
+
+.cx-cta-title-line,
+.cx-cta-title-accent {
+  display: inline;
+  padding-bottom: 0.12em;
+  /* Avoid gradient/box clipping under descenders (g, y, p…) */
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+.cx-cta-title-accent {
+  /* Keep gradient fill on the text itself, not a tight inline-block box */
+  padding-inline: 0.02em;
+}
+
+.cx-cta-desc {
+  margin: 0 0 2rem;
+  max-width: 28rem;
+  line-height: 1.65;
+  overflow: visible;
+  padding-bottom: 0.15em;
 }
 
 .cx-cta .cx-fp-panel,
 .cx-cta.cx-fp-panel {
-  /* Extra bottom room so the CTA button never clips in 100dvh frames */
-  padding-bottom: max(3.5rem, 6vh);
+  /* Room above sticky mobile CTA + avoid ring/edge clipping */
+  padding-top: max(6.5rem, 10vh);
+  padding-bottom: max(5rem, 10vh);
+  overflow: visible;
 }
 
 .cx-chapter-nav {
@@ -2807,10 +2896,10 @@ html {
   width: 100%;
   min-height: clamp(4.25rem, 11vw, 6.5rem);
   transition:
-    min-height 0.7s var(--spring-easing, cubic-bezier(0.16, 1, 0.3, 1)),
-    grid-template-columns 0.7s
-      var(--spring-easing, cubic-bezier(0.16, 1, 0.3, 1)),
-    column-gap 0.7s var(--spring-easing, cubic-bezier(0.16, 1, 0.3, 1));
+    min-height 0.75s var(--spring-easing, cubic-bezier(0.33, 1, 0.68, 1)),
+    grid-template-columns 0.75s
+      var(--spring-easing, cubic-bezier(0.33, 1, 0.68, 1)),
+    column-gap 0.75s var(--spring-easing, cubic-bezier(0.33, 1, 0.68, 1));
   user-select: none;
 }
 
@@ -2840,7 +2929,7 @@ html {
   visibility: visible;
   transform: translate3d(0, 0, 0) scale(1);
   transition:
-    transform 0.65s var(--spring-easing, cubic-bezier(0.16, 1, 0.3, 1)),
+    transform 0.7s var(--spring-easing, cubic-bezier(0.33, 1, 0.68, 1)),
     text-shadow 0.45s ease,
     filter 0.45s ease;
   will-change: transform;
@@ -2856,14 +2945,14 @@ html {
 
 /* Opening: letters bloom outward with a bright kick */
 .cx-brand-hit.is-opening .cx-brand-left {
-  animation: cx-brand-burst-left 0.72s
-    var(--spring-easing, cubic-bezier(0.16, 1, 0.3, 1)) both;
+  animation: cx-brand-burst-left 0.8s
+    var(--spring-easing, cubic-bezier(0.33, 1, 0.68, 1)) both;
 }
 
 .cx-brand-hit.is-opening .cx-brand-right {
-  animation: cx-brand-burst-right 0.72s
-    var(--spring-easing, cubic-bezier(0.16, 1, 0.3, 1)) both;
-  animation-delay: 0.04s;
+  animation: cx-brand-burst-right 0.8s
+    var(--spring-easing, cubic-bezier(0.33, 1, 0.68, 1)) both;
+  animation-delay: 0.06s;
 }
 
 @keyframes cx-brand-burst-left {
@@ -2901,19 +2990,19 @@ html {
 /* Closing: letters rush inward */
 .cx-brand-hit.is-closing .cx-brand-left {
   transform: translate3d(12%, 0.12em, 0) scale(0.96);
-  transition-timing-function: cubic-bezier(0.55, 0.02, 0.2, 1.15);
-  transition-duration: 0.55s;
+  transition-timing-function: cubic-bezier(0.45, 0.05, 0.55, 0.95);
+  transition-duration: 0.6s;
 }
 
 .cx-brand-hit.is-closing .cx-brand-right {
   transform: translate3d(-12%, 0.12em, 0) scale(0.96);
-  transition-timing-function: cubic-bezier(0.55, 0.02, 0.2, 1.15);
-  transition-duration: 0.55s;
+  transition-timing-function: cubic-bezier(0.45, 0.05, 0.55, 0.95);
+  transition-duration: 0.6s;
 }
 
 .cx-brand-hit.is-sealed .cx-brand-half {
-  animation: cx-brand-seal-pop 0.48s
-    var(--spring-easing, cubic-bezier(0.16, 1, 0.3, 1)) both;
+  animation: cx-brand-seal-pop 0.5s
+    var(--spring-easing, cubic-bezier(0.33, 1, 0.68, 1)) both;
   text-shadow:
     0 0 36px rgba(255, 216, 77, 0.75),
     0 0 64px rgba(255, 191, 63, 0.35);
@@ -2944,7 +3033,7 @@ html {
   height: 0;
   overflow: visible;
   justify-self: stretch;
-  transition: height 0.7s var(--spring-easing, cubic-bezier(0.16, 1, 0.3, 1));
+  transition: height 0.75s var(--spring-easing, cubic-bezier(0.33, 1, 0.68, 1));
   pointer-events: none;
 }
 
@@ -2972,7 +3061,7 @@ html {
   filter: blur(0);
   transition:
     opacity 0.45s cubic-bezier(0.4, 0, 0.2, 1),
-    transform 0.9s var(--spring-easing, cubic-bezier(0.16, 1, 0.3, 1)),
+    transform 0.95s var(--spring-easing, cubic-bezier(0.33, 1, 0.68, 1)),
     filter 0.45s ease;
   will-change: transform, opacity, filter;
   pointer-events: none;
@@ -2985,9 +3074,9 @@ html {
   filter: blur(0);
   pointer-events: auto;
   transition:
-    opacity 0.35s ease,
-    transform 0.9s var(--spring-easing, cubic-bezier(0.16, 1, 0.3, 1)),
-    filter 0.35s ease;
+    opacity 0.4s ease,
+    transform 0.95s var(--spring-easing, cubic-bezier(0.33, 1, 0.68, 1)),
+    filter 0.4s ease;
 }
 
 .cx-brand-hit.is-closing .cx-brand-glasses {
@@ -2997,7 +3086,7 @@ html {
   pointer-events: none;
   transition:
     opacity 0.4s cubic-bezier(0.4, 0, 1, 1),
-    transform 0.55s cubic-bezier(0.4, 0.05, 0.3, 1),
+    transform 0.6s cubic-bezier(0.45, 0.05, 0.55, 0.95),
     filter 0.4s ease;
 }
 
@@ -3017,9 +3106,9 @@ html {
   opacity: 0;
   pointer-events: none;
   transition:
-    opacity 0.4s ease,
-    filter 0.4s ease,
-    transform 0.4s ease;
+    opacity 0.6s ease,
+    filter 0.6s ease,
+    transform 0.6s ease;
 }
 
 .cx-glasses-stage.is-loading .cx-brand-ghost {
@@ -3030,7 +3119,7 @@ html {
   opacity: 0;
   filter: blur(6px);
   transform: scale(1.04);
-  transition-duration: 0.5s;
+  transition-duration: 0.75s;
 }
 
 .cx-brand-ghost-svg {

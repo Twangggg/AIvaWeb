@@ -67,7 +67,7 @@ export function VisionDemoSection() {
 
   useEffect(() => {
     const reset = window.setTimeout(() => setPhase(0), 0);
-    const id = window.setTimeout(() => setPhase(3), 700);
+    const id = window.setTimeout(() => setPhase(3), 850);
     return () => {
       window.clearTimeout(reset);
       window.clearTimeout(id);
@@ -78,7 +78,7 @@ export function VisionDemoSection() {
     if (userDriven) return;
     const interval = window.setInterval(() => {
       setScene((active + 1) % scenarios.length);
-    }, 7000);
+    }, 7500);
     return () => window.clearInterval(interval);
   }, [active, scenarios.length, setScene, userDriven]);
 
@@ -156,7 +156,7 @@ export function VisionDemoSection() {
                               left: det.left,
                               width: det.width,
                               height: det.height,
-                              transitionDelay: `${di * 80}ms`
+                              transitionDelay: `${di * 140}ms`
                             }}
                           >
                             <span className="vision-detection-label">

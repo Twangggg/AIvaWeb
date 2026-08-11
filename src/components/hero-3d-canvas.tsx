@@ -66,40 +66,40 @@ function GlassesModel({
     if (mode === "front") {
       const targetX = THREE.MathUtils.clamp(pointer.y * 0.05, -0.06, 0.06);
       const targetY = THREE.MathUtils.clamp(pointer.x * 0.08, -0.1, 0.1);
-      spin.current.rotation.x = THREE.MathUtils.lerp(spin.current.rotation.x, targetX, 0.12);
-      spin.current.rotation.y = THREE.MathUtils.lerp(spin.current.rotation.y, targetY, 0.12);
-      spin.current.rotation.z = THREE.MathUtils.lerp(spin.current.rotation.z, 0, 0.2);
-      spin.current.position.y = Math.sin(t * 1.3) * 0.015;
+      spin.current.rotation.x = THREE.MathUtils.lerp(spin.current.rotation.x, targetX, 0.07);
+      spin.current.rotation.y = THREE.MathUtils.lerp(spin.current.rotation.y, targetY, 0.07);
+      spin.current.rotation.z = THREE.MathUtils.lerp(spin.current.rotation.z, 0, 0.12);
+      spin.current.position.y = Math.sin(t * 0.85) * 0.015;
       return;
     }
 
     if (mode === "brand") {
       if (!brandOpen) {
-        spin.current.rotation.x = THREE.MathUtils.lerp(spin.current.rotation.x, 0, 0.15);
-        spin.current.rotation.y = THREE.MathUtils.lerp(spin.current.rotation.y, 0, 0.15);
-        spin.current.rotation.z = THREE.MathUtils.lerp(spin.current.rotation.z, 0, 0.2);
-        spin.current.position.y = THREE.MathUtils.lerp(spin.current.position.y, 0, 0.15);
+        spin.current.rotation.x = THREE.MathUtils.lerp(spin.current.rotation.x, 0, 0.08);
+        spin.current.rotation.y = THREE.MathUtils.lerp(spin.current.rotation.y, 0, 0.08);
+        spin.current.rotation.z = THREE.MathUtils.lerp(spin.current.rotation.z, 0, 0.12);
+        spin.current.position.y = THREE.MathUtils.lerp(spin.current.position.y, 0, 0.08);
         return;
       }
 
       if (openAt.current < 0) openAt.current = t;
       const local = t - openAt.current;
-      const spinT = Math.max(0, local - 0.9);
+      const spinT = Math.max(0, local - 0.95);
       const targetX = THREE.MathUtils.clamp(pointer.y * 0.04, -0.05, 0.05);
-      const targetY = spinT * 0.55 + pointer.x * 0.12;
-      spin.current.rotation.x = THREE.MathUtils.lerp(spin.current.rotation.x, targetX, 0.1);
-      spin.current.rotation.y = THREE.MathUtils.lerp(spin.current.rotation.y, targetY, 0.08);
-      spin.current.rotation.z = THREE.MathUtils.lerp(spin.current.rotation.z, 0, 0.25);
-      spin.current.position.y = Math.sin(t * 1.2) * 0.018;
+      const targetY = spinT * 0.42 + pointer.x * 0.1;
+      spin.current.rotation.x = THREE.MathUtils.lerp(spin.current.rotation.x, targetX, 0.08);
+      spin.current.rotation.y = THREE.MathUtils.lerp(spin.current.rotation.y, targetY, 0.06);
+      spin.current.rotation.z = THREE.MathUtils.lerp(spin.current.rotation.z, 0, 0.14);
+      spin.current.position.y = Math.sin(t * 0.75) * 0.016;
       return;
     }
 
     const targetX = THREE.MathUtils.clamp(pointer.y * 0.06, -0.08, 0.08);
-    const targetY = t * 0.5 + pointer.x * 0.14;
-    spin.current.rotation.x = THREE.MathUtils.lerp(spin.current.rotation.x, targetX, 0.1);
-    spin.current.rotation.y = THREE.MathUtils.lerp(spin.current.rotation.y, targetY, 0.08);
-    spin.current.rotation.z = THREE.MathUtils.lerp(spin.current.rotation.z, 0, 0.2);
-    spin.current.position.y = Math.sin(t * 1.2) * 0.02;
+    const targetY = t * 0.28 + pointer.x * 0.12;
+    spin.current.rotation.x = THREE.MathUtils.lerp(spin.current.rotation.x, targetX, 0.06);
+    spin.current.rotation.y = THREE.MathUtils.lerp(spin.current.rotation.y, targetY, 0.045);
+    spin.current.rotation.z = THREE.MathUtils.lerp(spin.current.rotation.z, 0, 0.12);
+    spin.current.position.y = Math.sin(t * 0.75) * 0.018;
   });
 
   const scale = mode === "orbit" ? 1.55 : 1.68;

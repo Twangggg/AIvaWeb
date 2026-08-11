@@ -3,10 +3,10 @@
 import { useEffect, useRef } from "react";
 
 const SELECTOR = "[data-fp-section]";
-const COOLDOWN_MS = 820;
+const COOLDOWN_MS = 850;
 const WHEEL_THRESHOLD = 40;
-const SCENE_COOLDOWN_MS = 520;
-const TRANSIT_MS = 720;
+const SCENE_COOLDOWN_MS = 650;
+const TRANSIT_MS = 780;
 
 type Dir = 1 | -1;
 

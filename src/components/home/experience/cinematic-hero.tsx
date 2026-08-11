@@ -38,7 +38,7 @@ export function CinematicHero({ onPreorder }: { onPreorder: () => void }) {
     if (reduced) return;
     clearTimers();
     setPhase("opening");
-    const t1 = window.setTimeout(() => setPhase("open"), 720);
+    const t1 = window.setTimeout(() => setPhase("open"), 820);
     timers.current = [t1];
   };
 
@@ -46,8 +46,8 @@ export function CinematicHero({ onPreorder }: { onPreorder: () => void }) {
     if (reduced) return;
     clearTimers();
     setPhase("closing");
-    const t1 = window.setTimeout(() => setPhase("sealed"), 560);
-    const t2 = window.setTimeout(() => setPhase("closed"), 560 + 480);
+    const t1 = window.setTimeout(() => setPhase("sealed"), 620);
+    const t2 = window.setTimeout(() => setPhase("closed"), 620 + 480);
     timers.current = [t1, t2];
   };
 

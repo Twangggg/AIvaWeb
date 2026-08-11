@@ -6,6 +6,7 @@ import { Footer } from "@/components/common/footer";
 import { StickyCta } from "@/components/common/sticky-cta";
 import { PreorderModal } from "@/features/preorder/components/preorder-modal";
 import { SiteIntro, useSiteIntro } from "@/components/home/site-intro";
+import { Preload3DAssets } from "@/components/preload-3d-assets";
 import { VisionDemoSection } from "@/components/home/vision-demo-section";
 import { VideoDemoSection } from "@/components/home/video-demo-section";
 import { CompareSection } from "@/components/home/compare-section";
@@ -25,66 +26,69 @@ export default function HomePage() {
   const { showIntro, completeIntro } = useSiteIntro();
   useFullpageScroll(!showIntro);
 
-  if (showIntro) {
-    return <SiteIntro onComplete={completeIntro} />;
-  }
-
   return (
     <>
-      <PageMouseGlow />
-      <Nav onPreorder={() => setPreorderOpen(true)} />
+      <Preload3DAssets />
+      {showIntro ? (
+        <SiteIntro onComplete={completeIntro} />
+      ) : (
+        <>
+          <PageMouseGlow />
+          <Nav onPreorder={() => setPreorderOpen(true)} />
 
-      <main className="cx-main min-h-screen">
-        <div id="hero" data-fp-section className="cx-fp-section">
-          <CinematicHero onPreorder={() => setPreorderOpen(true)} />
-        </div>
+          <main className="cx-main min-h-screen">
+            <div id="hero" data-fp-section className="cx-fp-section">
+              <CinematicHero onPreorder={() => setPreorderOpen(true)} />
+            </div>
 
-        <div id="statement" data-fp-section data-fp-scenes="3" data-fp-scene="0" className="cx-fp-section">
-          <StatementChapter />
-        </div>
+            <div id="statement" data-fp-section data-fp-scenes="3" data-fp-scene="0" className="cx-fp-section">
+              <StatementChapter />
+            </div>
 
-        <div id="vision" data-fp-section data-fp-scenes="3" data-fp-scene="0" className="cx-fp-section">
-          <VisionDemoSection />
-        </div>
+            <div id="vision" data-fp-section data-fp-scenes="3" data-fp-scene="0" className="cx-fp-section">
+              <VisionDemoSection />
+            </div>
 
-        <div id="features" data-fp-section data-fp-scenes="4" data-fp-scene="0" className="cx-fp-section">
-          <FeatureRail />
-        </div>
+            <div id="features" data-fp-section data-fp-scenes="4" data-fp-scene="0" className="cx-fp-section">
+              <FeatureRail />
+            </div>
 
-        <div id="compare" data-fp-section className="cx-fp-section">
-          <CompareSection />
-        </div>
+            <div id="compare" data-fp-section className="cx-fp-section">
+              <CompareSection />
+            </div>
 
-        <div id="companion" data-fp-section className="cx-fp-section">
-          <ParentAppSection />
-        </div>
+            <div id="companion" data-fp-section data-fp-scenes="3" data-fp-scene="0" className="cx-fp-section">
+              <ParentAppSection />
+            </div>
 
-        <div id="color" data-fp-section className="cx-fp-section">
-          <ColorPickerSection />
-        </div>
+            <div id="color" data-fp-section className="cx-fp-section">
+              <ColorPickerSection />
+            </div>
 
-        <div id="video" data-fp-section className="cx-fp-section">
-          <VideoDemoSection />
-        </div>
+            <div id="video" data-fp-section className="cx-fp-section">
+              <VideoDemoSection />
+            </div>
 
-        <div id="mission" data-fp-section className="cx-fp-section">
-          <MissionSection />
-        </div>
+            <div id="mission" data-fp-section className="cx-fp-section">
+              <MissionSection />
+            </div>
 
-        <div id="cta" data-fp-section className="cx-fp-section">
-          <CinematicCta onPreorder={() => setPreorderOpen(true)} />
-        </div>
+            <div id="cta" data-fp-section className="cx-fp-section">
+              <CinematicCta onPreorder={() => setPreorderOpen(true)} />
+            </div>
 
-        <div id="faq" data-fp-section className="cx-fp-section">
-          <div className="cx-faq-shell">
-            <FaqSection />
-            <Footer />
-          </div>
-        </div>
-      </main>
+            <div id="faq" data-fp-section className="cx-fp-section">
+              <div className="cx-faq-shell">
+                <FaqSection />
+                <Footer />
+              </div>
+            </div>
+          </main>
 
-      <StickyCta onPreorder={() => setPreorderOpen(true)} />
-      <PreorderModal open={preorderOpen} onClose={() => setPreorderOpen(false)} />
+          <StickyCta onPreorder={() => setPreorderOpen(true)} />
+          <PreorderModal open={preorderOpen} onClose={() => setPreorderOpen(false)} />
+        </>
+      )}
     </>
   );
 }

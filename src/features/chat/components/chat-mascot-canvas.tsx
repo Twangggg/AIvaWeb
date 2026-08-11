@@ -30,7 +30,7 @@ function MascotModel({
 
     const targetScale = hovering ? 1.08 : talking ? 1.04 : 1;
     const current = group.current.scale.x;
-    group.current.scale.setScalar(THREE.MathUtils.lerp(current, targetScale, 0.14));
+    group.current.scale.setScalar(THREE.MathUtils.lerp(current, targetScale, 0.08));
 
     const bobAmp = talking ? 0.055 : hovering ? 0.04 : 0.028;
     const bobSpeed = talking ? 5.2 : hovering ? 3.2 : 2.1;

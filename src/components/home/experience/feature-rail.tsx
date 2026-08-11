@@ -30,7 +30,7 @@ export function FeatureRail() {
     if (userDriven || !entered) return;
     const id = window.setInterval(() => {
       setScene((active + 1) % features.length, 1);
-    }, 4800);
+    }, 5600);
     return () => window.clearInterval(id);
   }, [active, entered, features.length, setScene, userDriven]);
 
@@ -50,7 +50,7 @@ export function FeatureRail() {
     >
       <div className="feature-wheel-glow" aria-hidden />
 
-      <header className="feature-wheel-head" data-fp-rise style={{ ["--fp-delay" as string]: "60ms" }}>
+      <header className="feature-wheel-head" data-fp-rise style={{ ["--fp-delay" as string]: "80ms" }}>
         <h2 className="font-display font-bold tracking-tight leading-[1.08]">
           {t.homeFeaturesTitle}{" "}
           <span className="text-gradient-ocean">{t.homeFeaturesTitleAccent}</span>
@@ -61,15 +61,21 @@ export function FeatureRail() {
       <div
         className="feature-wheel-stage"
         data-fp-rise="scale"
-        style={{ ["--fp-delay" as string]: "160ms" }}
+        style={{ ["--fp-delay" as string]: "220ms" }}
       >
         {/* Rotate so active seat (index 0 angle) lands at bottom (180°) */}
         <div
           className="feature-wheel-disc"
           style={{ transform: `rotate(${180 - active * stepDeg}deg)` }}
         >
-          <div className="feature-wheel-rim" aria-hidden />
-          <div className="feature-wheel-rim-inner" aria-hidden />
+          <svg
+            className="feature-wheel-rings"
+            viewBox="0 0 100 100"
+            aria-hidden
+          >
+            <circle className="feature-wheel-ring-outer" cx="50" cy="50" r="49.25" />
+            <circle className="feature-wheel-ring-inner" cx="50" cy="50" r="28.25" />
+          </svg>
 
           {features.map((f, i) => {
             const isActive = i === active;
@@ -114,7 +120,7 @@ export function FeatureRail() {
         </div>
       </div>
 
-      <div className="feature-wheel-detail-wrap" data-fp-rise style={{ ["--fp-delay" as string]: "280ms" }}>
+      <div className="feature-wheel-detail-wrap" data-fp-rise style={{ ["--fp-delay" as string]: "360ms" }}>
         <article
           key={`${feature.title}-${active}`}
           className="feature-wheel-detail"

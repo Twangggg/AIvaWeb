@@ -2,31 +2,28 @@
 
 import { Magnetic } from "@/components/ui/magnetic";
 import { Button } from "@/components/ui/button";
-import { TextReveal } from "@/components/ui/text-reveal";
 import { useI18n } from "@/lib/i18n/provider";
 
 export function CinematicCta({ onPreorder }: { onPreorder: () => void }) {
   const { t } = useI18n();
 
   return (
-    <section className="cx-cta cx-fp-panel relative overflow-x-hidden">
+    <section className="cx-cta cx-fp-panel relative">
       <div className="cx-cta-orb cx-cta-orb-a" aria-hidden />
       <div className="cx-cta-orb cx-cta-orb-b" aria-hidden />
       <div className="cx-cta-ring" aria-hidden />
 
-      <div className="relative z-10 mx-auto w-full max-w-3xl px-2 text-center">
+      <div className="cx-cta-copy relative z-10 mx-auto w-full max-w-3xl text-center">
         <h2
-          className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.08] tracking-tight mb-4 md:mb-5"
+          className="cx-cta-title font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight"
           data-fp-rise
           style={{ ["--fp-delay" as string]: "40ms" }}
         >
-          <TextReveal text={t.preorderHeading} as="span" stagger={36} />{" "}
-          <span className="text-gradient-sun inline-block">
-            <TextReveal text={t.preorderHeadingAccent} as="span" delay={100} stagger={36} />
-          </span>
+          <span className="cx-cta-title-line">{t.preorderHeading}</span>{" "}
+          <span className="text-gradient-sun cx-cta-title-accent">{t.preorderHeadingAccent}</span>
         </h2>
         <p
-          className="text-sm md:text-base mb-8 max-w-xl mx-auto leading-relaxed"
+          className="cx-cta-desc text-sm md:text-base leading-relaxed"
           style={{ color: "var(--text-dim)", ["--fp-delay" as string]: "140ms" }}
           data-fp-rise
         >

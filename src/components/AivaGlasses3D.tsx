@@ -103,3 +103,6 @@ export default function AivaGlasses3D({
     </Canvas>
   );
 }
+
+useGLTF.preload("/models/glasses.glb");
+

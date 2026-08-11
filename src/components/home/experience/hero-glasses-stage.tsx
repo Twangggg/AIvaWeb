@@ -27,8 +27,8 @@ export function HeroGlassesStage({
     const el = containerRef.current;
     if (!el) return;
     const observer = new IntersectionObserver(([entry]) => setActive(entry.isIntersecting), {
-      threshold: 0.15,
-      rootMargin: "80px"
+      threshold: 0.05,
+      rootMargin: "280px 0px"
     });
     observer.observe(el);
     return () => observer.disconnect();
