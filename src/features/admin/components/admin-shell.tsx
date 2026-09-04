@@ -203,10 +203,10 @@ function SidebarBody({
         }`}
       >
         <Link
-          href="/console/admin"
+          href="/"
           onClick={onNavigate}
           className={`flex min-w-0 items-center gap-2.5 overflow-hidden ${collapsed ? "justify-center" : ""}`}
-          title={collapsed ? "AIva Admin" : undefined}
+          title={collapsed ? (en ? "AIva — website" : "AIva — trang chủ") : en ? "Back to website" : "Về trang chủ"}
         >
           <span className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-[var(--console-inverse)] text-sm font-bold text-[var(--console-accent)]">
             A

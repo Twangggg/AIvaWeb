@@ -107,7 +107,7 @@ export function RoleWorkspaceShell({
               <span className="material-symbols-outlined text-[22px]">menu</span>
             </button>
 
-            <Link href="/console" className="min-w-0">
+            <Link href="/" className="min-w-0" title={en ? "Back to website" : "Về trang chủ"}>
               <p className="truncate text-sm font-bold tracking-tight">
                 AIva{" "}
                 <span
@@ -244,9 +244,9 @@ export function RoleWorkspaceShell({
           />
           <aside className="absolute inset-y-0 left-0 flex w-[min(18rem,88vw)] flex-col bg-[var(--console-rail)] shadow-xl">
             <div className="flex h-14 items-center justify-between border-b border-[var(--console-border)] px-4">
-              <p className="text-sm font-bold">
+              <Link href="/" onClick={close} className="text-sm font-bold" title={en ? "Back to website" : "Về trang chủ"}>
                 AIva <span className="text-[var(--console-muted)]">{brandAccent}</span>
-              </p>
+              </Link>
               <button
                 type="button"
                 onClick={close}
