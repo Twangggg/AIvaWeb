@@ -84,21 +84,21 @@ export function ParentHome() {
           <div className="mt-6 grid grid-cols-2 gap-3">
             <Link
               href="/console/history"
-              className="rounded-xl border border-[var(--console-border)] bg-[var(--console-chip)] px-4 py-4 text-sm font-medium hover:opacity-90"
+              className="flex flex-col items-start gap-2 rounded-xl border border-[var(--console-border)] bg-[var(--console-chip)] px-4 py-4 text-sm font-medium hover:opacity-90"
             >
-              <span className="material-symbols-outlined mb-2 block text-[22px] text-[var(--console-muted)]">
+              <span className="material-symbols-outlined text-[22px] leading-none text-[var(--console-muted)]">
                 history
               </span>
-              {en ? "History" : "Nhật ký"}
+              <span className="leading-none">{en ? "History" : "Nhật ký"}</span>
             </Link>
             <Link
               href="/console/device"
-              className="rounded-xl border border-[var(--console-border)] bg-[var(--console-chip)] px-4 py-4 text-sm font-medium hover:opacity-90"
+              className="flex flex-col items-start gap-2 rounded-xl border border-[var(--console-border)] bg-[var(--console-chip)] px-4 py-4 text-sm font-medium hover:opacity-90"
             >
-              <span className="material-symbols-outlined mb-2 block text-[22px] text-[var(--console-muted)]">
+              <span className="material-symbols-outlined text-[22px] leading-none text-[var(--console-muted)]">
                 devices
               </span>
-              {en ? "Device" : "Thiết bị"}
+              <span className="leading-none">{en ? "Device" : "Thiết bị"}</span>
             </Link>
           </div>
         </section>
