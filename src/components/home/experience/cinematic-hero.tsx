@@ -1,72 +1,17 @@
 "use client";
 
 import Link from "next/link";
-import { useCallback, useEffect, useRef, useState, type CSSProperties } from "react";
+import { useEffect, useRef, useState, type CSSProperties } from "react";
 import { Magnetic } from "@/components/ui/magnetic";
 import { Button } from "@/components/ui/button";
 import { TextReveal } from "@/components/ui/text-reveal";
 import { useI18n } from "@/lib/i18n/provider";
-import { HeroGlassesStage } from "@/components/home/experience/hero-glasses-stage";
 
-type BrandPhase = "closed" | "opening" | "open" | "closing" | "sealed";
-
-/**
- * Hover AIva → cinematic open (letters burst + ghost drop while model loads).
- * Leave → closing choreography → seal pulse.
- */
+/** Hero brand + CTAs — no hover 3D glasses (was too heavy). */
 export function CinematicHero({ onPreorder }: { onPreorder: () => void }) {
   const { t } = useI18n();
   const ref = useRef<HTMLElement>(null);
-  const timers = useRef<number[]>([]);
   const [exit, setExit] = useState(0);
-  const [phase, setPhase] = useState<BrandPhase>(() => {
-    if (typeof window === "undefined") return "closed";
-    return window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "open" : "closed";
-  });
-  const [reduced, setReduced] = useState(() => {
-    if (typeof window === "undefined") return false;
-    return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  });
-  const [modelReady, setModelReady] = useState(false);
-
-  const clearTimers = () => {
-    timers.current.forEach((id) => window.clearTimeout(id));
-    timers.current = [];
-  };
-
-  const openBrand = () => {
-    if (reduced) return;
-    clearTimers();
-    setPhase("opening");
-    const t1 = window.setTimeout(() => setPhase("open"), 820);
-    timers.current = [t1];
-  };
-
-  const closeBrand = () => {
-    if (reduced) return;
-    clearTimers();
-    setPhase("closing");
-    const t1 = window.setTimeout(() => setPhase("sealed"), 620);
-    const t2 = window.setTimeout(() => setPhase("closed"), 620 + 480);
-    timers.current = [t1, t2];
-  };
-
-  const onModelReady = useCallback((ready: boolean) => {
-    setModelReady(ready);
-  }, []);
-
-  useEffect(() => {
-    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const onMq = () => {
-      setReduced(mq.matches);
-      if (mq.matches) setPhase("open");
-    };
-    mq.addEventListener("change", onMq);
-    return () => {
-      mq.removeEventListener("change", onMq);
-      clearTimers();
-    };
-  }, []);
 
   useEffect(() => {
     let raf = 0;
@@ -92,9 +37,6 @@ export function CinematicHero({ onPreorder }: { onPreorder: () => void }) {
   const stageOpacity = 1 - exit * 0.85;
   const stageY = exit * -64;
   const stageScale = 1 - exit * 0.12;
-  const layoutOpen = phase === "opening" || phase === "open" || phase === "closing";
-  const glassesLive = phase === "opening" || phase === "open";
-  const awaiting = glassesLive && !modelReady;
 
   return (
     <section ref={ref} className="cx-hero relative h-full min-h-0 overflow-x-clip">
@@ -112,67 +54,23 @@ export function CinematicHero({ onPreorder }: { onPreorder: () => void }) {
           } as CSSProperties
         }
       >
-        <div
-          className={[
-            "cx-brand-stage mx-auto w-full max-w-6xl text-center",
-            phase === "opening" && "is-opening",
-            phase === "open" && "is-open",
-            phase === "closing" && "is-closing",
-            phase === "sealed" && "is-sealed",
-            layoutOpen && "is-layout-open",
-            awaiting && "is-awaiting",
-            modelReady && glassesLive && "is-arrived"
-          ]
-            .filter(Boolean)
-            .join(" ")}
-        >
-          <h1 className="sr-only">AIva — {t.heroSuffix}</h1>
+        <div className="cx-brand-stage mx-auto w-full max-w-6xl text-center is-open is-layout-open">
+          <h1 className="sr-only">
+            AIva — {t.heroSuffix}
+          </h1>
 
-          <div
-            className={[
-              "cx-brand-hit",
-              phase === "opening" && "is-opening",
-              phase === "open" && "is-open",
-              phase === "closing" && "is-closing",
-              phase === "sealed" && "is-sealed",
-              layoutOpen && "is-layout-open",
-              awaiting && "is-awaiting",
-              modelReady && glassesLive && "is-arrived"
-            ]
-              .filter(Boolean)
-              .join(" ")}
-            onMouseEnter={openBrand}
-            onMouseLeave={closeBrand}
-            onClick={() => {
-              if (!window.matchMedia("(hover: none)").matches) return;
-              if (phase === "open" || phase === "opening") closeBrand();
-              else openBrand();
+          <p
+            className="cx-brand-static font-display font-bold tracking-tight text-[clamp(3.5rem,12vw,8rem)] leading-none"
+            style={{
+              color: "var(--accent)",
+              textShadow: "0 0 28px rgba(255, 216, 77, 0.4)"
             }}
+            aria-hidden="true"
           >
-            <div className="cx-brand-split" aria-hidden="true">
-              <span className="cx-brand-half cx-brand-left">AI</span>
-              <div className="cx-brand-mid">
-                <div className="cx-brand-glasses">
-                  <HeroGlassesStage open={glassesLive} onReady={onModelReady} />
-                </div>
-                <span className="cx-brand-shock cx-brand-shock-open" aria-hidden />
-                <span className="cx-brand-shock cx-brand-shock-close" aria-hidden />
-              </div>
-              <span className="cx-brand-half cx-brand-right">va</span>
-            </div>
-            <span className="cx-brand-seal-ring" aria-hidden />
-            <span className="cx-brand-summon-ring" aria-hidden />
-          </div>
+            AIva
+          </p>
 
-          <div
-            className={[
-              "cx-brand-below",
-              (phase === "open" || phase === "opening") && "is-open",
-              phase === "closing" && "is-closing"
-            ]
-              .filter(Boolean)
-              .join(" ")}
-          >
+          <div className="cx-brand-below is-open">
             <p className="text-2xl md:text-4xl lg:text-5xl font-display font-bold tracking-tight">
               <TextReveal text={t.heroSuffix} as="span" className="hero-suffix" immediate delay={200} stagger={48} />
             </p>

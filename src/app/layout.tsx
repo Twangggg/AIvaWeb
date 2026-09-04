@@ -46,12 +46,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
         />
-        <link
-          rel="preload"
-          href="/models/glasses.glb"
-          as="fetch"
-          crossOrigin="anonymous"
-        />
         <Script id="theme-init" strategy="beforeInteractive">
           {`try{document.documentElement.classList.add(localStorage.getItem("theme")||"dark");if(window.matchMedia("(pointer: fine)").matches&&!window.matchMedia("(prefers-reduced-motion: reduce)").matches){document.documentElement.classList.add("custom-cursor-active");document.documentElement.style.cursor="none"}}catch(e){}`}
         </Script>

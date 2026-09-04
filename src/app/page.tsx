@@ -6,7 +6,6 @@ import { Footer } from "@/components/common/footer";
 import { StickyCta } from "@/components/common/sticky-cta";
 import { PreorderModal } from "@/features/preorder/components/preorder-modal";
 import { SiteIntro, useSiteIntro } from "@/components/home/site-intro";
-import { Preload3DAssets } from "@/components/preload-3d-assets";
 import { VisionDemoSection } from "@/components/home/vision-demo-section";
 import { VideoDemoSection } from "@/components/home/video-demo-section";
 import { CompareSection } from "@/components/home/compare-section";
@@ -28,7 +27,6 @@ export default function HomePage() {
 
   return (
     <>
-      <Preload3DAssets />
       {showIntro ? (
         <SiteIntro onComplete={completeIntro} />
       ) : (

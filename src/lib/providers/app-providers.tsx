@@ -2,12 +2,22 @@
 
 import { ThemeProvider } from "@/lib/providers/theme-provider";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { useState } from "react";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 import { I18nProvider } from "@/lib/i18n/provider";
 import { ChatbotWidget } from "@/features/chat/components/chatbot-widget";
 import { CustomCursor } from "@/components/ui/custom-cursor";
 
+function restoreNativeCursor() {
+  document.documentElement.classList.remove("custom-cursor-active");
+  document.body.classList.remove("custom-cursor-active");
+  document.documentElement.style.cursor = "";
+  document.body.style.cursor = "";
+}
+
 export function AppProviders({ children }: { children: React.ReactNode }) {
+  const pathname = usePathname();
+  const isConsole = pathname?.startsWith("/console");
   const [queryClient] = useState(
     () =>
       new QueryClient({
@@ -20,13 +30,18 @@ export function AppProviders({ children }: { children: React.ReactNode }) {
       })
   );
 
+  useEffect(() => {
+    if (!isConsole) return;
+    restoreNativeCursor();
+  }, [isConsole]);
+
   return (
     <ThemeProvider>
       <I18nProvider>
         <QueryClientProvider client={queryClient}>
-          <CustomCursor />
+          {!isConsole && <CustomCursor />}
           {children}
-          <ChatbotWidget />
+          {!isConsole && <ChatbotWidget />}
         </QueryClientProvider>
       </I18nProvider>
     </ThemeProvider>

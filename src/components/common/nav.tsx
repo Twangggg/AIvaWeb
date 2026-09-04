@@ -62,6 +62,13 @@ export function Nav({ onPreorder }: NavProps) {
 
           <div className="flex items-center gap-3 relative z-50">
             <ThemeLanguageControls />
+            <Link
+              href="/console/login"
+              className="hidden sm:inline-flex items-center rounded-full border px-4 py-2 text-sm font-semibold transition hover:bg-[var(--bg-subtle)]"
+              style={{ borderColor: "var(--border-subtle)", color: "var(--text-on-glass)" }}
+            >
+              {t.navLogin}
+            </Link>
             <button onClick={onPreorder} className="hidden sm:block btn-primary px-5 py-2 text-sm">
               {t.ctaPrimary}
             </button>
@@ -113,8 +120,19 @@ export function Nav({ onPreorder }: NavProps) {
             >
               {t.navReserve}
             </button>
+            <Link
+              href="/console/login"
+              onClick={closeMenu}
+              className="py-4 text-lg font-medium border-b"
+              style={{ color: "var(--text-on-glass)", borderColor: "var(--border-subtle)" }}
+            >
+              {t.navLogin}
+            </Link>
           </div>
-          <div className="p-6">
+          <div className="p-6 flex flex-col gap-3">
+            <Link href="/console/login" onClick={closeMenu} className="w-full btn-ghost py-3.5 text-center">
+              {t.navLogin}
+            </Link>
             <button onClick={() => { closeMenu(); onPreorder(); }} className="w-full btn-primary py-3.5">
               {t.ctaPrimary}
             </button>

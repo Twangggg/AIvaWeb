@@ -1,0 +1,17 @@
+-- Demo console accounts — Supabase Auth.
+-- Console login: NEXT_PUBLIC_SUPABASE_URL + anon key.
+-- Role / name in auth.users raw_user_meta_data:
+--   { "role": "admin"|"teacher"|"parent", "display_name": "..." }
+--
+-- Password for all: Demo@1234
+--
+-- admin@aiva.app   | AIva Admin     | admin
+-- teacher@aiva.app | Cô Lan         | teacher
+-- parent@aiva.app  | Phụ huynh Minh | parent
+--
+-- Seed: npm run seed:demo-users
+-- (needs SUPABASE_SERVICE_ROLE_KEY in .env.local)
+--
+-- Auth redirect URLs:
+--   http://localhost:3000/console/auth/callback
+--   http://localhost:3000/console/verify
