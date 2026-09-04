@@ -10,6 +10,9 @@ export const en = {
   navSpecs: "Specifications",
   navReserve: "Reserve",
   navLogin: "Log in",
+  navConsoleTeacher: "Classroom",
+  navConsoleParent: "Family",
+  navConsoleAdmin: "Admin",
 
   /* Hero */
   ctaBuy: "Buy Now",

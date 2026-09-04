@@ -3,8 +3,11 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { useI18n } from "@/lib/i18n/provider";
+
 import { ThemeLanguageControls } from "@/components/common/theme-language-controls";
+import { useAuthStore } from "@/features/auth/auth.store";
+import { resolveConsoleRole, roleHomePath } from "@/features/console/role-access";
+import { useI18n } from "@/lib/i18n/provider";
 
 interface NavProps {
   onPreorder: () => void;
@@ -15,6 +18,19 @@ export function Nav({ onPreorder }: NavProps) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
+  const bootstrap = useAuthStore((s) => s.bootstrap);
+  const hydrated = useAuthStore((s) => s.hydrated);
+  const status = useAuthStore((s) => s.status);
+  const role = resolveConsoleRole(useAuthStore((s) => s.tokens?.user?.role));
+  const loggedIn = hydrated && status === "authenticated";
+  const consoleHref = roleHomePath(role);
+  const consoleLabel =
+    role === "parent" ? t.navConsoleParent : role === "admin" ? t.navConsoleAdmin : t.navConsoleTeacher;
+
+  useEffect(() => {
+    bootstrap();
+  }, [bootstrap]);
+
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
     onScroll();
@@ -24,16 +40,21 @@ export function Nav({ onPreorder }: NavProps) {
 
   useEffect(() => {
     document.body.style.overflow = menuOpen ? "hidden" : "";
-    return () => { document.body.style.overflow = ""; };
+    return () => {
+      document.body.style.overflow = "";
+    };
   }, [menuOpen]);
 
   const navLinks = [
     { href: "/product", label: t.navExperience },
     { href: "/news", label: t.navKids },
-    { href: "/about", label: t.navAbout }
+    { href: "/about", label: t.navAbout },
   ];
 
   const closeMenu = () => setMenuOpen(false);
+
+  const accountHref = loggedIn ? consoleHref : "/console/login";
+  const accountLabel = loggedIn ? consoleLabel : t.navLogin;
 
   return (
     <>
@@ -41,41 +62,41 @@ export function Nav({ onPreorder }: NavProps) {
         className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl border-b transition-all duration-300"
         style={{
           backgroundColor: scrolled ? "var(--nav-bg)" : "transparent",
-          borderColor: scrolled ? "var(--nav-border)" : "transparent"
+          borderColor: scrolled ? "var(--nav-border)" : "transparent",
         }}
       >
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <Link href="/" className="flex items-center relative z-50">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+          <Link href="/" className="relative z-50 flex items-center">
             <Image src="/AIVALogo.png" alt="AIVA Logo" width={156} height={32} className="object-contain" priority />
           </Link>
 
-          <div className="hidden md:flex items-center gap-6 text-sm" style={{ color: "var(--text-muted)" }}>
+          <div className="hidden items-center gap-6 text-sm md:flex" style={{ color: "var(--text-muted)" }}>
             {navLinks.map((link) => (
               <Link key={link.href} href={link.href} className="nav-link hover:text-[var(--text-on-glass)]">
                 {link.label}
               </Link>
             ))}
-            <button onClick={onPreorder} className="nav-link hover:text-[var(--text-on-glass)]">
+            <button type="button" onClick={onPreorder} className="nav-link hover:text-[var(--text-on-glass)]">
               {t.navReserve}
             </button>
           </div>
 
-          <div className="flex items-center gap-3 relative z-50">
+          <div className="relative z-50 flex items-center gap-3">
             <ThemeLanguageControls />
             <Link
-              href="/console/login"
-              className="hidden sm:inline-flex items-center rounded-full border px-4 py-2 text-sm font-semibold transition hover:bg-[var(--bg-subtle)]"
+              href={accountHref}
+              className="hidden items-center rounded-full border px-4 py-2 text-sm font-semibold transition hover:bg-[var(--bg-subtle)] sm:inline-flex"
               style={{ borderColor: "var(--border-subtle)", color: "var(--text-on-glass)" }}
             >
-              {t.navLogin}
+              {accountLabel}
             </Link>
-            <button onClick={onPreorder} className="hidden sm:block btn-primary px-5 py-2 text-sm">
+            <button type="button" onClick={onPreorder} className="btn-primary hidden px-5 py-2 text-sm sm:block">
               {t.ctaPrimary}
             </button>
             <button
               type="button"
               onClick={() => setMenuOpen(!menuOpen)}
-              className="md:hidden w-10 h-10 flex items-center justify-center rounded-full"
+              className="flex h-10 w-10 items-center justify-center rounded-full md:hidden"
               style={{ backgroundColor: "var(--bg-subtle)" }}
               aria-label={menuOpen ? t.navMenuClose : t.navMenuOpen}
               aria-expanded={menuOpen}
@@ -89,51 +110,62 @@ export function Nav({ onPreorder }: NavProps) {
       </nav>
 
       <div
-        className="fixed inset-0 z-40 md:hidden transition-opacity duration-300"
+        className="fixed inset-0 z-40 transition-opacity duration-300 md:hidden"
         style={{ opacity: menuOpen ? 1 : 0, pointerEvents: menuOpen ? "auto" : "none" }}
       >
         <div className="absolute inset-0" style={{ backgroundColor: "var(--overlay-bg)" }} onClick={closeMenu} />
         <div
-          className="absolute top-0 right-0 h-full w-[min(320px,85vw)] backdrop-blur-xl border-l flex flex-col transition-transform duration-300"
+          className="absolute top-0 right-0 flex h-full w-[min(320px,85vw)] flex-col border-l backdrop-blur-xl transition-transform duration-300"
           style={{
             backgroundColor: "var(--nav-bg)",
             borderColor: "var(--nav-border)",
-            transform: menuOpen ? "translateX(0)" : "translateX(100%)"
+            transform: menuOpen ? "translateX(0)" : "translateX(100%)",
           }}
         >
-          <div className="pt-24 px-6 flex flex-col gap-2 flex-1">
+          <div className="flex flex-1 flex-col gap-2 px-6 pt-24">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 onClick={closeMenu}
-                className="py-4 text-lg font-medium border-b"
+                className="border-b py-4 text-lg font-medium"
                 style={{ color: "var(--text-on-glass)", borderColor: "var(--border-subtle)" }}
               >
                 {link.label}
               </Link>
             ))}
             <button
-              onClick={() => { closeMenu(); onPreorder(); }}
-              className="py-4 text-lg font-medium text-left border-b"
+              type="button"
+              onClick={() => {
+                closeMenu();
+                onPreorder();
+              }}
+              className="border-b py-4 text-left text-lg font-medium"
               style={{ color: "var(--text-on-glass)", borderColor: "var(--border-subtle)" }}
             >
               {t.navReserve}
             </button>
             <Link
-              href="/console/login"
+              href={accountHref}
               onClick={closeMenu}
-              className="py-4 text-lg font-medium border-b"
+              className="border-b py-4 text-lg font-medium"
               style={{ color: "var(--text-on-glass)", borderColor: "var(--border-subtle)" }}
             >
-              {t.navLogin}
+              {accountLabel}
             </Link>
           </div>
-          <div className="p-6 flex flex-col gap-3">
-            <Link href="/console/login" onClick={closeMenu} className="w-full btn-ghost py-3.5 text-center">
-              {t.navLogin}
+          <div className="flex flex-col gap-3 p-6">
+            <Link href={accountHref} onClick={closeMenu} className="btn-ghost w-full py-3.5 text-center">
+              {accountLabel}
             </Link>
-            <button onClick={() => { closeMenu(); onPreorder(); }} className="w-full btn-primary py-3.5">
+            <button
+              type="button"
+              onClick={() => {
+                closeMenu();
+                onPreorder();
+              }}
+              className="btn-primary w-full py-3.5"
+            >
               {t.ctaPrimary}
             </button>
           </div>

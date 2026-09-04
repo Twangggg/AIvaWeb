@@ -10,6 +10,9 @@ export const vi = {
   navSpecs: "Thông số kỹ thuật",
   navReserve: "Đặt trước",
   navLogin: "Đăng nhập",
+  navConsoleTeacher: "Lớp học",
+  navConsoleParent: "Gia đình",
+  navConsoleAdmin: "Admin",
 
   /* Hero */
   ctaBuy: "Mua ngay",
