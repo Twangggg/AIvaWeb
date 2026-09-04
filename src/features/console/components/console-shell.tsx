@@ -21,6 +21,9 @@ export function ConsoleShell({ children }: { children: React.ReactNode }) {
 
   const nav = [
     { href: "/console", label: en ? "Overview" : "Tổng quan", exact: true },
+    { href: "/console/play", label: en ? "Play" : "Chơi", exact: false },
+    { href: "/console/safety", label: en ? "Safety" : "An toàn", exact: false },
+    { href: "/console/history", label: en ? "History" : "Lịch sử", exact: false },
     ...(isAdmin ? [{ href: "/console/admin", label: "Admin", exact: false }] : []),
     { href: "/console/device", label: en ? "Device" : "Thiết bị", exact: false },
   ];

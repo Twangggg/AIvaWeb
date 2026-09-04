@@ -3,7 +3,6 @@
 import Link from "next/link";
 
 import { useAuthStore } from "@/features/auth/auth.store";
-import { ENV } from "@/lib/env";
 import { useI18n } from "@/lib/i18n/provider";
 
 export default function ConsoleHomePage() {
@@ -11,6 +10,47 @@ export default function ConsoleHomePage() {
   const { locale } = useI18n();
   const en = locale === "en";
   const isAdmin = user?.role === "admin";
+
+  const cards = [
+    {
+      href: "/console/play",
+      eyebrow: en ? "Core" : "Lõi",
+      title: en ? "Play" : "Chơi",
+      desc: en
+        ? "Hunt, cards, quiz, story — solo or teams."
+        : "Săn đồ, thẻ, đố, chuyện — solo hoặc đội.",
+    },
+    {
+      href: "/console/safety",
+      eyebrow: en ? "Care" : "Chăm sóc",
+      title: en ? "Safety" : "An toàn",
+      desc: en
+        ? "Child profile, bedtime and school gates."
+        : "Hồ sơ bé, giờ ngủ và school mode.",
+    },
+    {
+      href: "/console/history",
+      eyebrow: en ? "Log" : "Nhật ký",
+      title: en ? "History" : "Lịch sử",
+      desc: en ? "Recent rounds on this tablet." : "Các ván gần đây trên tablet này.",
+    },
+    {
+      href: "/console/device",
+      eyebrow: en ? "Device" : "Thiết bị",
+      title: en ? "IoT bot" : "IoT bot",
+      desc: en ? "Link bot, speak / volume / find." : "Gắn bot, speak / volume / find.",
+    },
+    ...(isAdmin
+      ? [
+          {
+            href: "/console/admin",
+            eyebrow: "Admin",
+            title: en ? "Operations" : "Điều hành",
+            desc: en ? "Pre-orders, teachers, parents…" : "Đặt trước, giáo viên, phụ huynh…",
+          },
+        ]
+      : []),
+  ];
 
   return (
     <div className="flex flex-col gap-6">
@@ -31,42 +71,19 @@ export default function ConsoleHomePage() {
       </section>
 
       <section className="grid gap-4 sm:grid-cols-2">
-        {isAdmin ? (
+        {cards.map((card) => (
           <Link
-            href="/console/admin"
+            key={card.href}
+            href={card.href}
             className="rounded-2xl border border-black/8 bg-white/70 p-5 transition hover:border-black/20 hover:bg-white"
           >
-            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#8a7a4a]">Admin</p>
-            <p className="mt-2 text-lg font-semibold">
-              {en ? "Operations" : "Điều hành"}
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#8a7a4a]">
+              {card.eyebrow}
             </p>
-            <p className="mt-2 text-sm text-[#6b7280]">
-              {en ? "Pre-orders, teachers, parents…" : "Đặt trước, giáo viên, phụ huynh…"}
-            </p>
+            <p className="mt-2 text-lg font-semibold">{card.title}</p>
+            <p className="mt-2 text-sm text-[#6b7280]">{card.desc}</p>
           </Link>
-        ) : (
-          <div className="rounded-2xl border border-black/8 bg-white/70 p-5">
-            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#8a7a4a]">API</p>
-            <p className="mt-2 break-all font-mono text-sm text-[#3f3f46]">{ENV.API_URL}</p>
-            <p className="mt-3 text-sm text-[#6b7280]">
-              {en ? "JWT auth connected to mobile backend." : "Auth JWT đã kết nối backend mobile."}
-            </p>
-          </div>
-        )}
-        <Link
-          href="/console/device"
-          className="rounded-2xl border border-black/8 bg-white/70 p-5 transition hover:border-black/20 hover:bg-white"
-        >
-          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#8a7a4a]">
-            {en ? "Next" : "Tiếp theo"}
-          </p>
-          <p className="mt-2 text-lg font-semibold">
-            {en ? "Device / IoT bot" : "Thiết bị / IoT bot"}
-          </p>
-          <p className="mt-2 text-sm text-[#6b7280]">
-            {en ? "Link bot, health, speak / quiet / find." : "Gắn bot, health, speak / quiet / find."}
-          </p>
-        </Link>
+        ))}
       </section>
     </div>
   );

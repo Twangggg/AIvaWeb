@@ -2,7 +2,13 @@
 
 import { clearIotBotUrl, loadIotBotUrl, saveIotBotUrl } from "./iot.storage";
 import { useDeviceStore } from "./device.store";
-import type { DeviceCommand, DeviceEvent, DeviceHealth, DeviceStatusExt } from "./protocol";
+import type {
+  ChildDeviceProfile,
+  DeviceCommand,
+  DeviceEvent,
+  DeviceHealth,
+  DeviceStatusExt,
+} from "./protocol";
 import { newCmdId } from "./protocol";
 
 type EventCb = (event: DeviceEvent) => void;
@@ -26,6 +32,11 @@ export class DeviceBridge {
   }
 
   get linked(): boolean {
+    return useDeviceStore.getState().linked;
+  }
+
+  /** Linked IoT bot (web has no BLE). */
+  get ready(): boolean {
     return useDeviceStore.getState().linked;
   }
 
@@ -210,5 +221,35 @@ export class DeviceBridge {
 
   async setVolume(volume: number): Promise<void> {
     await this.send({ cmd: "set_volume", id: newCmdId(), volume });
+  }
+
+  async setTarget(labels: string[], prompt?: string): Promise<void> {
+    await this.send({ cmd: "set_target", id: newCmdId(), labels, prompt });
+  }
+
+  async captureFor(kind: "hunt" | "cards", labels: string[]): Promise<void> {
+    await this.send({
+      cmd: "capture",
+      id: newCmdId(),
+      expect_labels: labels,
+      activity_kind: kind,
+    });
+  }
+
+  async startSession(sessionId: string, profile: ChildDeviceProfile): Promise<void> {
+    await this.send({
+      cmd: "start_session",
+      id: newCmdId(),
+      session_id: sessionId,
+      profile,
+    });
+  }
+
+  async endSession(): Promise<void> {
+    await this.send({ cmd: "end_session", id: newCmdId() });
+  }
+
+  async heartbeat(): Promise<void> {
+    await this.send({ cmd: "heartbeat", id: newCmdId() });
   }
 }
