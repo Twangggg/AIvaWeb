@@ -2,26 +2,33 @@ import { createClient, type SupabaseClient, type User } from "@supabase/supabase
 
 import type { UserRole } from "@/features/auth/auth.types";
 
+let serviceClient: SupabaseClient | null = null;
+let anonClient: SupabaseClient | null = null;
+
 export function getSupabaseServiceClient(): SupabaseClient {
+  if (serviceClient) return serviceClient;
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
   const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
   if (!url || !key) {
     throw new Error("Missing NEXT_PUBLIC_SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY");
   }
-  return createClient(url, key, {
+  serviceClient = createClient(url, key, {
     auth: { persistSession: false, autoRefreshToken: false },
   });
+  return serviceClient;
 }
 
 function getSupabaseAnonClient(): SupabaseClient {
+  if (anonClient) return anonClient;
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
   const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
   if (!url || !key) {
     throw new Error("Missing NEXT_PUBLIC_SUPABASE_URL or NEXT_PUBLIC_SUPABASE_ANON_KEY");
   }
-  return createClient(url, key, {
+  anonClient = createClient(url, key, {
     auth: { persistSession: false, autoRefreshToken: false },
   });
+  return anonClient;
 }
 
 /** Anon client that forwards the caller's JWT (for RLS-scoped profile reads). */
@@ -79,6 +86,10 @@ export async function resolveUserRole(
   return roleFromUser(user);
 }
 
+/**
+ * Verify JWT locally via getClaims (JWKS-cached on reused client), then one profiles role check.
+ * Falls back to Auth getUser if claims verification fails (e.g. legacy HS256 without JWKS).
+ */
 export async function assertAdminAccess(authHeader: string | null): Promise<User> {
   if (!authHeader?.startsWith("Bearer ")) {
     throw new AdminAuthError("Missing bearer token", 401);
@@ -89,18 +100,36 @@ export async function assertAdminAccess(authHeader: string | null): Promise<User
     throw new AdminAuthError("Missing bearer token", 401);
   }
 
-  const supabase = getSupabaseAnonClient();
-  const { data, error } = await supabase.auth.getUser(jwt);
-  if (error || !data.user) {
-    throw new AdminAuthError("Invalid session", 401);
+  const anon = getSupabaseAnonClient();
+  let user: User | null = null;
+
+  const claimsResult = await anon.auth.getClaims(jwt);
+  if (claimsResult.data?.claims?.sub) {
+    const claims = claimsResult.data.claims;
+    const meta = (claims.user_metadata ?? {}) as Record<string, unknown>;
+    user = {
+      id: claims.sub,
+      aud: typeof claims.aud === "string" ? claims.aud : "authenticated",
+      role: typeof claims.role === "string" ? claims.role : "authenticated",
+      email: typeof claims.email === "string" ? claims.email : undefined,
+      app_metadata: (claims.app_metadata ?? {}) as User["app_metadata"],
+      user_metadata: meta,
+      created_at: "",
+    } as User;
+  } else {
+    const { data, error } = await anon.auth.getUser(jwt);
+    if (error || !data.user) {
+      throw new AdminAuthError("Invalid session", 401);
+    }
+    user = data.user;
   }
 
-  const role = await resolveUserRole(data.user, authHeader);
+  const role = await resolveUserRole(user, authHeader);
   if (role !== "admin") {
     throw new AdminAuthError("Admin access required", 403);
   }
 
-  return data.user;
+  return user;
 }
 
 export class AdminAuthError extends Error {

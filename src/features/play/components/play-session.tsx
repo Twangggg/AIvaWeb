@@ -59,7 +59,7 @@ export function PlaySession() {
   }, [onDeviceMatch, stop]);
 
   if (!running && !finished) {
-    return <p className="text-sm text-[#6b7280]">{en ? "Loading…" : "Đang tải…"}</p>;
+    return <p className="text-sm text-[var(--console-muted)]">{en ? "Loading…" : "Đang tải…"}</p>;
   }
 
   const prompt = currentPrompt({ pack, index, storyNodeId });
@@ -73,13 +73,13 @@ export function PlaySession() {
     <div className="flex flex-col gap-6">
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#8a7a4a]">
+          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[var(--console-muted)]">
             {pack.kind} · {mode}
             {phoneOnly ? ` · ${en ? "tablet" : "tablet"}` : ""}
           </p>
           <h1 className="mt-1 text-2xl font-bold tracking-tight">{pack.title}</h1>
           {total > 0 && (
-            <p className="mt-1 text-sm text-[#6b7280]">
+            <p className="mt-1 text-sm text-[var(--console-muted)]">
               {en ? "Item" : "Câu"} {Math.min(index + 1, total)}/{total}
               {attempt === 2 ? ` · ${en ? "retry" : "thử lại"}` : ""}
             </p>
@@ -90,14 +90,14 @@ export function PlaySession() {
             <button
               type="button"
               onClick={() => void stop()}
-              className="min-h-10 rounded-lg border border-black/15 bg-white px-3 text-sm font-semibold hover:bg-black/5"
+              className="min-h-10 rounded-lg border border-[var(--console-border)] bg-[var(--console-chip)] px-3 text-sm font-semibold hover:opacity-90"
             >
               {en ? "End round" : "Kết thúc"}
             </button>
           )}
           <Link
             href="/console/play"
-            className="inline-flex min-h-10 items-center rounded-lg border border-black/15 bg-white px-3 text-sm font-semibold hover:bg-black/5"
+            className="inline-flex min-h-10 items-center rounded-lg border border-[var(--console-border)] bg-[var(--console-chip)] px-3 text-sm font-semibold hover:opacity-90"
           >
             {en ? "Hub" : "Hub"}
           </Link>
@@ -114,7 +114,7 @@ export function PlaySession() {
         roundGoal={rules.roundGoal}
       />
 
-      <section className="rounded-2xl border border-black/8 bg-white/70 p-5 sm:p-8">
+      <section className="rounded-2xl border border-[var(--console-border)] bg-[var(--console-card)] p-5 sm:p-8">
         {finished ? (
           <div className="text-center">
             <p className="text-3xl font-bold tracking-tight">
@@ -124,18 +124,18 @@ export function PlaySession() {
                   ? "Round over"
                   : "Hết ván"}
             </p>
-            <p className="mt-2 text-[#6b7280]">{lastMessage || (en ? "Nice work." : "Giỏi lắm.")}</p>
+            <p className="mt-2 text-[var(--console-muted)]">{lastMessage || (en ? "Nice work." : "Giỏi lắm.")}</p>
             <div className="mt-6 flex flex-wrap justify-center gap-2">
               <button
                 type="button"
                 onClick={() => void restart()}
-                className="min-h-11 rounded-lg bg-[#1a1a1a] px-4 text-sm font-semibold text-white hover:bg-black"
+                className="min-h-11 rounded-lg bg-[var(--console-inverse)] px-4 text-sm font-semibold text-[var(--console-inverse-fg)] hover:opacity-90"
               >
                 {en ? "Play again" : "Chơi lại"}
               </button>
               <Link
                 href="/console/play"
-                className="inline-flex min-h-11 items-center rounded-lg border border-black/15 bg-white px-4 text-sm font-semibold hover:bg-black/5"
+                className="inline-flex min-h-11 items-center rounded-lg border border-[var(--console-border)] bg-[var(--console-chip)] px-4 text-sm font-semibold hover:opacity-90"
               >
                 {en ? "Back to hub" : "Về hub"}
               </Link>
@@ -150,7 +150,7 @@ export function PlaySession() {
             )}
             <p className="text-center text-2xl font-semibold leading-snug tracking-tight sm:text-3xl">{prompt}</p>
             {lastMessage && lastMessage !== prompt && (
-              <p className="mt-4 text-center text-sm text-[#6b7280]">{lastMessage}</p>
+              <p className="mt-4 text-center text-sm text-[var(--console-muted)]">{lastMessage}</p>
             )}
 
             {pendingMatch && (
@@ -162,7 +162,7 @@ export function PlaySession() {
                       key={t.id}
                       type="button"
                       onClick={() => void markCorrect(t.id)}
-                      className="min-h-11 rounded-lg bg-white px-4 text-sm font-semibold text-[#1a1a1a]"
+                      className="min-h-11 rounded-lg bg-white px-4 text-sm font-semibold text-[var(--console-fg)]"
                     >
                       {t.emoji} {t.name}
                     </button>
@@ -178,7 +178,7 @@ export function PlaySession() {
                     key={c.nextId}
                     type="button"
                     onClick={() => void chooseStory(c.nextId)}
-                    className="min-h-12 min-w-[8rem] rounded-lg bg-[#1a1a1a] px-5 text-base font-semibold text-white hover:bg-black"
+                    className="min-h-12 min-w-[8rem] rounded-lg bg-[var(--console-inverse)] px-5 text-base font-semibold text-[var(--console-inverse-fg)] hover:opacity-90"
                   >
                     {c.label}
                   </button>
@@ -190,29 +190,29 @@ export function PlaySession() {
       </section>
 
       {live && !pendingMatch && pack.kind !== "story" && (
-        <section className="rounded-2xl border border-black/8 bg-white/70 p-5">
-          <h2 className="text-sm font-semibold uppercase tracking-wide text-[#8a7a4a]">
+        <section className="rounded-2xl border border-[var(--console-border)] bg-[var(--console-card)] p-5">
+          <h2 className="text-sm font-semibold uppercase tracking-wide text-[var(--console-muted)]">
             {en ? "Teacher controls" : "Điều khiển cô"}
           </h2>
           <div className="mt-3 flex flex-wrap gap-2">
             <button
               type="button"
               onClick={() => void speakAgain()}
-              className="min-h-11 rounded-lg border border-black/15 bg-white px-4 text-sm font-semibold hover:bg-black/5"
+              className="min-h-11 rounded-lg border border-[var(--console-border)] bg-[var(--console-chip)] px-4 text-sm font-semibold hover:opacity-90"
             >
               {en ? "Say again" : "Nói lại"}
             </button>
             <button
               type="button"
               onClick={() => void DeviceBridge.getShared().quiet().catch(() => undefined)}
-              className="min-h-11 rounded-lg border border-black/15 bg-white px-4 text-sm font-semibold hover:bg-black/5"
+              className="min-h-11 rounded-lg border border-[var(--console-border)] bg-[var(--console-chip)] px-4 text-sm font-semibold hover:opacity-90"
             >
               Quiet
             </button>
             <button
               type="button"
               onClick={() => void DeviceBridge.getShared().find().catch(() => undefined)}
-              className="min-h-11 rounded-lg border border-black/15 bg-white px-4 text-sm font-semibold hover:bg-black/5"
+              className="min-h-11 rounded-lg border border-[var(--console-border)] bg-[var(--console-chip)] px-4 text-sm font-semibold hover:opacity-90"
             >
               Find
             </button>
@@ -220,7 +220,7 @@ export function PlaySession() {
               <button
                 type="button"
                 onClick={() => void capture()}
-                className="min-h-11 rounded-lg border border-black/15 bg-white px-4 text-sm font-semibold hover:bg-black/5"
+                className="min-h-11 rounded-lg border border-[var(--console-border)] bg-[var(--console-chip)] px-4 text-sm font-semibold hover:opacity-90"
               >
                 {en ? "Capture" : "Chụp"}
               </button>
@@ -232,7 +232,7 @@ export function PlaySession() {
               <button
                 type="button"
                 onClick={() => void markCorrect(teams[0].id)}
-                className="min-h-12 rounded-lg bg-[#1a1a1a] px-5 text-base font-semibold text-white hover:bg-black"
+                className="min-h-12 rounded-lg bg-[var(--console-inverse)] px-5 text-base font-semibold text-[var(--console-inverse-fg)] hover:opacity-90"
               >
                 {en ? "Correct ★" : "Đúng ★"}
               </button>
@@ -242,7 +242,7 @@ export function PlaySession() {
                   key={t.id}
                   type="button"
                   onClick={() => void markCorrect(t.id)}
-                  className="min-h-12 rounded-lg bg-[#1a1a1a] px-4 text-sm font-semibold text-white hover:bg-black"
+                  className="min-h-12 rounded-lg bg-[var(--console-inverse)] px-4 text-sm font-semibold text-[var(--console-inverse-fg)] hover:opacity-90"
                 >
                   {en ? "Correct" : "Đúng"} · {t.emoji} {t.name}
                 </button>
@@ -251,14 +251,14 @@ export function PlaySession() {
             <button
               type="button"
               onClick={() => void markWrong()}
-              className="min-h-12 rounded-lg border border-black/15 bg-white px-5 text-base font-semibold hover:bg-black/5"
+              className="min-h-12 rounded-lg border border-[var(--console-border)] bg-[var(--console-chip)] px-5 text-base font-semibold hover:opacity-90"
             >
               {en ? "Wrong · retry" : "Sai · thử lại"}
             </button>
           </div>
 
           {pack.kind === "quiz" && quiz && (
-            <p className="mt-4 text-xs text-[#6b7280]">
+            <p className="mt-4 text-xs text-[var(--console-muted)]">
               {en ? "Hint (teacher only)" : "Gợi ý (chỉ cô)"}: {quiz.answers[quiz.correctIndex]}
             </p>
           )}

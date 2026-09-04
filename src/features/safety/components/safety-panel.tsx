@@ -64,7 +64,7 @@ export function SafetyPanel() {
   };
 
   if (!ready) {
-    return <p className="text-sm text-[#6b7280]">{en ? "Loading…" : "Đang tải…"}</p>;
+    return <p className="text-sm text-[var(--console-muted)]">{en ? "Loading…" : "Đang tải…"}</p>;
   }
 
   return (
@@ -73,7 +73,7 @@ export function SafetyPanel() {
         <h1 className="text-2xl font-bold tracking-tight sm:text-3xl">
           {en ? "Safety" : "An toàn"}
         </h1>
-        <p className="mt-2 max-w-xl text-base text-[#6b7280]">
+        <p className="mt-2 max-w-xl text-base text-[var(--console-muted)]">
           {en
             ? "Child profile and gates for starting play. Saved in this browser."
             : "Hồ sơ bé và cổng chặn bắt đầu chơi. Lưu trên trình duyệt này."}
@@ -90,7 +90,7 @@ export function SafetyPanel() {
         )}
       </section>
 
-      <section className="rounded-2xl border border-black/8 bg-white/70 p-5">
+      <section className="rounded-2xl border border-[var(--console-border)] bg-[var(--console-card)] p-5">
         <h2 className="text-lg font-semibold">{en ? "Active profile" : "Hồ sơ đang dùng"}</h2>
         <div className="mt-4 grid gap-3 sm:grid-cols-2">
           <label className="flex flex-col gap-1.5">
@@ -101,7 +101,7 @@ export function SafetyPanel() {
                 setChild((c) => ({ ...c, name: e.target.value }));
                 setSaved(false);
               }}
-              className="min-h-11 rounded-lg border border-black/10 bg-white px-3 text-sm outline-none ring-brand-gold/40 focus:ring-2"
+              className="min-h-11 rounded-lg border border-[var(--console-border)] bg-[var(--console-chip)] px-3 text-sm outline-none ring-brand-gold/40 focus:ring-2"
             />
           </label>
           <label className="flex flex-col gap-1.5">
@@ -115,7 +115,7 @@ export function SafetyPanel() {
                 setChild((c) => ({ ...c, ageYears: Math.max(3, Number(e.target.value) || 7) }));
                 setSaved(false);
               }}
-              className="min-h-11 rounded-lg border border-black/10 bg-white px-3 text-sm outline-none ring-brand-gold/40 focus:ring-2"
+              className="min-h-11 rounded-lg border border-[var(--console-border)] bg-[var(--console-chip)] px-3 text-sm outline-none ring-brand-gold/40 focus:ring-2"
             />
           </label>
         </div>
@@ -130,8 +130,8 @@ export function SafetyPanel() {
               }}
               className={`min-h-10 rounded-lg px-4 text-sm font-semibold ${
                 settings.persona === p.id
-                  ? "bg-[#1a1a1a] text-white"
-                  : "border border-black/15 bg-white hover:bg-black/5"
+                  ? "bg-[var(--console-inverse)] text-[var(--console-inverse-fg)]"
+                  : "border border-[var(--console-border)] bg-[var(--console-chip)] hover:opacity-90"
               }`}
             >
               {en ? p.en : p.vi}
@@ -140,7 +140,7 @@ export function SafetyPanel() {
         </div>
       </section>
 
-      <section className="rounded-2xl border border-black/8 bg-white/70 p-5">
+      <section className="rounded-2xl border border-[var(--console-border)] bg-[var(--console-card)] p-5">
         <h2 className="text-lg font-semibold">{en ? "Gates" : "Cổng chặn"}</h2>
         <div className="mt-4 flex flex-col gap-3">
           <Toggle
@@ -156,7 +156,7 @@ export function SafetyPanel() {
                   type="time"
                   value={settings.bedtimeStart}
                   onChange={(e) => patchSettings({ bedtimeStart: e.target.value })}
-                  className="min-h-11 rounded-lg border border-black/10 bg-white px-3 text-sm"
+                  className="min-h-11 rounded-lg border border-[var(--console-border)] bg-[var(--console-chip)] px-3 text-sm"
                 />
               </label>
               <label className="flex flex-col gap-1.5">
@@ -165,7 +165,7 @@ export function SafetyPanel() {
                   type="time"
                   value={settings.bedtimeEnd}
                   onChange={(e) => patchSettings({ bedtimeEnd: e.target.value })}
-                  className="min-h-11 rounded-lg border border-black/10 bg-white px-3 text-sm"
+                  className="min-h-11 rounded-lg border border-[var(--console-border)] bg-[var(--console-chip)] px-3 text-sm"
                 />
               </label>
             </div>
@@ -192,16 +192,16 @@ export function SafetyPanel() {
               onChange={(e) =>
                 patchSettings({ dailyLimitMinutes: Math.max(10, Number(e.target.value) || 120) })
               }
-              className="min-h-11 max-w-xs rounded-lg border border-black/10 bg-white px-3 text-sm outline-none ring-brand-gold/40 focus:ring-2"
+              className="min-h-11 max-w-xs rounded-lg border border-[var(--console-border)] bg-[var(--console-chip)] px-3 text-sm outline-none ring-brand-gold/40 focus:ring-2"
             />
-            <span className="text-xs text-[#6b7280]">
+            <span className="text-xs text-[var(--console-muted)]">
               {en ? "Used today" : "Đã dùng hôm nay"}: {settings.usageMinutesToday} phút
             </span>
           </label>
         </div>
       </section>
 
-      <section className="rounded-2xl border border-black/8 bg-white/70 p-5">
+      <section className="rounded-2xl border border-[var(--console-border)] bg-[var(--console-card)] p-5">
         <h2 className="text-lg font-semibold">{en ? "Filters" : "Bộ lọc"}</h2>
         <div className="mt-4 flex flex-col gap-3">
           <Toggle
@@ -226,7 +226,7 @@ export function SafetyPanel() {
         <button
           type="button"
           onClick={() => void onSave()}
-          className="min-h-11 rounded-lg bg-[#1a1a1a] px-4 text-sm font-semibold text-white hover:bg-black"
+          className="min-h-11 rounded-lg bg-[var(--console-inverse)] px-4 text-sm font-semibold text-[var(--console-inverse-fg)] hover:opacity-90"
         >
           {en ? "Save" : "Lưu"}
         </button>

@@ -39,8 +39,11 @@ export const ADMIN_MODULES = [
 
 export type AdminModuleId = (typeof ADMIN_MODULES)[number]["id"];
 
-export async function fetchAdminUsers(accessToken: string, role?: string) {
-  const qs = role ? `?role=${encodeURIComponent(role)}` : "";
+export async function fetchAdminUsers(accessToken: string, role?: string, opts?: { refresh?: boolean }) {
+  const params = new URLSearchParams();
+  if (role) params.set("role", role);
+  if (opts?.refresh) params.set("refresh", "1");
+  const qs = params.toString() ? `?${params}` : "";
   const res = await fetch(`/api/admin/users${qs}`, {
     headers: { Authorization: `Bearer ${accessToken}` },
     cache: "no-store",
@@ -82,5 +85,21 @@ export async function fetchAdminPreorders(accessToken: string) {
       created_at: string;
     }[];
     total: number;
+  }>;
+}
+
+export async function fetchAdminOverview(accessToken: string, opts?: { refresh?: boolean }) {
+  const qs = opts?.refresh ? "?refresh=1" : "";
+  const res = await fetch(`/api/admin/overview${qs}`, {
+    headers: { Authorization: `Bearer ${accessToken}` },
+    cache: "no-store",
+  });
+  if (!res.ok) {
+    const body = (await res.json().catch(() => null)) as { message?: string } | null;
+    throw new Error(body?.message || `Overview API ${res.status}`);
+  }
+  return res.json() as Promise<{
+    preorders: Awaited<ReturnType<typeof fetchAdminPreorders>>;
+    users: Awaited<ReturnType<typeof fetchAdminUsers>>;
   }>;
 }

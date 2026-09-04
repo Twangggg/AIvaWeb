@@ -7,6 +7,7 @@ import { getSupabaseClient } from "@/lib/supabase/client";
 import { bindAuthBridge } from "./auth.bridge";
 import { enrichTokensFromProfile, mapSessionToTokens } from "./auth.map";
 import { authService } from "./auth.service";
+import { saveRememberedEmail, setRememberMe } from "./auth.persist";
 import { loadTokens, saveTokens } from "./auth.storage";
 import { loadUserRole, saveUserRole } from "./role.storage";
 import type {
@@ -31,6 +32,8 @@ type AuthState = {
   markEmailConfirmed: () => void;
   setPendingVerificationEmail: (email: string | null) => void;
   applyTokens: (tokens: Tokens | null) => void;
+  requestPasswordReset: (email: string) => Promise<void>;
+  updatePassword: (password: string) => Promise<void>;
 };
 
 let bootstrapped = false;
@@ -125,6 +128,13 @@ export const useAuthStore = create<AuthState>((set, get) => ({
   login: async (payload) => {
     set({ status: "loading" });
     try {
+      const remember = payload.rememberMe !== false;
+      setRememberMe(remember);
+      if (remember) {
+        saveRememberedEmail(payload.email);
+      } else {
+        saveRememberedEmail(null);
+      }
       const tokens = persistTokens(await authService.login(payload));
       set({
         tokens,
@@ -210,6 +220,14 @@ export const useAuthStore = create<AuthState>((set, get) => ({
   },
 
   setPendingVerificationEmail: (email) => set({ pendingVerificationEmail: email }),
+
+  requestPasswordReset: async (email) => {
+    await authService.requestPasswordReset(email);
+  },
+
+  updatePassword: async (password) => {
+    await authService.updatePassword(password);
+  },
 }));
 
 bindAuthBridge({

@@ -17,6 +17,8 @@ export type Tokens = {
 export type LoginPayload = {
   email: string;
   password: string;
+  /** Persist session across browser restarts (default true). */
+  rememberMe?: boolean;
 };
 
 export type RegisterPayload = {

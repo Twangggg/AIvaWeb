@@ -123,7 +123,7 @@ export function PackEditor({ kind }: { kind: PlayKind }) {
   };
 
   if (!ready) {
-    return <p className="text-sm text-[#6b7280]">{en ? "Loading…" : "Đang tải…"}</p>;
+    return <p className="text-sm text-[var(--console-muted)]">{en ? "Loading…" : "Đang tải…"}</p>;
   }
 
   return (
@@ -131,28 +131,28 @@ export function PackEditor({ kind }: { kind: PlayKind }) {
       <section>
         <div className="flex flex-wrap items-start justify-between gap-3">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#8a7a4a]">{kind}</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[var(--console-muted)]">{kind}</p>
             <h1 className="mt-1 text-2xl font-bold tracking-tight">
               {en ? "Edit pack" : "Sửa pack"}
             </h1>
-            <p className="mt-2 text-sm text-[#6b7280]">{en ? HELP[kind].en : HELP[kind].vi}</p>
+            <p className="mt-2 text-sm text-[var(--console-muted)]">{en ? HELP[kind].en : HELP[kind].vi}</p>
           </div>
           <Link
             href="/console/play/packs"
-            className="inline-flex min-h-10 items-center rounded-lg border border-black/15 bg-white px-3 text-sm font-semibold hover:bg-black/5"
+            className="inline-flex min-h-10 items-center rounded-lg border border-[var(--console-border)] bg-[var(--console-chip)] px-3 text-sm font-semibold hover:opacity-90"
           >
             {en ? "All packs" : "Tất cả pack"}
           </Link>
         </div>
       </section>
 
-      <section className="rounded-2xl border border-black/8 bg-white/70 p-5">
+      <section className="rounded-2xl border border-[var(--console-border)] bg-[var(--console-card)] p-5">
         <label className="flex flex-col gap-1.5">
           <span className="text-sm font-medium">{en ? "Title" : "Tiêu đề"}</span>
           <input
             value={title}
             onChange={(e) => setTitle(e.target.value)}
-            className="min-h-11 rounded-lg border border-black/10 bg-white px-3 text-sm outline-none ring-brand-gold/40 focus:ring-2"
+            className="min-h-11 rounded-lg border border-[var(--console-border)] bg-[var(--console-chip)] px-3 text-sm outline-none ring-brand-gold/40 focus:ring-2"
           />
         </label>
         <label className="mt-4 flex flex-col gap-1.5">
@@ -160,7 +160,7 @@ export function PackEditor({ kind }: { kind: PlayKind }) {
           <input
             value={packId}
             onChange={(e) => setPackId(e.target.value)}
-            className="min-h-11 rounded-lg border border-black/10 bg-white px-3 font-mono text-sm outline-none ring-brand-gold/40 focus:ring-2"
+            className="min-h-11 rounded-lg border border-[var(--console-border)] bg-[var(--console-chip)] px-3 font-mono text-sm outline-none ring-brand-gold/40 focus:ring-2"
           />
         </label>
       </section>
@@ -310,7 +310,7 @@ export function PackEditor({ kind }: { kind: PlayKind }) {
             else if (kind === "story") setStory((prev) => [...prev, newStory(prev.length)]);
             else setItems((prev) => [...prev, newHunt(kind, prev.length)]);
           }}
-          className="min-h-11 rounded-lg border border-black/15 bg-white px-4 text-sm font-semibold hover:bg-black/5"
+          className="min-h-11 rounded-lg border border-[var(--console-border)] bg-[var(--console-chip)] px-4 text-sm font-semibold hover:opacity-90"
         >
           {en ? "Add item" : "Thêm mục"}
         </button>
@@ -318,7 +318,7 @@ export function PackEditor({ kind }: { kind: PlayKind }) {
           type="button"
           disabled={busy}
           onClick={() => void onSave()}
-          className="min-h-11 rounded-lg bg-[#1a1a1a] px-4 text-sm font-semibold text-white hover:bg-black disabled:opacity-60"
+          className="min-h-11 rounded-lg bg-[var(--console-inverse)] px-4 text-sm font-semibold text-[var(--console-inverse-fg)] hover:opacity-90 disabled:opacity-60"
         >
           {busy ? (en ? "Saving…" : "Đang lưu…") : en ? "Save pack" : "Lưu pack"}
         </button>
@@ -337,9 +337,9 @@ function ItemCard({
   children: ReactNode;
 }) {
   return (
-    <section className="rounded-2xl border border-black/8 bg-white/70 p-5">
+    <section className="rounded-2xl border border-[var(--console-border)] bg-[var(--console-card)] p-5">
       <div className="mb-3 flex items-center justify-between">
-        <p className="text-sm font-semibold text-[#8a7a4a]">{title}</p>
+        <p className="text-sm font-semibold text-[var(--console-muted)]">{title}</p>
         <button type="button" onClick={onRemove} className="text-sm font-semibold text-red-700 hover:underline">
           Xóa
         </button>
@@ -364,7 +364,7 @@ function Field({
       <input
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        className="min-h-11 rounded-lg border border-black/10 bg-white px-3 text-sm outline-none ring-brand-gold/40 focus:ring-2"
+        className="min-h-11 rounded-lg border border-[var(--console-border)] bg-[var(--console-chip)] px-3 text-sm outline-none ring-brand-gold/40 focus:ring-2"
       />
     </label>
   );

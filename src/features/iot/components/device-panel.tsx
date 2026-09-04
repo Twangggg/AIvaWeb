@@ -62,14 +62,14 @@ export function DevicePanel() {
   };
 
   if (!hydrated) {
-    return <p className="text-sm text-[#6b7280]">Đang tải cấu hình thiết bị…</p>;
+    return <p className="text-sm text-[var(--console-muted)]">Đang tải cấu hình thiết bị…</p>;
   }
 
   return (
     <div className="flex flex-col gap-6">
-      <section className="rounded-2xl border border-black/8 bg-white/70 p-5">
+      <section className="rounded-2xl border border-[var(--console-border)] bg-[var(--console-card)] p-5">
         <h2 className="text-lg font-semibold">Kết nối IoT bot</h2>
-        <p className="mt-1 text-sm text-[#6b7280]">
+        <p className="mt-1 text-sm text-[var(--console-muted)]">
           Nhập URL bot trên cùng LAN (vd <code className="text-xs">http://192.168.x.x:8040</code>).
         </p>
 
@@ -79,7 +79,7 @@ export function DevicePanel() {
             value={urlInput}
             onChange={(e) => setUrlInput(e.target.value)}
             placeholder="http://127.0.0.1:8040"
-            className="min-h-11 flex-1 rounded-lg border border-black/10 bg-white px-3 font-mono text-sm outline-none ring-brand-gold/40 focus:ring-2"
+            className="min-h-11 flex-1 rounded-lg border border-[var(--console-border)] bg-[var(--console-chip)] px-3 font-mono text-sm outline-none ring-brand-gold/40 focus:ring-2"
             disabled={linked || busy}
           />
           {linked ? (
@@ -87,7 +87,7 @@ export function DevicePanel() {
               type="button"
               onClick={onUnlink}
               disabled={busy}
-              className="min-h-11 rounded-lg border border-black/15 bg-white px-4 text-sm font-semibold hover:bg-black/5 disabled:opacity-60"
+              className="min-h-11 rounded-lg border border-[var(--console-border)] bg-[var(--console-chip)] px-4 text-sm font-semibold hover:opacity-90 disabled:opacity-60"
             >
               Gỡ
             </button>
@@ -96,7 +96,7 @@ export function DevicePanel() {
               type="button"
               onClick={() => void onLink()}
               disabled={busy || !urlInput.trim()}
-              className="min-h-11 rounded-lg bg-[#1a1a1a] px-4 text-sm font-semibold text-white hover:bg-black disabled:opacity-60"
+              className="min-h-11 rounded-lg bg-[var(--console-inverse)] px-4 text-sm font-semibold text-[var(--console-inverse-fg)] hover:opacity-90 disabled:opacity-60"
             >
               {busy ? "Đang gắn…" : "Gắn"}
             </button>
@@ -120,9 +120,9 @@ export function DevicePanel() {
         )}
       </section>
 
-      <section className="rounded-2xl border border-black/8 bg-white/70 p-5">
+      <section className="rounded-2xl border border-[var(--console-border)] bg-[var(--console-card)] p-5">
         <h2 className="text-lg font-semibold">Điều khiển nhanh</h2>
-        <p className="mt-1 text-sm text-[#6b7280]">
+        <p className="mt-1 text-sm text-[var(--console-muted)]">
           Speak / Quiet / Find / Volume — kiểm tra lệnh trước khi vào Chơi.
         </p>
 
@@ -133,13 +133,13 @@ export function DevicePanel() {
             onChange={(e) => setSpeakText(e.target.value)}
             rows={3}
             disabled={!linked || busy}
-            className="rounded-lg border border-black/10 bg-white px-3 py-2 text-base outline-none ring-brand-gold/40 focus:ring-2 disabled:opacity-50"
+            className="rounded-lg border border-[var(--console-border)] bg-[var(--console-chip)] px-3 py-2 text-base outline-none ring-brand-gold/40 focus:ring-2 disabled:opacity-50"
           />
         </label>
 
         <label className="mt-4 flex flex-col gap-1.5">
           <span className="text-sm font-medium text-[#3f3f46]">
-            Âm lượng <span className="font-mono text-[#6b7280]">{volumeInput}</span>
+            Âm lượng <span className="font-mono text-[var(--console-muted)]">{volumeInput}</span>
           </span>
           <input
             type="range"
@@ -159,7 +159,7 @@ export function DevicePanel() {
             type="button"
             disabled={!linked || busy || !speakText.trim()}
             onClick={() => void run(() => bridge.speak(speakText.trim()))}
-            className="min-h-11 rounded-lg bg-[#1a1a1a] px-4 text-sm font-semibold text-white hover:bg-black disabled:opacity-60"
+            className="min-h-11 rounded-lg bg-[var(--console-inverse)] px-4 text-sm font-semibold text-[var(--console-inverse-fg)] hover:opacity-90 disabled:opacity-60"
           >
             Speak
           </button>
@@ -167,7 +167,7 @@ export function DevicePanel() {
             type="button"
             disabled={!linked || busy}
             onClick={() => void run(() => bridge.quiet())}
-            className="min-h-11 rounded-lg border border-black/15 bg-white px-4 text-sm font-semibold hover:bg-black/5 disabled:opacity-60"
+            className="min-h-11 rounded-lg border border-[var(--console-border)] bg-[var(--console-chip)] px-4 text-sm font-semibold hover:opacity-90 disabled:opacity-60"
           >
             Quiet
           </button>
@@ -175,7 +175,7 @@ export function DevicePanel() {
             type="button"
             disabled={!linked || busy}
             onClick={() => void run(() => bridge.find())}
-            className="min-h-11 rounded-lg border border-black/15 bg-white px-4 text-sm font-semibold hover:bg-black/5 disabled:opacity-60"
+            className="min-h-11 rounded-lg border border-[var(--console-border)] bg-[var(--console-chip)] px-4 text-sm font-semibold hover:opacity-90 disabled:opacity-60"
           >
             Find
           </button>
@@ -183,7 +183,7 @@ export function DevicePanel() {
             type="button"
             disabled={!linked || busy}
             onClick={() => void run(() => bridge.setVolume(volumeInput))}
-            className="min-h-11 rounded-lg border border-black/15 bg-white px-4 text-sm font-semibold hover:bg-black/5 disabled:opacity-60"
+            className="min-h-11 rounded-lg border border-[var(--console-border)] bg-[var(--console-chip)] px-4 text-sm font-semibold hover:opacity-90 disabled:opacity-60"
           >
             Set volume
           </button>
@@ -192,7 +192,7 @@ export function DevicePanel() {
               href={botUrl}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex min-h-11 items-center rounded-lg border border-black/15 bg-white px-4 text-sm font-semibold hover:bg-black/5"
+              className="inline-flex min-h-11 items-center rounded-lg border border-[var(--console-border)] bg-[var(--console-chip)] px-4 text-sm font-semibold hover:opacity-90"
             >
               Mở dashboard bot
             </a>
@@ -200,8 +200,8 @@ export function DevicePanel() {
         </div>
 
         {lastSpoken && (
-          <p className="mt-4 text-sm text-[#6b7280]">
-            Last spoken: <span className="text-[#1a1a1a]">{lastSpoken}</span>
+          <p className="mt-4 text-sm text-[var(--console-muted)]">
+            Last spoken: <span className="text-[var(--console-fg)]">{lastSpoken}</span>
           </p>
         )}
       </section>
@@ -212,7 +212,7 @@ export function DevicePanel() {
 function StatusRow({ label, value, mono }: { label: string; value: string; mono?: boolean }) {
   return (
     <div className="rounded-xl bg-black/[0.03] px-3 py-2.5">
-      <dt className="text-xs font-semibold uppercase tracking-wide text-[#8a7a4a]">{label}</dt>
+      <dt className="text-xs font-semibold uppercase tracking-wide text-[var(--console-muted)]">{label}</dt>
       <dd className={`mt-1 break-all text-sm ${mono ? "font-mono text-xs" : ""}`}>{value}</dd>
     </div>
   );

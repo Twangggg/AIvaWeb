@@ -52,7 +52,7 @@ export function PackList() {
             <h1 className="text-2xl font-bold tracking-tight sm:text-3xl">
               {en ? "Packs" : "Pack nội dung"}
             </h1>
-            <p className="mt-2 max-w-xl text-base text-[#6b7280]">
+            <p className="mt-2 max-w-xl text-base text-[var(--console-muted)]">
               {en
                 ? "Edit classroom content. Custom packs save in this browser."
                 : "Sửa nội dung lớp. Pack tùy chỉnh lưu trên trình duyệt này."}
@@ -60,7 +60,7 @@ export function PackList() {
           </div>
           <Link
             href="/console/play"
-            className="inline-flex min-h-10 items-center rounded-lg border border-black/15 bg-white px-3 text-sm font-semibold hover:bg-black/5"
+            className="inline-flex min-h-10 items-center rounded-lg border border-[var(--console-border)] bg-[var(--console-chip)] px-3 text-sm font-semibold hover:opacity-90"
           >
             {en ? "Back to Play" : "Về Chơi"}
           </Link>
@@ -72,27 +72,27 @@ export function PackList() {
           <Link
             key={kind}
             href={`/console/play/packs/${kind}`}
-            className="rounded-2xl border border-black/8 bg-white/70 p-5 transition hover:border-black/20 hover:bg-white"
+            className="rounded-2xl border border-[var(--console-border)] bg-[var(--console-card)] p-5 transition hover:opacity-95"
           >
-            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#8a7a4a]">{kind}</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[var(--console-muted)]">{kind}</p>
             <p className="mt-2 text-lg font-semibold">{en ? KIND_LABEL[kind].en : KIND_LABEL[kind].vi}</p>
-            <p className="mt-2 text-sm text-[#6b7280]">
+            <p className="mt-2 text-sm text-[var(--console-muted)]">
               {en ? "Create / edit custom pack" : "Tạo / sửa pack tùy chỉnh"}
             </p>
           </Link>
         ))}
       </section>
 
-      <section className="rounded-2xl border border-black/8 bg-white/70 p-5">
+      <section className="rounded-2xl border border-[var(--console-border)] bg-[var(--console-card)] p-5">
         <h2 className="text-lg font-semibold">{en ? "All packs" : "Tất cả pack"}</h2>
-        <ul className="mt-4 divide-y divide-black/5">
+        <ul className="mt-4 divide-y divide-[var(--console-border)]">
           {packs.map((p) => {
             const isCustom = customIds.has(p.id);
             return (
               <li key={p.id} className="flex flex-wrap items-center justify-between gap-3 py-3">
                 <div>
                   <p className="font-semibold">{p.title}</p>
-                  <p className="text-sm text-[#6b7280]">
+                  <p className="text-sm text-[var(--console-muted)]">
                     {p.kind} · {p.id}
                     {isCustom ? ` · ${en ? "custom" : "tùy chỉnh"}` : ` · ${en ? "builtin" : "mặc định"}`}
                   </p>
@@ -100,7 +100,7 @@ export function PackList() {
                 <div className="flex gap-2">
                   <Link
                     href={`/console/play/packs/${p.kind}?id=${encodeURIComponent(p.id)}`}
-                    className="inline-flex min-h-10 items-center rounded-lg border border-black/15 bg-white px-3 text-sm font-semibold hover:bg-black/5"
+                    className="inline-flex min-h-10 items-center rounded-lg border border-[var(--console-border)] bg-[var(--console-chip)] px-3 text-sm font-semibold hover:opacity-90"
                   >
                     {en ? "Edit" : "Sửa"}
                   </Link>

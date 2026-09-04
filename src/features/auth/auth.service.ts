@@ -10,11 +10,11 @@ function authErrorMessage(error: { message?: string } | null, fallback: string):
   return message || fallback;
 }
 
-function emailRedirectTo(): string {
+function emailRedirectTo(path = "/console/auth/callback"): string {
   if (typeof window !== "undefined") {
-    return `${window.location.origin}/console/auth/callback`;
+    return `${window.location.origin}${path}`;
   }
-  return `${ENV.SITE_URL}/console/auth/callback`;
+  return `${ENV.SITE_URL}${path}`;
 }
 
 export const authService = {
@@ -128,7 +128,7 @@ export const authService = {
     return (await enrichTokensFromProfile(tokens))!;
   },
 
-  async verifyEmailOtp(tokenHash: string, type: "signup" | "email" = "signup"): Promise<Tokens> {
+  async verifyEmailOtp(tokenHash: string, type: "signup" | "email" | "recovery" = "signup"): Promise<Tokens> {
     const supabase = getSupabaseClient();
     const { data, error } = await supabase.auth.verifyOtp({
       token_hash: tokenHash,
@@ -142,5 +142,24 @@ export const authService = {
       throw new Error("No session after confirmation");
     }
     return (await enrichTokensFromProfile(tokens))!;
+  },
+
+  async requestPasswordReset(email: string): Promise<void> {
+    const supabase = getSupabaseClient();
+    const redirectTo = `${emailRedirectTo("/console/auth/callback")}?next=${encodeURIComponent("/console/reset-password")}`;
+    const { error } = await supabase.auth.resetPasswordForEmail(email.trim().toLowerCase(), {
+      redirectTo,
+    });
+    if (error) {
+      throw new Error(authErrorMessage(error, "Failed to send reset email"));
+    }
+  },
+
+  async updatePassword(password: string): Promise<void> {
+    const supabase = getSupabaseClient();
+    const { error } = await supabase.auth.updateUser({ password });
+    if (error) {
+      throw new Error(authErrorMessage(error, "Failed to update password"));
+    }
   },
 };

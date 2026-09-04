@@ -1,4 +1,5 @@
-import { AdminAuthError, assertAdminAccess, getSupabaseServiceClient, roleFromUser } from "@/lib/admin/server";
+import { AdminAuthError, assertAdminAccess } from "@/lib/admin/server";
+import { invalidateAdminUsersCache, loadAdminUsers } from "@/lib/admin/users-data";
 
 export async function GET(request: Request) {
   try {
@@ -6,61 +7,12 @@ export async function GET(request: Request) {
 
     const url = new URL(request.url);
     const roleFilter = url.searchParams.get("role")?.trim().toLowerCase() || null;
+    const bypassCache = url.searchParams.get("refresh") === "1";
+    if (bypassCache) invalidateAdminUsersCache();
 
-    const supabase = getSupabaseServiceClient();
-    const { data, error } = await supabase.auth.admin.listUsers({
-      page: 1,
-      perPage: 200,
-    });
-
-    if (error) {
-      return Response.json({ message: error.message }, { status: 502 });
-    }
-
-    const { data: profiles } = await supabase
-      .from("profiles")
-      .select("id,email,display_name,role");
-
-    const profileById = new Map(
-      (profiles ?? []).map((p) => [
-        p.id as string,
-        {
-          email: p.email as string | null,
-          displayName: p.display_name as string | null,
-          role: p.role as string | null,
-        },
-      ])
+    const items = (await loadAdminUsers({ bypassCache })).filter((u) =>
+      roleFilter ? u.role === roleFilter : true
     );
-
-    const items = (data.users ?? [])
-      .map((user) => {
-        const meta = user.user_metadata ?? {};
-        const profile = profileById.get(user.id);
-        const role =
-          (profile?.role === "teacher" || profile?.role === "parent" || profile?.role === "admin"
-            ? profile.role
-            : undefined) ??
-          roleFromUser(user) ??
-          "teacher";
-        const displayName =
-          (profile?.displayName && profile.displayName) ||
-          (typeof meta.display_name === "string" && meta.display_name) ||
-          (typeof meta.displayName === "string" && meta.displayName) ||
-          (typeof meta.full_name === "string" && meta.full_name) ||
-          user.email?.split("@")[0] ||
-          "User";
-
-        return {
-          id: user.id,
-          email: profile?.email || user.email || "",
-          displayName,
-          role,
-          emailConfirmed: Boolean(user.email_confirmed_at),
-          createdAt: user.created_at,
-          updatedAt: user.updated_at ?? null,
-        };
-      })
-      .filter((u) => (roleFilter ? u.role === roleFilter : true));
 
     return Response.json({ items, total: items.length });
   } catch (e) {

@@ -25,14 +25,14 @@ export function ScoreBoard({
           return (
             <div
               key={t.id}
-              className={`rounded-xl px-3 py-2.5 ${active ? "bg-[#1a1a1a] text-white" : "bg-black/[0.03]"}`}
+              className={`rounded-xl px-3 py-2.5 ${active ? "bg-[var(--console-inverse)] text-[var(--console-inverse-fg)]" : "bg-black/[0.03]"}`}
             >
               <p className="text-sm font-semibold">
                 {t.emoji} {t.name}
               </p>
-              <p className={`mt-1 text-2xl font-bold tabular-nums ${active ? "text-white" : "text-[#1a1a1a]"}`}>
+              <p className={`mt-1 text-2xl font-bold tabular-nums ${active ? "text-white" : "text-[var(--console-fg)]"}`}>
                 {scores[t.id] ?? 0}
-                <span className={`ml-1 text-sm font-medium ${active ? "text-white/70" : "text-[#6b7280]"}`}>
+                <span className={`ml-1 text-sm font-medium ${active ? "text-white/70" : "text-[var(--console-muted)]"}`}>
                   / {roundGoal} ★
                 </span>
               </p>
@@ -41,9 +41,9 @@ export function ScoreBoard({
         })}
       </div>
       {jarEnabled && (
-        <p className="text-sm text-[#6b7280]">
+        <p className="text-sm text-[var(--console-muted)]">
           Hũ lớp:{" "}
-          <span className="font-semibold text-[#1a1a1a]">
+          <span className="font-semibold text-[var(--console-fg)]">
             {jarStars} / {jarGoal} ★
           </span>
         </p>

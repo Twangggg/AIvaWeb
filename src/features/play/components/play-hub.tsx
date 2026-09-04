@@ -79,21 +79,21 @@ export function PlayHub() {
         <div className="flex flex-wrap items-start justify-between gap-3">
           <div>
             <h1 className="text-2xl font-bold tracking-tight sm:text-3xl">{en ? "Play" : "Chơi"}</h1>
-            <p className="mt-2 max-w-xl text-base text-[#6b7280]">
+            <p className="mt-2 max-w-xl text-base text-[var(--console-muted)]">
               {en
                 ? "Pick a game, solo or teams, then run the round on tablet."
                 : "Chọn trò, solo hoặc đội, rồi chạy ván trên tablet."}
             </p>
-            <p className="mt-3 text-sm text-[#6b7280]">
+            <p className="mt-3 text-sm text-[var(--console-muted)]">
               {en ? "Device" : "Thiết bị"}:{" "}
-              <span className="font-semibold text-[#1a1a1a]">
+              <span className="font-semibold text-[var(--console-fg)]">
                 {!linked ? (en ? "Not linked" : "Chưa gắn") : online ? "Online" : "Offline"}
               </span>
               {rules.jarEnabled && (
                 <>
                   {" · "}
                   {en ? "Class jar" : "Hũ lớp"}:{" "}
-                  <span className="font-semibold text-[#1a1a1a]">
+                  <span className="font-semibold text-[var(--console-fg)]">
                     {jarStars}/{rules.jarGoal} ★
                   </span>
                 </>
@@ -103,13 +103,13 @@ export function PlayHub() {
           <div className="flex flex-wrap gap-2">
             <Link
               href="/console/play/packs"
-              className="inline-flex min-h-10 items-center rounded-lg border border-black/15 bg-white px-3 text-sm font-semibold hover:bg-black/5"
+              className="inline-flex min-h-10 items-center rounded-lg border border-[var(--console-border)] bg-[var(--console-chip)] px-3 text-sm font-semibold hover:opacity-90"
             >
               {en ? "Packs" : "Pack"}
             </Link>
             <Link
               href="/console/history"
-              className="inline-flex min-h-10 items-center rounded-lg border border-black/15 bg-white px-3 text-sm font-semibold hover:bg-black/5"
+              className="inline-flex min-h-10 items-center rounded-lg border border-[var(--console-border)] bg-[var(--console-chip)] px-3 text-sm font-semibold hover:opacity-90"
             >
               {en ? "History" : "Lịch sử"}
             </Link>
@@ -127,12 +127,12 @@ export function PlayHub() {
               onClick={() => selectKind(k.id)}
               className={`rounded-2xl border p-4 text-left transition ${
                 active
-                  ? "border-[#1a1a1a] bg-[#1a1a1a] text-white"
-                  : "border-black/8 bg-white/70 hover:border-black/20 hover:bg-white"
+                  ? "border-[var(--console-inverse)] bg-[var(--console-inverse)] text-[var(--console-inverse-fg)]"
+                  : "border-[var(--console-border)] bg-[var(--console-card)] hover:opacity-95"
               }`}
             >
               <p className="text-lg font-semibold">{en ? k.labelEn : k.labelVi}</p>
-              <p className={`mt-1 text-sm ${active ? "text-white/70" : "text-[#6b7280]"}`}>
+              <p className={`mt-1 text-sm ${active ? "text-white/70" : "text-[var(--console-muted)]"}`}>
                 {en ? k.descEn : k.descVi}
               </p>
             </button>
@@ -140,7 +140,7 @@ export function PlayHub() {
         })}
       </section>
 
-      <section className="rounded-2xl border border-black/8 bg-white/70 p-5">
+      <section className="rounded-2xl border border-[var(--console-border)] bg-[var(--console-card)] p-5">
         <h2 className="text-lg font-semibold">{en ? "Round setup" : "Thiết lập ván"}</h2>
 
         <div className="mt-4 flex flex-wrap gap-2">
@@ -149,7 +149,7 @@ export function PlayHub() {
         </div>
 
         {mode === "teams" && (
-          <p className="mt-3 text-sm text-[#6b7280]">
+          <p className="mt-3 text-sm text-[var(--console-muted)]">
             {DEFAULT_TEAMS.map((t) => `${t.emoji} ${t.name}`).join(" · ")}
           </p>
         )}
@@ -159,7 +159,7 @@ export function PlayHub() {
           <select
             value={selected.id}
             onChange={(e) => setPackId(e.target.value)}
-            className="min-h-11 rounded-lg border border-black/10 bg-white px-3 text-sm outline-none ring-brand-gold/40 focus:ring-2"
+            className="min-h-11 rounded-lg border border-[var(--console-border)] bg-[var(--console-chip)] px-3 text-sm outline-none ring-brand-gold/40 focus:ring-2"
           >
             {packList.map((p) => (
               <option key={p.id} value={p.id}>
@@ -182,7 +182,7 @@ export function PlayHub() {
               ? "Phone-only (browser TTS if no bot / teacher reads aloud)"
               : "Chỉ tablet (TTS trình duyệt nếu không bot / cô đọc to)"}
             {!linked && (
-              <span className="mt-1 block text-[#6b7280]">
+              <span className="mt-1 block text-[var(--console-muted)]">
                 {en ? "No bot linked — phone-only is on." : "Chưa gắn bot — đang bật chế độ tablet."}
               </span>
             )}
@@ -199,7 +199,7 @@ export function PlayHub() {
           type="button"
           disabled={busy}
           onClick={() => void onStart()}
-          className="mt-5 min-h-12 w-full rounded-lg bg-[#1a1a1a] px-4 text-base font-semibold text-white hover:bg-black disabled:opacity-60 sm:w-auto"
+          className="mt-5 min-h-12 w-full rounded-lg bg-[var(--console-inverse)] px-4 text-base font-semibold text-[var(--console-inverse-fg)] hover:opacity-90 disabled:opacity-60 sm:w-auto"
         >
           {busy ? (en ? "Starting…" : "Đang bắt đầu…") : en ? "Start round" : "Bắt đầu ván"}
         </button>
@@ -214,7 +214,7 @@ function ModeChip({ active, onClick, label }: { active: boolean; onClick: () => 
       type="button"
       onClick={onClick}
       className={`min-h-10 rounded-lg px-4 text-sm font-semibold ${
-        active ? "bg-[#1a1a1a] text-white" : "border border-black/15 bg-white hover:bg-black/5"
+        active ? "bg-[var(--console-inverse)] text-[var(--console-inverse-fg)]" : "border border-[var(--console-border)] bg-[var(--console-chip)] hover:opacity-90"
       }`}
     >
       {label}
