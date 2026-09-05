@@ -77,6 +77,10 @@ export type DeviceHealth = {
   play?: DevicePlayState;
   session_id?: string | null;
   name?: string;
+  /** Prefer this when present (ESP uses WS on a second port). */
+  ws?: string;
+  http_port?: number;
+  ws_port?: number;
 };
 
 export function newCmdId(): string {

@@ -22,6 +22,7 @@ export class DeviceBridge {
   }
 
   private botUrl = "";
+  private wsUrlOverride = "";
   private ws: WebSocket | null = null;
   private poll: ReturnType<typeof setInterval> | null = null;
   private listeners = new Set<EventCb>();
@@ -80,6 +81,7 @@ export class DeviceBridge {
     useDeviceStore.getState().setLinked(true);
     useDeviceStore.getState().setOnline(true);
     useDeviceStore.getState().setLastError(null);
+    this.wsUrlOverride = typeof body.ws === "string" ? body.ws : "";
     if (body.name) {
       useDeviceStore.getState().applyStatus({ name: body.name, play: body.play, session_id: body.session_id });
     } else {
@@ -98,6 +100,7 @@ export class DeviceBridge {
     }
     clearIotBotUrl();
     this.botUrl = "";
+    this.wsUrlOverride = "";
     useDeviceStore.getState().resetConnection();
     useDeviceStore.getState().setBotUrl("");
   }
@@ -105,7 +108,9 @@ export class DeviceBridge {
   private openWs(): void {
     this.closeWs();
     if (!this.botUrl || typeof window === "undefined") return;
-    const wsUrl = `${this.botUrl.replace(/^http/, "ws")}/ws`;
+    const wsUrl =
+      this.wsUrlOverride ||
+      `${this.botUrl.replace(/^http/, "ws")}/ws`;
     try {
       const ws = new WebSocket(wsUrl);
       this.ws = ws;
@@ -203,12 +208,40 @@ export class DeviceBridge {
 
   async speak(text: string): Promise<string> {
     const id = newCmdId();
-    await this.send({ cmd: "speak", id, text, interrupt: true });
+    const trimmed = text.trim();
+    if (!trimmed) throw new Error("Câu nói trống");
+
+    // PC synthesizes TTS then pushes WAV to ESP (works when Wi‑Fi blocks ESP→PC).
+    try {
+      const ttsRes = await fetch("/api/devices/tts", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ server_key: "AIVA-2024", text: trimmed }),
+      });
+      if (ttsRes.ok) {
+        const wav = await ttsRes.arrayBuffer();
+        if (wav.byteLength >= 44 && this.botUrl) {
+          const fd = new FormData();
+          fd.append("id", id);
+          fd.append("text", trimmed);
+          fd.append("audio", new Blob([wav], { type: "audio/wav" }), "speak.wav");
+          const playRes = await fetch(`${this.botUrl}/play_wav`, { method: "POST", body: fd });
+          if (playRes.ok) {
+            useDeviceStore.getState().applyStatus({ last_spoken: trimmed, play: "speaking" });
+            return id;
+          }
+        }
+      }
+    } catch {
+      // fall through to on-device speak
+    }
+
+    await this.send({ cmd: "speak", id, text: trimmed, interrupt: true });
     return id;
   }
 
   async announce(text: string): Promise<void> {
-    await this.send({ cmd: "announce", id: newCmdId(), text });
+    await this.speak(text);
   }
 
   async quiet(): Promise<void> {
