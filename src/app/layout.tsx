@@ -26,6 +26,9 @@ const defaultMeta = {
 
 export const metadata: Metadata = {
   ...defaultMeta.vi,
+  verification: {
+    google: "eVCdkzatFtWjvb0ftnvWxWm7Jml69WqKLKxjDhysNcs",
+  },
   icons: [{ rel: "icon", url: "/favicon.png", type: "image/png" }],
   openGraph: {
     title: defaultMeta.vi.title,
