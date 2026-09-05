@@ -15,6 +15,7 @@ import {
   authPrimaryBtnClass,
 } from "@/features/auth/components/auth-layout";
 import { PasswordEyeToggle } from "@/features/auth/components/password-eye-toggle";
+import { SocialLoginButtons } from "@/features/auth/components/social-login-buttons";
 import { useI18n } from "@/lib/i18n/provider";
 
 type FormValues = {
@@ -128,6 +129,8 @@ export function RegisterForm({
       <button type="submit" disabled={loading} className={authPrimaryBtnClass}>
         {loading ? t.consoleRegisterLoading : t.consoleRegisterSubmit}
       </button>
+
+      <SocialLoginButtons />
 
       {!embedded && (
         <p className="text-center text-sm text-[#8a7a62]">

@@ -17,7 +17,21 @@ function emailRedirectTo(path = "/console/auth/callback"): string {
   return `${ENV.SITE_URL}${path}`;
 }
 
+export type OAuthProvider = "google" | "facebook";
+
 export const authService = {
+  async signInWithOAuth(provider: OAuthProvider): Promise<void> {
+    const supabase = getSupabaseClient();
+    const redirectTo = emailRedirectTo("/console/auth/callback");
+    const { error } = await supabase.auth.signInWithOAuth({
+      provider,
+      options: { redirectTo },
+    });
+    if (error) {
+      throw new Error(authErrorMessage(error, "Social login failed"));
+    }
+  },
+
   async login(payload: LoginPayload): Promise<Tokens> {
     const supabase = getSupabaseClient();
     const { data, error } = await supabase.auth.signInWithPassword({
