@@ -8,8 +8,8 @@ export function Footer() {
   const { t } = useI18n();
 
   const links = [
-    { label: t.footerSecurity, href: "/about" },
-    { label: t.footerTerms, href: "/about" },
+    { label: t.footerSecurity, href: "/privacy" },
+    { label: t.footerTerms, href: "/terms" },
     { label: t.footerSupport, href: "mailto:aivisionassistance@gmail.com" },
     { label: t.footerContact, href: "/about" }
   ];
