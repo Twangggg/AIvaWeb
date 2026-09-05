@@ -180,7 +180,11 @@ function PrivacyContent() {
           Mọi thắc mắc, yêu cầu về quyền riêng tư hoặc khiếu nại, vui lòng liên hệ:
         </p>
         <ul className="list-disc pl-5 space-y-1.5">
-          <li>Email hỗ trợ: support@aiva.id.vn</li>
+          <li>
+            Email hỗ trợ: <span>support</span>
+            <span>@</span>
+            <span>aiva.id.vn</span>
+          </li>
           <li>Đơn vị phát triển: OPTIC ELITE (AIva)</li>
           <li>Trang web: https://aiva.id.vn</li>
         </ul>
