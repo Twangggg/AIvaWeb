@@ -213,6 +213,55 @@ export default function PrivacyPage() {
             Tìm hiểu cách AIva thu thập, sử dụng và bảo vệ thông tin của bạn.
           </p>
         </div>
+        <div className="mx-auto max-w-3xl relative z-10 mb-12 rounded-2xl border border-[var(--text-on-glass)]/15 bg-[var(--glass-bg)]/60 p-6 text-sm leading-relaxed">
+          <h2 className="mb-3 text-lg font-bold text-[var(--text-on-glass)]">
+            Privacy Policy Summary (English)
+          </h2>
+          <div className="space-y-3" style={{ color: "var(--text-dim)" }}>
+            <p>
+              <b>AIva</b> is a screen-free smart glasses product for children,
+              developed and operated by <b>OPTIC ELITE</b>. This privacy policy
+              describes the data this app and our website collect and how we
+              use it.
+            </p>
+            <p>
+              <b>What we collect:</b> account information (display name, email,
+              hashed password, role), login information shared by Google or
+              Facebook (name and email), usage information, device information
+              (device type, battery, software version), technical information
+              (IP address, browser, error logs), and information you provide
+              through pre-order forms, surveys, or support requests.
+            </p>
+            <p>
+              <b>How we use your data:</b> to create and manage your account,
+              operate and improve the service, personalize your experience,
+              send important account or security notices, send marketing only
+              with your consent, and to analyze, maintain, and protect the
+              service. We never sell personal data and never use children&apos;s
+              data for behavioral advertising.
+            </p>
+            <p>
+              <b>Data sharing:</b> we share data only with service providers
+              necessary to operate our service, who are bound by
+              confidentiality. <b>Data retention:</b> we keep data only as long
+              as necessary or as required by law. <b>Your rights:</b> access,
+              rectification, erasure, restriction, objection, data portability,
+              withdrawal of consent, and the right to complain to a
+              supervisory authority.
+            </p>
+            <p>
+              <b>Children:</b> AIva is designed for children aged 4–12.
+              Accounts are created and managed by parents or guardians, and we
+              do not show behavioral advertising or share children&apos;s data for
+              advertising purposes.
+            </p>
+            <p>
+              <b>Contact:</b>{" "}
+              <span className="inline">support</span>@<span className="inline">aiva.id.vn</span>{" "}
+              | OPTIC ELITE (AIva) | https://aiva.id.vn
+            </p>
+          </div>
+        </div>
         <PrivacyContent />
       </main>
       <Footer />
