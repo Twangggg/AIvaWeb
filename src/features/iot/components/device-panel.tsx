@@ -309,7 +309,7 @@ export function DevicePanel() {
                         disabled={busy || hint.kind !== "ready"}
                         onClick={() => void onConnectDevice(d)}
                         className="min-h-10 rounded-lg bg-[var(--console-inverse)] px-4 text-sm font-semibold text-[var(--console-inverse-fg)] hover:opacity-90 disabled:opacity-60"
-                        title={hint.kind === "ready" ? "Kết nối" : hint.title}
+                        title={hint.kind === "ready" ? "Kết nối" : "Chưa sẵn sàng để kết nối"}
                       >
                         {busy ? "Đang nối…" : "Kết nối"}
                       </button>
