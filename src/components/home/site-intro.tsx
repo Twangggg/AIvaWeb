@@ -175,13 +175,25 @@ export function useSiteIntro() {
     () => !shouldSkipIntro(),
     () => false
   );
+  const [pointerSeen, setPointerSeen] = useState(false);
   const [dismissed, setDismissed] = useState(false);
+
+  useEffect(() => {
+    if (!eligible) return;
+    const onHumanSignal = () => setPointerSeen(true);
+    window.addEventListener("pointermove", onHumanSignal, { passive: true });
+    window.addEventListener("pointerdown", onHumanSignal, { passive: true });
+    return () => {
+      window.removeEventListener("pointermove", onHumanSignal);
+      window.removeEventListener("pointerdown", onHumanSignal);
+    };
+  }, [eligible]);
 
   const completeIntro = useCallback(() => {
     setDismissed(true);
   }, []);
 
-  return { showIntro: eligible && !dismissed, completeIntro };
+  return { showIntro: eligible && pointerSeen && !dismissed, completeIntro };
 }
 
 export function useHomeIntroBlocking() {
