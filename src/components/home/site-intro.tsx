@@ -21,8 +21,19 @@ interface SiteIntroProps {
   onComplete: () => void;
 }
 
+function isLikelyBot() {
+  const ua = navigator.userAgent.toLowerCase();
+  return (
+    navigator.webdriver === true ||
+    /(bot|crawler|spider|headless|scraper|googlebot|bingbot|yandex|baiduspider|duckduckgo|slurp|mediapartners|adsbot|preview)/.test(
+      ua,
+    )
+  );
+}
+
 function shouldSkipIntro() {
   if (typeof window === "undefined") return true;
+  if (isLikelyBot()) return true;
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches)
     return true;
   return sessionStorage.getItem(INTRO_STORAGE_KEY) === "1";
@@ -133,6 +144,12 @@ export function SiteIntro({ onComplete }: SiteIntroProps) {
       document.body.style.overflow = "";
     };
   }, []);
+
+  useEffect(() => {
+    if (phase !== "spotlight") return;
+    const timer = window.setTimeout(finish, 12000);
+    return () => window.clearTimeout(timer);
+  }, [phase, finish]);
 
   return (
     <div
