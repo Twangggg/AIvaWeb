@@ -9,8 +9,10 @@ export function middleware(request: NextRequest) {
     return new NextResponse(`google-site-verification: google${token}.html`, {
       status: 200,
       headers: {
-        "content-type": "text/html; charset=utf-8",
-        "cache-control": "no-store",
+        "content-type": "text/plain; charset=utf-8",
+        "cache-control": "no-store, max-age=0",
+        "cdn-cache-control": "no-store",
+        "pragma": "no-cache",
       },
     });
   }
