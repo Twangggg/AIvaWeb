@@ -63,14 +63,21 @@ function CallbackInner() {
         setError(t.consoleCallbackMissingCode);
       } catch (e) {
         if (cancelled) return;
-        setError(e instanceof Error ? e.message : t.consoleCallbackFailed);
+        const message = e instanceof Error ? e.message : "";
+        const reusedOrExpired =
+          /auth_code|reuse|already been used|expired|suddenly discovered/i.test(
+            message,
+          );
+        setError(
+          reusedOrExpired ? t.consoleCallbackSessionExpired : message || t.consoleCallbackFailed,
+        );
       }
     })();
 
     return () => {
       cancelled = true;
     };
-  }, [params, applyTokens, router, t.consoleCallbackMissingCode, t.consoleCallbackFailed]);
+  }, [params, applyTokens, router, t.consoleCallbackMissingCode, t.consoleCallbackFailed, t.consoleCallbackSessionExpired]);
 
   return (
     <AuthLayout title={t.consoleCallbackTitle}>

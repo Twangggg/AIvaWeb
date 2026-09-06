@@ -48,15 +48,19 @@ export function SocialLoginButtons() {
   const { t } = useI18n();
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState<OAuthProvider | null>(null);
+  const [stuck, setStuck] = useState(false);
 
   const handleClick = async (provider: OAuthProvider) => {
     setError(null);
+    setStuck(false);
     setLoading(provider);
+    const timer = window.setTimeout(() => setStuck(true), 9000);
     try {
       await authService.signInWithOAuth(provider);
     } catch (e) {
       setError(e instanceof ApiError || e instanceof Error ? e.message : t.consoleSocialLoginFailed);
     } finally {
+      window.clearTimeout(timer);
       setLoading(null);
     }
   };
@@ -89,6 +93,21 @@ export function SocialLoginButtons() {
           </button>
         ))}
       </div>
+
+      {stuck && (
+        <div className="rounded-xl border border-[#eab308]/40 bg-[#fdf6e3] px-3.5 py-3 text-sm text-[#7a5b12]" role="status">
+          <p className="font-medium">{t.consoleSsoSlow}</p>
+          <p className="mt-1 text-[#8a6d1e]">{t.consoleSsoHint}</p>
+          <button
+            type="button"
+            onClick={() => handleClick("google")}
+            disabled={loading !== null}
+            className="mt-2.5 rounded-lg bg-[#eab308] px-3.5 py-1.5 text-sm font-semibold text-[#241a00] transition hover:bg-[#f5c410] disabled:opacity-60"
+          >
+            {t.consoleSsoRetry}
+          </button>
+        </div>
+      )}
 
       {error && (
         <p className="rounded-xl border border-red-200/80 bg-[#fde8e6] px-3.5 py-2.5 text-sm text-[#b91c1c]" role="alert">

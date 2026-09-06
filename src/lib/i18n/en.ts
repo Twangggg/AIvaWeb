@@ -123,6 +123,7 @@ export const en = {
   footerTerms: "Terms",
   footerSupport: "Support",
   footerContact: "Contact",
+  footerIntro: "Showcase intro",
   footerCopyright: "© 2024 OPTIC ELITE. ALL RIGHTS RESERVED.",
 
   /* 3D Layers */
@@ -430,6 +431,7 @@ export const en = {
   introAriaLabel: "AIva introduction",
   introDiscover: "AIva, what is this?",
   introBrand: "AIva",
+  introSkip: "Don't show again",
 
   /* Console auth */
   consoleBackHome: "← Home",
@@ -500,5 +502,11 @@ export const en = {
   consoleCallbackLoading: "Confirming…",
   consoleCallbackMissingCode: "Missing confirmation code from email.",
   consoleCallbackFailed: "Confirmation failed",
+  consoleCallbackSessionExpired:
+    "This sign-in session expired or was already used. Please try again.",
+  consoleSsoSlow: "Google sign-in is taking longer than usual.",
+  consoleSsoHint:
+    "If a Google window opened, finish signing in there. If not, your browser or network may be blocking it.",
+  consoleSsoRetry: "Try again",
   consoleLang: "VI",
 } as const;

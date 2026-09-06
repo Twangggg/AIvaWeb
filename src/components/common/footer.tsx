@@ -1,11 +1,42 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useI18n } from "@/lib/i18n/provider";
+import {
+  INTRO_COMPLETE_EVENT,
+  INTRO_SHOW_EVENT,
+  clearIntroSeen,
+  isIntroSeen,
+  markIntroSeen,
+} from "@/components/home/site-intro";
 
 export function Footer() {
   const { t } = useI18n();
+  const [introEnabled, setIntroEnabled] = useState(false);
+
+  useEffect(() => {
+    const sync = () => setIntroEnabled(!isIntroSeen());
+    sync();
+    window.addEventListener(INTRO_COMPLETE_EVENT, sync);
+    window.addEventListener(INTRO_SHOW_EVENT, sync);
+    return () => {
+      window.removeEventListener(INTRO_COMPLETE_EVENT, sync);
+      window.removeEventListener(INTRO_SHOW_EVENT, sync);
+    };
+  }, []);
+
+  const toggleIntro = () => {
+    if (introEnabled) {
+      markIntroSeen();
+      setIntroEnabled(false);
+    } else {
+      clearIntroSeen();
+      setIntroEnabled(true);
+      window.dispatchEvent(new Event(INTRO_SHOW_EVENT));
+    }
+  };
 
   const links = [
     { label: t.footerSecurity, href: "/privacy" },
@@ -40,7 +71,18 @@ export function Footer() {
             Facebook
           </a>
         </div>
-        <div className="border-t pt-8 text-center" style={{ borderColor: "var(--border-subtle)" }}>
+        <div className="border-t pt-6 pb-2 flex flex-col items-center gap-4" style={{ borderColor: "var(--border-subtle)" }}>
+          <button
+            type="button"
+            onClick={toggleIntro}
+            className="intro-toggle"
+            aria-pressed={introEnabled}
+          >
+            <span className="intro-toggle-label">{t.footerIntro}</span>
+            <span className={`intro-toggle-switch ${introEnabled ? "is-on" : ""}`} aria-hidden="true">
+              <span className="intro-toggle-knob" />
+            </span>
+          </button>
           <p className="text-xs" style={{ color: "var(--text-dim)" }}>{t.footerCopyright}</p>
         </div>
       </div>

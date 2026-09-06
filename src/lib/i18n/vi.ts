@@ -123,6 +123,7 @@ export const vi = {
   footerTerms: "Điều khoản",
   footerSupport: "Hỗ trợ",
   footerContact: "Liên hệ",
+  footerIntro: "Intro giới thiệu",
   footerCopyright: "© 2024 OPTIC ELITE. TẤT CẢ QUYỀN ĐƯỢC BẢO LƯU.",
 
   /* 3D Layers */
@@ -430,6 +431,7 @@ export const vi = {
   introAriaLabel: "Giới thiệu AIva",
   introDiscover: "AIva ơi, đây là gì vậy?",
   introBrand: "AIva",
+  introSkip: "Không hiện lại nữa",
 
   /* Console auth */
   consoleBackHome: "← Trang chủ",
@@ -500,5 +502,11 @@ export const vi = {
   consoleCallbackLoading: "Đang xác nhận…",
   consoleCallbackMissingCode: "Thiếu mã xác nhận từ email.",
   consoleCallbackFailed: "Xác nhận thất bại",
+  consoleCallbackSessionExpired:
+    "Phiên đăng nhập đã hết hạn hoặc đã được sử dụng. Vui lòng thử lại.",
+  consoleSsoSlow: "Đăng nhập Google đang lâu hơn bình thường.",
+  consoleSsoHint:
+    "Nếu đã mở cửa sổ Google, hãy hoàn tất ở cửa sổ đó. Nếu không, có thể trình duyệt hoặc mạng đang chặn việc chuyển.",
+  consoleSsoRetry: "Thử lại",
   consoleLang: "EN",
 } as const;

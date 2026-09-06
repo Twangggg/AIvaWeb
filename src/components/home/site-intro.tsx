@@ -12,6 +12,7 @@ import { useI18n } from "@/lib/i18n/provider";
 
 export const INTRO_STORAGE_KEY = "aiva_intro_seen";
 export const INTRO_COMPLETE_EVENT = "aiva-intro-complete";
+export const INTRO_SHOW_EVENT = "aiva-intro-show";
 
 const SPOT_RADIUS = 168;
 
@@ -19,6 +20,33 @@ type Phase = "spotlight" | "exit";
 
 interface SiteIntroProps {
   onComplete: () => void;
+}
+
+export function isIntroSeen(): boolean {
+  if (typeof window === "undefined") return false;
+  try {
+    return window.localStorage.getItem(INTRO_STORAGE_KEY) === "1";
+  } catch {
+    return false;
+  }
+}
+
+export function markIntroSeen(): void {
+  if (typeof window === "undefined") return;
+  try {
+    window.localStorage.setItem(INTRO_STORAGE_KEY, "1");
+  } catch {
+    /* storage unavailable */
+  }
+}
+
+export function clearIntroSeen(): void {
+  if (typeof window === "undefined") return;
+  try {
+    window.localStorage.removeItem(INTRO_STORAGE_KEY);
+  } catch {
+    /* storage unavailable */
+  }
 }
 
 function isLikelyBot() {
@@ -36,17 +64,21 @@ function shouldSkipIntro() {
   if (isLikelyBot()) return true;
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches)
     return true;
-  return sessionStorage.getItem(INTRO_STORAGE_KEY) === "1";
+  return isIntroSeen();
 }
 
 function SpotlightPhase({
   onDiscover,
+  onSkip,
   discoverLabel,
   brandLabel,
+  skipLabel,
 }: {
   onDiscover: () => void;
+  onSkip: () => void;
   discoverLabel: string;
   brandLabel: string;
+  skipLabel: string;
 }) {
   const btnRef = useRef<HTMLButtonElement>(null);
   const sceneRef = useRef<HTMLDivElement>(null);
@@ -111,6 +143,14 @@ function SpotlightPhase({
         >
           {discoverLabel}
         </button>
+        <button
+          type="button"
+          className="site-intro-skip-btn"
+          tabIndex={0}
+          onClick={onSkip}
+        >
+          {skipLabel}
+        </button>
       </div>
       <div
         className="site-intro-spotlight-veil"
@@ -133,10 +173,15 @@ export function SiteIntro({ onComplete }: SiteIntroProps) {
 
   const finish = useCallback(() => {
     setPhase("exit");
-    sessionStorage.setItem(INTRO_STORAGE_KEY, "1");
+    markIntroSeen();
     window.dispatchEvent(new Event(INTRO_COMPLETE_EVENT));
     window.setTimeout(onComplete, 480);
   }, [onComplete]);
+
+  const skipForever = useCallback(() => {
+    markIntroSeen();
+    finish();
+  }, [finish]);
 
   useEffect(() => {
     document.body.style.overflow = "hidden";
@@ -162,7 +207,9 @@ export function SiteIntro({ onComplete }: SiteIntroProps) {
         <SpotlightPhase
           brandLabel={t.introBrand}
           discoverLabel={t.introDiscover}
+          skipLabel={t.introSkip}
           onDiscover={finish}
+          onSkip={skipForever}
         />
       )}
     </div>
@@ -176,6 +223,8 @@ export function useSiteIntro() {
     () => false
   );
   const [pointerSeen, setPointerSeen] = useState(false);
+  const [seen, setSeen] = useState(() => isIntroSeen());
+  const [requested, setRequested] = useState(false);
   const [dismissed, setDismissed] = useState(false);
 
   useEffect(() => {
@@ -189,11 +238,24 @@ export function useSiteIntro() {
     };
   }, [eligible]);
 
+  useEffect(() => {
+    const onShow = () => {
+      clearIntroSeen();
+      setSeen(false);
+      setRequested(true);
+    };
+    window.addEventListener(INTRO_SHOW_EVENT, onShow);
+    return () => window.removeEventListener(INTRO_SHOW_EVENT, onShow);
+  }, []);
+
   const completeIntro = useCallback(() => {
     setDismissed(true);
   }, []);
 
-  return { showIntro: eligible && pointerSeen && !dismissed, completeIntro };
+  const showIntro =
+    (requested || (eligible && pointerSeen && !seen)) && !dismissed;
+
+  return { showIntro, completeIntro };
 }
 
 export function useHomeIntroBlocking() {
@@ -201,14 +263,12 @@ export function useHomeIntroBlocking() {
   const [ready, setReady] = useState(() => {
     if (typeof window === "undefined") return true;
     if (window.location.pathname !== "/") return true;
-    return sessionStorage.getItem(INTRO_STORAGE_KEY) === "1";
+    return isIntroSeen();
   });
 
   useEffect(() => {
     const sync = () => {
-      setReady(
-        pathname !== "/" || sessionStorage.getItem(INTRO_STORAGE_KEY) === "1"
-      );
+      setReady(pathname !== "/" || isIntroSeen());
     };
     sync();
     window.addEventListener(INTRO_COMPLETE_EVENT, sync);
