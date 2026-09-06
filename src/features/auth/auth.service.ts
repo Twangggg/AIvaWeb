@@ -25,11 +25,7 @@ export const authService = {
     const redirectTo = emailRedirectTo("/console/auth/callback");
     const { error } = await supabase.auth.signInWithOAuth({
       provider,
-      options: {
-        redirectTo,
-        queryParams:
-          provider === "google" ? { prompt: "select_account" } : {},
-      },
+      options: { redirectTo },
     });
     if (error) {
       throw new Error(authErrorMessage(error, "Social login failed"));
