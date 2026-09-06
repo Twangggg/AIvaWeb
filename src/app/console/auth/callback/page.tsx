@@ -26,13 +26,13 @@ function CallbackInner() {
   useEffect(() => {
     let cancelled = false;
     (async () => {
+      const code = params.get("code");
+      const tokenHash = params.get("token_hash");
+      const type = params.get("type");
+      const next = params.get("next");
+      const isRecovery = type === "recovery" || next === "/console/reset-password";
+      const destination = isRecovery ? "/console/reset-password" : next || "/console";
       try {
-        const code = params.get("code");
-        const tokenHash = params.get("token_hash");
-        const type = params.get("type");
-        const next = params.get("next");
-        const isRecovery = type === "recovery" || next === "/console/reset-password";
-        const destination = isRecovery ? "/console/reset-password" : next || "/console";
 
         if (code) {
           const tokens = await authService.exchangeCode(code);
@@ -64,6 +64,17 @@ function CallbackInner() {
       } catch (e) {
         if (cancelled) return;
         const message = e instanceof Error ? e.message : "";
+        if (/code verifier|verifier not found|PKCE/i.test(message)) {
+          const tokens = await authService.getSessionTokens();
+          if (cancelled) return;
+          if (tokens) {
+            applyTokens(tokens);
+            router.replace(
+              isRecovery ? destination : routeAfterLogin(tokens?.user, destination),
+            );
+            return;
+          }
+        }
         const reusedOrExpired =
           /auth_code|reuse|already been used|expired|suddenly discovered/i.test(
             message,

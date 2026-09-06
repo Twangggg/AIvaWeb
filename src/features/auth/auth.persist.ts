@@ -44,13 +44,20 @@ export function createAuthWebStorage(): {
   setItem: (key: string, value: string) => void;
   removeItem: (key: string) => void;
 } {
+  const isCodeVerifier = (key: string) => key.endsWith("-code-verifier");
   return {
     getItem: (key) => {
       if (typeof window === "undefined") return null;
+      if (isCodeVerifier(key)) return window.localStorage.getItem(key);
       return activeStore().getItem(key) ?? otherStore().getItem(key);
     },
     setItem: (key, value) => {
       if (typeof window === "undefined") return;
+      if (isCodeVerifier(key)) {
+        window.localStorage.setItem(key, value);
+        window.sessionStorage.removeItem(key);
+        return;
+      }
       activeStore().setItem(key, value);
       otherStore().removeItem(key);
     },
