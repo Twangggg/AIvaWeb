@@ -9,6 +9,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 
 import { ApiError } from "@/lib/api/errors";
 import { useAuthStore } from "@/features/auth/auth.store";
+import { needsRoleOnboarding } from "@/features/auth/role.storage";
 import { getRememberMe, loadRememberedEmail } from "@/features/auth/auth.persist";
 import {
   authErrorClass,
@@ -81,8 +82,15 @@ export function LoginForm({
         password: values.password,
         rememberMe: values.rememberMe,
       });
-      const role = useAuthStore.getState().tokens?.user?.role;
-      router.replace(role === "admin" ? "/console/admin" : "/console");
+      const stored = useAuthStore.getState();
+      const user = stored.tokens?.user;
+      router.replace(
+        user?.role === "admin"
+          ? "/console/admin"
+          : needsRoleOnboarding(user)
+            ? "/console/role"
+            : "/console",
+      );
     } catch (e) {
       const raw = e instanceof ApiError ? e.message : e instanceof Error ? e.message : t.consoleLoginFailed;
       if (/failed to fetch|networkerror|load failed|fetch/i.test(raw)) {

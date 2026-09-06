@@ -28,9 +28,7 @@ export const authService = {
       options: {
         redirectTo,
         queryParams:
-          provider === "google"
-            ? { prompt: "select_account", access_type: "online" }
-            : {},
+          provider === "google" ? { prompt: "select_account" } : {},
       },
     });
     if (error) {

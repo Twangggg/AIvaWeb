@@ -33,6 +33,27 @@ function CallbackInner() {
       const isRecovery = type === "recovery" || next === "/console/reset-password";
       const destination = isRecovery ? "/console/reset-password" : next || "/console";
       try {
+        const errorCode = params.get("error_code");
+        const errorDescription = params.get("error_description") || "";
+        if (errorCode) {
+          const tokens = await authService.getSessionTokens();
+          if (cancelled) return;
+          if (tokens) {
+            applyTokens(tokens);
+            router.replace(
+              isRecovery ? destination : routeAfterLogin(tokens?.user, destination),
+            );
+            return;
+          }
+          setError(
+            /code_not_found|code already used|verifier|expired|suddenly discovered/i.test(
+              errorDescription,
+            )
+              ? t.consoleCallbackSessionExpired
+              : t.consoleCallbackFailed,
+          );
+          return;
+        }
 
         if (code) {
           const tokens = await authService.exchangeCode(code);
@@ -79,8 +100,13 @@ function CallbackInner() {
           /auth_code|reuse|already been used|expired|suddenly discovered/i.test(
             message,
           );
+        const rawHttpCode = /^400|bad request|\d{3}\b/i.test(message);
         setError(
-          reusedOrExpired ? t.consoleCallbackSessionExpired : message || t.consoleCallbackFailed,
+          reusedOrExpired
+            ? t.consoleCallbackSessionExpired
+            : rawHttpCode || !message
+              ? t.consoleCallbackFailed
+              : message,
         );
       }
     })();
