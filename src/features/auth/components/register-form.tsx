@@ -66,7 +66,7 @@ export function RegisterForm({
         router.replace("/console/verify-pending");
         return;
       }
-      router.replace("/console");
+      router.replace(result.user?.role === "admin" ? "/console/admin" : "/console/role");
     } catch (e) {
       setError(e instanceof ApiError || e instanceof Error ? e.message : t.consoleRegisterFailed);
     }

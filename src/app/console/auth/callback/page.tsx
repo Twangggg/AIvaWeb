@@ -5,6 +5,8 @@ import { Suspense, useEffect, useState } from "react";
 
 import { authService } from "@/features/auth/auth.service";
 import { useAuthStore } from "@/features/auth/auth.store";
+import { needsRoleOnboarding } from "@/features/auth/role.storage";
+import type { UserInfo } from "@/features/auth/auth.types";
 import { AuthLayout, authPrimaryBtnClass } from "@/features/auth/components/auth-layout";
 import { useI18n } from "@/lib/i18n/provider";
 
@@ -14,6 +16,12 @@ function CallbackInner() {
   const { t } = useI18n();
   const applyTokens = useAuthStore((s) => s.applyTokens);
   const [error, setError] = useState<string | null>(null);
+
+  const routeAfterLogin = (user: UserInfo | undefined, fallback: string): string => {
+    if (user?.role === "admin") return "/console/admin";
+    if (needsRoleOnboarding(user)) return "/console/role";
+    return fallback || "/console";
+  };
 
   useEffect(() => {
     let cancelled = false;
@@ -30,7 +38,7 @@ function CallbackInner() {
           const tokens = await authService.exchangeCode(code);
           if (cancelled) return;
           applyTokens(tokens);
-          router.replace(destination);
+          router.replace(isRecovery ? destination : routeAfterLogin(tokens?.user, destination));
           return;
         }
 
@@ -40,7 +48,7 @@ function CallbackInner() {
           const tokens = await authService.verifyEmailOtp(tokenHash, otpType);
           if (cancelled) return;
           applyTokens(tokens);
-          router.replace(destination);
+          router.replace(isRecovery ? destination : routeAfterLogin(tokens?.user, destination));
           return;
         }
 
@@ -48,7 +56,7 @@ function CallbackInner() {
         if (cancelled) return;
         if (tokens) {
           applyTokens(tokens);
-          router.replace(destination);
+          router.replace(isRecovery ? destination : routeAfterLogin(tokens?.user, destination));
           return;
         }
 

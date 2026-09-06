@@ -2,7 +2,7 @@ import { getSupabaseClient } from "@/lib/supabase/client";
 import { ENV } from "@/lib/env";
 
 import { mapSessionToTokens, mapSupabaseUser, enrichTokensFromProfile } from "./auth.map";
-import type { LoginPayload, RegisterPayload, RegisterResult, Tokens } from "./auth.types";
+import type { LoginPayload, RegisterPayload, RegisterResult, Tokens, UserRole } from "./auth.types";
 import { saveUserRole } from "./role.storage";
 
 function authErrorMessage(error: { message?: string } | null, fallback: string): string {
@@ -174,6 +174,28 @@ export const authService = {
     const { error } = await supabase.auth.updateUser({ password });
     if (error) {
       throw new Error(authErrorMessage(error, "Failed to update password"));
+    }
+  },
+
+  /** Persist the role the user chose during post-signup onboarding. */
+  async chooseRole(role: UserRole): Promise<void> {
+    const supabase = getSupabaseClient();
+    const { data, error } = await supabase.auth.updateUser({
+      data: { role },
+    });
+    if (error) {
+      throw new Error(authErrorMessage(error, "Failed to save role"));
+    }
+    const user = mapSupabaseUser(data.user);
+    if (user?.id) {
+      saveUserRole(user.id, role);
+    }
+    const { error: profileError } = await supabase
+      .from("profiles")
+      .update({ role })
+      .eq("id", data.user?.id ?? "");
+    if (profileError) {
+      // Metadata role is authoritative in this app; profiles is best-effort.
     }
   },
 };

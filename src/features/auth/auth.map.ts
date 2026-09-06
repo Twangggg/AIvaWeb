@@ -53,7 +53,7 @@ export async function enrichTokensFromProfile(tokens: Tokens | null): Promise<To
       .eq("id", tokens.user.id)
       .maybeSingle();
     if (error || !data) return tokens;
-    const role = normalizeRole(data.role) ?? tokens.user.role;
+    const role = tokens.user.role ?? normalizeRole(data.role);
     return {
       ...tokens,
       user: {

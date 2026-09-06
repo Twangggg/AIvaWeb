@@ -9,7 +9,7 @@ import { enrichTokensFromProfile, mapSessionToTokens } from "./auth.map";
 import { authService } from "./auth.service";
 import { saveRememberedEmail, setRememberMe } from "./auth.persist";
 import { loadTokens, saveTokens } from "./auth.storage";
-import { loadUserRole, saveUserRole } from "./role.storage";
+import { loadUserRole, markRoleOnboarded, saveUserRole } from "./role.storage";
 import type {
   AuthStatus,
   LoginPayload,
@@ -17,6 +17,7 @@ import type {
   RegisterResult,
   Tokens,
   UserInfo,
+  UserRole,
 } from "./auth.types";
 
 type AuthState = {
@@ -32,6 +33,7 @@ type AuthState = {
   markEmailConfirmed: () => void;
   setPendingVerificationEmail: (email: string | null) => void;
   applyTokens: (tokens: Tokens | null) => void;
+  chooseRole: (role: UserRole) => Promise<void>;
   requestPasswordReset: (email: string) => Promise<void>;
   updatePassword: (password: string) => Promise<void>;
 };
@@ -217,6 +219,23 @@ export const useAuthStore = create<AuthState>((set, get) => ({
       user: { ...current.user, emailConfirmed: true },
     });
     set({ tokens, pendingVerificationEmail: null });
+  },
+
+  chooseRole: async (role) => {
+    set({ status: "loading" });
+    try {
+      await authService.chooseRole(role);
+      const current = get().tokens;
+      if (!current?.user?.id) return;
+      const user = { ...current.user, role };
+      saveUserRole(user.id, role);
+      markRoleOnboarded(user.id);
+      const tokens = persistTokens({ ...current, user });
+      set({ tokens, status: "authenticated", pendingVerificationEmail: null });
+    } catch (e) {
+      set({ status: "authenticated" });
+      throw e;
+    }
   },
 
   setPendingVerificationEmail: (email) => set({ pendingVerificationEmail: email }),

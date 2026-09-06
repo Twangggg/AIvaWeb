@@ -27,6 +27,7 @@ export type ConsoleNavItem = ConsoleNavLink;
 const ROLE_ALLOW: Record<UserRole, string[]> = {
   teacher: [
     "/console",
+    "/console/role",
     "/console/play",
     "/console/safety",
     "/console/history",
@@ -35,6 +36,7 @@ const ROLE_ALLOW: Record<UserRole, string[]> = {
   ],
   parent: [
     "/console",
+    "/console/role",
     "/console/safety",
     "/console/history",
     "/console/device",
@@ -43,6 +45,7 @@ const ROLE_ALLOW: Record<UserRole, string[]> = {
   admin: [
     "/console",
     "/console/admin",
+    "/console/role",
     "/console/account",
     "/console/play",
     "/console/safety",

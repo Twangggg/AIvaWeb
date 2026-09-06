@@ -20,6 +20,7 @@ export function ConsoleShell({ children }: { children: React.ReactNode }) {
     pathname === "/console/reset-password" ||
     pathname === "/console/verify" ||
     pathname === "/console/verify-pending" ||
+    pathname === "/console/role" ||
     pathname.startsWith("/console/auth/");
   const user = useAuthStore((s) => s.tokens?.user);
   const logout = useAuthStore((s) => s.logout);

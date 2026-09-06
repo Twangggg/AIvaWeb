@@ -17,6 +17,7 @@ const AUTH_PATH_PREFIXES = [
   "/console/reset-password",
   "/console/verify",
   "/console/verify-pending",
+  "/console/role",
   "/console/auth/",
 ];
 
