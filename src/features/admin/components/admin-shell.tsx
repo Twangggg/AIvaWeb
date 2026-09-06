@@ -42,7 +42,9 @@ function buildNav(): NavItem[] {
             ? "group"
             : mod.id === "devices"
               ? "devices"
-              : "monitoring",
+              : mod.id === "study"
+                ? "science"
+                : "monitoring",
       ready: mod.ready,
     })),
   ];
@@ -84,11 +86,12 @@ export function AdminShell({ children }: { children: React.ReactNode }) {
   const isCollapsed = ready && collapsed;
   const nav = buildNav();
   const displayName = user?.displayName || user?.email || "Admin";
-  const initials = displayName
-    .split(/\s+/)
-    .slice(0, 2)
-    .map((p) => p[0]?.toUpperCase() || "")
-    .join("") || "A";
+  const initials =
+    displayName
+      .split(/\s+/)
+      .slice(0, 2)
+      .map((p) => p[0]?.toUpperCase() || "")
+      .join("") || "A";
 
   return (
     <div className="flex min-h-dvh bg-[var(--console-canvas)] text-[var(--console-fg)] transition-colors">
@@ -147,10 +150,14 @@ export function AdminShell({ children }: { children: React.ReactNode }) {
               className="inline-flex size-9 items-center justify-center rounded-lg border border-[var(--console-border)] bg-[var(--console-chip)] text-[var(--console-muted)] lg:hidden"
               aria-label="Menu"
             >
-              <span className="material-symbols-outlined text-[22px]">menu</span>
+              <span className="material-symbols-outlined text-[22px]">
+                menu
+              </span>
             </button>
             <p className="truncate text-sm text-[var(--console-muted)]">
-              {en ? "Live ops · pre-orders & accounts" : "Vận hành · đặt trước & tài khoản"}
+              {en
+                ? "Live ops · pre-orders & accounts"
+                : "Vận hành · đặt trước & tài khoản"}
             </p>
           </div>
           <div className="flex items-center gap-2">
@@ -158,14 +165,17 @@ export function AdminShell({ children }: { children: React.ReactNode }) {
           </div>
         </header>
 
-        <main className="w-full flex-1 px-4 py-5 sm:px-6 sm:py-6 lg:px-8 xl:px-10">{children}</main>
+        <main className="w-full flex-1 px-4 py-5 sm:px-6 sm:py-6 lg:px-8 xl:px-10">
+          {children}
+        </main>
       </div>
     </div>
   );
 }
 
 function isActive(pathname: string, href: string): boolean {
-  if (href === "/console/admin") return pathname === "/console/admin" || pathname === "/console/admin/";
+  if (href === "/console/admin")
+    return pathname === "/console/admin" || pathname === "/console/admin/";
   return pathname === href || pathname.startsWith(`${href}/`);
 }
 
@@ -206,14 +216,25 @@ function SidebarBody({
           href="/"
           onClick={onNavigate}
           className={`flex min-w-0 items-center gap-2.5 overflow-hidden ${collapsed ? "justify-center" : ""}`}
-          title={collapsed ? (en ? "AIva — website" : "AIva — trang chủ") : en ? "Back to website" : "Về trang chủ"}
+          title={
+            collapsed
+              ? en
+                ? "AIva — website"
+                : "AIva — trang chủ"
+              : en
+                ? "Back to website"
+                : "Về trang chủ"
+          }
         >
           <span className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-[var(--console-inverse)] text-sm font-bold text-[var(--console-accent)]">
             A
           </span>
           {!collapsed && (
             <span className="truncate text-sm font-semibold tracking-tight">
-              AIva <span className="font-medium text-[var(--console-muted)]">Admin</span>
+              AIva{" "}
+              <span className="font-medium text-[var(--console-muted)]">
+                Admin
+              </span>
             </span>
           )}
         </Link>
@@ -236,7 +257,9 @@ function SidebarBody({
             title={en ? "Collapse sidebar" : "Thu gọn"}
             aria-label={en ? "Collapse sidebar" : "Thu gọn"}
           >
-            <span className="material-symbols-outlined text-[20px]">keyboard_double_arrow_left</span>
+            <span className="material-symbols-outlined text-[20px]">
+              keyboard_double_arrow_left
+            </span>
           </button>
         )}
       </div>
@@ -247,7 +270,13 @@ function SidebarBody({
           collapsed && onToggleCollapse ? "cursor-e-resize" : ""
         }`}
         aria-label="Admin"
-        title={collapsed && onToggleCollapse ? (en ? "Click empty area to expand" : "Bấm khoảng trống để mở rộng") : undefined}
+        title={
+          collapsed && onToggleCollapse
+            ? en
+              ? "Click empty area to expand"
+              : "Bấm khoảng trống để mở rộng"
+            : undefined
+        }
         onClick={
           collapsed && onToggleCollapse
             ? (e) => {
@@ -268,7 +297,9 @@ function SidebarBody({
                   collapsed ? "justify-center px-0" : ""
                 }`}
               >
-                <span className="material-symbols-outlined text-[22px] opacity-70">{item.icon}</span>
+                <span className="material-symbols-outlined text-[22px] opacity-70">
+                  {item.icon}
+                </span>
                 {!collapsed && (
                   <>
                     <span className="flex-1 truncate">{label}</span>
@@ -300,7 +331,9 @@ function SidebarBody({
               )}
               <span
                 className={`material-symbols-outlined text-[22px] ${
-                  active ? "text-[var(--console-accent)]" : "text-[var(--console-muted)]"
+                  active
+                    ? "text-[var(--console-accent)]"
+                    : "text-[var(--console-muted)]"
                 }`}
               >
                 {item.icon}
@@ -320,8 +353,12 @@ function SidebarBody({
           </span>
           {!collapsed && (
             <div className="min-w-0 flex-1">
-              <p className="truncate text-sm font-medium leading-tight">{displayName}</p>
-              <p className="truncate text-xs text-[var(--console-muted)]">{email || "admin"}</p>
+              <p className="truncate text-sm font-medium leading-tight">
+                {displayName}
+              </p>
+              <p className="truncate text-xs text-[var(--console-muted)]">
+                {email || "admin"}
+              </p>
             </div>
           )}
           {!collapsed && (
@@ -332,7 +369,9 @@ function SidebarBody({
               title={en ? "Log out" : "Đăng xuất"}
               aria-label={en ? "Log out" : "Đăng xuất"}
             >
-              <span className="material-symbols-outlined text-[20px]">logout</span>
+              <span className="material-symbols-outlined text-[20px]">
+                logout
+              </span>
             </button>
           )}
         </div>
@@ -344,7 +383,9 @@ function SidebarBody({
             title={en ? "Log out" : "Đăng xuất"}
             aria-label={en ? "Log out" : "Đăng xuất"}
           >
-            <span className="material-symbols-outlined text-[22px]">logout</span>
+            <span className="material-symbols-outlined text-[22px]">
+              logout
+            </span>
           </button>
         )}
       </div>

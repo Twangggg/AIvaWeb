@@ -13,6 +13,7 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "seed:demo-users": "node --env-file=.env.local scripts/seed-demo-users.mjs",
+    "seed:study": "node --env-file=.env.local scripts/seed-study-data.mjs",
     "prepare": "husky"
   },
   "dependencies": {
