@@ -28,20 +28,8 @@ function GoogleIcon() {
   );
 }
 
-function FacebookIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="size-5 shrink-0" aria-hidden="true">
-      <path
-        fill="#1877F2"
-        d="M24 12a12 12 0 1 0-13.88 11.85v-8.38H7.08V12h3.04V9.36c0-3 1.79-4.67 4.53-4.67 1.31 0 2.68.23 2.68.23v2.95H15.8c-1.49 0-1.95.93-1.95 1.88V12h3.32l-.53 3.47h-2.79v8.38A12 12 0 0 0 24 12z"
-      />
-    </svg>
-  );
-}
-
 const PROVIDERS: { id: OAuthProvider; labelKey: "consoleContinueWithGoogle" | "consoleContinueWithFacebook"; Icon: () => ReactElement }[] = [
   { id: "google", labelKey: "consoleContinueWithGoogle", Icon: GoogleIcon },
-  { id: "facebook", labelKey: "consoleContinueWithFacebook", Icon: FacebookIcon },
 ];
 
 export function SocialLoginButtons() {
