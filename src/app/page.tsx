@@ -1,11 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import { useState, Suspense } from "react";
 import { Nav } from "@/components/common/nav";
 import { Footer } from "@/components/common/footer";
 import { StickyCta } from "@/components/common/sticky-cta";
 import { PreorderModal } from "@/features/preorder/components/preorder-modal";
 import { SiteIntro, useSiteIntro } from "@/components/home/site-intro";
+import { OAuthErrorBanner } from "@/components/home/oauth-error-banner";
 import { VisionDemoSection } from "@/components/home/vision-demo-section";
 import { VideoDemoSection } from "@/components/home/video-demo-section";
 import { CompareSection } from "@/components/home/compare-section";
@@ -31,6 +32,9 @@ export default function HomePage() {
         <SiteIntro onComplete={completeIntro} />
       ) : (
         <>
+          <Suspense fallback={null}>
+            <OAuthErrorBanner />
+          </Suspense>
           <PageMouseGlow />
           <Nav onPreorder={() => setPreorderOpen(true)} />
 

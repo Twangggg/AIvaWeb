@@ -508,5 +508,10 @@ export const en = {
   consoleSsoHint:
     "If a Google window opened, finish signing in there. If not, your browser or network may be blocking it.",
   consoleSsoRetry: "Try again",
+  homeOauthErrorTitle: "Sign-in didn't complete",
+  homeOauthErrorHint:
+    "Your sign-in session expired or was interrupted. Please try again.",
+  homeOauthRetry: "Try again",
+  homeOauthDismiss: "Dismiss",
   consoleLang: "VI",
 } as const;

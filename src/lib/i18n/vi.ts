@@ -508,5 +508,10 @@ export const vi = {
   consoleSsoHint:
     "Nếu đã mở cửa sổ Google, hãy hoàn tất ở cửa sổ đó. Nếu không, có thể trình duyệt hoặc mạng đang chặn việc chuyển.",
   consoleSsoRetry: "Thử lại",
+  homeOauthErrorTitle: "Đăng nhập chưa hoàn tất",
+  homeOauthErrorHint:
+    "Phiên đăng nhập đã hết hạn hoặc bị gián đoạn. Vui lòng thử lại.",
+  homeOauthRetry: "Thử lại",
+  homeOauthDismiss: "Đóng",
   consoleLang: "EN",
 } as const;
