@@ -51,11 +51,22 @@ create table if not exists public.study_learning_items (
   score numeric
 );
 
+-- Post-session / post-study surveys (child_post, parent_final).
+create table if not exists public.study_surveys (
+  id bigint generated always as identity primary key,
+  session_id uuid references public.study_sessions(session_id) on delete cascade,
+  participant_code text references public.study_enrollments(participant_code),
+  survey_type text not null check (survey_type in ('child_post','parent_final')),
+  answers jsonb not null default '{}'::jsonb,
+  submitted_at timestamptz not null default now()
+);
+
 -- RLS: study data is read by service role only; block anon/authenticated by default.
 alter table public.study_enrollments enable row level security;
 alter table public.study_sessions enable row level security;
 alter table public.study_events enable row level security;
 alter table public.study_learning_items enable row level security;
+alter table public.study_surveys enable row level security;
 
 drop policy if exists "No public study writes" on public.study_enrollments;
 drop policy if exists "No public study reads" on public.study_enrollments;
@@ -65,6 +76,8 @@ drop policy if exists "No public study writes" on public.study_events;
 drop policy if exists "No public study reads" on public.study_events;
 drop policy if exists "No public study writes" on public.study_learning_items;
 drop policy if exists "No public study reads" on public.study_learning_items;
+drop policy if exists "No public study writes" on public.study_surveys;
+drop policy if exists "No public study reads" on public.study_surveys;
 
 -- Export view: one row / session with computed features (see 10-logging-schema.md CSV).
 create or replace view public.export_session_features as

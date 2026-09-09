@@ -9,8 +9,8 @@ export type GeminiResult =
 
 const MODEL_FALLBACKS = [
   process.env.GEMINI_MODEL,
-  "gemini-2.0-flash-lite",
-  "gemini-2.0-flash",
+  "gemini-3.5-flash-lite",
+  "gemini-3.1-flash-lite",
   "gemini-flash-lite-latest"
 ].filter((m, i, arr): m is string => !!m && arr.indexOf(m) === i);
 
@@ -19,7 +19,8 @@ async function callModel(
   model: string,
   locale: ChatLocale,
   message: string,
-  history: ChatTurn[]
+  history: ChatTurn[],
+  ragContext?: string
 ): Promise<GeminiResult> {
   const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
 
@@ -36,7 +37,7 @@ async function callModel(
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
       systemInstruction: {
-        parts: [{ text: buildSystemPrompt(locale) }]
+        parts: [{ text: buildSystemPrompt(locale, ragContext) }]
       },
       contents,
       generationConfig: {
@@ -70,7 +71,8 @@ async function callModel(
 export async function callGemini(
   locale: ChatLocale,
   message: string,
-  history: ChatTurn[]
+  history: ChatTurn[],
+  ragContext?: string
 ): Promise<GeminiResult> {
   const apiKey = process.env.GEMINI_API_KEY;
   if (!apiKey) return { ok: false, reason: "no_key" };
@@ -78,7 +80,7 @@ export async function callGemini(
   let lastResult: GeminiResult = { ok: false, reason: "error" };
 
   for (const model of MODEL_FALLBACKS) {
-    const result = await callModel(apiKey, model, locale, message, history);
+    const result = await callModel(apiKey, model, locale, message, history, ragContext);
     if (result.ok) return result;
 
     lastResult = result;

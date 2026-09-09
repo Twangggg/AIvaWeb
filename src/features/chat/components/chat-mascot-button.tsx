@@ -43,8 +43,8 @@ export function ChatMascotButton({
       style={{
         bottom: "0.75rem",
         right: "0.5rem",
-        width: "9rem",
-        height: "10rem",
+        width: "6.25rem",
+        height: "7rem",
         background: "transparent",
         opacity: open ? 0.9 : 1,
         overflow: "visible"
@@ -53,7 +53,7 @@ export function ChatMascotButton({
       aria-expanded={open}
     >
       <div
-        className="absolute left-1/2 -translate-x-1/2 bottom-2 w-16 h-5 rounded-full blur-xl pointer-events-none transition-opacity"
+        className="absolute left-1/2 -translate-x-1/2 bottom-1.5 w-12 h-4 rounded-full blur-xl pointer-events-none transition-opacity"
         style={{
           background: "radial-gradient(ellipse, rgba(234,179,8,0.4) 0%, transparent 70%)",
           opacity: hovering ? 1 : 0.55
@@ -63,7 +63,7 @@ export function ChatMascotButton({
       <div className="relative w-full h-full" style={{ overflow: "visible" }}>
         {!modelReady && (
           <div className="absolute inset-0 z-0 flex items-center justify-center">
-            <div className="w-8 h-8 rounded-full border-2 border-[var(--accent)] border-t-transparent animate-spin" />
+            <div className="w-7 h-7 rounded-full border-2 border-[var(--accent)] border-t-transparent animate-spin" />
           </div>
         )}
         {mounted && (

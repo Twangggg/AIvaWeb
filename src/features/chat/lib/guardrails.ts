@@ -23,82 +23,9 @@ const INJECTION_PATTERNS = [
   /roleplay\s+as/i
 ];
 
-const OFF_TOPIC_PATTERNS = [
-  /\b(write|generate|create)\s+(me\s+)?(a\s+)?(code|script|program|essay|poem|story)\b/i,
-  /\b(homework|bài tập|làm hộ)\b/i,
-  /\b(chính trị|politics|election|bầu cử)\b/i,
-  /\b(cờ bạc|gambling|casino)\b/i,
-  /\b(hack|crack|exploit|malware)\b/i,
-  /\b(làm bài|giải bài|solve this)\b/i
-];
-
-const GREETING_PATTERNS = [
-  /^(hi|hello|hey|chào|xin chào|chao|yo)\b/i,
-  /^(cảm ơn|thank|thanks|ok|oke|okay)\b/i
-];
-
-const TOPIC_KEYWORDS = [
-  "aiva",
-  "aíva",
-  "kính",
-  "glasses",
-  "pre-order",
-  "preorder",
-  "đặt trước",
-  "đặt hàng",
-  "pin",
-  "battery",
-  "sạc",
-  "charge",
-  "trẻ em",
-  "trẻ",
-  "kids",
-  "children",
-  "child",
-  "camera",
-  "micro",
-  "microphone",
-  "esp32",
-  "wifi",
-  "bluetooth",
-  "màn hình",
-  "screen",
-  "phụ huynh",
-  "parent",
-  "app",
-  "ứng dụng",
-  "giá",
-  "price",
-  "cost",
-  "liên hệ",
-  "contact",
-  "support",
-  "hỗ trợ",
-  "faq",
-  "hỏi",
-  "tuổi",
-  "age",
-  "website",
-  "facebook",
-  "email",
-  "sản phẩm",
-  "product",
-  "tính năng",
-  "feature",
-  "loa",
-  "speaker",
-  "audio",
-  "âm thanh",
-  "thông số",
-  "spec",
-  "mua",
-  "buy",
-  "order"
-];
-
 export type GuardrailResult =
   | { allowed: true; sanitized: string }
-  | { allowed: false; reason: "empty" | "too_long" | "injection" | "off_topic" | "invalid_history" };
+  | { allowed: false; reason: "empty" | "too_long" | "injection" | "invalid_history" };
 
 export function sanitizeInput(text: string): string {
   return text
@@ -122,22 +49,6 @@ export function checkMessage(message: string): GuardrailResult {
     if (pattern.test(sanitized)) {
       return { allowed: false, reason: "injection" };
     }
-  }
-
-  for (const pattern of OFF_TOPIC_PATTERNS) {
-    if (pattern.test(sanitized)) {
-      return { allowed: false, reason: "off_topic" };
-    }
-  }
-
-  const lower = sanitized.toLowerCase();
-
-  const isGreeting = GREETING_PATTERNS.some((p) => p.test(lower));
-  const hasTopicKeyword = TOPIC_KEYWORDS.some((kw) => lower.includes(kw));
-  const matchesFaq = FAQ_PAIRS.vi.some((f) => lower.includes(f.q)) || FAQ_PAIRS.en.some((f) => lower.includes(f.q));
-
-  if (!isGreeting && !hasTopicKeyword && !matchesFaq) {
-    return { allowed: false, reason: "off_topic" };
   }
 
   return { allowed: true, sanitized };

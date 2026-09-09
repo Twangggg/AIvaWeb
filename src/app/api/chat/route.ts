@@ -6,6 +6,7 @@ import {
 } from "@/features/chat/lib/guardrails";
 import { tryKnowledgeMatch } from "@/features/chat/lib/knowledge-match";
 import { callGemini } from "@/features/chat/lib/gemini";
+import { buildRagContext, retrieveChunks } from "@/features/chat/lib/rag";
 import { checkRateLimit, getClientIp } from "@/features/chat/lib/rate-limit";
 import type { ChatLocale } from "@/features/chat/lib/knowledge";
 
@@ -68,17 +69,19 @@ export async function POST(request: Request) {
 
     const guard = checkMessage(body.message ?? "");
     if (!guard.allowed) {
-      const reason = guard.reason;
       return Response.json({
-        reply: msgs[reason === "injection" ? "injection" : reason === "off_topic" ? "off_topic" : reason],
+        reply: msgs[guard.reason],
         blocked: true,
-        reason
+        reason: guard.reason
       });
     }
 
     const { sanitized } = guard;
 
-    if (/^(hi|hello|hey|chào|xin chào|chao)\b/i.test(sanitized)) {
+    if (
+      /\b(hi|hello|hey|chào|xin chào|chao|yo)\b/i.test(sanitized) ||
+      /\b(cảm ơn|thank|thanks|ok|oke|okay)\b/i.test(sanitized)
+    ) {
       return Response.json({ reply: GREETING_REPLIES[locale] });
     }
 
@@ -92,19 +95,25 @@ export async function POST(request: Request) {
       return Response.json({ reply: knowledgeAnswer });
     }
 
-    const gemini = await callGemini(locale, sanitized, history);
-
-    if (gemini.ok && validateOutput(gemini.text)) {
-      return Response.json({ reply: gemini.text });
-    }
+    const rag = retrieveChunks(locale, sanitized);
+    const ragContext = rag.length > 0 ? buildRagContext(rag) : undefined;
 
     if (!process.env.GEMINI_API_KEY) {
+      if (ragContext) {
+        return Response.json({ reply: rag[0].chunk.content });
+      }
       return Response.json({
         reply:
           locale === "vi"
             ? "Tôi chưa thể trả lời câu hỏi này tự động. Vui lòng xem mục FAQ trên trang chủ hoặc liên hệ aivisionassistance@gmail.com."
             : "I can't answer this automatically yet. Please check the FAQ on the homepage or contact aivisionassistance@gmail.com."
       });
+    }
+
+    const gemini = await callGemini(locale, sanitized, history, ragContext);
+
+    if (gemini.ok && validateOutput(gemini.text)) {
+      return Response.json({ reply: gemini.text });
     }
 
     if (!gemini.ok && gemini.reason === "quota") {

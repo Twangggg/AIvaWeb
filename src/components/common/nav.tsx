@@ -58,119 +58,220 @@ export function Nav({ onPreorder }: NavProps) {
 
   return (
     <>
+      {/* ── Desktop nav ── */}
       <nav
-        className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl border-b transition-all duration-300"
+        className="fixed top-0 left-1/2 z-50 hidden items-center transition-all duration-500 ease-[cubic-bezier(.22,1,.36,1)] md:flex"
         style={{
-          backgroundColor: scrolled ? "var(--nav-bg)" : "transparent",
-          borderColor: scrolled ? "var(--nav-border)" : "transparent",
+          transform: "translateX(-50%)",
+          width: scrolled ? "100%" : "min(960px, calc(100% - 3rem))",
+          top: scrolled ? 0 : "1rem",
+          borderRadius: scrolled ? 0 : "9999px",
+          padding: scrolled ? "0" : "0 0.375rem",
         }}
       >
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-          <Link href="/" className="relative z-50 flex items-center">
-            <Image src="/AIVALogo.png" alt="AIVA Logo" width={156} height={32} className="object-contain" priority />
+        <div
+          className="absolute inset-0 -z-10 transition-all duration-500 ease-[cubic-bezier(.22,1,.36,1)]"
+          style={{
+            borderRadius: "inherit",
+            backdropFilter: "blur(24px) saturate(180%)",
+            WebkitBackdropFilter: "blur(24px) saturate(180%)",
+            background: scrolled ? "var(--nav-bg)" : "rgba(255,255,255,0.08)",
+            border: `1px solid ${scrolled ? "var(--nav-border)" : "rgba(255,255,255,0.12)"}`,
+            boxShadow: scrolled
+              ? "0 1px 0 rgba(255,255,255,0.06)"
+              : "0 8px 32px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.1)",
+          }}
+        />
+
+        <div
+          className="flex w-full items-center justify-between transition-all duration-500 ease-[cubic-bezier(.22,1,.36,1)]"
+          style={{ padding: scrolled ? "0.625rem 2rem" : "0.5rem 1.25rem" }}
+        >
+          <Link href="/" className="relative z-10 flex shrink-0 items-center">
+            <Image
+              src="/AIVALogo.png"
+              alt="AIVA Logo"
+              width={140}
+              height={28}
+              className="object-contain transition-all duration-500"
+              style={{ width: scrolled ? 120 : 140 }}
+              priority
+            />
           </Link>
 
-          <div className="hidden items-center gap-6 text-sm md:flex" style={{ color: "var(--text-muted)" }}>
+          <div
+            className="relative z-10 flex items-center gap-0.5 text-sm transition-all duration-500"
+            style={{ color: "var(--text-muted)" }}
+          >
             {navLinks.map((link) => (
-              <Link key={link.href} href={link.href} className="nav-link hover:text-[var(--text-on-glass)]">
-                {link.label}
+              <Link
+                key={link.href}
+                href={link.href}
+                className="group relative rounded-full px-4 py-2 font-medium transition-all duration-200"
+                style={{
+                  color: "var(--text-muted)",
+                  background: "transparent",
+                }}
+              >
+                <span
+                  className="transition-all duration-200 group-hover:text-[var(--ocean)]"
+                  style={{ textShadow: "0 0 0 transparent" }}
+                >
+                  {link.label}
+                </span>
+                <span
+                  className="absolute bottom-0.5 left-1/2 h-1 w-1 -translate-x-1/2 rounded-full opacity-0 transition-all duration-300 group-hover:w-5 group-hover:opacity-100"
+                  style={{
+                    background: "var(--ocean)",
+                    boxShadow: "0 0 10px var(--ocean-glow)",
+                  }}
+                />
               </Link>
             ))}
-            <button type="button" onClick={onPreorder} className="nav-link hover:text-[var(--text-on-glass)]">
-              {t.navReserve}
+            <button
+              type="button"
+              onClick={onPreorder}
+              className="group relative rounded-full px-4 py-2 font-medium transition-all duration-200"
+              style={{
+                color: "var(--text-muted)",
+                background: "transparent",
+              }}
+            >
+              <span
+                className="transition-all duration-200 group-hover:text-[var(--ocean)]"
+                style={{ textShadow: "0 0 0 transparent" }}
+              >
+                {t.navReserve}
+              </span>
+              <span
+                className="absolute bottom-0.5 left-1/2 h-1 w-1 -translate-x-1/2 rounded-full opacity-0 transition-all duration-300 group-hover:w-5 group-hover:opacity-100"
+                style={{
+                  background: "var(--ocean)",
+                  boxShadow: "0 0 10px var(--ocean-glow)",
+                }}
+              />
             </button>
           </div>
 
-          <div className="relative z-50 flex items-center gap-3">
+          <div className="relative z-10 flex items-center gap-2.5">
             <ThemeLanguageControls />
             <Link
               href={accountHref}
-              className="hidden items-center rounded-full border px-4 py-2 text-sm font-semibold transition hover:bg-[var(--bg-subtle)] sm:inline-flex"
-              style={{ borderColor: "var(--border-subtle)", color: "var(--text-on-glass)" }}
+              className="hidden items-center rounded-full px-4 py-2 text-sm font-medium transition-all duration-200 hover:bg-white/10 lg:inline-flex"
+              style={{ color: "var(--text-muted)" }}
             >
               {accountLabel}
             </Link>
-            <button type="button" onClick={onPreorder} className="btn-primary hidden px-5 py-2 text-sm sm:block">
-              {t.ctaPrimary}
-            </button>
             <button
               type="button"
-              onClick={() => setMenuOpen(!menuOpen)}
-              className="flex h-10 w-10 items-center justify-center rounded-full md:hidden"
-              style={{ backgroundColor: "var(--bg-subtle)" }}
-              aria-label={menuOpen ? t.navMenuClose : t.navMenuOpen}
-              aria-expanded={menuOpen}
+              onClick={onPreorder}
+              className="rounded-full px-5 py-2.5 text-sm font-semibold transition-all duration-200 hover:brightness-110 active:scale-95"
+              style={{
+                background: "var(--gradient-ocean)",
+                color: "var(--text-on-accent)",
+                boxShadow: "0 2px 12px rgba(234,179,8,0.3)",
+              }}
             >
-              <span className="material-symbols-outlined" style={{ color: "var(--text-on-glass)" }}>
-                {menuOpen ? "close" : "menu"}
-              </span>
+              {t.ctaPrimary}
             </button>
           </div>
         </div>
       </nav>
 
-      <div
-        className="fixed inset-0 z-40 transition-opacity duration-300 md:hidden"
-        style={{ opacity: menuOpen ? 1 : 0, pointerEvents: menuOpen ? "auto" : "none" }}
-      >
-        <div className="absolute inset-0" style={{ backgroundColor: "var(--overlay-bg)" }} onClick={closeMenu} />
+      {/* ── Mobile nav ── */}
+      <nav className="fixed z-50 md:hidden" style={{ top: "0.75rem", left: "0.75rem", right: "0.75rem" }}>
         <div
-          className="absolute top-0 right-0 flex h-full w-[min(320px,85vw)] flex-col border-l backdrop-blur-xl transition-transform duration-300"
+          className="flex items-center justify-between px-5 py-3"
           style={{
-            backgroundColor: "var(--nav-bg)",
-            borderColor: "var(--nav-border)",
-            transform: menuOpen ? "translateX(0)" : "translateX(100%)",
+            borderRadius: "9999px",
+            backdropFilter: "blur(24px) saturate(180%)",
+            WebkitBackdropFilter: "blur(24px) saturate(180%)",
+            background: scrolled ? "var(--nav-bg)" : "rgba(255,255,255,0.08)",
+            border: `1px solid ${scrolled ? "var(--nav-border)" : "rgba(255,255,255,0.12)"}`,
+            boxShadow: scrolled
+              ? "0 1px 0 rgba(255,255,255,0.06)"
+              : "0 8px 32px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.1)",
           }}
         >
-          <div className="flex flex-1 flex-col gap-2 px-6 pt-24">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={closeMenu}
-                className="border-b py-4 text-lg font-medium"
-                style={{ color: "var(--text-on-glass)", borderColor: "var(--border-subtle)" }}
-              >
-                {link.label}
-              </Link>
-            ))}
+          <Link href="/" className="flex items-center">
+            <Image src="/AIVALogo.png" alt="AIVA Logo" width={120} height={24} className="object-contain" priority />
+          </Link>
+
+          <div className="flex items-center gap-2">
+            <ThemeLanguageControls />
             <button
               type="button"
-              onClick={() => {
-                closeMenu();
-                onPreorder();
-              }}
-              className="border-b py-4 text-left text-lg font-medium"
-              style={{ color: "var(--text-on-glass)", borderColor: "var(--border-subtle)" }}
+              onClick={() => setMenuOpen(!menuOpen)}
+              className="flex h-10 w-10 items-center justify-center rounded-full transition-colors duration-200"
+              style={{ background: "rgba(255,255,255,0.1)" }}
+              aria-label={menuOpen ? t.navMenuClose : t.navMenuOpen}
+              aria-expanded={menuOpen}
             >
-              {t.navReserve}
+              <span className="material-symbols-outlined text-lg" style={{ color: "var(--text-on-glass)" }}>
+                {menuOpen ? "close" : "menu"}
+              </span>
             </button>
-            <Link
-              href={accountHref}
-              onClick={closeMenu}
-              className="border-b py-4 text-lg font-medium"
-              style={{ color: "var(--text-on-glass)", borderColor: "var(--border-subtle)" }}
-            >
-              {accountLabel}
-            </Link>
           </div>
-          <div className="flex flex-col gap-3 p-6">
-            <Link href={accountHref} onClick={closeMenu} className="btn-ghost w-full py-3.5 text-center">
-              {accountLabel}
+        </div>
+
+        <div
+          className="mt-2 flex flex-col gap-1 overflow-hidden transition-all duration-300"
+          style={{
+            borderRadius: "1.5rem",
+            padding: menuOpen ? "0.5rem" : "0",
+            maxHeight: menuOpen ? "400px" : "0",
+            opacity: menuOpen ? 1 : 0,
+            pointerEvents: menuOpen ? "auto" : "none",
+            backdropFilter: "blur(24px) saturate(180%)",
+            WebkitBackdropFilter: "blur(24px) saturate(180%)",
+            background: "var(--nav-bg)",
+            border: menuOpen ? "1px solid var(--nav-border)" : "1px solid transparent",
+            boxShadow: "0 16px 48px rgba(0,0,0,0.25)",
+          }}
+        >
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              onClick={closeMenu}
+              className="rounded-2xl px-5 py-3.5 text-sm font-medium transition-colors duration-200 hover:bg-white/10"
+              style={{ color: "var(--text-muted)" }}
+            >
+              {link.label}
             </Link>
+          ))}
+          <button
+            type="button"
+            onClick={() => { closeMenu(); onPreorder(); }}
+            className="rounded-2xl px-5 py-3.5 text-left text-sm font-medium transition-colors duration-200 hover:bg-white/10"
+            style={{ color: "var(--text-muted)" }}
+          >
+            {t.navReserve}
+          </button>
+          <Link
+            href={accountHref}
+            onClick={closeMenu}
+            className="rounded-2xl px-5 py-3.5 text-sm font-medium transition-colors duration-200 hover:bg-white/10"
+            style={{ color: "var(--text-muted)" }}
+          >
+            {accountLabel}
+          </Link>
+          <div className="mt-1 flex flex-col gap-2 px-2 pb-2">
             <button
               type="button"
-              onClick={() => {
-                closeMenu();
-                onPreorder();
+              onClick={() => { closeMenu(); onPreorder(); }}
+              className="w-full rounded-full py-3 text-sm font-semibold transition-all duration-200 hover:brightness-110 active:scale-[0.98]"
+              style={{
+                background: "var(--gradient-ocean)",
+                color: "var(--text-on-accent)",
+                boxShadow: "0 2px 12px rgba(234,179,8,0.3)",
               }}
-              className="btn-primary w-full py-3.5"
             >
               {t.ctaPrimary}
             </button>
           </div>
         </div>
-      </div>
+      </nav>
     </>
   );
 }

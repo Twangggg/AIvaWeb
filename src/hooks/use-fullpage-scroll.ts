@@ -247,6 +247,18 @@ export function useFullpageScroll(enabled = true) {
 
     const onKey = (e: KeyboardEvent) => {
       if (locked.current) return;
+
+      const target = e.target as HTMLElement | null;
+      if (
+        target &&
+        (target.tagName === "INPUT" ||
+          target.tagName === "TEXTAREA" ||
+          target.tagName === "SELECT" ||
+          target.isContentEditable)
+      ) {
+        return;
+      }
+
       const list = sections();
       const idx = currentIndex();
       const current = list[idx];
