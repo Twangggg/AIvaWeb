@@ -9,7 +9,7 @@ import { AmbientBg } from "@/components/ui/ambient-bg";
  * When the demo video is ready, put the file at `public/videos/demo.mp4`
  * (or another path) and set this to that public URL, e.g. "/videos/demo.mp4".
  */
-export const HOME_DEMO_VIDEO_SRC: string | null = null;
+export const HOME_DEMO_VIDEO_SRC: string | null = "/videos/aiva-demo.mp4";
 
 export function VideoDemoSection() {
   const { t } = useI18n();
