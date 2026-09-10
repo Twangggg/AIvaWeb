@@ -233,6 +233,8 @@ export async function postAdminStudyChat(
     session_id?: string | null;
     text?: string;
     intent?: StudyChatIntent;
+    topic_id?: string;
+    topic_groundable?: boolean;
   }
 ): Promise<StudyChatTurn> {
   const res = await fetch("/api/admin/study/chat", {

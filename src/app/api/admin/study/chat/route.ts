@@ -19,12 +19,15 @@ type ChatBody = {
   session_id?: string | null;
   text?: string;
   intent?: PolicyIntent | "end";
+  topic_id?: string;
+  topic_groundable?: boolean;
 };
 
 type SessionRow = {
   session_id: string;
   participant_code: string;
   session_index: number;
+  topic_id: string | null;
 };
 
 export const maxDuration = 120;
@@ -67,25 +70,36 @@ export async function POST(request: Request) {
       if (updateError) throw updateError;
     }
 
-    // Resolve or create session.
+    // Resolve or create session. session_index is computed as max+1 and guarded
+    // by a UNIQUE(participant_code, session_index) constraint (006_study_fixes.sql),
+    // so a concurrent create that "wins" the same index is retried with a fresh max.
     let sessionId = body.session_id ?? null;
     if (!sessionId) {
-      const { data: countRows } = await supabase
-        .from("study_sessions")
-        .select("session_index")
-        .eq("participant_code", participantCode)
-        .order("session_index", { ascending: false });
-      const nextIndex = (countRows?.[0]?.session_index ?? 0) + 1;
-      const { data: created, error: createError } = await supabase
-        .from("study_sessions")
-        .insert({
-          participant_code: participantCode,
-          session_index: nextIndex,
-        })
-        .select("session_id,participant_code,session_index")
-        .single();
-      if (createError) throw createError;
-      sessionId = created.session_id;
+      for (let attempt = 0; attempt < 3; attempt++) {
+        const { data: countRows } = await supabase
+          .from("study_sessions")
+          .select("session_index")
+          .eq("participant_code", participantCode)
+          .order("session_index", { ascending: false });
+        const nextIndex = (countRows?.[0]?.session_index ?? 0) + 1;
+        const { data: created, error: createError } = await supabase
+          .from("study_sessions")
+          .insert({
+            participant_code: participantCode,
+            session_index: nextIndex,
+            topic_id: body.topic_id ?? null,
+          })
+          .select("session_id,participant_code,session_index")
+          .maybeSingle();
+        if (created) {
+          sessionId = created.session_id;
+          break;
+        }
+        const code = (createError as { code?: string } | null)?.code;
+        if (code !== "23505") throw createError ?? new Error("Failed to create session");
+        // 23505 unique_violation: another request took this index — retry.
+      }
+      if (!sessionId) throw new Error("Session creation conflicted; please retry");
       const { error: sessionStartError } = await supabase
         .from("study_events")
         .insert({
@@ -99,9 +113,19 @@ export async function POST(request: Request) {
 
     const { data: session } = await supabase
       .from("study_sessions")
-      .select("session_id,participant_code,session_index")
+      .select("session_id,participant_code,session_index,topic_id")
       .eq("session_id", sessionId)
       .maybeSingle<SessionRow>();
+
+    // Topic can be chosen/updated any time before the session ends; persist it
+    // so the export always carries a non-null topic_id per session.
+    if (body.topic_id && session?.topic_id !== body.topic_id) {
+      const { error: topicError } = await supabase
+        .from("study_sessions")
+        .update({ topic_id: body.topic_id })
+        .eq("session_id", sessionId);
+      if (topicError) throw topicError;
+    }
 
     let sessionEnded: string | null = null;
     if (intent === "end") {
@@ -159,8 +183,15 @@ export async function POST(request: Request) {
         };
       }
 
-      const worldGroundable =
+      // Groundability of the CURRENT TOPIC drives C2's explore-vs-ask-back
+      // branch. The study passes `topic_groundable` from the topic pack
+      // (15-topic-packs.md). When omitted (ad-hoc demo), fall back to a
+      // content heuristic so behavior stays sensible.
+      const topicGroundable = body.topic_groundable;
+      const contentGroundable =
         !isSafetyBlocked(text) && !/ai|robot|máy tính|intelligence/i.test(text);
+      const worldGroundable =
+        topicGroundable === undefined ? contentGroundable : topicGroundable;
       const response = policyStep(policyState, {
         text,
         intent: intent as PolicyIntent,
@@ -198,7 +229,7 @@ export async function POST(request: Request) {
         ...events,
         {
           session_id: sessionId,
-          actor: "child",
+          actor: "system",
           event_type: "policy_decision",
           utterance_text: text || null,
           question_code: null,
@@ -209,6 +240,8 @@ export async function POST(request: Request) {
             ...policyState,
             chain_depth: policyState.chainDepth,
             oracle_risk: policyState.oracleRisk,
+            seed_i_type_offered: seedIOffered,
+            consolidation_done: consolidationDone,
           },
           meta: null,
           explore_task_id: null,

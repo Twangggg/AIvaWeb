@@ -80,7 +80,15 @@ drop policy if exists "No public study writes" on public.study_surveys;
 drop policy if exists "No public study reads" on public.study_surveys;
 
 -- Export view: one row / session with computed features (see 10-logging-schema.md CSV).
-create or replace view public.export_session_features as
+-- Mapping to 03-measures.md:
+--   explore_complete_rate = explore_completed / NULLIF(explore_assigned,0)   (B2)
+--   explore_start_rate    = explore_started   / NULLIF(explore_assigned,0)   (B1)
+--   oracle_ratio (child)  = mean(oracle_like) across valid sessions           (A2)
+--   time_to_final_answer_sec = first child_utterance -> first ANSWER_FULL policy decision (B4)
+-- NOTE: must DROP then CREATE (column signature changed from an earlier version);
+--       `create or replace view` cannot change column names/order.
+drop view if exists public.export_session_features;
+create view public.export_session_features as
 select
   s.participant_code,
   en.condition,
@@ -88,7 +96,12 @@ select
   s.topic_id,
   de.cdepth as chain_depth,
   s.valid_for_primary,
+  s.dropout_flag,
+  s.parent_intervened_flag,
+  round(extract(epoch from (coalesce(s.ended_at, s.started_at) - s.started_at)) / 60.0, 2) as duration_min,
   slc.oracle_like,
+  slc.explore_assigned,
+  slc.explore_started,
   slc.explore_completed,
   slc.verify_count,
   slc.time_to_final_answer_sec,
@@ -106,15 +119,27 @@ join lateral (
 join lateral (
   select
     bool_or(ev.event_type = 'escape_used') as escape_used,
-    count(*) filter (where ev.event_type = 'child_utterance') as child_turns,
+    count(*) filter (where ev.event_type = 'explore_assigned') as explore_assigned,
+    count(*) filter (where ev.event_type = 'explore_started') as explore_started,
     count(*) filter (where ev.event_type = 'explore_completed') as explore_completed,
     count(*) filter (where ev.event_type = 'verify_submitted') as verify_count,
+    -- Oracle-like session: at most 1 child turn and no explore completed
     count(*) filter (where ev.event_type = 'child_utterance') <= 1
       and count(*) filter (where ev.event_type = 'explore_completed') = 0 as oracle_like,
-    (select extract(epoch from (max(seq.ts) - min(seq.ts)))
-       from study_events seq
-      where seq.session_id = s.session_id
-        and seq.event_type = 'child_utterance'
+    -- B4: first child question -> first full answer unlock (ANSWER_FULL policy decision)
+    (select case when a.ts is not null then extract(epoch from (a.ts - q.ts)) end
+       from (
+         select min(seq.ts) as ts
+         from study_events seq
+         where seq.session_id = s.session_id and seq.event_type = 'child_utterance'
+       ) q
+       cross join lateral (
+select min(seq2.ts) as ts
+          from study_events seq2
+          where seq2.session_id = s.session_id
+            and seq2.event_type = 'policy_decision'
+            and seq2.policy_action = 'ANSWER_FULL'
+       ) a
     ) as time_to_final_answer_sec
   from study_events ev
   where ev.session_id = s.session_id
