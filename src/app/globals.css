@@ -99,6 +99,37 @@ body {
   --console-accent: #eab308;
 }
 
+/* Game-specific accent colors */
+:root {
+  --game-hunt: #22c55e;
+  --game-hunt-bg: rgba(34, 197, 94, 0.08);
+  --game-hunt-border: rgba(34, 197, 94, 0.25);
+  --game-cards: #8b5cf6;
+  --game-cards-bg: rgba(139, 92, 246, 0.08);
+  --game-cards-border: rgba(139, 92, 246, 0.25);
+  --game-quiz: #f97316;
+  --game-quiz-bg: rgba(249, 115, 22, 0.08);
+  --game-quiz-border: rgba(249, 115, 22, 0.25);
+  --game-story: #ec4899;
+  --game-story-bg: rgba(236, 72, 153, 0.08);
+  --game-story-border: rgba(236, 72, 153, 0.25);
+}
+
+:root.dark {
+  --game-hunt: #4ade80;
+  --game-hunt-bg: rgba(74, 222, 128, 0.1);
+  --game-hunt-border: rgba(74, 222, 128, 0.25);
+  --game-cards: #a78bfa;
+  --game-cards-bg: rgba(167, 139, 250, 0.1);
+  --game-cards-border: rgba(167, 139, 250, 0.25);
+  --game-quiz: #fb923c;
+  --game-quiz-bg: rgba(251, 146, 60, 0.1);
+  --game-quiz-border: rgba(251, 146, 60, 0.25);
+  --game-story: #f472b6;
+  --game-story-bg: rgba(244, 114, 182, 0.1);
+  --game-story-border: rgba(244, 114, 182, 0.25);
+}
+
 .bg-grid-pattern {
   background-image:
     linear-gradient(to right, var(--grid-color) 1px, transparent 1px),

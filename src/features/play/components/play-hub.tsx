@@ -13,11 +13,61 @@ import { usePlayStore } from "@/features/play/play.store";
 import { DEFAULT_TEAMS, type PlayPack } from "@/features/play/play.types";
 import { useI18n } from "@/lib/i18n/provider";
 
-const KINDS: { id: PlayKind; labelVi: string; labelEn: string; descVi: string; descEn: string }[] = [
-  { id: "hunt", labelVi: "Săn đồ", labelEn: "Hunt", descVi: "Tìm đồ trong lớp", descEn: "Find classroom objects" },
-  { id: "cards", labelVi: "Thẻ", labelEn: "Cards", descVi: "Nghe rồi tìm thẻ", descEn: "Listen and find cards" },
-  { id: "quiz", labelVi: "Đố ảnh", labelEn: "Quiz", descVi: "Ảnh / emoji trên màn", descEn: "Emoji quiz on screen" },
-  { id: "story", labelVi: "Chuyện", labelEn: "Story", descVi: "Chọn nhánh câu chuyện", descEn: "Branching story" },
+const KINDS: {
+  id: PlayKind;
+  labelVi: string;
+  labelEn: string;
+  descVi: string;
+  descEn: string;
+  emoji: string;
+  colorVar: string;
+  bgVar: string;
+  borderVar: string;
+}[] = [
+  {
+    id: "hunt",
+    labelVi: "Săn đồ",
+    labelEn: "Hunt",
+    descVi: "Tìm đồ trong lớp",
+    descEn: "Find classroom objects",
+    emoji: "🔍",
+    colorVar: "var(--game-hunt)",
+    bgVar: "var(--game-hunt-bg)",
+    borderVar: "var(--game-hunt-border)",
+  },
+  {
+    id: "cards",
+    labelVi: "Thẻ",
+    labelEn: "Cards",
+    descVi: "Nghe rồi tìm thẻ",
+    descEn: "Listen and find cards",
+    emoji: "🃏",
+    colorVar: "var(--game-cards)",
+    bgVar: "var(--game-cards-bg)",
+    borderVar: "var(--game-cards-border)",
+  },
+  {
+    id: "quiz",
+    labelVi: "Đố ảnh",
+    labelEn: "Quiz",
+    descVi: "Ảnh / emoji trên màn",
+    descEn: "Emoji quiz on screen",
+    emoji: "❓",
+    colorVar: "var(--game-quiz)",
+    bgVar: "var(--game-quiz-bg)",
+    borderVar: "var(--game-quiz-border)",
+  },
+  {
+    id: "story",
+    labelVi: "Chuyện",
+    labelEn: "Story",
+    descVi: "Chọn nhánh câu chuyện",
+    descEn: "Branching story",
+    emoji: "📖",
+    colorVar: "var(--game-story)",
+    bgVar: "var(--game-story-bg)",
+    borderVar: "var(--game-story-border)",
+  },
 ];
 
 export function PlayHub() {
@@ -125,16 +175,40 @@ export function PlayHub() {
               key={k.id}
               type="button"
               onClick={() => selectKind(k.id)}
-              className={`rounded-2xl border p-4 text-left transition ${
-                active
-                  ? "border-[var(--console-inverse)] bg-[var(--console-inverse)] text-[var(--console-inverse-fg)]"
-                  : "border-[var(--console-border)] bg-[var(--console-card)] hover:opacity-95"
-              }`}
+              className="group relative overflow-hidden rounded-2xl border-2 p-4 text-left transition-all"
+              style={{
+                borderColor: active ? k.colorVar : "var(--console-border)",
+                background: active ? k.bgVar : "var(--console-card)",
+              }}
             >
-              <p className="text-lg font-semibold">{en ? k.labelEn : k.labelVi}</p>
-              <p className={`mt-1 text-sm ${active ? "text-white/70" : "text-[var(--console-muted)]"}`}>
-                {en ? k.descEn : k.descVi}
-              </p>
+              <div className="flex items-start gap-3">
+                <span
+                  className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl text-2xl transition-transform group-hover:scale-110"
+                  style={{
+                    background: active ? k.colorVar : "var(--console-chip)",
+                    boxShadow: active ? `0 4px 16px ${k.bgVar}` : undefined,
+                  }}
+                >
+                  {k.emoji}
+                </span>
+                <div className="min-w-0 flex-1">
+                  <p
+                    className="text-lg font-bold"
+                    style={{ color: active ? k.colorVar : "var(--console-fg)" }}
+                  >
+                    {en ? k.labelEn : k.labelVi}
+                  </p>
+                  <p className="mt-0.5 text-sm text-[var(--console-muted)]">
+                    {en ? k.descEn : k.descVi}
+                  </p>
+                </div>
+              </div>
+              {active && (
+                <div
+                  className="absolute -right-4 -top-4 h-16 w-16 rounded-full opacity-20"
+                  style={{ background: k.colorVar }}
+                />
+              )}
             </button>
           );
         })}

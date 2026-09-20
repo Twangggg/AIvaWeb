@@ -8,13 +8,14 @@ import { ThemeLanguageControls } from "@/components/common/theme-language-contro
 import { useAuthStore } from "@/features/auth/auth.store";
 import { resolveConsoleRole, roleHomePath } from "@/features/console/role-access";
 import { useI18n } from "@/lib/i18n/provider";
+import { markIntroSeen } from "@/components/home/site-intro";
 
 interface NavProps {
   onPreorder: () => void;
 }
 
 export function Nav({ onPreorder }: NavProps) {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -47,11 +48,21 @@ export function Nav({ onPreorder }: NavProps) {
 
   const navLinks = [
     { href: "/product", label: t.navExperience },
+    { href: "/play", label: locale === "en" ? "Play" : "Chơi cùng AIva" },
     { href: "/news", label: t.navKids },
     { href: "/about", label: t.navAbout },
   ];
 
   const closeMenu = () => setMenuOpen(false);
+
+  const returnHome = () => {
+    // Navigating back from an interactive page must not leave a modal or the
+    // first-visit overlay holding the document scroll lock.
+    markIntroSeen();
+    closeMenu();
+    document.body.style.overflow = "";
+    document.documentElement.style.overflow = "";
+  };
 
   const accountHref = loggedIn ? consoleHref : "/console/login";
   const accountLabel = loggedIn ? consoleLabel : t.navLogin;
@@ -63,7 +74,7 @@ export function Nav({ onPreorder }: NavProps) {
         className="fixed top-0 left-1/2 z-50 hidden items-center transition-all duration-500 ease-[cubic-bezier(.22,1,.36,1)] md:flex"
         style={{
           transform: "translateX(-50%)",
-          width: scrolled ? "100%" : "min(960px, calc(100% - 3rem))",
+          width: scrolled ? "100%" : "min(1120px, calc(100% - 3rem))",
           top: scrolled ? 0 : "1rem",
           borderRadius: scrolled ? 0 : "9999px",
           padding: scrolled ? "0" : "0 0.375rem",
@@ -87,7 +98,7 @@ export function Nav({ onPreorder }: NavProps) {
           className="flex w-full items-center justify-between transition-all duration-500 ease-[cubic-bezier(.22,1,.36,1)]"
           style={{ padding: scrolled ? "0.625rem 2rem" : "0.5rem 1.25rem" }}
         >
-          <Link href="/" className="relative z-10 flex shrink-0 items-center">
+          <Link href="/" onClick={returnHome} className="relative z-10 flex shrink-0 items-center">
             <Image
               src="/AIVALogo.png"
               alt="AIVA Logo"
@@ -193,7 +204,7 @@ export function Nav({ onPreorder }: NavProps) {
               : "0 8px 32px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.1)",
           }}
         >
-          <Link href="/" className="flex items-center">
+          <Link href="/" onClick={returnHome} className="flex items-center">
             <Image src="/AIVALogo.png" alt="AIVA Logo" width={120} height={24} className="object-contain" priority />
           </Link>
 

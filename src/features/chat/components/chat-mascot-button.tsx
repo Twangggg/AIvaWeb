@@ -1,9 +1,6 @@
 "use client";
 
-import dynamic from "next/dynamic";
-import { useCallback, useEffect, useState } from "react";
-
-const ChatMascotCanvas = dynamic(() => import("./chat-mascot-canvas"), { ssr: false });
+import { Mascot } from "page-mascot";
 
 interface ChatMascotButtonProps {
   open: boolean;
@@ -18,71 +15,32 @@ export function ChatMascotButton({
   onClick,
   ariaLabel
 }: ChatMascotButtonProps) {
-  const [hovering, setHovering] = useState(false);
-  const [mounted, setMounted] = useState(false);
-  const [modelReady, setModelReady] = useState(false);
-
-  useEffect(() => {
-    const timer = window.setTimeout(() => setMounted(true), 300);
-    return () => window.clearTimeout(timer);
-  }, []);
-
-  const handleReady = useCallback(() => {
-    setModelReady(true);
-  }, []);
-
   return (
-    <button
-      type="button"
+    <div
+      aria-live="polite"
       onClick={onClick}
-      onMouseEnter={() => setHovering(true)}
-      onMouseLeave={() => setHovering(false)}
-      onFocus={() => setHovering(true)}
-      onBlur={() => setHovering(false)}
-      className="fixed z-[60] flex items-center justify-center transition-transform hover:scale-[1.03] active:scale-[0.97]"
+      className="fixed z-[60]"
       style={{
         bottom: "0.75rem",
         right: "0.5rem",
-        width: "6.25rem",
-        height: "7rem",
-        background: "transparent",
-        opacity: open ? 0.9 : 1,
-        overflow: "visible"
+        opacity: open ? 0.88 : 1
       }}
-      aria-label={ariaLabel}
-      aria-expanded={open}
     >
       <div
-        className="absolute left-1/2 -translate-x-1/2 bottom-1.5 w-12 h-4 rounded-full blur-xl pointer-events-none transition-opacity"
+        aria-hidden="true"
+        className="absolute left-1/2 -translate-x-1/2 bottom-2 w-14 h-4 rounded-full blur-xl pointer-events-none transition-opacity"
         style={{
           background: "radial-gradient(ellipse, rgba(234,179,8,0.4) 0%, transparent 70%)",
-          opacity: hovering ? 1 : 0.55
+          opacity: talking ? 1 : 0.55
         }}
       />
-
-      <div className="relative w-full h-full" style={{ overflow: "visible" }}>
-        {!modelReady && (
-          <div className="absolute inset-0 z-0 flex items-center justify-center">
-            <div className="w-7 h-7 rounded-full border-2 border-[var(--accent)] border-t-transparent animate-spin" />
-          </div>
-        )}
-        {mounted && (
-          <div
-            className="relative z-10 h-full w-full"
-            style={{
-              opacity: modelReady ? 1 : 0,
-              transition: "opacity 180ms ease-out"
-            }}
-          >
-            <ChatMascotCanvas
-              hovering={hovering}
-              talking={talking}
-              active
-              onReady={handleReady}
-            />
-          </div>
-        )}
-      </div>
-    </button>
+      <Mascot
+        directions="/mascots/frog-cute-directions.webp"
+        reactions="/mascots/frog-cute-reactions.webp"
+        size={112}
+        label={`AIva chatbot — ${ariaLabel}`}
+        className="relative block rounded-full outline-none transition-transform focus-visible:ring-2 focus-visible:ring-[var(--accent)] focus-visible:ring-offset-2 active:scale-95"
+      />
+    </div>
   );
 }
