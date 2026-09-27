@@ -54,7 +54,7 @@ export async function POST(request: Request) {
     const { error } = await resend.emails.send({
       from,
       to: email,
-      subject: "Xác nhận email AIva Console",
+      subject: "Xác nhận email AIVA Console",
       html: `
         <div style="font-family: 'Be Vietnam Pro', Arial, sans-serif; max-width: 560px; margin: 0 auto; padding: 32px; background: #0c0f10; color: #e1e3e4;">
           <div style="text-align: center; margin-bottom: 28px;">
@@ -62,7 +62,7 @@ export async function POST(request: Request) {
           </div>
           <h1 style="font-size: 22px; font-weight: 700; color: #fff; margin: 0 0 12px;">Xin chào ${escapeHtml(displayName)},</h1>
           <p style="font-size: 15px; line-height: 1.6; color: #c6c6cb; margin: 0 0 24px;">
-            Cảm ơn bạn đã đăng ký AIva Console. Nhấn nút bên dưới để xác nhận email — liên kết có hiệu lực trong 24 giờ.
+            Cảm ơn bạn đã đăng ký AIVA Console. Nhấn nút bên dưới để xác nhận email — liên kết có hiệu lực trong 24 giờ.
           </p>
           <p style="text-align: center; margin: 0 0 28px;">
             <a href="${verifyUrl}"

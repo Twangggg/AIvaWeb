@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | AIva",
+  title: "Privacy Policy | AIVA",
   description:
-    "AIva Privacy Policy by OPTIC ELITE — how we collect, use, store, and protect your data for the AIva app and website aiva.id.vn.",
+    "AIVA Privacy Policy by OPTIC ELITE — how we collect, use, store, and protect your data for the AIVA app and website aiva.id.vn.",
 };
 
 export default function PrivacyLayout({

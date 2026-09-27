@@ -6,7 +6,7 @@ export default function ConsoleDevicePage() {
       <div>
         <h1 className="text-2xl font-bold tracking-tight">Thiết bị</h1>
         <p className="mt-2 text-[var(--console-muted)]">
-          Dùng app AIva để gắn Wi‑Fi lần đầu. Trên web chỉ cần đợi Online rồi bấm Kết nối.
+          Dùng app AIVA để gắn Wi‑Fi lần đầu. Trên web chỉ cần đợi Online rồi bấm Kết nối.
         </p>
       </div>
       <DevicePanel />

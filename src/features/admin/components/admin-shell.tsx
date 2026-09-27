@@ -219,8 +219,8 @@ function SidebarBody({
           title={
             collapsed
               ? en
-                ? "AIva — website"
-                : "AIva — trang chủ"
+                ? "AIVA — website"
+                : "AIVA — trang chủ"
               : en
                 ? "Back to website"
                 : "Về trang chủ"
@@ -231,7 +231,7 @@ function SidebarBody({
           </span>
           {!collapsed && (
             <span className="truncate text-sm font-semibold tracking-tight">
-              AIva{" "}
+              AIVA{" "}
               <span className="font-medium text-[var(--console-muted)]">
                 Admin
               </span>

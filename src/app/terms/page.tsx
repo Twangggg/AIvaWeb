@@ -24,7 +24,7 @@ function TermsContent() {
 
       <LegalSection title="1. Chấp nhận điều khoản">
         <p>
-          Bằng việc truy cập hoặc sử dụng sản phẩm, dịch vụ của AIva (sau đây gọi là &quot;Dịch vụ&quot;),
+          Bằng việc truy cập hoặc sử dụng sản phẩm, dịch vụ của AIVA (sau đây gọi là &quot;Dịch vụ&quot;),
           bạn đồng ý tuân thủ các điều khoản này. Nếu không đồng ý, vui lòng ngừng sử dụng Dịch vụ.
         </p>
       </LegalSection>
@@ -45,14 +45,14 @@ function TermsContent() {
 
       <LegalSection title="4. Sở hữu trí tuệ">
         <p>
-          Nội dung, logo, giao diện và các tài sản trí tuệ thuộc về AIva đều được bảo hộ và không được
+          Nội dung, logo, giao diện và các tài sản trí tuệ thuộc về AIVA đều được bảo hộ và không được
           sao chép, sửa đổi hay phân phối khi chưa có sự đồng ý bằng văn bản.
         </p>
       </LegalSection>
 
       <LegalSection title="5. Giới hạn trách nhiệm">
         <p>
-          Dịch vụ được cung cấp ở trạng thái &quot;nguyên trạng&quot;. AIva không chịu trách nhiệm cho mọi
+          Dịch vụ được cung cấp ở trạng thái &quot;nguyên trạng&quot;. AIVA không chịu trách nhiệm cho mọi
           thiệt hại gián tiếp phát sinh từ việc sử dụng hoặc không thể sử dụng Dịch vụ, trong phạm vi
           pháp luật cho phép.
         </p>
@@ -89,7 +89,7 @@ export default function TermsPage() {
         <div className="mx-auto max-w-3xl relative z-10 mb-12">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Điều Khoản Sử Dụng</h1>
           <p className="text-lg" style={{ color: "var(--text-dim)" }}>
-            Các quy định khi bạn sử dụng sản phẩm và dịch vụ của AIva.
+            Các quy định khi bạn sử dụng sản phẩm và dịch vụ của AIVA.
           </p>
         </div>
         <TermsContent />

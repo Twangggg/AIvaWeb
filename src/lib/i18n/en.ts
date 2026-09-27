@@ -1,5 +1,5 @@
 export const en = {
-  brand: "AIva",
+  brand: "AIVA",
   tagline: "OPTIC ELITE",
 
   /* Nav */
@@ -16,7 +16,7 @@ export const en = {
 
   /* Hero */
   ctaBuy: "Buy Now",
-  heroTitle: "AIva",
+  heroTitle: "AIVA",
   heroSubtitle: "Experience the seamless integration of hardware and reality. The next evolution of spatial computing has arrived.",
   heroTagline: "Next-gen visual assistant",
   heroSuffix: "sees with you.",
@@ -42,14 +42,14 @@ export const en = {
 
   /* 3D Scroll Features */
   feature1Tag: "Introduction",
-  feature1Title: "Meet AIva — your AI eyes",
-  feature1Desc: "AIva is a smart glasses that looks at your screen, understands where you are in the app, and tells you the next step.",
+  feature1Title: "Meet AIVA — your AI eyes",
+  feature1Desc: "AIVA is a smart glasses that looks at your screen, understands where you are in the app, and tells you the next step.",
   feature2Tag: "Camera",
   feature2Title: "Real-time screen reading camera",
   feature2Desc: "12MP anti-glare sensor pointing down at your phone or laptop screen.",
   feature3Tag: "AI Processing",
   feature3Title: "Neural Engine analysis",
-  feature3Desc: "AIva NPU chip analyzes layout, multilingual OCR, and matches app context.",
+  feature3Desc: "AIVA NPU chip analyzes layout, multilingual OCR, and matches app context.",
   feature4Tag: "Directional Speaker",
   feature4Title: "Step-by-step audio guidance",
   feature4Desc: "Two MEMS directional speakers whisper instructions when you make a mistake or get stuck.",
@@ -90,7 +90,7 @@ export const en = {
   howHeading: "Three steps.",
   howHeadingAccent: "Instant.",
   step1Title: "Point camera at screen",
-  step1Desc: "AIva automatically detects whether you're looking at a phone, laptop, or TV.",
+  step1Desc: "AIVA automatically detects whether you're looking at a phone, laptop, or TV.",
   step2Title: "AI reads & understands UI",
   step2Desc: "Neural Engine analyzes content, buttons, and app state in under 100ms.",
   step3Title: "Audio guidance through speakers",
@@ -114,7 +114,7 @@ export const en = {
 
   /* Preorder */
   preorderHeading: "Ready to",
-  preorderHeadingAccent: "experience AIva?",
+  preorderHeadingAccent: "experience AIVA?",
   preorderDesc: "Leave your info to get early-bird offers.",
   preorderCta: "Pre-order Now",
 
@@ -142,7 +142,7 @@ export const en = {
   close: "Close",
 
   /* Preorder Form */
-  preorderTitle: "Pre-order AIva Smart Glasses",
+  preorderTitle: "Pre-order AIVA Smart Glasses",
   fullName: "Full name",
   email: "Email",
   phone: "Phone number",
@@ -169,11 +169,11 @@ export const en = {
   /* Not Found */
   notFoundCode: "404",
   notFoundTitle: "Not Found",
-  notFoundDesc: "The page you're looking for doesn't exist or has been moved. Maybe AIva hasn't seen it yet.",
+  notFoundDesc: "The page you're looking for doesn't exist or has been moved. Maybe AIVA hasn't seen it yet.",
   notFoundBack: "← Back to home",
 
   /* Meta */
-  metaTitle: "AIva | A New Era",
+  metaTitle: "AIVA | A New Era",
   metaDesc: "Experience the seamless integration of hardware and reality. The next evolution of spatial computing has arrived.",
 
   /* About Us */
@@ -267,13 +267,13 @@ export const en = {
   navMenuClose: "Close menu",
 
   /* Sticky CTA */
-  stickyCtaText: "Pre-order AIva today",
+  stickyCtaText: "Pre-order AIVA today",
   stickyCtaButton: "Pre-order",
 
   /* Home explore */
   homeExploreTitle: "Explore",
   homeExploreDesc: "Learn more about our product, mission, and team",
-  homeExploreExperienceDesc: "Discover the technology behind AIva with an interactive 3D experience.",
+  homeExploreExperienceDesc: "Discover the technology behind AIVA with an interactive 3D experience.",
   homeExploreKidsDesc: "See how AIVA helps children learn from the real world.",
   homeExploreAboutDesc: "Meet the team behind the mission to bring technology to children.",
 
@@ -292,10 +292,10 @@ export const en = {
   homeFeature4Desc: "8mm LiPo 800 mAh battery, weighing approximately 100g — lightweight enough for children to wear all day.",
 
   /* Vision demo */
-  homeVisionTag: "AIva's View",
+  homeVisionTag: "AIVA's View",
   homeVisionTitle: "The world through",
   homeVisionTitleAccent: "AI eyes",
-  homeVisionDesc: "No screen — AIva sees the real world, then tells children about it through voice.",
+  homeVisionDesc: "No screen — AIVA sees the real world, then tells children about it through voice.",
   homeVisionRec: "LIVE",
   homeVisionScanning: "Recognizing...",
   homeVisionScenario: "Scenario",
@@ -311,16 +311,16 @@ export const en = {
 
   /* Video demo */
   homeVideoTag: "Video demo",
-  homeVideoTitle: "See AIva",
+  homeVideoTitle: "See AIVA",
   homeVideoTitleAccent: "in real life",
-  homeVideoDesc: "A quick look at how children explore the world with AIva — no screen, just voice.",
+  homeVideoDesc: "A quick look at how children explore the world with AIVA — no screen, just voice.",
   homeVideoComingSoon: "Coming soon",
   scrollCue: "Scroll down",
 
   /* Cinematic experience */
   cxStatementTag: "Manifesto",
   cxStatement1: "Children are bowed into screens.",
-  cxStatement2: "AIva turns their gaze back to the real world.",
+  cxStatement2: "AIVA turns their gaze back to the real world.",
   cxStatement3: "No screens – only voice and discovery.",
   cxCtaTag: "Begin the journey",
   cxNavLabel: "Chapter navigation",
@@ -337,7 +337,7 @@ export const en = {
   homeAppTag: "Parent companion app",
   homeAppTitle: "Stay close to",
   homeAppTitleAccent: "every discovery",
-  homeAppDesc: "The companion app lets parents track learning, set limits, and keep content safe — based on the AIva Mobile app.",
+  homeAppDesc: "The companion app lets parents track learning, set limits, and keep content safe — based on the AIVA Mobile app.",
   homeAppScreensLabel: "App screens",
   homeAppScreenDashboard: "Dashboard",
   homeAppScreenSafety: "Safety",
@@ -353,12 +353,12 @@ export const en = {
 
   /* Compare */
   homeCompareTag: "Quick compare",
-  homeCompareTitle: "How AIva differs from",
+  homeCompareTitle: "How AIVA differs from",
   homeCompareTitleAccent: "screens",
-  homeCompareDesc: "Same era of tech — but AIva sends kids into the real world instead of locking their eyes on a tablet or phone.",
+  homeCompareDesc: "Same era of tech — but AIVA sends kids into the real world instead of locking their eyes on a tablet or phone.",
   homeCompareColCriteria: "Criteria",
   homeCompareColScreen: "Tablet / Phone",
-  homeCompareColAiva: "AIva",
+  homeCompareColAiva: "AIVA",
   homeCompareRow1Label: "Eyesight",
   homeCompareRow1Screen: "Long near-screen focus",
   homeCompareRow1Aiva: "No electronic display",
@@ -404,33 +404,33 @@ export const en = {
   homeFaqTag: "FAQ",
   homeFaqTitle: "Frequently",
   homeFaqTitleAccent: "asked questions",
-  faq1Q: "What age is AIva suitable for?",
-  faq1A: "AIva is designed for children aged 4–12, with voice content and interaction levels tailored to each age group.",
-  faq2Q: "Does AIva have a screen?",
-  faq2A: "No. AIva has no electronic display. Information is delivered through safe bone-conduction speakers, protecting children's eyesight.",
+  faq1Q: "What age is AIVA suitable for?",
+  faq1A: "AIVA is designed for children aged 4–12, with voice content and interaction levels tailored to each age group.",
+  faq2Q: "Does AIVA have a screen?",
+  faq2A: "No. AIVA has no electronic display. Information is delivered through safe bone-conduction speakers, protecting children's eyesight.",
   faq3Q: "Can parents control usage?",
   faq3A: "Yes. The companion app lets parents track activity, view learned vocabulary, and set daily usage time limits.",
   faq4Q: "How long does the battery last?",
   faq4A: "The 800 mAh LiPo battery provides all-day continuous use. A full charge takes about 1 hour.",
-  faq5Q: "How do I pre-order AIva?",
+  faq5Q: "How do I pre-order AIVA?",
   faq5A: "Click \"Pre-order Now\" on the website and fill in your contact details. We'll email you when official sales open.",
 
   /* Chatbot */
-  chatTitle: "AIva Assistant",
+  chatTitle: "AIVA Assistant",
   chatSubtitle: "Ask about product & pre-order",
   chatWelcome:
-    "Hello! I'm the AIva assistant. I can help you learn about AIva smart glasses, pre-order, features, and support.",
-  chatPlaceholder: "Ask about AIva...",
+    "Hello! I'm the AIVA assistant. I can help you learn about AIVA smart glasses, pre-order, features, and support.",
+  chatPlaceholder: "Ask about AIVA...",
   chatSend: "Send",
   chatOpen: "Open chat assistant",
   chatClose: "Close chat assistant",
-  chatDisclaimer: "Answers AIva questions only. Do not share personal information.",
+  chatDisclaimer: "Answers AIVA questions only. Do not share personal information.",
   chatError: "Unable to connect. Please try again later.",
 
   /* Site intro */
-  introAriaLabel: "AIva introduction",
-  introDiscover: "AIva, what is this?",
-  introBrand: "AIva",
+  introAriaLabel: "AIVA introduction",
+  introDiscover: "AIVA, what is this?",
+  introBrand: "AIVA",
   introSkip: "Don't show again",
 
   /* Console auth */
@@ -446,7 +446,7 @@ export const en = {
   consoleRoleTeacherDesc: "Manage a class / many children",
   consoleRoleParent: "Parent",
   consoleRoleParentDesc: "Personalized per child",
-  consoleRoleOnboardTitle: "How do you use AIva?",
+  consoleRoleOnboardTitle: "How do you use AIVA?",
   consoleRoleOnboardSubtitle: "Tell us who you are so we set up the right space for you.",
   consoleRoleSelectFirst: "Please choose an option.",
   consoleRoleConfirm: "Continue",

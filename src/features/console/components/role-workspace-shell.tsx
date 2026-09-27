@@ -109,7 +109,7 @@ export function RoleWorkspaceShell({
 
             <Link href="/" className="min-w-0" title={en ? "Back to website" : "Về trang chủ"}>
               <p className="truncate text-sm font-bold tracking-tight">
-                AIva{" "}
+                AIVA{" "}
                 <span
                   className={
                     isTeacher
@@ -245,7 +245,7 @@ export function RoleWorkspaceShell({
           <aside className="absolute inset-y-0 left-0 flex w-[min(18rem,88vw)] flex-col bg-[var(--console-rail)] shadow-xl">
             <div className="flex h-14 items-center justify-between border-b border-[var(--console-border)] px-4">
               <Link href="/" onClick={close} className="text-sm font-bold" title={en ? "Back to website" : "Về trang chủ"}>
-                AIva <span className="text-[var(--console-muted)]">{brandAccent}</span>
+                AIVA <span className="text-[var(--console-muted)]">{brandAccent}</span>
               </Link>
               <button
                 type="button"

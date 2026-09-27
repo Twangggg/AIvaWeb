@@ -23,7 +23,7 @@ export function FaqSection() {
       className="faq-section h-full w-full py-12 md:py-16 px-6 flex flex-col justify-center overflow-y-auto"
     >
       <div className="max-w-2xl mx-auto w-full">
-        <Reveal>
+        <Reveal direction="up" delay={0}>
           <SectionHeader
             title={
               <>
@@ -38,7 +38,7 @@ export function FaqSection() {
           {faqs.map((faq, i) => {
             const isOpen = openIndex === i;
             return (
-              <Reveal key={faq.q} delay={i * 40}>
+              <Reveal key={faq.q} delay={60 + i * 50} direction="up">
                 <div
                   className="rounded-xl overflow-hidden transition-colors"
                   style={{

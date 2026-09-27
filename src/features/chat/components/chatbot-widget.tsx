@@ -12,8 +12,8 @@ interface ChatMessage {
 }
 
 const SUGGESTIONS = {
-  vi: ["AIva phù hợp trẻ mấy tuổi?", "Làm sao đặt trước?", "Pin dùng được bao lâu?"],
-  en: ["What age is AIva for?", "How to pre-order?", "How long does the battery last?"]
+  vi: ["AIVA phù hợp trẻ mấy tuổi?", "Làm sao đặt trước?", "Pin dùng được bao lâu?"],
+  en: ["What age is AIVA for?", "How to pre-order?", "How long does the battery last?"]
 } as const;
 
 function uid() {

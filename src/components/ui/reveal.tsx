@@ -1,21 +1,20 @@
 "use client";
 
-import { useEffect, useRef, useState, type CSSProperties, type ReactNode } from "react";
+import { motion, type HTMLMotionProps } from "motion/react";
+import React, { type ReactNode } from "react";
 
-interface RevealProps {
+interface RevealProps extends Omit<HTMLMotionProps<"div">, "children"> {
   children: ReactNode;
   className?: string;
   delay?: number;
-  direction?: "up" | "down" | "left" | "right" | "none";
+  direction?: "up" | "down" | "left" | "right" | "scale" | "none";
   /** Soft blur while hidden — premium entrance feel */
   blur?: boolean;
   once?: boolean;
+  distance?: number;
 }
 
-function sectionIsIn(section: HTMLElement) {
-  const transit = section.dataset.fpTransit ?? "";
-  return section.dataset.fpActive === "true" || transit.startsWith("enter");
-}
+const EASE_APPLE = [0.16, 1, 0.3, 1] as const;
 
 export function Reveal({
   children,
@@ -23,79 +22,59 @@ export function Reveal({
   delay = 0,
   direction = "up",
   blur = true,
-  once = true
+  once = false,
+  distance = 36,
+  ...props
 }: RevealProps) {
-  const ref = useRef<HTMLDivElement>(null);
-  const [visible, setVisible] = useState(() => {
-    if (typeof window === "undefined") return false;
-    return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  });
-
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      return;
+  const getInitialTransform = () => {
+    switch (direction) {
+      case "up":
+        return { y: distance, x: 0, scale: 1 };
+      case "down":
+        return { y: -distance, x: 0, scale: 1 };
+      case "left":
+        return { x: distance, y: 0, scale: 1 };
+      case "right":
+        return { x: -distance, y: 0, scale: 1 };
+      case "scale":
+        return { y: distance * 0.3, scale: 0.94, x: 0 };
+      case "none":
+        return { y: 0, x: 0, scale: 1 };
+      default:
+        return { y: distance, x: 0, scale: 1 };
     }
-
-    const section = el.closest<HTMLElement>("[data-fp-section]");
-
-    // Fullpage chapters: replay every time the section is entered.
-    if (section) {
-      const sync = () => setVisible(sectionIsIn(section));
-      const mo = new MutationObserver(sync);
-      mo.observe(section, {
-        attributes: true,
-        attributeFilter: ["data-fp-active", "data-fp-transit"]
-      });
-      // Defer initial sync so we don't setState synchronously in the effect body.
-      const boot = window.setTimeout(sync, 0);
-      return () => {
-        window.clearTimeout(boot);
-        mo.disconnect();
-      };
-    }
-
-    if (visible && once) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setVisible(true);
-          if (once) observer.disconnect();
-        } else if (!once) {
-          setVisible(false);
-        }
-      },
-      { threshold: 0.12, rootMargin: "0px 0px -48px 0px" }
-    );
-
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, [visible, once]);
-
-  const transforms: Record<string, string> = {
-    up: "translate3d(0, 40px, 0)",
-    down: "translate3d(0, -40px, 0)",
-    left: "translate3d(36px, 0, 0)",
-    right: "translate3d(-36px, 0, 0)",
-    none: "none"
   };
 
+  const initialTransform = getInitialTransform();
+
   return (
-    <div
-      ref={ref}
-      className={`reveal-motion ${visible ? "is-visible" : ""} ${className}`}
-      style={
-        {
-          "--reveal-delay": `${delay}ms`,
-          "--reveal-hidden": transforms[direction],
-          "--reveal-blur": blur ? "8px" : "0px"
-        } as CSSProperties
-      }
+    <motion.div
+      initial={{
+        opacity: 0,
+        ...initialTransform,
+        filter: blur ? "blur(6px)" : "blur(0px)",
+      }}
+      whileInView={{
+        opacity: 1,
+        x: 0,
+        y: 0,
+        scale: 1,
+        filter: "blur(0px)",
+      }}
+      viewport={{
+        once,
+        amount: 0.12,
+        margin: "-30px 0px -30px 0px",
+      }}
+      transition={{
+        duration: 0.55,
+        delay: delay / 1000,
+        ease: EASE_APPLE,
+      }}
+      className={className}
+      {...props}
     >
       {children}
-    </div>
+    </motion.div>
   );
 }

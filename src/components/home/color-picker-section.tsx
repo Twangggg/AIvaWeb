@@ -74,8 +74,8 @@ export function ColorPickerSection() {
         />
       </div>
 
-      <div className="max-w-4xl mx-auto relative z-10">
-        <Reveal>
+      <div className="max-w-4xl mx-auto relative z-10 w-full">
+        <Reveal direction="up" delay={0}>
           <SectionHeader
             title={
               <>
@@ -87,7 +87,7 @@ export function ColorPickerSection() {
           />
         </Reveal>
 
-        <Reveal delay={100}>
+        <Reveal direction="scale" delay={120}>
           <div
             className="mt-12 rounded-3xl px-6 py-10 md:px-10 md:py-12 text-center"
             style={{

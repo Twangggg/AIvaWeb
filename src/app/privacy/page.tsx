@@ -24,7 +24,7 @@ function PrivacyContent() {
 
       <LegalSection title="1. Giới thiệu">
         <p>
-          Chào mừng bạn đến với AIva, sản phẩm kính thông minh dành cho trẻ em do OPTIC ELITE phát triển.
+          Chào mừng bạn đến với AIVA, sản phẩm kính thông minh dành cho trẻ em do OPTIC ELITE phát triển.
           Chính sách bảo mật này mô tả chi tiết cách chúng tôi thu thập, sử dụng, lưu trữ và bảo vệ thông
           tin cá nhân của bạn khi bạn truy cập trang web <b>aiva.id.vn</b>, đăng ký tài khoản, sử dụng
           ứng dụng đồng hành (companion app) hoặc tương tác với các dịch vụ của chúng tôi (gọi chung là
@@ -39,7 +39,7 @@ function PrivacyContent() {
 
       <LegalSection title="2. Chúng tôi là ai">
         <p>
-          Công ty phát triển và vận hành Dịch vụ là <b>OPTIC ELITE</b> — đơn vị tạo ra AIva, kính thông minh
+          Công ty phát triển và vận hành Dịch vụ là <b>OPTIC ELITE</b> — đơn vị tạo ra AIVA, kính thông minh
           không màn hình giúp trẻ khám phá thế giới thật bằng giọng nói và thị giác. Thông tin liên hệ của
           chúng tôi được nêu tại mục cuối của chính sách này.
         </p>
@@ -50,8 +50,8 @@ function PrivacyContent() {
         <ul className="list-disc pl-5 space-y-1.5">
           <li><b>Thông tin tài khoản:</b> tên hiển thị, địa chỉ email, mật khẩu (luôn được mã hóa), vai trò tài khoản (phụ huynh / giáo viên).</li>
           <li><b>Thông tin đăng nhập:</b> khi bạn đăng nhập bằng Google hoặc Facebook, chúng tôi nhận các thông tin bạn đã đồng ý chia sẻ (tên và email).</li>
-          <li><b>Thông tin sử dụng:</b> thời điểm đăng nhập, thao tác trong tài khoản, câu hỏi và tương tác của trẻ với thiết bị AIva, nhật ký khám phá.</li>
-          <li><b>Thông tin thiết bị:</b> loại thiết bị, trạng thái pin, phiên bản phần mềm khi thiết bị AIva đồng bộ với ứng dụng.</li>
+          <li><b>Thông tin sử dụng:</b> thời điểm đăng nhập, thao tác trong tài khoản, câu hỏi và tương tác của trẻ với thiết bị AIVA, nhật ký khám phá.</li>
+          <li><b>Thông tin thiết bị:</b> loại thiết bị, trạng thái pin, phiên bản phần mềm khi thiết bị AIVA đồng bộ với ứng dụng.</li>
           <li><b>Thông tin kỹ thuật:</b> địa chỉ IP, loại trình duyệt, trang tham chiếu, nhật ký lỗi khi bạn truy cập trang web.</li>
           <li><b>Thông tin bạn tự cung cấp:</b> nội dung gửi qua biểu mẫu đặt trước, khảo sát hoặc liên hệ hỗ trợ.</li>
         </ul>
@@ -132,7 +132,7 @@ function PrivacyContent() {
 
       <LegalSection title="11. Quyền riêng tư của trẻ em">
         <p>
-          Sản phẩm AIva được thiết kế cho trẻ em từ 4–12 tuổi và dữ liệu của trẻ luôn được xử lý theo nguyên
+          Sản phẩm AIVA được thiết kế cho trẻ em từ 4–12 tuổi và dữ liệu của trẻ luôn được xử lý theo nguyên
           tắc bảo vệ tốt nhất cho trẻ. Chúng tôi không thu thập thông tin nhận dạng trực tiếp của trẻ theo cách
           không cần thiết, không hiển thị quảng cáo hành vi cho trẻ và không chia sẻ dữ liệu của trẻ cho bên
           thứ ba vì mục đích quảng cáo. Tài khoản cho trẻ phải do phụ huynh hoặc người giám hộ hợp pháp tạo và
@@ -185,7 +185,7 @@ function PrivacyContent() {
             <span>@</span>
             <span>aiva.id.vn</span>
           </li>
-          <li>Đơn vị phát triển: OPTIC ELITE (AIva)</li>
+          <li>Đơn vị phát triển: OPTIC ELITE (AIVA)</li>
           <li>Trang web: https://aiva.id.vn</li>
         </ul>
         <p>
@@ -210,7 +210,7 @@ export default function PrivacyPage() {
         <div className="mx-auto max-w-3xl relative z-10 mb-12">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Chính Sách Bảo Mật</h1>
           <p className="text-lg" style={{ color: "var(--text-dim)" }}>
-            Tìm hiểu cách AIva thu thập, sử dụng và bảo vệ thông tin của bạn.
+            Tìm hiểu cách AIVA thu thập, sử dụng và bảo vệ thông tin của bạn.
           </p>
         </div>
         <div className="mx-auto max-w-3xl relative z-10 mb-12 rounded-2xl border border-[var(--text-on-glass)]/15 bg-[var(--glass-bg)]/60 p-6 text-sm leading-relaxed">
@@ -219,7 +219,7 @@ export default function PrivacyPage() {
           </h2>
           <div className="space-y-3" style={{ color: "var(--text-dim)" }}>
             <p>
-              <b>AIva</b> is a screen-free smart glasses product for children,
+              <b>AIVA</b> is a screen-free smart glasses product for children,
               developed and operated by <b>OPTIC ELITE</b>. This privacy policy
               describes the data this app and our website collect and how we
               use it.
@@ -250,7 +250,7 @@ export default function PrivacyPage() {
               supervisory authority.
             </p>
             <p>
-              <b>Children:</b> AIva is designed for children aged 4–12.
+              <b>Children:</b> AIVA is designed for children aged 4–12.
               Accounts are created and managed by parents or guardians, and we
               do not show behavioral advertising or share children&apos;s data for
               advertising purposes.
@@ -258,7 +258,7 @@ export default function PrivacyPage() {
             <p>
               <b>Contact:</b>{" "}
               <span className="inline">support</span>@<span className="inline">aiva.id.vn</span>{" "}
-              | OPTIC ELITE (AIva) | https://aiva.id.vn
+              | OPTIC ELITE (AIVA) | https://aiva.id.vn
             </p>
           </div>
         </div>

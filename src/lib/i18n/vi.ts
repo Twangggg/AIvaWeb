@@ -1,5 +1,5 @@
 export const vi = {
-  brand: "AIva",
+  brand: "AIVA",
   tagline: "OPTIC ELITE",
 
   /* Nav */
@@ -16,7 +16,7 @@ export const vi = {
 
   /* Hero */
   ctaBuy: "Mua ngay",
-  heroTitle: "AIva",
+  heroTitle: "AIVA",
   heroSubtitle: "Trải nghiệm sự tích hợp liền mạch giữa phần cứng và thực tế. Bước tiến hóa tiếp theo của điện toán không gian đã đến.",
   heroTagline: "Trợ lý hình ảnh thế hệ mới",
   heroSuffix: "nhìn cùng bạn.",
@@ -42,14 +42,14 @@ export const vi = {
 
   /* 3D Scroll Features */
   feature1Tag: "Giới thiệu",
-  feature1Title: "Gặp AIva — đôi mắt AI của bạn",
-  feature1Desc: "AIva là chiếc kính thông minh nhìn vào màn hình của bạn, hiểu bạn đang ở đâu trong ứng dụng, và nói cho bạn biết bước tiếp theo.",
+  feature1Title: "Gặp AIVA — đôi mắt AI của bạn",
+  feature1Desc: "AIVA là chiếc kính thông minh nhìn vào màn hình của bạn, hiểu bạn đang ở đâu trong ứng dụng, và nói cho bạn biết bước tiếp theo.",
   feature2Tag: "Camera",
   feature2Title: "Camera đọc màn hình thời gian thực",
   feature2Desc: "Cảm biến 12MP chống loá hướng xuống màn hình điện thoại hoặc laptop.",
   feature3Tag: "AI xử lý",
   feature3Title: "Phân tích bằng Neural Engine",
-  feature3Desc: "Chip AIva NPU phân tích layout, OCR đa ngôn ngữ và đối chiếu ngữ cảnh ứng dụng.",
+  feature3Desc: "Chip AIVA NPU phân tích layout, OCR đa ngôn ngữ và đối chiếu ngữ cảnh ứng dụng.",
   feature4Tag: "Loa định hướng",
   feature4Title: "Hướng dẫn từng bước qua loa",
   feature4Desc: "Hai loa MEMS định hướng thì thầm chỉ dẫn ngay khi bạn thao tác sai hoặc bị kẹt luồng.",
@@ -90,7 +90,7 @@ export const vi = {
   howHeading: "Ba bước.",
   howHeadingAccent: "Tức thì.",
   step1Title: "Hướng camera vào màn hình",
-  step1Desc: "AIva tự nhận biết bạn đang nhìn vào điện thoại, laptop hay TV.",
+  step1Desc: "AIVA tự nhận biết bạn đang nhìn vào điện thoại, laptop hay TV.",
   step2Title: "AI đọc & hiểu giao diện",
   step2Desc: "Neural Engine phân tích nội dung, nút bấm và trạng thái app trong dưới 100ms.",
   step3Title: "Nghe hướng dẫn qua loa",
@@ -114,7 +114,7 @@ export const vi = {
 
   /* Preorder */
   preorderHeading: "Sẵn sàng",
-  preorderHeadingAccent: "trải nghiệm AIva?",
+  preorderHeadingAccent: "trải nghiệm AIVA?",
   preorderDesc: "Để lại thông tin để nhận ưu đãi đợt mở bán đầu tiên.",
   preorderCta: "Đặt trước ngay",
 
@@ -142,7 +142,7 @@ export const vi = {
   close: "Đóng",
 
   /* Preorder Form */
-  preorderTitle: "Đặt trước AIva Smart Glasses",
+  preorderTitle: "Đặt trước AIVA Smart Glasses",
   fullName: "Họ và tên",
   email: "Email",
   phone: "Số điện thoại",
@@ -169,11 +169,11 @@ export const vi = {
   /* Not Found */
   notFoundCode: "404",
   notFoundTitle: "không thấy",
-  notFoundDesc: "Trang bạn tìm không tồn tại hoặc đã bị di dời. Có thể AIva chưa kịp nhìn thấy nó.",
+  notFoundDesc: "Trang bạn tìm không tồn tại hoặc đã bị di dời. Có thể AIVA chưa kịp nhìn thấy nó.",
   notFoundBack: "← Quay về trang chủ",
 
   /* Meta */
-  metaTitle: "AIva | Kỷ Nguyên Tương Lai",
+  metaTitle: "AIVA | Kỷ Nguyên Tương Lai",
   metaDesc: "Trải nghiệm sự tích hợp liền mạch giữa phần cứng và thực tế. Bước tiến hóa tiếp theo của điện toán không gian đã đến.",
 
   /* About Us */
@@ -267,13 +267,13 @@ export const vi = {
   navMenuClose: "Đóng menu",
 
   /* Sticky CTA */
-  stickyCtaText: "Đặt trước AIva ngay hôm nay",
+  stickyCtaText: "Đặt trước AIVA ngay hôm nay",
   stickyCtaButton: "Đặt trước",
 
   /* Home explore */
   homeExploreTitle: "Khám phá",
   homeExploreDesc: "Tìm hiểu thêm về sản phẩm, sứ mệnh và đội ngũ của chúng tôi",
-  homeExploreExperienceDesc: "Khám phá công nghệ đằng sau AIva với trải nghiệm 3D tương tác.",
+  homeExploreExperienceDesc: "Khám phá công nghệ đằng sau AIVA với trải nghiệm 3D tương tác.",
   homeExploreKidsDesc: "Tìm hiểu cách AIVA giúp trẻ em học hỏi từ thế giới thực.",
   homeExploreAboutDesc: "Gặp gỡ đội ngũ đằng sau sứ mệnh đưa công nghệ đến với trẻ em.",
 
@@ -292,10 +292,10 @@ export const vi = {
   homeFeature4Desc: "Pin LiPo 8mm dung lượng 800 mAh, trọng lượng khoảng 100g — gọn nhẹ cho trẻ mang cả ngày.",
 
   /* Vision demo */
-  homeVisionTag: "Góc nhìn AIva",
+  homeVisionTag: "Góc nhìn AIVA",
   homeVisionTitle: "Thế giới qua",
   homeVisionTitleAccent: "đôi mắt AI",
-  homeVisionDesc: "Không màn hình — AIva nhìn thế giới thật, rồi kể cho trẻ nghe bằng giọng nói.",
+  homeVisionDesc: "Không màn hình — AIVA nhìn thế giới thật, rồi kể cho trẻ nghe bằng giọng nói.",
   homeVisionRec: "LIVE",
   homeVisionScanning: "Đang nhận diện...",
   homeVisionScenario: "Kịch bản",
@@ -311,16 +311,16 @@ export const vi = {
 
   /* Video demo */
   homeVideoTag: "Video demo",
-  homeVideoTitle: "Xem AIva",
+  homeVideoTitle: "Xem AIVA",
   homeVideoTitleAccent: "trong đời thật",
-  homeVideoDesc: "Một phút thấy cách trẻ khám phá thế giới cùng kính AIva — không màn hình, chỉ giọng nói.",
+  homeVideoDesc: "Một phút thấy cách trẻ khám phá thế giới cùng kính AIVA — không màn hình, chỉ giọng nói.",
   homeVideoComingSoon: "Đang cập nhật",
   scrollCue: "Cuộn xuống",
 
   /* Cinematic experience */
   cxStatementTag: "Tuyên ngôn",
   cxStatement1: "Trẻ em đang cúi đầu vào màn hình.",
-  cxStatement2: "AIva đưa ánh nhìn trở lại thế giới thật.",
+  cxStatement2: "AIVA đưa ánh nhìn trở lại thế giới thật.",
   cxStatement3: "Không màn hình – chỉ giọng nói và khám phá.",
   cxCtaTag: "Bắt đầu hành trình",
   cxNavLabel: "Điều hướng chương",
@@ -337,7 +337,7 @@ export const vi = {
   homeAppTag: "Ứng dụng phụ huynh",
   homeAppTitle: "Đồng hành cùng con",
   homeAppTitleAccent: "trên điện thoại",
-  homeAppDesc: "App companion giúp ba mẹ theo dõi khám phá, giới hạn thời gian và giữ nội dung an toàn — lấy cảm hứng từ app AIva Mobile.",
+  homeAppDesc: "App companion giúp ba mẹ theo dõi khám phá, giới hạn thời gian và giữ nội dung an toàn — lấy cảm hứng từ app AIVA Mobile.",
   homeAppScreensLabel: "Màn hình ứng dụng",
   homeAppScreenDashboard: "Dashboard",
   homeAppScreenSafety: "An toàn",
@@ -353,12 +353,12 @@ export const vi = {
 
   /* Compare */
   homeCompareTag: "So sánh nhanh",
-  homeCompareTitle: "AIva khác",
+  homeCompareTitle: "AIVA khác",
   homeCompareTitleAccent: "màn hình thế nào?",
-  homeCompareDesc: "Cùng là công nghệ — nhưng AIva đưa trẻ ra thế giới thật thay vì giữ mắt trên tablet hay điện thoại.",
+  homeCompareDesc: "Cùng là công nghệ — nhưng AIVA đưa trẻ ra thế giới thật thay vì giữ mắt trên tablet hay điện thoại.",
   homeCompareColCriteria: "Tiêu chí",
   homeCompareColScreen: "Tablet / Điện thoại",
-  homeCompareColAiva: "AIva",
+  homeCompareColAiva: "AIVA",
   homeCompareRow1Label: "Thị lực",
   homeCompareRow1Screen: "Nhìn gần màn hình lâu",
   homeCompareRow1Aiva: "Không màn hình điện tử",
@@ -404,33 +404,33 @@ export const vi = {
   homeFaqTag: "Hỏi đáp",
   homeFaqTitle: "Câu hỏi",
   homeFaqTitleAccent: "thường gặp",
-  faq1Q: "AIva phù hợp với trẻ từ mấy tuổi?",
-  faq1A: "AIva được thiết kế cho trẻ từ 4–12 tuổi, với nội dung giọng nói và mức độ tương tác phù hợp theo từng độ tuổi.",
-  faq2Q: "AIva có màn hình không?",
-  faq2A: "Không. AIva hoàn toàn không có màn hình điện tử. Thông tin được truyền qua loa dẫn truyền an toàn, giúp bảo vệ thị lực cho trẻ.",
+  faq1Q: "AIVA phù hợp với trẻ từ mấy tuổi?",
+  faq1A: "AIVA được thiết kế cho trẻ từ 4–12 tuổi, với nội dung giọng nói và mức độ tương tác phù hợp theo từng độ tuổi.",
+  faq2Q: "AIVA có màn hình không?",
+  faq2A: "Không. AIVA hoàn toàn không có màn hình điện tử. Thông tin được truyền qua loa dẫn truyền an toàn, giúp bảo vệ thị lực cho trẻ.",
   faq3Q: "Phụ huynh có thể kiểm soát được không?",
   faq3A: "Có. Ứng dụng đi kèm cho phép phụ huynh theo dõi hoạt động, xem từ vựng đã học và cài đặt giới hạn thời gian sử dụng.",
-  faq4Q: "Pin AIva dùng được bao lâu?",
+  faq4Q: "Pin AIVA dùng được bao lâu?",
   faq4A: "Pin LiPo 800 mAh cho thời gian sử dụng liên tục cả ngày. Sạc đầy mất khoảng 1 giờ.",
-  faq5Q: "Làm sao để đặt trước AIva?",
+  faq5Q: "Làm sao để đặt trước AIVA?",
   faq5A: "Nhấn nút \"Đặt trước ngay\" trên trang web, điền thông tin liên hệ. Chúng tôi sẽ gửi email thông báo khi mở bán chính thức.",
 
   /* Chatbot */
-  chatTitle: "Trợ lý AIva",
+  chatTitle: "Trợ lý AIVA",
   chatSubtitle: "Hỏi về sản phẩm & đặt trước",
   chatWelcome:
-    "Xin chào! Tôi là trợ lý AIva. Tôi có thể giúp bạn tìm hiểu về kính thông minh AIva, đặt trước, tính năng và liên hệ hỗ trợ.",
-  chatPlaceholder: "Hỏi về AIva...",
+    "Xin chào! Tôi là trợ lý AIVA. Tôi có thể giúp bạn tìm hiểu về kính thông minh AIVA, đặt trước, tính năng và liên hệ hỗ trợ.",
+  chatPlaceholder: "Hỏi về AIVA...",
   chatSend: "Gửi",
   chatOpen: "Mở trợ lý chat",
   chatClose: "Đóng trợ lý chat",
-  chatDisclaimer: "Chỉ trả lời câu hỏi về AIva. Không chia sẻ thông tin cá nhân.",
+  chatDisclaimer: "Chỉ trả lời câu hỏi về AIVA. Không chia sẻ thông tin cá nhân.",
   chatError: "Không thể kết nối. Vui lòng thử lại sau.",
 
   /* Site intro */
-  introAriaLabel: "Giới thiệu AIva",
-  introDiscover: "AIva ơi, đây là gì vậy?",
-  introBrand: "AIva",
+  introAriaLabel: "Giới thiệu AIVA",
+  introDiscover: "AIVA ơi, đây là gì vậy?",
+  introBrand: "AIVA",
   introSkip: "Không hiện lại nữa",
 
   /* Console auth */
@@ -446,7 +446,7 @@ export const vi = {
   consoleRoleTeacherDesc: "Quản lý lớp / nhiều trẻ",
   consoleRoleParent: "Phụ huynh",
   consoleRoleParentDesc: "Cá nhân hóa theo từng trẻ",
-  consoleRoleOnboardTitle: "Bạn dùng AIva để làm gì?",
+  consoleRoleOnboardTitle: "Bạn dùng AIVA để làm gì?",
   consoleRoleOnboardSubtitle: "Hãy cho chúng tôi biết bạn là ai để thiết lập không gian phù hợp.",
   consoleRoleSelectFirst: "Vui lòng chọn một lựa chọn.",
   consoleRoleConfirm: "Tiếp tục",

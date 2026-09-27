@@ -22,7 +22,7 @@ const DEMO_PASSWORD = "Demo@1234";
 
 // Use real TLDs — Supabase rejects addresses like *@aiva.demo
 const users = [
-  { email: "admin@aiva.app", display_name: "AIva Admin", role: "admin" },
+  { email: "admin@aiva.app", display_name: "AIVA Admin", role: "admin" },
   { email: "teacher@aiva.app", display_name: "Cô Lan", role: "teacher" },
   { email: "parent@aiva.app", display_name: "Phụ huynh Minh", role: "parent" },
 ];

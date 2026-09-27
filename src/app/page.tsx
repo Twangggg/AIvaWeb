@@ -17,9 +17,11 @@ import { ColorPickerSection } from "@/components/home/color-picker-section";
 import { PageMouseGlow } from "@/components/ui/page-mouse-glow";
 import { CinematicHero } from "@/components/home/experience/cinematic-hero";
 import { StatementChapter } from "@/components/home/experience/statement-chapter";
+import { GlassesExperience } from "@/components/home/glasses-experience";
 import { FeatureRail } from "@/components/home/experience/feature-rail";
 import { CinematicCta } from "@/components/home/experience/cinematic-cta";
 import { useFullpageScroll } from "@/hooks/use-fullpage-scroll";
+
 
 export default function HomePage() {
   const [preorderOpen, setPreorderOpen] = useState(false);
@@ -43,24 +45,36 @@ export default function HomePage() {
               <CinematicHero onPreorder={() => setPreorderOpen(true)} />
             </div>
 
-            <div id="statement" data-fp-section data-fp-scenes="3" data-fp-scene="0" className="cx-fp-section">
-              <StatementChapter />
+            <div id="statement" data-fp-section data-fp-scenes="3" data-fp-scene="0" className="cx-fp-section min-h-[160vh] relative">
+              <div className="sticky top-0 h-[100dvh] w-full flex items-center justify-center overflow-hidden">
+                <StatementChapter />
+              </div>
             </div>
 
-            <div id="vision" data-fp-section data-fp-scenes="3" data-fp-scene="0" className="cx-fp-section">
-              <VisionDemoSection />
+            <div id="experience" data-fp-section className="cx-fp-section">
+              <GlassesExperience />
             </div>
 
-            <div id="features" data-fp-section data-fp-scenes="4" data-fp-scene="0" className="cx-fp-section">
-              <FeatureRail />
+            <div id="vision" data-fp-section data-fp-scenes="3" data-fp-scene="0" className="cx-fp-section min-h-[150vh] relative">
+              <div className="sticky top-0 h-[100dvh] w-full flex items-center justify-center overflow-hidden">
+                <VisionDemoSection />
+              </div>
+            </div>
+
+            <div id="features" data-fp-section data-fp-scenes="4" data-fp-scene="0" className="cx-fp-section min-h-[190vh] relative">
+              <div className="sticky top-0 h-[100dvh] w-full flex items-center justify-center overflow-hidden">
+                <FeatureRail />
+              </div>
             </div>
 
             <div id="compare" data-fp-section className="cx-fp-section">
               <CompareSection />
             </div>
 
-            <div id="companion" data-fp-section data-fp-scenes="3" data-fp-scene="0" className="cx-fp-section">
-              <ParentAppSection />
+            <div id="companion" data-fp-section data-fp-scenes="3" data-fp-scene="0" className="cx-fp-section min-h-[160vh] relative">
+              <div className="sticky top-0 h-[100dvh] w-full flex items-center justify-center overflow-hidden">
+                <ParentAppSection />
+              </div>
             </div>
 
             <div id="color" data-fp-section className="cx-fp-section">

@@ -22,7 +22,7 @@ function FeatureOrbitHub({ features }: { features: FeatureOrbitItem[] }) {
 
       <div className="feature-orbit-hub">
         <span className="text-xs uppercase tracking-[0.2em] font-semibold" style={{ color: "var(--ocean-glow)" }}>
-          AIva
+          AIVA
         </span>
         <div className="w-10 h-px my-2 mx-auto" style={{ background: "var(--gradient-ocean)" }} />
         <span className="material-symbols-outlined text-3xl" style={{ color: "var(--accent)" }}>

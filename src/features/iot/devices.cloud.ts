@@ -108,7 +108,7 @@ async function fetchPresenceFrom(url: string): Promise<{
 }
 
 /**
- * Prefer same-origin Next route (writes/reads Supabase), then optional AIva.Api.
+ * Prefer same-origin Next route (writes/reads Supabase), then optional AIVA.Api.
  */
 async function fetchApiPresence(): Promise<{
   map: Map<string, PresenceRow>;

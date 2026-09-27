@@ -23,7 +23,7 @@ export function OverviewSection() {
             title={
               <>
                 {t.homeExploreTitle}{" "}
-                <span className="text-gradient-ocean">AIva</span>
+                <span className="text-gradient-ocean">AIVA</span>
               </>
             }
             description={t.homeExploreDesc}

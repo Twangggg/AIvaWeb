@@ -38,7 +38,7 @@ export function ChatMascotButton({
         directions="/mascots/frog-cute-directions.webp"
         reactions="/mascots/frog-cute-reactions.webp"
         size={112}
-        label={`AIva chatbot — ${ariaLabel}`}
+        label={`AIVA chatbot — ${ariaLabel}`}
         className="relative block rounded-full outline-none transition-transform focus-visible:ring-2 focus-visible:ring-[var(--accent)] focus-visible:ring-offset-2 active:scale-95"
       />
     </div>

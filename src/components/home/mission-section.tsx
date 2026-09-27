@@ -2,6 +2,8 @@
 
 import { useI18n } from "@/lib/i18n/provider";
 
+import { Reveal } from "@/components/ui/reveal";
+
 /** Mission pillars — single fullpage panel, vertically centered under nav. */
 export function MissionSection() {
   const { t } = useI18n();
@@ -23,46 +25,47 @@ export function MissionSection() {
       />
 
       <div className="relative z-10 max-w-5xl mx-auto w-full text-center">
-        <div data-fp-rise style={{ ["--fp-delay" as string]: "40ms" }}>
-          <h2 className="font-display text-3xl md:text-5xl font-bold leading-tight mb-4">
-            {t.homeMissionHeadline}{" "}
-            <span className="text-gradient-sun">{t.homeMissionHeadlineAccent}</span>
-          </h2>
-          <p
-            className="text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-10"
-            style={{ color: "var(--text-dim)" }}
-          >
-            {t.aboutMissionDesc}
-          </p>
-        </div>
+        <Reveal>
+          <div>
+            <h2 className="font-display text-3xl md:text-5xl font-bold leading-tight mb-4">
+              {t.homeMissionHeadline}{" "}
+              <span className="text-gradient-sun">{t.homeMissionHeadlineAccent}</span>
+            </h2>
+            <p
+              className="text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-10"
+              style={{ color: "var(--text-dim)" }}
+            >
+              {t.aboutMissionDesc}
+            </p>
+          </div>
+        </Reveal>
 
         <div className="grid md:grid-cols-3 gap-4 text-left">
           {pillars.map((p, i) => (
-            <div
-              key={p.badge}
-              className="rounded-2xl p-5 md:p-6"
-              data-fp-rise
-              style={{
-                backgroundColor: "var(--glass-bg)",
-                border: "1px solid var(--glass-border)",
-                ["--fp-delay" as string]: `${140 + i * 90}ms`
-              }}
-            >
+            <Reveal key={p.badge} delay={80 + i * 80} direction="up">
               <div
-                className={`mb-3 flex h-11 items-center justify-center rounded-lg font-bold ${
-                  p.badge === "AI" ? "min-w-[2.75rem] px-2 text-sm w-fit" : "w-11 text-lg"
-                }`}
-                style={{ background: "var(--gradient-ocean)", color: "var(--text-on-accent)" }}
+                className="rounded-2xl p-5 md:p-6 h-full transition-transform duration-300 hover:scale-[1.02]"
+                style={{
+                  backgroundColor: "var(--glass-bg)",
+                  border: "1px solid var(--glass-border)"
+                }}
               >
-                {p.badge}
+                <div
+                  className={`mb-3 flex h-11 items-center justify-center rounded-lg font-bold ${
+                    p.badge === "AI" ? "min-w-[2.75rem] px-2 text-sm w-fit" : "w-11 text-lg"
+                  }`}
+                  style={{ background: "var(--gradient-ocean)", color: "var(--text-on-accent)" }}
+                >
+                  {p.badge}
+                </div>
+                <h3 className="font-semibold text-base mb-2" style={{ color: "var(--text-on-glass)" }}>
+                  {p.label}
+                </h3>
+                <p className="text-sm leading-relaxed" style={{ color: "var(--text-dim)" }}>
+                  {p.desc}
+                </p>
               </div>
-              <h3 className="font-semibold text-base mb-2" style={{ color: "var(--text-on-glass)" }}>
-                {p.label}
-              </h3>
-              <p className="text-sm leading-relaxed" style={{ color: "var(--text-dim)" }}>
-                {p.desc}
-              </p>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>

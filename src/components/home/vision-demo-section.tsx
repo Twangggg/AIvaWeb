@@ -26,6 +26,9 @@ interface Scenario {
  * Vision chapter — 3 frames on a depth circle.
  * Scroll rotates the ring; the front card is the active scene.
  */
+import { AnimatePresence, motion } from "motion/react";
+import { Reveal } from "@/components/ui/reveal";
+
 export function VisionDemoSection() {
   const { t } = useI18n();
   const [phase, setPhase] = useState(0);
@@ -94,20 +97,21 @@ export function VisionDemoSection() {
     <section className="vision-orbit cx-fp-panel" data-entered={entered ? "true" : "false"}>
       <div className="vision-orbit-glow" aria-hidden />
 
-      <header className="vision-orbit-head" data-fp-rise style={{ ["--fp-delay" as string]: "40ms" }}>
-        <h2 className="font-display font-bold tracking-tight leading-[1.1]">
-          {t.homeVisionTitle}{" "}
-          <span className="text-gradient-ocean">{t.homeVisionTitleAccent}</span>
-        </h2>
-        <p>{t.homeVisionDesc}</p>
-      </header>
+      <Reveal direction="up" delay={0}>
+        <header className="vision-orbit-head">
+          <h2 className="font-display font-bold tracking-tight leading-[1.1]">
+            {t.homeVisionTitle}{" "}
+            <span className="text-gradient-ocean">{t.homeVisionTitleAccent}</span>
+          </h2>
+          <p>{t.homeVisionDesc}</p>
+        </header>
+      </Reveal>
 
-      <div
-        className="vision-ring-stage"
-        data-dir={dir}
-        data-fp-rise="scale"
-        style={{ ["--fp-delay" as string]: "140ms" }}
-      >
+      <Reveal direction="scale" delay={120}>
+        <div
+          className="vision-ring-stage"
+          data-dir={dir}
+        >
         <div className="vision-ring-floor" aria-hidden />
         <div className="vision-ring-orbit" aria-hidden />
 
@@ -180,25 +184,25 @@ export function VisionDemoSection() {
           })}
         </div>
       </div>
+      </Reveal>
 
-      <div
-        key={`voice-${scenario.id}`}
-        className="vision-orbit-voice"
-        data-fp-rise
-        style={{
-          ["--fp-delay" as string]: "260ms",
-          ...(phase >= 3
-            ? {}
-            : { opacity: 0, transform: "translateY(14px)" })
-        }}
-      >
-        <div className="voice-wave-bars" aria-hidden>
-          {Array.from({ length: 5 }).map((_, i) => (
-            <span key={i} className="voice-wave-bar" style={{ animationDelay: `${i * 0.12}s` }} />
-          ))}
-        </div>
-        <p>{scenario.voice}</p>
-      </div>
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={`voice-${scenario.id}`}
+          initial={{ opacity: 0, y: 16, filter: "blur(4px)" }}
+          animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          exit={{ opacity: 0, y: -12, filter: "blur(4px)" }}
+          transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+          className="vision-orbit-voice"
+        >
+          <div className="voice-wave-bars" aria-hidden>
+            {Array.from({ length: 5 }).map((_, i) => (
+              <span key={i} className="voice-wave-bar" style={{ animationDelay: `${i * 0.12}s` }} />
+            ))}
+          </div>
+          <p>{scenario.voice}</p>
+        </motion.div>
+      </AnimatePresence>
     </section>
   );
 }

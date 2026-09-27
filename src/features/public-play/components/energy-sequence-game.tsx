@@ -68,7 +68,7 @@ export function EnergySequenceGame() {
     }
   };
 
-  const status = mode === "idle" ? "Sẵn sàng" : mode === "showing" ? "AIva đang phát mã" : mode === "input" ? "Đến lượt bạn" : "Chuỗi bị ngắt";
+  const status = mode === "idle" ? "Sẵn sàng" : mode === "showing" ? "AIVA đang phát mã" : mode === "input" ? "Đến lượt bạn" : "Chuỗi bị ngắt";
 
   return (
     <section className="overflow-hidden rounded-[2rem] border border-fuchsia-200/20 bg-[radial-gradient(circle_at_50%_0%,rgba(139,92,246,.22),transparent_42%),rgba(255,255,255,.07)] p-5 shadow-2xl shadow-black/30 backdrop-blur-xl sm:p-7">

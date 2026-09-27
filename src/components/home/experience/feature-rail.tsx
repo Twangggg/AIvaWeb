@@ -5,6 +5,9 @@ import { useI18n } from "@/lib/i18n/provider";
 import { useFpSceneSync } from "@/hooks/use-fp-scene-sync";
 import { useFpSectionEnter } from "@/hooks/use-fp-section-enter";
 
+import { AnimatePresence, motion } from "motion/react";
+import { Reveal } from "@/components/ui/reveal";
+
 /**
  * Flat 2D rotating circle — cards stay upright around the rim,
  * active card sits at the bottom; detail panel animates below.
@@ -50,19 +53,20 @@ export function FeatureRail() {
     >
       <div className="feature-wheel-glow" aria-hidden />
 
-      <header className="feature-wheel-head" data-fp-rise style={{ ["--fp-delay" as string]: "80ms" }}>
-        <h2 className="font-display font-bold tracking-tight leading-[1.08]">
-          {t.homeFeaturesTitle}{" "}
-          <span className="text-gradient-ocean">{t.homeFeaturesTitleAccent}</span>
-        </h2>
-        <p>{t.homeFeaturesDesc}</p>
-      </header>
+      <Reveal direction="up" delay={0}>
+        <header className="feature-wheel-head">
+          <h2 className="font-display font-bold tracking-tight leading-[1.08]">
+            {t.homeFeaturesTitle}{" "}
+            <span className="text-gradient-ocean">{t.homeFeaturesTitleAccent}</span>
+          </h2>
+          <p>{t.homeFeaturesDesc}</p>
+        </header>
+      </Reveal>
 
-      <div
-        className="feature-wheel-stage"
-        data-fp-rise="scale"
-        style={{ ["--fp-delay" as string]: "220ms" }}
-      >
+      <Reveal direction="scale" delay={120}>
+        <div
+          className="feature-wheel-stage"
+        >
         {/* Rotate so active seat (index 0 angle) lands at bottom (180°) */}
         <div
           className="feature-wheel-disc"
@@ -119,23 +123,29 @@ export function FeatureRail() {
           <span className="feature-wheel-hub-index">{String(active + 1).padStart(2, "0")}</span>
         </div>
       </div>
+      </Reveal>
 
-      <div className="feature-wheel-detail-wrap" data-fp-rise style={{ ["--fp-delay" as string]: "360ms" }}>
-        <article
-          key={`${feature.title}-${active}`}
-          className="feature-wheel-detail"
-          data-dir={dir}
-          aria-live="polite"
-        >
-          <span className="material-symbols-outlined" aria-hidden>
-            {feature.icon}
-          </span>
-          <div>
-            <h3 className="font-display font-bold">{feature.title}</h3>
-            <p>{feature.desc}</p>
-          </div>
-        </article>
-      </div>
+      <Reveal direction="up" delay={200} className="feature-wheel-detail-wrap">
+        <AnimatePresence mode="wait">
+          <motion.article
+            key={`${feature.title}-${active}`}
+            initial={{ opacity: 0, y: dir >= 0 ? 12 : -12, filter: "blur(4px)" }}
+            animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+            exit={{ opacity: 0, y: dir >= 0 ? -12 : 12, filter: "blur(4px)" }}
+            transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+            className="feature-wheel-detail"
+            aria-live="polite"
+          >
+            <span className="material-symbols-outlined" aria-hidden>
+              {feature.icon}
+            </span>
+            <div>
+              <h3 className="font-display font-bold">{feature.title}</h3>
+              <p>{feature.desc}</p>
+            </div>
+          </motion.article>
+        </AnimatePresence>
+      </Reveal>
     </section>
   );
 }

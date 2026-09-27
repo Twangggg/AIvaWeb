@@ -38,7 +38,7 @@ function getHeartbeatClient(): SupabaseClient {
 
 /**
  * ESP (or companion app) posts presence here.
- * Writes lan_ip via Supabase RPC so AIvaWeb can show Online without a separate AIva.Api process.
+ * Writes lan_ip via Supabase RPC so AIVAWeb can show Online without a separate AIVA.Api process.
  */
 export async function POST(request: Request) {
   let body: HeartbeatBody;

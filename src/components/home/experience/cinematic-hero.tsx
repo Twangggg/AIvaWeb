@@ -7,7 +7,8 @@ import { Button } from "@/components/ui/button";
 import { TextReveal } from "@/components/ui/text-reveal";
 import { useI18n } from "@/lib/i18n/provider";
 
-/** Hero brand + CTAs — no hover 3D glasses (was too heavy). */
+
+/** Hero brand + CTAs */
 export function CinematicHero({ onPreorder }: { onPreorder: () => void }) {
   const { t } = useI18n();
   const ref = useRef<HTMLElement>(null);
@@ -39,24 +40,24 @@ export function CinematicHero({ onPreorder }: { onPreorder: () => void }) {
   const stageScale = 1 - exit * 0.12;
 
   return (
-    <section ref={ref} className="cx-hero relative h-full min-h-0 overflow-x-clip">
+    <section ref={ref} className="cx-hero relative w-full min-h-[100dvh] flex flex-col justify-center items-center overflow-x-clip pt-28 pb-20 md:pt-32 md:pb-24">
       <div className="cx-hero-grid" aria-hidden />
       <div className="cx-hero-glow cx-hero-glow-a" aria-hidden />
       <div className="cx-hero-glow cx-hero-glow-b" aria-hidden />
 
       <div
-        className="relative z-10 h-full min-h-0 flex flex-col justify-center px-6 pt-24 pb-16"
+        className="relative z-10 w-full flex flex-col justify-center items-center px-6 my-auto"
         style={
           {
             opacity: stageOpacity,
             transform: `translate3d(0, ${stageY}px, 0) scale(${stageScale})`,
-            transformOrigin: "center 35%"
+            transformOrigin: "center center"
           } as CSSProperties
         }
       >
-        <div className="cx-brand-stage mx-auto w-full max-w-6xl text-center is-open is-layout-open">
+        <div className="cx-brand-stage mx-auto w-full max-w-5xl text-center is-open is-layout-open">
           <h1 className="sr-only">
-            AIva — {t.heroSuffix}
+            AIVA — {t.heroSuffix}
           </h1>
 
           <p
@@ -67,7 +68,7 @@ export function CinematicHero({ onPreorder }: { onPreorder: () => void }) {
             }}
             aria-hidden="true"
           >
-            AIva
+            AIVA
           </p>
 
           <div className="cx-brand-below is-open">
@@ -89,11 +90,26 @@ export function CinematicHero({ onPreorder }: { onPreorder: () => void }) {
                 </Button>
               </Magnetic>
               <Magnetic strength={0.16}>
-                <Link href="/product">
-                  <Button variant="ghost" className="px-10 py-4 text-base">
-                    {t.ctaSecondary}
-                  </Button>
-                </Link>
+                <Button
+                  variant="ghost"
+                  className="px-10 py-4 text-base"
+                  onClick={() => {
+                    const el = document.getElementById("statement");
+                    const lenis = (window as unknown as { __lenis?: { scrollTo: (t: HTMLElement | number, opts?: Record<string, unknown>) => void } }).__lenis;
+                    if (el) {
+                      if (lenis && typeof lenis.scrollTo === "function") {
+                        lenis.scrollTo(el, {
+                          duration: 1.1,
+                          easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+                        });
+                      } else {
+                        el.scrollIntoView({ behavior: "smooth" });
+                      }
+                    }
+                  }}
+                >
+                  {t.ctaSecondary}
+                </Button>
               </Magnetic>
             </div>
 
@@ -117,6 +133,32 @@ export function CinematicHero({ onPreorder }: { onPreorder: () => void }) {
           </div>
         </div>
       </div>
+
+      {/* Scroll Down Cue Indicator with Lenis scroll */}
+      <button
+        type="button"
+        onClick={() => {
+          const nextSection = document.getElementById("statement");
+          const lenis = (window as unknown as { __lenis?: { scrollTo: (t: HTMLElement | number, opts?: Record<string, unknown>) => void } }).__lenis;
+          if (nextSection) {
+            if (lenis && typeof lenis.scrollTo === "function") {
+              lenis.scrollTo(nextSection, {
+                duration: 0.9,
+                easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+              });
+            } else {
+              nextSection.scrollIntoView({ behavior: "smooth" });
+            }
+          }
+        }}
+        className="scroll-cue cursor-pointer transition-opacity duration-300 hover:opacity-100"
+        aria-label="Cuộn xuống để khám phá"
+      >
+        <div className="scroll-cue-mouse" aria-hidden="true">
+          <div className="scroll-cue-wheel" />
+        </div>
+        <span className="scroll-cue-label">Cuộn xuống</span>
+      </button>
     </section>
   );
 }

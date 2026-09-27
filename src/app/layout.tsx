@@ -13,12 +13,12 @@ const beVietnamPro = Be_Vietnam_Pro({
 
 const defaultMeta = {
   vi: {
-    title: "AIva | Kỷ Nguyên Tương Lai",
+    title: "AIVA | Kỷ Nguyên Tương Lai",
     description:
       "Trải nghiệm sự tích hợp liền mạch giữa phần cứng và thực tế. Bước tiến hóa tiếp theo của điện toán không gian đã đến.",
   },
   en: {
-    title: "AIva | A New Era",
+    title: "AIVA | A New Era",
     description:
       "Experience the seamless integration of hardware and reality. The next evolution of spatial computing has arrived.",
   },
@@ -34,10 +34,10 @@ export const metadata: Metadata = {
     title: defaultMeta.vi.title,
     description: defaultMeta.vi.description,
     url: "https://aiva.id.vn",
-    siteName: "AIva",
+    siteName: "AIVA",
     locale: "vi_VN",
     type: "website",
-    images: [{ url: "/AIVALogo.png", width: 1200, height: 630, alt: "AIva Smart Glasses" }],
+    images: [{ url: "/AIVALogo.png", width: 1200, height: 630, alt: "AIVA Smart Glasses" }],
   },
   twitter: {
     card: "summary_large_image",

@@ -5,7 +5,7 @@
 --
 -- Password for all: Demo@1234
 --
--- admin@aiva.app   | AIva Admin     | admin
+-- admin@aiva.app   | AIVA Admin     | admin
 -- teacher@aiva.app | Cô Lan         | teacher
 -- parent@aiva.app  | Phụ huynh Minh | parent
 --

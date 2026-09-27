@@ -13,9 +13,9 @@ import type { ChatLocale } from "@/features/chat/lib/knowledge";
 const BLOCKED_MESSAGES: Record<ChatLocale, Record<string, string>> = {
   vi: {
     injection:
-      "Tôi chỉ có thể trả lời các câu hỏi về sản phẩm AIva. Bạn có thể hỏi về tính năng, đặt trước, pin, hoặc liên hệ hỗ trợ.",
+      "Tôi chỉ có thể trả lời các câu hỏi về sản phẩm AIVA. Bạn có thể hỏi về tính năng, đặt trước, pin, hoặc liên hệ hỗ trợ.",
     off_topic:
-      "Xin lỗi, tôi chỉ hỗ trợ thông tin về kính thông minh AIva (tính năng, đặt trước, thông số, liên hệ). Bạn cần hỗ trợ gì về AIva?",
+      "Xin lỗi, tôi chỉ hỗ trợ thông tin về kính thông minh AIVA (tính năng, đặt trước, thông số, liên hệ). Bạn cần hỗ trợ gì về AIVA?",
     too_long: "Tin nhắn quá dài. Vui lòng rút gọn dưới 500 ký tự.",
     empty: "Vui lòng nhập câu hỏi của bạn.",
     rate_limit: "Bạn đang gửi tin nhắn quá nhanh. Vui lòng thử lại sau vài giây.",
@@ -25,9 +25,9 @@ const BLOCKED_MESSAGES: Record<ChatLocale, Record<string, string>> = {
   },
   en: {
     injection:
-      "I can only answer questions about AIva products. Feel free to ask about features, pre-order, battery, or support.",
+      "I can only answer questions about AIVA products. Feel free to ask about features, pre-order, battery, or support.",
     off_topic:
-      "Sorry, I only support questions about AIva smart glasses (features, pre-order, specs, contact). How can I help with AIva?",
+      "Sorry, I only support questions about AIVA smart glasses (features, pre-order, specs, contact). How can I help with AIVA?",
     too_long: "Message is too long. Please keep it under 500 characters.",
     empty: "Please enter your question.",
     rate_limit: "You're sending messages too quickly. Please wait a few seconds.",
@@ -38,8 +38,8 @@ const BLOCKED_MESSAGES: Record<ChatLocale, Record<string, string>> = {
 };
 
 const GREETING_REPLIES: Record<ChatLocale, string> = {
-  vi: "Xin chào! Tôi là trợ lý AIva. Tôi có thể giúp bạn tìm hiểu về kính thông minh AIva, đặt trước, tính năng và liên hệ hỗ trợ. Bạn muốn biết điều gì?",
-  en: "Hello! I'm the AIva assistant. I can help you learn about AIva smart glasses, pre-order, features, and support. What would you like to know?"
+  vi: "Xin chào! Tôi là trợ lý AIVA. Tôi có thể giúp bạn tìm hiểu về kính thông minh AIVA, đặt trước, tính năng và liên hệ hỗ trợ. Bạn muốn biết điều gì?",
+  en: "Hello! I'm the AIVA assistant. I can help you learn about AIVA smart glasses, pre-order, features, and support. What would you like to know?"
 };
 
 function resolveLocale(value: unknown): ChatLocale {

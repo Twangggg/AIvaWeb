@@ -80,7 +80,7 @@ async function synthesizeGttsFallback(text: string): Promise<Buffer> {
 
 /**
  * Device-facing TTS: ESP posts {server_key, text}, returns audio/wav.
- * Prefer AIvaAI VieNeu; fall back to gTTS so Speak works without conda TTS.
+ * Prefer AIVAAI VieNeu; fall back to gTTS so Speak works without conda TTS.
  */
 export async function POST(request: Request) {
   let body: TtsBody;
@@ -120,7 +120,7 @@ export async function POST(request: Request) {
         {
           ok: false,
           error: msg.slice(0, 500),
-          hint: "Start AIvaAI on :8000, or ensure uv+ffmpeg+gTTS work on this host",
+          hint: "Start AIVAAI on :8000, or ensure uv+ffmpeg+gTTS work on this host",
         },
         { status: 503, headers: corsHeaders() },
       );

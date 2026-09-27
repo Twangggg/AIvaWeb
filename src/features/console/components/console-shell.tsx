@@ -44,7 +44,7 @@ export function ConsoleShell({ children }: { children: React.ReactNode }) {
             <div className="mx-auto flex h-14 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
               <div className="flex items-center gap-4">
                 <Link href="/" className="text-sm font-bold tracking-wide" title={en ? "Back to website" : "Về trang chủ"}>
-                  AIva <span className="font-medium text-[var(--console-muted)]">Admin</span>
+                  AIVA <span className="font-medium text-[var(--console-muted)]">Admin</span>
                 </Link>
                 <span className="text-sm text-[var(--console-muted)]">
                   {en ? "Tool preview" : "Xem công cụ"}

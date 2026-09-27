@@ -4,8 +4,8 @@ import { AuthBootstrap } from "@/features/auth/components/auth-bootstrap";
 import { ConsoleShell } from "@/features/console/components/console-shell";
 
 export const metadata: Metadata = {
-  title: "AIva Console",
-  description: "Bảng điều khiển giáo viên AIva",
+  title: "AIVA Console",
+  description: "Bảng điều khiển giáo viên AIVA",
   robots: { index: false, follow: false },
 };
 

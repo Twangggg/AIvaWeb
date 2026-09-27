@@ -22,7 +22,7 @@ export default function NotFound() {
         </h1>
 
         <h2 className="text-2xl md:text-3xl font-bold mb-3">
-          AIva{" "}
+          AIVA{" "}
           <span className="text-gradient-ocean">{t.notFoundTitle}</span>
         </h2>
 

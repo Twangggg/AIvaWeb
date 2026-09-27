@@ -114,7 +114,7 @@ export function AivaGardenGame({ onUpdate, round }: AivaGardenGameProps) {
           this.layout = createLevel();
           this.drawGarden();
           this.bot = this.createBot(this.toPixels(START));
-          this.report("Chạm vào ô cỏ để AIva tự tìm đường.");
+          this.report("Chạm vào ô cỏ để AIVA tự tìm đường.");
 
           this.input.on("pointerdown", (pointer: Phaser.Input.Pointer) => {
             this.moveTo({ x: Math.floor(pointer.x / TILE), y: Math.floor(pointer.y / TILE) });
@@ -239,7 +239,7 @@ export function AivaGardenGame({ onUpdate, round }: AivaGardenGameProps) {
           }
           const path = this.findPath(destination);
           if (!path.length) {
-            if (destination.x !== this.position.x || destination.y !== this.position.y) this.report("AIva chưa thể đi tới ô này.");
+            if (destination.x !== this.position.x || destination.y !== this.position.y) this.report("AIVA chưa thể đi tới ô này.");
             return;
           }
           this.moving = true;
@@ -265,7 +265,7 @@ export function AivaGardenGame({ onUpdate, round }: AivaGardenGameProps) {
               if (this.position.x === GATE.x && this.position.y === GATE.y && this.collected.size === this.layout.shards.length) {
                 this.completed = true;
                 this.moving = false;
-                this.report("AIva đã mang năng lượng về khu vườn!");
+                this.report("AIVA đã mang năng lượng về khu vườn!");
                 return;
               }
               this.walk(path);
@@ -282,7 +282,7 @@ export function AivaGardenGame({ onUpdate, round }: AivaGardenGameProps) {
           this.tweens.add({ targets: shard, alpha: 0, scale: 1.8, duration: 240, onComplete: () => shard.destroy() });
           if (this.collected.size === this.layout.shards.length) {
             this.paintGate(true);
-            this.report("Cổng đã mở. Hãy đưa AIva đến cổng.");
+            this.report("Cổng đã mở. Hãy đưa AIVA đến cổng.");
           } else {
             this.report(`Đã tìm thấy ${this.collected.size}/${this.layout.shards.length} mảnh năng lượng.`);
           }
@@ -311,5 +311,5 @@ export function AivaGardenGame({ onUpdate, round }: AivaGardenGameProps) {
     };
   }, [round]);
 
-  return <div ref={hostRef} tabIndex={0} aria-label="Bản đồ Giải cứu khu vườn AIva" className="w-full touch-none overflow-hidden rounded-2xl border border-white/15 bg-[#1a4f44] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-yellow-200 [&_canvas]:mx-auto [&_canvas]:block [&_canvas]:h-auto [&_canvas]:max-w-full" />;
+  return <div ref={hostRef} tabIndex={0} aria-label="Bản đồ Giải cứu khu vườn AIVA" className="w-full touch-none overflow-hidden rounded-2xl border border-white/15 bg-[#1a4f44] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-yellow-200 [&_canvas]:mx-auto [&_canvas]:block [&_canvas]:h-auto [&_canvas]:max-w-full" />;
 }

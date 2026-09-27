@@ -1,6 +1,7 @@
-# AIvaWeb Base
+# AIVAWeb Base
 
 Base stack:
+
 - Next.js (App Router) + TypeScript strict
 - Tailwind CSS
 - React Query

@@ -19,8 +19,8 @@ export function VideoDemoSection() {
     <section className="py-12 md:py-16 px-6 relative overflow-hidden h-full w-full flex flex-col justify-center">
       <AmbientBg variant="section" />
 
-      <div className="max-w-5xl mx-auto relative z-10">
-        <Reveal>
+      <div className="max-w-5xl mx-auto relative z-10 w-full">
+        <Reveal direction="up" delay={0}>
           <SectionHeader
             title={
               <>
@@ -32,7 +32,7 @@ export function VideoDemoSection() {
           />
         </Reveal>
 
-        <Reveal delay={100}>
+        <Reveal direction="scale" delay={120}>
           <div
             className="mt-12 relative rounded-2xl overflow-hidden"
             style={{

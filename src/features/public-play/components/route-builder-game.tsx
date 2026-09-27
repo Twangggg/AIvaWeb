@@ -54,7 +54,7 @@ export function RouteBuilderGame() {
         const success = key(current) === key(mission.goal);
         setRunning(false);
         setCompleted(success);
-        setMessage(success ? "AIva đã tới đích." : "Chưa tới đích. Hãy thử một chuỗi lệnh khác.");
+        setMessage(success ? "AIVA đã tới đích." : "Chưa tới đích. Hãy thử một chuỗi lệnh khác.");
         return;
       }
       const command = COMMANDS.find((item) => item.id === commands[index])!;
@@ -62,7 +62,7 @@ export function RouteBuilderGame() {
       const valid = next.x >= 0 && next.x < 6 && next.y >= 0 && next.y < 6 && !mission.blocks.includes(key(next));
       if (!valid) {
         setRunning(false);
-        setMessage("AIva gặp chướng ngại. Hãy sửa lệnh.");
+        setMessage("AIVA gặp chướng ngại. Hãy sửa lệnh.");
         return;
       }
       current = next;
@@ -98,7 +98,7 @@ export function RouteBuilderGame() {
             const isGoal = key(point) === key(mission.goal);
             const isBot = key(point) === key(position);
             return (
-              <div key={key(point)} className={`relative flex min-h-10 items-center justify-center overflow-hidden rounded-lg text-xs font-black ${isBlock ? "bg-slate-950" : isGoal ? "bg-violet-400/20" : isBot ? "bg-cyan-300/20" : "bg-emerald-400/30 text-transparent"}`} aria-label={isGoal ? "Cổng không gian" : isBot ? "AIva" : isBlock ? "Chướng ngại" : undefined}>
+              <div key={key(point)} className={`relative flex min-h-10 items-center justify-center overflow-hidden rounded-lg text-xs font-black ${isBlock ? "bg-slate-950" : isGoal ? "bg-violet-400/20" : isBot ? "bg-cyan-300/20" : "bg-emerald-400/30 text-transparent"}`} aria-label={isGoal ? "Cổng không gian" : isBot ? "AIVA" : isBlock ? "Chướng ngại" : undefined}>
                 {isGoal ? <Image src="/games/portal-sprite.webp" alt="" fill unoptimized sizes="72px" className="object-contain p-0.5" /> : isBot ? <Image src="/games/robot-sprite.webp" alt="" fill unoptimized sizes="72px" className="object-contain p-0.5" /> : isStart ? "Bắt đầu" : ""}
               </div>
             );

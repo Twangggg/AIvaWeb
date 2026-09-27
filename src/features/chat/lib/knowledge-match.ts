@@ -23,8 +23,8 @@ export function tryKnowledgeMatch(message: string, locale: ChatLocale): string |
 
   if (FEATURE_PATTERNS.test(lower)) {
     return locale === "vi"
-      ? "AIva là kính thông minh cho trẻ 4–12 tuổi, không có màn hình. Camera hướng ra ngoài nhận diện vật thể, AI phản hồi bằng giọng nói giúp trẻ học từ thế giới thật. Phụ huynh kiểm soát qua app đi kèm. Pin LiPo 800 mAh (~100g), dùng cả ngày."
-      : "AIva are smart glasses for children aged 4–12 with no screen. An outward-facing camera recognizes objects and AI responds by voice to help kids learn from the real world. Parents control usage via the companion app. 800 mAh battery (~100g), all-day use.";
+      ? "AIVA là kính thông minh cho trẻ 4–12 tuổi, không có màn hình. Camera hướng ra ngoài nhận diện vật thể, AI phản hồi bằng giọng nói giúp trẻ học từ thế giới thật. Phụ huynh kiểm soát qua app đi kèm. Pin LiPo 800 mAh (~100g), dùng cả ngày."
+      : "AIVA are smart glasses for children aged 4–12 with no screen. An outward-facing camera recognizes objects and AI responds by voice to help kids learn from the real world. Parents control usage via the companion app. 800 mAh battery (~100g), all-day use.";
   }
 
   if (PREORDER_PATTERNS.test(lower)) {
@@ -35,14 +35,14 @@ export function tryKnowledgeMatch(message: string, locale: ChatLocale): string |
 
   if (CAMERA_PATTERNS.test(lower)) {
     return locale === "vi"
-      ? "AIva có camera hướng ra ngoài để nhận diện vật thể xung quanh. AI phân tích hình ảnh và kể cho trẻ nghe qua loa — không có màn hình điện tử."
-      : "AIva has an outward-facing camera to recognize objects around the child. AI analyzes what it sees and tells the child through speakers — no electronic display.";
+      ? "AIVA có camera hướng ra ngoài để nhận diện vật thể xung quanh. AI phân tích hình ảnh và kể cho trẻ nghe qua loa — không có màn hình điện tử."
+      : "AIVA has an outward-facing camera to recognize objects around the child. AI analyzes what it sees and tells the child through speakers — no electronic display.";
   }
 
   if (/kính|glasses|aiva/i.test(lower) && /là gì|what is|giới thiệu|about/i.test(lower)) {
     return locale === "vi"
-      ? "AIva (AIVA) là kính thông minh dành cho trẻ em, giúp trẻ học hỏi từ thế giới thực qua giọng nói AI — không màn hình, bảo vệ thị lực."
-      : "AIva (AIVA) are smart glasses for children that help kids learn from the real world through AI voice — screen-free, protecting eyesight.";
+      ? "AIVA (AIVA) là kính thông minh dành cho trẻ em, giúp trẻ học hỏi từ thế giới thực qua giọng nói AI — không màn hình, bảo vệ thị lực."
+      : "AIVA (AIVA) are smart glasses for children that help kids learn from the real world through AI voice — screen-free, protecting eyesight.";
   }
 
   if (lower.includes("kính") || lower.includes("aiva") || lower.includes("glasses")) {

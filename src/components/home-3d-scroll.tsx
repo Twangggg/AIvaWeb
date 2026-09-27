@@ -35,7 +35,8 @@ export function Home3DScroll() {
     const recalcMetrics = () => {
       if (!stageRef.current) return;
       const stage = stageRef.current;
-      const top = stage.offsetTop;
+      const rect = stage.getBoundingClientRect();
+      const top = rect.top + window.scrollY;
       const total = Math.max(1, stage.offsetHeight - window.innerHeight);
       metricsRef.current = { top, total };
     };
@@ -45,7 +46,7 @@ export function Home3DScroll() {
       const { top, total } = metricsRef.current;
       const passed = Math.min(Math.max(window.scrollY - top, 0), total);
       const p = passed / total;
-      if (Math.abs(p - lastScrollYRef.current) > 0.006) {
+      if (Math.abs(p - lastScrollYRef.current) > 0.004) {
         scrollY.current = p;
         lastScrollYRef.current = p;
         const now = performance.now();
@@ -94,8 +95,8 @@ export function Home3DScroll() {
   }, []);
 
   return (
-    <section ref={stageRef} id="features" className="relative" style={{ height: `${SECTIONS.length * 100}vh` }}>
-      <div className="sticky top-0 h-screen w-full overflow-hidden transform-gpu">
+    <section ref={stageRef} id="glasses-3d-showcase" className="relative min-h-[180vh] w-full">
+      <div className="sticky top-0 h-[100dvh] w-full overflow-hidden transform-gpu flex items-center justify-center">
         <div className="absolute inset-0 grid-bg opacity-60" />
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-1/3 -left-24 w-[22rem] h-[22rem] rounded-full bg-[var(--ocean)]/18 blur-2xl" />

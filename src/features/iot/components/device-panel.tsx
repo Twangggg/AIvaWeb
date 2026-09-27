@@ -30,21 +30,21 @@ function deviceConnectHint(d: CloudDevice, live: boolean, active: boolean): Conn
       kind: "waiting",
       title: "Đang chờ máy sẵn sàng",
       detail:
-        "Mở app AIva trên điện thoại, chắc chắn máy đã kết nối Wi‑Fi nhà, rồi quay lại đây và bấm Làm mới. Không cần nhập địa chỉ mạng.",
+        "Mở app AIVA trên điện thoại, chắc chắn máy đã kết nối Wi‑Fi nhà, rồi quay lại đây và bấm Làm mới. Không cần nhập địa chỉ mạng.",
     };
   }
   return {
     kind: "offline",
     title: "Máy đang tắt hoặc khác mạng",
     detail:
-      "Bật máy AIva và để điện thoại/máy tính cùng Wi‑Fi nhà với máy. Sau đó bấm Làm mới.",
+      "Bật máy AIVA và để điện thoại/máy tính cùng Wi‑Fi nhà với máy. Sau đó bấm Làm mới.",
   };
 }
 
 function friendlyLinkError(raw: string): string {
   const m = raw.toLowerCase();
   if (m.includes("failed to fetch") || m.includes("networkerror") || m.includes("load failed")) {
-    return "Không tới được máy trên Wi‑Fi. Kiểm tra cùng mạng với máy tính, hoặc cấu hình lại Wi‑Fi bằng app AIva.";
+    return "Không tới được máy trên Wi‑Fi. Kiểm tra cùng mạng với máy tính, hoặc cấu hình lại Wi‑Fi bằng app AIVA.";
   }
   if (m.includes("health")) {
     return "Máy không phản hồi health. Thử Làm mới; nếu vẫn lỗi, cấu hình lại Wi‑Fi bằng app.";
@@ -67,7 +67,7 @@ export function DevicePanel() {
   const setLastError = useDeviceStore((s) => s.setLastError);
 
   const [urlInput, setUrlInput] = useState("");
-  const [speakText, setSpeakText] = useState("Xin chào các bạn, mình là AIva!");
+  const [speakText, setSpeakText] = useState("Xin chào các bạn, mình là AIVA!");
   const [volumeInput, setVolumeInput] = useState(55);
   const [busy, setBusy] = useState(false);
   const [hydrated, setHydrated] = useState(false);
@@ -135,7 +135,7 @@ export function DevicePanel() {
     run(async () => {
       const url = deviceLanUrl(d);
       if (!url) {
-        throw new Error("Máy chưa sẵn sàng trên web. Mở app AIva kiểm tra Wi‑Fi, đợi rồi bấm Làm mới.");
+        throw new Error("Máy chưa sẵn sàng trên web. Mở app AIVA kiểm tra Wi‑Fi, đợi rồi bấm Làm mới.");
       }
       await bridge.linkBot(url);
       setUrlInput(url);
@@ -204,7 +204,7 @@ export function DevicePanel() {
           <div>
             <h2 className="text-lg font-semibold">Thiết bị của tôi</h2>
             <p className="mt-1 max-w-xl text-sm text-[var(--console-muted)]">
-              Máy mới: dùng app AIva để chọn Wi‑Fi nhà. Sau đó trên web chỉ cần đợi Online và bấm Kết
+              Máy mới: dùng app AIVA để chọn Wi‑Fi nhà. Sau đó trên web chỉ cần đợi Online và bấm Kết
               nối — không phải nhập địa chỉ mạng.
             </p>
           </div>
@@ -221,13 +221,13 @@ export function DevicePanel() {
         <ol className="mt-4 grid gap-2 sm:grid-cols-3">
           <StepCard
             n={1}
-            title="Mở app AIva"
+            title="Mở app AIVA"
             body="Gần máy, bật Bluetooth, chọn Wi‑Fi nhà. App lo phần còn lại."
           />
           <StepCard
             n={2}
             title="Đợi máy online"
-            body="Bật máy AIva. Khi trạng thái chuyển Online, có thể kết nối."
+            body="Bật máy AIVA. Khi trạng thái chuyển Online, có thể kết nối."
           />
           <StepCard
             n={3}
@@ -540,14 +540,14 @@ function WifiSetupBanner({
   noneLive: boolean;
   presence: PresenceStatus | null;
 }) {
-  let title = "Cần app AIva cho lần đầu";
+  let title = "Cần app AIVA cho lần đầu";
   let body =
     "Trình duyệt không cấu hình Wi‑Fi cho máy mới. Dùng app trên điện thoại một lần, sau đó web tự nhận máy khi online.";
 
   if (empty) {
     title = "Chưa có thiết bị trên tài khoản";
     body =
-      "Mở app AIva → gắn máy (Bluetooth + Wi‑Fi nhà) → quay lại trang này. Hoặc nhập mã trên hộp ở mục Nhận thiết bị.";
+      "Mở app AIVA → gắn máy (Bluetooth + Wi‑Fi nhà) → quay lại trang này. Hoặc nhập mã trên hộp ở mục Nhận thiết bị.";
   } else if (noneLive) {
     title = "Đang chờ máy online";
     body =
@@ -565,7 +565,7 @@ function WifiSetupBanner({
       <p className="text-sm font-semibold text-[var(--console-fg)]">{title}</p>
       <p className="mt-1.5 text-sm leading-relaxed text-[var(--console-muted)]">{body}</p>
       <ul className="mt-3 list-disc space-y-1 pl-5 text-xs text-[var(--console-muted)]">
-        <li>Điện thoại gần máy, mở app AIva</li>
+        <li>Điện thoại gần máy, mở app AIVA</li>
         <li>Chọn Wi‑Fi nhà trong app (chỉ lần đầu hoặc khi đổi mạng)</li>
         <li>Quay lại web → Làm mới → Kết nối khi thấy Online</li>
       </ul>
@@ -590,13 +590,13 @@ function AppDownloadLinks({
   const links = [
     { href: ENV.MOBILE_APP_IOS_URL, label: "App Store" },
     { href: ENV.MOBILE_APP_ANDROID_URL, label: "Google Play" },
-    { href: ENV.MOBILE_APP_URL, label: "Tải app AIva" },
+    { href: ENV.MOBILE_APP_URL, label: "Tải app AIVA" },
   ].filter((l) => Boolean(l.href));
 
   if (links.length === 0) {
     return (
       <p className={`text-xs ${tone === "danger" ? "text-red-700" : "text-[var(--console-muted)]"} ${className}`}>
-        Ứng dụng AIva (iOS / Android) dùng để cấu hình Wi‑Fi qua Bluetooth — hỏi nhà cung cấp link tải
+        Ứng dụng AIVA (iOS / Android) dùng để cấu hình Wi‑Fi qua Bluetooth — hỏi nhà cung cấp link tải
         nếu chưa có trên cửa hàng.
       </p>
     );
