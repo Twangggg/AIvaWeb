@@ -56,11 +56,11 @@ export function SocialLoginButtons() {
   return (
     <div className="flex w-full flex-col gap-4">
       <div className="flex items-center gap-3">
-        <span className="h-px flex-1 bg-[#c9b896]/60" />
-        <span className="text-xs font-medium uppercase tracking-wide text-[#8a7a62]">
+        <span className="auth-border h-px flex-1 border-t" />
+        <span className="auth-muted text-xs font-medium uppercase tracking-wide">
           {t.consoleOrContinueWith}
         </span>
-        <span className="h-px flex-1 bg-[#c9b896]/60" />
+        <span className="auth-border h-px flex-1 border-t" />
       </div>
 
       <div className="grid gap-2.5">
@@ -70,10 +70,10 @@ export function SocialLoginButtons() {
             type="button"
             disabled={loading !== null}
             onClick={() => handleClick(id)}
-            className="inline-flex min-h-11 w-full items-center justify-center gap-2.5 rounded-xl border border-[#c9b896] bg-[#faf6ec] px-4 text-sm font-semibold text-[#2a241c] transition hover:bg-[#fffdf6] hover:border-[#eab308] disabled:cursor-not-allowed disabled:opacity-60"
+            className="auth-surface-soft auth-border auth-text inline-flex min-h-11 w-full items-center justify-center gap-2.5 rounded-xl border px-4 text-sm font-semibold transition hover:border-[var(--ocean)] disabled:cursor-not-allowed disabled:opacity-60"
           >
             {loading === id ? (
-              <span className="size-5 animate-spin rounded-full border-2 border-[#2a241c]/30 border-t-[#2a241c]" aria-hidden="true" />
+              <span className="auth-border size-5 animate-spin rounded-full border-2 border-t-[var(--auth-text)]" aria-hidden="true" />
             ) : (
               <Icon />
             )}
@@ -83,14 +83,14 @@ export function SocialLoginButtons() {
       </div>
 
       {stuck && (
-        <div className="rounded-xl border border-[#eab308]/40 bg-[#fdf6e3] px-3.5 py-3 text-sm text-[#7a5b12]" role="status">
+        <div className="ui-accent-soft ui-accent rounded-xl border border-[var(--ocean)]/40 px-3.5 py-3 text-sm" role="status">
           <p className="font-medium">{t.consoleSsoSlow}</p>
-          <p className="mt-1 text-[#8a6d1e]">{t.consoleSsoHint}</p>
+          <p className="ui-accent mt-1">{t.consoleSsoHint}</p>
           <button
             type="button"
             onClick={() => handleClick("google")}
             disabled={loading !== null}
-            className="mt-2.5 rounded-lg bg-[#eab308] px-3.5 py-1.5 text-sm font-semibold text-[#241a00] transition hover:bg-[#f5c410] disabled:opacity-60"
+            className="mt-2.5 rounded-lg bg-[var(--ocean)] px-3.5 py-1.5 text-sm font-semibold text-[var(--text-on-accent)] transition hover:brightness-110 disabled:opacity-60"
           >
             {t.consoleSsoRetry}
           </button>
@@ -98,7 +98,7 @@ export function SocialLoginButtons() {
       )}
 
       {error && (
-        <p className="rounded-xl border border-red-200/80 bg-[#fde8e6] px-3.5 py-2.5 text-sm text-[#b91c1c]" role="alert">
+        <p className="ui-danger-soft ui-danger rounded-xl border border-red-500/30 px-3.5 py-2.5 text-sm" role="alert">
           {error}
         </p>
       )}

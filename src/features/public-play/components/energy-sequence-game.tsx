@@ -71,28 +71,28 @@ export function EnergySequenceGame() {
   const status = mode === "idle" ? "Sẵn sàng" : mode === "showing" ? "AIVA đang phát mã" : mode === "input" ? "Đến lượt bạn" : "Chuỗi bị ngắt";
 
   return (
-    <section className="overflow-hidden rounded-[2rem] border border-fuchsia-200/20 bg-[radial-gradient(circle_at_50%_0%,rgba(139,92,246,.22),transparent_42%),rgba(255,255,255,.07)] p-5 shadow-2xl shadow-black/30 backdrop-blur-xl sm:p-7">
+    <section className="overflow-hidden rounded-[2rem] border border-fuchsia-300/40 bg-[radial-gradient(circle_at_50%_0%,rgba(139,92,246,.16),transparent_42%),rgba(255,255,255,.9)] p-5 shadow-xl shadow-slate-900/10 backdrop-blur-xl dark:border-fuchsia-200/20 dark:bg-[radial-gradient(circle_at_50%_0%,rgba(139,92,246,.22),transparent_42%),rgba(255,255,255,.07)] dark:shadow-black/30 sm:p-7">
       <div className="flex items-start justify-between gap-4">
         <div>
-          <p className="text-xs font-bold uppercase tracking-[0.18em] text-fuchsia-200">Thử thách trí nhớ</p>
+          <p className="text-xs font-bold uppercase tracking-[0.18em] text-fuchsia-700 dark:text-fuchsia-200">Thử thách trí nhớ</p>
           <h2 className="mt-2 text-2xl font-black">Mật mã năng lượng</h2>
         </div>
-        <div className="rounded-2xl border border-white/15 bg-slate-950/30 px-4 py-2 text-right">
-          <p className="text-[11px] font-bold uppercase tracking-[0.12em] text-slate-400">Cao nhất</p>
-          <p className="mt-0.5 text-xl font-black text-yellow-200">{best}</p>
+        <div className="rounded-2xl border border-slate-200 bg-white/70 px-4 py-2 text-right dark:border-white/15 dark:bg-slate-950/30">
+          <p className="text-[11px] font-bold uppercase tracking-[0.12em] text-slate-500 dark:text-slate-400">Cao nhất</p>
+          <p className="mt-0.5 text-xl font-black text-amber-700 dark:text-yellow-200">{best}</p>
         </div>
       </div>
 
-      <div className="mt-6 rounded-3xl border border-white/10 bg-slate-950/35 p-4 sm:p-6">
+      <div className="mt-6 rounded-3xl border border-slate-200 bg-white/70 p-4 sm:p-6 dark:border-white/10 dark:bg-slate-950/35">
         <div className="flex items-center justify-between gap-3 text-sm font-bold">
-          <span className={mode === "failed" ? "text-rose-300" : "text-slate-200"}>{status}</span>
-          <span className="text-slate-400">Mã: {sequence.length || "–"}</span>
+          <span className={mode === "failed" ? "text-rose-600 dark:text-rose-300" : "text-slate-800 dark:text-slate-200"}>{status}</span>
+          <span className="text-slate-500 dark:text-slate-400">Mã: {sequence.length || "–"}</span>
         </div>
         <div className="mx-auto mt-5 grid max-w-lg grid-cols-2 gap-4 sm:gap-5">
           {PADS.map((pad) => {
             const isLit = lit === pad.id;
             return (
-              <button key={pad.id} type="button" onClick={() => choose(pad.id)} disabled={mode !== "input"} aria-label={`Chọn ${pad.label}`} className="min-h-32 rounded-[1.7rem] border border-white/20 transition duration-150 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white disabled:cursor-default sm:min-h-40" style={{ background: `radial-gradient(circle at 50% 35%, ${pad.color}, ${pad.shade})`, boxShadow: isLit ? `0 0 0 5px rgba(255,255,255,.88), 0 0 52px ${pad.color}` : "inset 0 -10px 24px rgba(0,0,0,.2)", filter: isLit ? "brightness(1.35) saturate(1.1)" : mode === "showing" ? "brightness(.48) saturate(.6)" : "none", transform: isLit ? "scale(1.035)" : "scale(1)" }} />
+              <button key={pad.id} type="button" onClick={() => choose(pad.id)} disabled={mode !== "input"} aria-label={`Chọn ${pad.label}`} className="min-h-32 rounded-[1.7rem] border border-white/50 transition duration-150 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-slate-900 dark:border-white/20 dark:focus-visible:outline-white disabled:cursor-default sm:min-h-40" style={{ background: `radial-gradient(circle at 50% 35%, ${pad.color}, ${pad.shade})`, boxShadow: isLit ? `0 0 0 5px rgba(255,255,255,.88), 0 0 52px ${pad.color}` : "inset 0 -10px 24px rgba(0,0,0,.2)", filter: isLit ? "brightness(1.35) saturate(1.1)" : mode === "showing" ? "brightness(.48) saturate(.6)" : "none", transform: isLit ? "scale(1.035)" : "scale(1)" }} />
             );
           })}
         </div>
@@ -100,13 +100,13 @@ export function EnergySequenceGame() {
 
       {mode === "failed" && (
         <div className="mt-4 rounded-2xl border border-rose-300/40 bg-rose-400/15 px-5 py-4" role="alert">
-          <p className="font-black text-rose-200">Chưa đúng rồi</p>
-          <p className="mt-1 text-sm text-rose-100/85">Bạn đã nhớ đúng {Math.max(0, sequence.length - 1)} lượt. Nhấn chơi lại để thử một mã mới.</p>
+          <p className="font-black text-rose-700 dark:text-rose-200">Chưa đúng rồi</p>
+          <p className="mt-1 text-sm text-rose-800/85 dark:text-rose-100/85">Bạn đã nhớ đúng {Math.max(0, sequence.length - 1)} lượt. Nhấn chơi lại để thử một mã mới.</p>
         </div>
       )}
 
       <div className="mt-6 flex flex-wrap items-center justify-between gap-4">
-        <p className="text-sm text-slate-300">Quan sát các ô sáng, rồi lặp lại đúng thứ tự.</p>
+        <p className="text-sm text-slate-600 dark:text-slate-300">Quan sát các ô sáng, rồi lặp lại đúng thứ tự.</p>
         <button type="button" onClick={start} className="min-h-12 rounded-full bg-yellow-300 px-7 font-bold text-slate-950 transition hover:bg-yellow-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-yellow-200">
           {mode === "idle" || mode === "failed" ? "Bắt đầu" : "Chơi lại"}
         </button>

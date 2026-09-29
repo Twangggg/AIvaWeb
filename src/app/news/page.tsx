@@ -87,7 +87,7 @@ export default function NewsPage() {
                       <div
                         className="absolute top-3 left-3 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider border shadow-md backdrop-blur-md"
                         style={{
-                          backgroundColor: "rgba(10, 14, 20, 0.85)",
+                          backgroundColor: "var(--badge-bg)",
                           borderColor: "var(--ocean)",
                           color: "var(--ocean)"
                         }}
@@ -96,15 +96,15 @@ export default function NewsPage() {
                       </div>
                     </div>
 
-                    <h3 className="text-lg font-bold mb-2 leading-snug group-hover:text-[var(--ocean)] transition-colors text-white">
+                    <h3 className="text-lg font-bold mb-2 leading-snug group-hover:text-[var(--ocean)] transition-colors text-[var(--text-on-glass)]">
                       {article.title}
                     </h3>
-                    <p className="text-xs line-clamp-3 leading-relaxed mb-4 text-slate-300">
+                    <p className="text-xs line-clamp-3 leading-relaxed mb-4 text-[var(--text-dim)]">
                       {article.desc}
                     </p>
                   </div>
 
-                  <div className="pt-3 border-t border-slate-800 flex items-center justify-between text-xs font-bold text-[var(--ocean)]">
+                  <div className="pt-3 border-t flex items-center justify-between text-xs font-bold text-[var(--ocean)]" style={{ borderColor: "var(--border-subtle)" }}>
                     <span>Đọc Bài Viết ➔</span>
                     <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">
                       arrow_forward

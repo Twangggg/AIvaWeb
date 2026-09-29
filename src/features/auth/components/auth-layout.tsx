@@ -16,7 +16,7 @@ export function AuthLayout({ title, mode = "login", children }: AuthLayoutProps)
   const { t, locale, setLocale } = useI18n();
 
   return (
-    <div className="relative flex min-h-dvh flex-col overflow-x-hidden bg-[#0a0c0e] text-[#e1e3e4]">
+    <div className="auth-canvas relative flex min-h-dvh flex-col overflow-x-hidden">
       <div
         className="pointer-events-none absolute inset-0"
         style={{
@@ -27,7 +27,7 @@ export function AuthLayout({ title, mode = "login", children }: AuthLayoutProps)
       />
       <motion.div
         aria-hidden
-        className="pointer-events-none absolute left-1/2 top-[18%] h-[42vw] max-h-[420px] w-[42vw] max-w-[420px] -translate-x-1/2 rounded-full bg-[#eab308]/20 blur-[100px]"
+        className="pointer-events-none absolute left-1/2 top-[18%] h-[42vw] max-h-[420px] w-[42vw] max-w-[420px] -translate-x-1/2 rounded-full bg-[var(--ocean-alpha)] blur-[100px]"
         animate={
           reduceMotion
             ? undefined
@@ -44,13 +44,13 @@ export function AuthLayout({ title, mode = "login", children }: AuthLayoutProps)
         <LayoutGroup>
           <motion.div
             layout
-            className="w-full max-w-[420px] overflow-hidden rounded-2xl border border-[#d4c4a8]/40 bg-[#efe6d4] text-[#2a241c] shadow-[0_30px_90px_-30px_rgba(0,0,0,0.7)]"
+            className="auth-surface auth-border w-full max-w-[420px] overflow-hidden rounded-2xl border shadow-[var(--shadow-modal)]"
             transition={{ type: "spring", stiffness: 320, damping: 34, mass: 0.85 }}
           >
-            <div className="flex items-center justify-between border-b border-[#cbb892]/35 bg-[#e8dcc4]/55 px-5 py-3 sm:px-6">
+            <div className="auth-surface-tint auth-border flex items-center justify-between border-b px-5 py-3 sm:px-6">
               <Link
                 href="/"
-                className="text-sm font-medium text-[#6b5f4a] transition hover:text-[#2a241c]"
+                className="auth-muted text-sm font-medium transition hover:opacity-70"
               >
                 {t.consoleBackHome}
               </Link>
@@ -58,11 +58,11 @@ export function AuthLayout({ title, mode = "login", children }: AuthLayoutProps)
                 <button
                   type="button"
                   onClick={() => setLocale(locale === "vi" ? "en" : "vi")}
-                  className="rounded-md px-2 py-1 text-xs font-bold uppercase tracking-wide text-[#6b5f4a] transition hover:bg-black/[0.04] hover:text-[#2a241c]"
+                  className="auth-muted rounded-md px-2 py-1 text-xs font-bold uppercase tracking-wide transition hover:opacity-70"
                 >
                   {t.consoleLang}
                 </button>
-                <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#9a7b2f]">
+                <span className="ui-accent text-[11px] font-semibold uppercase tracking-[0.18em]">
                   {t.consoleBadge}
                 </span>
               </div>
@@ -77,7 +77,7 @@ export function AuthLayout({ title, mode = "login", children }: AuthLayoutProps)
                     animate={{ opacity: 1, y: 0 }}
                     exit={reduceMotion ? { opacity: 0 } : { opacity: 0, y: "-90%" }}
                     transition={{ duration: 0.32, ease: [0.22, 1, 0.36, 1] }}
-                    className="absolute inset-x-0 text-2xl font-bold tracking-tight text-[#2a241c]"
+                    className="auth-text absolute inset-x-0 text-2xl font-bold tracking-tight"
                   >
                     {title}
                   </motion.h2>
@@ -93,11 +93,11 @@ export function AuthLayout({ title, mode = "login", children }: AuthLayoutProps)
 }
 
 export const authFieldClass =
-  "min-h-12 w-full rounded-xl border border-[#c9b896] bg-[#faf6ec] px-3.5 text-base text-[#2a241c] outline-none transition placeholder:text-[#9a8b72] focus:border-[#eab308] focus:bg-[#fffdf6] focus:ring-2 focus:ring-[#eab308]/25";
+  "auth-surface-soft auth-border auth-text min-h-12 w-full rounded-xl border px-3.5 text-base outline-none transition placeholder:text-[var(--auth-placeholder)] focus:border-[var(--ocean)] focus:ring-2 focus:ring-[var(--ocean-alpha)]";
 
-export const authLabelClass = "text-sm font-medium text-[#5c5346]";
+export const authLabelClass = "auth-text text-sm font-medium";
 
-export const authErrorClass = "text-sm text-[#b91c1c]";
+export const authErrorClass = "ui-danger text-sm";
 
 export const authPrimaryBtnClass =
-  "mt-1 inline-flex min-h-12 w-full items-center justify-center rounded-xl bg-[#eab308] px-4 text-base font-semibold text-[#1a1400] shadow-[0_10px_24px_-12px_rgba(234,179,8,0.85)] transition hover:bg-[#fbbf24] disabled:cursor-not-allowed disabled:opacity-60";
+  "mt-1 inline-flex min-h-12 w-full items-center justify-center rounded-xl bg-[var(--ocean)] px-4 text-base font-semibold text-[var(--text-on-accent)] shadow-[var(--shadow-glow)] transition hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-60";

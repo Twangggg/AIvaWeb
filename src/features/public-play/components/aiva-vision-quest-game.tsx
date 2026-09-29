@@ -295,8 +295,8 @@ export function AivaVisionQuestGame() {
       <div
         className="flex flex-wrap items-center justify-between gap-3 p-4 rounded-3xl border backdrop-blur"
         style={{
-          backgroundColor: "rgba(10, 16, 26, 0.88)",
-          borderColor: "var(--glass-border)",
+          backgroundColor: "var(--game-panel)",
+          borderColor: "var(--game-border)",
         }}
       >
         <div className="flex items-center gap-3">
@@ -327,15 +327,15 @@ export function AivaVisionQuestGame() {
                 </span>
               )}
             </div>
-            <div className="text-sm font-bold text-white">
+            <div className="text-sm font-bold text-[var(--game-ink)]">
               {mode === "scan" ? (
-                <>Đã nhận diện: <span className="text-amber-300 font-mono">{discoveredIds.length}/{ITEMS.length}</span> vật thể</>
+                <>Đã nhận diện: <span className="text-amber-700 dark:text-amber-300 font-mono">{discoveredIds.length}/{ITEMS.length}</span> vật thể</>
               ) : mode === "flashcard" ? (
                 <>Thẻ từ vựng song ngữ AIVA</>
               ) : mode === "quiz" ? (
-                <>Câu {currentQuizIdx + 1}/{ITEMS.length} • Điểm XP: <span className="text-amber-300 font-mono">{score}</span></>
+                <>Câu {currentQuizIdx + 1}/{ITEMS.length} • Điểm XP: <span className="text-amber-700 dark:text-amber-300 font-mono">{score}</span></>
               ) : (
-                <>Tổng thành tích: <span className="text-amber-300 font-mono">{score} XP</span> ⭐⭐⭐</>
+                <>Tổng thành tích: <span className="text-amber-700 dark:text-amber-300 font-mono">{score} XP</span> ⭐⭐⭐</>
               )}
             </div>
           </div>
@@ -347,8 +347,8 @@ export function AivaVisionQuestGame() {
             <>
               <button
                 onClick={() => setMode(mode === "flashcard" ? "scan" : "flashcard")}
-                className="px-3.5 py-1.5 rounded-full border text-xs font-bold text-slate-200 hover:text-white transition-colors"
-                style={{ borderColor: "rgba(255,255,255,0.2)", backgroundColor: "rgba(255,255,255,0.08)" }}
+                className="px-3.5 py-1.5 rounded-full border text-xs font-bold text-[var(--game-ink)] transition-colors hover:opacity-75"
+                style={{ borderColor: "var(--game-border)", backgroundColor: "var(--game-surface)" }}
               >
                 {mode === "flashcard" ? "← Xem Phòng" : "📖 Thẻ Song Ngữ"}
               </button>
@@ -364,7 +364,7 @@ export function AivaVisionQuestGame() {
           )}
           <button
             onClick={handleReset}
-            className="px-3.5 py-1.5 rounded-full border text-xs font-semibold text-slate-400 hover:text-white transition-colors"
+            className="px-3.5 py-1.5 rounded-full border text-xs font-semibold text-[var(--game-muted)] transition-colors hover:text-[var(--game-ink)]"
             style={{ borderColor: "var(--border-subtle)", backgroundColor: "var(--bg-subtle)" }}
           >
             Chơi lại
@@ -377,12 +377,12 @@ export function AivaVisionQuestGame() {
         <div
           className="relative w-full h-[500px] rounded-3xl border overflow-hidden shadow-2xl p-4 flex flex-col justify-between"
           style={{
-            backgroundColor: "#070c18",
-            borderColor: "var(--glass-border)",
+            backgroundColor: "var(--game-canvas)",
+            borderColor: "var(--game-border)",
           }}
         >
           {/* Ambient Lighting FX */}
-          <div className="absolute inset-0 bg-gradient-to-b from-slate-950/90 via-slate-900/50 to-slate-950 pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-b from-white/70 via-slate-100/25 to-white/70 pointer-events-none dark:from-slate-950/90 dark:via-slate-900/50 dark:to-slate-950" />
           <div
             className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full blur-[120px] pointer-events-none opacity-20"
             style={{ background: "var(--ocean)" }}
@@ -390,7 +390,7 @@ export function AivaVisionQuestGame() {
 
           {/* Guide Banner */}
           <div className="relative z-10 text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold bg-black/80 text-slate-200 border border-slate-700 backdrop-blur shadow-lg">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold bg-white/90 text-slate-800 border border-slate-200 backdrop-blur shadow-lg dark:bg-black/80 dark:text-slate-200 dark:border-slate-700">
               <span className="w-2 h-2 rounded-full bg-amber-400 animate-ping" />
               Chạm vào 5 điểm sáng trong phòng để mắt kính AIVA nhận diện vật thể & đọc tiếng Anh!
             </div>
@@ -417,9 +417,9 @@ export function AivaVisionQuestGame() {
                         isActive ? "scale-115 ring-4 ring-amber-400 bg-amber-400 text-black" : "hover:scale-110"
                       }`}
                       style={{
-                        backgroundColor: discovered ? "rgba(234, 179, 8, 0.95)" : "rgba(15, 23, 42, 0.9)",
-                        borderColor: discovered ? "#eab308" : "rgba(255, 255, 255, 0.35)",
-                        color: discovered ? "#000000" : "#ffffff",
+                        backgroundColor: discovered ? "rgba(234, 179, 8, 0.95)" : "var(--game-panel)",
+                        borderColor: discovered ? "#eab308" : "var(--game-border)",
+                        color: discovered ? "#000000" : "var(--game-ink)",
                       }}
                     >
                       <span className="material-symbols-outlined text-2xl md:text-3xl">{item.icon}</span>
@@ -438,8 +438,8 @@ export function AivaVisionQuestGame() {
                     <div
                       className={`mt-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-bold whitespace-nowrap border transition-all shadow-md ${
                         discovered
-                          ? "bg-amber-400/20 text-amber-300 border-amber-400/40"
-                          : "bg-black/85 text-slate-300 border-slate-700"
+                          ? "bg-amber-400/20 text-amber-700 border-amber-400/40 dark:text-amber-300"
+                          : "bg-white/90 text-slate-700 border-slate-200 dark:bg-black/85 dark:text-slate-300 dark:border-slate-700"
                       }`}
                     >
                       {item.nameVi}
@@ -456,7 +456,7 @@ export function AivaVisionQuestGame() {
               <div
                 className="p-4 rounded-2xl border backdrop-blur-xl animate-fadeIn shadow-2xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4"
                 style={{
-                  backgroundColor: "rgba(8, 12, 22, 0.96)",
+                  backgroundColor: "var(--game-panel)",
                   borderColor: "var(--ocean)",
                 }}
               >
@@ -473,20 +473,20 @@ export function AivaVisionQuestGame() {
                   </div>
                   <div>
                     <div className="flex flex-wrap items-center gap-2 mb-1">
-                      <span className="text-base font-bold text-white">{activeItem.nameVi}</span>
-                      <span className="text-xs px-2.5 py-0.5 rounded-full font-mono font-bold bg-amber-400/20 text-amber-300 border border-amber-400/40">
+                      <span className="text-base font-bold text-[var(--game-ink)]">{activeItem.nameVi}</span>
+                      <span className="text-xs px-2.5 py-0.5 rounded-full font-mono font-bold bg-amber-400/20 text-amber-700 border border-amber-400/40 dark:text-amber-300">
                         {activeItem.nameEn} {activeItem.phonetic}
                       </span>
                       <button
                         onClick={() => handleSpeakText(activeItem.nameEn)}
-                        className="inline-flex items-center gap-1 text-[11px] px-2 py-0.5 rounded-full bg-amber-400/10 text-amber-300 border border-amber-400/30 hover:bg-amber-400/20 transition"
+                        className="inline-flex items-center gap-1 text-[11px] px-2 py-0.5 rounded-full bg-amber-400/10 text-amber-700 border border-amber-400/30 hover:bg-amber-400/20 transition dark:text-amber-300"
                       >
                         <span className="material-symbols-outlined text-xs">volume_up</span> Nghe phát âm
                       </button>
                     </div>
 
-                    <p className="text-xs text-slate-300">{activeItem.description}</p>
-                    <p className="text-[11px] text-amber-300/90 mt-1 flex items-center gap-1 font-medium">
+                    <p className="text-xs text-[var(--game-muted)]">{activeItem.description}</p>
+                    <p className="text-[11px] text-amber-700/90 mt-1 flex items-center gap-1 font-medium dark:text-amber-300/90">
                       <span className="material-symbols-outlined text-xs">auto_awesome</span> Mẹo AIVA: {activeItem.tip}
                     </p>
                   </div>
@@ -503,7 +503,7 @@ export function AivaVisionQuestGame() {
                 )}
               </div>
             ) : (
-              <div className="p-3 rounded-xl bg-black/60 border border-slate-800 text-center text-xs text-slate-400">
+              <div className="p-3 rounded-xl bg-white/85 border border-slate-200 text-center text-xs text-slate-600 dark:bg-black/60 dark:border-slate-800 dark:text-slate-400">
                 Chạm vào các biểu tượng trong phòng để AIVA quét vật thể & hướng dẫn phát âm song ngữ.
               </div>
             )}
@@ -517,34 +517,34 @@ export function AivaVisionQuestGame() {
           {ITEMS.map((item) => (
             <div
               key={item.id}
-              className="p-5 rounded-3xl border bg-slate-900/90 backdrop-blur border-slate-800 space-y-3 hover:border-amber-400/50 transition-all"
+              className="p-5 rounded-3xl border bg-white/90 backdrop-blur border-slate-200 space-y-3 hover:border-amber-400/50 transition-all dark:bg-slate-900/90 dark:border-slate-800"
             >
               <div className="flex items-center justify-between">
                 <div className="w-10 h-10 rounded-xl bg-amber-400/20 text-amber-400 border border-amber-400/30 flex items-center justify-center">
                   <span className="material-symbols-outlined text-2xl">{item.icon}</span>
                 </div>
-                <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded-full bg-slate-800 text-slate-300">
+                <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded-full bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300">
                   {item.category}
                 </span>
               </div>
 
               <div>
-                <h4 className="text-lg font-bold text-white">{item.nameVi}</h4>
+                <h4 className="text-lg font-bold text-[var(--game-ink)]">{item.nameVi}</h4>
                 <div className="flex items-center gap-2 mt-0.5">
                   <span className="text-sm font-bold text-amber-400 font-mono">{item.nameEn}</span>
                   <span className="text-xs text-slate-400 font-mono">{item.phonetic}</span>
                   <button
                     onClick={() => handleSpeakText(item.nameEn)}
-                    className="text-amber-300 hover:text-white"
+                    className="text-amber-600 hover:text-amber-800 dark:text-amber-300 dark:hover:text-white"
                   >
                     <span className="material-symbols-outlined text-base">volume_up</span>
                   </button>
                 </div>
               </div>
 
-              <div className="p-3 rounded-2xl bg-black/40 border border-slate-800 text-xs text-slate-300 space-y-1">
-                <p className="font-semibold text-amber-200 font-mono">&quot;{item.sentenceEn}&quot;</p>
-                <p className="text-[11px] text-slate-400">{item.sentenceVi}</p>
+              <div className="p-3 rounded-2xl bg-slate-50 border border-slate-200 text-xs text-slate-600 space-y-1 dark:bg-black/40 dark:border-slate-800 dark:text-slate-300">
+                <p className="font-semibold text-amber-700 font-mono dark:text-amber-200">&quot;{item.sentenceEn}&quot;</p>
+                <p className="text-[11px] text-slate-500 dark:text-slate-400">{item.sentenceVi}</p>
               </div>
             </div>
           ))}
@@ -556,22 +556,22 @@ export function AivaVisionQuestGame() {
         <div
           className="relative w-full rounded-3xl border p-6 md:p-8 shadow-2xl backdrop-blur-xl animate-fadeIn space-y-6"
           style={{
-            backgroundColor: "rgba(10, 16, 28, 0.94)",
+            backgroundColor: "var(--game-panel)",
             borderColor: "var(--ocean)",
           }}
         >
           {/* Quiz Header Bar */}
-          <div className="flex flex-wrap items-center justify-between gap-3 pb-4 border-b border-slate-800">
+          <div className="flex flex-wrap items-center justify-between gap-3 pb-4 border-b border-slate-200 dark:border-slate-800">
             <div className="flex items-center gap-2">
-              <span className="px-3 py-1 rounded-full text-xs font-mono font-bold bg-amber-400/20 text-amber-300 border border-amber-400/40">
+              <span className="px-3 py-1 rounded-full text-xs font-mono font-bold bg-amber-400/20 text-amber-700 border border-amber-400/40 dark:text-amber-300">
                 CÂU HỎI {currentQuizIdx + 1} / {ITEMS.length}
               </span>
-              <span className="text-xs text-slate-400">Chủ đề: {ITEMS[currentQuizIdx].category}</span>
+              <span className="text-xs text-[var(--game-muted)]">Chủ đề: {ITEMS[currentQuizIdx].category}</span>
             </div>
             <div className="flex items-center gap-3">
               <button
                 onClick={() => setShowHint(!showHint)}
-                className="text-xs font-bold text-amber-300 hover:underline flex items-center gap-1"
+                className="text-xs font-bold text-amber-700 hover:underline flex items-center gap-1 dark:text-amber-300"
               >
                 <span className="material-symbols-outlined text-sm">lightbulb</span> {showHint ? "Ẩn Gợi Ý" : "Gợi Ý AIVA"}
               </button>
@@ -583,7 +583,7 @@ export function AivaVisionQuestGame() {
 
           {/* Hint Card */}
           {showHint && (
-            <div className="p-3 rounded-2xl bg-amber-400/10 border border-amber-400/30 text-xs text-amber-200 animate-fadeIn flex items-center gap-2">
+            <div className="p-3 rounded-2xl bg-amber-400/10 border border-amber-400/30 text-xs text-amber-800 animate-fadeIn flex items-center gap-2 dark:text-amber-200">
               <span className="material-symbols-outlined text-base shrink-0">tips_and_updates</span>
               <span>Gợi ý từ AIVA: {ITEMS[currentQuizIdx].hint}</span>
             </div>
@@ -591,10 +591,10 @@ export function AivaVisionQuestGame() {
 
           {/* Question Text */}
           <div className="space-y-2">
-            <h3 className="text-xl md:text-2xl font-bold text-white leading-snug">
+            <h3 className="text-xl md:text-2xl font-bold text-[var(--game-ink)] leading-snug">
               {ITEMS[currentQuizIdx].question}
             </h3>
-            <p className="text-xs text-slate-400">Chọn 1 đáp án đúng nhất để nhận +100 XP & duy trì chuỗi Combo:</p>
+            <p className="text-xs text-[var(--game-muted)]">Chọn 1 đáp án đúng nhất để nhận +100 XP & duy trì chuỗi Combo:</p>
           </div>
 
           {/* Options Grid */}
@@ -602,13 +602,13 @@ export function AivaVisionQuestGame() {
             {ITEMS[currentQuizIdx].options.map((option) => {
               const isSelected = quizSelected === option;
               const isCorrect = option === ITEMS[currentQuizIdx].correctOption;
-              let btnStyle = "border-slate-700 bg-slate-900 text-slate-200 hover:border-amber-400/60";
+              let btnStyle = "border-slate-200 bg-white text-slate-800 hover:border-amber-400/60 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200";
 
               if (quizAnswered) {
                 if (isCorrect) {
-                  btnStyle = "border-emerald-500 bg-emerald-950/60 text-emerald-200 font-bold ring-2 ring-emerald-500";
+                  btnStyle = "border-emerald-500 bg-emerald-50 text-emerald-800 font-bold ring-2 ring-emerald-500 dark:bg-emerald-950/60 dark:text-emerald-200";
                 } else if (isSelected) {
-                  btnStyle = "border-rose-500 bg-rose-950/60 text-rose-200";
+                  btnStyle = "border-rose-500 bg-rose-50 text-rose-800 dark:bg-rose-950/60 dark:text-rose-200";
                 }
               }
 
@@ -633,7 +633,7 @@ export function AivaVisionQuestGame() {
 
           {/* Feedback & Next Button */}
           {quizAnswered && (
-            <div className="pt-4 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-slate-800 animate-fadeIn">
+            <div className="pt-4 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-slate-200 dark:border-slate-800 animate-fadeIn">
               <div className="text-xs leading-relaxed">
                 {quizSelected === ITEMS[currentQuizIdx].correctOption ? (
                   <p className="text-emerald-400 font-bold flex items-center gap-1.5">
@@ -660,7 +660,7 @@ export function AivaVisionQuestGame() {
 
       {/* MODE 4: OFFICIAL CERTIFICATE BADGE */}
       {mode === "certificate" && (
-        <div className="relative overflow-hidden rounded-3xl p-8 md:p-10 border shadow-2xl text-center bg-gradient-to-b from-slate-900 via-amber-950/30 to-slate-900 border-amber-400/50 animate-fadeIn space-y-6">
+        <div className="relative overflow-hidden rounded-3xl p-8 md:p-10 border shadow-2xl text-center bg-[linear-gradient(180deg,rgba(255,255,255,.98),rgba(254,243,199,.6),rgba(255,255,255,.98))] border-amber-400/50 animate-fadeIn space-y-6 dark:bg-gradient-to-b dark:from-slate-900 dark:via-amber-950/30 dark:to-slate-900">
           <div className="flex justify-center mb-2">
             <Image
               src="/AIVALogo.png"
@@ -672,17 +672,17 @@ export function AivaVisionQuestGame() {
             />
           </div>
 
-          <div className="inline-flex items-center gap-1.5 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest text-amber-300 bg-amber-400/20 border border-amber-400/40">
+          <div className="inline-flex items-center gap-1.5 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest text-amber-700 bg-amber-400/20 border border-amber-400/40 dark:text-amber-300">
             CHỨNG NHẬN XUẤT SẮC
           </div>
 
-          <h2 className="text-2xl md:text-4xl font-black text-white uppercase tracking-tight">
+          <h2 className="text-2xl md:text-4xl font-black text-[var(--game-ink)] uppercase tracking-tight">
             NHÀ KHÁM PHÁ AIVA NHÍ
           </h2>
 
           {!studentName ? (
             <div className="max-w-sm mx-auto space-y-3 pt-2">
-              <p className="text-xs text-slate-300">
+              <p className="text-xs text-[var(--game-muted)]">
                 Chúc mừng bé đã xuất sắc hoàn thành thử thách với <strong className="text-amber-400 font-mono">{score} XP</strong>! Nhập tên bé để in bằng:
               </p>
               <div className="flex gap-2">
@@ -691,29 +691,29 @@ export function AivaVisionQuestGame() {
                   placeholder="Nhập tên bé (VD: Bảo Nam, Minh Anh...)"
                   value={studentName}
                   onChange={(e) => setStudentName(e.target.value)}
-                  className="flex-1 px-4 py-2.5 rounded-2xl bg-slate-900 border border-slate-700 text-white text-sm focus:outline-none focus:border-amber-400"
+                  className="flex-1 px-4 py-2.5 rounded-2xl bg-white border border-slate-300 text-slate-900 text-sm focus:outline-none focus:border-amber-400 dark:bg-slate-900 dark:border-slate-700 dark:text-white"
                 />
               </div>
             </div>
           ) : (
             <div className="space-y-4">
-              <p className="text-xs text-slate-300">Trao tặng chứng nhận cho:</p>
+              <p className="text-xs text-[var(--game-muted)]">Trao tặng chứng nhận cho:</p>
               <div className="text-3xl md:text-5xl font-extrabold text-amber-400 font-serif tracking-wide drop-shadow-md">
                 {studentName}
               </div>
-              <div className="inline-block px-4 py-1 rounded-full bg-amber-400/10 text-amber-300 text-xs font-bold border border-amber-400/30 font-mono">
+              <div className="inline-block px-4 py-1 rounded-full bg-amber-400/10 text-amber-700 text-xs font-bold border border-amber-400/30 font-mono dark:text-amber-300">
                 Hạng Xuất Sắc • {score} XP • ⭐⭐⭐
               </div>
-              <p className="text-xs md:text-sm text-slate-300 max-w-lg mx-auto leading-relaxed">
+              <p className="text-xs md:text-sm text-[var(--game-muted)] max-w-lg mx-auto leading-relaxed">
                 Đã hoàn thành xuất sắc thử thách <strong>AIVA Vision Quest</strong>, làm chủ 5 đồ vật song ngữ & chinh phục thành công các câu đố tư duy AI.
               </p>
             </div>
           )}
 
-          <div className="flex flex-wrap justify-center gap-4 pt-4 border-t border-slate-800">
+          <div className="flex flex-wrap justify-center gap-4 pt-4 border-t border-slate-200 dark:border-slate-800">
             <button
               onClick={handleReset}
-              className="px-6 py-3 rounded-full border border-slate-700 text-xs font-bold text-slate-300 hover:text-white transition-colors"
+              className="px-6 py-3 rounded-full border border-slate-300 text-xs font-bold text-slate-700 hover:text-slate-950 transition-colors dark:border-slate-700 dark:text-slate-300 dark:hover:text-white"
             >
               Chơi Lại Từ Đầu
             </button>

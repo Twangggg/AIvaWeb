@@ -18,7 +18,9 @@ interface ThemeContextValue {
 const ThemeContext = createContext<ThemeContextValue | null>(null);
 
 const STORAGE_KEY = "theme";
-const DEFAULT_THEME: Theme = "dark";
+// The site is designed to open in its bright, family-friendly appearance.
+// A visitor can still explicitly switch to dark mode and that choice is kept.
+const DEFAULT_THEME: Theme = "light";
 
 function getStoredTheme(): Theme {
   if (typeof window === "undefined") return DEFAULT_THEME;

@@ -41,10 +41,10 @@ export function EventRsvpWidget() {
           WORKSHOP TRONG TƯƠNG LAI
         </div>
 
-        <h3 className="text-xl md:text-2xl font-bold mb-2 text-white">
+        <h3 className="text-xl md:text-2xl font-bold mb-2 text-[var(--text-on-glass)]">
           Workshop Trải Nghiệm Kính AIVA
         </h3>
-        <p className="text-xs md:text-sm text-slate-300 max-w-sm mx-auto mb-6 leading-relaxed">
+        <p className="text-xs md:text-sm text-[var(--text-dim)] max-w-sm mx-auto mb-6 leading-relaxed">
           Sự kiện trải nghiệm thực tế kính AIVA dành cho phụ huynh và học sinh sẽ được tổ chức trong tương lai. Hãy đăng ký để nhận thông báo sớm nhất ngay khi mở cổng.
         </p>
 
@@ -56,7 +56,7 @@ export function EventRsvpWidget() {
               placeholder="Nhập Số điện thoại hoặc Email của bạn..."
               value={contact}
               onChange={(e) => setContact(e.target.value)}
-              className="w-full p-3.5 rounded-2xl border text-xs bg-slate-900 border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-[var(--ocean)] transition-colors"
+              className="w-full p-3.5 rounded-2xl border text-xs bg-[var(--bg-subtle)] border-[var(--border-subtle)] text-[var(--text-on-glass)] placeholder:text-[var(--text-dim)] focus:outline-none focus:border-[var(--ocean)] transition-colors"
             />
             <button
               type="submit"
@@ -73,9 +73,9 @@ export function EventRsvpWidget() {
         ) : (
           <div className="p-4 rounded-2xl border border-dashed border-[var(--ocean)] bg-amber-500/10 text-center animate-fadeIn">
             <span className="material-symbols-outlined text-2xl text-[var(--ocean)] mb-1">verified</span>
-            <div className="text-xs font-bold text-white mb-1">ĐÃ ĐĂNG KÝ THÀNH CÔNG!</div>
-            <p className="text-[11px] text-slate-300">
-              AIVA sẽ gửi thông báo ưu tiên giữ chỗ cho <span className="text-white font-semibold">{contact}</span> ngay khi sự kiện được tổ chức.
+            <div className="text-xs font-bold text-[var(--text-on-glass)] mb-1">ĐÃ ĐĂNG KÝ THÀNH CÔNG!</div>
+            <p className="text-[11px] text-[var(--text-dim)]">
+              AIVA sẽ gửi thông báo ưu tiên giữ chỗ cho <span className="text-[var(--text-on-glass)] font-semibold">{contact}</span> ngay khi sự kiện được tổ chức.
             </p>
           </div>
         )}

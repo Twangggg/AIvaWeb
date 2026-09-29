@@ -25,7 +25,7 @@ export function AuthPanel() {
 
   return (
     <AuthLayout title={title} mode={mode}>
-      <div className="mb-5 flex rounded-xl bg-[#e2d5b8]/55 p-1">
+      <div className="auth-surface-tint mb-5 flex rounded-xl p-1">
         {(
           [
             { id: "login" as const, label: t.consoleLogin },
@@ -39,13 +39,13 @@ export function AuthPanel() {
               type="button"
               onClick={() => switchMode(tab.id)}
               className={`relative min-h-10 flex-1 rounded-lg text-sm font-semibold transition ${
-                active ? "text-[#1a1400]" : "text-[#6b5f4a] hover:text-[#2a241c]"
+                active ? "text-[var(--text-on-accent)]" : "auth-muted hover:opacity-70"
               }`}
             >
               {active && (
                 <motion.span
                   layoutId="auth-tab-pill"
-                  className="absolute inset-0 rounded-lg bg-[#eab308]"
+                  className="absolute inset-0 rounded-lg bg-[var(--ocean)]"
                   transition={{ type: "spring", stiffness: 500, damping: 36 }}
                 />
               )}

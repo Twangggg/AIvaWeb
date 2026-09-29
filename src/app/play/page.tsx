@@ -54,31 +54,31 @@ export default function PublicPlayPage() {
   return (
     <>
       <Nav onPreorder={() => setPreorderOpen(true)} />
-      <main className="min-h-screen overflow-hidden bg-[#06131d] px-4 pb-12 pt-28 text-white sm:px-6">
+      <main className="ui-page min-h-screen overflow-hidden px-4 pb-12 pt-28 sm:px-6">
         <div className="pointer-events-none absolute left-1/2 top-20 h-80 w-80 -translate-x-1/2 rounded-full bg-yellow-400/20 blur-[100px]" />
         <section className="relative mx-auto max-w-5xl">
           {!selectedGame ? (
             <>
               <div className="mb-8 text-center">
                 <h1 className="text-4xl font-black tracking-tight sm:text-5xl">Chơi cùng AIVA</h1>
-                <p className="mt-3 text-base text-slate-300">Chọn một thử thách để bắt đầu trải nghiệm ống kính AI thông minh.</p>
+                <p className="ui-muted mt-3 text-base">Chọn một thử thách để bắt đầu trải nghiệm ống kính AI thông minh.</p>
               </div>
               <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
                 {GAMES.map((game) => (
-                  <button key={game.id} type="button" onClick={() => openGame(game.id)} className={`min-h-80 rounded-[2rem] border bg-white/[0.07] p-5 text-left transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-yellow-200 ${game.accent}`}>
-                    <div className="relative mb-2 h-36 overflow-hidden rounded-2xl bg-slate-950/20">
+                  <button key={game.id} type="button" onClick={() => openGame(game.id)} className={`ui-surface ui-border min-h-80 rounded-[2rem] border p-5 text-left shadow-lg transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 ${game.accent}`}>
+                    <div className="ui-surface-soft relative mb-2 h-36 overflow-hidden rounded-2xl">
                       <Image src={game.image} alt="" fill unoptimized sizes="(min-width: 768px) 30vw, 100vw" className="object-contain object-center" />
                     </div>
                     <p className="text-xl font-black">{game.title}</p>
-                    <p className="mt-2 text-xs leading-relaxed text-slate-300">{game.description}</p>
-                    <span className="mt-6 inline-block text-xs font-bold text-yellow-200">Chơi ngay ➔</span>
+                    <p className="ui-muted mt-2 text-xs leading-relaxed">{game.description}</p>
+                    <span className="ui-accent mt-6 inline-block text-xs font-bold">Chơi ngay ➔</span>
                   </button>
                 ))}
               </div>
             </>
           ) : (
             <>
-              <button type="button" onClick={() => setSelectedGame(null)} className="mb-6 min-h-11 rounded-full border border-white/20 px-5 text-sm font-bold transition hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-yellow-200">
+              <button type="button" onClick={() => setSelectedGame(null)} className="ui-border ui-surface min-h-11 mb-6 rounded-full border px-5 text-sm font-bold transition hover:opacity-80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4">
                 ← Danh sách trò chơi
               </button>
 
@@ -86,7 +86,7 @@ export default function PublicPlayPage() {
                 <>
                   <div className="mb-7 text-center">
                     <h1 className="text-3xl font-black tracking-tight sm:text-5xl">AIVA Vision Quest</h1>
-                    <p className="mt-2 text-sm text-slate-300">Quét 5 vật thể trong phòng để học từ vựng song ngữ & nhận Bằng Khám Phá Nhí.</p>
+                    <p className="ui-muted mt-2 text-sm">Quét 5 vật thể trong phòng để học từ vựng song ngữ & nhận Bằng Khám Phá Nhí.</p>
                   </div>
                   <AivaVisionQuestGame />
                 </>
@@ -96,17 +96,17 @@ export default function PublicPlayPage() {
                 <>
                   <div className="mb-7 text-center">
                     <h1 className="text-4xl font-black tracking-tight sm:text-5xl">Giải cứu khu vườn AIVA</h1>
-                    <p className="mt-3 text-base text-slate-300">Màn {level}: tìm 3 mảnh năng lượng, rồi đưa AIVA đến cổng.</p>
+                    <p className="ui-muted mt-3 text-base">Màn {level}: tìm 3 mảnh năng lượng, rồi đưa AIVA đến cổng.</p>
                   </div>
-                  <div className="rounded-[2rem] border border-white/15 bg-white/[0.07] p-4 shadow-2xl shadow-black/30 backdrop-blur-xl sm:p-6">
+                  <div className="ui-surface ui-border rounded-[2rem] border p-4 shadow-xl backdrop-blur-xl sm:p-6">
                     <div className="mb-4 flex flex-wrap items-center justify-between gap-3 text-sm font-bold">
-                      <span className="rounded-full bg-white/10 px-4 py-2">Năng lượng: {collected}/3</span>
-                      <button type="button" onClick={restartGarden} className="min-h-11 rounded-full border border-white/20 px-5 font-bold text-white transition hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-yellow-200">Chơi lại</button>
+                      <span className="ui-surface-soft rounded-full px-4 py-2">Năng lượng: {collected}/3</span>
+                      <button type="button" onClick={restartGarden} className="ui-border ui-text min-h-11 rounded-full border px-5 font-bold transition hover:opacity-75 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4">Chơi lại</button>
                     </div>
                     <AivaGardenGame round={round} onUpdate={({ collected: nextCollected, completed: nextCompleted, message: nextMessage }) => { setCollected(nextCollected); setCompleted(nextCompleted); setMessage(nextMessage); }} />
-                    <p className="mt-4 text-center text-sm text-slate-300" aria-live="polite">{message}</p>
-                    {completed && <div className="mt-4 rounded-2xl border border-yellow-300/40 bg-yellow-300/15 px-5 py-4 text-center" role="status"><p className="font-black text-yellow-200">Qua màn {level}</p><button type="button" onClick={nextLevel} className="mt-3 min-h-11 rounded-full bg-yellow-300 px-5 text-sm font-bold text-slate-950 transition hover:bg-yellow-200">Vào màn {level + 1}</button></div>}
-                    <p className="mt-3 text-center text-xs text-slate-400">Có thể dùng phím mũi tên hoặc W, A, S, D để di chuyển từng ô.</p>
+                    <p className="ui-muted mt-4 text-center text-sm" aria-live="polite">{message}</p>
+                    {completed && <div className="ui-accent-soft mt-4 rounded-2xl border border-[var(--ocean)]/40 px-5 py-4 text-center" role="status"><p className="ui-accent font-black">Qua màn {level}</p><button type="button" onClick={nextLevel} className="mt-3 min-h-11 rounded-full bg-[var(--ocean)] px-5 text-sm font-bold text-[var(--text-on-accent)] transition hover:brightness-110">Vào màn {level + 1}</button></div>}
+                    <p className="ui-muted mt-3 text-center text-xs">Có thể dùng phím mũi tên hoặc W, A, S, D để di chuyển từng ô.</p>
                   </div>
                 </>
               )}

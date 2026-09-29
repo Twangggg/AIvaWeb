@@ -114,7 +114,7 @@ export function LoginForm({
   const loading = status === "loading";
 
   if (!prefsReady) {
-    return <p className="text-sm text-[#8a7a62]">{t.consoleLoginLoading}</p>;
+    return <p className="auth-muted text-sm">{t.consoleLoginLoading}</p>;
   }
 
   return (
@@ -136,7 +136,7 @@ export function LoginForm({
           <span className={authLabelClass}>{t.consolePassword}</span>
           <Link
             href="/console/forgot-password"
-            className="text-xs font-semibold text-[#6b5f4a] underline-offset-2 hover:text-[#2a241c] hover:underline"
+            className="auth-muted text-xs font-semibold underline-offset-2 hover:opacity-70 hover:underline"
           >
             {t.consoleForgotPassword}
           </Link>
@@ -159,13 +159,13 @@ export function LoginForm({
         {errors.password && <span className={authErrorClass}>{errors.password.message}</span>}
       </label>
 
-      <label className="flex items-center gap-2.5 text-sm text-[#3f3f46]">
-        <input type="checkbox" className="size-4 accent-[#1a1a1a]" {...register("rememberMe")} />
+      <label className="auth-text flex items-center gap-2.5 text-sm">
+        <input type="checkbox" className="size-4 accent-[var(--ocean)]" {...register("rememberMe")} />
         <span>{t.consoleRememberMe}</span>
       </label>
 
       {error && (
-        <p className="rounded-xl border border-red-200/80 bg-[#fde8e6] px-3.5 py-2.5 text-sm text-[#b91c1c]" role="alert">
+        <p className="ui-danger-soft ui-danger rounded-xl border border-red-500/30 px-3.5 py-2.5 text-sm" role="alert">
           {error}
         </p>
       )}
@@ -177,12 +177,12 @@ export function LoginForm({
       <SocialLoginButtons />
 
       {!embedded && (
-        <p className="text-center text-sm text-[#8a7a62]">
+        <p className="auth-muted text-center text-sm">
           {t.consoleNoAccount}{" "}
           <button
             type="button"
             onClick={onSwitch}
-            className="font-semibold text-[#2a241c] underline-offset-2 hover:underline"
+            className="auth-text font-semibold underline-offset-2 hover:underline"
           >
             {t.consoleRegister}
           </button>

@@ -47,6 +47,34 @@ body {
   --shadow-modal: 0 25px 50px -12px rgba(0, 0, 0, 0.2);
   --glow-ocean: rgba(234, 179, 8, 0.15);
   --glow-sun: rgba(255, 216, 77, 0.15);
+  --badge-bg: rgba(255, 255, 255, 0.92);
+  --game-surface: rgba(255, 255, 255, 0.9);
+  --game-canvas: #eef3f8;
+  --game-panel: rgba(255, 255, 255, 0.94);
+  --game-ink: #172033;
+  --game-muted: #526174;
+  --game-border: rgba(23, 32, 51, 0.14);
+  --surface-page: #f6f8fc;
+  --surface-raised: #ffffff;
+  --surface-soft: #f1f5f9;
+  --surface-overlay: rgba(255, 255, 255, 0.9);
+  --text-primary: #172033;
+  --text-secondary: #526174;
+  --border-default: #dbe3ee;
+  --accent-fg: #9a6700;
+  --accent-soft: rgba(234, 179, 8, 0.14);
+  --success-fg: #047857;
+  --success-soft: #ecfdf5;
+  --danger-fg: #be123c;
+  --danger-soft: #fff1f2;
+  --auth-canvas: #f6f3ed;
+  --auth-surface: #efe6d4;
+  --auth-surface-soft: #faf6ec;
+  --auth-surface-tint: #e8dcc4;
+  --auth-border: #c9b896;
+  --auth-text: #2a241c;
+  --auth-muted: #6b5f4a;
+  --auth-placeholder: #9a8b72;
 }
 
 :root.dark {
@@ -70,6 +98,102 @@ body {
   --shadow-modal: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
   --glow-ocean: rgba(234, 179, 8, 0.45);
   --glow-sun: rgba(255, 216, 77, 0.4);
+  --badge-bg: rgba(10, 14, 20, 0.85);
+  --game-surface: rgba(255, 255, 255, 0.07);
+  --game-canvas: #070c18;
+  --game-panel: rgba(10, 16, 26, 0.9);
+  --game-ink: #ffffff;
+  --game-muted: #cbd5e1;
+  --game-border: rgba(255, 255, 255, 0.16);
+  --surface-page: #06131d;
+  --surface-raised: rgba(255, 255, 255, 0.07);
+  --surface-soft: rgba(255, 255, 255, 0.1);
+  --surface-overlay: rgba(10, 16, 26, 0.9);
+  --text-primary: #ffffff;
+  --text-secondary: #cbd5e1;
+  --border-default: rgba(255, 255, 255, 0.16);
+  --accent-fg: #fde68a;
+  --accent-soft: rgba(234, 179, 8, 0.2);
+  --success-fg: #6ee7b7;
+  --success-soft: rgba(6, 78, 59, 0.6);
+  --danger-fg: #fda4af;
+  --danger-soft: rgba(136, 19, 55, 0.6);
+  --auth-canvas: #0a0c0e;
+  --auth-surface: #242018;
+  --auth-surface-soft: #302a20;
+  --auth-surface-tint: #1c1913;
+  --auth-border: #66583e;
+  --auth-text: #f5f0e5;
+  --auth-muted: #c7b99d;
+  --auth-placeholder: #a99d87;
+}
+
+/* Semantic colour utilities. Components should compose these instead of
+   coupling their visuals to Tailwind's palette or literal colour values. */
+@layer utilities {
+  .ui-page {
+    background-color: var(--surface-page);
+    color: var(--text-primary);
+  }
+  .ui-surface {
+    background-color: var(--surface-raised);
+  }
+  .ui-surface-soft {
+    background-color: var(--surface-soft);
+  }
+  .ui-surface-overlay {
+    background-color: var(--surface-overlay);
+  }
+  .ui-text {
+    color: var(--text-primary);
+  }
+  .ui-muted {
+    color: var(--text-secondary);
+  }
+  .ui-border {
+    border-color: var(--border-default);
+  }
+  .ui-accent {
+    color: var(--accent-fg);
+  }
+  .ui-accent-soft {
+    background-color: var(--accent-soft);
+  }
+  .ui-success {
+    color: var(--success-fg);
+  }
+  .ui-success-soft {
+    background-color: var(--success-soft);
+  }
+  .ui-danger {
+    color: var(--danger-fg);
+  }
+  .ui-danger-soft {
+    background-color: var(--danger-soft);
+  }
+  .auth-canvas {
+    background-color: var(--auth-canvas);
+    color: var(--auth-text);
+  }
+  .auth-surface {
+    background-color: var(--auth-surface);
+    color: var(--auth-text);
+  }
+  .auth-surface-soft {
+    background-color: var(--auth-surface-soft);
+  }
+  .auth-surface-tint {
+    background-color: var(--auth-surface-tint);
+  }
+  .auth-border {
+    border-color: var(--auth-border);
+  }
+  .auth-text {
+    color: var(--auth-text);
+  }
+  .auth-muted {
+    color: var(--auth-muted);
+  }
 }
 
 /* Console / admin surfaces — follow html.light | html.dark */

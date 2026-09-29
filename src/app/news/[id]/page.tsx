@@ -90,7 +90,7 @@ export default function ArticleDetailPage({ params }: ArticleDetailPageProps) {
               <span className="material-symbols-outlined text-base">arrow_back</span>
               Quay lại Trang Tin Tức
             </Link>
-            <div className="text-xs text-slate-400 font-medium">
+            <div className="text-xs text-[var(--text-dim)] font-medium">
               Chuyên mục: Tin Tức & Thông Tin AIVA
             </div>
           </div>
@@ -107,16 +107,16 @@ export default function ArticleDetailPage({ params }: ArticleDetailPageProps) {
             >
               #TIN TỨC AIVA
             </div>
-            <h1 className="text-3xl md:text-5xl font-bold mb-4 leading-tight tracking-tight text-white">
+            <h1 className="text-3xl md:text-5xl font-bold mb-4 leading-tight tracking-tight text-[var(--text-on-glass)]">
               AIVA Dành Cho Trẻ Em: Chiếc Kính AI Giúp Con Học Mà Không Cần Màn Hình
             </h1>
-            <p className="text-base text-slate-300 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-base text-[var(--text-dim)] max-w-2xl mx-auto leading-relaxed">
               Giải pháp kính thông minh nhận diện môi trường thực, hỗ trợ trẻ học song ngữ Việt - Anh, bảo vệ thị lực và thắp lên trí tò mò tự nhiên.
             </p>
           </div>
 
           {/* Featured Header Banner Image */}
-          <div className="relative w-full h-72 md:h-96 rounded-3xl overflow-hidden mb-12 border border-slate-800 shadow-2xl">
+          <div className="relative w-full h-72 md:h-96 rounded-3xl overflow-hidden mb-12 border shadow-2xl" style={{ borderColor: "var(--border-subtle)" }}>
             <Image
               src="/bai-dang-1.png"
               alt="AIVA Dành Cho Trẻ Em"
@@ -139,7 +139,7 @@ export default function ArticleDetailPage({ params }: ArticleDetailPageProps) {
               >
                 <div className="flex flex-col md:flex-row gap-6 items-center">
                   <div className="w-full md:w-1/2">
-                    <div className="relative w-full h-56 rounded-2xl overflow-hidden border border-slate-800 shadow-md">
+                    <div className="relative w-full h-56 rounded-2xl overflow-hidden border shadow-md" style={{ borderColor: "var(--border-subtle)" }}>
                       <Image
                         src={sec.image}
                         alt={sec.title}
@@ -153,15 +153,15 @@ export default function ArticleDetailPage({ params }: ArticleDetailPageProps) {
                     <div className="text-xs font-bold uppercase tracking-wider mb-2 text-[var(--ocean)]">
                       Phần {index + 1} / 6
                     </div>
-                    <h2 className="text-xl md:text-2xl font-bold mb-3 text-white leading-snug">
+                    <h2 className="text-xl md:text-2xl font-bold mb-3 text-[var(--text-on-glass)] leading-snug">
                       {sec.title}
                     </h2>
-                    <p className="text-sm text-slate-300 leading-relaxed mb-4">
+                    <p className="text-sm text-[var(--text-dim)] leading-relaxed mb-4">
                       {sec.desc}
                     </p>
 
                     {sec.highlights && (
-                      <ul className="space-y-2 pt-3 border-t border-slate-800 text-xs text-slate-200">
+                      <ul className="space-y-2 pt-3 border-t text-xs text-[var(--text-on-glass)]" style={{ borderColor: "var(--border-subtle)" }}>
                         {sec.highlights.map((hl) => (
                           <li key={hl} className="flex items-start gap-2">
                             <span className="w-2 h-2 rounded-full bg-[var(--ocean)] mt-1 shrink-0" />
@@ -177,11 +177,11 @@ export default function ArticleDetailPage({ params }: ArticleDetailPageProps) {
           </div>
 
           {/* Bottom Preorder CTA */}
-          <div className="mt-14 p-8 rounded-3xl border text-center bg-gradient-to-r from-slate-900 via-amber-950/30 to-slate-900 border-amber-500/30 shadow-2xl">
-            <h3 className="text-2xl font-bold text-white mb-2">
+          <div className="mt-14 p-8 rounded-3xl border text-center bg-[linear-gradient(90deg,rgba(234,179,8,.13),rgba(255,255,255,.72),rgba(234,179,8,.13))] border-amber-500/30 shadow-2xl dark:bg-[linear-gradient(90deg,#0f172a,rgba(120,53,15,.3),#0f172a)]">
+            <h3 className="text-2xl font-bold text-[var(--text-on-glass)] mb-2">
               Sẵn Sàng Đồng Hành Cùng Trí Tuệ Con?
             </h3>
-            <p className="text-sm text-slate-300 max-w-md mx-auto mb-6">
+            <p className="text-sm text-[var(--text-dim)] max-w-md mx-auto mb-6">
               Đặt trước kính thông minh AIVA ngay hôm nay để nhận ưu đãi đặc biệt cho phụ huynh.
             </p>
             <button

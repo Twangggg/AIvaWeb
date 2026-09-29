@@ -61,7 +61,7 @@ export function ExplodedGlassesShowcase() {
   const activeLayer = LAYERS.find((l) => l.id === activeLayerId) || LAYERS[2];
 
   return (
-    <section id="exploded-view" className="py-16 md:py-24 px-6 relative overflow-hidden bg-slate-950/90 border-y border-slate-800/80">
+    <section id="exploded-view" className="py-16 md:py-24 px-6 relative overflow-hidden border-y border-[var(--border-subtle)] bg-[#f8f7f2] dark:bg-slate-950/90">
       {/* Ambient Radial Background */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-[var(--ocean)]/10 blur-[130px] pointer-events-none" />
 
@@ -78,17 +78,17 @@ export function ExplodedGlassesShowcase() {
           >
             CÔNG NGHỆ BỘ PHẬN ĐỘT PHÁ
           </div>
-          <h2 className="text-3xl md:text-5xl font-black text-white tracking-tight">
+          <h2 className="text-3xl md:text-5xl font-black text-[var(--text-on-glass)] tracking-tight">
             Khám Phá Cấu Trúc Kính AIVA
           </h2>
-          <p className="text-sm md:text-base text-slate-300 max-w-xl mx-auto">
+          <p className="text-sm md:text-base text-[var(--text-dim)] max-w-xl mx-auto">
             Điều chỉnh độ phân tách để khám phá từng lớp linh kiện quang học & chip AI bên trong kính.
           </p>
         </div>
 
         {/* Explode Distance Slider */}
-        <div className="flex items-center justify-center gap-4 max-w-md mx-auto p-4 rounded-2xl bg-slate-900/90 border border-slate-800 shadow-xl backdrop-blur">
-          <span className="text-xs font-bold text-slate-400 uppercase tracking-wider shrink-0">
+        <div className="flex items-center justify-center gap-4 max-w-md mx-auto p-4 rounded-2xl bg-white/90 border border-[var(--border-subtle)] shadow-xl backdrop-blur dark:bg-slate-900/90 dark:border-slate-800">
+          <span className="text-xs font-bold text-[var(--text-dim)] uppercase tracking-wider shrink-0">
             Lắp Ráp
           </span>
           <input
@@ -98,7 +98,7 @@ export function ExplodedGlassesShowcase() {
             step="0.05"
             value={explodeFactor}
             onChange={(e) => setExplodeFactor(parseFloat(e.target.value))}
-            className="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-amber-400"
+            className="w-full h-2 bg-black/10 rounded-lg appearance-none cursor-pointer accent-amber-400 dark:bg-slate-800"
           />
           <span className="text-xs font-bold text-amber-400 uppercase tracking-wider shrink-0">
             Phân Tách 3D
@@ -124,7 +124,7 @@ export function ExplodedGlassesShowcase() {
                   className={`w-full p-4 rounded-2xl border backdrop-blur-xl text-left transition-all duration-300 flex items-center justify-between gap-4 shadow-lg group focus:outline-none ${
                     isSelected
                       ? "border-amber-400 bg-amber-400/15 ring-2 ring-amber-400/50 shadow-amber-500/20 translate-x-2"
-                      : "border-slate-800/90 bg-slate-900/70 hover:border-slate-700 hover:bg-slate-900/90"
+                      : "border-[var(--border-subtle)] bg-white/80 hover:border-amber-400/50 hover:bg-white dark:border-slate-800/90 dark:bg-slate-900/70 dark:hover:border-slate-700 dark:hover:bg-slate-900/90"
                   }`}
                 >
                   <div className="flex items-center gap-3.5">
@@ -132,26 +132,26 @@ export function ExplodedGlassesShowcase() {
                       className={`w-11 h-11 rounded-xl flex items-center justify-center border transition-all shrink-0 ${
                         isSelected
                           ? "bg-amber-400 text-black border-amber-300 font-bold"
-                          : "bg-slate-800 text-amber-400 border-slate-700"
+                          : "bg-amber-50 text-amber-600 border-amber-200 dark:bg-slate-800 dark:text-amber-400 dark:border-slate-700"
                       }`}
                     >
                       <span className="material-symbols-outlined text-xl">{layer.icon}</span>
                     </div>
                     <div>
-                      <p className={`text-sm font-bold ${isSelected ? "text-amber-300" : "text-white"}`}>
+                      <p className={`text-sm font-bold ${isSelected ? "text-amber-700 dark:text-amber-300" : "text-[var(--text-on-glass)]"}`}>
                         {layer.name}
                       </p>
-                      <p className="text-[11px] text-slate-400 font-mono mt-0.5">{layer.spec}</p>
+                      <p className="text-[11px] text-[var(--text-dim)] font-mono mt-0.5">{layer.spec}</p>
                     </div>
                   </div>
 
                   <div className="flex items-center gap-2 shrink-0">
                     <span
                       className={`w-2.5 h-2.5 rounded-full ${
-                        isSelected ? "bg-amber-400 animate-ping" : "bg-slate-700"
+                        isSelected ? "bg-amber-400 animate-ping" : "bg-slate-400 dark:bg-slate-700"
                       }`}
                     />
-                    <span className="material-symbols-outlined text-base text-slate-400 group-hover:translate-x-1 transition-transform">
+                    <span className="material-symbols-outlined text-base text-[var(--text-dim)] group-hover:translate-x-1 transition-transform">
                       arrow_forward
                     </span>
                   </div>
@@ -162,7 +162,7 @@ export function ExplodedGlassesShowcase() {
 
           {/* Right Column: Specification Details Card */}
           <div className="lg:col-span-5">
-            <div className="p-6 md:p-8 rounded-3xl border border-amber-400/40 bg-slate-900/95 backdrop-blur-xl shadow-2xl space-y-5 animate-fadeIn">
+            <div className="p-6 md:p-8 rounded-3xl border border-amber-400/40 bg-white/95 backdrop-blur-xl shadow-2xl space-y-5 animate-fadeIn dark:bg-slate-900/95">
               <div className="flex items-center gap-3.5">
                 <div className="w-12 h-12 rounded-2xl bg-amber-400 text-black border border-amber-300 flex items-center justify-center shadow-lg shrink-0">
                   <span className="material-symbols-outlined text-2xl">{activeLayer.icon}</span>
@@ -171,21 +171,21 @@ export function ExplodedGlassesShowcase() {
                   <span className="text-[11px] font-bold uppercase tracking-wider text-amber-400 font-mono">
                     {activeLayer.category}
                   </span>
-                  <h3 className="text-xl md:text-2xl font-bold text-white leading-tight">
+                  <h3 className="text-xl md:text-2xl font-bold text-[var(--text-on-glass)] leading-tight">
                     {activeLayer.name}
                   </h3>
                 </div>
               </div>
 
-              <div className="p-3.5 rounded-2xl bg-black/70 border border-slate-800 font-mono text-xs text-amber-300">
+              <div className="p-3.5 rounded-2xl bg-amber-50 border border-amber-200 font-mono text-xs text-amber-700 dark:bg-black/70 dark:border-slate-800 dark:text-amber-300">
                 THÔNG SỐ: {activeLayer.spec}
               </div>
 
-              <p className="text-sm text-slate-300 leading-relaxed">
+              <p className="text-sm text-[var(--text-dim)] leading-relaxed">
                 {activeLayer.description}
               </p>
 
-              <div className="pt-4 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400">
+              <div className="pt-4 border-t border-[var(--border-subtle)] flex items-center justify-between text-xs text-[var(--text-dim)] dark:border-slate-800">
                 <span>Chọn các lớp linh kiện bên cạnh để khám phá</span>
                 <span className="text-amber-400 font-bold">AIVA Engineering ➔</span>
               </div>
