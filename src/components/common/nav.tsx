@@ -255,11 +255,10 @@ export function Nav({ onPreorder }: NavProps) {
 
       {/* ── Mobile / Tablet nav (Floating Pill for < 1024px) ── */}
       <nav
-        className="fixed top-3.5 sm:top-4 left-1/2 -translate-x-1/2 z-50 lg:hidden max-w-full"
-        style={{ width: "min(calc(100% - 2rem), 56rem)" }}
+        className="fixed top-2.5 sm:top-4 left-1/2 -translate-x-1/2 z-50 lg:hidden w-[min(calc(100%-1rem),56rem)] max-w-full"
       >
         <div
-          className="w-full flex items-center justify-between px-4 py-2 sm:px-6 sm:py-2.5 rounded-full border transition-all duration-300"
+          className="w-full flex items-center justify-between px-2.5 py-1.5 sm:px-5 sm:py-2 rounded-full border transition-all duration-300"
           style={{
             backgroundColor: "var(--nav-bg)",
             borderColor: "var(--nav-border)",
@@ -270,45 +269,45 @@ export function Nav({ onPreorder }: NavProps) {
               : "0 8px 24px -6px rgba(0,0,0,0.1), inset 0 1px 0 rgba(255,255,255,0.12)"
           }}
         >
-          <Link href="/" onClick={returnHome} className="flex items-center shrink-0">
+          <Link href="/" onClick={returnHome} className="flex items-center shrink-0 pl-0.5 sm:pl-1">
             <Image
               src="/AIVALogo.png"
               alt="AIVA Logo"
-              width={110}
-              height={24}
-              className="object-contain"
-              style={{ width: "auto", height: 24 }}
+              width={88}
+              height={18}
+              className="object-contain h-[17px] sm:h-[22px] w-auto"
               priority
             />
           </Link>
-          <div className="flex items-center gap-1 sm:gap-2">
+          <div className="flex items-center gap-0.5 sm:gap-1.5">
             {/* Login / Account Tab */}
             <Link
               href={accountHref}
               onClick={closeMenu}
-              className="flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-full text-xs sm:text-sm font-semibold transition-all hover:bg-[var(--bg-subtle)] active:scale-95"
+              className="flex items-center gap-1 px-1.5 sm:px-2.5 py-1 rounded-full text-[11px] sm:text-xs font-semibold transition-all hover:bg-[var(--bg-subtle)] active:scale-95"
               style={{ color: "var(--text-on-glass)" }}
+              aria-label={accountLabel}
             >
-              <span className="material-symbols-outlined text-lg" style={{ color: "var(--ocean)" }}>account_circle</span>
-              <span className="hidden min-[360px]:inline whitespace-nowrap">{accountLabel}</span>
+              <span className="material-symbols-outlined text-[17px] sm:text-lg" style={{ color: "var(--ocean)" }}>account_circle</span>
+              <span className="hidden min-[420px]:inline whitespace-nowrap">{accountLabel}</span>
             </Link>
 
-            <div className="h-4 w-px bg-[var(--border-subtle)]" />
+            <div className="h-3.5 w-px bg-[var(--border-subtle)] opacity-40 mx-0.5" />
 
             {/* Cài đặt (Theme & Ngôn ngữ) */}
             <ThemeLanguageControls />
 
-            <div className="h-4 w-px bg-[var(--border-subtle)]" />
+            <div className="h-3.5 w-px bg-[var(--border-subtle)] opacity-40 mx-0.5" />
 
             {/* Dropdown Menu Toggle */}
             <button
               type="button"
               onClick={() => setMenuOpen(!menuOpen)}
-              className="p-1.5 flex items-center justify-center rounded-full transition-colors hover:bg-[var(--bg-subtle)]"
+              className="p-1 sm:p-1.5 flex items-center justify-center rounded-full transition-colors hover:bg-[var(--bg-subtle)]"
               style={{ color: "var(--text-on-glass)" }}
               aria-label="Toggle menu"
             >
-              <span className="material-symbols-outlined text-2xl">{menuOpen ? "close" : "menu"}</span>
+              <span className="material-symbols-outlined text-xl sm:text-2xl">{menuOpen ? "close" : "menu"}</span>
             </button>
           </div>
         </div>

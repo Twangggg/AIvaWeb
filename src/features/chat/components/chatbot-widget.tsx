@@ -92,10 +92,10 @@ export function ChatbotWidget() {
       <div
         className="fixed z-50 flex flex-col overflow-hidden transition-all duration-300 ease-out shadow-2xl"
         style={{
-          bottom: "11rem",
-          right: "1.25rem",
-          width: "min(400px, calc(100vw - 2.5rem))",
-          height: open ? "min(520px, calc(100vh - 7rem))" : "0px",
+          bottom: "4.75rem",
+          right: "0.75rem",
+          width: "min(390px, calc(100vw - 1.5rem))",
+          height: open ? "min(520px, calc(100vh - 6rem))" : "0px",
           opacity: open ? 1 : 0,
           pointerEvents: open ? "auto" : "none",
           borderRadius: "1rem",

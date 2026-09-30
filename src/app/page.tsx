@@ -69,12 +69,12 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div id="compare" data-fp-section className="cx-fp-section">
+            <div id="compare" data-fp-section className="cx-fp-section relative">
               <CompareSection />
             </div>
 
-            <div id="companion" data-fp-section data-fp-scenes="3" data-fp-scene="0" className="cx-fp-section min-h-[135vh] lg:min-h-[150vh] relative">
-              <div className="sticky top-0 h-[100dvh] w-full flex items-center justify-center overflow-hidden">
+            <div id="companion" data-fp-section data-fp-scenes="3" data-fp-scene="0" className="cx-fp-section relative min-h-0 lg:min-h-[150vh]">
+              <div className="relative lg:sticky lg:top-0 h-auto lg:h-[100dvh] w-full flex items-center justify-center overflow-hidden">
                 <ParentAppSection />
               </div>
             </div>

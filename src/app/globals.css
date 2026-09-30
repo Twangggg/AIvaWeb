@@ -2924,6 +2924,12 @@ html {
     padding-block: clamp(2.5rem, 5vh, 4rem);
   }
 
+  .cx-fp-section[data-fp-transit] > * {
+    animation: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+
   .cx-fp-panel {
     height: auto;
     min-height: auto;

@@ -9,14 +9,13 @@ export function ThemeLanguageControls() {
   const { theme, setTheme } = useTheme();
 
   return (
-    <div className="flex items-center gap-1.5">
+    <div className="flex items-center gap-1 sm:gap-1.5">
       <button
         type="button"
         onClick={() => setLocale(locale === "vi" ? "en" : "vi")}
-        className="flex h-8 w-8 items-center justify-center rounded-lg text-xs font-bold uppercase tracking-wide transition-all"
+        className="flex h-7 w-7 sm:h-8 sm:w-8 items-center justify-center rounded-lg text-[11px] sm:text-xs font-bold uppercase tracking-wide transition-all hover:bg-[var(--bg-subtle)]"
         style={{ color: "var(--text-muted)" }}
-        onMouseEnter={(e) => e.currentTarget.style.color = "var(--text-on-glass)"}
-        onMouseLeave={(e) => e.currentTarget.style.color = "var(--text-muted)"}
+        aria-label={locale === "vi" ? "Switch to English" : "Chuyển sang Tiếng Việt"}
       >
         {locale === "vi" ? "EN" : "VI"}
       </button>
@@ -24,12 +23,11 @@ export function ThemeLanguageControls() {
       <button
         type="button"
         onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-        className="flex h-8 w-8 items-center justify-center rounded-lg transition-all"
+        className="flex h-7 w-7 sm:h-8 sm:w-8 items-center justify-center rounded-lg transition-all hover:bg-[var(--bg-subtle)]"
         style={{ color: "var(--text-muted)" }}
-        onMouseEnter={(e) => e.currentTarget.style.color = "var(--text-on-glass)"}
-        onMouseLeave={(e) => e.currentTarget.style.color = "var(--text-muted)"}
+        aria-label={theme === "dark" ? "Switch to Light mode" : "Chuyển sang Giao diện tối"}
       >
-        <span className="material-symbols-outlined text-lg">
+        <span className="material-symbols-outlined text-base sm:text-lg">
           {theme === "dark" ? "light_mode" : "dark_mode"}
         </span>
       </button>
