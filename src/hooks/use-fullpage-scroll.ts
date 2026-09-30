@@ -51,13 +51,38 @@ export function useFullpageScroll(enabled = true) {
       );
     };
 
+    interface SectionCacheItem {
+      el: HTMLElement;
+      top: number;
+      height: number;
+      scenes: number;
+    }
+
+    let cachedSections: SectionCacheItem[] = [];
+
+    const measureSections = () => {
+      const list = getSections();
+      const scrollY = window.scrollY;
+      cachedSections = list.map((el) => {
+        const rect = el.getBoundingClientRect();
+        return {
+          el,
+          top: Math.max(0, rect.top + scrollY),
+          height: Math.max(el.offsetHeight, rect.height, 1),
+          scenes: sceneCount(el)
+        };
+      });
+    };
+
     // Scroll sync handler for active section & scene progression
     let rafId = 0;
     const onScroll = () => {
       cancelAnimationFrame(rafId);
       rafId = requestAnimationFrame(() => {
-        const list = getSections();
-        if (!list.length) return;
+        if (!cachedSections.length) {
+          measureSections();
+          if (!cachedSections.length) return;
+        }
 
         const currentY = window.scrollY;
         const dir: Dir = currentY >= lastScrollY.current ? 1 : -1;
@@ -72,38 +97,47 @@ export function useFullpageScroll(enabled = true) {
         let best = 0;
         let bestDist = Infinity;
 
-        list.forEach((el, i) => {
-          const top = sectionTop(el);
-          const height = el.offsetHeight;
+        cachedSections.forEach((item, i) => {
+          const { el, top, height, scenes } = item;
           const bottom = top + height;
-          const center = top + height / 2;
 
           // Responsive activation threshold: activates as soon as section enters viewport
-          const isInView = bottom >= viewTop + viewportHeight * 0.15 && top <= viewBottom - viewportHeight * 0.15;
+          const isInView = bottom >= viewTop + viewportHeight * 0.1 && top <= viewBottom - viewportHeight * 0.1;
           if (isInView) {
             el.dataset.fpActive = "true";
             el.dataset.fpEntered = "true";
           }
 
-          const dist = Math.abs(center - viewMid);
-          if (dist < bestDist) {
-            bestDist = dist;
+          // Immediate pin detection: if current scroll is within this section's active track
+          const isPinnedOrActive = currentY >= top - viewportHeight * 0.15 && currentY < bottom - viewportHeight * 0.35;
+          if (isPinnedOrActive && bestDist > 0) {
             best = i;
+            bestDist = 0;
+          } else if (bestDist !== 0) {
+            const center = top + height / 2;
+            const dist = Math.abs(center - viewMid);
+            if (dist < bestDist) {
+              bestDist = dist;
+              best = i;
+            }
           }
 
           // Handle scene progression within sticky multi-scene sections
-          const scenes = sceneCount(el);
           if (scenes > 1) {
             const scrollableDistance = height - viewportHeight;
             if (scrollableDistance > 0) {
-              const relY = currentY - top;
-              const progress = Math.max(0, Math.min(1, relY / scrollableDistance));
-              const step = Math.min(scenes - 1, Math.floor(progress * scenes));
+              // Early lead-in: start progression immediately upon arrival
+              const leadIn = viewportHeight * 0.14;
+              const relY = currentY - top + leadIn;
+              const normalized = Math.max(0, Math.min(1, relY / (scrollableDistance + leadIn)));
+              // Fast, responsive progression: triggers scenes early so all effects are experienced
+              const effective = Math.max(0, Math.min(1, normalized / 0.8));
+              const step = Math.min(scenes - 1, Math.floor(effective * scenes));
               setScene(el, step, dir);
             } else {
-              const relY = currentY - top + viewportHeight * 0.4;
-              const progress = Math.max(0, Math.min(1, relY / Math.max(height, 1)));
-              const step = Math.min(scenes - 1, Math.floor(progress * scenes));
+              const relY = currentY - top + viewportHeight * 0.45;
+              const normalized = Math.max(0, Math.min(1, relY / Math.max(height, 1)));
+              const step = Math.min(scenes - 1, Math.floor(normalized * scenes));
               setScene(el, step, dir);
             }
           }
@@ -111,7 +145,7 @@ export function useFullpageScroll(enabled = true) {
 
         if (best !== activeIdx.current) {
           activeIdx.current = best;
-          const target = list[best];
+          const target = cachedSections[best]?.el;
           if (target) {
             target.dataset.fpActive = "true";
             target.dispatchEvent(
@@ -125,18 +159,26 @@ export function useFullpageScroll(enabled = true) {
       });
     };
 
-    // Initial setup - activate sections in view immediately
-    const initialList = getSections();
-    initialList.forEach((el, i) => {
-      if (i === 0) {
-        el.dataset.fpActive = "true";
-        el.dataset.fpEntered = "true";
-      }
-    });
+    // Initial setup - measure and activate sections in view immediately
+    measureSections();
+    if (cachedSections.length > 0) {
+      cachedSections[0].el.dataset.fpActive = "true";
+      cachedSections[0].el.dataset.fpEntered = "true";
+    }
     setDir(1);
     onScroll();
 
+    let resizeTimer = 0;
+    const onResize = () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = window.setTimeout(() => {
+        measureSections();
+        onScroll();
+      }, 100);
+    };
+
     window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onResize, { passive: true });
 
     // Keyboard navigation (glide smoothly with Lenis)
     const onKey = (e: KeyboardEvent) => {
@@ -209,7 +251,9 @@ export function useFullpageScroll(enabled = true) {
 
     return () => {
       cancelAnimationFrame(rafId);
+      clearTimeout(resizeTimer);
       window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onResize);
       window.removeEventListener("keydown", onKey);
     };
   }, [enabled]);

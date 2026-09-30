@@ -19,6 +19,7 @@ function restoreNativeCursor() {
 export function AppProviders({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const isConsole = pathname?.startsWith("/console");
+  const isGamePage = pathname === "/play";
   const [queryClient] = useState(
     () =>
       new QueryClient({
@@ -40,10 +41,10 @@ export function AppProviders({ children }: { children: React.ReactNode }) {
     <ThemeProvider>
       <I18nProvider>
         <QueryClientProvider client={queryClient}>
-          <LenisProvider>
+          <LenisProvider enabled={!isGamePage}>
             {!isConsole && <CustomCursor />}
             {children}
-            {!isConsole && <ChatbotWidget />}
+            {!isConsole && !isGamePage && <ChatbotWidget />}
           </LenisProvider>
         </QueryClientProvider>
       </I18nProvider>

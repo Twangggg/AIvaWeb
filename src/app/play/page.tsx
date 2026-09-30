@@ -54,7 +54,7 @@ export default function PublicPlayPage() {
   return (
     <>
       <Nav onPreorder={() => setPreorderOpen(true)} />
-      <main className="ui-page min-h-screen overflow-hidden px-4 pb-12 pt-28 sm:px-6">
+      <main className="ui-page min-h-screen overflow-x-hidden px-4 pb-12 pt-24 sm:px-6 sm:pt-28">
         <div className="pointer-events-none absolute left-1/2 top-20 h-80 w-80 -translate-x-1/2 rounded-full bg-yellow-400/20 blur-[100px]" />
         <section className="relative mx-auto max-w-5xl">
           {!selectedGame ? (
@@ -65,7 +65,7 @@ export default function PublicPlayPage() {
               </div>
               <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
                 {GAMES.map((game) => (
-                  <button key={game.id} type="button" onClick={() => openGame(game.id)} className={`ui-surface ui-border min-h-80 rounded-[2rem] border p-5 text-left shadow-lg transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 ${game.accent}`}>
+                  <button key={game.id} type="button" onClick={() => openGame(game.id)} className={`ui-surface ui-border min-h-64 rounded-[2rem] border p-5 text-left shadow-lg transition active:scale-[0.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 sm:min-h-80 ${game.accent}`}>
                     <div className="ui-surface-soft relative mb-2 h-36 overflow-hidden rounded-2xl">
                       <Image src={game.image} alt="" fill unoptimized sizes="(min-width: 768px) 30vw, 100vw" className="object-contain object-center" />
                     </div>
@@ -106,7 +106,7 @@ export default function PublicPlayPage() {
                     <AivaGardenGame round={round} onUpdate={({ collected: nextCollected, completed: nextCompleted, message: nextMessage }) => { setCollected(nextCollected); setCompleted(nextCompleted); setMessage(nextMessage); }} />
                     <p className="ui-muted mt-4 text-center text-sm" aria-live="polite">{message}</p>
                     {completed && <div className="ui-accent-soft mt-4 rounded-2xl border border-[var(--ocean)]/40 px-5 py-4 text-center" role="status"><p className="ui-accent font-black">Qua màn {level}</p><button type="button" onClick={nextLevel} className="mt-3 min-h-11 rounded-full bg-[var(--ocean)] px-5 text-sm font-bold text-[var(--text-on-accent)] transition hover:brightness-110">Vào màn {level + 1}</button></div>}
-                    <p className="ui-muted mt-3 text-center text-xs">Có thể dùng phím mũi tên hoặc W, A, S, D để di chuyển từng ô.</p>
+                    <p className="ui-muted mt-3 text-center text-xs">Chạm một ô để AIVA tự đi tới đó. Trên điện thoại, vuốt để đi từng bước.</p>
                   </div>
                 </>
               )}

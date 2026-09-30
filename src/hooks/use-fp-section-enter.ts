@@ -18,9 +18,12 @@ export function useFpSectionEnter(sectionId: string) {
       const transit = el.dataset.fpTransit ?? "";
       const active = el.dataset.fpActive === "true";
       const entering = transit.startsWith("enter");
-      setEntered(active || entering);
+      const nextEntered = active || entering;
       const d = Number(el.dataset.fpSceneDir || document.documentElement.dataset.fpDir || 1);
-      if (d === 1 || d === -1) setDir(d);
+      const nextDir: 1 | -1 = d === -1 ? -1 : 1;
+
+      setEntered((prev) => (prev !== nextEntered ? nextEntered : prev));
+      setDir((prev) => (prev !== nextDir ? nextDir : prev));
     };
 
     sync();
@@ -31,10 +34,12 @@ export function useFpSectionEnter(sectionId: string) {
     const onSection = (e: Event) => {
       const detail = (e as CustomEvent<{ id?: string; dir?: number }>).detail;
       if (detail?.id === sectionId) {
-        if (detail.dir === 1 || detail.dir === -1) setDir(detail.dir);
-        setEntered(true);
+        if (detail.dir === 1 || detail.dir === -1) {
+          setDir((prev) => (prev !== detail.dir ? (detail.dir as 1 | -1) : prev));
+        }
+        setEntered((prev) => (!prev ? true : prev));
       } else if (detail?.id) {
-        setEntered(false);
+        setEntered((prev) => (prev ? false : prev));
       }
     };
     window.addEventListener("fp-section", onSection);

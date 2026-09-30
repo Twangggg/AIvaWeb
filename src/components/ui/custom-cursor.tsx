@@ -17,14 +17,25 @@ const INTERACTIVE_SELECTOR = [
 ].join(", ");
 
 function isCursorSupported() {
+  if (typeof window === "undefined") return false;
   return (
     window.matchMedia("(pointer: fine)").matches &&
     !window.matchMedia("(prefers-reduced-motion: reduce)").matches
   );
 }
 
-function subscribe() {
-  return () => {};
+function subscribe(callback: () => void) {
+  if (typeof window === "undefined") return () => {};
+  const fineQuery = window.matchMedia("(pointer: fine)");
+  const motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+  fineQuery.addEventListener("change", callback);
+  motionQuery.addEventListener("change", callback);
+
+  return () => {
+    fineQuery.removeEventListener("change", callback);
+    motionQuery.removeEventListener("change", callback);
+  };
 }
 
 export function CustomCursor() {
@@ -47,20 +58,22 @@ export function CustomCursor() {
   useEffect(() => {
     if (!active) return;
 
+    let rafId = 0;
+    let latestX = 0;
+    let latestY = 0;
+
     const hideNativeCursor = () => {
       document.documentElement.style.cursor = "none";
       document.body.style.cursor = "none";
     };
 
-    const onMove = (e: MouseEvent) => {
-      hideNativeCursor();
-
+    const updateCursor = () => {
       const cursor = cursorRef.current;
       if (!cursor) return;
 
-      cursor.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0)`;
+      cursor.style.transform = `translate3d(${latestX}px, ${latestY}px, 0)`;
 
-      const target = document.elementFromPoint(e.clientX, e.clientY);
+      const target = document.elementFromPoint(latestX, latestY);
       const interactive = !!target?.closest(INTERACTIVE_SELECTOR);
 
       if (interactive !== hoveringRef.current) {
@@ -68,6 +81,14 @@ export function CustomCursor() {
         cursor.classList.toggle("aiva-cursor-hover", interactive);
         cursor.setAttribute("data-clickable", interactive ? "true" : "false");
       }
+    };
+
+    const onMove = (e: MouseEvent) => {
+      hideNativeCursor();
+      latestX = e.clientX;
+      latestY = e.clientY;
+      cancelAnimationFrame(rafId);
+      rafId = requestAnimationFrame(updateCursor);
     };
 
     const onDown = () => {
@@ -91,6 +112,7 @@ export function CustomCursor() {
     document.documentElement.addEventListener("mouseleave", onLeave);
 
     return () => {
+      cancelAnimationFrame(rafId);
       document.documentElement.style.cursor = "";
       document.body.style.cursor = "";
       window.removeEventListener("mousemove", onMove);

@@ -13,7 +13,6 @@ type AivaGardenGameProps = {
   round: number;
 };
 
-const TILE = 56;
 const WIDTH = 15;
 const HEIGHT = 10;
 const START = { x: 1, y: 8 };
@@ -91,6 +90,8 @@ export function AivaGardenGame({ onUpdate, round }: AivaGardenGameProps) {
   useEffect(() => {
     let cancelled = false;
     let game: { destroy: (removeCanvas: boolean) => void } | undefined;
+    const tileSize = window.matchMedia("(max-width: 639px)").matches ? 40 : 56;
+    const animateShards = !window.matchMedia("(max-width: 639px)").matches;
 
     const start = async () => {
       const { default: Phaser } = await import("phaser");
@@ -116,8 +117,24 @@ export function AivaGardenGame({ onUpdate, round }: AivaGardenGameProps) {
           this.bot = this.createBot(this.toPixels(START));
           this.report("Chạm vào ô cỏ để AIVA tự tìm đường.");
 
+          let touchStart: { x: number; y: number } | null = null;
           this.input.on("pointerdown", (pointer: Phaser.Input.Pointer) => {
-            this.moveTo({ x: Math.floor(pointer.x / TILE), y: Math.floor(pointer.y / TILE) });
+            touchStart = { x: pointer.x, y: pointer.y };
+          });
+          this.input.on("pointerup", (pointer: Phaser.Input.Pointer) => {
+            if (!touchStart) return;
+            const deltaX = pointer.x - touchStart.x;
+            const deltaY = pointer.y - touchStart.y;
+            touchStart = null;
+            const swipeThreshold = 20;
+            if (Math.max(Math.abs(deltaX), Math.abs(deltaY)) >= swipeThreshold) {
+              const step = Math.abs(deltaX) > Math.abs(deltaY)
+                ? { x: Math.sign(deltaX), y: 0 }
+                : { x: 0, y: Math.sign(deltaY) };
+              this.moveTo({ x: this.position.x + step.x, y: this.position.y + step.y });
+              return;
+            }
+            this.moveTo({ x: Math.floor(pointer.x / tileSize), y: Math.floor(pointer.y / tileSize) });
           });
 
           this.input.keyboard?.on("keydown", (event: KeyboardEvent) => {
@@ -141,13 +158,13 @@ export function AivaGardenGame({ onUpdate, round }: AivaGardenGameProps) {
 
         private drawGarden() {
           const terrain = this.add.graphics();
-          terrain.fillStyle(0x1a4f44, 1).fillRect(0, 0, WIDTH * TILE, HEIGHT * TILE);
+          terrain.fillStyle(0x1a4f44, 1).fillRect(0, 0, WIDTH * tileSize, HEIGHT * tileSize);
 
           this.layout.map.forEach((row, y) => {
             [...row].forEach((cell, x) => {
-              const px = x * TILE;
-              const py = y * TILE;
-              terrain.fillStyle(cell === "~" ? 0x237aa6 : 0x367c52, 1).fillRoundedRect(px + 2, py + 2, TILE - 4, TILE - 4, 10);
+              const px = x * tileSize;
+              const py = y * tileSize;
+              terrain.fillStyle(cell === "~" ? 0x237aa6 : 0x367c52, 1).fillRoundedRect(px + 2, py + 2, tileSize - 4, tileSize - 4, 10);
               if (cell === "#") {
                 terrain.fillStyle(0x17452f, 1).fillCircle(px + 18, py + 25, 16).fillCircle(px + 34, py + 21, 18).fillCircle(px + 38, py + 35, 14);
               }
@@ -167,7 +184,9 @@ export function AivaGardenGame({ onUpdate, round }: AivaGardenGameProps) {
             const graphic = this.add.graphics();
             graphic.fillStyle(0xffd34e, 1).fillTriangle(point.x, point.y - 16, point.x + 13, point.y, point.x, point.y + 16).fillTriangle(point.x, point.y - 16, point.x - 13, point.y, point.x, point.y + 16);
             graphic.lineStyle(2, 0xfff3aa, 0.85).strokeTriangle(point.x, point.y - 16, point.x + 13, point.y, point.x, point.y + 16).strokeTriangle(point.x, point.y - 16, point.x - 13, point.y, point.x, point.y + 16);
-            this.tweens.add({ targets: graphic, y: graphic.y - 6, duration: 800, yoyo: true, repeat: -1, ease: "Sine.inOut" });
+            if (animateShards) {
+              this.tweens.add({ targets: graphic, y: graphic.y - 6, duration: 800, yoyo: true, repeat: -1, ease: "Sine.inOut" });
+            }
             this.shards.set(keyOf(shard), graphic);
           });
         }
@@ -191,7 +210,7 @@ export function AivaGardenGame({ onUpdate, round }: AivaGardenGameProps) {
         }
 
         private toPixels(point: { x: number; y: number }) {
-          return { x: point.x * TILE + TILE / 2, y: point.y * TILE + TILE / 2 };
+          return { x: point.x * tileSize + tileSize / 2, y: point.y * tileSize + tileSize / 2 };
         }
 
         private canWalk(point: { x: number; y: number }) {
@@ -296,11 +315,11 @@ export function AivaGardenGame({ onUpdate, round }: AivaGardenGameProps) {
       game = new Phaser.Game({
         type: Phaser.AUTO,
         parent: hostRef.current,
-        width: WIDTH * TILE,
-        height: HEIGHT * TILE,
+        width: WIDTH * tileSize,
+        height: HEIGHT * tileSize,
         backgroundColor: "#1a4f44",
         scene: GardenScene,
-        render: { antialias: true, pixelArt: false },
+        render: { antialias: false, pixelArt: false, roundPixels: true },
       });
     };
 
@@ -311,5 +330,5 @@ export function AivaGardenGame({ onUpdate, round }: AivaGardenGameProps) {
     };
   }, [round]);
 
-  return <div ref={hostRef} tabIndex={0} aria-label="Bản đồ Giải cứu khu vườn AIVA" className="w-full touch-none overflow-hidden rounded-2xl border border-white/15 bg-[#1a4f44] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-yellow-200 [&_canvas]:mx-auto [&_canvas]:block [&_canvas]:h-auto [&_canvas]:max-w-full" />;
+  return <div ref={hostRef} tabIndex={0} aria-label="Bản đồ Giải cứu khu vườn AIVA. Chạm để chọn điểm đến hoặc vuốt để đi từng bước." className="w-full touch-none select-none overflow-hidden rounded-2xl border border-white/15 bg-[#1a4f44] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-yellow-200 [&_canvas]:mx-auto [&_canvas]:block [&_canvas]:h-auto [&_canvas]:max-w-full" />;
 }

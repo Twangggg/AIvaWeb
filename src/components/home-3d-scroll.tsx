@@ -9,10 +9,10 @@ const AivaGlasses3D = dynamic(() => import("@/components/AivaGlasses3D"), {
 });
 
 const SECTIONS = [
-  { tag: "feature1Tag", title: "feature1Title", desc: "feature1Desc", position: "top-24 right-[15%]" },
-  { tag: "feature2Tag", title: "feature2Title", desc: "feature2Desc", position: "top-[30%] left-16" },
-  { tag: "feature3Tag", title: "feature3Title", desc: "feature3Desc", position: "top-[22%] right-16" },
-  { tag: "feature4Tag", title: "feature4Title", desc: "feature4Desc", position: "bottom-24 left-[15%]" }
+  { tag: "feature1Tag", title: "feature1Title", desc: "feature1Desc", desktopPos: "lg:top-24 lg:right-[15%]" },
+  { tag: "feature2Tag", title: "feature2Title", desc: "feature2Desc", desktopPos: "lg:top-[30%] lg:left-16" },
+  { tag: "feature3Tag", title: "feature3Title", desc: "feature3Desc", desktopPos: "lg:top-[22%] lg:right-16" },
+  { tag: "feature4Tag", title: "feature4Title", desc: "feature4Desc", desktopPos: "lg:bottom-24 lg:left-[15%]" }
 ] as const;
 
 export function Home3DScroll() {
@@ -44,8 +44,9 @@ export function Home3DScroll() {
     const measure = () => {
       rafRef.current = null;
       const { top, total } = metricsRef.current;
-      const passed = Math.min(Math.max(window.scrollY - top, 0), total);
-      const p = passed / total;
+      const leadIn = window.innerHeight * 0.12;
+      const passed = Math.min(Math.max(window.scrollY - top + leadIn, 0), total + leadIn);
+      const p = passed / (total + leadIn);
       if (Math.abs(p - lastScrollYRef.current) > 0.004) {
         scrollY.current = p;
         lastScrollYRef.current = p;
@@ -55,7 +56,8 @@ export function Home3DScroll() {
           invalidateRef.current?.();
         }
       }
-      const idx = Math.min(SECTIONS.length - 1, Math.floor(p * SECTIONS.length + 0.0001));
+      const effectiveP = Math.max(0, Math.min(1, p / 0.8));
+      const idx = Math.min(SECTIONS.length - 1, Math.floor(effectiveP * SECTIONS.length));
       if (idx !== activeRef.current) {
         activeRef.current = idx;
         setActive(idx);
@@ -95,7 +97,7 @@ export function Home3DScroll() {
   }, []);
 
   return (
-    <section ref={stageRef} id="glasses-3d-showcase" className="relative min-h-[180vh] w-full">
+    <section ref={stageRef} id="glasses-3d-showcase" className="relative min-h-[135vh] lg:min-h-[180vh] w-full">
       <div className="sticky top-0 h-[100dvh] w-full overflow-hidden transform-gpu flex items-center justify-center">
         <div className="absolute inset-0 grid-bg opacity-60" />
         <div className="absolute inset-0 pointer-events-none">
@@ -115,14 +117,14 @@ export function Home3DScroll() {
           ) : null}
         </div>
 
-        <div className="absolute right-6 top-1/2 -translate-y-1/2 flex flex-col gap-3 z-10">
+        <div className="absolute right-3 md:right-6 top-1/2 -translate-y-1/2 flex flex-col gap-2 md:gap-3 z-10 pointer-events-none">
           {SECTIONS.map((_, i) => (
             <div
               key={i}
               className="rounded-full transition-all duration-500 will-change-transform"
               style={{
-                width: 6,
-                height: i === active ? 40 : 16,
+                width: 5,
+                height: i === active ? 32 : 12,
                 backgroundColor: "var(--accent)",
                 opacity: i === active ? 1 : 0.3
               }}
@@ -133,12 +135,12 @@ export function Home3DScroll() {
         {SECTIONS.map((s, i) => (
           <div
             key={s.tag}
-            className={`absolute z-10 transition-all duration-700 will-change-transform will-change-opacity ${
-              i === active ? "opacity-100 scale-100" : "opacity-0 scale-95 pointer-events-none"
-            } ${s.position}`}
+            className={`absolute z-10 transition-all duration-500 will-change-transform will-change-opacity bottom-8 sm:bottom-12 md:bottom-16 lg:bottom-auto lg:left-auto lg:right-auto left-4 right-4 max-w-[min(calc(100%-2rem),24rem)] sm:max-w-md mx-auto lg:mx-0 ${
+              i === active ? "opacity-100 scale-100 translate-y-0" : "opacity-0 scale-95 translate-y-3 pointer-events-none"
+            } ${s.desktopPos}`}
           >
             <div
-              className="rounded-2xl p-6 backdrop-blur"
+              className="rounded-2xl p-4 md:p-6 backdrop-blur-xl shadow-2xl"
               style={{
                 backgroundColor: "var(--glass-bg)",
                 border: "1px solid",
@@ -146,7 +148,7 @@ export function Home3DScroll() {
               }}
             >
               <span
-                className="inline-block px-3 py-0.5 rounded-full text-xs font-medium tracking-wider uppercase mb-4"
+                className="inline-block px-3 py-0.5 rounded-full text-xs font-medium tracking-wider uppercase mb-2 md:mb-4"
                 style={{
                   backgroundColor: "var(--ocean-alpha)",
                   color: "var(--ocean-glow)"
@@ -154,10 +156,10 @@ export function Home3DScroll() {
               >
                 {getSectionText(s.tag)}
               </span>
-              <h2 className="text-2xl md:text-3xl font-bold mb-3 leading-snug" style={{ color: "var(--text-on-glass)" }}>
+              <h2 className="text-xl md:text-3xl font-bold mb-2 md:mb-3 leading-snug" style={{ color: "var(--text-on-glass)" }}>
                 {getSectionText(s.title)}
               </h2>
-              <p className="text-sm md:text-base leading-relaxed max-w-xs" style={{ color: "var(--text-dim)" }}>
+              <p className="text-xs md:text-base leading-relaxed max-w-xs" style={{ color: "var(--text-dim)" }}>
                 {getSectionText(s.desc)}
               </p>
             </div>

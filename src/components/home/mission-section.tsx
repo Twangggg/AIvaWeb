@@ -27,12 +27,12 @@ export function MissionSection() {
       <div className="relative z-10 max-w-5xl mx-auto w-full text-center">
         <Reveal>
           <div>
-            <h2 className="font-display text-3xl md:text-5xl font-bold leading-tight mb-4">
+            <h2 className="font-display text-2xl sm:text-3xl md:text-5xl font-bold leading-tight mb-3 sm:mb-4">
               {t.homeMissionHeadline}{" "}
               <span className="text-gradient-sun">{t.homeMissionHeadlineAccent}</span>
             </h2>
             <p
-              className="text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-10"
+              className="text-sm sm:text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-6 sm:mb-8 md:mb-10"
               style={{ color: "var(--text-dim)" }}
             >
               {t.aboutMissionDesc}

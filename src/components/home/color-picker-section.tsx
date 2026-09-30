@@ -66,7 +66,7 @@ export function ColorPickerSection() {
   const active = COLORS.find((c) => c.id === activeId) ?? COLORS[0];
 
   return (
-    <section className="py-12 md:py-16 px-6 relative overflow-hidden h-full w-full flex flex-col justify-center">
+    <section className="py-8 sm:py-12 md:py-16 px-4 sm:px-6 relative overflow-hidden h-full w-full flex flex-col justify-center">
       <div className="absolute inset-0 pointer-events-none" aria-hidden>
         <div
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[520px] h-[520px] rounded-full blur-[120px] transition-colors duration-500"
@@ -89,7 +89,7 @@ export function ColorPickerSection() {
 
         <Reveal direction="scale" delay={120}>
           <div
-            className="mt-12 rounded-3xl px-6 py-10 md:px-10 md:py-12 text-center"
+            className="mt-6 sm:mt-10 md:mt-12 rounded-3xl px-4 py-6 sm:px-8 sm:py-10 md:px-10 md:py-12 text-center"
             style={{
               backgroundColor: "var(--glass-bg)",
               border: "1px solid var(--glass-border)"

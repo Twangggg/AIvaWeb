@@ -12,25 +12,28 @@ export function useLenisInstance() {
 
 interface LenisProviderProps {
   children: React.ReactNode;
+  enabled?: boolean;
 }
 
-export function LenisProvider({ children }: { children: React.ReactNode }) {
+export function LenisProvider({ children, enabled = true }: LenisProviderProps) {
   const [lenis, setLenis] = React.useState<Lenis | null>(null);
   const lenisRef = useRef<Lenis | null>(null);
 
   useEffect(() => {
+    if (!enabled) return;
     // Check for reduced motion preference
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (prefersReducedMotion) return;
 
     const instance = new Lenis({
-      duration: 0.85,
+      duration: 1.15,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       orientation: "vertical",
       gestureOrientation: "vertical",
       smoothWheel: true,
-      wheelMultiplier: 1.15,
-      touchMultiplier: 1.6,
+      wheelMultiplier: 0.95,
+      touchMultiplier: 1.0,
+      syncTouch: false,
       autoRaf: true,
     });
 
@@ -48,7 +51,7 @@ export function LenisProvider({ children }: { children: React.ReactNode }) {
       setLenis(null);
       delete (window as unknown as { __lenis?: Lenis }).__lenis;
     };
-  }, []);
+  }, [enabled]);
 
   return (
     <LenisContext.Provider value={lenis}>

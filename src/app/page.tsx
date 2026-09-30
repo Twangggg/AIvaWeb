@@ -21,6 +21,7 @@ import { GlassesExperience } from "@/components/home/glasses-experience";
 import { FeatureRail } from "@/components/home/experience/feature-rail";
 import { CinematicCta } from "@/components/home/experience/cinematic-cta";
 import { useFullpageScroll } from "@/hooks/use-fullpage-scroll";
+import { SitePreloader } from "@/components/common/site-preloader";
 
 
 export default function HomePage() {
@@ -30,6 +31,7 @@ export default function HomePage() {
 
   return (
     <>
+      <SitePreloader />
       {showIntro ? (
         <SiteIntro onComplete={completeIntro} />
       ) : (
@@ -40,12 +42,12 @@ export default function HomePage() {
           <PageMouseGlow />
           <Nav onPreorder={() => setPreorderOpen(true)} />
 
-          <main className="cx-main min-h-screen">
+          <main className="cx-main min-h-screen w-full max-w-full overflow-x-hidden">
             <div id="hero" data-fp-section className="cx-fp-section">
               <CinematicHero onPreorder={() => setPreorderOpen(true)} />
             </div>
 
-            <div id="statement" data-fp-section data-fp-scenes="3" data-fp-scene="0" className="cx-fp-section min-h-[160vh] relative">
+            <div id="statement" data-fp-section data-fp-scenes="3" data-fp-scene="0" className="cx-fp-section min-h-[135vh] lg:min-h-[150vh] relative">
               <div className="sticky top-0 h-[100dvh] w-full flex items-center justify-center overflow-hidden">
                 <StatementChapter />
               </div>
@@ -55,13 +57,13 @@ export default function HomePage() {
               <GlassesExperience />
             </div>
 
-            <div id="vision" data-fp-section data-fp-scenes="3" data-fp-scene="0" className="cx-fp-section min-h-[150vh] relative">
+            <div id="vision" data-fp-section data-fp-scenes="3" data-fp-scene="0" className="cx-fp-section min-h-[135vh] lg:min-h-[150vh] relative">
               <div className="sticky top-0 h-[100dvh] w-full flex items-center justify-center overflow-hidden">
                 <VisionDemoSection />
               </div>
             </div>
 
-            <div id="features" data-fp-section data-fp-scenes="4" data-fp-scene="0" className="cx-fp-section min-h-[190vh] relative">
+            <div id="features" data-fp-section data-fp-scenes="4" data-fp-scene="0" className="cx-fp-section min-h-[145vh] lg:min-h-[170vh] relative">
               <div className="sticky top-0 h-[100dvh] w-full flex items-center justify-center overflow-hidden">
                 <FeatureRail />
               </div>
@@ -71,7 +73,7 @@ export default function HomePage() {
               <CompareSection />
             </div>
 
-            <div id="companion" data-fp-section data-fp-scenes="3" data-fp-scene="0" className="cx-fp-section min-h-[160vh] relative">
+            <div id="companion" data-fp-section data-fp-scenes="3" data-fp-scene="0" className="cx-fp-section min-h-[135vh] lg:min-h-[150vh] relative">
               <div className="sticky top-0 h-[100dvh] w-full flex items-center justify-center overflow-hidden">
                 <ParentAppSection />
               </div>

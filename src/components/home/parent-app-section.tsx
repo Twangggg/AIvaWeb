@@ -92,7 +92,7 @@ export function ParentAppSection() {
   return (
     <>
       <section
-        className="cx-fp-panel parent-app relative overflow-hidden py-16 md:py-24"
+        className="cx-fp-panel parent-app relative overflow-hidden"
         data-entered={entered ? "true" : "false"}
         data-dir={dir}
       >
@@ -101,30 +101,30 @@ export function ParentAppSection() {
           <div className="absolute bottom-0 left-1/4 w-72 h-72 rounded-full bg-amber-400/10 blur-[90px]" />
         </div>
 
-        <div className="max-w-6xl mx-auto relative z-10 w-full px-4">
+        <div className="max-w-6xl mx-auto relative z-10 w-full px-2 sm:px-4">
           <Reveal direction="up" delay={0}>
             <header>
-              <h2 className="font-display font-bold tracking-tight leading-[1.1] text-[clamp(1.65rem,3.6vw,2.6rem)]">
+              <h2 className="font-display font-bold tracking-tight leading-[1.1] text-[clamp(1.5rem,3.4vw,2.5rem)]">
                 {t.homeAppTitle}{" "}
                 <span className="text-gradient-ocean">{t.homeAppTitleAccent}</span>
               </h2>
-              <p className="mt-3 max-w-2xl text-[clamp(0.9rem,1.4vw,1.05rem)] leading-relaxed" style={{ color: "var(--text-dim)" }}>
+              <p className="mt-2 sm:mt-3 max-w-2xl text-[clamp(0.85rem,1.3vw,1.02rem)] leading-relaxed" style={{ color: "var(--text-dim)" }}>
                 {t.homeAppDesc}
               </p>
 
               {/* Direct App Download Action Bar */}
-              <div className="mt-6 flex flex-wrap items-center gap-3">
+              <div className="mt-4 sm:mt-6 flex flex-wrap items-center gap-2.5 sm:gap-3">
                 <button
                   onClick={handleTriggerDirectDownload}
                   disabled={directDownloading}
-                  className="px-6 py-3 rounded-2xl font-bold text-sm shadow-lg transition-all flex items-center gap-2 transform hover:-translate-y-0.5 active:translate-y-0"
+                  className="px-5 sm:px-6 py-2.5 sm:py-3 rounded-2xl font-bold text-xs sm:text-sm shadow-lg transition-all flex items-center gap-2 transform hover:-translate-y-0.5 active:translate-y-0"
                   style={{
                     background: "var(--gradient-ocean)",
                     color: "var(--text-on-accent)",
                     boxShadow: "var(--shadow-glow)"
                   }}
                 >
-                  <span className="material-symbols-outlined text-xl">
+                  <span className="material-symbols-outlined text-lg sm:text-xl">
                     {directDownloading ? "sync" : "download"}
                   </span>
                   <span>{directDownloading ? "Đang tự động tải APK..." : "Tải Trực Tiếp APK (Android)"}</span>
@@ -132,29 +132,29 @@ export function ParentAppSection() {
 
                 <button
                   onClick={() => setDownloadModalOpen(true)}
-                  className="px-5 py-3 rounded-2xl font-semibold text-sm transition-all flex items-center gap-2 border"
+                  className="px-4 sm:px-5 py-2.5 sm:py-3 rounded-2xl font-semibold text-xs sm:text-sm transition-all flex items-center gap-2 border"
                   style={{
                     backgroundColor: "var(--glass-bg)",
                     borderColor: "var(--glass-border)",
                     color: "var(--text-on-glass)"
                   }}
                 >
-                  <span className="material-symbols-outlined text-xl">qr_code_scanner</span>
+                  <span className="material-symbols-outlined text-lg sm:text-xl">qr_code_scanner</span>
                   <span>Quét mã QR & Tải App</span>
                 </button>
               </div>
             </header>
           </Reveal>
 
-          <div className="mt-10 grid lg:grid-cols-[minmax(0,1fr)_minmax(280px,340px)] gap-10 lg:gap-14 items-center">
-            <Reveal direction="left" delay={100} className="flex flex-col gap-3.5">
+          <div className="mt-6 sm:mt-8 grid lg:grid-cols-[minmax(0,1fr)_minmax(260px,320px)] gap-6 lg:gap-12 items-center">
+            <Reveal direction="left" delay={100} className="flex flex-col gap-2.5 sm:gap-3.5">
               {highlights.map((item, i) => {
                 const tied = i <= 1 ? 0 : i === 2 ? 1 : 2;
                 const lit = tied === step;
                 return (
                   <div
                     key={item.title}
-                    className="parent-app-hl flex gap-4 p-4 md:p-5 rounded-2xl transition-all duration-500 cursor-pointer"
+                    className="parent-app-hl flex gap-3 sm:gap-4 p-3 sm:p-4 rounded-2xl transition-all duration-500 cursor-pointer"
                     onClick={() => setScene(tied)}
                     data-active={lit ? "true" : "false"}
                     style={{

@@ -21,7 +21,7 @@ function Loader() {
 function Model({ scrollY }: { scrollY: MutableRefObject<number> }) {
   const { scene } = useGLTF("/models/glasses.glb");
   const group = useRef<THREE.Group>(null!);
-  const lastScroll = useRef(-1);
+  const currentS = useRef(0);
   const optimizedScene = useMemo(() => scene, [scene]);
 
   useEffect(() => {
@@ -38,20 +38,35 @@ function Model({ scrollY }: { scrollY: MutableRefObject<number> }) {
     });
   }, [optimizedScene]);
 
-  useFrame(() => {
-    const s = scrollY.current;
-    if (!group.current || Math.abs(s - lastScroll.current) < 0.0005) return;
-    lastScroll.current = s;
+  useFrame((state, delta) => {
+    if (!group.current) return;
+    const targetS = scrollY.current;
+    
+    // Smooth lerp damping for silky 60fps physics motion
+    currentS.current += (targetS - currentS.current) * Math.min(1, delta * 9);
+    const s = currentS.current;
+
+    // Continue frame rendering while animating
+    if (Math.abs(targetS - currentS.current) > 0.0001) {
+      state.invalidate();
+    }
+
+    const width = state.size.width;
+    const isMobile = width < 640;
+    const isTablet = width >= 640 && width < 1024;
 
     group.current.rotation.y = s * Math.PI * 2;
-    group.current.rotation.x = Math.sin(s * Math.PI * 2) * 0.35;
+    group.current.rotation.x = Math.sin(s * Math.PI * 2) * 0.22;
 
+    // Optical centering so the glasses are beautifully framed and never clipped
+    const posY = isMobile ? 0.16 : isTablet ? 0.14 : 0;
     group.current.position.x = 0;
-    group.current.position.y = -0.2 + Math.sin(s * Math.PI * 3) * 0.4;
-    group.current.position.z = -s * 1.2;
+    group.current.position.y = posY + Math.sin(s * Math.PI * 3) * 0.06;
+    group.current.position.z = -s * 0.5;
 
-    const baseScale = 2.0;
-    const scrollScale = 1 + s * 0.1;
+    // Harmonious responsive scales
+    const baseScale = isMobile ? 0.95 : isTablet ? 1.15 : 1.4;
+    const scrollScale = 1 + s * 0.06;
     group.current.scale.setScalar(baseScale * scrollScale);
   });
 

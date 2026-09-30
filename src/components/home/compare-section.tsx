@@ -44,7 +44,7 @@ export function CompareSection() {
 
         <Reveal delay={80} blur={false}>
           <div
-            className="mt-12 overflow-hidden rounded-2xl"
+            className="mt-6 sm:mt-10 md:mt-12 overflow-hidden rounded-2xl"
             style={{
               backgroundColor: "var(--glass-bg)",
               border: "1px solid var(--glass-border)"

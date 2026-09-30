@@ -66,51 +66,36 @@ export function Nav({ onPreorder }: NavProps) {
 
   return (
     <>
-      {/* ── Desktop nav ── */}
+      {/* ── Desktop nav (Floating Pill for >= 1024px) ── */}
       <nav
-        className="fixed top-0 left-1/2 z-50 hidden items-center transition-all duration-500 ease-[cubic-bezier(.22,1,.36,1)] md:flex"
+        className="fixed top-3.5 sm:top-4 left-1/2 -translate-x-1/2 z-50 hidden lg:block w-[min(1140px,calc(100%-2.5rem))] rounded-full border transition-shadow duration-300"
         style={{
-          transform: "translateX(-50%)",
-          width: scrolled ? "100%" : "min(1140px, calc(100% - 2.5rem))",
-          top: scrolled ? 0 : "1rem",
-          borderRadius: scrolled ? 0 : "9999px",
-          padding: scrolled ? "0" : "0 0.375rem",
+          backgroundColor: "var(--nav-bg)",
+          borderColor: "var(--nav-border)",
+          backdropFilter: "blur(24px) saturate(180%)",
+          WebkitBackdropFilter: "blur(24px) saturate(180%)",
+          boxShadow: scrolled
+            ? "0 14px 40px -8px rgba(0,0,0,0.18), inset 0 1px 0 rgba(255,255,255,0.15)"
+            : "0 8px 30px -8px rgba(0,0,0,0.1), inset 0 1px 0 rgba(255,255,255,0.12)"
         }}
       >
-        <div
-          className="absolute inset-0 -z-10 transition-all duration-500 ease-[cubic-bezier(.22,1,.36,1)]"
-          style={{
-            borderRadius: "inherit",
-            backdropFilter: "blur(24px) saturate(180%)",
-            WebkitBackdropFilter: "blur(24px) saturate(180%)",
-            background: scrolled ? "var(--nav-bg)" : "rgba(255,255,255,0.08)",
-            border: `1px solid ${scrolled ? "var(--nav-border)" : "rgba(255,255,255,0.12)"}`,
-            boxShadow: scrolled
-              ? "0 1px 0 rgba(255,255,255,0.06)"
-              : "0 8px 32px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.1)",
-          }}
-        />
-
-        <div
-          className="flex w-full items-center justify-between transition-all duration-500 ease-[cubic-bezier(.22,1,.36,1)]"
-          style={{ padding: scrolled ? "0.625rem 2rem" : "0.5rem 1.25rem" }}
-        >
+        <div className="w-full px-5 py-2.5 flex items-center justify-between">
           {/* ZONE 1: BRAND LOGO */}
-          <Link href="/" onClick={returnHome} className="relative z-10 flex shrink-0 items-center mr-2">
+          <Link href="/" onClick={returnHome} className="relative z-10 flex shrink-0 items-center mr-6">
             <Image
               src="/AIVALogo.png"
               alt="AIVA Logo"
-              width={140}
-              height={28}
-              className="object-contain transition-all duration-500"
-              style={{ width: scrolled ? 120 : 135, height: "auto" }}
+              width={130}
+              height={26}
+              className="object-contain"
+              style={{ width: 130, height: "auto" }}
               priority
             />
           </Link>
 
           {/* ZONE 2: CENTER NAVIGATION & DISCOVERY LINKS */}
           <div
-            className="relative z-10 flex items-center gap-1.5 text-sm font-medium transition-all duration-500"
+            className="relative z-10 flex items-center gap-1.5 text-sm font-medium"
             style={{ color: "var(--text-muted)" }}
           >
             {/* Link 1: Cho trẻ em (Dropdown Menu) */}
@@ -122,7 +107,7 @@ export function Nav({ onPreorder }: NavProps) {
               <button
                 type="button"
                 onClick={() => setKidsDropdownOpen(!kidsDropdownOpen)}
-                className="group relative rounded-full px-3.5 py-2 whitespace-nowrap transition-all duration-200 flex items-center gap-1 hover:text-[var(--ocean)]"
+                className="group relative rounded-full px-3.5 py-1.5 whitespace-nowrap transition-all duration-200 flex items-center gap-1 hover:text-[var(--ocean)]"
               >
                 <span>Cho trẻ em</span>
                 <span
@@ -207,7 +192,7 @@ export function Nav({ onPreorder }: NavProps) {
             {/* Link 3: Về AIVA */}
             <Link
               href="/about"
-              className="group relative rounded-full px-3.5 py-2 whitespace-nowrap transition-all duration-200 hover:text-[var(--ocean)]"
+              className="group relative rounded-full px-3.5 py-1.5 whitespace-nowrap transition-all duration-200 hover:text-[var(--ocean)]"
             >
               <span>{t.navAbout}</span>
               <span
@@ -223,7 +208,7 @@ export function Nav({ onPreorder }: NavProps) {
             <button
               type="button"
               onClick={() => setDownloadModalOpen(true)}
-              className="group relative rounded-full px-3.5 py-2 whitespace-nowrap transition-all duration-200 flex items-center gap-1.5 hover:text-[var(--ocean)]"
+              className="group relative rounded-full px-3.5 py-1.5 whitespace-nowrap transition-all duration-200 flex items-center gap-1.5 hover:text-[var(--ocean)]"
             >
               <span className="material-symbols-outlined text-base" style={{ color: "var(--ocean)" }}>download</span>
               <span>Tải App AIVA</span>
@@ -245,7 +230,7 @@ export function Nav({ onPreorder }: NavProps) {
             {/* Account / Login */}
             <Link
               href={accountHref}
-              className="hidden items-center rounded-full px-3.5 py-2 text-sm font-medium whitespace-nowrap transition-all duration-200 hover:bg-white/10 lg:inline-flex"
+              className="hidden items-center rounded-full px-3.5 py-1.5 text-sm font-medium whitespace-nowrap transition-all duration-200 hover:bg-white/10 lg:inline-flex"
               style={{ color: "var(--text-muted)" }}
             >
               {accountLabel}
@@ -255,7 +240,7 @@ export function Nav({ onPreorder }: NavProps) {
             <button
               type="button"
               onClick={onPreorder}
-              className="rounded-full px-5 py-2.5 text-xs md:text-sm font-bold whitespace-nowrap transition-all duration-200 hover:brightness-110 active:scale-95 shadow-md"
+              className="rounded-full px-5 py-2 text-xs md:text-sm font-bold whitespace-nowrap transition-all duration-200 hover:brightness-110 active:scale-95 shadow-md"
               style={{
                 background: "var(--gradient-ocean)",
                 color: "var(--text-on-accent)",
@@ -268,39 +253,59 @@ export function Nav({ onPreorder }: NavProps) {
         </div>
       </nav>
 
-      {/* ── Mobile nav ── */}
-      <nav className="fixed z-50 md:hidden" style={{ top: "0.75rem", left: "0.75rem", right: "0.75rem" }}>
+      {/* ── Mobile / Tablet nav (Floating Pill for < 1024px) ── */}
+      <nav
+        className="fixed top-3.5 sm:top-4 left-1/2 -translate-x-1/2 z-50 lg:hidden max-w-full"
+        style={{ width: "min(calc(100% - 2rem), 56rem)" }}
+      >
         <div
-          className="flex items-center justify-between px-5 py-3"
+          className="w-full flex items-center justify-between px-4 py-2 sm:px-6 sm:py-2.5 rounded-full border transition-all duration-300"
           style={{
-            borderRadius: "9999px",
+            backgroundColor: "var(--nav-bg)",
+            borderColor: "var(--nav-border)",
             backdropFilter: "blur(24px) saturate(180%)",
             WebkitBackdropFilter: "blur(24px) saturate(180%)",
-            background: scrolled ? "var(--nav-bg)" : "rgba(255,255,255,0.08)",
-            border: `1px solid ${scrolled ? "var(--nav-border)" : "rgba(255,255,255,0.12)"}`,
+            boxShadow: scrolled
+              ? "0 12px 32px -6px rgba(0,0,0,0.18), inset 0 1px 0 rgba(255,255,255,0.15)"
+              : "0 8px 24px -6px rgba(0,0,0,0.1), inset 0 1px 0 rgba(255,255,255,0.12)"
           }}
         >
-          <Link href="/" onClick={returnHome}>
-            <Image src="/AIVALogo.png" alt="AIVA Logo" width={110} height={22} className="object-contain" style={{ width: "auto", height: "auto" }} priority />
+          <Link href="/" onClick={returnHome} className="flex items-center shrink-0">
+            <Image
+              src="/AIVALogo.png"
+              alt="AIVA Logo"
+              width={110}
+              height={24}
+              className="object-contain"
+              style={{ width: "auto", height: 24 }}
+              priority
+            />
           </Link>
-          <div className="flex items-center gap-2">
-            <button
-              type="button"
-              onClick={() => setDownloadModalOpen(true)}
-              className="p-2 rounded-full border text-xs font-bold flex items-center justify-center"
-              style={{
-                backgroundColor: "var(--ocean-alpha)",
-                borderColor: "var(--ocean)",
-                color: "var(--ocean)"
-              }}
-              aria-label="Tải App"
+          <div className="flex items-center gap-1 sm:gap-2">
+            {/* Login / Account Tab */}
+            <Link
+              href={accountHref}
+              onClick={closeMenu}
+              className="flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-full text-xs sm:text-sm font-semibold transition-all hover:bg-[var(--bg-subtle)] active:scale-95"
+              style={{ color: "var(--text-on-glass)" }}
             >
-              <span className="material-symbols-outlined text-base">download</span>
-            </button>
+              <span className="material-symbols-outlined text-lg" style={{ color: "var(--ocean)" }}>account_circle</span>
+              <span className="hidden min-[360px]:inline whitespace-nowrap">{accountLabel}</span>
+            </Link>
+
+            <div className="h-4 w-px bg-[var(--border-subtle)]" />
+
+            {/* Cài đặt (Theme & Ngôn ngữ) */}
+            <ThemeLanguageControls />
+
+            <div className="h-4 w-px bg-[var(--border-subtle)]" />
+
+            {/* Dropdown Menu Toggle */}
             <button
               type="button"
               onClick={() => setMenuOpen(!menuOpen)}
-              className="p-2 text-white"
+              className="p-1.5 flex items-center justify-center rounded-full transition-colors hover:bg-[var(--bg-subtle)]"
+              style={{ color: "var(--text-on-glass)" }}
               aria-label="Toggle menu"
             >
               <span className="material-symbols-outlined text-2xl">{menuOpen ? "close" : "menu"}</span>
@@ -310,7 +315,7 @@ export function Nav({ onPreorder }: NavProps) {
 
         {menuOpen && (
           <div
-            className="mt-2 flex flex-col gap-1 rounded-3xl p-4 shadow-2xl backdrop-blur-2xl border"
+            className="mt-2 w-full rounded-3xl p-4 backdrop-blur-2xl shadow-2xl border space-y-2 animate-in fade-in zoom-in-95 duration-150"
             style={{
               backgroundColor: "var(--modal-bg)",
               borderColor: "var(--border-subtle)",
@@ -318,7 +323,7 @@ export function Nav({ onPreorder }: NavProps) {
             }}
           >
             {/* Mobile Kids Links Sub-group */}
-            <div className="px-4 py-2 border-b mb-1 border-slate-800/60">
+            <div className="px-2 py-2 border-b mb-2" style={{ borderColor: "var(--border-subtle)" }}>
               <div className="text-[11px] font-bold uppercase tracking-wider mb-2" style={{ color: "var(--ocean)" }}>
                 Cho Trẻ Em
               </div>
@@ -326,7 +331,7 @@ export function Nav({ onPreorder }: NavProps) {
                 <Link
                   href="/play"
                   onClick={closeMenu}
-                  className="flex items-center gap-2 text-sm font-medium"
+                  className="flex items-center gap-2 text-sm font-medium py-1"
                   style={{ color: "var(--text-on-glass)" }}
                 >
                   <span className="material-symbols-outlined text-base" style={{ color: "var(--ocean)" }}>sports_esports</span>
@@ -335,7 +340,7 @@ export function Nav({ onPreorder }: NavProps) {
                 <Link
                   href="/news"
                   onClick={closeMenu}
-                  className="flex items-center gap-2 text-sm font-medium"
+                  className="flex items-center gap-2 text-sm font-medium py-1"
                   style={{ color: "var(--text-on-glass)" }}
                 >
                   <span className="material-symbols-outlined text-base" style={{ color: "var(--ocean)" }}>newspaper</span>
@@ -347,7 +352,7 @@ export function Nav({ onPreorder }: NavProps) {
             <Link
               href="/about"
               onClick={closeMenu}
-              className="rounded-2xl px-4 py-3 text-sm font-medium transition-colors hover:bg-white/10"
+              className="block rounded-2xl px-4 py-2.5 text-sm font-medium transition-colors hover:bg-[var(--bg-subtle)]"
               style={{ color: "var(--text-on-glass)" }}
             >
               {t.navAbout}
@@ -356,7 +361,7 @@ export function Nav({ onPreorder }: NavProps) {
             <button
               type="button"
               onClick={() => { closeMenu(); setDownloadModalOpen(true); }}
-              className="rounded-2xl px-4 py-3 text-left text-sm font-medium flex items-center gap-2 transition-colors hover:bg-white/10"
+              className="w-full rounded-2xl px-4 py-2.5 text-left text-sm font-medium flex items-center gap-2 transition-colors hover:bg-[var(--bg-subtle)]"
               style={{ color: "var(--text-on-glass)" }}
             >
               <span className="material-symbols-outlined text-base" style={{ color: "var(--ocean)" }}>download</span>
@@ -366,13 +371,13 @@ export function Nav({ onPreorder }: NavProps) {
             <Link
               href={accountHref}
               onClick={closeMenu}
-              className="rounded-2xl px-4 py-3 text-sm font-medium transition-colors hover:bg-white/10"
+              className="block rounded-2xl px-4 py-2.5 text-sm font-medium transition-colors hover:bg-[var(--bg-subtle)]"
               style={{ color: "var(--text-on-glass)" }}
             >
               {accountLabel}
             </Link>
 
-            <div className="mt-2 flex flex-col gap-2 pt-2 border-t border-slate-800">
+            <div className="pt-2 border-t" style={{ borderColor: "var(--border-subtle)" }}>
               <button
                 type="button"
                 onClick={() => { closeMenu(); onPreorder(); }}

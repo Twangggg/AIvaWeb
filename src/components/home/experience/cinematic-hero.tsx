@@ -12,16 +12,23 @@ import { useI18n } from "@/lib/i18n/provider";
 export function CinematicHero({ onPreorder }: { onPreorder: () => void }) {
   const { t } = useI18n();
   const ref = useRef<HTMLElement>(null);
-  const [exit, setExit] = useState(0);
+  const stageRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     let raf = 0;
     const update = () => {
       const el = ref.current;
-      if (!el) return;
+      const stage = stageRef.current;
+      if (!el || !stage) return;
       const rect = el.getBoundingClientRect();
       const h = Math.max(el.offsetHeight, 1);
-      setExit(Math.min(1, Math.max(0, -rect.top / (h * 0.55))));
+      const exit = Math.min(1, Math.max(0, -rect.top / (h * 0.55)));
+      const stageOpacity = 1 - exit * 0.85;
+      const stageY = exit * -64;
+      const stageScale = 1 - exit * 0.12;
+
+      stage.style.opacity = String(stageOpacity);
+      stage.style.transform = `translate3d(0, ${stageY}px, 0) scale(${stageScale})`;
     };
     const onScroll = () => {
       cancelAnimationFrame(raf);
@@ -35,64 +42,56 @@ export function CinematicHero({ onPreorder }: { onPreorder: () => void }) {
     };
   }, []);
 
-  const stageOpacity = 1 - exit * 0.85;
-  const stageY = exit * -64;
-  const stageScale = 1 - exit * 0.12;
-
   return (
-    <section ref={ref} className="cx-hero relative w-full min-h-[100dvh] flex flex-col justify-center items-center overflow-x-clip pt-28 pb-20 md:pt-32 md:pb-24">
+    <section ref={ref} className="cx-hero relative w-full min-h-[100dvh] flex flex-col justify-center items-center overflow-x-clip pt-16 pb-12 sm:pt-20 sm:pb-14">
       <div className="cx-hero-grid" aria-hidden />
       <div className="cx-hero-glow cx-hero-glow-a" aria-hidden />
       <div className="cx-hero-glow cx-hero-glow-b" aria-hidden />
 
       <div
-        className="relative z-10 w-full flex flex-col justify-center items-center px-6 my-auto"
-        style={
-          {
-            opacity: stageOpacity,
-            transform: `translate3d(0, ${stageY}px, 0) scale(${stageScale})`,
-            transformOrigin: "center center"
-          } as CSSProperties
-        }
+        ref={stageRef}
+        className="relative z-10 w-full max-w-5xl mx-auto flex flex-col justify-center items-center px-4 sm:px-6 will-change-transform will-change-opacity"
+        style={{ transformOrigin: "center center" }}
       >
-        <div className="cx-brand-stage mx-auto w-full max-w-5xl text-center is-open is-layout-open">
+        <div className="cx-brand-stage mx-auto w-full text-center is-open is-layout-open">
           <h1 className="sr-only">
             AIVA — {t.heroSuffix}
           </h1>
 
           <p
-            className="cx-brand-static font-display font-bold tracking-tight text-[clamp(3.5rem,12vw,8rem)] leading-none"
+            className="cx-brand-static font-display font-bold tracking-tight leading-none"
             style={{
+              fontSize: "clamp(3.5rem, 12vw, 8rem)",
               color: "var(--accent)",
-              textShadow: "0 0 28px rgba(255, 216, 77, 0.4)"
+              textShadow: "0 0 32px rgba(255, 216, 77, 0.45)"
             }}
             aria-hidden="true"
           >
             AIVA
           </p>
 
-          <div className="cx-brand-below is-open">
-            <p className="text-2xl md:text-4xl lg:text-5xl font-display font-bold tracking-tight">
+          <div className="cx-brand-below is-open mt-3 sm:mt-4">
+            <p className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight">
               <TextReveal text={t.heroSuffix} as="span" className="hero-suffix" immediate delay={200} stagger={48} />
             </p>
 
             <p
-              className="mx-auto mt-6 max-w-xl text-base md:text-lg leading-relaxed"
+              className="mx-auto mt-4 sm:mt-5 max-w-xl text-sm sm:text-base md:text-lg leading-relaxed px-2"
               style={{ color: "var(--text-dim)" }}
             >
               {t.heroSubtitle}
             </p>
 
-            <div className="mt-10 flex flex-wrap gap-4 justify-center">
+            <div className="mt-7 sm:mt-9 flex flex-wrap gap-3.5 sm:gap-4 justify-center">
               <Magnetic>
-                <Button onClick={onPreorder} className="px-10 py-4 text-base">
+                <Button onClick={onPreorder} className="px-8 sm:px-10 py-3.5 sm:py-4 text-sm sm:text-base">
                   {t.ctaPrimary}
                 </Button>
               </Magnetic>
               <Magnetic strength={0.16}>
                 <Button
                   variant="ghost"
-                  className="px-10 py-4 text-base"
+                  className="px-8 sm:px-10 py-3.5 sm:py-4 text-sm sm:text-base"
                   onClick={() => {
                     const el = document.getElementById("statement");
                     const lenis = (window as unknown as { __lenis?: { scrollTo: (t: HTMLElement | number, opts?: Record<string, unknown>) => void } }).__lenis;
@@ -113,7 +112,7 @@ export function CinematicHero({ onPreorder }: { onPreorder: () => void }) {
               </Magnetic>
             </div>
 
-            <div className="mt-12 flex flex-wrap justify-center gap-8 md:gap-14">
+            <div className="mt-8 sm:mt-10 flex flex-wrap justify-center gap-6 sm:gap-10 md:gap-14">
               {[[t.stat1Value, t.stat1Label], [t.stat2Value, t.stat2Label], [t.stat3Value, t.stat3Label]].map(
                 ([v, l]) => (
                   <div key={l} className="text-center">

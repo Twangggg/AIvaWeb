@@ -20,7 +20,7 @@ export function FaqSection() {
   return (
     <section
       data-fp-scroll
-      className="faq-section h-full w-full py-12 md:py-16 px-6 flex flex-col justify-center overflow-y-auto"
+      className="faq-section h-full w-full py-8 sm:py-12 md:py-16 px-4 sm:px-6 flex flex-col justify-center overflow-y-auto"
     >
       <div className="max-w-2xl mx-auto w-full">
         <Reveal direction="up" delay={0}>
@@ -34,7 +34,7 @@ export function FaqSection() {
           />
         </Reveal>
 
-        <div className="mt-10 flex flex-col gap-3">
+        <div className="mt-6 sm:mt-8 md:mt-10 flex flex-col gap-3">
           {faqs.map((faq, i) => {
             const isOpen = openIndex === i;
             return (

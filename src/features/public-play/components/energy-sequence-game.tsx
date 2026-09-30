@@ -88,11 +88,11 @@ export function EnergySequenceGame() {
           <span className={mode === "failed" ? "text-rose-600 dark:text-rose-300" : "text-slate-800 dark:text-slate-200"}>{status}</span>
           <span className="text-slate-500 dark:text-slate-400">Mã: {sequence.length || "–"}</span>
         </div>
-        <div className="mx-auto mt-5 grid max-w-lg grid-cols-2 gap-4 sm:gap-5">
+        <div className="mx-auto mt-5 grid max-w-lg grid-cols-2 gap-3 sm:gap-5">
           {PADS.map((pad) => {
             const isLit = lit === pad.id;
             return (
-              <button key={pad.id} type="button" onClick={() => choose(pad.id)} disabled={mode !== "input"} aria-label={`Chọn ${pad.label}`} className="min-h-32 rounded-[1.7rem] border border-white/50 transition duration-150 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-slate-900 dark:border-white/20 dark:focus-visible:outline-white disabled:cursor-default sm:min-h-40" style={{ background: `radial-gradient(circle at 50% 35%, ${pad.color}, ${pad.shade})`, boxShadow: isLit ? `0 0 0 5px rgba(255,255,255,.88), 0 0 52px ${pad.color}` : "inset 0 -10px 24px rgba(0,0,0,.2)", filter: isLit ? "brightness(1.35) saturate(1.1)" : mode === "showing" ? "brightness(.48) saturate(.6)" : "none", transform: isLit ? "scale(1.035)" : "scale(1)" }} />
+              <button key={pad.id} type="button" onClick={() => choose(pad.id)} disabled={mode !== "input"} aria-label={`Chọn ${pad.label}`} className="min-h-28 rounded-[1.7rem] border border-white/50 transition duration-150 active:scale-95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-slate-900 dark:border-white/20 dark:focus-visible:outline-white disabled:cursor-default sm:min-h-40" style={{ background: `radial-gradient(circle at 50% 35%, ${pad.color}, ${pad.shade})`, boxShadow: isLit ? `0 0 0 5px rgba(255,255,255,.88), 0 0 52px ${pad.color}` : "inset 0 -10px 24px rgba(0,0,0,.2)", filter: isLit ? "brightness(1.35) saturate(1.1)" : mode === "showing" ? "brightness(.48) saturate(.6)" : "none", transform: isLit ? "scale(1.035)" : "scale(1)" }} />
             );
           })}
         </div>

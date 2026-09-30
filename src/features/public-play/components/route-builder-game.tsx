@@ -90,7 +90,7 @@ export function RouteBuilderGame() {
         <span className="ui-surface-soft rounded-full px-4 py-2 text-sm font-bold">Tuyến {missionIndex + 1}</span>
       </div>
       <div className="mt-6 grid gap-6 lg:grid-cols-[minmax(0,1fr)_280px]">
-        <div className="ui-surface-soft grid aspect-square max-w-md grid-cols-6 gap-1 rounded-2xl p-2">
+        <div className="ui-surface-soft grid aspect-square w-full max-w-md grid-cols-6 gap-1 rounded-2xl p-2">
           {Array.from({ length: 36 }, (_, index) => {
             const point = { x: index % 6, y: Math.floor(index / 6) };
             const isBlock = mission.blocks.includes(key(point));
@@ -98,7 +98,7 @@ export function RouteBuilderGame() {
             const isGoal = key(point) === key(mission.goal);
             const isBot = key(point) === key(position);
             return (
-              <div key={key(point)} className={`relative flex min-h-10 items-center justify-center overflow-hidden rounded-lg text-xs font-black ${isBlock ? "ui-surface-overlay" : isGoal ? "bg-[var(--game-cards-bg)]" : isBot ? "bg-[var(--ocean-alpha)]" : "bg-[var(--game-hunt-bg)] text-transparent"}`} aria-label={isGoal ? "Cổng không gian" : isBot ? "AIVA" : isBlock ? "Chướng ngại" : undefined}>
+              <div key={key(point)} className={`relative flex min-h-11 items-center justify-center overflow-hidden rounded-lg text-[10px] font-black sm:text-xs ${isBlock ? "ui-surface-overlay" : isGoal ? "bg-[var(--game-cards-bg)]" : isBot ? "bg-[var(--ocean-alpha)]" : "bg-[var(--game-hunt-bg)] text-transparent"}`} aria-label={isGoal ? "Cổng không gian" : isBot ? "AIVA" : isBlock ? "Chướng ngại" : undefined}>
                 {isGoal ? <Image src="/games/portal-sprite.webp" alt="" fill unoptimized sizes="72px" className="object-contain p-0.5" /> : isBot ? <Image src="/games/robot-sprite.webp" alt="" fill unoptimized sizes="72px" className="object-contain p-0.5" /> : isStart ? "Bắt đầu" : ""}
               </div>
             );
