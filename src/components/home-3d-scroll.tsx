@@ -105,7 +105,7 @@ export function Home3DScroll() {
           <div className="absolute bottom-1/4 -right-24 w-[22rem] h-[22rem] rounded-full bg-[var(--accent)]/10 blur-2xl" />
         </div>
 
-        <div className="absolute inset-0">
+        <div className="absolute inset-0 pointer-events-none select-none touch-pan-y">
           {isNearViewport ? (
             <AivaGlasses3D
               active={isNearViewport}

@@ -91,6 +91,8 @@ export default function AivaGlasses3D({
 
   return (
     <Canvas
+      className="pointer-events-none select-none touch-pan-y"
+      style={{ pointerEvents: "none", touchAction: "pan-y" }}
       frameloop="demand"
       flat
       camera={{ position: [0, 0, 3.0], fov: 45, near: 0.5, far: 20 }}
