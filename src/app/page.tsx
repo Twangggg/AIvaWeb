@@ -3,7 +3,6 @@
 import { useState, Suspense } from "react";
 import { Nav } from "@/components/common/nav";
 import { Footer } from "@/components/common/footer";
-import { StickyCta } from "@/components/common/sticky-cta";
 import { PreorderModal } from "@/features/preorder/components/preorder-modal";
 import { SiteIntro, useSiteIntro } from "@/components/home/site-intro";
 import { OAuthErrorBanner } from "@/components/home/oauth-error-banner";
@@ -103,7 +102,6 @@ export default function HomePage() {
             </div>
           </main>
 
-          <StickyCta onPreorder={() => setPreorderOpen(true)} />
           <PreorderModal open={preorderOpen} onClose={() => setPreorderOpen(false)} />
         </>
       )}

@@ -21,9 +21,9 @@ export function Reveal({
   className = "",
   delay = 0,
   direction = "up",
-  blur = true,
+  blur = false,
   once = false,
-  distance = 36,
+  distance = 20,
   ...props
 }: RevealProps) {
   const getInitialTransform = () => {
@@ -37,7 +37,7 @@ export function Reveal({
       case "right":
         return { x: -distance, y: 0, scale: 1 };
       case "scale":
-        return { y: distance * 0.3, scale: 0.94, x: 0 };
+        return { y: distance * 0.3, scale: 0.96, x: 0 };
       case "none":
         return { y: 0, x: 0, scale: 1 };
       default:
@@ -52,7 +52,7 @@ export function Reveal({
       initial={{
         opacity: 0,
         ...initialTransform,
-        filter: blur ? "blur(6px)" : "blur(0px)",
+        filter: blur ? "blur(4px)" : "blur(0px)",
       }}
       whileInView={{
         opacity: 1,
@@ -63,12 +63,12 @@ export function Reveal({
       }}
       viewport={{
         once,
-        amount: 0.12,
-        margin: "-30px 0px -30px 0px",
+        amount: 0.01,
+        margin: "120px 0px 120px 0px",
       }}
       transition={{
-        duration: 0.55,
-        delay: delay / 1000,
+        duration: 0.32,
+        delay: Math.min(delay, 100) / 1000,
         ease: EASE_APPLE,
       }}
       className={className}

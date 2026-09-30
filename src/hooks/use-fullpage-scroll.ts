@@ -127,15 +127,15 @@ export function useFullpageScroll(enabled = true) {
             const scrollableDistance = height - viewportHeight;
             if (scrollableDistance > 0) {
               // Early lead-in: start progression immediately upon arrival
-              const leadIn = viewportHeight * 0.14;
+              const leadIn = viewportHeight * 0.2;
               const relY = currentY - top + leadIn;
               const normalized = Math.max(0, Math.min(1, relY / (scrollableDistance + leadIn)));
               // Fast, responsive progression: triggers scenes early so all effects are experienced
-              const effective = Math.max(0, Math.min(1, normalized / 0.8));
+              const effective = Math.max(0, Math.min(1, normalized / 0.7));
               const step = Math.min(scenes - 1, Math.floor(effective * scenes));
               setScene(el, step, dir);
             } else {
-              const relY = currentY - top + viewportHeight * 0.45;
+              const relY = currentY - top + viewportHeight * 0.5;
               const normalized = Math.max(0, Math.min(1, relY / Math.max(height, 1)));
               const step = Math.min(scenes - 1, Math.floor(normalized * scenes));
               setScene(el, step, dir);
