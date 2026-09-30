@@ -60,14 +60,14 @@ function Model({ scrollY }: { scrollY: MutableRefObject<number> }) {
 
     // Optical centering dynamically balancing top cards (1 & 2) and bottom cards (3 & 4)
     const shift = (s - 0.5) * 2; // -1 to +1
-    const baseShift = isMobile ? 0.12 : isTablet ? 0.08 : 0;
+    const baseShift = isMobile ? 0.055 : isTablet ? 0.04 : 0;
     const posY = shift * baseShift;
     group.current.position.x = 0;
-    group.current.position.y = posY + Math.sin(s * Math.PI * 3) * 0.04;
-    group.current.position.z = -s * 0.5;
+    group.current.position.y = posY + Math.sin(s * Math.PI * 3) * 0.02;
+    group.current.position.z = -s * 0.4;
 
     // Harmonious responsive scales
-    const baseScale = isMobile ? 0.95 : isTablet ? 1.15 : 1.4;
+    const baseScale = isMobile ? 0.8 : isTablet ? 1.0 : 1.35;
     const scrollScale = 1 + s * 0.06;
     group.current.scale.setScalar(baseScale * scrollScale);
   });

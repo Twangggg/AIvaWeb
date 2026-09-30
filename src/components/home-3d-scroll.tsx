@@ -97,7 +97,7 @@ export function Home3DScroll() {
   }, []);
 
   return (
-    <section ref={stageRef} id="glasses-3d-showcase" className="relative min-h-[135vh] lg:min-h-[180vh] w-full">
+    <section ref={stageRef} id="glasses-3d-showcase" className="relative min-h-[220vh] lg:min-h-[240vh] w-full">
       <div className="sticky top-0 h-[100dvh] w-full overflow-hidden transform-gpu flex items-center justify-center">
         <div className="absolute inset-0 grid-bg opacity-60" />
         <div className="absolute inset-0 pointer-events-none">
