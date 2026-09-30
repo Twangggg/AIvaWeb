@@ -9,10 +9,10 @@ const AivaGlasses3D = dynamic(() => import("@/components/AivaGlasses3D"), {
 });
 
 const SECTIONS = [
-  { tag: "feature1Tag", title: "feature1Title", desc: "feature1Desc", desktopPos: "lg:top-24 lg:right-[15%]" },
-  { tag: "feature2Tag", title: "feature2Title", desc: "feature2Desc", desktopPos: "lg:top-[30%] lg:left-16" },
-  { tag: "feature3Tag", title: "feature3Title", desc: "feature3Desc", desktopPos: "lg:top-[22%] lg:right-16" },
-  { tag: "feature4Tag", title: "feature4Title", desc: "feature4Desc", desktopPos: "lg:bottom-24 lg:left-[15%]" }
+  { tag: "feature1Tag", title: "feature1Title", desc: "feature1Desc", mobilePos: "top-14 sm:top-20", desktopPos: "lg:top-24 lg:right-[15%]" },
+  { tag: "feature2Tag", title: "feature2Title", desc: "feature2Desc", mobilePos: "top-14 sm:top-20", desktopPos: "lg:top-[30%] lg:left-16" },
+  { tag: "feature3Tag", title: "feature3Title", desc: "feature3Desc", mobilePos: "bottom-10 sm:bottom-16", desktopPos: "lg:top-[22%] lg:right-16" },
+  { tag: "feature4Tag", title: "feature4Title", desc: "feature4Desc", mobilePos: "bottom-10 sm:bottom-16", desktopPos: "lg:bottom-24 lg:left-[15%]" }
 ] as const;
 
 export function Home3DScroll() {
@@ -135,9 +135,9 @@ export function Home3DScroll() {
         {SECTIONS.map((s, i) => (
           <div
             key={s.tag}
-            className={`absolute z-10 transition-all duration-500 will-change-transform will-change-opacity bottom-8 sm:bottom-12 md:bottom-16 lg:bottom-auto lg:left-auto lg:right-auto left-4 right-4 max-w-[min(calc(100%-2rem),24rem)] sm:max-w-md mx-auto lg:mx-0 ${
+            className={`absolute z-10 transition-all duration-500 will-change-transform will-change-opacity lg:bottom-auto lg:left-auto lg:right-auto left-4 right-4 max-w-[min(calc(100%-2rem),24rem)] sm:max-w-md mx-auto lg:mx-0 ${
               i === active ? "opacity-100 scale-100 translate-y-0" : "opacity-0 scale-95 translate-y-3 pointer-events-none"
-            } ${s.desktopPos}`}
+            } ${s.mobilePos} ${s.desktopPos}`}
           >
             <div
               className="rounded-2xl p-4 md:p-6 backdrop-blur-xl shadow-2xl"

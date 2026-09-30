@@ -58,10 +58,12 @@ function Model({ scrollY }: { scrollY: MutableRefObject<number> }) {
     group.current.rotation.y = s * Math.PI * 2;
     group.current.rotation.x = Math.sin(s * Math.PI * 2) * 0.22;
 
-    // Optical centering so the glasses are beautifully framed and never clipped
-    const posY = isMobile ? 0.16 : isTablet ? 0.14 : 0;
+    // Optical centering dynamically balancing top cards (1 & 2) and bottom cards (3 & 4)
+    const shift = (s - 0.5) * 2; // -1 to +1
+    const baseShift = isMobile ? 0.12 : isTablet ? 0.08 : 0;
+    const posY = shift * baseShift;
     group.current.position.x = 0;
-    group.current.position.y = posY + Math.sin(s * Math.PI * 3) * 0.06;
+    group.current.position.y = posY + Math.sin(s * Math.PI * 3) * 0.04;
     group.current.position.z = -s * 0.5;
 
     // Harmonious responsive scales
