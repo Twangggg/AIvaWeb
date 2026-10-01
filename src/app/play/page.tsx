@@ -31,9 +31,11 @@ export default function PublicPlayPage() {
   const [totalShards, setTotalShards] = useState(3);
   const [stepsRemaining, setStepsRemaining] = useState(35);
   const [maxSteps, setMaxSteps] = useState(35);
+  const [hearts, setHearts] = useState(3);
+  const [maxHearts, setMaxHearts] = useState(3);
   const [completed, setCompleted] = useState(false);
   const [failed, setFailed] = useState(false);
-  const [message, setMessage] = useState("Chạm vào ô cỏ để AIVA tự tìm đường.");
+  const [message, setMessage] = useState("Chạm vào ô cỏ hoặc dùng phím điều hướng để di chuyển.");
 
   useEffect(() => () => {
     document.body.style.overflow = "";
@@ -49,9 +51,10 @@ export default function PublicPlayPage() {
   const restartGarden = () => {
     setRound((value) => value + 1);
     setCollected(0);
+    setHearts(3);
     setCompleted(false);
     setFailed(false);
-    setMessage("Chạm vào ô cỏ để AIVA tự tìm đường.");
+    setMessage("Chạm vào ô cỏ hoặc dùng phím điều hướng để di chuyển.");
   };
 
   const openGame = (game: GameId) => {
@@ -63,8 +66,17 @@ export default function PublicPlayPage() {
     window.scrollTo({ top: 0, behavior: "instant" });
   };
 
+  const selectGardenLevel = (lvl: number) => {
+    setLevel(lvl);
+    setRound((value) => value + 1);
+    setCollected(0);
+    setHearts(3);
+    setCompleted(false);
+    setFailed(false);
+  };
+
   const nextLevel = () => {
-    setLevel((value) => value + 1);
+    setLevel((value) => Math.min(5, value + 1));
     restartGarden();
   };
 
@@ -106,10 +118,13 @@ export default function PublicPlayPage() {
                   <div className="w-full max-w-2xl mx-auto space-y-3 sm:space-y-4">
                     <GameHeaderBar
                       title="Vườn Thông Minh AIVA"
-                      subtitle="Thu thập tinh thể & mở cổng không gian"
+                      subtitle="Né bọ tuần tra, gỡ bẫy & giải cứu khu vườn"
                       icon="potted_plant"
                       stats={
                         <div className="flex items-center gap-1.5 sm:gap-2">
+                          <span className="rounded-full border border-slate-200 dark:border-slate-700 bg-white/90 dark:bg-slate-900/90 px-2.5 py-1 text-xs font-semibold text-rose-600 dark:text-rose-400 shadow-sm whitespace-nowrap">
+                            ❤️ {hearts}/{maxHearts}
+                          </span>
                           <span className="rounded-full border border-slate-200 dark:border-slate-700 bg-white/90 dark:bg-slate-900/90 px-2.5 py-1 text-xs font-semibold text-amber-700 dark:text-amber-300 shadow-sm whitespace-nowrap">
                             ⚡ {collected}/{totalShards}
                           </span>
@@ -122,13 +137,38 @@ export default function PublicPlayPage() {
                           >
                             🔋 {stepsRemaining}/{maxSteps}
                           </span>
-                          <span className="rounded-full border border-slate-200 dark:border-slate-700 bg-white/90 dark:bg-slate-900/90 px-2.5 py-1 text-xs font-semibold text-slate-700 dark:text-slate-200 shadow-sm whitespace-nowrap">
-                            Màn {level}
-                          </span>
                         </div>
                       }
                       onReset={restartGarden}
                     />
+
+                    {/* Level Selector Pills */}
+                    <div className="flex items-center justify-between gap-1.5 overflow-x-auto pb-0.5">
+                      <div className="flex items-center gap-1.5">
+                        {[
+                          { id: 1, label: "Màn 1", desc: "Tập sự" },
+                          { id: 2, label: "Màn 2 🚨", desc: "1 Bọ tuần tra" },
+                          { id: 3, label: "Màn 3 ⚡", desc: "2 Bọ + Bẫy điện" },
+                          { id: 4, label: "Màn 4 🌙", desc: "Màn đêm sương mù" },
+                          { id: 5, label: "Màn 5 🔥", desc: "Ác mộng siêu cấp" },
+                        ].map((lvl) => (
+                          <button
+                            key={lvl.id}
+                            type="button"
+                            onClick={() => selectGardenLevel(lvl.id)}
+                            className={`px-2.5 py-1 rounded-xl text-xs font-bold transition-all whitespace-nowrap ${
+                              level === lvl.id
+                                ? "bg-amber-400 text-black shadow-sm font-black ring-2 ring-amber-400/50"
+                                : "bg-white/80 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white border border-slate-200 dark:border-slate-700"
+                            }`}
+                            title={lvl.desc}
+                          >
+                            <span>{lvl.label}</span>
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+
                     <div className="w-full">
                       <AivaGardenGame
                         round={round}
@@ -138,6 +178,8 @@ export default function PublicPlayPage() {
                           totalShards: nextTotal,
                           stepsRemaining: nextSteps,
                           maxSteps: nextMax,
+                          hearts: nextHearts,
+                          maxHearts: nextMaxHearts,
                           completed: nextCompleted,
                           failed: nextFailed,
                           message: nextMessage,
@@ -146,6 +188,8 @@ export default function PublicPlayPage() {
                           setTotalShards(nextTotal);
                           setStepsRemaining(nextSteps);
                           setMaxSteps(nextMax);
+                          setHearts(nextHearts);
+                          setMaxHearts(nextMaxHearts);
                           setCompleted(nextCompleted);
                           setFailed(nextFailed);
                           setMessage(nextMessage);
@@ -157,9 +201,9 @@ export default function PublicPlayPage() {
                     </p>
 
                     {completed && (
-                      <div className="mt-2 rounded-2xl border border-emerald-400/50 bg-emerald-400/15 p-3 text-center shadow-sm flex flex-col sm:flex-row items-center justify-between gap-2">
+                      <div className="mt-2 rounded-2xl border border-emerald-400/50 bg-emerald-400/15 p-3 text-center shadow-sm flex flex-col sm:flex-row items-center justify-between gap-2 animate-fadeIn">
                         <span className="text-xs font-black text-emerald-800 dark:text-emerald-300">
-                          🎉 Xuất sắc vượt qua màn {level}!
+                          🎉 Xuất sắc vượt qua Màn {level}!
                         </span>
                         <button
                           type="button"
@@ -167,15 +211,15 @@ export default function PublicPlayPage() {
                           className="rounded-full px-4 py-1.5 text-xs font-bold text-slate-950 shadow-md transition hover:brightness-110 active:scale-95"
                           style={{ background: "var(--gradient-ocean)" }}
                         >
-                          Vào Màn {level + 1} ➔
+                          Vào Màn {Math.min(5, level + 1)} ➔
                         </button>
                       </div>
                     )}
 
                     {failed && (
-                      <div className="mt-2 rounded-2xl border border-rose-400/50 bg-rose-400/15 p-3 text-center shadow-sm flex flex-col sm:flex-row items-center justify-between gap-2">
+                      <div className="mt-2 rounded-2xl border border-rose-400/50 bg-rose-400/15 p-3 text-center shadow-sm flex flex-col sm:flex-row items-center justify-between gap-2 animate-fadeIn">
                         <span className="text-xs font-bold text-rose-800 dark:text-rose-300">
-                          ⚡ Hết pin năng lượng!
+                          💥 AIVA chưa thể vượt qua thử thách!
                         </span>
                         <button
                           type="button"
