@@ -2,15 +2,20 @@
 
 import { useEffect, useRef } from "react";
 
-type GameUpdate = {
+export type GardenGameUpdate = {
   collected: number;
+  totalShards: number;
+  stepsRemaining: number;
+  maxSteps: number;
   completed: boolean;
+  failed: boolean;
   message: string;
 };
 
 type AivaGardenGameProps = {
-  onUpdate: (update: GameUpdate) => void;
+  onUpdate: (update: GardenGameUpdate) => void;
   round: number;
+  level?: number;
 };
 
 const WIDTH = 15;
@@ -20,7 +25,11 @@ const GATE = { x: 13, y: 1 };
 
 const keyOf = (point: { x: number; y: number }) => `${point.x}:${point.y}`;
 
-type LevelLayout = { map: string[]; shards: { x: number; y: number }[] };
+type LevelLayout = {
+  map: string[];
+  shards: { x: number; y: number }[];
+  maxSteps: number;
+};
 
 function reachableCells(map: string[]) {
   const queue = [{ ...START }];
@@ -45,8 +54,12 @@ function reachableCells(map: string[]) {
   return seen;
 }
 
-function createLevel(): LevelLayout {
-  for (let attempt = 0; attempt < 80; attempt += 1) {
+function createLevel(level = 1): LevelLayout {
+  const shardGoal = Math.min(6, 2 + level); // Level 1: 3, Level 2: 4, Level 3: 5, Level 4+: 6
+  const obstacleGoal = Math.min(32, 14 + level * 4 + Math.floor(Math.random() * 4));
+  const maxSteps = 24 + shardGoal * 7;
+
+  for (let attempt = 0; attempt < 100; attempt += 1) {
     const grid = Array.from({ length: HEIGHT }, () => Array.from({ length: WIDTH }, () => "."));
     const protectedCells = new Set<string>();
     [START, GATE].forEach((point) => {
@@ -55,11 +68,10 @@ function createLevel(): LevelLayout {
       }
     });
     let obstacles = 0;
-    const obstacleGoal = 16 + Math.floor(Math.random() * 10);
     while (obstacles < obstacleGoal) {
       const point = { x: Math.floor(Math.random() * WIDTH), y: Math.floor(Math.random() * HEIGHT) };
       if (protectedCells.has(keyOf(point)) || grid[point.y][point.x] !== ".") continue;
-      grid[point.y][point.x] = Math.random() > 0.3 ? "#" : "~";
+      grid[point.y][point.x] = Math.random() > 0.35 ? "#" : "~";
       obstacles += 1;
     }
     const map = grid.map((row) => row.join(""));
@@ -68,18 +80,42 @@ function createLevel(): LevelLayout {
     const candidates = [...reachable]
       .map((cell) => cell.split(":").map(Number))
       .map(([x, y]) => ({ x, y }))
-      .filter((point) => Math.abs(point.x - START.x) + Math.abs(point.y - START.y) > 4)
-      .filter((point) => Math.abs(point.x - GATE.x) + Math.abs(point.y - GATE.y) > 3)
+      .filter((point) => Math.abs(point.x - START.x) + Math.abs(point.y - START.y) > 3)
+      .filter((point) => Math.abs(point.x - GATE.x) + Math.abs(point.y - GATE.y) > 2)
       .sort(() => Math.random() - 0.5);
-    if (candidates.length >= 3) return { map, shards: candidates.slice(0, 3) };
+    if (candidates.length >= shardGoal) {
+      return { map, shards: candidates.slice(0, shardGoal), maxSteps };
+    }
   }
+
+  // Fallback map
+  const fallbackShards = [
+    { x: 4, y: 8 },
+    { x: 11, y: 7 },
+    { x: 10, y: 2 },
+    { x: 2, y: 3 },
+    { x: 7, y: 4 },
+  ].slice(0, shardGoal);
+
   return {
-    map: ["...............", "..###....~~~...", ".#.....#...#...", ".###...#..###..", "...#...........", ".#....##..##...", ".#.......#.....", ".#####...#.....", "...............", "..............."],
-    shards: [{ x: 4, y: 8 }, { x: 11, y: 7 }, { x: 10, y: 2 }],
+    map: [
+      "...............",
+      "..###....~~~...",
+      ".#.....#...#...",
+      ".###...#..###..",
+      "...#...........",
+      ".#....##..##...",
+      ".#.......#.....",
+      ".#####...#.....",
+      "...............",
+      "...............",
+    ],
+    shards: fallbackShards,
+    maxSteps,
   };
 }
 
-export function AivaGardenGame({ onUpdate, round }: AivaGardenGameProps) {
+export function AivaGardenGame({ onUpdate, round, level = 1 }: AivaGardenGameProps) {
   const hostRef = useRef<HTMLDivElement>(null);
   const updateRef = useRef(onUpdate);
 
@@ -103,19 +139,87 @@ export function AivaGardenGame({ onUpdate, round }: AivaGardenGameProps) {
         private position = { ...START };
         private moving = false;
         private completed = false;
+        private failed = false;
         private layout!: LevelLayout;
+        private stepsRemaining = 35;
+        private maxSteps = 35;
         private collected = new Set<string>();
         private shards = new Map<string, Phaser.GameObjects.Graphics>();
+        private audioCtx: AudioContext | null = null;
 
         constructor() {
           super("garden");
         }
 
+        private playSound(type: "step" | "shard" | "gate" | "win" | "fail") {
+          try {
+            if (!this.audioCtx) {
+              const AudioCtx = window.AudioContext || (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext;
+              this.audioCtx = new AudioCtx();
+            }
+            if (this.audioCtx.state === "suspended") void this.audioCtx.resume();
+            const ctx = this.audioCtx;
+            const osc = ctx.createOscillator();
+            const gain = ctx.createGain();
+            osc.connect(gain);
+            gain.connect(ctx.destination);
+
+            if (type === "step") {
+              osc.type = "sine";
+              osc.frequency.setValueAtTime(320, ctx.currentTime);
+              gain.gain.setValueAtTime(0.04, ctx.currentTime);
+              gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.08);
+              osc.start();
+              osc.stop(ctx.currentTime + 0.08);
+            } else if (type === "shard") {
+              osc.type = "triangle";
+              osc.frequency.setValueAtTime(659.25, ctx.currentTime);
+              osc.frequency.setValueAtTime(880, ctx.currentTime + 0.1);
+              gain.gain.setValueAtTime(0.15, ctx.currentTime);
+              gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.3);
+              osc.start();
+              osc.stop(ctx.currentTime + 0.3);
+            } else if (type === "gate") {
+              osc.type = "sine";
+              osc.frequency.setValueAtTime(523.25, ctx.currentTime);
+              osc.frequency.setValueAtTime(783.99, ctx.currentTime + 0.15);
+              gain.gain.setValueAtTime(0.2, ctx.currentTime);
+              gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.45);
+              osc.start();
+              osc.stop(ctx.currentTime + 0.45);
+            } else if (type === "win") {
+              osc.type = "triangle";
+              osc.frequency.setValueAtTime(523.25, ctx.currentTime);
+              osc.frequency.setValueAtTime(659.25, ctx.currentTime + 0.12);
+              osc.frequency.setValueAtTime(783.99, ctx.currentTime + 0.24);
+              osc.frequency.setValueAtTime(1046.5, ctx.currentTime + 0.36);
+              gain.gain.setValueAtTime(0.25, ctx.currentTime);
+              gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.6);
+              osc.start();
+              osc.stop(ctx.currentTime + 0.6);
+            } else if (type === "fail") {
+              osc.type = "sawtooth";
+              osc.frequency.setValueAtTime(220, ctx.currentTime);
+              osc.frequency.setValueAtTime(150, ctx.currentTime + 0.15);
+              gain.gain.setValueAtTime(0.2, ctx.currentTime);
+              gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.35);
+              osc.start();
+              osc.stop(ctx.currentTime + 0.35);
+            }
+          } catch {
+            // Audio fallback
+          }
+        }
+
         create() {
-          this.layout = createLevel();
+          this.layout = createLevel(level);
+          this.maxSteps = this.layout.maxSteps;
+          this.stepsRemaining = this.layout.maxSteps;
+          this.failed = false;
+          this.completed = false;
           this.drawGarden();
           this.bot = this.createBot(this.toPixels(START));
-          this.report("Chạm vào ô cỏ để AIVA tự tìm đường.");
+          this.report(`Màn ${level}: Thu thập đủ ${this.layout.shards.length} mảnh năng lượng để mở cổng!`);
 
           let touchStart: { x: number; y: number } | null = null;
           this.input.on("pointerdown", (pointer: Phaser.Input.Pointer) => {
@@ -128,9 +232,10 @@ export function AivaGardenGame({ onUpdate, round }: AivaGardenGameProps) {
             touchStart = null;
             const swipeThreshold = 20;
             if (Math.max(Math.abs(deltaX), Math.abs(deltaY)) >= swipeThreshold) {
-              const step = Math.abs(deltaX) > Math.abs(deltaY)
-                ? { x: Math.sign(deltaX), y: 0 }
-                : { x: 0, y: Math.sign(deltaY) };
+              const step =
+                Math.abs(deltaX) > Math.abs(deltaY)
+                  ? { x: Math.sign(deltaX), y: 0 }
+                  : { x: 0, y: Math.sign(deltaY) };
               this.moveTo({ x: this.position.x + step.x, y: this.position.y + step.y });
               return;
             }
@@ -164,12 +269,21 @@ export function AivaGardenGame({ onUpdate, round }: AivaGardenGameProps) {
             [...row].forEach((cell, x) => {
               const px = x * tileSize;
               const py = y * tileSize;
-              terrain.fillStyle(cell === "~" ? 0x237aa6 : 0x367c52, 1).fillRoundedRect(px + 2, py + 2, tileSize - 4, tileSize - 4, 10);
+              terrain
+                .fillStyle(cell === "~" ? 0x237aa6 : 0x367c52, 1)
+                .fillRoundedRect(px + 2, py + 2, tileSize - 4, tileSize - 4, 10);
               if (cell === "#") {
-                terrain.fillStyle(0x17452f, 1).fillCircle(px + 18, py + 25, 16).fillCircle(px + 34, py + 21, 18).fillCircle(px + 38, py + 35, 14);
+                terrain
+                  .fillStyle(0x17452f, 1)
+                  .fillCircle(px + 18, py + 25, 16)
+                  .fillCircle(px + 34, py + 21, 18)
+                  .fillCircle(px + 38, py + 35, 14);
               }
               if (cell === "~") {
-                terrain.lineStyle(2, 0x6fc7e8, 0.55).lineBetween(px + 10, py + 24, px + 24, py + 20).lineBetween(px + 30, py + 34, px + 46, py + 30);
+                terrain
+                  .lineStyle(2, 0x6fc7e8, 0.55)
+                  .lineBetween(px + 10, py + 24, px + 24, py + 20)
+                  .lineBetween(px + 30, py + 34, px + 46, py + 30);
               }
             });
           });
@@ -177,15 +291,35 @@ export function AivaGardenGame({ onUpdate, round }: AivaGardenGameProps) {
           const gatePixels = this.toPixels(GATE);
           this.gate = this.add.graphics();
           this.paintGate(false);
-          this.add.text(gatePixels.x, gatePixels.y + 38, "CỔNG", { fontFamily: "Arial", fontSize: "11px", color: "#dcebe3", fontStyle: "bold" }).setOrigin(0.5);
+          this.add
+            .text(gatePixels.x, gatePixels.y + 38, "CỔNG", {
+              fontFamily: "Arial",
+              fontSize: "11px",
+              color: "#dcebe3",
+              fontStyle: "bold",
+            })
+            .setOrigin(0.5);
 
           this.layout.shards.forEach((shard) => {
             const point = this.toPixels(shard);
             const graphic = this.add.graphics();
-            graphic.fillStyle(0xffd34e, 1).fillTriangle(point.x, point.y - 16, point.x + 13, point.y, point.x, point.y + 16).fillTriangle(point.x, point.y - 16, point.x - 13, point.y, point.x, point.y + 16);
-            graphic.lineStyle(2, 0xfff3aa, 0.85).strokeTriangle(point.x, point.y - 16, point.x + 13, point.y, point.x, point.y + 16).strokeTriangle(point.x, point.y - 16, point.x - 13, point.y, point.x, point.y + 16);
+            graphic
+              .fillStyle(0xffd34e, 1)
+              .fillTriangle(point.x, point.y - 16, point.x + 13, point.y, point.x, point.y + 16)
+              .fillTriangle(point.x, point.y - 16, point.x - 13, point.y, point.x, point.y + 16);
+            graphic
+              .lineStyle(2, 0xfff3aa, 0.85)
+              .strokeTriangle(point.x, point.y - 16, point.x + 13, point.y, point.x, point.y + 16)
+              .strokeTriangle(point.x, point.y - 16, point.x - 13, point.y, point.x, point.y + 16);
             if (animateShards) {
-              this.tweens.add({ targets: graphic, y: graphic.y - 6, duration: 800, yoyo: true, repeat: -1, ease: "Sine.inOut" });
+              this.tweens.add({
+                targets: graphic,
+                y: graphic.y - 6,
+                duration: 800,
+                yoyo: true,
+                repeat: -1,
+                ease: "Sine.inOut",
+              });
             }
             this.shards.set(keyOf(shard), graphic);
           });
@@ -214,7 +348,13 @@ export function AivaGardenGame({ onUpdate, round }: AivaGardenGameProps) {
         }
 
         private canWalk(point: { x: number; y: number }) {
-          return point.x >= 0 && point.x < WIDTH && point.y >= 0 && point.y < HEIGHT && !["#", "~"].includes(this.layout.map[point.y][point.x]);
+          return (
+            point.x >= 0 &&
+            point.x < WIDTH &&
+            point.y >= 0 &&
+            point.y < HEIGHT &&
+            !["#", "~"].includes(this.layout.map[point.y][point.x])
+          );
         }
 
         private findPath(destination: { x: number; y: number }) {
@@ -251,14 +391,16 @@ export function AivaGardenGame({ onUpdate, round }: AivaGardenGameProps) {
         }
 
         private moveTo(destination: { x: number; y: number }) {
-          if (this.moving || this.completed) return;
+          if (this.moving || this.completed || this.failed) return;
           if (destination.x === GATE.x && destination.y === GATE.y && this.collected.size < this.layout.shards.length) {
-            this.report("Cổng chưa mở. Hãy tìm đủ các mảnh năng lượng.");
+            this.report("Cổng chưa mở. Hãy thu thập đủ các mảnh năng lượng.");
             return;
           }
           const path = this.findPath(destination);
           if (!path.length) {
-            if (destination.x !== this.position.x || destination.y !== this.position.y) this.report("AIVA chưa thể đi tới ô này.");
+            if (destination.x !== this.position.x || destination.y !== this.position.y) {
+              this.report("AIVA chưa thể đi tới ô này (vướng chướng ngại vật).");
+            }
             return;
           }
           this.moving = true;
@@ -271,22 +413,41 @@ export function AivaGardenGame({ onUpdate, round }: AivaGardenGameProps) {
             this.moving = false;
             return;
           }
+
+          this.stepsRemaining = Math.max(0, this.stepsRemaining - 1);
+          this.playSound("step");
+
           const pixels = this.toPixels(next);
           this.tweens.add({
             targets: this.bot,
             x: pixels.x,
             y: pixels.y,
-            duration: 150,
+            duration: 140,
             ease: "Sine.out",
             onComplete: () => {
               this.position = next;
               this.collectShard();
-              if (this.position.x === GATE.x && this.position.y === GATE.y && this.collected.size === this.layout.shards.length) {
+
+              if (
+                this.position.x === GATE.x &&
+                this.position.y === GATE.y &&
+                this.collected.size === this.layout.shards.length
+              ) {
                 this.completed = true;
                 this.moving = false;
-                this.report("AIVA đã mang năng lượng về khu vườn!");
+                this.playSound("win");
+                this.report(`Xuất sắc! AIVA đã hoàn thành màn ${level} thành công! 🎉`);
                 return;
               }
+
+              if (this.stepsRemaining <= 0) {
+                this.failed = true;
+                this.moving = false;
+                this.playSound("fail");
+                this.report("AIVA đã cạn kiệt pin! Chạm 'Chơi lại' để tối ưu lộ trình.");
+                return;
+              }
+
               this.walk(path);
             },
           });
@@ -297,18 +458,36 @@ export function AivaGardenGame({ onUpdate, round }: AivaGardenGameProps) {
           const shard = this.shards.get(key);
           if (!shard || this.collected.has(key)) return;
           this.collected.add(key);
+          this.playSound("shard");
+          // Bonus energy on shard collection
+          this.stepsRemaining = Math.min(this.maxSteps, this.stepsRemaining + 7);
           this.tweens.killTweensOf(shard);
-          this.tweens.add({ targets: shard, alpha: 0, scale: 1.8, duration: 240, onComplete: () => shard.destroy() });
+          this.tweens.add({
+            targets: shard,
+            alpha: 0,
+            scale: 1.8,
+            duration: 220,
+            onComplete: () => shard.destroy(),
+          });
           if (this.collected.size === this.layout.shards.length) {
             this.paintGate(true);
-            this.report("Cổng đã mở. Hãy đưa AIVA đến cổng.");
+            this.playSound("gate");
+            this.report("Cổng không gian đã mở! Hãy đưa AIVA đến cổng trước khi hết pin.");
           } else {
-            this.report(`Đã tìm thấy ${this.collected.size}/${this.layout.shards.length} mảnh năng lượng.`);
+            this.report(`Đã nhặt ${this.collected.size}/${this.layout.shards.length} mảnh (+7 Pin ⚡).`);
           }
         }
 
         private report(message: string) {
-          updateRef.current({ collected: this.collected.size, completed: this.completed, message });
+          updateRef.current({
+            collected: this.collected.size,
+            totalShards: this.layout ? this.layout.shards.length : 3,
+            stepsRemaining: this.stepsRemaining,
+            maxSteps: this.maxSteps,
+            completed: this.completed,
+            failed: this.failed,
+            message,
+          });
         }
       }
 
@@ -332,7 +511,7 @@ export function AivaGardenGame({ onUpdate, round }: AivaGardenGameProps) {
       cancelled = true;
       game?.destroy(true);
     };
-  }, [round]);
+  }, [round, level]);
 
   return (
     <div

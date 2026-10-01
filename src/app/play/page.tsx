@@ -28,7 +28,11 @@ export default function PublicPlayPage() {
   const [round, setRound] = useState(0);
   const [level, setLevel] = useState(1);
   const [collected, setCollected] = useState(0);
+  const [totalShards, setTotalShards] = useState(3);
+  const [stepsRemaining, setStepsRemaining] = useState(35);
+  const [maxSteps, setMaxSteps] = useState(35);
   const [completed, setCompleted] = useState(false);
+  const [failed, setFailed] = useState(false);
   const [message, setMessage] = useState("Chạm vào ô cỏ để AIVA tự tìm đường.");
 
   useEffect(() => () => {
@@ -46,11 +50,15 @@ export default function PublicPlayPage() {
     setRound((value) => value + 1);
     setCollected(0);
     setCompleted(false);
+    setFailed(false);
     setMessage("Chạm vào ô cỏ để AIVA tự tìm đường.");
   };
 
   const openGame = (game: GameId) => {
-    if (game === "garden") restartGarden();
+    if (game === "garden") {
+      setLevel(1);
+      restartGarden();
+    }
     setSelectedGame(game);
     window.scrollTo({ top: 0, behavior: "instant" });
   };
@@ -98,14 +106,23 @@ export default function PublicPlayPage() {
                   <div className="w-full max-w-2xl mx-auto space-y-3 sm:space-y-4">
                     <GameHeaderBar
                       title="Vườn Thông Minh AIVA"
-                      subtitle="Thu thập quả năng lượng"
+                      subtitle="Thu thập tinh thể & mở cổng không gian"
                       icon="potted_plant"
                       stats={
-                        <div className="flex items-center gap-2">
-                          <span className="rounded-full border border-slate-200 dark:border-slate-700 bg-white/90 dark:bg-slate-900/90 px-3 py-1 text-xs font-semibold text-amber-700 dark:text-amber-300 shadow-sm whitespace-nowrap">
-                            ⚡ {collected}/3
+                        <div className="flex items-center gap-1.5 sm:gap-2">
+                          <span className="rounded-full border border-slate-200 dark:border-slate-700 bg-white/90 dark:bg-slate-900/90 px-2.5 py-1 text-xs font-semibold text-amber-700 dark:text-amber-300 shadow-sm whitespace-nowrap">
+                            ⚡ {collected}/{totalShards}
                           </span>
-                          <span className="rounded-full border border-slate-200 dark:border-slate-700 bg-white/90 dark:bg-slate-900/90 px-3 py-1 text-xs font-semibold text-slate-700 dark:text-slate-200 shadow-sm whitespace-nowrap">
+                          <span
+                            className={`rounded-full border px-2.5 py-1 text-xs font-semibold shadow-sm whitespace-nowrap ${
+                              stepsRemaining <= 8
+                                ? "border-rose-400 bg-rose-50 text-rose-700 dark:bg-rose-950/60 dark:text-rose-300 animate-pulse"
+                                : "border-slate-200 dark:border-slate-700 bg-white/90 dark:bg-slate-900/90 text-slate-700 dark:text-slate-200"
+                            }`}
+                          >
+                            🔋 {stepsRemaining}/{maxSteps}
+                          </span>
+                          <span className="rounded-full border border-slate-200 dark:border-slate-700 bg-white/90 dark:bg-slate-900/90 px-2.5 py-1 text-xs font-semibold text-slate-700 dark:text-slate-200 shadow-sm whitespace-nowrap">
                             Màn {level}
                           </span>
                         </div>
@@ -115,23 +132,57 @@ export default function PublicPlayPage() {
                     <div className="w-full">
                       <AivaGardenGame
                         round={round}
-                        onUpdate={({ collected: nextCollected, completed: nextCompleted, message: nextMessage }) => {
+                        level={level}
+                        onUpdate={({
+                          collected: nextCollected,
+                          totalShards: nextTotal,
+                          stepsRemaining: nextSteps,
+                          maxSteps: nextMax,
+                          completed: nextCompleted,
+                          failed: nextFailed,
+                          message: nextMessage,
+                        }) => {
                           setCollected(nextCollected);
+                          setTotalShards(nextTotal);
+                          setStepsRemaining(nextSteps);
+                          setMaxSteps(nextMax);
                           setCompleted(nextCompleted);
+                          setFailed(nextFailed);
                           setMessage(nextMessage);
                         }}
                       />
                     </div>
-                    <p className="mt-1.5 text-center text-xs text-slate-600 dark:text-slate-400" aria-live="polite">{message}</p>
+                    <p className="mt-1.5 text-center text-xs text-slate-600 dark:text-slate-400" aria-live="polite">
+                      {message}
+                    </p>
+
                     {completed && (
-                      <div className="mt-2 rounded-xl border border-amber-400/50 bg-amber-400/15 px-4 py-2 text-center shadow-sm">
-                        <span className="text-xs font-black text-amber-800 dark:text-amber-300 mr-2">Qua màn {level}!</span>
+                      <div className="mt-2 rounded-2xl border border-emerald-400/50 bg-emerald-400/15 p-3 text-center shadow-sm flex flex-col sm:flex-row items-center justify-between gap-2">
+                        <span className="text-xs font-black text-emerald-800 dark:text-emerald-300">
+                          🎉 Xuất sắc vượt qua màn {level}!
+                        </span>
                         <button
                           type="button"
                           onClick={nextLevel}
-                          className="rounded-full bg-[var(--ocean)] px-3.5 py-1 text-xs font-bold text-slate-950 transition hover:brightness-110 active:scale-95"
+                          className="rounded-full px-4 py-1.5 text-xs font-bold text-slate-950 shadow-md transition hover:brightness-110 active:scale-95"
+                          style={{ background: "var(--gradient-ocean)" }}
                         >
-                          Vào màn {level + 1} ➔
+                          Vào Màn {level + 1} ➔
+                        </button>
+                      </div>
+                    )}
+
+                    {failed && (
+                      <div className="mt-2 rounded-2xl border border-rose-400/50 bg-rose-400/15 p-3 text-center shadow-sm flex flex-col sm:flex-row items-center justify-between gap-2">
+                        <span className="text-xs font-bold text-rose-800 dark:text-rose-300">
+                          ⚡ Hết pin năng lượng!
+                        </span>
+                        <button
+                          type="button"
+                          onClick={restartGarden}
+                          className="rounded-full bg-rose-600 px-4 py-1.5 text-xs font-bold text-white shadow-md transition hover:bg-rose-700 active:scale-95"
+                        >
+                          Thử Lại Màn {level} ↺
                         </button>
                       </div>
                     )}

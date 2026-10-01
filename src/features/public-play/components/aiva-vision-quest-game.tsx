@@ -39,10 +39,10 @@ const ITEMS: QuestItem[] = [
     tip: "AIVA nhận diện chữ viết (OCR) & giải thích nội dung bài học bằng giọng nói theo độ tuổi.",
     x: 18,
     y: 20,
-    question: "Vật thể nào giúp AIVA đọc chữ và giải thích bài học cho bé?",
-    options: ["Quyển Sách", "Gấu Bông", "Đồng Hồ"],
-    correctOption: "Quyển Sách",
-    hint: "Đây là đồ vật chứa nhiều trang giấy và câu chuyện hay.",
+    question: "Tính năng OCR nào trên AIVA giúp đọc chữ và giải thích nội dung sách cho bé?",
+    options: ["Quyển Sách (Book)", "Gấu Bông (Teddy)", "Đồng Hồ (Clock)", "Chậu Cây (Plant)"],
+    correctOption: "Quyển Sách (Book)",
+    hint: "Đây là đồ vật chứa nhiều trang giấy và câu chuyện tri thức hay.",
   },
   {
     id: "clock",
@@ -58,10 +58,10 @@ const ITEMS: QuestItem[] = [
     tip: "AIVA nhắc nhở bé nghỉ ngơi bảo vệ mắt & điều chỉnh tư thế ngồi học đúng chuẩn.",
     x: 50,
     y: 15,
-    question: "Đồ vật nào giúp AIVA canh giờ nhắc bé nghỉ ngơi bảo vệ mắt?",
-    options: ["Chậu Cây", "Đồng Hồ", "Quả Táo"],
-    correctOption: "Đồng Hồ",
-    hint: "Vật này có kim giờ, kim phút quay liên tục trên tường.",
+    question: "Đồ vật nào giúp AIVA canh giờ 20-20-20 nhắc bé nghỉ ngơi bảo vệ thị lực?",
+    options: ["Đồng Hồ (Clock)", "Kính Lúp (Magnifier)", "Chậu Cây (Plant)", "Quả Táo (Apple)"],
+    correctOption: "Đồng Hồ (Clock)",
+    hint: "Vật này có kim giờ, kim phút quay liên tục trên mặt số.",
   },
   {
     id: "apple",
@@ -77,9 +77,9 @@ const ITEMS: QuestItem[] = [
     tip: "AIVA nhận diện đồ ăn & nhắc nhở bé chế độ dinh dưỡng lành mạnh hàng ngày.",
     x: 82,
     y: 20,
-    question: "Món ăn nào chứa nhiều Vitamin C giúp bé có thêm năng lượng?",
-    options: ["Quả Táo", "Gấu Bông", "Quyển Sách"],
-    correctOption: "Quả Táo",
+    question: "Loại quả nào giàu Vitamin C và chất xơ giúp tăng cường hệ miễn dịch cho bé?",
+    options: ["Quả Táo (Apple)", "Kẹo Ngọt (Candy)", "Bánh Quy (Cookie)", "Nước Ngọt (Soda)"],
+    correctOption: "Quả Táo (Apple)",
     hint: "Trái cây màu đỏ tròn ngọt giòn sần sật.",
   },
   {
@@ -96,10 +96,10 @@ const ITEMS: QuestItem[] = [
     tip: "AIVA nhận diện đồ chơi & gợi ý câu đố tư duy khoa học vui nhộn.",
     x: 26,
     y: 48,
-    question: "Người bạn nhỏ nào giúp AIVA đặt câu đố tư duy sáng tạo?",
-    options: ["Gấu Bông", "Chậu Cây", "Đồng Hồ"],
-    correctOption: "Gấu Bông",
-    hint: "Đồ chơi nhồi bông mềm mịn bé ôm khi đi ngủ.",
+    question: "Từ tiếng Anh nào chỉ người bạn thú nhồi bông mềm mại đáng yêu?",
+    options: ["Teddy Bear", "Toy Robot", "Green Plant", "Alarm Clock"],
+    correctOption: "Teddy Bear",
+    hint: "Người bạn nhồi bông mềm mịn bé thường ôm khi ngủ.",
   },
   {
     id: "plant",
@@ -115,10 +115,10 @@ const ITEMS: QuestItem[] = [
     tip: "AIVA thắp lên trí tò mò sinh học, khuyến khích bé khám phá thiên nhiên.",
     x: 74,
     y: 48,
-    question: "Cây xanh tạo ra chất khí quan trọng nào cho con người hô hấp?",
-    options: ["Oxy", "Nước", "Ánh sáng"],
-    correctOption: "Oxy",
-    hint: "Khí tự nhiên giúp chúng ta hít thở mỗi ngày.",
+    question: "Cây xanh quang hợp dưới ánh sáng mặt trời tạo ra chất khí thiết yếu nào?",
+    options: ["Khí Oxy (O2)", "Khí Carbonic (CO2)", "Khí Nitơ (N2)", "Bụi Mịn (Dust)"],
+    correctOption: "Khí Oxy (O2)",
+    hint: "Khí tự nhiên trong lành giúp con người và sinh vật hô hấp.",
   },
 ];
 
@@ -138,11 +138,25 @@ export function AivaVisionQuestGame() {
   const [showHint, setShowHint] = useState(false);
   const [quizSelected, setQuizSelected] = useState<string | null>(null);
   const [quizAnswered, setQuizAnswered] = useState(false);
+  const [quizTimeLeft, setQuizTimeLeft] = useState(10);
+  const [speedBonusAwarded, setSpeedBonusAwarded] = useState(0);
 
   // Certificate State
   const [studentName, setStudentName] = useState("");
 
   const audioCtxRef = useRef<AudioContext | null>(null);
+  const quizTimerRef = useRef<number | null>(null);
+
+  const stopQuizTimer = () => {
+    if (quizTimerRef.current) {
+      window.clearInterval(quizTimerRef.current);
+      quizTimerRef.current = null;
+    }
+  };
+
+  useEffect(() => {
+    return () => stopQuizTimer();
+  }, []);
 
   // Synthesize Web Audio Effects
   const playSoundEffect = (type: "scan" | "correct" | "wrong" | "win" | "speak") => {
@@ -210,6 +224,24 @@ export function AivaVisionQuestGame() {
     }
   };
 
+  const startQuizQuestionTimer = () => {
+    stopQuizTimer();
+    setQuizTimeLeft(10);
+    quizTimerRef.current = window.setInterval(() => {
+      setQuizTimeLeft((prev) => {
+        if (prev <= 1) {
+          stopQuizTimer();
+          setQuizAnswered(true);
+          setStreak(0);
+          setSpeedBonusAwarded(0);
+          playSoundEffect("wrong");
+          return 0;
+        }
+        return prev - 1;
+      });
+    }, 1000);
+  };
+
   const handleScanItem = (item: QuestItem) => {
     setActiveItem(item);
     setIsScanning(true);
@@ -243,21 +275,27 @@ export function AivaVisionQuestGame() {
     setShowHint(false);
     setQuizSelected(null);
     setQuizAnswered(false);
+    setSpeedBonusAwarded(0);
     playSoundEffect("correct");
+    startQuizQuestionTimer();
   };
 
   const handleQuizAnswer = (option: string) => {
     if (quizAnswered) return;
+    stopQuizTimer();
     setQuizSelected(option);
     setQuizAnswered(true);
 
     const currentQ = ITEMS[currentQuizIdx];
     if (option === currentQ.correctOption) {
-      const addedXP = 100 + streak * 20;
+      const speedBonus = quizTimeLeft >= 6 ? 50 : 0;
+      const addedXP = 100 + streak * 20 + speedBonus;
+      setSpeedBonusAwarded(speedBonus);
       setScore((prev) => prev + addedXP);
       setStreak((prev) => prev + 1);
       playSoundEffect("correct");
     } else {
+      setSpeedBonusAwarded(0);
       setStreak(0);
       playSoundEffect("wrong");
     }
@@ -269,13 +307,17 @@ export function AivaVisionQuestGame() {
       setQuizSelected(null);
       setQuizAnswered(false);
       setShowHint(false);
+      setSpeedBonusAwarded(0);
+      startQuizQuestionTimer();
     } else {
+      stopQuizTimer();
       playSoundEffect("win");
       setMode("certificate");
     }
   };
 
   const handleReset = () => {
+    stopQuizTimer();
     setMode("scan");
     setDiscoveredIds([]);
     setActiveItem(null);
@@ -287,6 +329,7 @@ export function AivaVisionQuestGame() {
     setShowHint(false);
     setQuizSelected(null);
     setQuizAnswered(false);
+    setSpeedBonusAwarded(0);
     setStudentName("");
   };
 
@@ -545,31 +588,54 @@ export function AivaVisionQuestGame() {
       {/* MODE 3: DYNAMIC AI QUIZ CHALLENGE */}
       {mode === "quiz" && (
         <div
-          className="relative w-full rounded-3xl border p-5 shadow-2xl backdrop-blur-xl animate-fadeIn space-y-6 md:p-8"
+          className="relative w-full rounded-3xl border p-5 shadow-2xl backdrop-blur-xl animate-fadeIn space-y-5 md:p-8"
           style={{
             backgroundColor: "var(--game-panel)",
             borderColor: "var(--ocean)",
           }}
         >
           {/* Quiz Header Bar */}
-          <div className="flex flex-wrap items-center justify-between gap-3 pb-4 border-b border-slate-200 dark:border-slate-800">
+          <div className="flex flex-wrap items-center justify-between gap-3 pb-3.5 border-b border-slate-200 dark:border-slate-800">
             <div className="flex items-center gap-2">
-              <span className="px-3 py-1 rounded-full text-xs font-mono font-bold bg-amber-400/20 text-amber-700 border border-amber-400/40 dark:text-amber-300">
-                CÂU HỎI {currentQuizIdx + 1} / {ITEMS.length}
+              <span
+                className={`inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-mono font-bold border transition-colors ${
+                  quizTimeLeft <= 3
+                    ? "bg-rose-500/20 text-rose-600 border-rose-400 animate-pulse dark:text-rose-400"
+                    : "bg-amber-400/20 text-amber-700 border-amber-400/40 dark:text-amber-300"
+                }`}
+              >
+                <span className="material-symbols-outlined text-xs">timer</span> {quizTimeLeft}s
               </span>
-              <span className="text-xs text-[var(--game-muted)]">Chủ đề: {ITEMS[currentQuizIdx].category}</span>
+              <span className="px-3 py-1 rounded-full text-xs font-mono font-bold bg-amber-400/20 text-amber-700 border border-amber-400/40 dark:text-amber-300">
+                CÂU {currentQuizIdx + 1} / {ITEMS.length}
+              </span>
+              <span className="text-xs text-[var(--game-muted)] hidden sm:inline">Chủ đề: {ITEMS[currentQuizIdx].category}</span>
             </div>
             <div className="flex items-center gap-3">
               <button
                 onClick={() => setShowHint(!showHint)}
-                className="min-h-11 text-xs font-bold text-amber-700 hover:underline flex items-center gap-1 dark:text-amber-300"
+                className="min-h-9 text-xs font-bold text-amber-700 hover:underline flex items-center gap-1 dark:text-amber-300"
               >
                 <span className="material-symbols-outlined text-sm">lightbulb</span> {showHint ? "Ẩn Gợi Ý" : "Gợi Ý AIVA"}
               </button>
-              <div className="text-sm font-bold text-amber-400 font-mono">
+              <div className="text-sm font-bold text-amber-500 dark:text-amber-400 font-mono">
                 {score} XP
               </div>
             </div>
+          </div>
+
+          {/* Quiz Countdown Timer Bar */}
+          <div className="relative h-1.5 w-full overflow-hidden rounded-full bg-slate-200 dark:bg-slate-800">
+            <div
+              className={`h-full transition-all duration-1000 ${
+                quizTimeLeft > 5
+                  ? "bg-amber-400"
+                  : quizTimeLeft > 2
+                  ? "bg-orange-500"
+                  : "bg-rose-500 animate-pulse"
+              }`}
+              style={{ width: `${(quizTimeLeft / 10) * 100}%` }}
+            />
           </div>
 
           {/* Hint Card */}
@@ -581,15 +647,17 @@ export function AivaVisionQuestGame() {
           )}
 
           {/* Question Text */}
-          <div className="space-y-2">
-            <h3 className="text-xl md:text-2xl font-bold text-[var(--game-ink)] leading-snug">
+          <div className="space-y-1.5">
+            <h3 className="text-lg md:text-xl font-bold text-[var(--game-ink)] leading-snug">
               {ITEMS[currentQuizIdx].question}
             </h3>
-            <p className="text-xs text-[var(--game-muted)]">Chọn 1 đáp án đúng nhất để nhận +100 XP & duy trì chuỗi Combo:</p>
+            <p className="text-xs text-[var(--game-muted)]">
+              Chọn 1 đáp án đúng. Trả lời nhanh trong 4 giây đầu để nhận thưởng <strong>+50 XP Tốc Độ ⚡</strong>:
+            </p>
           </div>
 
-          {/* Options Grid */}
-          <div className="grid gap-3 sm:grid-cols-3">
+          {/* Options Grid (2x2 on sm+) */}
+          <div className="grid gap-3 grid-cols-1 sm:grid-cols-2">
             {ITEMS[currentQuizIdx].options.map((option) => {
               const isSelected = quizSelected === option;
               const isCorrect = option === ITEMS[currentQuizIdx].correctOption;
@@ -608,14 +676,14 @@ export function AivaVisionQuestGame() {
                   key={option}
                   onClick={() => handleQuizAnswer(option)}
                   disabled={quizAnswered}
-                  className={`min-h-14 p-4 rounded-2xl border text-left text-sm transition-all active:scale-[0.99] flex items-center justify-between ${btnStyle}`}
+                  className={`min-h-12 p-3.5 sm:p-4 rounded-2xl border text-left text-xs sm:text-sm font-medium transition-all active:scale-[0.99] flex items-center justify-between gap-2 ${btnStyle}`}
                 >
-                  <span>{option}</span>
+                  <span className="truncate">{option}</span>
                   {quizAnswered && isCorrect && (
-                    <span className="material-symbols-outlined text-emerald-400">check_circle</span>
+                    <span className="material-symbols-outlined text-emerald-400 text-lg shrink-0">check_circle</span>
                   )}
                   {quizAnswered && isSelected && !isCorrect && (
-                    <span className="material-symbols-outlined text-rose-400">cancel</span>
+                    <span className="material-symbols-outlined text-rose-400 text-lg shrink-0">cancel</span>
                   )}
                 </button>
               );
@@ -624,14 +692,22 @@ export function AivaVisionQuestGame() {
 
           {/* Feedback & Next Button */}
           {quizAnswered && (
-            <div className="pt-4 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-slate-200 dark:border-slate-800 animate-fadeIn">
+            <div className="pt-3.5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 border-t border-slate-200 dark:border-slate-800 animate-fadeIn">
               <div className="text-xs leading-relaxed">
                 {quizSelected === ITEMS[currentQuizIdx].correctOption ? (
-                  <p className="text-emerald-400 font-bold flex items-center gap-1.5">
-                    <span className="material-symbols-outlined text-sm">stars</span> Chính xác! Bé nhận +{100 + (streak - 1) * 20} XP!
+                  <p className="text-emerald-500 dark:text-emerald-400 font-bold flex items-center gap-1.5 flex-wrap">
+                    <span className="material-symbols-outlined text-sm">stars</span>
+                    <span>Chính xác! Bé nhận +{100 + (streak - 1) * 20} XP</span>
+                    {speedBonusAwarded > 0 && (
+                      <span className="text-amber-500 dark:text-amber-300 font-black">(+50 XP Tốc Độ ⚡)</span>
+                    )}!
+                  </p>
+                ) : quizTimeLeft === 0 ? (
+                  <p className="text-rose-500 dark:text-rose-400 font-medium">
+                    Hết giờ! Đáp án đúng là: <strong>{ITEMS[currentQuizIdx].correctOption}</strong>
                   </p>
                 ) : (
-                  <p className="text-rose-400 font-medium">
+                  <p className="text-rose-500 dark:text-rose-400 font-medium">
                     Chưa chính xác! Đáp án đúng là: <strong>{ITEMS[currentQuizIdx].correctOption}</strong>
                   </p>
                 )}
@@ -639,7 +715,7 @@ export function AivaVisionQuestGame() {
 
               <button
                 onClick={nextQuizQuestion}
-                className="min-h-11 w-full sm:w-auto px-6 py-2.5 rounded-full font-bold text-xs text-black shadow-lg transition-transform active:scale-[0.98] hover:scale-105 shrink-0"
+                className="min-h-10 w-full sm:w-auto px-5 py-2 rounded-full font-bold text-xs text-black shadow-lg transition-transform active:scale-[0.98] hover:scale-105 shrink-0"
                 style={{ background: "var(--gradient-ocean)" }}
               >
                 {currentQuizIdx < ITEMS.length - 1 ? "Câu Hỏi Tiếp Theo ➔" : "Xem Bằng Khám Phá ➔"}
