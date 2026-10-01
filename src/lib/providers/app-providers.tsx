@@ -20,6 +20,7 @@ export function AppProviders({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const isConsole = pathname?.startsWith("/console");
   const isGamePage = pathname === "/play";
+  const isHomePage = pathname === "/";
   const [queryClient] = useState(
     () =>
       new QueryClient({
@@ -41,7 +42,7 @@ export function AppProviders({ children }: { children: React.ReactNode }) {
     <ThemeProvider>
       <I18nProvider>
         <QueryClientProvider client={queryClient}>
-          <LenisProvider enabled={!isGamePage}>
+          <LenisProvider enabled={!isGamePage && !isHomePage}>
             {!isConsole && <CustomCursor />}
             {children}
             {!isConsole && !isGamePage && <ChatbotWidget />}

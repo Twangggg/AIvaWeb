@@ -43,7 +43,7 @@ function Model({ scrollY }: { scrollY: MutableRefObject<number> }) {
     const targetS = scrollY.current;
     
     // Smooth lerp damping for silky 60fps physics motion
-    currentS.current += (targetS - currentS.current) * Math.min(1, delta * 9);
+    currentS.current += (targetS - currentS.current) * Math.min(1, delta * 2.2);
     const s = currentS.current;
 
     // Continue frame rendering while animating
@@ -53,21 +53,28 @@ function Model({ scrollY }: { scrollY: MutableRefObject<number> }) {
 
     const width = state.size.width;
     const isMobile = width < 640;
-    const isTablet = width >= 640 && width < 1024;
+    const isTablet = width >= 640 && width < 1280;
 
     group.current.rotation.y = s * Math.PI * 2;
     group.current.rotation.x = Math.sin(s * Math.PI * 2) * 0.22;
 
-    // Optical centering dynamically balancing top cards (1 & 2) and bottom cards (3 & 4)
+    // On compact tablet/mobile layouts, the copy alternates above and below
+    // the model. Shift the glasses to the opposite half so neither obscures
+    // the information card.
     const shift = (s - 0.5) * 2; // -1 to +1
     const baseShift = isMobile ? 0.055 : isTablet ? 0.04 : 0;
-    const posY = shift * baseShift;
+    const cardClearance = isMobile
+      ? (s < 0.5 ? -0.72 : 0.52)
+      : isTablet
+        ? (s < 0.5 ? -0.9 : 0.66)
+        : 0;
+    const posY = cardClearance + shift * baseShift;
     group.current.position.x = 0;
     group.current.position.y = posY + Math.sin(s * Math.PI * 3) * 0.02;
     group.current.position.z = -s * 0.4;
 
     // Harmonious responsive scales
-    const baseScale = isMobile ? 0.8 : isTablet ? 1.0 : 1.35;
+    const baseScale = isMobile ? 0.52 : isTablet ? 0.6 : 1.35;
     const scrollScale = 1 + s * 0.06;
     group.current.scale.setScalar(baseScale * scrollScale);
   });
@@ -124,4 +131,3 @@ export default function AivaGlasses3D({
 }
 
 useGLTF.preload("/models/glasses.glb");
-

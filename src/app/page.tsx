@@ -46,23 +46,23 @@ export default function HomePage() {
               <CinematicHero onPreorder={() => setPreorderOpen(true)} />
             </div>
 
-            <div id="statement" data-fp-section data-fp-scenes="3" data-fp-scene="0" className="cx-fp-section min-h-[135vh] lg:min-h-[150vh] relative">
+            <div id="statement" data-fp-section data-fp-mobile-lock data-fp-scenes="3" data-fp-scene="0" className="cx-fp-section min-h-[100dvh] lg:min-h-[110vh] relative">
               <div className="sticky top-0 h-[100dvh] w-full flex items-center justify-center overflow-hidden">
                 <StatementChapter />
               </div>
             </div>
 
-            <div id="experience" data-fp-section className="cx-fp-section">
+            <div id="experience" data-fp-section data-fp-scenes="4" data-fp-scene="0" className="cx-fp-section">
               <GlassesExperience />
             </div>
 
-            <div id="vision" data-fp-section data-fp-scenes="3" data-fp-scene="0" className="cx-fp-section min-h-[135vh] lg:min-h-[150vh] relative">
+            <div id="vision" data-fp-section data-fp-mobile-lock data-fp-scenes="3" data-fp-scene="0" className="cx-fp-section min-h-[100dvh] lg:min-h-[120vh] relative">
               <div className="sticky top-0 h-[100dvh] w-full flex items-center justify-center overflow-hidden">
                 <VisionDemoSection />
               </div>
             </div>
 
-            <div id="features" data-fp-section data-fp-scenes="4" data-fp-scene="0" className="cx-fp-section min-h-[145vh] lg:min-h-[170vh] relative">
+            <div id="features" data-fp-section data-fp-mobile-lock data-fp-scenes="4" data-fp-scene="0" className="cx-fp-section min-h-[100dvh] lg:min-h-[130vh] relative">
               <div className="sticky top-0 h-[100dvh] w-full flex items-center justify-center overflow-hidden">
                 <FeatureRail />
               </div>
@@ -72,7 +72,7 @@ export default function HomePage() {
               <CompareSection />
             </div>
 
-            <div id="companion" data-fp-section data-fp-scenes="3" data-fp-scene="0" className="cx-fp-section relative min-h-0 lg:min-h-[150vh]">
+            <div id="companion" data-fp-section data-fp-scenes="3" data-fp-scene="0" className="cx-fp-section relative min-h-0 lg:min-h-[120vh]">
               <div className="relative lg:sticky lg:top-0 h-auto lg:h-[100dvh] w-full flex items-center justify-center overflow-hidden">
                 <ParentAppSection />
               </div>

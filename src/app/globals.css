@@ -2374,6 +2374,12 @@ body.custom-cursor-active canvas {
   overflow: hidden;
 }
 
+/* The scene count is a mobile affordance. On desktop the manifesto uses the
+   full cinematic composition, so no unstyled counter may leak into the frame. */
+.cx-statement-progress {
+  display: none;
+}
+
 .cx-statement-veil {
   position: absolute;
   inset: 0;
@@ -2394,9 +2400,9 @@ body.custom-cursor-active canvas {
 .cx-statement-line {
   margin: 0;
   transition:
-    opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
-    filter 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    opacity 0.24s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.24s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.24s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: opacity, transform, filter;
 }
 
@@ -2905,6 +2911,60 @@ html {
     min-height: auto;
     padding: clamp(1rem, 2vh, 2rem) 1.25rem;
     justify-content: flex-start;
+  }
+
+  /* Mobile chapters are paged one scene per swipe. Showing an accumulated
+     desktop manifesto pushes the first line behind the fixed nav, so mobile
+     keeps a single focused line in a stable, readable position. */
+  .cx-statement-copy {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5.5rem 1.25rem 6.5rem;
+  }
+
+  .cx-statement-lines {
+    display: grid;
+    place-items: center;
+    min-height: clamp(10rem, 26dvh, 15rem);
+  }
+
+  .cx-statement-frame .cx-statement-line {
+    grid-area: 1 / 1;
+    max-width: 100%;
+    font-size: clamp(2rem, 9vw, 3rem) !important;
+  }
+
+  .cx-statement-frame .cx-statement-line[data-current="false"] {
+    opacity: 0 !important;
+    transform: translate3d(0, 16px, 0) !important;
+    filter: blur(3px) !important;
+    pointer-events: none;
+  }
+
+  .cx-statement-progress {
+    position: absolute;
+    bottom: max(4.5rem, env(safe-area-inset-bottom));
+    left: 50%;
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    margin: 0;
+    transform: translateX(-50%);
+    color: var(--text-dim);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+  }
+
+  .cx-statement-progress i {
+    width: 1.8rem;
+    height: 1px;
+    background: color-mix(in srgb, var(--text-dim) 40%, transparent);
+  }
+
+  .cx-statement-progress small {
+    font: inherit;
+    opacity: 0.58;
   }
 }
 

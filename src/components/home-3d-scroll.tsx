@@ -3,16 +3,17 @@
 import dynamic from "next/dynamic";
 import { useEffect, useRef, useState } from "react";
 import { useI18n } from "@/lib/i18n/provider";
+import { useFpSceneSync } from "@/hooks/use-fp-scene-sync";
 
 const AivaGlasses3D = dynamic(() => import("@/components/AivaGlasses3D"), {
   ssr: false
 });
 
 const SECTIONS = [
-  { tag: "feature1Tag", title: "feature1Title", desc: "feature1Desc", mobilePos: "top-14 sm:top-20", desktopPos: "lg:top-24 lg:right-[15%]" },
-  { tag: "feature2Tag", title: "feature2Title", desc: "feature2Desc", mobilePos: "top-14 sm:top-20", desktopPos: "lg:top-[30%] lg:left-16" },
-  { tag: "feature3Tag", title: "feature3Title", desc: "feature3Desc", mobilePos: "bottom-10 sm:bottom-16", desktopPos: "lg:top-[22%] lg:right-16" },
-  { tag: "feature4Tag", title: "feature4Title", desc: "feature4Desc", mobilePos: "bottom-10 sm:bottom-16", desktopPos: "lg:bottom-24 lg:left-[15%]" }
+  { tag: "feature1Tag", title: "feature1Title", desc: "feature1Desc", mobilePos: "top-4 sm:left-4 sm:right-auto", desktopPos: "lg:top-24 lg:right-[15%]" },
+  { tag: "feature2Tag", title: "feature2Title", desc: "feature2Desc", mobilePos: "top-4 sm:right-4 sm:left-auto", desktopPos: "lg:top-24 lg:left-16" },
+  { tag: "feature3Tag", title: "feature3Title", desc: "feature3Desc", mobilePos: "bottom-36 sm:right-4 sm:left-auto", desktopPos: "lg:bottom-36 lg:right-16" },
+  { tag: "feature4Tag", title: "feature4Title", desc: "feature4Desc", mobilePos: "bottom-36 sm:left-4 sm:right-auto", desktopPos: "lg:bottom-36 lg:left-[15%]" }
 ] as const;
 
 export function Home3DScroll() {
@@ -24,10 +25,9 @@ export function Home3DScroll() {
   const lastInvalidateAtRef = useRef(0);
   const metricsRef = useRef({ top: 0, total: 1 });
   const invalidateRef = useRef<(() => void) | null>(null);
-  const activeRef = useRef(0);
   const rafRef = useRef<number | null>(null);
-  const [active, setActive] = useState(0);
   const [isNearViewport, setIsNearViewport] = useState(false);
+  const { step: active } = useFpSceneSync("experience", SECTIONS.length);
 
   const getSectionText = (key: string) => (t as unknown as Record<string, string>)[key] ?? key;
 
@@ -44,7 +44,9 @@ export function Home3DScroll() {
     const measure = () => {
       rafRef.current = null;
       const { top, total } = metricsRef.current;
-      const leadIn = window.innerHeight * 0.12;
+      // Keep the first tab intact on entry, then advance the demo almost
+      // immediately with the desktop scroll track.
+      const leadIn = Math.min(window.innerHeight * 0.12, total * 0.24);
       const passed = Math.min(Math.max(window.scrollY - top + leadIn, 0), total + leadIn);
       const p = passed / (total + leadIn);
       if (Math.abs(p - lastScrollYRef.current) > 0.004) {
@@ -55,12 +57,6 @@ export function Home3DScroll() {
           lastInvalidateAtRef.current = now;
           invalidateRef.current?.();
         }
-      }
-      const effectiveP = Math.max(0, Math.min(1, p / 0.8));
-      const idx = Math.min(SECTIONS.length - 1, Math.floor(effectiveP * SECTIONS.length));
-      if (idx !== activeRef.current) {
-        activeRef.current = idx;
-        setActive(idx);
       }
     };
 
@@ -84,6 +80,13 @@ export function Home3DScroll() {
     };
   }, []);
 
+  // Full-page paging provides discrete scenes. Update the same target that
+  // native scrolling used, letting the 3D model lerp into each new rotation.
+  useEffect(() => {
+    scrollY.current = active / (SECTIONS.length - 1);
+    invalidateRef.current?.();
+  }, [active]);
+
   useEffect(() => {
     if (!stageRef.current) return;
     const observer = new IntersectionObserver(
@@ -97,7 +100,7 @@ export function Home3DScroll() {
   }, []);
 
   return (
-    <section ref={stageRef} id="glasses-3d-showcase" className="relative min-h-[220vh] lg:min-h-[240vh] w-full">
+    <section ref={stageRef} id="glasses-3d-showcase" className="relative min-h-[220vh] lg:min-h-[135vh] w-full">
       <div className="sticky top-0 h-[100dvh] w-full overflow-hidden transform-gpu flex items-center justify-center">
         <div className="absolute inset-0 grid-bg opacity-60" />
         <div className="absolute inset-0 pointer-events-none">
@@ -121,7 +124,7 @@ export function Home3DScroll() {
           {SECTIONS.map((_, i) => (
             <div
               key={i}
-              className="rounded-full transition-all duration-500 will-change-transform"
+              className="rounded-full transition-all duration-1000 will-change-transform"
               style={{
                 width: 5,
                 height: i === active ? 32 : 12,
@@ -135,7 +138,7 @@ export function Home3DScroll() {
         {SECTIONS.map((s, i) => (
           <div
             key={s.tag}
-            className={`absolute z-10 transition-all duration-500 will-change-transform will-change-opacity lg:bottom-auto lg:left-auto lg:right-auto left-4 right-4 max-w-[min(calc(100%-2rem),24rem)] sm:max-w-md mx-auto lg:mx-0 ${
+            className={`absolute z-10 transition-all duration-1000 will-change-transform will-change-opacity lg:bottom-auto lg:left-auto lg:right-auto left-4 right-4 max-w-[min(calc(100%-2rem),18rem)] sm:max-w-[16rem] lg:max-w-md mx-auto sm:mx-0 ${
               i === active ? "opacity-100 scale-100 translate-y-0" : "opacity-0 scale-95 translate-y-3 pointer-events-none"
             } ${s.mobilePos} ${s.desktopPos}`}
           >

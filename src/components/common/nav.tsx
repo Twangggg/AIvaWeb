@@ -68,9 +68,12 @@ export function Nav({ onPreorder }: NavProps) {
     <>
       {/* ── Desktop nav (Floating Pill for >= 1024px) ── */}
       <nav
-        className="fixed top-3.5 sm:top-4 left-1/2 -translate-x-1/2 z-50 hidden lg:block w-[min(1140px,calc(100%-2.5rem))] rounded-full border transition-shadow duration-300"
+        className="fixed left-1/2 -translate-x-1/2 z-50 hidden lg:block border transition-all duration-500 ease-out"
         style={{
-          backgroundColor: "var(--nav-bg)",
+          top: scrolled ? 0 : "1rem",
+          width: scrolled ? "100%" : "min(1140px, calc(100% - 2.5rem))",
+          borderRadius: scrolled ? 0 : "9999px",
+          backgroundColor: scrolled ? "var(--modal-bg)" : "var(--nav-bg)",
           borderColor: "var(--nav-border)",
           backdropFilter: "blur(24px) saturate(180%)",
           WebkitBackdropFilter: "blur(24px) saturate(180%)",
@@ -255,12 +258,17 @@ export function Nav({ onPreorder }: NavProps) {
 
       {/* ── Mobile / Tablet nav (Floating Pill for < 1024px) ── */}
       <nav
-        className="fixed top-2.5 sm:top-4 left-1/2 -translate-x-1/2 z-50 lg:hidden w-[min(calc(100%-1rem),56rem)] max-w-full"
+        className="fixed left-1/2 -translate-x-1/2 z-50 lg:hidden max-w-full transition-all duration-500 ease-out"
+        style={{
+          top: scrolled ? 0 : "0.625rem",
+          width: scrolled ? "100%" : "min(calc(100% - 1rem), 56rem)"
+        }}
       >
         <div
-          className="w-full flex items-center justify-between px-2.5 py-1.5 sm:px-5 sm:py-2 rounded-full border transition-all duration-300"
+          className="w-full flex items-center justify-between px-2.5 py-1.5 sm:px-5 sm:py-2 border transition-all duration-500 ease-out"
           style={{
-            backgroundColor: "var(--nav-bg)",
+            borderRadius: scrolled ? 0 : "9999px",
+            backgroundColor: scrolled ? "var(--modal-bg)" : "var(--nav-bg)",
             borderColor: "var(--nav-border)",
             backdropFilter: "blur(24px) saturate(180%)",
             WebkitBackdropFilter: "blur(24px) saturate(180%)",
