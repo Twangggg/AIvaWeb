@@ -16,7 +16,7 @@ export function CinematicCta({ onPreorder }: { onPreorder: () => void }) {
 
       <div className="cx-cta-copy relative z-10 mx-auto w-full max-w-3xl text-center">
         <Reveal direction="up" delay={0}>
-          <h2 className="cx-cta-title font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
+          <h2 className="cx-cta-title font-display text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
             <span className="cx-cta-title-line">{t.preorderHeading}</span>{" "}
             <span className="text-gradient-sun cx-cta-title-accent">{t.preorderHeadingAccent}</span>
           </h2>
@@ -24,7 +24,7 @@ export function CinematicCta({ onPreorder }: { onPreorder: () => void }) {
 
         <Reveal direction="up" delay={80}>
           <p
-            className="cx-cta-desc text-sm md:text-base leading-relaxed mt-4"
+            className="cx-cta-desc text-xs sm:text-sm md:text-base leading-relaxed mt-2.5 sm:mt-4"
             style={{ color: "var(--text-dim)" }}
           >
             {t.preorderDesc}
@@ -32,9 +32,9 @@ export function CinematicCta({ onPreorder }: { onPreorder: () => void }) {
         </Reveal>
 
         <Reveal direction="scale" delay={160}>
-          <div className="mt-8">
+          <div className="mt-5 sm:mt-8">
             <Magnetic strength={0.36}>
-              <Button onClick={onPreorder} className="text-base md:text-lg px-10 md:px-14 py-3.5 md:py-4">
+              <Button onClick={onPreorder} className="text-sm sm:text-base md:text-lg px-8 sm:px-10 md:px-14 py-3 sm:py-3.5 md:py-4">
                 {t.preorderCta}
               </Button>
             </Magnetic>

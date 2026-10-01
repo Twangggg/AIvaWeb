@@ -188,7 +188,9 @@ export function useFullpageScroll(enabled = true) {
     // Wheel and touch share the same state machine: complete all scenes in a
     // chapter, then move exactly one section. This keeps momentum from
     // skipping content on either desktop or mobile.
+    let touchStartX = 0;
     let touchStartY = 0;
+    let lastTouchY = 0;
     let touchSection: HTMLElement | null = null;
     let touchLocked = false;
     let inputLockUntil = 0;
@@ -199,9 +201,10 @@ export function useFullpageScroll(enabled = true) {
       let candidate: HTMLElement | null = null;
       let closest = Infinity;
 
-      cachedSections.forEach(({ el }) => {
+      const sections = getSections();
+      sections.forEach((el) => {
         const rect = el.getBoundingClientRect();
-        if (rect.bottom < 0 || rect.top > viewportHeight) return;
+        if (rect.bottom <= 0 || rect.top >= viewportHeight) return;
         const distance = Math.abs(rect.top - viewportCenter);
         if (distance < closest) {
           candidate = el;
@@ -211,8 +214,16 @@ export function useFullpageScroll(enabled = true) {
       return candidate;
     };
 
-    const isScrollableTarget = (target: EventTarget | null) =>
-      target instanceof Element && Boolean(target.closest("[data-fp-scroll], input, textarea, select, [contenteditable='true']"));
+    const isScrollableTarget = (target: EventTarget | null) => {
+      if (!(target instanceof Element)) return false;
+      const scrollable = target.closest("[data-fp-scroll], input, textarea, select, [contenteditable='true']");
+      if (!scrollable) return false;
+      // If user is inside an internal scroll container with remaining scroll room, let native scroll work
+      if (scrollable.scrollHeight > scrollable.clientHeight) {
+        return true;
+      }
+      return Boolean(scrollable.matches("input, textarea, select, [contenteditable='true']"));
+    };
 
     // On phones, only deliberately scene-based chapters opt into paging.
     // Tablet and desktop layouts preserve the existing full-page behavior.
@@ -243,9 +254,11 @@ export function useFullpageScroll(enabled = true) {
       } else {
         scrollToSection(section, dir);
       }
-      // The manifesto is short-form copy: it should feel immediately
-      // responsive, while richer visual chapters retain their longer beat.
-      const inputLockMs = section.id === "statement" ? STATEMENT_INPUT_LOCK_MS : INPUT_LOCK_MS;
+      // Fluid input lock: responsive on mobile (650ms), statement chapter (750ms), or standard desktop
+      const isMobile = window.innerWidth < 640;
+      const inputLockMs = section.id === "statement" 
+        ? STATEMENT_INPUT_LOCK_MS 
+        : (isMobile ? 650 : INPUT_LOCK_MS);
       inputLockUntil = Date.now() + inputLockMs;
     };
 
@@ -269,15 +282,19 @@ export function useFullpageScroll(enabled = true) {
         return;
       }
       touchLocked = false;
+      touchStartX = event.touches[0]?.clientX ?? 0;
       touchStartY = event.touches[0]?.clientY ?? 0;
+      lastTouchY = touchStartY;
     };
 
     const onTouchMove = (event: TouchEvent) => {
       if (!touchSection || event.touches.length !== 1) return;
-      const delta = event.touches[0]?.clientY - touchStartY;
-      // Start locking as soon as this is clearly a vertical story gesture, so
-      // a browser momentum scroll cannot leak through before touchend.
-      if (Math.abs(delta) > 8) {
+      lastTouchY = event.touches[0]?.clientY ?? lastTouchY;
+      const deltaY = lastTouchY - touchStartY;
+      const deltaX = (event.touches[0]?.clientX ?? 0) - touchStartX;
+      
+      // Only lock and prevent default when the gesture is primarily vertical story paging
+      if (Math.abs(deltaY) > 8 && Math.abs(deltaY) > Math.abs(deltaX)) {
         touchLocked = true;
         event.preventDefault();
       }
@@ -285,11 +302,11 @@ export function useFullpageScroll(enabled = true) {
 
     const onTouchEnd = (event: TouchEvent) => {
       const section = touchSection;
-      const endY = event.changedTouches[0]?.clientY ?? touchStartY;
+      const endY = event.changedTouches[0]?.clientY ?? lastTouchY;
       const delta = endY - touchStartY;
       touchSection = null;
 
-      if (!section || !touchLocked || Math.abs(delta) < 42) return;
+      if (!section || !touchLocked || Math.abs(delta) < 36) return;
       advance(section, delta < 0 ? 1 : -1);
       touchLocked = false;
     };

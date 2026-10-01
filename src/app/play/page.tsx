@@ -11,6 +11,8 @@ import { EnergySequenceGame } from "@/features/public-play/components/energy-seq
 import { RouteBuilderGame } from "@/features/public-play/components/route-builder-game";
 import { PreorderModal } from "@/features/preorder/components/preorder-modal";
 
+import { GameFullscreenWrapper, GameHeaderBar } from "@/features/public-play/components/game-fullscreen-wrapper";
+
 type GameId = "vision-quest" | "garden" | "sequence" | "route";
 
 const GAMES: { id: GameId; title: string; description: string; accent: string; image: string }[] = [
@@ -34,6 +36,12 @@ export default function PublicPlayPage() {
     document.documentElement.style.overflow = "";
   }, []);
 
+  useEffect(() => {
+    if (selectedGame) {
+      window.scrollTo({ top: 0, behavior: "instant" });
+    }
+  }, [selectedGame]);
+
   const restartGarden = () => {
     setRound((value) => value + 1);
     setCollected(0);
@@ -44,6 +52,7 @@ export default function PublicPlayPage() {
   const openGame = (game: GameId) => {
     if (game === "garden") restartGarden();
     setSelectedGame(game);
+    window.scrollTo({ top: 0, behavior: "instant" });
   };
 
   const nextLevel = () => {
@@ -54,7 +63,7 @@ export default function PublicPlayPage() {
   return (
     <>
       <Nav onPreorder={() => setPreorderOpen(true)} />
-      <main className="ui-page min-h-screen overflow-x-hidden px-4 pb-12 pt-24 sm:px-6 sm:pt-28">
+      <main className={`ui-page min-h-screen overflow-x-hidden px-3 sm:px-6 ${selectedGame ? "pt-16 sm:pt-20 pb-4" : "pt-20 sm:pt-28 pb-12"}`}>
         <div className="pointer-events-none absolute left-1/2 top-20 h-80 w-80 -translate-x-1/2 rounded-full bg-yellow-400/20 blur-[100px]" />
         <section className="relative mx-auto max-w-5xl">
           {!selectedGame ? (
@@ -78,45 +87,74 @@ export default function PublicPlayPage() {
             </>
           ) : (
             <>
-              <button type="button" onClick={() => setSelectedGame(null)} className="ui-border ui-surface min-h-11 mb-6 rounded-full border px-5 text-sm font-bold transition hover:opacity-80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4">
-                ← Danh sách trò chơi
-              </button>
-
               {selectedGame === "vision-quest" && (
-                <>
-                  <div className="mb-7 text-center">
-                    <h1 className="text-3xl font-black tracking-tight sm:text-5xl">AIVA Vision Quest</h1>
-                    <p className="ui-muted mt-2 text-sm">Quét 5 vật thể trong phòng để học từ vựng song ngữ & nhận Bằng Khám Phá Nhí.</p>
-                  </div>
+                <GameFullscreenWrapper onBack={() => setSelectedGame(null)}>
                   <AivaVisionQuestGame />
-                </>
+                </GameFullscreenWrapper>
               )}
 
               {selectedGame === "garden" && (
-                <>
-                  <div className="mb-7 text-center">
-                    <h1 className="text-4xl font-black tracking-tight sm:text-5xl">Giải cứu khu vườn AIVA</h1>
-                    <p className="ui-muted mt-3 text-base">Màn {level}: tìm 3 mảnh năng lượng, rồi đưa AIVA đến cổng.</p>
-                  </div>
-                  <div className="ui-surface ui-border rounded-[2rem] border p-4 shadow-xl backdrop-blur-xl sm:p-6">
-                    <div className="mb-4 flex flex-wrap items-center justify-between gap-3 text-sm font-bold">
-                      <span className="ui-surface-soft rounded-full px-4 py-2">Năng lượng: {collected}/3</span>
-                      <button type="button" onClick={restartGarden} className="ui-border ui-text min-h-11 rounded-full border px-5 font-bold transition hover:opacity-75 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4">Chơi lại</button>
+                <GameFullscreenWrapper onBack={() => setSelectedGame(null)}>
+                  <div className="w-full max-w-2xl mx-auto space-y-3 sm:space-y-4">
+                    <GameHeaderBar
+                      title="Vườn Thông Minh AIVA"
+                      subtitle="Thu thập quả năng lượng"
+                      icon="potted_plant"
+                      stats={
+                        <div className="flex items-center gap-2">
+                          <span className="rounded-full border border-slate-200 dark:border-slate-700 bg-white/90 dark:bg-slate-900/90 px-3 py-1 text-xs font-semibold text-amber-700 dark:text-amber-300 shadow-sm whitespace-nowrap">
+                            ⚡ {collected}/3
+                          </span>
+                          <span className="rounded-full border border-slate-200 dark:border-slate-700 bg-white/90 dark:bg-slate-900/90 px-3 py-1 text-xs font-semibold text-slate-700 dark:text-slate-200 shadow-sm whitespace-nowrap">
+                            Màn {level}
+                          </span>
+                        </div>
+                      }
+                      onReset={restartGarden}
+                    />
+                    <div className="w-full">
+                      <AivaGardenGame
+                        round={round}
+                        onUpdate={({ collected: nextCollected, completed: nextCompleted, message: nextMessage }) => {
+                          setCollected(nextCollected);
+                          setCompleted(nextCompleted);
+                          setMessage(nextMessage);
+                        }}
+                      />
                     </div>
-                    <AivaGardenGame round={round} onUpdate={({ collected: nextCollected, completed: nextCompleted, message: nextMessage }) => { setCollected(nextCollected); setCompleted(nextCompleted); setMessage(nextMessage); }} />
-                    <p className="ui-muted mt-4 text-center text-sm" aria-live="polite">{message}</p>
-                    {completed && <div className="ui-accent-soft mt-4 rounded-2xl border border-[var(--ocean)]/40 px-5 py-4 text-center" role="status"><p className="ui-accent font-black">Qua màn {level}</p><button type="button" onClick={nextLevel} className="mt-3 min-h-11 rounded-full bg-[var(--ocean)] px-5 text-sm font-bold text-[var(--text-on-accent)] transition hover:brightness-110">Vào màn {level + 1}</button></div>}
-                    <p className="ui-muted mt-3 text-center text-xs">Chạm một ô để AIVA tự đi tới đó. Trên điện thoại, vuốt để đi từng bước.</p>
+                    <p className="mt-1.5 text-center text-xs text-slate-600 dark:text-slate-400" aria-live="polite">{message}</p>
+                    {completed && (
+                      <div className="mt-2 rounded-xl border border-amber-400/50 bg-amber-400/15 px-4 py-2 text-center shadow-sm">
+                        <span className="text-xs font-black text-amber-800 dark:text-amber-300 mr-2">Qua màn {level}!</span>
+                        <button
+                          type="button"
+                          onClick={nextLevel}
+                          className="rounded-full bg-[var(--ocean)] px-3.5 py-1 text-xs font-bold text-slate-950 transition hover:brightness-110 active:scale-95"
+                        >
+                          Vào màn {level + 1} ➔
+                        </button>
+                      </div>
+                    )}
                   </div>
-                </>
+                </GameFullscreenWrapper>
               )}
-              {selectedGame === "sequence" && <EnergySequenceGame />}
-              {selectedGame === "route" && <RouteBuilderGame />}
+
+              {selectedGame === "sequence" && (
+                <GameFullscreenWrapper onBack={() => setSelectedGame(null)}>
+                  <EnergySequenceGame />
+                </GameFullscreenWrapper>
+              )}
+
+              {selectedGame === "route" && (
+                <GameFullscreenWrapper onBack={() => setSelectedGame(null)}>
+                  <RouteBuilderGame />
+                </GameFullscreenWrapper>
+              )}
             </>
           )}
         </section>
       </main>
-      <Footer />
+      {!selectedGame && <Footer />}
       <PreorderModal open={preorderOpen} onClose={() => setPreorderOpen(false)} />
     </>
   );

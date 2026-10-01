@@ -77,21 +77,32 @@ export function VisionDemoSection() {
     };
   }, [active]);
 
+  // Only auto-rotate when section is actively entered by the user
   useEffect(() => {
-    if (userDriven) return;
+    if (userDriven || !entered) return;
     const interval = window.setInterval(() => {
-      setScene((active + 1) % scenarios.length);
-    }, 7500);
+      setScene((active + 1) % scenarios.length, 1);
+    }, 6500);
     return () => window.clearInterval(interval);
-  }, [active, scenarios.length, setScene, userDriven]);
+  }, [active, entered, scenarios.length, setScene, userDriven]);
 
   useEffect(() => {
     const el = document.getElementById("vision");
     if (!el) return;
     const onScene = () => setUserDriven(true);
+    const onEnter = (e: Event) => {
+      const detail = (e as CustomEvent<{ dir?: number }>).detail;
+      if (detail?.dir === 1 && !userDriven) {
+        setScene(0, 1);
+      }
+    };
     el.addEventListener("fp-scene", onScene);
-    return () => el.removeEventListener("fp-scene", onScene);
-  }, []);
+    el.addEventListener("fp-enter", onEnter);
+    return () => {
+      el.removeEventListener("fp-scene", onScene);
+      el.removeEventListener("fp-enter", onEnter);
+    };
+  }, [setScene, userDriven]);
 
   return (
     <section className="vision-orbit cx-fp-panel" data-entered={entered ? "true" : "false"}>

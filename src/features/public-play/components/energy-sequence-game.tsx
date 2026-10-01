@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { GameHeaderBar } from "@/features/public-play/components/game-fullscreen-wrapper";
 
 const PADS = [
   { id: 0, label: "Xanh dương", color: "#38bdf8", shade: "#075985" },
@@ -71,46 +72,68 @@ export function EnergySequenceGame() {
   const status = mode === "idle" ? "Sẵn sàng" : mode === "showing" ? "AIVA đang phát mã" : mode === "input" ? "Đến lượt bạn" : "Chuỗi bị ngắt";
 
   return (
-    <section className="overflow-hidden rounded-[2rem] border border-fuchsia-300/40 bg-[radial-gradient(circle_at_50%_0%,rgba(139,92,246,.16),transparent_42%),rgba(255,255,255,.9)] p-5 shadow-xl shadow-slate-900/10 backdrop-blur-xl dark:border-fuchsia-200/20 dark:bg-[radial-gradient(circle_at_50%_0%,rgba(139,92,246,.22),transparent_42%),rgba(255,255,255,.07)] dark:shadow-black/30 sm:p-7">
-      <div className="flex items-start justify-between gap-4">
-        <div>
-          <p className="text-xs font-bold uppercase tracking-[0.18em] text-fuchsia-700 dark:text-fuchsia-200">Thử thách trí nhớ</p>
-          <h2 className="mt-2 text-2xl font-black">Mật mã năng lượng</h2>
-        </div>
-        <div className="rounded-2xl border border-slate-200 bg-white/70 px-4 py-2 text-right dark:border-white/15 dark:bg-slate-950/30">
-          <p className="text-[11px] font-bold uppercase tracking-[0.12em] text-slate-500 dark:text-slate-400">Cao nhất</p>
-          <p className="mt-0.5 text-xl font-black text-amber-700 dark:text-yellow-200">{best}</p>
-        </div>
-      </div>
+    <div className="w-full max-w-2xl mx-auto space-y-3 sm:space-y-4">
+      <GameHeaderBar
+        title="Mật Mã Năng Lượng"
+        subtitle="Ghi nhớ chuỗi tín hiệu ánh sáng"
+        icon="psychology"
+        stats={
+          <div className="flex items-center gap-1.5 px-3 py-1 rounded-full border border-slate-200 dark:border-slate-700 bg-white/90 dark:bg-slate-900/90 text-xs font-semibold text-slate-700 dark:text-slate-200 shadow-sm whitespace-nowrap">
+            <span>Cao nhất:</span>
+            <span className="font-mono text-amber-700 dark:text-amber-400 font-bold">{best}</span>
+          </div>
+        }
+        onReset={start}
+      />
 
-      <div className="mt-6 rounded-3xl border border-slate-200 bg-white/70 p-4 sm:p-6 dark:border-white/10 dark:bg-slate-950/35">
-        <div className="flex items-center justify-between gap-3 text-sm font-bold">
+      <section className="overflow-hidden rounded-2xl sm:rounded-[2rem] border border-fuchsia-300/30 bg-[radial-gradient(circle_at_50%_0%,rgba(139,92,246,.12),transparent_42%),rgba(255,255,255,.9)] p-3.5 sm:p-5 md:p-6 shadow-xl shadow-slate-900/5 backdrop-blur-xl dark:border-fuchsia-200/15 dark:bg-[radial-gradient(circle_at_50%_0%,rgba(139,92,246,.18),transparent_42%),rgba(255,255,255,.05)] dark:shadow-black/20">
+        <div className="flex items-center justify-between gap-3 text-xs sm:text-sm font-bold">
           <span className={mode === "failed" ? "text-rose-600 dark:text-rose-300" : "text-slate-800 dark:text-slate-200"}>{status}</span>
-          <span className="text-slate-500 dark:text-slate-400">Mã: {sequence.length || "–"}</span>
+          <span className="text-slate-500 dark:text-slate-400 font-mono text-xs">Mã: {sequence.length || "–"}</span>
         </div>
-        <div className="mx-auto mt-5 grid max-w-lg grid-cols-2 gap-3 sm:gap-5">
+        <div className="mx-auto mt-3 sm:mt-4 grid max-w-md sm:max-w-lg grid-cols-2 gap-2.5 sm:gap-4">
           {PADS.map((pad) => {
             const isLit = lit === pad.id;
             return (
-              <button key={pad.id} type="button" onClick={() => choose(pad.id)} disabled={mode !== "input"} aria-label={`Chọn ${pad.label}`} className="min-h-28 rounded-[1.7rem] border border-white/50 transition duration-150 active:scale-95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-slate-900 dark:border-white/20 dark:focus-visible:outline-white disabled:cursor-default sm:min-h-40" style={{ background: `radial-gradient(circle at 50% 35%, ${pad.color}, ${pad.shade})`, boxShadow: isLit ? `0 0 0 5px rgba(255,255,255,.88), 0 0 52px ${pad.color}` : "inset 0 -10px 24px rgba(0,0,0,.2)", filter: isLit ? "brightness(1.35) saturate(1.1)" : mode === "showing" ? "brightness(.48) saturate(.6)" : "none", transform: isLit ? "scale(1.035)" : "scale(1)" }} />
+              <button
+                key={pad.id}
+                type="button"
+                onClick={() => choose(pad.id)}
+                disabled={mode !== "input"}
+                aria-label={`Chọn ${pad.label}`}
+                className="h-20 sm:h-28 md:h-32 max-h-[22vh] sm:max-h-[25vh] rounded-2xl sm:rounded-[1.7rem] border border-white/50 transition duration-150 active:scale-95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-slate-900 dark:border-white/20 dark:focus-visible:outline-white disabled:cursor-default"
+                style={{
+                  background: `radial-gradient(circle at 50% 35%, ${pad.color}, ${pad.shade})`,
+                  boxShadow: isLit ? `0 0 0 5px rgba(255,255,255,.88), 0 0 52px ${pad.color}` : "inset 0 -10px 24px rgba(0,0,0,.2)",
+                  filter: isLit ? "brightness(1.35) saturate(1.1)" : mode === "showing" ? "brightness(.48) saturate(.6)" : "none",
+                  transform: isLit ? "scale(1.035)" : "scale(1)",
+                }}
+              />
             );
           })}
         </div>
-      </div>
 
-      {mode === "failed" && (
-        <div className="mt-4 rounded-2xl border border-rose-300/40 bg-rose-400/15 px-5 py-4" role="alert">
-          <p className="font-black text-rose-700 dark:text-rose-200">Chưa đúng rồi</p>
-          <p className="mt-1 text-sm text-rose-800/85 dark:text-rose-100/85">Bạn đã nhớ đúng {Math.max(0, sequence.length - 1)} lượt. Nhấn chơi lại để thử một mã mới.</p>
+        {mode === "failed" && (
+          <div className="mt-3 rounded-xl sm:rounded-2xl border border-rose-300/40 bg-rose-400/15 px-4 py-2.5 sm:px-5 sm:py-3" role="alert">
+            <p className="font-black text-xs sm:text-sm text-rose-700 dark:text-rose-200">Chưa đúng rồi</p>
+            <p className="mt-0.5 text-xs text-rose-800/85 dark:text-rose-100/85">Bạn đã nhớ đúng {Math.max(0, sequence.length - 1)} lượt. Nhấn chơi lại để thử một mã mới.</p>
+          </div>
+        )}
+
+        <div className="mt-3.5 sm:mt-5 flex flex-wrap items-center justify-between gap-3">
+          <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300">Quan sát các ô sáng, rồi lặp lại đúng thứ tự.</p>
+          <button
+            type="button"
+            onClick={start}
+            className="min-h-10 sm:min-h-11 rounded-full bg-yellow-300 hover:bg-yellow-200 px-5 sm:px-6 font-bold text-xs text-slate-950 transition active:scale-95 shadow-md inline-flex items-center gap-1.5"
+          >
+            <span className="material-symbols-outlined text-base">
+              {mode === "idle" ? "play_arrow" : mode === "failed" ? "replay" : "restart_alt"}
+            </span>
+            <span>{mode === "idle" ? "Bắt đầu chơi" : mode === "failed" ? "Chơi lại" : "Làm mới"}</span>
+          </button>
         </div>
-      )}
-
-      <div className="mt-6 flex flex-wrap items-center justify-between gap-4">
-        <p className="text-sm text-slate-600 dark:text-slate-300">Quan sát các ô sáng, rồi lặp lại đúng thứ tự.</p>
-        <button type="button" onClick={start} className="min-h-12 rounded-full bg-yellow-300 px-7 font-bold text-slate-950 transition hover:bg-yellow-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-yellow-200">
-          {mode === "idle" || mode === "failed" ? "Bắt đầu" : "Chơi lại"}
-        </button>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 }

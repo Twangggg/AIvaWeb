@@ -103,50 +103,50 @@ export function ParentAppSection() {
 
         <div className="max-w-6xl mx-auto relative z-10 w-full px-2 sm:px-4">
           <Reveal direction="up" delay={0}>
-            <header>
-              <h2 className="font-display font-bold tracking-tight leading-[1.1] text-[clamp(1.5rem,3.4vw,2.5rem)]">
+            <header className="text-center sm:text-left">
+              <h2 className="font-display font-bold tracking-tight leading-[1.1] text-[clamp(1.25rem,3.2vw,2.5rem)]">
                 {t.homeAppTitle}{" "}
                 <span className="text-gradient-ocean">{t.homeAppTitleAccent}</span>
               </h2>
-              <p className="mt-2 sm:mt-3 max-w-2xl text-[clamp(0.85rem,1.3vw,1.02rem)] leading-relaxed" style={{ color: "var(--text-dim)" }}>
+              <p className="mt-1.5 sm:mt-3 max-w-2xl text-[clamp(0.78rem,1.2vw,1.02rem)] leading-relaxed" style={{ color: "var(--text-dim)" }}>
                 {t.homeAppDesc}
               </p>
 
               {/* Direct App Download Action Bar */}
-              <div className="mt-4 sm:mt-6 flex flex-col items-stretch gap-2.5 sm:flex-row sm:flex-wrap sm:items-center sm:gap-3">
+              <div className="mt-3 sm:mt-6 flex flex-row items-center justify-center sm:justify-start gap-2 sm:gap-3">
                 <button
                   onClick={handleTriggerDirectDownload}
                   disabled={directDownloading}
-                  className="w-full justify-center px-5 py-3 rounded-2xl font-bold text-xs shadow-lg transition-all flex items-center gap-2 transform hover:-translate-y-0.5 active:translate-y-0 sm:w-auto sm:px-6 sm:text-sm"
+                  className="px-3.5 py-2 rounded-xl sm:rounded-2xl font-bold text-[11px] sm:text-sm shadow-md transition-all flex items-center gap-1.5 transform hover:-translate-y-0.5 active:translate-y-0 sm:px-6 sm:py-3"
                   style={{
                     background: "var(--gradient-ocean)",
                     color: "var(--text-on-accent)",
                     boxShadow: "var(--shadow-glow)"
                   }}
                 >
-                  <span className="material-symbols-outlined text-lg sm:text-xl">
+                  <span className="material-symbols-outlined text-base sm:text-xl">
                     {directDownloading ? "sync" : "download"}
                   </span>
-                  <span>{directDownloading ? "Đang tự động tải APK..." : "Tải Trực Tiếp APK (Android)"}</span>
+                  <span>{directDownloading ? "Đang tải APK..." : "Tải APK (Android)"}</span>
                 </button>
 
                 <button
                   onClick={() => setDownloadModalOpen(true)}
-                  className="w-full justify-center px-4 py-3 rounded-2xl font-semibold text-xs transition-all flex items-center gap-2 border sm:w-auto sm:px-5 sm:text-sm"
+                  className="px-3 py-2 rounded-xl sm:rounded-2xl font-semibold text-[11px] sm:text-sm transition-all flex items-center gap-1.5 border sm:px-5 sm:py-3"
                   style={{
                     backgroundColor: "var(--glass-bg)",
                     borderColor: "var(--glass-border)",
                     color: "var(--text-on-glass)"
                   }}
                 >
-                  <span className="material-symbols-outlined text-lg sm:text-xl">qr_code_scanner</span>
-                  <span>Quét mã QR & Tải App</span>
+                  <span className="material-symbols-outlined text-base sm:text-xl">qr_code_scanner</span>
+                  <span>Quét QR / Tải App</span>
                 </button>
               </div>
             </header>
           </Reveal>
 
-          <div className="mt-6 sm:mt-8 grid lg:grid-cols-[minmax(0,1fr)_minmax(260px,320px)] gap-6 lg:gap-12 items-center">
+          <div className="mt-3 sm:mt-6 grid lg:grid-cols-[minmax(0,1fr)_minmax(240px,300px)] gap-4 lg:gap-12 items-center">
             <Reveal direction="left" delay={100} className="order-2 hidden flex-col gap-2.5 sm:flex sm:gap-3.5 lg:order-none">
               {highlights.map((item, i) => {
                 const tied = i <= 1 ? 0 : i === 2 ? 1 : 2;
@@ -189,11 +189,11 @@ export function ParentAppSection() {
             </Reveal>
 
             {/* Interactive Visual Phone Demo */}
-            <Reveal direction="right" delay={160} className="order-1 flex flex-col items-center gap-3 sm:gap-5 lg:order-none">
-              <div className="app-phone-frame motion-float relative mx-auto w-[min(100%,168px)] sm:w-[min(100%,280px)] group">
-                <div className="app-phone-bezel relative rounded-[1.7rem] p-[7px] sm:rounded-[2.1rem] sm:p-[10px] shadow-2xl" style={{ background: "#111827" }}>
+            <Reveal direction="right" delay={160} className="order-1 flex flex-col items-center gap-2 sm:gap-4 lg:order-none">
+              <div className="app-phone-frame motion-float relative mx-auto w-[min(100%,135px)] sm:w-[min(100%,220px)] lg:w-[260px] group">
+                <div className="app-phone-bezel relative rounded-[1.4rem] p-[5px] sm:rounded-[2.1rem] sm:p-[10px] shadow-2xl" style={{ background: "#111827" }}>
                   <div
-                    className="relative overflow-hidden rounded-[1.25rem] sm:rounded-[1.55rem] bg-[#0c1222] w-full"
+                    className="relative overflow-hidden rounded-[1.1rem] sm:rounded-[1.55rem] bg-[#0c1222] w-full"
                     style={{ aspectRatio: "9 / 19.2" }}
                   >
                     <AnimatePresence mode="popLayout" custom={dir} initial={false}>
@@ -210,7 +210,7 @@ export function ParentAppSection() {
                           src={screen.image}
                           alt={labels[screen.id]}
                           fill
-                          sizes="280px"
+                          sizes="260px"
                           className="object-cover object-top select-none pointer-events-none"
                           priority={screen.id === "dashboard"}
                         />
@@ -241,7 +241,7 @@ export function ParentAppSection() {
 
               {/* Tab Switcher */}
               <div
-                className="flex w-full max-w-[168px] sm:max-w-[280px] gap-1 rounded-xl sm:rounded-2xl p-1 border"
+                className="flex w-full max-w-[135px] sm:max-w-[220px] lg:max-w-[260px] gap-1 rounded-xl sm:rounded-2xl p-1 border"
                 style={{
                   backgroundColor: "var(--glass-bg)",
                   borderColor: "var(--glass-border)"
@@ -258,13 +258,13 @@ export function ParentAppSection() {
                       role="tab"
                       aria-selected={selected}
                       onClick={() => setScene(i)}
-                      className="flex flex-1 flex-col items-center gap-0.5 rounded-lg sm:rounded-xl px-1 py-1.5 sm:px-2 sm:py-2.5 text-[0.5rem] sm:text-[0.65rem] font-medium transition-all duration-300"
+                      className="flex flex-1 flex-col items-center gap-0.5 rounded-lg sm:rounded-xl px-1 py-1 sm:px-2 sm:py-2 text-[0.5rem] sm:text-[0.65rem] font-medium transition-all duration-300"
                       style={{
                         background: selected ? "var(--gradient-ocean)" : "transparent",
                         color: selected ? "var(--text-on-accent)" : "var(--text-dim)"
                       }}
                     >
-                      <span className="material-symbols-outlined text-sm sm:text-base">{s.icon}</span>
+                      <span className="material-symbols-outlined text-xs sm:text-base">{s.icon}</span>
                       {labels[s.id]}
                     </button>
                   );

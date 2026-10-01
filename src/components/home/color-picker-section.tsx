@@ -66,7 +66,7 @@ export function ColorPickerSection() {
   const active = COLORS.find((c) => c.id === activeId) ?? COLORS[0];
 
   return (
-    <section className="py-8 sm:py-12 md:py-16 px-4 sm:px-6 relative overflow-hidden h-full w-full flex flex-col justify-center">
+    <section className="py-4 sm:py-10 md:py-16 px-3.5 sm:px-6 relative overflow-hidden h-full w-full flex flex-col justify-center">
       <div className="absolute inset-0 pointer-events-none" aria-hidden>
         <div
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[520px] h-[520px] rounded-full blur-[120px] transition-colors duration-500"
@@ -89,22 +89,22 @@ export function ColorPickerSection() {
 
         <Reveal direction="scale" delay={120}>
           <div
-            className="mt-6 sm:mt-10 md:mt-12 rounded-3xl px-4 py-6 sm:px-8 sm:py-10 md:px-10 md:py-12 text-center"
+            className="mt-3 sm:mt-8 md:mt-10 rounded-2xl sm:rounded-3xl px-3 py-4 sm:px-8 sm:py-8 md:px-10 md:py-10 text-center"
             style={{
               backgroundColor: "var(--glass-bg)",
               border: "1px solid var(--glass-border)"
             }}
           >
-            <p className="text-sm font-medium mb-6" style={{ color: "var(--text-dim)" }}>
+            <p className="text-xs sm:text-sm font-medium mb-3 sm:mb-6" style={{ color: "var(--text-dim)" }}>
               {t.homeColorSelected}:{" "}
               <span className="font-semibold" style={{ color: "var(--text-on-glass)" }}>
                 {t[active.labelKey]}
               </span>
             </p>
 
-            <div className="relative mx-auto max-w-lg transition-transform duration-300 hover:scale-[1.02]">
+            <div className="relative mx-auto max-w-[240px] sm:max-w-lg transition-transform duration-300 hover:scale-[1.02]">
               <div
-                className="absolute left-1/2 top-1/2 h-40 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full blur-3xl transition-colors duration-500"
+                className="absolute left-1/2 top-1/2 h-32 w-48 sm:h-40 sm:w-64 -translate-x-1/2 -translate-y-1/2 rounded-full blur-3xl transition-colors duration-500"
                 style={{ backgroundColor: `${active.hex}40` }}
                 aria-hidden
               />
@@ -114,7 +114,7 @@ export function ColorPickerSection() {
             </div>
 
             <div
-              className="mt-10 flex flex-wrap items-center justify-center gap-3"
+              className="mt-4 sm:mt-8 flex flex-wrap items-center justify-center gap-2.5 sm:gap-3"
               role="radiogroup"
               aria-label={t.homeColorPickerLabel}
             >
@@ -128,12 +128,12 @@ export function ColorPickerSection() {
                     aria-checked={selected}
                     aria-label={t[color.labelKey]}
                     onClick={() => setActiveId(color.id)}
-                    className="relative h-11 w-11 rounded-full transition-transform duration-300 ease-out hover:scale-110 active:scale-95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--ocean)]"
+                    className="relative h-8 w-8 sm:h-11 sm:w-11 rounded-full transition-transform duration-300 ease-out hover:scale-110 active:scale-95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--ocean)]"
                     style={{
                       background: `linear-gradient(145deg, ${color.accent}, ${color.hex})`,
                       boxShadow: selected
-                        ? `0 0 0 2px var(--glass-bg), 0 0 0 4px ${color.hex}, 0 6px 18px ${color.hex}55`
-                        : "0 4px 14px rgba(0,0,0,0.12)",
+                        ? `0 0 0 2px var(--glass-bg), 0 0 0 3px ${color.hex}, 0 4px 14px ${color.hex}55`
+                        : "0 2px 8px rgba(0,0,0,0.12)",
                       border: color.id === "cloud" ? "1px solid rgba(0,0,0,0.12)" : "none"
                     }}
                   />
@@ -141,7 +141,7 @@ export function ColorPickerSection() {
               })}
             </div>
 
-            <p className="mt-6 text-xs md:text-sm" style={{ color: "var(--text-dim)" }}>
+            <p className="mt-3 sm:mt-6 text-[11px] sm:text-xs md:text-sm" style={{ color: "var(--text-dim)" }}>
               {t.homeColorHint}
             </p>
           </div>

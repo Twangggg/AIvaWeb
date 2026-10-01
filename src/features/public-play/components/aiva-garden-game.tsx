@@ -320,6 +320,10 @@ export function AivaGardenGame({ onUpdate, round }: AivaGardenGameProps) {
         backgroundColor: "#1a4f44",
         scene: GardenScene,
         render: { antialias: false, pixelArt: false, roundPixels: true },
+        scale: {
+          mode: Phaser.Scale.FIT,
+          autoCenter: Phaser.Scale.CENTER_BOTH,
+        },
       });
     };
 
@@ -330,5 +334,12 @@ export function AivaGardenGame({ onUpdate, round }: AivaGardenGameProps) {
     };
   }, [round]);
 
-  return <div ref={hostRef} tabIndex={0} aria-label="Bản đồ Giải cứu khu vườn AIVA. Chạm để chọn điểm đến hoặc vuốt để đi từng bước." className="w-full touch-none select-none overflow-hidden rounded-2xl border border-white/15 bg-[#1a4f44] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-yellow-200 [&_canvas]:mx-auto [&_canvas]:block [&_canvas]:h-auto [&_canvas]:max-w-full" />;
+  return (
+    <div
+      ref={hostRef}
+      tabIndex={0}
+      aria-label="Bản đồ Giải cứu khu vườn AIVA. Chạm để chọn điểm đến hoặc vuốt để đi từng bước."
+      className="w-full flex items-center justify-center touch-none select-none overflow-hidden rounded-2xl border border-white/15 bg-[#1a4f44] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-yellow-200 [&_canvas]:mx-auto [&_canvas]:block [&_canvas]:h-auto [&_canvas]:max-h-[calc(100svh-8.5rem)] sm:[&_canvas]:max-h-[68svh] [&_canvas]:max-w-full [&_canvas]:object-contain"
+    />
+  );
 }

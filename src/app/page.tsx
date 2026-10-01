@@ -46,8 +46,8 @@ export default function HomePage() {
               <CinematicHero onPreorder={() => setPreorderOpen(true)} />
             </div>
 
-            <div id="statement" data-fp-section data-fp-mobile-lock data-fp-scenes="3" data-fp-scene="0" className="cx-fp-section min-h-[100dvh] lg:min-h-[110vh] relative">
-              <div className="sticky top-0 h-[100dvh] w-full flex items-center justify-center overflow-hidden">
+            <div id="statement" data-fp-section data-fp-mobile-lock data-fp-scenes="3" data-fp-scene="0" className="cx-fp-section min-h-[100svh] lg:min-h-[110vh] relative">
+              <div className="sticky top-0 h-[100svh] lg:h-[100dvh] w-full flex items-center justify-center overflow-hidden">
                 <StatementChapter />
               </div>
             </div>
@@ -56,14 +56,14 @@ export default function HomePage() {
               <GlassesExperience />
             </div>
 
-            <div id="vision" data-fp-section data-fp-mobile-lock data-fp-scenes="3" data-fp-scene="0" className="cx-fp-section min-h-[100dvh] lg:min-h-[120vh] relative">
-              <div className="sticky top-0 h-[100dvh] w-full flex items-center justify-center overflow-hidden">
+            <div id="vision" data-fp-section data-fp-mobile-lock data-fp-scenes="3" data-fp-scene="0" className="cx-fp-section min-h-[100svh] lg:min-h-[120vh] relative">
+              <div className="sticky top-0 h-[100svh] lg:h-[100dvh] w-full flex items-center justify-center overflow-hidden">
                 <VisionDemoSection />
               </div>
             </div>
 
-            <div id="features" data-fp-section data-fp-mobile-lock data-fp-scenes="4" data-fp-scene="0" className="cx-fp-section min-h-[100dvh] lg:min-h-[130vh] relative">
-              <div className="sticky top-0 h-[100dvh] w-full flex items-center justify-center overflow-hidden">
+            <div id="features" data-fp-section data-fp-mobile-lock data-fp-scenes="4" data-fp-scene="0" className="cx-fp-section min-h-[100svh] lg:min-h-[130vh] relative">
+              <div className="sticky top-0 h-[100svh] lg:h-[100dvh] w-full flex items-center justify-center overflow-hidden">
                 <FeatureRail />
               </div>
             </div>

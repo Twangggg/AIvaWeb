@@ -44,54 +44,55 @@ export function CompareSection() {
 
         <Reveal delay={80} blur={false}>
           <div
-            className="mt-6 sm:mt-10 md:mt-12 overflow-hidden rounded-2xl"
+            data-fp-scroll
+            className="mt-3 sm:mt-8 md:mt-12 overflow-y-auto max-h-[calc(100svh-9.5rem)] sm:max-h-none rounded-xl sm:rounded-2xl border"
             style={{
               backgroundColor: "var(--glass-bg)",
-              border: "1px solid var(--glass-border)"
+              borderColor: "var(--glass-border)"
             }}
           >
             <div
-              className="grid grid-cols-[minmax(0,1.1fr)_minmax(0,.72fr)_minmax(0,.88fr)] gap-1 px-3 py-3 text-[0.65rem] font-semibold uppercase tracking-wide sm:grid-cols-[1.1fr_1fr_1fr] sm:gap-2 sm:px-4 sm:py-4 sm:text-xs md:px-6 md:py-5 md:text-sm md:tracking-wider"
-              style={{ borderBottom: "1px solid var(--glass-border)", color: "var(--text-dim)" }}
+              className="grid grid-cols-[minmax(0,1.1fr)_minmax(0,.75fr)_minmax(0,.88fr)] gap-1 px-2.5 py-2 text-[0.6rem] font-semibold uppercase tracking-wide sm:grid-cols-[1.1fr_1fr_1fr] sm:gap-2 sm:px-4 sm:py-3.5 sm:text-xs md:px-6 md:py-4 md:text-sm md:tracking-wider sticky top-0 backdrop-blur-md z-10"
+              style={{ borderBottom: "1px solid var(--glass-border)", backgroundColor: "var(--glass-bg)", color: "var(--text-dim)" }}
             >
               <span>{t.homeCompareColCriteria}</span>
-              <span className="text-center flex items-center justify-center gap-1.5">
-                <span className="material-symbols-outlined text-base opacity-70">smartphone</span>
+              <span className="text-center flex items-center justify-center gap-1">
+                <span className="material-symbols-outlined text-sm sm:text-base opacity-70">smartphone</span>
                 <span className="hidden sm:inline">{t.homeCompareColScreen}</span>
               </span>
-              <span className="text-center flex items-center justify-center gap-1.5" style={{ color: "var(--ocean-glow)" }}>
-                <span className="material-symbols-outlined text-base">eyeglasses</span>
+              <span className="text-center flex items-center justify-center gap-1" style={{ color: "var(--ocean-glow)" }}>
+                <span className="material-symbols-outlined text-sm sm:text-base">eyeglasses</span>
                 <span className="hidden sm:inline">{t.homeCompareColAiva}</span>
               </span>
             </div>
 
             {rows.map((row, i) => (
-              <Reveal key={row.label} delay={120 + i * 70} blur={false}>
+              <Reveal key={row.label} delay={120 + i * 50} blur={false}>
                 <div
-                  className="grid grid-cols-[minmax(0,1.1fr)_minmax(0,.72fr)_minmax(0,.88fr)] gap-1 px-3 py-3 items-start sm:grid-cols-[1.1fr_1fr_1fr] sm:gap-2 sm:px-4 sm:py-4 md:px-6 md:py-5 md:items-center compare-row"
+                  className="grid grid-cols-[minmax(0,1.1fr)_minmax(0,.75fr)_minmax(0,.88fr)] gap-1 px-2.5 py-1.5 items-center sm:grid-cols-[1.1fr_1fr_1fr] sm:gap-2 sm:px-4 sm:py-3 md:px-6 md:py-3.5 compare-row"
                   style={{
                     borderTop: i === 0 ? undefined : "1px solid var(--glass-border)"
                   }}
                 >
-                  <p className="text-xs font-medium leading-snug sm:text-sm" style={{ color: "var(--text-on-glass)" }}>
+                  <p className="text-[11px] font-medium leading-snug sm:text-sm" style={{ color: "var(--text-on-glass)" }}>
                     {row.label}
                   </p>
-                  <div className="flex flex-col items-center justify-center gap-1 text-center sm:flex-row sm:gap-1.5">
-                    <span className="material-symbols-outlined text-sm text-rose-400/90 sm:text-base" aria-hidden>
+                  <div className="flex flex-col items-center justify-center gap-0.5 text-center sm:flex-row sm:gap-1.5">
+                    <span className="material-symbols-outlined text-xs text-rose-400/90 sm:text-base" aria-hidden>
                       close
                     </span>
-                    <p className="text-[0.65rem] leading-tight sm:text-xs sm:leading-snug md:text-sm" style={{ color: "var(--text-dim)" }}>
+                    <p className="text-[0.6rem] leading-tight sm:text-xs sm:leading-snug md:text-sm" style={{ color: "var(--text-dim)" }}>
                       {row.screen}
                     </p>
                   </div>
                   <div
-                    className="flex flex-col items-center justify-center gap-1 text-center rounded-lg px-1.5 py-1 sm:flex-row sm:gap-1.5 sm:rounded-xl sm:px-2 sm:py-1.5"
+                    className="flex flex-col items-center justify-center gap-0.5 text-center rounded-lg px-1 py-0.5 sm:flex-row sm:gap-1.5 sm:rounded-xl sm:px-2 sm:py-1"
                     style={{ background: "var(--ocean-alpha)" }}
                   >
-                    <span className="material-symbols-outlined text-sm sm:text-base" style={{ color: "var(--ocean-glow)" }} aria-hidden>
+                    <span className="material-symbols-outlined text-xs sm:text-base" style={{ color: "var(--ocean-glow)" }} aria-hidden>
                       check
                     </span>
-                    <p className="text-[0.65rem] font-medium leading-tight sm:text-xs sm:leading-snug md:text-sm" style={{ color: "var(--text-on-glass)" }}>
+                    <p className="text-[0.6rem] font-medium leading-tight sm:text-xs sm:leading-snug md:text-sm" style={{ color: "var(--text-on-glass)" }}>
                       {row.aiva}
                     </p>
                   </div>

@@ -30,3 +30,7 @@ pnpm-debug.log*
 
 # typescript
 *.tsbuildinfo
+
+# test results
+test-results/
+playwright-report/

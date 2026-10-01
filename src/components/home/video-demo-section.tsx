@@ -44,7 +44,7 @@ export function VideoDemoSection() {
   };
 
   return (
-    <section className="py-8 sm:py-12 md:py-16 px-4 sm:px-6 relative overflow-hidden h-full w-full flex flex-col justify-center">
+    <section className="py-4 sm:py-10 md:py-16 px-3.5 sm:px-6 relative overflow-hidden h-full w-full flex flex-col justify-center">
       <AmbientBg variant="section" />
 
       <div className="max-w-5xl mx-auto relative z-10 w-full">
@@ -62,7 +62,7 @@ export function VideoDemoSection() {
 
         <Reveal direction="scale" delay={120}>
           <div
-            className="mt-6 sm:mt-10 md:mt-12 relative rounded-2xl overflow-hidden"
+            className="mt-3 sm:mt-8 md:mt-12 relative rounded-2xl overflow-hidden"
             style={{
               backgroundColor: "var(--glass-bg)",
               border: "1px solid var(--glass-border)",

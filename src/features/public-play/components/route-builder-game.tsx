@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
+import { GameHeaderBar } from "@/features/public-play/components/game-fullscreen-wrapper";
 
 type Point = { x: number; y: number };
 type Command = "up" | "right" | "down" | "left";
@@ -81,16 +82,23 @@ export function RouteBuilderGame() {
   };
 
   return (
-    <section className="ui-surface ui-border rounded-[2rem] border p-5 shadow-xl backdrop-blur-xl sm:p-7">
-      <div className="flex items-start justify-between gap-4">
-        <div>
-          <h2 className="text-2xl font-black">Kỹ sư đường đi</h2>
-          <p className="ui-muted mt-1 text-sm">{message}</p>
-        </div>
-        <span className="ui-surface-soft rounded-full px-4 py-2 text-sm font-bold">Tuyến {missionIndex + 1}</span>
-      </div>
-      <div className="mt-6 grid gap-6 lg:grid-cols-[minmax(0,1fr)_280px]">
-        <div className="ui-surface-soft grid aspect-square w-full max-w-md grid-cols-6 gap-1 rounded-2xl p-2">
+    <div className="w-full max-w-4xl mx-auto space-y-3 sm:space-y-4">
+      <GameHeaderBar
+        title="Kỹ Sư Đường Đi"
+        subtitle={message}
+        icon="alt_route"
+        stats={
+          <div className="flex items-center gap-1.5 px-3 py-1 rounded-full border border-slate-200 dark:border-slate-700 bg-white/90 dark:bg-slate-900/90 text-xs font-semibold text-slate-700 dark:text-slate-200 shadow-sm whitespace-nowrap">
+            <span>Tuyến</span>
+            <span className="font-mono text-amber-700 dark:text-amber-400 font-bold">{missionIndex + 1}/{MISSIONS.length}</span>
+          </div>
+        }
+        onReset={reset}
+      />
+
+      <section className="ui-surface ui-border rounded-2xl sm:rounded-[2rem] border p-3.5 sm:p-5 md:p-6 shadow-xl backdrop-blur-xl">
+        <div className="grid gap-4 sm:gap-6 md:grid-cols-[minmax(0,1fr)_260px] lg:grid-cols-[minmax(0,1fr)_300px] items-start">
+        <div className="ui-surface-soft grid aspect-square w-full max-w-[280px] sm:max-w-[320px] md:max-w-[360px] mx-auto grid-cols-6 gap-1 rounded-2xl p-1.5 sm:p-2">
           {Array.from({ length: 36 }, (_, index) => {
             const point = { x: index % 6, y: Math.floor(index / 6) };
             const isBlock = mission.blocks.includes(key(point));
@@ -98,26 +106,27 @@ export function RouteBuilderGame() {
             const isGoal = key(point) === key(mission.goal);
             const isBot = key(point) === key(position);
             return (
-              <div key={key(point)} className={`relative flex min-h-11 items-center justify-center overflow-hidden rounded-lg text-[10px] font-black sm:text-xs ${isBlock ? "ui-surface-overlay" : isGoal ? "bg-[var(--game-cards-bg)]" : isBot ? "bg-[var(--ocean-alpha)]" : "bg-[var(--game-hunt-bg)] text-transparent"}`} aria-label={isGoal ? "Cổng không gian" : isBot ? "AIVA" : isBlock ? "Chướng ngại" : undefined}>
+              <div key={key(point)} className={`relative flex min-h-8 sm:min-h-10 items-center justify-center overflow-hidden rounded-lg text-[10px] font-black sm:text-xs ${isBlock ? "ui-surface-overlay" : isGoal ? "bg-[var(--game-cards-bg)]" : isBot ? "bg-[var(--ocean-alpha)]" : "bg-[var(--game-hunt-bg)] text-transparent"}`} aria-label={isGoal ? "Cổng không gian" : isBot ? "AIVA" : isBlock ? "Chướng ngại" : undefined}>
                 {isGoal ? <Image src="/games/portal-sprite.webp" alt="" fill unoptimized sizes="72px" className="object-contain p-0.5" /> : isBot ? <Image src="/games/robot-sprite.webp" alt="" fill unoptimized sizes="72px" className="object-contain p-0.5" /> : isStart ? "Bắt đầu" : ""}
               </div>
             );
           })}
         </div>
         <div>
-          <p className="ui-text text-sm font-bold">Chuỗi lệnh</p>
-          <div className="ui-surface-soft ui-border ui-muted mt-3 min-h-14 rounded-2xl border p-3 text-sm">{commands.length ? commands.map((command, index) => <span key={`${command}-${index}`} className="ui-surface mr-2 inline-block rounded-lg px-2 py-1">{COMMANDS.find((item) => item.id === command)?.label}</span>) : "Chưa có lệnh"}</div>
-          <div className="mt-3 grid grid-cols-2 gap-2">
-            {COMMANDS.map((command) => <button key={command.id} type="button" disabled={running || commands.length >= 14} onClick={() => setCommands((items) => [...items, command.id])} className="ui-border min-h-11 rounded-xl border px-3 text-sm font-bold transition hover:opacity-75 disabled:opacity-40">{command.label}</button>)}
+          <p className="ui-text text-xs sm:text-sm font-bold">Chuỗi lệnh</p>
+          <div className="ui-surface-soft ui-border ui-muted mt-2 min-h-12 rounded-xl border p-2.5 text-xs sm:text-sm">{commands.length ? commands.map((command, index) => <span key={`${command}-${index}`} className="ui-surface mr-1.5 mb-1 inline-block rounded-lg px-2 py-0.5">{COMMANDS.find((item) => item.id === command)?.label}</span>) : "Chưa có lệnh"}</div>
+          <div className="mt-2.5 grid grid-cols-2 gap-1.5 sm:gap-2">
+            {COMMANDS.map((command) => <button key={command.id} type="button" disabled={running || commands.length >= 14} onClick={() => setCommands((items) => [...items, command.id])} className="ui-border min-h-9 sm:min-h-10 rounded-xl border px-2.5 text-xs sm:text-sm font-bold transition hover:opacity-75 disabled:opacity-40">{command.label}</button>)}
           </div>
-          <div className="mt-3 flex gap-2">
-            <button type="button" disabled={running} onClick={() => setCommands((items) => items.slice(0, -1))} className="ui-border min-h-11 flex-1 rounded-xl border px-3 text-sm font-bold disabled:opacity-40">Xóa lệnh</button>
-            <button type="button" disabled={running || !commands.length} onClick={run} className="min-h-11 flex-1 rounded-xl bg-[var(--ocean)] px-3 text-sm font-bold text-[var(--text-on-accent)] disabled:opacity-40">Chạy</button>
+          <div className="mt-2.5 flex gap-2">
+            <button type="button" disabled={running} onClick={() => setCommands((items) => items.slice(0, -1))} className="ui-border min-h-9 sm:min-h-10 flex-1 rounded-xl border px-2.5 text-xs sm:text-sm font-bold disabled:opacity-40">Xóa lệnh</button>
+            <button type="button" disabled={running || !commands.length} onClick={run} className="min-h-9 sm:min-h-10 flex-1 rounded-xl bg-[var(--ocean)] px-2.5 text-xs sm:text-sm font-bold text-[var(--text-on-accent)] disabled:opacity-40">Chạy</button>
           </div>
-          {completed && <button type="button" onClick={nextMission} className="min-h-11 ui-success-soft ui-success mt-3 w-full rounded-xl px-3 text-sm font-bold">Tuyến tiếp theo</button>}
-          {!completed && <button type="button" disabled={running} onClick={reset} className="ui-muted mt-3 min-h-11 w-full rounded-xl text-sm font-bold disabled:opacity-40">Làm lại</button>}
+          {completed && <button type="button" onClick={nextMission} className="min-h-9 sm:min-h-10 ui-success-soft ui-success mt-2.5 w-full rounded-xl px-2.5 text-xs sm:text-sm font-bold">Tuyến tiếp theo</button>}
+          {!completed && <button type="button" disabled={running} onClick={reset} className="ui-muted mt-2.5 min-h-9 sm:min-h-10 w-full rounded-xl text-xs sm:text-sm font-bold disabled:opacity-40">Làm lại</button>}
         </div>
       </div>
     </section>
+    </div>
   );
 }

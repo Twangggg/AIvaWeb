@@ -12,8 +12,8 @@ const AivaGlasses3D = dynamic(() => import("@/components/AivaGlasses3D"), {
 const SECTIONS = [
   { tag: "feature1Tag", title: "feature1Title", desc: "feature1Desc", mobilePos: "top-12 sm:left-4 sm:right-auto", desktopPos: "lg:top-24 lg:right-[15%]" },
   { tag: "feature2Tag", title: "feature2Title", desc: "feature2Desc", mobilePos: "top-12 sm:right-4 sm:left-auto", desktopPos: "lg:top-24 lg:left-16" },
-  { tag: "feature3Tag", title: "feature3Title", desc: "feature3Desc", mobilePos: "bottom-36 sm:right-4 sm:left-auto", desktopPos: "lg:bottom-36 lg:right-16" },
-  { tag: "feature4Tag", title: "feature4Title", desc: "feature4Desc", mobilePos: "bottom-36 sm:left-4 sm:right-auto", desktopPos: "lg:bottom-36 lg:left-[15%]" }
+  { tag: "feature3Tag", title: "feature3Title", desc: "feature3Desc", mobilePos: "bottom-16 sm:bottom-28 sm:right-4 sm:left-auto", desktopPos: "lg:bottom-36 lg:right-16" },
+  { tag: "feature4Tag", title: "feature4Title", desc: "feature4Desc", mobilePos: "bottom-16 sm:bottom-28 sm:left-4 sm:right-auto", desktopPos: "lg:bottom-36 lg:left-[15%]" }
 ] as const;
 
 export function Home3DScroll() {
@@ -181,12 +181,12 @@ export function Home3DScroll() {
         {SECTIONS.map((s, i) => (
           <div
             key={s.tag}
-            className={`absolute z-10 transition-all duration-1000 will-change-transform will-change-opacity lg:bottom-auto lg:left-auto lg:right-auto left-4 right-4 max-w-[min(calc(100%-2rem),18rem)] sm:max-w-[16rem] lg:max-w-md mx-auto sm:mx-0 ${
+            className={`absolute z-10 transition-all duration-1000 will-change-transform will-change-opacity lg:bottom-auto lg:left-auto lg:right-auto left-3 right-3 max-w-[min(calc(100%-1.5rem),18rem)] sm:max-w-[16rem] lg:max-w-md mx-auto sm:mx-0 ${
               i === active ? "opacity-100 scale-100 translate-y-0" : "opacity-0 scale-95 translate-y-3 pointer-events-none"
             } ${s.mobilePos} ${s.desktopPos}`}
           >
             <div
-              className="rounded-2xl p-4 md:p-6 backdrop-blur-xl shadow-2xl"
+              className="rounded-xl sm:rounded-2xl p-3 sm:p-5 md:p-6 backdrop-blur-xl shadow-2xl"
               style={{
                 backgroundColor: "var(--glass-bg)",
                 border: "1px solid",
@@ -194,7 +194,7 @@ export function Home3DScroll() {
               }}
             >
               <span
-                className="inline-block px-3 py-0.5 rounded-full text-xs font-medium tracking-wider uppercase mb-2 md:mb-4"
+                className="inline-block px-2.5 py-0.5 rounded-full text-[10px] sm:text-xs font-medium tracking-wider uppercase mb-1.5 sm:mb-3"
                 style={{
                   backgroundColor: "var(--ocean-alpha)",
                   color: "var(--ocean-glow)"
@@ -202,10 +202,10 @@ export function Home3DScroll() {
               >
                 {getSectionText(s.tag)}
               </span>
-              <h2 className="text-xl md:text-3xl font-bold mb-2 md:mb-3 leading-snug" style={{ color: "var(--text-on-glass)" }}>
+              <h2 className="text-base sm:text-2xl md:text-3xl font-bold mb-1 sm:mb-2 leading-snug" style={{ color: "var(--text-on-glass)" }}>
                 {getSectionText(s.title)}
               </h2>
-              <p className="text-xs md:text-base leading-relaxed max-w-xs" style={{ color: "var(--text-dim)" }}>
+              <p className="text-[11px] sm:text-sm md:text-base leading-relaxed max-w-xs" style={{ color: "var(--text-dim)" }}>
                 {getSectionText(s.desc)}
               </p>
             </div>

@@ -1601,16 +1601,16 @@ body.custom-cursor-active canvas {
 
 @media (max-width: 768px) {
   .vision-ring-stage {
-    --ring-r: clamp(8.5rem, 34vw, 11.5rem);
+    --ring-r: clamp(6.75rem, 28vw, 9.5rem);
     width: min(96vw, 30rem);
-    height: clamp(260px, 44vh, 360px);
-    max-height: 46vh;
+    height: clamp(230px, 36vh, 320px);
+    max-height: 40vh;
   }
 
   .vision-ring-card {
-    width: min(66%, 18.5rem);
-    margin-left: calc(min(66%, 18.5rem) / -2);
-    margin-top: calc(min(66%, 18.5rem) * 10 / 16 / -2);
+    width: min(62%, 16rem);
+    margin-left: calc(min(62%, 16rem) / -2);
+    margin-top: calc(min(62%, 16rem) * 10 / 16 / -2);
   }
 
   .vision-ring-card-face {
@@ -1622,7 +1622,8 @@ body.custom-cursor-active canvas {
   }
 
   .vision-orbit-voice {
-    margin-top: 0.35rem;
+    margin-top: 0.25rem;
+    padding: 0.5rem 0.85rem;
   }
 }
 
@@ -2939,10 +2940,11 @@ html {
   }
 
   .cx-fp-panel {
-    height: auto;
-    min-height: auto;
-    padding: clamp(2.5rem, 7vh, 4rem) 1.25rem;
-    justify-content: flex-start;
+    height: 100%;
+    min-height: 100%;
+    padding: max(4.25rem, env(safe-area-inset-top) + 3.25rem) 1.25rem
+      max(1.5rem, env(safe-area-inset-bottom));
+    justify-content: center;
   }
 
   /* Mobile chapters are paged one scene per swipe. Showing an accumulated
@@ -3001,36 +3003,38 @@ html {
 }
 
 @media (max-width: 639px) {
-  /* Mobile pages through the landing story one chapter at a time. A
-     minimum—not fixed—height keeps long content such as FAQ readable. */
+  /* Mobile pages through the landing story one chapter at a time. */
   .cx-fp-section[data-fp-mobile-lock] {
-    min-height: 100dvh;
+    min-height: 100svh;
+    height: 100svh;
+    overflow: hidden;
   }
 
-  /* Mission is intentionally compact enough to occupy exactly one mobile
-     chapter, so advancing the page never leaves a partially visible card. */
   #mission.cx-fp-section {
-    height: 100dvh;
-    min-height: 100dvh;
+    height: 100svh;
+    min-height: 100svh;
     overflow: hidden;
   }
 
   #faq.cx-fp-section {
-    height: 100dvh;
-    min-height: 100dvh;
+    height: 100svh;
+    min-height: 100svh;
     overflow: hidden;
   }
 
   #faq .faq-section {
-    justify-content: flex-start;
-    padding-top: max(7.5rem, 15dvh);
-    margin-top: clamp(3rem, 8dvh, 4rem);
+    justify-content: center;
+    padding-top: max(4.25rem, env(safe-area-inset-top) + 3.25rem);
+    padding-bottom: max(1.5rem, env(safe-area-inset-bottom));
+    margin-top: 0;
   }
 
   /* The footer closes the mobile journey as a compact, naturally scrolling
      strip instead of an otherwise empty full-screen chapter. */
   #footer.cx-fp-section {
     min-height: auto;
+    height: auto;
+    overflow: visible;
   }
 
   #footer .site-footer {
@@ -3045,8 +3049,8 @@ html {
 
   #mission .cx-fp-panel {
     height: 100%;
-    padding-top: max(4.25rem, env(safe-area-inset-top));
-    padding-bottom: max(1rem, env(safe-area-inset-bottom));
+    padding-top: max(4rem, env(safe-area-inset-top) + 3rem);
+    padding-bottom: max(1.25rem, env(safe-area-inset-bottom));
     justify-content: center;
   }
 

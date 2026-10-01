@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useRef } from "react";
 import Image from "next/image";
+import { GameHeaderBar, FullscreenToggleBtn, RotateToggleBtn, useGameFullscreen } from "@/features/public-play/components/game-fullscreen-wrapper";
 
 interface QuestItem {
   id: string;
@@ -37,7 +38,7 @@ const ITEMS: QuestItem[] = [
     description: "Sách mở ra kho tàng tri thức thế giới.",
     tip: "AIVA nhận diện chữ viết (OCR) & giải thích nội dung bài học bằng giọng nói theo độ tuổi.",
     x: 18,
-    y: 28,
+    y: 20,
     question: "Vật thể nào giúp AIVA đọc chữ và giải thích bài học cho bé?",
     options: ["Quyển Sách", "Gấu Bông", "Đồng Hồ"],
     correctOption: "Quyển Sách",
@@ -56,7 +57,7 @@ const ITEMS: QuestItem[] = [
     description: "Dùng để xem giờ và quản lý thời gian.",
     tip: "AIVA nhắc nhở bé nghỉ ngơi bảo vệ mắt & điều chỉnh tư thế ngồi học đúng chuẩn.",
     x: 50,
-    y: 20,
+    y: 15,
     question: "Đồ vật nào giúp AIVA canh giờ nhắc bé nghỉ ngơi bảo vệ mắt?",
     options: ["Chậu Cây", "Đồng Hồ", "Quả Táo"],
     correctOption: "Đồng Hồ",
@@ -75,7 +76,7 @@ const ITEMS: QuestItem[] = [
     description: "Trái cây giàu Vitamin C tốt cho sức khỏe.",
     tip: "AIVA nhận diện đồ ăn & nhắc nhở bé chế độ dinh dưỡng lành mạnh hàng ngày.",
     x: 82,
-    y: 28,
+    y: 20,
     question: "Món ăn nào chứa nhiều Vitamin C giúp bé có thêm năng lượng?",
     options: ["Quả Táo", "Gấu Bông", "Quyển Sách"],
     correctOption: "Quả Táo",
@@ -93,8 +94,8 @@ const ITEMS: QuestItem[] = [
     confidence: 97.6,
     description: "Người bạn đồ chơi mềm mại của tuổi thơ.",
     tip: "AIVA nhận diện đồ chơi & gợi ý câu đố tư duy khoa học vui nhộn.",
-    x: 28,
-    y: 65,
+    x: 26,
+    y: 48,
     question: "Người bạn nhỏ nào giúp AIVA đặt câu đố tư duy sáng tạo?",
     options: ["Gấu Bông", "Chậu Cây", "Đồng Hồ"],
     correctOption: "Gấu Bông",
@@ -112,8 +113,8 @@ const ITEMS: QuestItem[] = [
     confidence: 98.2,
     description: "Cây xanh quang hợp tạo Oxy cho môi trường.",
     tip: "AIVA thắp lên trí tò mò sinh học, khuyến khích bé khám phá thiên nhiên.",
-    x: 75,
-    y: 65,
+    x: 74,
+    y: 48,
     question: "Cây xanh tạo ra chất khí quan trọng nào cho con người hô hấp?",
     options: ["Oxy", "Nước", "Ánh sáng"],
     correctOption: "Oxy",
@@ -122,6 +123,8 @@ const ITEMS: QuestItem[] = [
 ];
 
 export function AivaVisionQuestGame() {
+  const fullscreenCtx = useGameFullscreen();
+  const isFullscreen = fullscreenCtx?.isFullscreen;
   const [mode, setMode] = useState<"scan" | "flashcard" | "quiz" | "certificate">("scan");
   const [discoveredIds, setDiscoveredIds] = useState<string[]>([]);
   const [activeItem, setActiveItem] = useState<QuestItem | null>(null);
@@ -290,224 +293,212 @@ export function AivaVisionQuestGame() {
   const allScanned = discoveredIds.length === ITEMS.length;
 
   return (
-    <div className="w-full max-w-4xl mx-auto space-y-5">
-      {/* Game Mode Bar & Global Stats */}
-      <div
-        className="flex flex-wrap items-center justify-between gap-3 p-4 rounded-3xl border backdrop-blur"
-        style={{
-          backgroundColor: "var(--game-panel)",
-          borderColor: "var(--game-border)",
-        }}
-      >
-        <div className="flex items-center gap-3">
-          <div
-            className="w-11 h-11 rounded-2xl border flex items-center justify-center shrink-0 shadow-lg"
-            style={{
-              backgroundColor: "var(--ocean-alpha)",
-              borderColor: "var(--ocean)",
-              color: "var(--ocean)",
-            }}
-          >
-            <span className="material-symbols-outlined text-2xl">
-              {mode === "scan"
-                ? "center_focus_strong"
-                : mode === "flashcard"
-                ? "style"
-                : mode === "quiz"
-                ? "psychology"
-                : "workspace_premium"}
-            </span>
-          </div>
-          <div>
-            <div className="text-[11px] font-bold uppercase tracking-wider text-amber-400 flex items-center gap-1.5">
-              <span>MÔ PHỎNG ỐNG KÍNH AIVA</span>
-              {streak > 1 && (
-                <span className="px-2 py-0.2 rounded-full text-[10px] font-extrabold bg-amber-400 text-black animate-pulse">
-                  🔥 Combo x{streak}
-                </span>
-              )}
+    <div className="w-full max-w-4xl mx-auto space-y-3 sm:space-y-4">
+      {/* Unified Game Header Bar */}
+      <GameHeaderBar
+        title="Ống Kính AIVA"
+        subtitle={
+          mode === "scan"
+            ? "Mô phỏng nhận diện vật thể AR"
+            : mode === "flashcard"
+            ? "Thẻ từ vựng song ngữ"
+            : mode === "quiz"
+            ? `Câu hỏi ${currentQuizIdx + 1}/${ITEMS.length}`
+            : "Chứng nhận thành tích"
+        }
+        icon={
+          mode === "scan"
+            ? "center_focus_strong"
+            : mode === "flashcard"
+            ? "style"
+            : mode === "quiz"
+            ? "psychology"
+            : "workspace_premium"
+        }
+        stats={
+          mode === "scan" ? (
+            <div className="flex items-center gap-1.5 px-3 py-1 rounded-full border border-slate-200 dark:border-slate-700 bg-white/90 dark:bg-slate-900/90 text-xs font-semibold text-slate-700 dark:text-slate-200 shadow-sm whitespace-nowrap">
+              <span>Đã quét:</span>
+              <span className="font-mono text-amber-700 dark:text-amber-400 font-bold">{discoveredIds.length}/{ITEMS.length}</span>
+              {streak > 1 && <span className="text-[10px] font-bold text-amber-500">🔥x{streak}</span>}
             </div>
-            <div className="text-sm font-bold text-[var(--game-ink)]">
-              {mode === "scan" ? (
-                <>Đã nhận diện: <span className="text-amber-700 dark:text-amber-300 font-mono">{discoveredIds.length}/{ITEMS.length}</span> vật thể</>
-              ) : mode === "flashcard" ? (
-                <>Thẻ từ vựng song ngữ AIVA</>
-              ) : mode === "quiz" ? (
-                <>Câu {currentQuizIdx + 1}/{ITEMS.length} • Điểm XP: <span className="text-amber-700 dark:text-amber-300 font-mono">{score}</span></>
-              ) : (
-                <>Tổng thành tích: <span className="text-amber-700 dark:text-amber-300 font-mono">{score} XP</span> ⭐⭐⭐</>
-              )}
+          ) : mode === "quiz" ? (
+            <div className="flex items-center gap-1.5 px-3 py-1 rounded-full border border-slate-200 dark:border-slate-700 bg-white/90 dark:bg-slate-900/90 text-xs font-semibold text-slate-700 dark:text-slate-200 shadow-sm whitespace-nowrap">
+              <span>Điểm XP:</span>
+              <span className="font-mono text-amber-700 dark:text-amber-400 font-bold">{score}</span>
             </div>
-          </div>
-        </div>
-
-        {/* Mode Switch Navigation Buttons */}
-        <div className="flex flex-wrap items-center gap-2">
-          {allScanned && mode !== "certificate" && (
+          ) : mode === "certificate" ? (
+            <div className="flex items-center gap-1.5 px-3 py-1 rounded-full border border-slate-200 dark:border-slate-700 bg-white/90 dark:bg-slate-900/90 text-xs font-semibold text-slate-700 dark:text-slate-200 shadow-sm whitespace-nowrap">
+              <span>Tổng điểm:</span>
+              <span className="font-mono text-amber-700 dark:text-amber-400 font-bold">{score} XP</span>
+            </div>
+          ) : null
+        }
+        actions={
+          allScanned && mode !== "certificate" ? (
             <>
               <button
+                type="button"
                 onClick={() => setMode(mode === "flashcard" ? "scan" : "flashcard")}
-                className="min-h-11 px-3.5 py-1.5 rounded-full border text-xs font-bold text-[var(--game-ink)] transition-colors active:scale-[0.98] hover:opacity-75"
-                style={{ borderColor: "var(--game-border)", backgroundColor: "var(--game-surface)" }}
+                className="inline-flex h-8 sm:h-9 items-center gap-1 px-2.5 sm:px-3 rounded-full border border-slate-200 dark:border-slate-700 bg-white/90 dark:bg-slate-900/90 text-xs font-semibold text-slate-700 dark:text-slate-200 shadow-sm transition hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-slate-950 dark:hover:text-white active:scale-95 whitespace-nowrap shrink-0"
+                title={mode === "flashcard" ? "Quay lại xem phòng" : "Xem thẻ từ vựng song ngữ"}
               >
-                {mode === "flashcard" ? "← Xem Phòng" : "📖 Thẻ Song Ngữ"}
+                <span className="material-symbols-outlined text-sm sm:text-base">
+                  {mode === "flashcard" ? "visibility" : "menu_book"}
+                </span>
+                <span className="hidden lg:inline">{mode === "flashcard" ? "Xem Phòng" : "Thẻ Song Ngữ"}</span>
               </button>
 
               <button
+                type="button"
                 onClick={startQuiz}
-                className="min-h-11 px-4 py-1.5 rounded-full font-bold text-xs text-black shadow-lg transition-transform active:scale-[0.98] hover:scale-105"
+                className="inline-flex h-8 sm:h-9 items-center gap-1 px-2.5 sm:px-3.5 rounded-full font-bold text-xs text-black shadow-md transition-transform active:scale-95 hover:scale-105 whitespace-nowrap shrink-0"
                 style={{ background: "var(--gradient-ocean)" }}
+                title="Bắt đầu trả lời câu hỏi trắc nghiệm"
               >
-                Thử Thách Quiz ➔
+                <span className="material-symbols-outlined text-sm sm:text-base">psychology</span>
+                <span className="hidden sm:inline">Quiz</span>
+                <span className="text-xs">➔</span>
               </button>
             </>
-          )}
-          <button
-            onClick={handleReset}
-            className="min-h-11 px-3.5 py-1.5 rounded-full border text-xs font-semibold text-[var(--game-muted)] transition-colors active:scale-[0.98] hover:text-[var(--game-ink)]"
-            style={{ borderColor: "var(--border-subtle)", backgroundColor: "var(--bg-subtle)" }}
-          >
-            Chơi lại
-          </button>
-        </div>
-      </div>
+          ) : null
+        }
+        onReset={handleReset}
+      />
 
       {/* MODE 1: INTERACTIVE ROOM SCANNER HUD */}
       {mode === "scan" && (
         <div
-          className="relative h-[430px] w-full rounded-3xl border overflow-hidden p-3 shadow-2xl flex flex-col justify-between sm:h-[500px] sm:p-4"
+          className={`relative w-full rounded-2xl sm:rounded-3xl border overflow-hidden shadow-2xl flex flex-col justify-between transition-all ${
+            isFullscreen
+              ? "h-[calc(100svh-6.5rem)] sm:h-[calc(100vh-7rem)] max-h-[82vh]"
+              : "min-h-[400px] h-[calc(100svh-13rem)] sm:h-[480px] max-h-[580px]"
+          }`}
           style={{
             backgroundColor: "var(--game-canvas)",
             borderColor: "var(--game-border)",
           }}
         >
-          {/* Ambient Lighting FX */}
-          <div className="absolute inset-0 bg-gradient-to-b from-white/70 via-slate-100/25 to-white/70 pointer-events-none dark:from-slate-950/90 dark:via-slate-900/50 dark:to-slate-950" />
+          {/* Ambient Lighting & Scan Radar FX */}
+          <div className="absolute inset-0 bg-gradient-to-b from-white/50 via-transparent to-white/70 pointer-events-none dark:from-slate-950/70 dark:via-transparent dark:to-slate-950/90" />
           <div
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full blur-[120px] pointer-events-none opacity-20"
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 sm:w-96 h-80 sm:h-96 rounded-full blur-[100px] pointer-events-none opacity-20"
             style={{ background: "var(--ocean)" }}
           />
 
-          {/* Guide Banner */}
-          <div className="relative z-10 text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold bg-white/90 text-slate-800 border border-slate-200 backdrop-blur shadow-lg dark:bg-black/80 dark:text-slate-200 dark:border-slate-700">
-              <span className="w-2 h-2 rounded-full bg-amber-400" />
-              Chạm vào 5 điểm sáng trong phòng để mắt kính AIVA nhận diện vật thể & đọc tiếng Anh!
+          {/* 1. Dedicated Top Guide Banner (Never overlaps canvas items!) */}
+          <div className="relative z-10 px-3 py-2 text-center border-b border-slate-200/70 dark:border-slate-800/70 bg-white/75 dark:bg-slate-950/70 backdrop-blur-sm shrink-0">
+            <div className="inline-flex items-center gap-2 text-[11px] sm:text-xs font-semibold text-slate-800 dark:text-slate-200">
+              <span className="w-2 h-2 rounded-full bg-amber-400 shrink-0 animate-pulse" />
+              <span>Chạm vào 5 điểm sáng trong phòng để mắt kính AIVA nhận diện vật thể & đọc tiếng Anh!</span>
             </div>
           </div>
 
-          {/* Room Canvas Grid - Absolute Pins */}
-          <div className="absolute inset-0 z-20 pointer-events-none">
-            {ITEMS.map((item) => {
-              const discovered = discoveredIds.includes(item.id);
-              const isActive = activeItem?.id === item.id;
-              return (
-                <div
-                  key={item.id}
-                  style={{ top: `${item.y}%`, left: `${item.x}%` }}
-                  className="absolute -translate-x-1/2 -translate-y-1/2 pointer-events-auto"
-                >
-                  <button
-                    onClick={() => handleScanItem(item)}
-                    className="group relative flex flex-col items-center focus:outline-none"
+          {/* 2. Room Canvas Viewport (Pins live strictly inside here with plenty of clearance) */}
+          <div className="relative flex-1 w-full min-h-[200px] sm:min-h-[260px] overflow-hidden p-2">
+            <div className="absolute inset-0 z-20 pointer-events-none">
+              {ITEMS.map((item) => {
+                const discovered = discoveredIds.includes(item.id);
+                const isActive = activeItem?.id === item.id;
+                return (
+                  <div
+                    key={item.id}
+                    style={{ top: `${item.y}%`, left: `${item.x}%` }}
+                    className="absolute -translate-x-1/2 -translate-y-1/2 pointer-events-auto transition-transform"
                   >
-                    {/* Glowing Viewfinder Node */}
-                    <div
-                      className={`relative h-14 w-14 rounded-2xl border flex items-center justify-center shadow-2xl transition-all duration-300 sm:h-16 sm:w-16 ${
-                        isActive ? "scale-115 ring-4 ring-amber-400 bg-amber-400 text-black" : "hover:scale-110"
-                      }`}
-                      style={{
-                        backgroundColor: discovered ? "rgba(234, 179, 8, 0.95)" : "var(--game-panel)",
-                        borderColor: discovered ? "#eab308" : "var(--game-border)",
-                        color: discovered ? "#000000" : "var(--game-ink)",
-                      }}
+                    <button
+                      onClick={() => handleScanItem(item)}
+                      className="group relative flex flex-col items-center focus:outline-none"
                     >
-                      <span className="material-symbols-outlined text-2xl md:text-3xl">{item.icon}</span>
+                      {/* Glowing Viewfinder Node */}
+                      <div
+                        className={`relative h-10 w-10 sm:h-12 sm:w-12 rounded-xl sm:rounded-2xl border flex items-center justify-center shadow-lg transition-all duration-300 ${
+                          isActive
+                            ? "scale-110 ring-4 ring-amber-400 bg-amber-400 text-black shadow-amber-400/50"
+                            : discovered
+                            ? "bg-amber-400 text-black border-amber-400 hover:scale-105"
+                            : "bg-white/95 dark:bg-slate-900/95 border-slate-200 dark:border-slate-700 text-slate-800 dark:text-white hover:scale-105 hover:border-amber-400/80"
+                        }`}
+                      >
+                        <span className="material-symbols-outlined text-lg sm:text-2xl">{item.icon}</span>
 
-                      {/* AR Bounding Box Lines */}
-                      {isActive && (
-                        <div className="absolute -inset-2 border-2 border-dashed border-amber-300 rounded-2xl pointer-events-none opacity-80" />
-                      )}
+                        {/* AR Bounding Box Lines */}
+                        {isActive && (
+                          <div className="absolute -inset-2 border-2 border-dashed border-amber-300 rounded-2xl pointer-events-none opacity-80" />
+                        )}
 
-                      {!discovered && (
-                        <span className="absolute -inset-1.5 rounded-2xl border border-amber-400/60 pointer-events-none opacity-40" />
-                      )}
-                    </div>
+                        {!discovered && (
+                          <span className="absolute -inset-1 rounded-2xl border border-amber-400/50 pointer-events-none animate-ping opacity-30" />
+                        )}
+                      </div>
 
-                    {/* Category Pin Badge */}
-                    <div
-                      className={`mt-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-bold whitespace-nowrap border transition-all shadow-md ${
-                        discovered
-                          ? "bg-amber-400/20 text-amber-700 border-amber-400/40 dark:text-amber-300"
-                          : "bg-white/90 text-slate-700 border-slate-200 dark:bg-black/85 dark:text-slate-300 dark:border-slate-700"
-                      }`}
-                    >
-                      {item.nameVi}
-                    </div>
-                  </button>
-                </div>
-              );
-            })}
+                      {/* Category Pin Badge */}
+                      <div
+                        className={`mt-1 px-2 sm:px-2.5 py-0.5 rounded-full text-[10px] sm:text-xs font-bold whitespace-nowrap border transition-all shadow-md ${
+                          discovered
+                            ? "bg-amber-400/20 text-amber-700 border-amber-400/40 dark:text-amber-300"
+                            : "bg-white/90 text-slate-700 border-slate-200 dark:bg-black/85 dark:text-slate-300 dark:border-slate-700"
+                        }`}
+                      >
+                        {item.nameVi}
+                      </div>
+                    </button>
+                  </div>
+                );
+              })}
+            </div>
           </div>
 
-          {/* Active Item AR HUD Card */}
-          <div className="relative z-30 mt-auto">
-            {activeItem ? (
-              <div
-                className="p-4 rounded-2xl border backdrop-blur-xl animate-fadeIn shadow-2xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4"
-                style={{
-                  backgroundColor: "var(--game-panel)",
-                  borderColor: "var(--ocean)",
-                }}
-              >
-                <div className="flex items-start sm:items-center gap-3.5">
+          {/* 3. Bottom AR HUD Card (Only shown when an item is scanned/selected) */}
+          {activeItem && (
+            <div className="relative z-30 p-2.5 sm:p-3.5 border-t border-slate-200/80 dark:border-slate-800/80 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md shrink-0">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2.5 sm:gap-4 animate-fadeIn">
+                <div className="flex items-start sm:items-center gap-2.5 sm:gap-3.5 min-w-0">
                   <div
-                    className="w-14 h-14 rounded-2xl flex items-center justify-center shrink-0 border shadow-lg"
+                    className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl flex items-center justify-center shrink-0 border shadow-md"
                     style={{
                       backgroundColor: "var(--ocean-alpha)",
                       borderColor: "var(--ocean)",
                       color: "var(--ocean)",
                     }}
                   >
-                    <span className="material-symbols-outlined text-3xl">{activeItem.icon}</span>
+                    <span className="material-symbols-outlined text-xl sm:text-2xl">{activeItem.icon}</span>
                   </div>
-                  <div>
-                    <div className="flex flex-wrap items-center gap-2 mb-1">
-                      <span className="text-base font-bold text-[var(--game-ink)]">{activeItem.nameVi}</span>
-                      <span className="text-xs px-2.5 py-0.5 rounded-full font-mono font-bold bg-amber-400/20 text-amber-700 border border-amber-400/40 dark:text-amber-300">
+                  <div className="min-w-0">
+                    <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 mb-0.5">
+                      <span className="text-xs sm:text-sm font-bold text-[var(--game-ink)]">{activeItem.nameVi}</span>
+                      <span className="text-[10px] sm:text-xs px-2 py-0.5 rounded-full font-mono font-bold bg-amber-400/20 text-amber-700 border border-amber-400/40 dark:text-amber-300">
                         {activeItem.nameEn} {activeItem.phonetic}
                       </span>
                       <button
+                        type="button"
                         onClick={() => handleSpeakText(activeItem.nameEn)}
-                        className="inline-flex min-h-11 items-center gap-1 px-2 text-[11px] rounded-full bg-amber-400/10 text-amber-700 border border-amber-400/30 hover:bg-amber-400/20 transition dark:text-amber-300"
+                        className="inline-flex min-h-7 items-center gap-1 px-2 text-[10px] sm:text-[11px] rounded-full bg-amber-400/10 text-amber-700 border border-amber-400/30 hover:bg-amber-400/20 transition dark:text-amber-300"
                       >
                         <span className="material-symbols-outlined text-xs">volume_up</span> Nghe phát âm
                       </button>
                     </div>
 
-                    <p className="text-xs text-[var(--game-muted)]">{activeItem.description}</p>
-                    <p className="text-[11px] text-amber-700/90 mt-1 flex items-center gap-1 font-medium dark:text-amber-300/90">
-                      <span className="material-symbols-outlined text-xs">auto_awesome</span> Mẹo AIVA: {activeItem.tip}
+                    <p className="text-[11px] sm:text-xs text-[var(--game-muted)] truncate">{activeItem.description}</p>
+                    <p className="text-[10px] sm:text-[11px] text-amber-700/90 mt-0.5 flex items-center gap-1 font-medium dark:text-amber-300/90 truncate">
+                      <span className="material-symbols-outlined text-xs shrink-0">auto_awesome</span> Mẹo AIVA: {activeItem.tip}
                     </p>
                   </div>
                 </div>
 
                 {allScanned && (
                   <button
+                    type="button"
                     onClick={startQuiz}
-                    className="min-h-11 w-full sm:w-auto px-5 py-2.5 rounded-xl font-bold text-xs text-black shrink-0 shadow-lg transition-transform active:scale-[0.98] hover:scale-105"
+                    className="min-h-9 sm:min-h-10 w-full sm:w-auto px-4 sm:px-5 py-1.5 sm:py-2 rounded-xl font-bold text-xs text-black shrink-0 shadow-lg transition-transform active:scale-[0.98] hover:scale-105 whitespace-nowrap"
                     style={{ background: "var(--gradient-ocean)" }}
                   >
                     Vào Quiz Tích Điểm ➔
                   </button>
                 )}
               </div>
-            ) : (
-              <div className="p-3 rounded-xl bg-white/85 border border-slate-200 text-center text-xs text-slate-600 dark:bg-black/60 dark:border-slate-800 dark:text-slate-400">
-                Chạm vào các biểu tượng trong phòng để AIVA quét vật thể & hướng dẫn phát âm song ngữ.
-              </div>
-            )}
-          </div>
+            </div>
+          )}
         </div>
       )}
 
