@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
 import { useI18n } from "@/lib/i18n/provider";
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeader } from "@/components/ui/section-header";
@@ -14,6 +15,33 @@ export const HOME_DEMO_VIDEO_SRC: string | null = "/videos/aiva-demo.mp4";
 export function VideoDemoSection() {
   const { t } = useI18n();
   const hasVideo = Boolean(HOME_DEMO_VIDEO_SRC);
+  const videoFrameRef = useRef<HTMLDivElement>(null);
+  const [isFullscreen, setIsFullscreen] = useState(false);
+
+  useEffect(() => {
+    const syncFullscreen = () => {
+      const active = document.fullscreenElement === videoFrameRef.current;
+      setIsFullscreen(active);
+      if (!active) {
+        const orientation = screen.orientation as ScreenOrientation & { unlock?: () => void };
+        orientation.unlock?.();
+      }
+    };
+    document.addEventListener("fullscreenchange", syncFullscreen);
+    return () => document.removeEventListener("fullscreenchange", syncFullscreen);
+  }, []);
+
+  const toggleFullscreen = async () => {
+    if (!videoFrameRef.current) return;
+    if (document.fullscreenElement === videoFrameRef.current) {
+      await document.exitFullscreen();
+      return;
+    }
+
+    await videoFrameRef.current.requestFullscreen();
+    const orientation = screen.orientation as ScreenOrientation & { lock?: (orientation: "landscape") => Promise<void> };
+    if (orientation.lock) await orientation.lock("landscape").catch(() => undefined);
+  };
 
   return (
     <section className="py-8 sm:py-12 md:py-16 px-4 sm:px-6 relative overflow-hidden h-full w-full flex flex-col justify-center">
@@ -41,7 +69,7 @@ export function VideoDemoSection() {
               boxShadow: "var(--shadow-glow)"
             }}
           >
-            <div className="relative aspect-video bg-[var(--bg-subtle)]">
+            <div ref={videoFrameRef} className="relative aspect-video bg-[var(--bg-subtle)]">
               {hasVideo ? (
                 <video
                   className="absolute inset-0 h-full w-full object-cover"
@@ -79,6 +107,21 @@ export function VideoDemoSection() {
                   </div>
                 </div>
               )}
+              <button
+                type="button"
+                onClick={toggleFullscreen}
+                className="mobile-fullscreen-control absolute right-3 top-3 z-10 inline-flex h-10 w-10 items-center justify-center rounded-full border lg:hidden"
+                style={{
+                  backgroundColor: "var(--modal-bg)",
+                  borderColor: "var(--glass-border)",
+                  color: "var(--text-on-glass)"
+                }}
+                aria-label={isFullscreen ? "Exit full screen" : "View video in full screen"}
+              >
+                <span className="material-symbols-outlined text-xl" aria-hidden>
+                  {isFullscreen ? "fullscreen_exit" : "fullscreen"}
+                </span>
+              </button>
             </div>
           </div>
         </Reveal>

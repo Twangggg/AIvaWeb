@@ -113,11 +113,11 @@ export function ParentAppSection() {
               </p>
 
               {/* Direct App Download Action Bar */}
-              <div className="mt-4 sm:mt-6 flex flex-wrap items-center gap-2.5 sm:gap-3">
+              <div className="mt-4 sm:mt-6 flex flex-col items-stretch gap-2.5 sm:flex-row sm:flex-wrap sm:items-center sm:gap-3">
                 <button
                   onClick={handleTriggerDirectDownload}
                   disabled={directDownloading}
-                  className="px-5 sm:px-6 py-2.5 sm:py-3 rounded-2xl font-bold text-xs sm:text-sm shadow-lg transition-all flex items-center gap-2 transform hover:-translate-y-0.5 active:translate-y-0"
+                  className="w-full justify-center px-5 py-3 rounded-2xl font-bold text-xs shadow-lg transition-all flex items-center gap-2 transform hover:-translate-y-0.5 active:translate-y-0 sm:w-auto sm:px-6 sm:text-sm"
                   style={{
                     background: "var(--gradient-ocean)",
                     color: "var(--text-on-accent)",
@@ -132,7 +132,7 @@ export function ParentAppSection() {
 
                 <button
                   onClick={() => setDownloadModalOpen(true)}
-                  className="px-4 sm:px-5 py-2.5 sm:py-3 rounded-2xl font-semibold text-xs sm:text-sm transition-all flex items-center gap-2 border"
+                  className="w-full justify-center px-4 py-3 rounded-2xl font-semibold text-xs transition-all flex items-center gap-2 border sm:w-auto sm:px-5 sm:text-sm"
                   style={{
                     backgroundColor: "var(--glass-bg)",
                     borderColor: "var(--glass-border)",
@@ -147,7 +147,7 @@ export function ParentAppSection() {
           </Reveal>
 
           <div className="mt-6 sm:mt-8 grid lg:grid-cols-[minmax(0,1fr)_minmax(260px,320px)] gap-6 lg:gap-12 items-center">
-            <Reveal direction="left" delay={100} className="flex flex-col gap-2.5 sm:gap-3.5">
+            <Reveal direction="left" delay={100} className="order-2 hidden flex-col gap-2.5 sm:flex sm:gap-3.5 lg:order-none">
               {highlights.map((item, i) => {
                 const tied = i <= 1 ? 0 : i === 2 ? 1 : 2;
                 const lit = tied === step;
@@ -189,11 +189,11 @@ export function ParentAppSection() {
             </Reveal>
 
             {/* Interactive Visual Phone Demo */}
-            <Reveal direction="right" delay={160} className="flex flex-col items-center gap-5">
-              <div className="app-phone-frame motion-float relative mx-auto w-[min(100%,280px)] group">
-                <div className="app-phone-bezel relative rounded-[2.1rem] p-[10px] shadow-2xl" style={{ background: "#111827" }}>
+            <Reveal direction="right" delay={160} className="order-1 flex flex-col items-center gap-3 sm:gap-5 lg:order-none">
+              <div className="app-phone-frame motion-float relative mx-auto w-[min(100%,168px)] sm:w-[min(100%,280px)] group">
+                <div className="app-phone-bezel relative rounded-[1.7rem] p-[7px] sm:rounded-[2.1rem] sm:p-[10px] shadow-2xl" style={{ background: "#111827" }}>
                   <div
-                    className="relative overflow-hidden rounded-[1.55rem] bg-[#0c1222] w-full"
+                    className="relative overflow-hidden rounded-[1.25rem] sm:rounded-[1.55rem] bg-[#0c1222] w-full"
                     style={{ aspectRatio: "9 / 19.2" }}
                   >
                     <AnimatePresence mode="popLayout" custom={dir} initial={false}>
@@ -220,7 +220,7 @@ export function ParentAppSection() {
                     {/* Interactive Click Overlay Badge */}
                     <button
                       onClick={() => setDownloadModalOpen(true)}
-                      className="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 px-4 py-2 rounded-full text-xs font-bold shadow-lg backdrop-blur flex items-center gap-1.5 opacity-90 hover:opacity-100 transition-all hover:scale-105 border"
+                      className="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 px-4 py-2 rounded-full text-xs font-bold shadow-lg backdrop-blur hidden sm:flex items-center gap-1.5 opacity-90 hover:opacity-100 transition-all hover:scale-105 border"
                       style={{
                         backgroundColor: "var(--modal-bg)",
                         borderColor: "var(--border-subtle)",
@@ -241,7 +241,7 @@ export function ParentAppSection() {
 
               {/* Tab Switcher */}
               <div
-                className="flex w-full max-w-[280px] gap-1 rounded-2xl p-1 border"
+                className="flex w-full max-w-[168px] sm:max-w-[280px] gap-1 rounded-xl sm:rounded-2xl p-1 border"
                 style={{
                   backgroundColor: "var(--glass-bg)",
                   borderColor: "var(--glass-border)"
@@ -258,13 +258,13 @@ export function ParentAppSection() {
                       role="tab"
                       aria-selected={selected}
                       onClick={() => setScene(i)}
-                      className="flex flex-1 flex-col items-center gap-0.5 rounded-xl px-2 py-2.5 text-[0.65rem] font-medium transition-all duration-300"
+                      className="flex flex-1 flex-col items-center gap-0.5 rounded-lg sm:rounded-xl px-1 py-1.5 sm:px-2 sm:py-2.5 text-[0.5rem] sm:text-[0.65rem] font-medium transition-all duration-300"
                       style={{
                         background: selected ? "var(--gradient-ocean)" : "transparent",
                         color: selected ? "var(--text-on-accent)" : "var(--text-dim)"
                       }}
                     >
-                      <span className="material-symbols-outlined text-base">{s.icon}</span>
+                      <span className="material-symbols-outlined text-sm sm:text-base">{s.icon}</span>
                       {labels[s.id]}
                     </button>
                   );

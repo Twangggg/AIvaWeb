@@ -58,23 +58,19 @@ function Model({ scrollY }: { scrollY: MutableRefObject<number> }) {
     group.current.rotation.y = s * Math.PI * 2;
     group.current.rotation.x = Math.sin(s * Math.PI * 2) * 0.22;
 
-    // On compact tablet/mobile layouts, the copy alternates above and below
-    // the model. Shift the glasses to the opposite half so neither obscures
-    // the information card.
+    // Tablets alternate the copy above and below the model. On phones the
+    // glasses stay visually anchored: scenes rotate in place instead of
+    // jumping vertically as the information card changes.
     const shift = (s - 0.5) * 2; // -1 to +1
-    const baseShift = isMobile ? 0.055 : isTablet ? 0.04 : 0;
-    const cardClearance = isMobile
-      ? (s < 0.5 ? -0.72 : 0.52)
-      : isTablet
-        ? (s < 0.5 ? -0.9 : 0.66)
-        : 0;
-    const posY = cardClearance + shift * baseShift;
+    const baseShift = isTablet ? 0.04 : 0;
+    const cardClearance = isTablet ? (s < 0.5 ? -0.9 : 0.66) : 0;
+    const posY = isMobile ? 0 : cardClearance + shift * baseShift;
     group.current.position.x = 0;
-    group.current.position.y = posY + Math.sin(s * Math.PI * 3) * 0.02;
+    group.current.position.y = isMobile ? posY : posY + Math.sin(s * Math.PI * 3) * 0.02;
     group.current.position.z = -s * 0.4;
 
     // Harmonious responsive scales
-    const baseScale = isMobile ? 0.52 : isTablet ? 0.6 : 1.35;
+    const baseScale = isMobile ? 0.72 : isTablet ? 0.6 : 1.35;
     const scrollScale = 1 + s * 0.06;
     group.current.scale.setScalar(baseScale * scrollScale);
   });

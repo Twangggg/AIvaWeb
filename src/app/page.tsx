@@ -42,7 +42,7 @@ export default function HomePage() {
           <Nav onPreorder={() => setPreorderOpen(true)} />
 
           <main className="cx-main min-h-screen w-full max-w-full overflow-x-hidden">
-            <div id="hero" data-fp-section className="cx-fp-section">
+            <div id="hero" data-fp-section data-fp-mobile-lock className="cx-fp-section">
               <CinematicHero onPreorder={() => setPreorderOpen(true)} />
             </div>
 
@@ -52,7 +52,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div id="experience" data-fp-section data-fp-scenes="4" data-fp-scene="0" className="cx-fp-section">
+            <div id="experience" data-fp-section data-fp-mobile-lock data-fp-scenes="4" data-fp-scene="0" className="cx-fp-section">
               <GlassesExperience />
             </div>
 
@@ -68,37 +68,43 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div id="compare" data-fp-section className="cx-fp-section relative">
+            <div id="compare" data-fp-section data-fp-mobile-lock className="cx-fp-section relative">
               <CompareSection />
             </div>
 
-            <div id="companion" data-fp-section data-fp-scenes="3" data-fp-scene="0" className="cx-fp-section relative min-h-0 lg:min-h-[120vh]">
+            <div id="companion" data-fp-section data-fp-mobile-lock data-fp-scenes="3" data-fp-scene="0" className="cx-fp-section relative min-h-0 lg:min-h-[120vh]">
               <div className="relative lg:sticky lg:top-0 h-auto lg:h-[100dvh] w-full flex items-center justify-center overflow-hidden">
                 <ParentAppSection />
               </div>
             </div>
 
-            <div id="color" data-fp-section className="cx-fp-section">
+            <div id="color" data-fp-section data-fp-mobile-lock className="cx-fp-section">
               <ColorPickerSection />
             </div>
 
-            <div id="video" data-fp-section className="cx-fp-section">
+            <div id="video" data-fp-section data-fp-mobile-lock className="cx-fp-section">
               <VideoDemoSection />
             </div>
 
-            <div id="mission" data-fp-section className="cx-fp-section">
+            <div id="mission" data-fp-section data-fp-mobile-lock className="cx-fp-section">
               <MissionSection />
             </div>
 
-            <div id="cta" data-fp-section className="cx-fp-section">
+            <div id="cta" data-fp-section data-fp-mobile-lock className="cx-fp-section">
               <CinematicCta onPreorder={() => setPreorderOpen(true)} />
             </div>
 
-            <div id="faq" data-fp-section className="cx-fp-section">
+            <div id="faq" data-fp-section data-fp-mobile-lock className="cx-fp-section">
               <div className="cx-faq-shell">
                 <FaqSection />
-                <Footer />
+                <div className="hidden lg:block">
+                  <Footer />
+                </div>
               </div>
+            </div>
+
+            <div id="footer" data-fp-section className="cx-fp-section lg:hidden">
+              <Footer />
             </div>
           </main>
 

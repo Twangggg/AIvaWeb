@@ -47,13 +47,13 @@ export function Footer() {
 
   return (
     <footer
-      className="site-footer w-full shrink-0 border-t py-8 md:py-10 px-6"
+      className="site-footer w-full shrink-0 border-t py-3.5 sm:py-8 md:py-10 px-4 sm:px-6"
       style={{ backgroundColor: "var(--nav-bg)", borderColor: "var(--nav-border)" }}
     >
       <div className="max-w-7xl mx-auto w-full">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-8 mb-8">
-          <Image src="/AIVALogo.png" alt="AIVA Logo" width={117} height={24} className="object-contain" />
-          <div className="flex flex-wrap items-center justify-center gap-6 text-xs tracking-wider uppercase" style={{ color: "var(--text-dim)" }}>
+        <div className="flex flex-col md:flex-row items-center justify-between gap-3.5 sm:gap-8 mb-3.5 sm:mb-8">
+          <Image src="/AIVALogo.png" alt="AIVA Logo" width={117} height={24} className="w-[98px] sm:w-auto object-contain" />
+          <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1.5 sm:gap-6 text-[0.6rem] sm:text-xs tracking-wider uppercase" style={{ color: "var(--text-dim)" }}>
             {links.map((link) => (
               <Link key={link.label} href={link.href} className="hover:text-[var(--ocean-glow)] transition-colors">
                 {link.label}
@@ -64,14 +64,14 @@ export function Footer() {
             href="https://www.facebook.com/AIVAGlass/"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 text-sm hover:text-[var(--ocean-glow)] transition-colors"
+            className="flex items-center gap-1.5 text-xs sm:gap-2 sm:text-sm hover:text-[var(--ocean-glow)] transition-colors"
             style={{ color: "var(--text-dim)" }}
           >
             <span className="material-symbols-outlined text-lg">facebook</span>
             Facebook
           </a>
         </div>
-        <div className="border-t pt-6 pb-2 flex flex-col items-center gap-4" style={{ borderColor: "var(--border-subtle)" }}>
+        <div className="border-t pt-3 sm:pt-6 pb-0 sm:pb-2 flex flex-col items-center gap-2 sm:gap-4" style={{ borderColor: "var(--border-subtle)" }}>
           <button
             type="button"
             onClick={toggleIntro}
@@ -83,7 +83,7 @@ export function Footer() {
               <span className="intro-toggle-knob" />
             </span>
           </button>
-          <p className="text-xs" style={{ color: "var(--text-dim)" }}>{t.footerCopyright}</p>
+          <p className="text-[0.65rem] sm:text-xs" style={{ color: "var(--text-dim)" }}>{t.footerCopyright}</p>
         </div>
       </div>
     </footer>

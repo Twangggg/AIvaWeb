@@ -19,8 +19,7 @@ export function FaqSection() {
 
   return (
     <section
-      data-fp-scroll
-      className="faq-section h-full w-full py-8 sm:py-12 md:py-16 px-4 sm:px-6 flex flex-col justify-center overflow-y-auto"
+      className="faq-section h-full w-full py-5 sm:py-12 md:py-16 px-4 sm:px-6 flex flex-col justify-center overflow-y-auto"
     >
       <div className="max-w-2xl mx-auto w-full">
         <Reveal direction="up" delay={0}>
@@ -34,7 +33,7 @@ export function FaqSection() {
           />
         </Reveal>
 
-        <div className="mt-6 sm:mt-8 md:mt-10 flex flex-col gap-3">
+        <div className="mt-4 sm:mt-8 md:mt-10 flex flex-col gap-2.5 sm:gap-3">
           {faqs.map((faq, i) => {
             const isOpen = openIndex === i;
             return (
@@ -50,7 +49,7 @@ export function FaqSection() {
                   <button
                     type="button"
                     onClick={() => setOpenIndex(isOpen ? null : i)}
-                    className="w-full flex items-center justify-between gap-4 p-5 text-left"
+                    className="w-full flex items-center justify-between gap-4 p-4 sm:p-5 text-left"
                     aria-expanded={isOpen}
                   >
                     <span className="font-medium text-sm md:text-base" style={{ color: "var(--text-on-glass)" }}>
@@ -70,7 +69,7 @@ export function FaqSection() {
                     className="overflow-hidden transition-all duration-300"
                     style={{ maxHeight: isOpen ? "280px" : "0px", opacity: isOpen ? 1 : 0 }}
                   >
-                    <p className="px-5 pb-5 text-sm leading-relaxed" style={{ color: "var(--text-dim)" }}>
+                    <p className="px-4 pb-4 text-xs leading-relaxed sm:px-5 sm:pb-5 sm:text-sm" style={{ color: "var(--text-dim)" }}>
                       {faq.a}
                     </p>
                   </div>

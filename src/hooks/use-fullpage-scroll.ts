@@ -23,7 +23,10 @@ export function useFullpageScroll(enabled = true) {
     if (reduced) return;
 
     const root = document.documentElement;
-    const getSections = () => Array.from(document.querySelectorAll<HTMLElement>(SELECTOR));
+    const getSections = () =>
+      Array.from(document.querySelectorAll<HTMLElement>(SELECTOR)).filter(
+        (section) => section.getClientRects().length > 0
+      );
 
     const sectionTop = (el: HTMLElement) =>
       Math.max(0, el.getBoundingClientRect().top + window.scrollY);
@@ -211,6 +214,11 @@ export function useFullpageScroll(enabled = true) {
     const isScrollableTarget = (target: EventTarget | null) =>
       target instanceof Element && Boolean(target.closest("[data-fp-scroll], input, textarea, select, [contenteditable='true']"));
 
+    // On phones, only deliberately scene-based chapters opt into paging.
+    // Tablet and desktop layouts preserve the existing full-page behavior.
+    const usesMobilePaging = (section: HTMLElement) =>
+      window.innerWidth >= 640 || section.hasAttribute("data-fp-mobile-lock");
+
     const scrollToSection = (el: HTMLElement, dir: Dir) => {
       const sections = getSections();
       const index = sections.indexOf(el);
@@ -244,14 +252,22 @@ export function useFullpageScroll(enabled = true) {
     const onWheel = (event: WheelEvent) => {
       if (Math.abs(event.deltaY) < 8 || isScrollableTarget(event.target)) return;
       const section = sectionAtViewport();
-      if (!section) return;
+      if (!section || !usesMobilePaging(section)) return;
       event.preventDefault();
       advance(section, event.deltaY > 0 ? 1 : -1);
     };
 
     const onTouchStart = (event: TouchEvent) => {
-      if (event.touches.length !== 1 || isScrollableTarget(event.target)) return;
+      if (event.touches.length !== 1 || isScrollableTarget(event.target)) {
+        touchSection = null;
+        touchLocked = false;
+        return;
+      }
       touchSection = sectionAtViewport();
+      if (touchSection && !usesMobilePaging(touchSection)) {
+        touchSection = null;
+        return;
+      }
       touchLocked = false;
       touchStartY = event.touches[0]?.clientY ?? 0;
     };
@@ -298,12 +314,12 @@ export function useFullpageScroll(enabled = true) {
 
       if (e.key === "ArrowDown" || e.key === "PageDown" || e.key === " ") {
         const section = sectionAtViewport();
-        if (!section) return;
+        if (!section || !usesMobilePaging(section)) return;
         e.preventDefault();
         advance(section, 1);
       } else if (e.key === "ArrowUp" || e.key === "PageUp") {
         const section = sectionAtViewport();
-        if (!section) return;
+        if (!section || !usesMobilePaging(section)) return;
         e.preventDefault();
         advance(section, -1);
       } else if (e.key === "Home") {

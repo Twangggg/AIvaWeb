@@ -10,8 +10,8 @@ const AivaGlasses3D = dynamic(() => import("@/components/AivaGlasses3D"), {
 });
 
 const SECTIONS = [
-  { tag: "feature1Tag", title: "feature1Title", desc: "feature1Desc", mobilePos: "top-4 sm:left-4 sm:right-auto", desktopPos: "lg:top-24 lg:right-[15%]" },
-  { tag: "feature2Tag", title: "feature2Title", desc: "feature2Desc", mobilePos: "top-4 sm:right-4 sm:left-auto", desktopPos: "lg:top-24 lg:left-16" },
+  { tag: "feature1Tag", title: "feature1Title", desc: "feature1Desc", mobilePos: "top-12 sm:left-4 sm:right-auto", desktopPos: "lg:top-24 lg:right-[15%]" },
+  { tag: "feature2Tag", title: "feature2Title", desc: "feature2Desc", mobilePos: "top-12 sm:right-4 sm:left-auto", desktopPos: "lg:top-24 lg:left-16" },
   { tag: "feature3Tag", title: "feature3Title", desc: "feature3Desc", mobilePos: "bottom-36 sm:right-4 sm:left-auto", desktopPos: "lg:bottom-36 lg:right-16" },
   { tag: "feature4Tag", title: "feature4Title", desc: "feature4Desc", mobilePos: "bottom-36 sm:left-4 sm:right-auto", desktopPos: "lg:bottom-36 lg:left-[15%]" }
 ] as const;
@@ -27,6 +27,7 @@ export function Home3DScroll() {
   const invalidateRef = useRef<(() => void) | null>(null);
   const rafRef = useRef<number | null>(null);
   const [isNearViewport, setIsNearViewport] = useState(false);
+  const [isFullscreen, setIsFullscreen] = useState(false);
   const { step: active } = useFpSceneSync("experience", SECTIONS.length);
 
   const getSectionText = (key: string) => (t as unknown as Record<string, string>)[key] ?? key;
@@ -79,6 +80,31 @@ export function Home3DScroll() {
       if (rafRef.current !== null) window.cancelAnimationFrame(rafRef.current);
     };
   }, []);
+
+  useEffect(() => {
+    const syncFullscreen = () => {
+      const active = document.fullscreenElement === stageRef.current;
+      setIsFullscreen(active);
+      if (!active) {
+        const orientation = screen.orientation as ScreenOrientation & { unlock?: () => void };
+        orientation.unlock?.();
+      }
+    };
+    document.addEventListener("fullscreenchange", syncFullscreen);
+    return () => document.removeEventListener("fullscreenchange", syncFullscreen);
+  }, []);
+
+  const toggleFullscreen = async () => {
+    if (!stageRef.current) return;
+    if (document.fullscreenElement === stageRef.current) {
+      await document.exitFullscreen();
+      return;
+    }
+
+    await stageRef.current.requestFullscreen();
+    const orientation = screen.orientation as ScreenOrientation & { lock?: (orientation: "landscape") => Promise<void> };
+    if (orientation.lock) await orientation.lock("landscape").catch(() => undefined);
+  };
 
   // Full-page paging provides discrete scenes. Update the same target that
   // native scrolling used, letting the 3D model lerp into each new rotation.
@@ -134,6 +160,23 @@ export function Home3DScroll() {
             />
           ))}
         </div>
+
+        <button
+          type="button"
+          onClick={toggleFullscreen}
+          className="mobile-fullscreen-control absolute right-4 bottom-4 z-20 inline-flex h-11 w-11 items-center justify-center rounded-full border lg:hidden"
+          style={{
+            backgroundColor: "var(--modal-bg)",
+            borderColor: "var(--glass-border)",
+            color: "var(--text-on-glass)",
+            boxShadow: "0 8px 24px rgba(0,0,0,0.16)"
+          }}
+          aria-label={isFullscreen ? "Exit full screen" : "View glasses in full screen"}
+        >
+          <span className="material-symbols-outlined" aria-hidden>
+            {isFullscreen ? "fullscreen_exit" : "fullscreen"}
+          </span>
+        </button>
 
         {SECTIONS.map((s, i) => (
           <div
