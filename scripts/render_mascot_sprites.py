@@ -10,7 +10,9 @@ from mathutils import Vector
 
 
 ROOT = os.getcwd()
-MODEL = os.path.join(ROOT, "public/models/mascot.glb")
+MODEL = os.path.join(ROOT, "public/mascots/NEW_MASCOT.glb")
+if not os.path.exists(MODEL):
+    MODEL = os.path.join(ROOT, "public/models/mascot.glb")
 OUTPUT = os.path.join(ROOT, "public/mascots")
 CELL_SIZE = 384
 
@@ -72,9 +74,6 @@ scene.render.resolution_percentage = 100
 scene.render.image_settings.file_format = "PNG"
 scene.render.film_transparent = True
 scene.render.image_settings.color_mode = "RGBA"
-scene.render.resolution_percentage = 100
-scene.world = bpy.data.worlds.new("MascotWorld")
-scene.world.color = (0.055, 0.07, 0.1)
 
 camera_data = bpy.data.cameras.new("MascotCamera")
 camera_data.type = "ORTHO"
@@ -82,36 +81,64 @@ camera = bpy.data.objects.new("MascotCamera", camera_data)
 scene.collection.objects.link(camera)
 scene.camera = camera
 
-key_data = bpy.data.lights.new("Key", type="AREA")
-key_data.energy = 950
-key_data.shape = "DISK"
-key_data.size = 4
-key = bpy.data.objects.new("Key", key_data)
-scene.collection.objects.link(key)
-key.location = (3, 4, 5)
-
-fill_data = bpy.data.lights.new("Fill", type="AREA")
-fill_data.energy = 450
-fill_data.size = 4
-fill = bpy.data.objects.new("Fill", fill_data)
-scene.collection.objects.link(fill)
-fill.location = (-4, 2, 3)
-
 bpy.context.view_layer.update()
 minimum, maximum = world_bounds(scene.objects)
 center = (minimum + maximum) / 2
 height = maximum.z - minimum.z
 width = max(maximum.x - minimum.x, maximum.y - minimum.y)
-camera_data.ortho_scale = max(height, width) * 1.34
+camera_data.ortho_scale = max(height, width) * 1.15
 radius = max(height, width) * 2.2
+
+# Lighting setup for front-facing character (-Y direction)
+key_data = bpy.data.lights.new("Key", type="AREA")
+key_data.energy = 850
+key_data.size = 2.5
+key = bpy.data.objects.new("Key", key_data)
+scene.collection.objects.link(key)
+key.location = center + Vector((2.0, -2.5, 2.0))
+
+fill_data = bpy.data.lights.new("Fill", type="AREA")
+fill_data.energy = 450
+fill_data.size = 2.5
+fill = bpy.data.objects.new("Fill", fill_data)
+scene.collection.objects.link(fill)
+fill.location = center + Vector((-2.0, -2.0, 1.5))
+
+rim_data = bpy.data.lights.new("Rim", type="AREA")
+rim_data.energy = 300
+rim_data.size = 3.0
+rim = bpy.data.objects.new("Rim", rim_data)
+scene.collection.objects.link(rim)
+rim.location = center + Vector((0.0, 2.5, 2.5))
 
 os.makedirs(OUTPUT, exist_ok=True)
 
-# Rows mean up / level / down; columns mean left / centre / right.
-directions = [(-34, 14), (0, 14), (34, 14), (-34, 0), (0, 0), (34, 0), (-34, -14), (0, -14), (34, -14)]
+# Rows: up (pitch -14), level (pitch 0), down (pitch +14)
+# Columns: left (yaw +34), center (yaw 0), right (yaw -34)
+# This correctly aligns the rendered angles with the user cursor direction on screen.
+directions = [
+    (34, -14), (0, -14), (-34, -14),
+    (34, 0),   (0, 0),   (-34, 0),
+    (34, 14),  (0, 14),  (-34, 14)
+]
 directions_path = os.path.join(OUTPUT, "frog-directions.png")
 render_sheet(camera, center, radius, directions, directions_path)
 
-# The GLB has no facial blend-shapes, so keep the same transparent atlas for click
-# reactions and use a small CSS squash in the button for tactile feedback.
+# Copy to frog-reactions.png
 shutil.copyfile(directions_path, os.path.join(OUTPUT, "frog-reactions.png"))
+
+# Convert to WebP for production usage
+try:
+    from PIL import Image
+
+    for name in ["frog-directions", "frog-reactions", "frog-cute-directions", "frog-cute-reactions"]:
+        src_file = "frog-directions.png" if "directions" in name else "frog-reactions.png"
+        src_path = os.path.join(OUTPUT, src_file)
+        dest_path = os.path.join(OUTPUT, f"{name}.webp")
+        img = Image.open(src_path)
+        img.save(dest_path, "WEBP", quality=95)
+        print(f"Generated {dest_path}")
+except ImportError:
+    print("PIL not installed, skipped WebP conversion")
+
+
