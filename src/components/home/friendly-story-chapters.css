@@ -497,6 +497,33 @@
   .garden-home .storybook-feature-copy h3 {
     margin-block: 10px;
   }
+  .storybook-features {
+    padding: 64px 18px max(24px, env(safe-area-inset-bottom));
+    gap: 12px;
+  }
+  .storybook-features > * {
+    flex-shrink: 0;
+  }
+  .garden-home .storybook-features .storybook-heading h2 {
+    font-size: clamp(1.25rem, 5.4vw, 1.55rem);
+  }
+  .storybook-features .storybook-feature-page {
+    padding: 12px;
+    gap: 8px;
+  }
+  .storybook-features .storybook-feature-art .storybook-pal {
+    width: clamp(72px, 16dvh, 128px);
+    height: clamp(72px, 16dvh, 128px);
+  }
+  .storybook-features .storybook-choices {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+  .storybook-features .storybook-choices button {
+    min-width: 0;
+    padding: 6px 8px;
+  }
   .storybook-comparison :is(th, td) {
     padding: 12px 9px;
     font-size: 0.68rem;
@@ -607,6 +634,29 @@
   }
   .storybook-values p {
     font-size: 0.75rem;
+  }
+}
+@media (max-width: 639px) and (max-height: 620px) {
+  .storybook-features .storybook-feature-page {
+    grid-template-columns: 64px minmax(0, 1fr);
+    align-items: start;
+  }
+  .storybook-features .storybook-feature-art {
+    padding: 6px 0;
+    border-radius: 18px;
+  }
+  .storybook-features .storybook-feature-art .storybook-pal {
+    width: 64px;
+    height: 88px;
+  }
+  .storybook-features .storybook-feature-art > span {
+    top: 2px;
+    left: 4px;
+    font-size: 1rem;
+  }
+  .garden-home .storybook-features .storybook-feature-copy h3 {
+    font-size: 1.05rem;
+    margin-block: 8px;
   }
 }
 @media (max-height: 720px) and (min-width: 640px) {

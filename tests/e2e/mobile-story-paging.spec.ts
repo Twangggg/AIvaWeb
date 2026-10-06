@@ -21,7 +21,7 @@ async function swipeStory(page: Page, fromY = 640, toY = 300) {
 
 test.beforeEach(async ({ page }) => {
   await page.addInitScript(() => localStorage.setItem("aiva_intro_seen", "1"));
-  await page.goto("/");
+  await page.goto("/", { waitUntil: "domcontentloaded" });
   await expect(page.locator("#statement")).toBeAttached();
   await expect(page.locator("#hero")).toHaveAttribute("data-fp-active", "true");
   // Let the page preloader unmount before testing touch input.
@@ -189,3 +189,48 @@ test("Mission on a short phone keeps all values readable in the page flow", asyn
   await lastValue.scrollIntoViewIfNeeded();
   await expect(lastValue).toBeInViewport();
 });
+
+for (const viewport of [
+  { width: 375, height: 664 },
+  { width: 393, height: 760 },
+  { width: 360, height: 640 },
+  { width: 375, height: 534 },
+]) {
+  test(`Features ${viewport.width}×${viewport.height}: all four scenes fit without inner scrolling`, async ({
+    page,
+  }) => {
+    await page.setViewportSize(viewport);
+    const features = page.locator("#features");
+    await features.evaluate((el) => el.scrollIntoView({ block: "start" }));
+    await page.waitForTimeout(800);
+    const chapter = features.locator(".storybook-chapter");
+    const choices = features.locator(".storybook-choices button");
+    for (let scene = 0; scene < 4; scene++) {
+      await choices.nth(scene).click();
+      await expect(features).toHaveAttribute("data-fp-scene", String(scene));
+      const layout = await chapter.evaluate((el) => ({
+        height: el.clientHeight,
+        content: el.scrollHeight,
+        top: el.scrollTop,
+      }));
+      expect(layout.content).toBeLessThanOrEqual(layout.height + 2);
+      expect(layout.top).toBe(0);
+      const heading = await features
+        .locator(".storybook-heading")
+        .boundingBox();
+      expect(heading!.y).toBeGreaterThanOrEqual(60);
+      const lastChoice = await choices.last().boundingBox();
+      expect(lastChoice!.y + lastChoice!.height).toBeLessThanOrEqual(
+        viewport.height - 20
+      );
+    }
+    await swipeStory(page, viewport.height - 120, 280);
+    await expect
+      .poll(() =>
+        page
+          .locator("#compare")
+          .evaluate((el) => Math.abs(el.getBoundingClientRect().top))
+      )
+      .toBeLessThan(2);
+  });
+}
