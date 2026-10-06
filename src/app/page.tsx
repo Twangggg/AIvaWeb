@@ -117,7 +117,6 @@ export default function HomePage() {
             <div
               id="mission"
               data-fp-section
-              data-fp-mobile-lock
               className="cx-fp-section"
             >
               <FriendlyMissionChapter />

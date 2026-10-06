@@ -90,3 +90,29 @@ test("Entering the mobile story from fluid cards aligns the chapter before chang
   expect(box!.y).toBeGreaterThan(90);
   expect(box!.y + box!.height).toBeLessThan(800);
 });
+
+test("Mission on a short phone keeps all values readable in the page flow", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 375, height: 534 });
+  const mission = page.locator("#mission");
+  const chapter = mission.locator(".storybook-mission");
+  await expect(mission).not.toHaveAttribute("data-fp-mobile-lock", "");
+  await expect(chapter).toHaveCSS("overflow-y", "visible");
+  const layout = await chapter.evaluate((el) => ({
+    height: el.clientHeight,
+    contentHeight: el.scrollHeight,
+  }));
+  expect(layout.height).toBeGreaterThan(534);
+  expect(layout.contentHeight).toBeLessThanOrEqual(layout.height + 1);
+
+  await mission.evaluate((el) =>
+    window.scrollTo({
+      top: el.getBoundingClientRect().top + window.scrollY - 150,
+      behavior: "instant",
+    })
+  );
+  const lastValue = mission.locator(".storybook-values article").last();
+  await lastValue.scrollIntoViewIfNeeded();
+  await expect(lastValue).toBeInViewport();
+});

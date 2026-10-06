@@ -575,6 +575,17 @@
     width: 100px;
     height: 100px;
   }
+  /* Keep the complete mission in the document flow on phones. */
+  .storybook-mission {
+    height: auto;
+    max-height: none;
+    min-height: 100svh;
+    overflow: visible;
+    padding-bottom: max(32px, env(safe-area-inset-bottom));
+  }
+  .storybook-mission > * {
+    flex-shrink: 0;
+  }
   .storybook-values {
     grid-template-columns: 1fr;
     gap: 10px;

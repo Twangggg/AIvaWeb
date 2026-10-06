@@ -3011,9 +3011,9 @@ html {
   }
 
   #mission.cx-fp-section {
-    height: 100svh;
+    height: auto;
     min-height: 100svh;
-    overflow: hidden;
+    overflow: visible;
   }
 
   #faq.cx-fp-section {
