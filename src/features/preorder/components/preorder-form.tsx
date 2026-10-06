@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { getPreorderSchema, type PreorderInput } from "@/features/preorder/schema/preorder-schema";
 import { submitPreorder } from "@/features/preorder/services/preorder-service";
 import { useI18n } from "@/lib/i18n/provider";
+import Image from "next/image";
 
 interface PreorderFormProps {
   onClose: () => void;
@@ -39,9 +40,16 @@ export function PreorderForm({ onClose }: PreorderFormProps) {
 
   if (submittedData) {
     return (
-      <div className="flex flex-col items-center gap-6 py-4 text-center">
-        <div className="flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-[#22c55e]/30 to-[#22c55e]/10">
-          <span className="material-symbols-outlined text-5xl text-[#22c55e]">check_circle</span>
+      <div className="flex flex-col items-center gap-5 py-3 text-center">
+        <div className="relative w-36 h-36 flex items-center justify-center animate-bounce-short">
+          <Image
+            src="/mascots/frog-success.webp"
+            alt="AIva chúc mừng thành công"
+            width={144}
+            height={144}
+            className="w-full h-full object-contain drop-shadow-md"
+            priority
+          />
         </div>
 
         <div className="space-y-1">
@@ -80,8 +88,36 @@ export function PreorderForm({ onClose }: PreorderFormProps) {
   return (
     <form
       onSubmit={handleSubmit((values) => preorderMutation.mutate(values))}
-      className="space-y-5"
+      className="space-y-4"
     >
+      {/* Friendly Mascot Companion Banner */}
+      <div
+        className="flex items-center gap-3 p-3 rounded-2xl border"
+        style={{
+          backgroundColor: "var(--bg-subtle)",
+          borderColor: "var(--border-subtle)"
+        }}
+      >
+        <div className="w-16 h-16 shrink-0 relative">
+          <Image
+            src="/mascots/frog-shopping.webp"
+            alt="AIva bạn đồng hành"
+            width={64}
+            height={64}
+            className="w-full h-full object-contain"
+          />
+        </div>
+        <div className="text-xs leading-relaxed" style={{ color: "var(--text-dim)" }}>
+          <p className="font-semibold text-sm mb-0.5" style={{ color: "var(--text-on-glass)" }}>
+            {locale === "vi" ? "Người bạn AIva đã sẵn sàng!" : "AIva is ready to join you!"}
+          </p>
+          <p>
+            {locale === "vi"
+              ? "Điền thông tin bên dưới để nhận suất đặt trước kính AIva cùng quà tặng độc quyền cho bé."
+              : "Leave your details to reserve your AIva glasses and special early perks for your child."}
+          </p>
+        </div>
+      </div>
       {preorderMutation.isError && (
         <div className="rounded-xl border border-[#ff8f8f]/30 bg-[#ff8f8f]/10 px-4 py-3 text-sm text-[#ff8f8f]">
           {t.error}

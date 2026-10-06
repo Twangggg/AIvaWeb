@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { FamilyGreeting } from "@/components/common/family-greeting";
 import { Nav } from "@/components/common/nav";
 import { Footer } from "@/components/common/footer";
 import { PreorderModal } from "@/features/preorder/components/preorder-modal";
@@ -25,10 +26,11 @@ export default function NewsPage() {
       id: "aiva-for-kids",
       tag: "Giới Thiệu Thương Hiệu",
       image: "/bai-dang-1.png",
-      title: "AIVA Dành Cho Trẻ Em: Chiếc Kính AI Giúp Con Học Mà Không Cần Màn Hình",
+      title:
+        "AIVA Dành Cho Trẻ Em: Chiếc Kính AI Giúp Con Học Mà Không Cần Màn Hình",
       desc: "Giải pháp kính thông minh nhận diện môi trường thực, hỗ trợ trẻ học song ngữ Việt - Anh và bảo vệ thị lực tối đa.",
-      href: "/news/aiva-for-kids"
-    }
+      href: "/news/aiva-for-kids",
+    },
   ];
 
   return (
@@ -43,25 +45,7 @@ export default function NewsPage() {
           </div>
 
           <div className="max-w-6xl mx-auto relative z-10">
-            {/* Header Section */}
-            <div className="text-center mb-12">
-              <div
-                className="inline-block px-4 py-1 rounded-full text-xs font-bold tracking-wider uppercase mb-3 border"
-                style={{
-                  backgroundColor: "var(--ocean-alpha)",
-                  borderColor: "var(--ocean)",
-                  color: "var(--ocean)"
-                }}
-              >
-                TIN TỨC & NỘI DUNG AIVA
-              </div>
-              <h1 className="text-3xl md:text-5xl font-bold mb-3 tracking-tight" style={{ color: "var(--text-on-glass)" }}>
-                Tin Tức & Thông Tin AIVA
-              </h1>
-              <p className="text-sm md:text-base max-w-2xl mx-auto leading-relaxed" style={{ color: "var(--text-dim)" }}>
-                Cập nhật các tin tức mới nhất, hướng dẫn sản phẩm và thông tin công nghệ từ AIVA.
-              </p>
-            </div>
+            <FamilyGreeting topic="news" label="TIN TỨC & NỘI DUNG AIVA" />
 
             {/* PURE NEWS ARTICLES GRID */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-fadeIn">
@@ -72,11 +56,14 @@ export default function NewsPage() {
                   className="group relative rounded-3xl overflow-hidden border backdrop-blur p-5 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 shadow-xl hover:border-[var(--ocean)]"
                   style={{
                     backgroundColor: "var(--glass-bg)",
-                    borderColor: "var(--glass-border)"
+                    borderColor: "var(--glass-border)",
                   }}
                 >
                   <div>
-                    <div className="relative w-full h-48 rounded-2xl overflow-hidden mb-4 border" style={{ borderColor: "var(--glass-border)" }}>
+                    <div
+                      className="relative w-full h-48 rounded-2xl overflow-hidden mb-4 border"
+                      style={{ borderColor: "var(--glass-border)" }}
+                    >
                       <Image
                         src={article.image}
                         alt={article.title}
@@ -89,7 +76,7 @@ export default function NewsPage() {
                         style={{
                           backgroundColor: "var(--badge-bg)",
                           borderColor: "var(--ocean)",
-                          color: "var(--ocean)"
+                          color: "var(--ocean)",
                         }}
                       >
                         #{article.tag}
@@ -104,7 +91,10 @@ export default function NewsPage() {
                     </p>
                   </div>
 
-                  <div className="pt-3 border-t flex items-center justify-between text-xs font-bold text-[var(--ocean)]" style={{ borderColor: "var(--border-subtle)" }}>
+                  <div
+                    className="pt-3 border-t flex items-center justify-between text-xs font-bold text-[var(--ocean)]"
+                    style={{ borderColor: "var(--border-subtle)" }}
+                  >
                     <span>Đọc Bài Viết ➔</span>
                     <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">
                       arrow_forward
@@ -118,7 +108,10 @@ export default function NewsPage() {
       </main>
 
       <Footer />
-      <PreorderModal open={preorderOpen} onClose={() => setPreorderOpen(false)} />
+      <PreorderModal
+        open={preorderOpen}
+        onClose={() => setPreorderOpen(false)}
+      />
     </>
   );
 }

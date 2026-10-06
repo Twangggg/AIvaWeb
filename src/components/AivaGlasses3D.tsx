@@ -1,7 +1,7 @@
 "use client";
 
 import { Canvas, useFrame } from "@react-three/fiber";
-import { Html, useGLTF, useProgress } from "@react-three/drei";
+import { Html, OrbitControls, useGLTF, useProgress } from "@react-three/drei";
 import { Suspense, useEffect, useMemo, useRef } from "react";
 import type { MutableRefObject } from "react";
 import type * as THREE from "three";
@@ -18,11 +18,11 @@ function Loader() {
   );
 }
 
-function Model({ scrollY }: { scrollY: MutableRefObject<number> }) {
+function Model({ scrollY, interactive = false }: { scrollY: MutableRefObject<number>; interactive?: boolean }) {
   const { scene } = useGLTF("/models/glasses.glb");
   const group = useRef<THREE.Group>(null!);
   const currentS = useRef(0);
-  const optimizedScene = useMemo(() => scene, [scene]);
+  const optimizedScene = useMemo(() => scene.clone(true), [scene]);
 
   useEffect(() => {
     optimizedScene.traverse((obj) => {
@@ -40,7 +40,7 @@ function Model({ scrollY }: { scrollY: MutableRefObject<number> }) {
 
   useFrame((state, delta) => {
     if (!group.current) return;
-    const targetS = scrollY.current;
+    const targetS = interactive ? 0 : scrollY.current;
     
     // Smooth lerp damping for silky 60fps physics motion
     currentS.current += (targetS - currentS.current) * Math.min(1, delta * 2.2);
@@ -64,7 +64,9 @@ function Model({ scrollY }: { scrollY: MutableRefObject<number> }) {
     group.current.position.z = 0;
 
     // Harmonious responsive scales
-    const baseScale = isMobile ? 0.72 : isTablet ? 0.6 : 1.35;
+    const baseScale = interactive
+      ? (isMobile ? 1.05 : isTablet ? 1.35 : 1.65)
+      : (isMobile ? 0.72 : isTablet ? 0.6 : 1.35);
     const scrollScale = 1 + s * 0.06;
     group.current.scale.setScalar(baseScale * scrollScale);
   });
@@ -75,11 +77,13 @@ function Model({ scrollY }: { scrollY: MutableRefObject<number> }) {
 export default function AivaGlasses3D({
   scrollY,
   onInvalidateReady,
-  active
+  active,
+  interactive = false,
 }: {
   scrollY: MutableRefObject<number>;
   onInvalidateReady?: (invalidate: () => void) => void;
   active?: boolean;
+  interactive?: boolean;
 }) {
   const invalidateRef = useRef<(() => void) | null>(null);
 
@@ -90,8 +94,8 @@ export default function AivaGlasses3D({
 
   return (
     <Canvas
-      className="pointer-events-none select-none touch-pan-y"
-      style={{ pointerEvents: "none", touchAction: "pan-y" }}
+      className="select-none"
+      style={{ pointerEvents: interactive ? "auto" : "none", touchAction: interactive ? "none" : "pan-y" }}
       frameloop="demand"
       flat
       camera={{ position: [0, 0, 3.0], fov: 45, near: 0.5, far: 20 }}
@@ -114,8 +118,9 @@ export default function AivaGlasses3D({
       <directionalLight position={[2.5, 3, 4]} intensity={1.2} color="#facc15" />
       <directionalLight position={[-3, -1, 2.5]} intensity={0.8} color="#0ea5e9" />
       <Suspense fallback={<Loader />}>
-        {active ? <Model scrollY={scrollY} /> : null}
+        {active ? <Model scrollY={scrollY} interactive={interactive} /> : null}
       </Suspense>
+      {interactive && <OrbitControls makeDefault enablePan={false} enableZoom={false} enableDamping dampingFactor={0.08} autoRotate={false} />}
     </Canvas>
   );
 }

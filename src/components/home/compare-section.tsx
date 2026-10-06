@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useI18n } from "@/lib/i18n/provider";
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeader } from "@/components/ui/section-header";
@@ -31,15 +32,28 @@ export function CompareSection() {
 
       <div className="max-w-5xl mx-auto relative z-10 w-full">
         <Reveal>
-          <SectionHeader
-            title={
-              <>
-                {t.homeCompareTitle}{" "}
-                <span className="text-gradient-sun">{t.homeCompareTitleAccent}</span>
-              </>
-            }
-            description={t.homeCompareDesc}
-          />
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div className="flex-1">
+              <SectionHeader
+                title={
+                  <>
+                    {t.homeCompareTitle}{" "}
+                    <span className="text-gradient-sun">{t.homeCompareTitleAccent}</span>
+                  </>
+                }
+                description={t.homeCompareDesc}
+              />
+            </div>
+            <div className="hidden sm:flex shrink-0 w-24 h-24 md:w-28 md:h-28 animate-float">
+              <Image
+                src="/mascots/frog-doctor.webp"
+                alt="Bác sĩ ếch AIva kiểm tra thị lực"
+                width={112}
+                height={112}
+                className="w-full h-full object-contain filter drop-shadow-md"
+              />
+            </div>
+          </div>
         </Reveal>
 
         <Reveal delay={80} blur={false}>

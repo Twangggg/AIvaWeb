@@ -12,7 +12,11 @@ import {
   markIntroSeen,
 } from "@/components/home/site-intro";
 
-export function Footer() {
+export function Footer({
+  showIntroToggle = true,
+}: {
+  showIntroToggle?: boolean;
+}) {
   const { t } = useI18n();
   const [introEnabled, setIntroEnabled] = useState(false);
 
@@ -42,20 +46,36 @@ export function Footer() {
     { label: t.footerSecurity, href: "/privacy" },
     { label: t.footerTerms, href: "/terms" },
     { label: t.footerSupport, href: "mailto:aivisionassistance@gmail.com" },
-    { label: t.footerContact, href: "/about" }
+    { label: t.footerContact, href: "/about" },
   ];
 
   return (
     <footer
       className="site-footer w-full shrink-0 border-t py-3.5 sm:py-8 md:py-10 px-4 sm:px-6"
-      style={{ backgroundColor: "var(--nav-bg)", borderColor: "var(--nav-border)" }}
+      style={{
+        backgroundColor: "var(--nav-bg)",
+        borderColor: "var(--nav-border)",
+      }}
     >
       <div className="max-w-7xl mx-auto w-full">
         <div className="flex flex-col md:flex-row items-center justify-between gap-3.5 sm:gap-8 mb-3.5 sm:mb-8">
-          <Image src="/AIVALogo.png" alt="AIVA Logo" width={117} height={24} className="w-[98px] sm:w-auto object-contain" />
-          <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1.5 sm:gap-6 text-[0.6rem] sm:text-xs tracking-wider uppercase" style={{ color: "var(--text-dim)" }}>
+          <Image
+            src="/AIVALogo.png"
+            alt="AIVA Logo"
+            width={117}
+            height={24}
+            className="w-[98px] sm:w-auto object-contain"
+          />
+          <div
+            className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1.5 sm:gap-6 text-[0.6rem] sm:text-xs tracking-wider uppercase"
+            style={{ color: "var(--text-dim)" }}
+          >
             {links.map((link) => (
-              <Link key={link.label} href={link.href} className="hover:text-[var(--ocean-glow)] transition-colors">
+              <Link
+                key={link.label}
+                href={link.href}
+                className="hover:text-[var(--ocean-glow)] transition-colors"
+              >
                 {link.label}
               </Link>
             ))}
@@ -71,19 +91,32 @@ export function Footer() {
             Facebook
           </a>
         </div>
-        <div className="border-t pt-3 sm:pt-6 pb-0 sm:pb-2 flex flex-col items-center gap-2 sm:gap-4" style={{ borderColor: "var(--border-subtle)" }}>
-          <button
-            type="button"
-            onClick={toggleIntro}
-            className="intro-toggle"
-            aria-pressed={introEnabled}
+        <div
+          className="border-t pt-3 sm:pt-6 pb-0 sm:pb-2 flex flex-col items-center gap-2 sm:gap-4"
+          style={{ borderColor: "var(--border-subtle)" }}
+        >
+          {showIntroToggle && (
+            <button
+              type="button"
+              onClick={toggleIntro}
+              className="intro-toggle"
+              aria-pressed={introEnabled}
+            >
+              <span className="intro-toggle-label">{t.footerIntro}</span>
+              <span
+                className={`intro-toggle-switch ${introEnabled ? "is-on" : ""}`}
+                aria-hidden="true"
+              >
+                <span className="intro-toggle-knob" />
+              </span>
+            </button>
+          )}
+          <p
+            className="text-[0.65rem] sm:text-xs"
+            style={{ color: "var(--text-dim)" }}
           >
-            <span className="intro-toggle-label">{t.footerIntro}</span>
-            <span className={`intro-toggle-switch ${introEnabled ? "is-on" : ""}`} aria-hidden="true">
-              <span className="intro-toggle-knob" />
-            </span>
-          </button>
-          <p className="text-[0.65rem] sm:text-xs" style={{ color: "var(--text-dim)" }}>{t.footerCopyright}</p>
+            {t.footerCopyright}
+          </p>
         </div>
       </div>
     </footer>

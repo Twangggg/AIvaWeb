@@ -109,12 +109,23 @@ export function VisionDemoSection() {
       <div className="vision-orbit-glow" aria-hidden />
 
       <Reveal direction="up" delay={0}>
-        <header className="vision-orbit-head">
-          <h2 className="font-display font-bold tracking-tight leading-[1.1]">
-            {t.homeVisionTitle}{" "}
-            <span className="text-gradient-ocean">{t.homeVisionTitleAccent}</span>
-          </h2>
-          <p>{t.homeVisionDesc}</p>
+        <header className="vision-orbit-head flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="flex-1 text-center sm:text-left">
+            <h2 className="font-display font-bold tracking-tight leading-[1.1]">
+              {t.homeVisionTitle}{" "}
+              <span className="text-gradient-ocean">{t.homeVisionTitleAccent}</span>
+            </h2>
+            <p>{t.homeVisionDesc}</p>
+          </div>
+          <div className="hidden sm:flex shrink-0 w-20 h-20 md:w-24 md:h-24 animate-float">
+            <Image
+              src="/mascots/frog-camera.webp"
+              alt="AIva nhận diện thị giác"
+              width={96}
+              height={96}
+              className="w-full h-full object-contain filter drop-shadow-md"
+            />
+          </div>
         </header>
       </Reveal>
 

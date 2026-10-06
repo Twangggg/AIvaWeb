@@ -26,12 +26,10 @@ export function AuthPanel() {
   return (
     <AuthLayout title={title} mode={mode}>
       <div className="auth-surface-tint mb-5 flex rounded-xl p-1">
-        {(
-          [
-            { id: "login" as const, label: t.consoleLogin },
-            { id: "register" as const, label: t.consoleRegister },
-          ]
-        ).map((tab) => {
+        {[
+          { id: "login" as const, label: t.consoleLogin },
+          { id: "register" as const, label: t.consoleRegister },
+        ].map((tab) => {
           const active = mode === tab.id;
           return (
             <button
@@ -39,7 +37,9 @@ export function AuthPanel() {
               type="button"
               onClick={() => switchMode(tab.id)}
               className={`relative min-h-10 flex-1 rounded-lg text-sm font-semibold transition ${
-                active ? "text-[var(--text-on-accent)]" : "auth-muted hover:opacity-70"
+                active
+                  ? "text-white dark:text-[#17283b]"
+                  : "auth-muted hover:opacity-70"
               }`}
             >
               {active && (

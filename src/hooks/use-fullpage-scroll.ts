@@ -19,7 +19,9 @@ export function useFullpageScroll(enabled = true) {
 
   useEffect(() => {
     if (!enabled) return;
-    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const reduced = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
     if (reduced) return;
 
     const root = document.documentElement;
@@ -32,7 +34,16 @@ export function useFullpageScroll(enabled = true) {
       Math.max(0, el.getBoundingClientRect().top + window.scrollY);
 
     const getLenis = () =>
-      (window as unknown as { __lenis?: { scrollTo: (t: HTMLElement | number, opts?: Record<string, unknown>) => void } }).__lenis;
+      (
+        window as unknown as {
+          __lenis?: {
+            scrollTo: (
+              t: HTMLElement | number,
+              opts?: Record<string, unknown>
+            ) => void;
+          };
+        }
+      ).__lenis;
 
     const sceneCount = (el: HTMLElement) => {
       const n = Number(el.dataset.fpScenes || 0);
@@ -51,7 +62,7 @@ export function useFullpageScroll(enabled = true) {
       el.dispatchEvent(
         new CustomEvent("fp-scene", {
           bubbles: true,
-          detail: { step: next, count, id: el.id, dir }
+          detail: { step: next, count, id: el.id, dir },
         })
       );
     };
@@ -76,7 +87,7 @@ export function useFullpageScroll(enabled = true) {
           el,
           top: Math.max(0, rect.top + scrollY),
           height: Math.max(el.offsetHeight, rect.height, 1),
-          scenes: sceneCount(el)
+          scenes: sceneCount(el),
         };
       });
     };
@@ -109,14 +120,18 @@ export function useFullpageScroll(enabled = true) {
           const bottom = top + height;
 
           // Responsive activation threshold: activates as soon as section enters viewport
-          const isInView = bottom >= viewTop + viewportHeight * 0.1 && top <= viewBottom - viewportHeight * 0.1;
+          const isInView =
+            bottom >= viewTop + viewportHeight * 0.1 &&
+            top <= viewBottom - viewportHeight * 0.1;
           if (isInView) {
             el.dataset.fpActive = "true";
             el.dataset.fpEntered = "true";
           }
 
           // Immediate pin detection: if current scroll is within this section's active track
-          const isPinnedOrActive = currentY >= top - viewportHeight * 0.15 && currentY < bottom - viewportHeight * 0.35;
+          const isPinnedOrActive =
+            currentY >= top - viewportHeight * 0.15 &&
+            currentY < bottom - viewportHeight * 0.35;
           if (isPinnedOrActive && bestDist > 0) {
             best = i;
             bestDist = 0;
@@ -135,13 +150,25 @@ export function useFullpageScroll(enabled = true) {
             const scrollableDistance = height - viewportHeight;
             if (scrollableDistance > 0) {
               const relY = currentY - top;
-              const normalized = Math.max(0, Math.min(1, relY / scrollableDistance));
-              const step = Math.min(scenes - 1, Math.floor(normalized * scenes));
+              const normalized = Math.max(
+                0,
+                Math.min(1, relY / scrollableDistance)
+              );
+              const step = Math.min(
+                scenes - 1,
+                Math.floor(normalized * scenes)
+              );
               setScene(el, step, dir);
             } else {
               const relY = currentY - top + viewportHeight * 0.5;
-              const normalized = Math.max(0, Math.min(1, relY / Math.max(height, 1)));
-              const step = Math.min(scenes - 1, Math.floor(normalized * scenes));
+              const normalized = Math.max(
+                0,
+                Math.min(1, relY / Math.max(height, 1))
+              );
+              const step = Math.min(
+                scenes - 1,
+                Math.floor(normalized * scenes)
+              );
               setScene(el, step, dir);
             }
           }
@@ -155,7 +182,7 @@ export function useFullpageScroll(enabled = true) {
             target.dispatchEvent(
               new CustomEvent("fp-enter", {
                 bubbles: true,
-                detail: { id: target.id, dir, index: best }
+                detail: { id: target.id, dir, index: best },
               })
             );
           }
@@ -195,20 +222,33 @@ export function useFullpageScroll(enabled = true) {
     let touchLocked = false;
     let inputLockUntil = 0;
 
-    const sectionAtViewport = () => {
+    const sectionAtViewport = (): HTMLElement | null => {
       const viewportHeight = window.innerHeight;
-      const viewportCenter = viewportHeight * 0.45;
+      const viewportTop = Math.min(100, viewportHeight * 0.15);
       let candidate: HTMLElement | null = null;
-      let closest = Infinity;
+      let largestVisibleArea = 0;
+      let closestStart = Infinity;
 
-      const sections = getSections();
-      sections.forEach((el) => {
+      // A chapter owns input while it occupies most of the visible screen.
+      // Comparing its top to the screen centre selects the following chapter
+      // too early on tall screens, skipping the chapter actually being read.
+      getSections().forEach((el) => {
         const rect = el.getBoundingClientRect();
-        if (rect.bottom <= 0 || rect.top >= viewportHeight) return;
-        const distance = Math.abs(rect.top - viewportCenter);
-        if (distance < closest) {
+        const visibleHeight = Math.max(
+          0,
+          Math.min(rect.bottom, viewportHeight) -
+            Math.max(rect.top, viewportTop)
+        );
+        const startDistance = Math.abs(rect.top - viewportTop);
+        if (
+          visibleHeight > largestVisibleArea ||
+          (visibleHeight > 0 &&
+            visibleHeight === largestVisibleArea &&
+            startDistance < closestStart)
+        ) {
           candidate = el;
-          closest = distance;
+          largestVisibleArea = visibleHeight;
+          closestStart = startDistance;
         }
       });
       return candidate;
@@ -216,19 +256,24 @@ export function useFullpageScroll(enabled = true) {
 
     const isScrollableTarget = (target: EventTarget | null) => {
       if (!(target instanceof Element)) return false;
-      const scrollable = target.closest("[data-fp-scroll], input, textarea, select, [contenteditable='true']");
+      const scrollable = target.closest(
+        "[data-fp-scroll], input, textarea, select, [contenteditable='true']"
+      );
       if (!scrollable) return false;
       // If user is inside an internal scroll container with remaining scroll room, let native scroll work
       if (scrollable.scrollHeight > scrollable.clientHeight) {
         return true;
       }
-      return Boolean(scrollable.matches("input, textarea, select, [contenteditable='true']"));
+      return Boolean(
+        scrollable.matches("input, textarea, select, [contenteditable='true']")
+      );
     };
 
     // On phones, only deliberately scene-based chapters opt into paging.
     // Tablet and desktop layouts preserve the existing full-page behavior.
     const usesMobilePaging = (section: HTMLElement) =>
-      window.innerWidth >= 640 || section.hasAttribute("data-fp-mobile-lock");
+      !section.hasAttribute("data-fp-native") &&
+      (window.innerWidth >= 640 || section.hasAttribute("data-fp-mobile-lock"));
 
     const scrollToSection = (el: HTMLElement, dir: Dir) => {
       const sections = getSections();
@@ -243,11 +288,44 @@ export function useFullpageScroll(enabled = true) {
       }
     };
 
+    const alignMobileScene = (section: HTMLElement, dir: Dir) => {
+      if (
+        window.innerWidth >= 640 ||
+        sceneCount(section) < 2 ||
+        !section.hasAttribute("data-fp-mobile-lock")
+      )
+        return false;
+      const rect = section.getBoundingClientRect();
+      if (Math.abs(rect.top) <= 2) return false;
+      // Fluid sections can leave a story chapter only partly on screen.
+      // Finish entering it before any swipe is allowed to change its scene.
+      if (dir > 0 && rect.top > 0) setScene(section, 0, dir);
+      if (dir < 0 && rect.top < 0)
+        setScene(section, sceneCount(section) - 1, dir);
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+      inputLockUntil = Date.now() + 650;
+      return true;
+    };
+
+    const onScrollEnd = () => {
+      if (window.innerWidth >= 640) return;
+      const section = sectionAtViewport();
+      if (!section) return;
+      const rect = section.getBoundingClientRect();
+      const visible =
+        Math.min(rect.bottom, window.innerHeight) - Math.max(rect.top, 0);
+      if (visible < window.innerHeight * 0.6) return;
+      alignMobileScene(section, rect.top >= 0 ? 1 : -1);
+    };
+    window.addEventListener("scrollend", onScrollEnd);
+
     const advance = (section: HTMLElement, dir: Dir) => {
       if (Date.now() < inputLockUntil) return;
+      if (alignMobileScene(section, dir)) return;
       const count = sceneCount(section);
       const current = Number(section.dataset.fpScene || 0);
-      const next = count > 1 ? Math.max(0, Math.min(count - 1, current + dir)) : current;
+      const next =
+        count > 1 ? Math.max(0, Math.min(count - 1, current + dir)) : current;
 
       if (count > 1 && next !== current) {
         setScene(section, next, dir);
@@ -256,17 +334,29 @@ export function useFullpageScroll(enabled = true) {
       }
       // Fluid input lock: responsive on mobile (650ms), statement chapter (750ms), or standard desktop
       const isMobile = window.innerWidth < 640;
-      const inputLockMs = section.id === "statement" 
-        ? STATEMENT_INPUT_LOCK_MS 
-        : (isMobile ? 650 : INPUT_LOCK_MS);
+      const inputLockMs =
+        section.id === "statement"
+          ? STATEMENT_INPUT_LOCK_MS
+          : isMobile
+            ? 650
+            : INPUT_LOCK_MS;
       inputLockUntil = Date.now() + inputLockMs;
     };
 
+    let lastWheelAt = -Infinity;
+    const WHEEL_GESTURE_GAP_MS = 220;
+
     const onWheel = (event: WheelEvent) => {
-      if (Math.abs(event.deltaY) < 8 || isScrollableTarget(event.target)) return;
+      if (isScrollableTarget(event.target)) return;
       const section = sectionAtViewport();
       if (!section || !usesMobilePaging(section)) return;
+      const now = performance.now();
+      const continuingGesture = now - lastWheelAt < WHEEL_GESTURE_GAP_MS;
+      lastWheelAt = now;
       event.preventDefault();
+      // Track even tiny momentum events so a long trackpad gesture cannot
+      // start another page transition when the fixed animation lock expires.
+      if (Math.abs(event.deltaY) < 8 || continuingGesture) return;
       advance(section, event.deltaY > 0 ? 1 : -1);
     };
 
@@ -292,7 +382,7 @@ export function useFullpageScroll(enabled = true) {
       lastTouchY = event.touches[0]?.clientY ?? lastTouchY;
       const deltaY = lastTouchY - touchStartY;
       const deltaX = (event.touches[0]?.clientX ?? 0) - touchStartX;
-      
+
       // Only lock and prevent default when the gesture is primarily vertical story paging
       if (Math.abs(deltaY) > 8 && Math.abs(deltaY) > Math.abs(deltaX)) {
         touchLocked = true;
@@ -357,6 +447,7 @@ export function useFullpageScroll(enabled = true) {
       cancelAnimationFrame(rafId);
       clearTimeout(resizeTimer);
       window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("scrollend", onScrollEnd);
       window.removeEventListener("resize", onResize);
       window.removeEventListener("keydown", onKey);
       window.removeEventListener("wheel", onWheel);

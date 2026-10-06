@@ -70,23 +70,34 @@ export function AppDownloadModal({ open, onClose }: AppDownloadModalProps) {
           <span className="material-symbols-outlined text-xl">close</span>
         </button>
 
-        {/* Brand Logo Outside Any Box */}
-        <div className="mb-4">
-          <Image
-            src="/AIVALogo.png"
-            alt="AIVA Logo"
-            width={140}
-            height={32}
-            style={{ width: "auto", height: "auto" }}
-            className="h-7 object-contain mb-1"
-            priority
-          />
-          <h2 className="text-xl font-bold tracking-tight" style={{ color: "var(--text-on-glass)" }}>
-            Tải App AIVA Companion
-          </h2>
-          <p className="text-xs mt-0.5" style={{ color: "var(--text-dim)" }}>
-            Đồng hành cùng con khám phá thế giới thực.
-          </p>
+        {/* Brand Logo & Mascot Header */}
+        <div className="mb-4 flex items-center justify-between gap-3">
+          <div>
+            <Image
+              src="/AIVALogo.png"
+              alt="AIVA Logo"
+              width={140}
+              height={32}
+              style={{ width: "auto", height: "auto" }}
+              className="h-7 object-contain mb-1"
+              priority
+            />
+            <h2 className="text-xl font-bold tracking-tight" style={{ color: "var(--text-on-glass)" }}>
+              Tải App AIVA Companion
+            </h2>
+            <p className="text-xs mt-0.5" style={{ color: "var(--text-dim)" }}>
+              Đồng hành cùng con khám phá thế giới thực.
+            </p>
+          </div>
+          <div className="w-16 h-16 shrink-0 relative animate-float">
+            <Image
+              src="/mascots/frog-waving.webp"
+              alt="AIva chào bạn"
+              width={64}
+              height={64}
+              className="w-full h-full object-contain"
+            />
+          </div>
         </div>
 
         {/* Main Content Area */}

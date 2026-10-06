@@ -192,6 +192,14 @@ export function Nav({ onPreorder }: NavProps) {
               )}
             </div>
 
+            <Link
+              href="/product#glasses-3d-showcase"
+              className="rounded-full px-3 py-1.5 whitespace-nowrap transition-colors hover:text-[var(--ocean)]"
+              title={t.navSpecs}
+            >
+              {locale === "en" ? "Specs" : "Thông số"}
+            </Link>
+
             {/* Link 3: Về AIVA */}
             <Link
               href="/about"
@@ -355,6 +363,15 @@ export function Nav({ onPreorder }: NavProps) {
                 </Link>
               </div>
             </div>
+
+            <Link
+              href="/product#glasses-3d-showcase"
+              onClick={closeMenu}
+              className="block rounded-2xl px-4 py-2.5 text-sm font-medium transition-colors hover:bg-[var(--bg-subtle)]"
+              style={{ color: "var(--text-on-glass)" }}
+            >
+              {t.navSpecs}
+            </Link>
 
             <Link
               href="/about"

@@ -4,9 +4,18 @@ async function swipeStory(page: Page, fromY = 640, toY = 300) {
   const cdp = await page.context().newCDPSession(page);
   const point = (y: number) => ({ x: 195, y, id: 1 });
 
-  await cdp.send("Input.dispatchTouchEvent", { type: "touchStart", touchPoints: [point(fromY)] });
-  await cdp.send("Input.dispatchTouchEvent", { type: "touchMove", touchPoints: [point(toY)] });
-  await cdp.send("Input.dispatchTouchEvent", { type: "touchEnd", touchPoints: [] });
+  await cdp.send("Input.dispatchTouchEvent", {
+    type: "touchStart",
+    touchPoints: [point(fromY)],
+  });
+  await cdp.send("Input.dispatchTouchEvent", {
+    type: "touchMove",
+    touchPoints: [point(toY)],
+  });
+  await cdp.send("Input.dispatchTouchEvent", {
+    type: "touchEnd",
+    touchPoints: [],
+  });
   await cdp.detach();
 }
 
@@ -18,11 +27,15 @@ test.beforeEach(async ({ page }) => {
   await page.waitForTimeout(1300);
 });
 
-test("Statement mobile: one swipe reveals exactly one new sentence", async ({ page }) => {
+test("Statement mobile: one swipe reveals exactly one new sentence", async ({
+  page,
+}) => {
   const statement = page.locator("#statement");
   const lines = statement.locator(".cx-statement-line");
 
-  await statement.evaluate((element) => element.scrollIntoView({ block: "start" }));
+  await statement.evaluate((element) =>
+    element.scrollIntoView({ block: "start" })
+  );
   await expect(statement).toHaveAttribute("data-fp-scene", "0");
   await expect(lines.nth(0)).toHaveCSS("opacity", "1");
   await expect(lines.nth(1)).toHaveCSS("opacity", "0");
@@ -43,4 +56,37 @@ test("Statement mobile: one swipe reveals exactly one new sentence", async ({ pa
   await expect(statement).toHaveAttribute("data-fp-scene", "2");
   await expect(lines.nth(2)).toHaveCSS("opacity", "1");
   await expect(lines.nth(1)).toHaveCSS("opacity", "0");
+});
+
+test("Entering the mobile story from fluid cards aligns the chapter before changing sentences", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 414, height: 896 });
+  const statement = page.locator("#statement");
+  await statement.evaluate((el) =>
+    window.scrollTo({
+      top: el.getBoundingClientRect().top + window.scrollY - 220,
+      behavior: "instant",
+    })
+  );
+  await expect
+    .poll(() =>
+      statement.evaluate((el) => Math.abs(el.getBoundingClientRect().top))
+    )
+    .toBeLessThan(2);
+  await expect(statement).toHaveAttribute("data-fp-scene", "0");
+  await expect
+    .poll(() =>
+      page
+        .locator("#discover")
+        .evaluate((el) => el.getBoundingClientRect().bottom)
+    )
+    .toBeLessThanOrEqual(1);
+  await page.waitForTimeout(800);
+  await swipeStory(page);
+  await expect(statement).toHaveAttribute("data-fp-scene", "1");
+  const line = statement.locator('.cx-statement-line[data-current="true"]');
+  const box = await line.boundingBox();
+  expect(box!.y).toBeGreaterThan(90);
+  expect(box!.y + box!.height).toBeLessThan(800);
 });

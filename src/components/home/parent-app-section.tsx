@@ -103,45 +103,58 @@ export function ParentAppSection() {
 
         <div className="max-w-6xl mx-auto relative z-10 w-full px-2 sm:px-4">
           <Reveal direction="up" delay={0}>
-            <header className="text-center sm:text-left">
-              <h2 className="font-display font-bold tracking-tight leading-[1.1] text-[clamp(1.25rem,3.2vw,2.5rem)]">
-                {t.homeAppTitle}{" "}
-                <span className="text-gradient-ocean">{t.homeAppTitleAccent}</span>
-              </h2>
-              <p className="mt-1.5 sm:mt-3 max-w-2xl text-[clamp(0.78rem,1.2vw,1.02rem)] leading-relaxed" style={{ color: "var(--text-dim)" }}>
-                {t.homeAppDesc}
-              </p>
+            <header className="flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+              <div className="flex-1">
+                <h2 className="font-display font-bold tracking-tight leading-[1.1] text-[clamp(1.25rem,3.2vw,2.5rem)]">
+                  {t.homeAppTitle}{" "}
+                  <span className="text-gradient-ocean">{t.homeAppTitleAccent}</span>
+                </h2>
+                <p className="mt-1.5 sm:mt-3 max-w-2xl text-[clamp(0.78rem,1.2vw,1.02rem)] leading-relaxed" style={{ color: "var(--text-dim)" }}>
+                  {t.homeAppDesc}
+                </p>
 
-              {/* Direct App Download Action Bar */}
-              <div className="mt-3 sm:mt-6 flex flex-row items-center justify-center sm:justify-start gap-2 sm:gap-3">
-                <button
-                  onClick={handleTriggerDirectDownload}
-                  disabled={directDownloading}
-                  className="px-3.5 py-2 rounded-xl sm:rounded-2xl font-bold text-[11px] sm:text-sm shadow-md transition-all flex items-center gap-1.5 transform hover:-translate-y-0.5 active:translate-y-0 sm:px-6 sm:py-3"
-                  style={{
-                    background: "var(--gradient-ocean)",
-                    color: "var(--text-on-accent)",
-                    boxShadow: "var(--shadow-glow)"
-                  }}
-                >
-                  <span className="material-symbols-outlined text-base sm:text-xl">
-                    {directDownloading ? "sync" : "download"}
-                  </span>
-                  <span>{directDownloading ? "Đang tải APK..." : "Tải APK (Android)"}</span>
-                </button>
+                {/* Direct App Download Action Bar */}
+                <div className="mt-3 sm:mt-6 flex flex-row items-center justify-center sm:justify-start gap-2 sm:gap-3">
+                  <button
+                    onClick={handleTriggerDirectDownload}
+                    disabled={directDownloading}
+                    className="px-3.5 py-2 rounded-xl sm:rounded-2xl font-bold text-[11px] sm:text-sm shadow-md transition-all flex items-center gap-1.5 transform hover:-translate-y-0.5 active:translate-y-0 sm:px-6 sm:py-3"
+                    style={{
+                      background: "var(--gradient-ocean)",
+                      color: "var(--text-on-accent)",
+                      boxShadow: "var(--shadow-glow)"
+                    }}
+                  >
+                    <span className="material-symbols-outlined text-base sm:text-xl">
+                      {directDownloading ? "sync" : "download"}
+                    </span>
+                    <span>{directDownloading ? "Đang tải APK..." : "Tải APK (Android)"}</span>
+                  </button>
 
-                <button
-                  onClick={() => setDownloadModalOpen(true)}
-                  className="px-3 py-2 rounded-xl sm:rounded-2xl font-semibold text-[11px] sm:text-sm transition-all flex items-center gap-1.5 border sm:px-5 sm:py-3"
-                  style={{
-                    backgroundColor: "var(--glass-bg)",
-                    borderColor: "var(--glass-border)",
-                    color: "var(--text-on-glass)"
-                  }}
-                >
-                  <span className="material-symbols-outlined text-base sm:text-xl">qr_code_scanner</span>
-                  <span>Quét QR / Tải App</span>
-                </button>
+                  <button
+                    onClick={() => setDownloadModalOpen(true)}
+                    className="px-3 py-2 rounded-xl sm:rounded-2xl font-semibold text-[11px] sm:text-sm transition-all flex items-center gap-1.5 border sm:px-5 sm:py-3"
+                    style={{
+                      backgroundColor: "var(--glass-bg)",
+                      borderColor: "var(--glass-border)",
+                      color: "var(--text-on-glass)"
+                    }}
+                  >
+                    <span className="material-symbols-outlined text-base sm:text-xl">qr_code_scanner</span>
+                    <span>Quét QR / Tải App</span>
+                  </button>
+                </div>
+              </div>
+
+              {/* Mascot Companion with Tablet */}
+              <div className="hidden md:flex flex-col items-center shrink-0 w-28 lg:w-32 animate-float">
+                <Image
+                  src="/mascots/frog-parent-app.webp"
+                  alt="AIva đồng hành cùng phụ huynh"
+                  width={140}
+                  height={140}
+                  className="w-full h-auto object-contain filter drop-shadow-lg"
+                />
               </div>
             </header>
           </Reveal>
