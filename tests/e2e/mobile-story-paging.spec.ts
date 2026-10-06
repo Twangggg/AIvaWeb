@@ -23,8 +23,81 @@ test.beforeEach(async ({ page }) => {
   await page.addInitScript(() => localStorage.setItem("aiva_intro_seen", "1"));
   await page.goto("/");
   await expect(page.locator("#statement")).toBeAttached();
+  await expect(page.locator("#hero")).toHaveAttribute("data-fp-active", "true");
   // Let the page preloader unmount before testing touch input.
   await page.waitForTimeout(1300);
+});
+
+for (const viewport of [
+  { width: 360, height: 800 },
+  { width: 393, height: 873 },
+  { width: 414, height: 896 },
+  { width: 375, height: 534 },
+]) {
+  test(`Mobile ${viewport.width}×${viewport.height}: chapters align and overflow hands off at the boundary`, async ({
+    page,
+  }) => {
+    await page.setViewportSize(viewport);
+    const compare = page.locator("#compare");
+    await compare.evaluate((el) =>
+      window.scrollTo({
+        top: el.getBoundingClientRect().top + window.scrollY - 120,
+        behavior: "instant",
+      })
+    );
+    await expect
+      .poll(() =>
+        compare.evaluate((el) => Math.abs(el.getBoundingClientRect().top))
+      )
+      .toBeLessThan(2);
+    await page.waitForTimeout(800);
+    const chapter = compare.locator(".storybook-chapter");
+    await chapter.evaluate((el) => {
+      el.scrollTop = el.scrollHeight;
+    });
+    // The table is independently scrollable on narrow screens too.
+    await compare.locator("[data-fp-scroll]").evaluateAll((elements) => {
+      elements.forEach((el) => {
+        el.scrollTop = el.scrollHeight;
+      });
+    });
+    await swipeStory(page, viewport.height - 100, viewport.height - 250);
+    await expect
+      .poll(() =>
+        page
+          .locator("#companion")
+          .evaluate((el) => Math.abs(el.getBoundingClientRect().top))
+      )
+      .toBeLessThan(2);
+    await expect(page.locator("#companion")).toHaveAttribute(
+      "data-fp-scene",
+      "0"
+    );
+  });
+}
+
+test("Chrome mobile viewport resize preserves the current scene and fits the chapter", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 393, height: 760 });
+  const statement = page.locator("#statement");
+  await statement.evaluate((el) => el.scrollIntoView({ block: "start" }));
+  await page.waitForTimeout(800);
+  await swipeStory(page, 600, 300);
+  await expect(statement).toHaveAttribute("data-fp-scene", "1");
+  await page.setViewportSize({ width: 393, height: 873 });
+  await expect
+    .poll(() => statement.evaluate((el) => el.getBoundingClientRect().height))
+    .toBe(873);
+  await expect(statement).toHaveAttribute("data-fp-scene", "1");
+  await expect
+    .poll(() =>
+      statement.evaluate((el) => Math.abs(el.getBoundingClientRect().top))
+    )
+    .toBeLessThan(2);
+  await page.waitForTimeout(800);
+  await swipeStory(page);
+  await expect(statement).toHaveAttribute("data-fp-scene", "2");
 });
 
 test("Statement mobile: one swipe reveals exactly one new sentence", async ({

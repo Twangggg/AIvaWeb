@@ -30,8 +30,10 @@ export function useFullpageScroll(enabled = true) {
         (section) => section.getClientRects().length > 0
       );
 
-    const sectionTop = (el: HTMLElement) =>
-      Math.max(0, el.getBoundingClientRect().top + window.scrollY);
+    const viewport = () => ({
+      top: window.visualViewport?.offsetTop ?? 0,
+      height: window.visualViewport?.height ?? window.innerHeight,
+    });
 
     const getLenis = () =>
       (
@@ -77,6 +79,7 @@ export function useFullpageScroll(enabled = true) {
     }
 
     let cachedSections: SectionCacheItem[] = [];
+    let mobileAnchor: HTMLElement | null = null;
 
     const measureSections = () => {
       const list = getSections();
@@ -107,9 +110,9 @@ export function useFullpageScroll(enabled = true) {
         lastScrollY.current = currentY;
         setDir(dir);
 
-        const viewportHeight = window.innerHeight;
-        const viewTop = currentY;
-        const viewBottom = currentY + viewportHeight;
+        const { top: viewportOffset, height: viewportHeight } = viewport();
+        const viewTop = currentY + viewportOffset;
+        const viewBottom = viewTop + viewportHeight;
         const viewMid = currentY + viewportHeight * 0.45;
 
         let best = 0;
@@ -174,6 +177,14 @@ export function useFullpageScroll(enabled = true) {
           }
         });
 
+        const currentSection = cachedSections[best]?.el;
+        mobileAnchor =
+          window.innerWidth < 640 &&
+          currentSection?.hasAttribute("data-fp-mobile-lock") &&
+          Math.abs(currentSection.getBoundingClientRect().top) <= 2
+            ? currentSection
+            : null;
+
         if (best !== activeIdx.current) {
           activeIdx.current = best;
           const target = cachedSections[best]?.el;
@@ -201,15 +212,23 @@ export function useFullpageScroll(enabled = true) {
 
     let resizeTimer = 0;
     const onResize = () => {
+      const anchor = mobileAnchor;
       clearTimeout(resizeTimer);
       resizeTimer = window.setTimeout(() => {
         measureSections();
+        // Browser chrome and orientation changes resize earlier chapters too.
+        // Keep the chapter being read anchored without resetting its scene.
+        if (anchor && window.innerWidth < 640 && !touchSection)
+          anchor.scrollIntoView({ behavior: "instant", block: "start" });
         onScroll();
       }, 100);
     };
 
     window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("resize", onResize, { passive: true });
+    window.visualViewport?.addEventListener("resize", onResize);
+    const sectionObserver = new ResizeObserver(onResize);
+    getSections().forEach((section) => sectionObserver.observe(section));
 
     // Full-page paging ------------------------------------------------------
     // Wheel and touch share the same state machine: complete all scenes in a
@@ -220,11 +239,12 @@ export function useFullpageScroll(enabled = true) {
     let lastTouchY = 0;
     let touchSection: HTMLElement | null = null;
     let touchLocked = false;
+    let touchTarget: EventTarget | null = null;
     let inputLockUntil = 0;
 
     const sectionAtViewport = (): HTMLElement | null => {
-      const viewportHeight = window.innerHeight;
-      const viewportTop = Math.min(100, viewportHeight * 0.15);
+      const { top, height: viewportHeight } = viewport();
+      const viewportTop = top + Math.min(100, viewportHeight * 0.15);
       let candidate: HTMLElement | null = null;
       let largestVisibleArea = 0;
       let closestStart = Infinity;
@@ -236,7 +256,7 @@ export function useFullpageScroll(enabled = true) {
         const rect = el.getBoundingClientRect();
         const visibleHeight = Math.max(
           0,
-          Math.min(rect.bottom, viewportHeight) -
+          Math.min(rect.bottom, top + viewportHeight) -
             Math.max(rect.top, viewportTop)
         );
         const startDistance = Math.abs(rect.top - viewportTop);
@@ -254,19 +274,24 @@ export function useFullpageScroll(enabled = true) {
       return candidate;
     };
 
-    const isScrollableTarget = (target: EventTarget | null) => {
+    const isScrollableTarget = (target: EventTarget | null, dir: Dir) => {
       if (!(target instanceof Element)) return false;
-      const scrollable = target.closest(
-        "[data-fp-scroll], input, textarea, select, [contenteditable='true']"
-      );
-      if (!scrollable) return false;
-      // If user is inside an internal scroll container with remaining scroll room, let native scroll work
-      if (scrollable.scrollHeight > scrollable.clientHeight) {
+      if (target.closest("input, textarea, select, [contenteditable='true']"))
         return true;
+      // Only an actual scroll container with room in this direction owns input.
+      // Content overflow alone (including a rounded pixel) must not disable paging.
+      for (
+        let el: Element | null = target;
+        el && !el.matches(SELECTOR);
+        el = el.parentElement
+      ) {
+        if (!el.hasAttribute("data-fp-scroll")) continue;
+        const overflow = getComputedStyle(el).overflowY;
+        if (overflow !== "auto" && overflow !== "scroll") continue;
+        const remaining = el.scrollHeight - el.clientHeight - el.scrollTop;
+        if (dir > 0 ? remaining > 2 : el.scrollTop > 2) return true;
       }
-      return Boolean(
-        scrollable.matches("input, textarea, select, [contenteditable='true']")
-      );
+      return false;
     };
 
     // On phones, only deliberately scene-based chapters opt into paging.
@@ -288,10 +313,9 @@ export function useFullpageScroll(enabled = true) {
       }
     };
 
-    const alignMobileScene = (section: HTMLElement, dir: Dir) => {
+    const alignMobileChapter = (section: HTMLElement, dir: Dir) => {
       if (
         window.innerWidth >= 640 ||
-        sceneCount(section) < 2 ||
         !section.hasAttribute("data-fp-mobile-lock")
       )
         return false;
@@ -299,8 +323,9 @@ export function useFullpageScroll(enabled = true) {
       if (Math.abs(rect.top) <= 2) return false;
       // Fluid sections can leave a story chapter only partly on screen.
       // Finish entering it before any swipe is allowed to change its scene.
-      if (dir > 0 && rect.top > 0) setScene(section, 0, dir);
-      if (dir < 0 && rect.top < 0)
+      if (sceneCount(section) > 1 && dir > 0 && rect.top > 0)
+        setScene(section, 0, dir);
+      if (sceneCount(section) > 1 && dir < 0 && rect.top < 0)
         setScene(section, sceneCount(section) - 1, dir);
       section.scrollIntoView({ behavior: "smooth", block: "start" });
       inputLockUntil = Date.now() + 650;
@@ -309,19 +334,21 @@ export function useFullpageScroll(enabled = true) {
 
     const onScrollEnd = () => {
       if (window.innerWidth >= 640) return;
+      if (touchSection) return;
       const section = sectionAtViewport();
       if (!section) return;
       const rect = section.getBoundingClientRect();
+      const { top, height } = viewport();
       const visible =
-        Math.min(rect.bottom, window.innerHeight) - Math.max(rect.top, 0);
-      if (visible < window.innerHeight * 0.6) return;
-      alignMobileScene(section, rect.top >= 0 ? 1 : -1);
+        Math.min(rect.bottom, top + height) - Math.max(rect.top, top);
+      if (visible < height * 0.6) return;
+      alignMobileChapter(section, rect.top >= 0 ? 1 : -1);
     };
     window.addEventListener("scrollend", onScrollEnd);
 
     const advance = (section: HTMLElement, dir: Dir) => {
       if (Date.now() < inputLockUntil) return;
-      if (alignMobileScene(section, dir)) return;
+      if (alignMobileChapter(section, dir)) return;
       const count = sceneCount(section);
       const current = Number(section.dataset.fpScene || 0);
       const next =
@@ -347,7 +374,7 @@ export function useFullpageScroll(enabled = true) {
     const WHEEL_GESTURE_GAP_MS = 220;
 
     const onWheel = (event: WheelEvent) => {
-      if (isScrollableTarget(event.target)) return;
+      if (isScrollableTarget(event.target, event.deltaY > 0 ? 1 : -1)) return;
       const section = sectionAtViewport();
       if (!section || !usesMobilePaging(section)) return;
       const now = performance.now();
@@ -361,7 +388,8 @@ export function useFullpageScroll(enabled = true) {
     };
 
     const onTouchStart = (event: TouchEvent) => {
-      if (event.touches.length !== 1 || isScrollableTarget(event.target)) {
+      touchTarget = event.target;
+      if (event.touches.length !== 1) {
         touchSection = null;
         touchLocked = false;
         return;
@@ -385,6 +413,13 @@ export function useFullpageScroll(enabled = true) {
 
       // Only lock and prevent default when the gesture is primarily vertical story paging
       if (Math.abs(deltaY) > 8 && Math.abs(deltaY) > Math.abs(deltaX)) {
+        if (
+          !touchLocked &&
+          isScrollableTarget(touchTarget, deltaY < 0 ? 1 : -1)
+        ) {
+          touchSection = null;
+          return;
+        }
         touchLocked = true;
         event.preventDefault();
       }
@@ -405,6 +440,12 @@ export function useFullpageScroll(enabled = true) {
     window.addEventListener("touchstart", onTouchStart, { passive: true });
     window.addEventListener("touchmove", onTouchMove, { passive: false });
     window.addEventListener("touchend", onTouchEnd, { passive: true });
+    const onTouchCancel = () => {
+      touchSection = null;
+      touchTarget = null;
+      touchLocked = false;
+    };
+    window.addEventListener("touchcancel", onTouchCancel, { passive: true });
 
     // Keyboard navigation (glide smoothly with Lenis)
     const onKey = (e: KeyboardEvent) => {
@@ -446,6 +487,8 @@ export function useFullpageScroll(enabled = true) {
     return () => {
       cancelAnimationFrame(rafId);
       clearTimeout(resizeTimer);
+      sectionObserver.disconnect();
+      window.visualViewport?.removeEventListener("resize", onResize);
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("scrollend", onScrollEnd);
       window.removeEventListener("resize", onResize);
@@ -454,6 +497,7 @@ export function useFullpageScroll(enabled = true) {
       window.removeEventListener("touchstart", onTouchStart);
       window.removeEventListener("touchmove", onTouchMove);
       window.removeEventListener("touchend", onTouchEnd);
+      window.removeEventListener("touchcancel", onTouchCancel);
     };
   }, [enabled]);
 }

@@ -3005,9 +3005,18 @@ html {
 @media (max-width: 639px) {
   /* Mobile pages through the landing story one chapter at a time. */
   .cx-fp-section[data-fp-mobile-lock] {
-    min-height: 100svh;
-    height: 100svh;
+    min-height: 100dvh;
+    height: 100dvh;
     overflow: hidden;
+  }
+
+  .cx-fp-section[data-fp-mobile-lock] > div,
+  .cx-fp-section[data-fp-mobile-lock] .storybook-chapter,
+  #statement .cx-statement-frame,
+  #experience #glasses-3d-showcase,
+  #experience #glasses-3d-showcase > div {
+    height: 100dvh;
+    max-height: 100dvh;
   }
 
   #mission.cx-fp-section {
