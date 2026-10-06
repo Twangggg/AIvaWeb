@@ -34,3 +34,6 @@ pnpm-debug.log*
 # test results
 test-results/
 playwright-report/
+
+# APKs are distributed through GitHub Release assets, not Git.
+public/app/*.apk
