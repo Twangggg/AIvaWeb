@@ -123,7 +123,7 @@ export default function PublicPlayPage() {
     <>
       <Nav onPreorder={() => setPreorderOpen(true)} />
       <main
-        className={`ui-page min-h-screen overflow-x-hidden px-3 sm:px-6 ${selectedGame ? "pt-16 sm:pt-20 pb-4" : "pt-16 sm:pt-20 pb-12"}`}
+        className={`ui-page min-h-screen overflow-x-hidden px-3 sm:px-6 ${selectedGame ? "pt-16 sm:pt-20 pb-4" : "family-page pb-12"}`}
       >
         <div className="pointer-events-none absolute left-1/2 top-20 h-80 w-80 -translate-x-1/2 rounded-full bg-yellow-400/20 blur-[100px]" />
         <section className={`relative mx-auto max-w-5xl ${selectedGame ? "" : "play-lobby"}`}>

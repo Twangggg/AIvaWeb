@@ -11,13 +11,6 @@ interface AppDownloadModalProps {
 export function AppDownloadModal({ open, onClose }: AppDownloadModalProps) {
   if (!open) return null;
 
-  // Real URL for QR code scanning
-  const qrTargetUrl =
-    typeof window !== "undefined"
-      ? `${window.location.origin}${APP_DOWNLOAD.path}`
-      : `https://aiva.id.vn${APP_DOWNLOAD.path}`;
-
-  const qrImageUrl = `https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=${encodeURIComponent(qrTargetUrl)}&color=0a0e14&bgcolor=ffffff`;
 
   return (
     <div
@@ -200,16 +193,16 @@ export function AppDownloadModal({ open, onClose }: AppDownloadModalProps) {
               borderColor: "var(--border-subtle)",
             }}
           >
-            <div className="p-1.5 bg-white rounded-xl shadow-md shrink-0 border border-slate-200">
+              <a href={APP_DOWNLOAD.landingUrl} aria-label="Mở trang tải ứng dụng AIVA" className="p-1.5 bg-white rounded-xl shadow-md shrink-0 border border-slate-200">
               <Image
-                src={qrImageUrl}
+                src="/app/aiva-companion-qr.png"
                 alt="QR Code Tải App AIVA"
-                width={80}
-                height={80}
-                className="w-20 h-20 object-contain rounded"
+                width={140}
+                height={140}
+                className="w-28 h-28 sm:w-36 sm:h-36 object-contain"
                 unoptimized
               />
-            </div>
+            </a>
             <div>
               <div
                 className="text-xs font-bold mb-0.5 flex items-center gap-1"
@@ -227,8 +220,7 @@ export function AppDownloadModal({ open, onClose }: AppDownloadModalProps) {
                 className="text-[11px] leading-relaxed"
                 style={{ color: "var(--text-dim)" }}
               >
-                Dùng camera quét mã để tải xuống trực tiếp file cài đặt trên
-                điện thoại.
+                Quét mã để mở trang tải ứng dụng, sau đó chọn tải cho Android.
               </p>
             </div>
           </div>

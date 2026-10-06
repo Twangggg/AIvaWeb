@@ -36,8 +36,8 @@ export default function NewsPage() {
   return (
     <>
       <Nav onPreorder={() => setPreorderOpen(true)} />
-      <main className="min-h-screen pt-24 pb-20">
-        <section id="news-hub" className="py-12 md:py-20 px-6 relative">
+      <main className="family-page min-h-screen pb-20">
+        <section id="news-hub" className="pb-12 md:pb-20 px-6 relative">
           <div className="absolute inset-0 grid-bg opacity-60" />
           <div className="absolute inset-0 pointer-events-none">
             <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] rounded-full bg-[var(--ocean)]/10 blur-[100px]" />

@@ -168,7 +168,7 @@ body,
   align-items: center;
   gap: 22px;
   width: min(1000px, calc(100% - 32px));
-  margin: 24px auto 0;
+  margin: 0 auto;
   padding: 20px 28px;
   border: 0;
   border-radius: 0;
@@ -200,7 +200,7 @@ body,
     gap: 12px;
     padding: 16px;
     border-radius: 24px;
-    margin-top: 12px;
+    margin-top: 0;
   }
   .family-greeting-friend {
     width: 76px;
@@ -284,7 +284,7 @@ body,
 
 .family-greeting {
   margin-bottom: 40px;
-  padding: 24px 0;
+  padding: 12px 0 24px;
   justify-content: center;
   gap: 32px;
 }
@@ -301,7 +301,7 @@ body,
 }
 @media (max-width: 639px) {
   .family-greeting {
-    padding: 16px 0;
+    padding: 12px 0 16px;
     gap: 14px;
     margin-bottom: 28px;
   }
@@ -317,7 +317,26 @@ body,
   }
 }
 
-.play-lobby > .family-greeting {
+/* Public page introductions share one offset from the floating navigation. */
+.family-page {
+  padding-top: 96px;
+}
+.family-page > section:first-child {
+  padding-top: 0;
+}
+.family-page .family-greeting {
   margin-top: 0;
-  padding-top: 12px;
+  margin-bottom: 32px;
+  padding: 16px 0;
+  min-height: 144px;
+}
+@media (max-width: 639px) {
+  .family-page {
+    padding-top: 72px;
+  }
+  .family-page .family-greeting {
+    min-height: 112px;
+    margin-bottom: 24px;
+    padding: 12px 0;
+  }
 }

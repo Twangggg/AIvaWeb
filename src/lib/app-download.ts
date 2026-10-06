@@ -1,4 +1,5 @@
 export const APP_DOWNLOAD = {
+  landingUrl: "https://aiva.id.vn/download",
   path: "/api/download/app?platform=android",
   filename: "AIVA_Companion_v1.0.0-preview.apk",
   version: "1.0.0",

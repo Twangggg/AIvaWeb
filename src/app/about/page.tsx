@@ -51,7 +51,7 @@ function AboutUs() {
   ];
 
   return (
-    <section id="about" className="pt-8 pb-16 px-6 relative">
+    <section id="about" className="pb-16 px-6 relative">
       <div className="absolute inset-0 grid-bg opacity-60" />
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] rounded-full bg-[var(--ocean)]/10 blur-[100px]" />
@@ -206,7 +206,7 @@ export default function AboutPage() {
   return (
     <>
       <Nav onPreorder={() => setPreorderOpen(true)} />
-      <main className="min-h-screen pt-24">
+      <main className="family-page min-h-screen">
         <AboutUs />
       </main>
       <Footer />

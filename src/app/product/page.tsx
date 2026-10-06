@@ -145,7 +145,7 @@ export default function ProductPage() {
   return (
     <>
       <Nav onPreorder={() => setPreorderOpen(true)} />
-      <main className="min-h-screen pt-24">
+      <main className="family-page min-h-screen">
         <FamilyGreeting topic="product" />
         <Home3DScroll interactive />
         <HowItWorks />
