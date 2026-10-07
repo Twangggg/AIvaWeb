@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, type Ref } from "react";
 import { Mascot } from "page-mascot";
 
 interface ChatMascotButtonProps {
@@ -8,6 +8,7 @@ interface ChatMascotButtonProps {
   talking?: boolean;
   onClick: () => void;
   ariaLabel: string;
+  anchorRef?: Ref<HTMLDivElement>;
 }
 
 export function ChatMascotButton({
@@ -15,6 +16,7 @@ export function ChatMascotButton({
   talking = false,
   onClick,
   ariaLabel,
+  anchorRef,
 }: ChatMascotButtonProps) {
   const [mascotSize, setMascotSize] = useState(56);
 
@@ -30,10 +32,15 @@ export function ChatMascotButton({
 
   return (
     <div
+      ref={anchorRef}
       onClick={onClick}
       data-talking={talking || undefined}
       className="fixed bottom-[0.65rem] right-[0.65rem] z-[60]"
-      style={{ opacity: open ? 0.88 : 1 }}
+      style={{
+        opacity: open ? 0.88 : 1,
+        bottom: "max(0.65rem, env(safe-area-inset-bottom))",
+        right: "max(0.65rem, env(safe-area-inset-right))",
+      }}
     >
       <Mascot
         directions="/mascots/frog-2d-arms-down-directions.png"

@@ -1,6 +1,13 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
+import {
+  FloatingPortal,
+  useClick,
+  useDismiss,
+  useInteractions,
+} from "@floating-ui/react";
+import { useFloatingSurface } from "@/hooks/use-floating-surface";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -37,7 +44,20 @@ export function RoleWorkspaceShell({
   const logout = useAuthStore((s) => s.logout);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [accountOpen, setAccountOpen] = useState(false);
-  const accountRef = useRef<HTMLDivElement>(null);
+  const {
+    setReference: setAccountReference,
+    setFloating: setAccountFloating,
+    floatingStyles: accountStyles,
+    context: accountContext,
+    isPositioned: accountPositioned,
+  } = useFloatingSurface({
+    open: accountOpen,
+    onOpenChange: setAccountOpen,
+    width: 280,
+  });
+  const accountClick = useClick(accountContext);
+  const accountDismiss = useDismiss(accountContext);
+  const accountInteractions = useInteractions([accountClick, accountDismiss]);
 
   const isTeacher = variant === "teacher";
   const brandAccent = isTeacher
@@ -61,22 +81,6 @@ export function RoleWorkspaceShell({
     : "bg-sky-600 text-white dark:bg-sky-500";
   const idleClass =
     "text-[var(--console-fg)]/75 hover:bg-black/[0.04] hover:text-[var(--console-fg)] dark:hover:bg-white/[0.06]";
-
-  useEffect(() => {
-    if (!accountOpen) return;
-    const onPointer = (e: MouseEvent) => {
-      if (!accountRef.current?.contains(e.target as Node)) setAccountOpen(false);
-    };
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setAccountOpen(false);
-    };
-    document.addEventListener("mousedown", onPointer);
-    document.addEventListener("keydown", onKey);
-    return () => {
-      document.removeEventListener("mousedown", onPointer);
-      document.removeEventListener("keydown", onKey);
-    };
-  }, [accountOpen]);
 
   const close = () => setMobileOpen(false);
   const displayName = user?.displayName || (en ? "Account" : "Tài khoản");
@@ -104,10 +108,16 @@ export function RoleWorkspaceShell({
               className="inline-flex size-9 shrink-0 items-center justify-center rounded-lg border border-[var(--console-border)] bg-[var(--console-chip)] text-[var(--console-muted)] md:hidden"
               aria-label="Menu"
             >
-              <span className="material-symbols-outlined text-[22px]">menu</span>
+              <span className="material-symbols-outlined text-[22px]">
+                menu
+              </span>
             </button>
 
-            <Link href="/" className="min-w-0" title={en ? "Back to website" : "Về trang chủ"}>
+            <Link
+              href="/"
+              className="min-w-0"
+              title={en ? "Back to website" : "Về trang chủ"}
+            >
               <p className="truncate text-sm font-bold tracking-tight">
                 AIVA{" "}
                 <span
@@ -120,7 +130,9 @@ export function RoleWorkspaceShell({
                   {brandAccent}
                 </span>
               </p>
-              <p className="hidden truncate text-[11px] text-[var(--console-muted)] sm:block">{brandHint}</p>
+              <p className="hidden truncate text-[11px] text-[var(--console-muted)] sm:block">
+                {brandHint}
+              </p>
             </Link>
           </div>
 
@@ -149,17 +161,18 @@ export function RoleWorkspaceShell({
                   activeClass={activeClass}
                   idleClass={idleClass}
                 />
-              ),
+              )
             )}
           </nav>
 
           {/* Right corner — theme + account */}
           <div className="relative z-10 flex items-center gap-2">
             <AppearanceMenu />
-            <div className="relative" ref={accountRef}>
+            <div className="relative">
               <button
                 type="button"
-                onClick={() => setAccountOpen((v) => !v)}
+                ref={setAccountReference}
+                {...accountInteractions.getReferenceProps()}
                 aria-expanded={accountOpen}
                 aria-haspopup="menu"
                 className="inline-flex min-h-9 max-w-[14rem] items-center gap-2 rounded-lg border border-[var(--console-border)] bg-[var(--console-chip)] py-1 pl-1.5 pr-2 text-sm font-medium text-[var(--console-fg)]"
@@ -167,67 +180,81 @@ export function RoleWorkspaceShell({
                 <span className="flex size-7 shrink-0 items-center justify-center rounded-full bg-[var(--console-inverse)] text-xs font-semibold text-[var(--console-inverse-fg)]">
                   {initials}
                 </span>
-                <span className="hidden min-w-0 truncate sm:inline">{displayName}</span>
+                <span className="hidden min-w-0 truncate sm:inline">
+                  {displayName}
+                </span>
                 <span className="material-symbols-outlined shrink-0 text-[16px] text-[var(--console-muted)]">
                   expand_more
                 </span>
               </button>
               {accountOpen && (
-                <div
-                  role="menu"
-                  className="absolute right-0 top-[calc(100%+0.45rem)] z-50 w-[17.5rem] rounded-xl border border-[var(--console-border)] bg-[var(--console-rail)] p-2 shadow-lg"
-                >
-                  <div className="rounded-lg bg-black/[0.03] px-3 py-3 dark:bg-white/[0.04]">
-                    <div className="flex items-start gap-3">
-                      <span className="flex size-10 shrink-0 items-center justify-center rounded-full bg-[var(--console-inverse)] text-sm font-semibold text-[var(--console-inverse-fg)]">
-                        {initials}
-                      </span>
-                      <div className="min-w-0 flex-1">
-                        <p className="truncate text-sm font-semibold text-[var(--console-fg)]">{displayName}</p>
-                        <p className="mt-0.5 truncate text-xs text-[var(--console-muted)]">
-                          {user?.email || "—"}
-                        </p>
-                        <div className="mt-2 flex flex-wrap gap-1.5">
-                          <span className="rounded-md bg-[var(--console-accent)]/20 px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-[var(--console-muted)]">
-                            {roleLabel}
-                          </span>
-                          {user?.emailConfirmed === false ? (
-                            <span className="rounded-md bg-amber-500/15 px-1.5 py-0.5 text-[10px] font-semibold text-amber-800 dark:text-amber-200">
-                              {en ? "Unverified" : "Chưa xác nhận"}
+                <FloatingPortal>
+                  <div
+                    ref={setAccountFloating}
+                    {...accountInteractions.getFloatingProps()}
+                    style={{
+                      ...accountStyles,
+                      visibility: accountPositioned ? "visible" : "hidden",
+                    }}
+                    role="menu"
+                    className="z-[70] overflow-y-auto rounded-xl border border-[var(--console-border)] bg-[var(--console-rail)] p-2 shadow-lg"
+                  >
+                    <div className="rounded-lg bg-black/[0.03] px-3 py-3 dark:bg-white/[0.04]">
+                      <div className="flex items-start gap-3">
+                        <span className="flex size-10 shrink-0 items-center justify-center rounded-full bg-[var(--console-inverse)] text-sm font-semibold text-[var(--console-inverse-fg)]">
+                          {initials}
+                        </span>
+                        <div className="min-w-0 flex-1">
+                          <p className="truncate text-sm font-semibold text-[var(--console-fg)]">
+                            {displayName}
+                          </p>
+                          <p className="mt-0.5 truncate text-xs text-[var(--console-muted)]">
+                            {user?.email || "—"}
+                          </p>
+                          <div className="mt-2 flex flex-wrap gap-1.5">
+                            <span className="rounded-md bg-[var(--console-accent)]/20 px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-[var(--console-muted)]">
+                              {roleLabel}
                             </span>
-                          ) : (
-                            <span className="rounded-md bg-emerald-500/15 px-1.5 py-0.5 text-[10px] font-semibold text-emerald-700 dark:text-emerald-300">
-                              {en ? "Verified" : "Đã xác nhận"}
-                            </span>
-                          )}
+                            {user?.emailConfirmed === false ? (
+                              <span className="rounded-md bg-amber-500/15 px-1.5 py-0.5 text-[10px] font-semibold text-amber-800 dark:text-amber-200">
+                                {en ? "Unverified" : "Chưa xác nhận"}
+                              </span>
+                            ) : (
+                              <span className="rounded-md bg-emerald-500/15 px-1.5 py-0.5 text-[10px] font-semibold text-emerald-700 dark:text-emerald-300">
+                                {en ? "Verified" : "Đã xác nhận"}
+                              </span>
+                            )}
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
 
-                  <div className="mt-1.5 flex flex-col gap-0.5">
-                    <Link
-                      href="/console/account"
-                      role="menuitem"
-                      onClick={() => setAccountOpen(false)}
-                      className="flex items-center gap-2 rounded-lg px-2.5 py-2 text-sm hover:bg-black/[0.04] dark:hover:bg-white/[0.06]"
-                    >
-                      <span className="material-symbols-outlined text-[18px] text-[var(--console-muted)]">
-                        lock_reset
-                      </span>
-                      {en ? "Change password" : "Đổi mật khẩu"}
-                    </Link>
-                    <button
-                      type="button"
-                      role="menuitem"
-                      onClick={() => void logout()}
-                      className="flex w-full items-center gap-2 rounded-lg px-2.5 py-2 text-left text-sm text-red-700 hover:bg-red-500/10 dark:text-red-300"
-                    >
-                      <span className="material-symbols-outlined text-[18px]">logout</span>
-                      {en ? "Log out" : "Đăng xuất"}
-                    </button>
+                    <div className="mt-1.5 flex flex-col gap-0.5">
+                      <Link
+                        href="/console/account"
+                        role="menuitem"
+                        onClick={() => setAccountOpen(false)}
+                        className="flex items-center gap-2 rounded-lg px-2.5 py-2 text-sm hover:bg-black/[0.04] dark:hover:bg-white/[0.06]"
+                      >
+                        <span className="material-symbols-outlined text-[18px] text-[var(--console-muted)]">
+                          lock_reset
+                        </span>
+                        {en ? "Change password" : "Đổi mật khẩu"}
+                      </Link>
+                      <button
+                        type="button"
+                        role="menuitem"
+                        onClick={() => void logout()}
+                        className="flex w-full items-center gap-2 rounded-lg px-2.5 py-2 text-left text-sm text-red-700 hover:bg-red-500/10 dark:text-red-300"
+                      >
+                        <span className="material-symbols-outlined text-[18px]">
+                          logout
+                        </span>
+                        {en ? "Log out" : "Đăng xuất"}
+                      </button>
+                    </div>
                   </div>
-                </div>
+                </FloatingPortal>
               )}
             </div>
           </div>
@@ -244,8 +271,16 @@ export function RoleWorkspaceShell({
           />
           <aside className="absolute inset-y-0 left-0 flex w-[min(18rem,88vw)] flex-col bg-[var(--console-rail)] shadow-xl">
             <div className="flex h-14 items-center justify-between border-b border-[var(--console-border)] px-4">
-              <Link href="/" onClick={close} className="text-sm font-bold" title={en ? "Back to website" : "Về trang chủ"}>
-                AIVA <span className="text-[var(--console-muted)]">{brandAccent}</span>
+              <Link
+                href="/"
+                onClick={close}
+                className="text-sm font-bold"
+                title={en ? "Back to website" : "Về trang chủ"}
+              >
+                AIVA{" "}
+                <span className="text-[var(--console-muted)]">
+                  {brandAccent}
+                </span>
               </Link>
               <button
                 type="button"
@@ -287,13 +322,15 @@ export function RoleWorkspaceShell({
                       ))}
                     </div>
                   </div>
-                ),
+                )
               )}
             </nav>
             <div className="border-t border-[var(--console-border)] p-3">
               <div className="mb-2 rounded-lg bg-black/[0.03] px-3 py-2.5 dark:bg-white/[0.04]">
                 <p className="truncate text-sm font-semibold">{displayName}</p>
-                <p className="truncate text-xs text-[var(--console-muted)]">{user?.email || "—"}</p>
+                <p className="truncate text-xs text-[var(--console-muted)]">
+                  {user?.email || "—"}
+                </p>
                 <p className="mt-1 text-[11px] font-medium uppercase tracking-wide text-[var(--console-muted)]">
                   {roleLabel}
                 </p>
@@ -317,7 +354,9 @@ export function RoleWorkspaceShell({
         </div>
       )}
 
-      <main className="mx-auto w-full max-w-7xl flex-1 px-5 py-7 sm:px-8 sm:py-8 lg:px-10">{children}</main>
+      <main className="mx-auto w-full max-w-7xl flex-1 px-5 py-7 sm:px-8 sm:py-8 lg:px-10">
+        {children}
+      </main>
     </div>
   );
 }
@@ -346,8 +385,14 @@ function TopLink({
         active ? activeClass : idleClass
       }`}
     >
-      {item.icon && <span className="material-symbols-outlined text-[18px]">{item.icon}</span>}
-      <span className="whitespace-nowrap">{en ? item.labelEn : item.labelVi}</span>
+      {item.icon && (
+        <span className="material-symbols-outlined text-[18px]">
+          {item.icon}
+        </span>
+      )}
+      <span className="whitespace-nowrap">
+        {en ? item.labelEn : item.labelVi}
+      </span>
     </Link>
   );
 }
@@ -366,38 +411,41 @@ function NavDropdown({
   idleClass: string;
 }) {
   const [open, setOpen] = useState(false);
-  const ref = useRef<HTMLDivElement>(null);
+  const { setReference, setFloating, floatingStyles, context, isPositioned } =
+    useFloatingSurface({
+      open,
+      onOpenChange: setOpen,
+      placement: "bottom",
+      width: 208,
+    });
+  const click = useClick(context);
+  const dismiss = useDismiss(context);
+  const { getReferenceProps, getFloatingProps } = useInteractions([
+    click,
+    dismiss,
+  ]);
   const groupActive = isGroupActive(entry, pathname);
 
-  useEffect(() => {
-    if (!open) return;
-    const onPointer = (e: MouseEvent) => {
-      if (!ref.current?.contains(e.target as Node)) setOpen(false);
-    };
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setOpen(false);
-    };
-    document.addEventListener("mousedown", onPointer);
-    document.addEventListener("keydown", onKey);
-    return () => {
-      document.removeEventListener("mousedown", onPointer);
-      document.removeEventListener("keydown", onKey);
-    };
-  }, [open]);
-
   return (
-    <div className="relative" ref={ref}>
+    <div className="relative">
       <button
         type="button"
-        onClick={() => setOpen((v) => !v)}
+        ref={setReference}
+        {...getReferenceProps()}
         aria-expanded={open}
         aria-haspopup="menu"
         className={`inline-flex items-center gap-1.5 rounded-lg px-3 py-2 text-sm font-medium transition ${
           groupActive || open ? activeClass : idleClass
         }`}
       >
-        {entry.icon && <span className="material-symbols-outlined text-[18px]">{entry.icon}</span>}
-        <span className="whitespace-nowrap">{en ? entry.labelEn : entry.labelVi}</span>
+        {entry.icon && (
+          <span className="material-symbols-outlined text-[18px]">
+            {entry.icon}
+          </span>
+        )}
+        <span className="whitespace-nowrap">
+          {en ? entry.labelEn : entry.labelVi}
+        </span>
         <span
           className={`material-symbols-outlined text-[16px] transition ${open ? "rotate-180" : ""}`}
         >
@@ -405,34 +453,42 @@ function NavDropdown({
         </span>
       </button>
       {open && (
-        <div
-          role="menu"
-          className="absolute left-1/2 top-[calc(100%+0.45rem)] z-50 w-52 -translate-x-1/2 rounded-xl border border-[var(--console-border)] bg-[var(--console-rail)] p-1.5 shadow-lg"
-        >
-          {entry.children.map((child) => {
-            const active = isNavLinkActive(child, pathname, entry.children);
-            return (
-              <Link
-                key={child.href}
-                href={child.href}
-                role="menuitem"
-                onClick={() => setOpen(false)}
-                className={`flex items-center gap-2 rounded-lg px-2.5 py-2 text-sm transition ${
-                  active
-                    ? "bg-black/[0.06] font-semibold dark:bg-white/[0.08]"
-                    : "hover:bg-black/[0.04] dark:hover:bg-white/[0.06]"
-                }`}
-              >
-                {child.icon && (
-                  <span className="material-symbols-outlined text-[18px] text-[var(--console-muted)]">
-                    {child.icon}
-                  </span>
-                )}
-                {en ? child.labelEn : child.labelVi}
-              </Link>
-            );
-          })}
-        </div>
+        <FloatingPortal>
+          <div
+            ref={setFloating}
+            {...getFloatingProps()}
+            style={{
+              ...floatingStyles,
+              visibility: isPositioned ? "visible" : "hidden",
+            }}
+            role="menu"
+            className="z-[70] overflow-y-auto rounded-xl border border-[var(--console-border)] bg-[var(--console-rail)] p-1.5 shadow-lg"
+          >
+            {entry.children.map((child) => {
+              const active = isNavLinkActive(child, pathname, entry.children);
+              return (
+                <Link
+                  key={child.href}
+                  href={child.href}
+                  role="menuitem"
+                  onClick={() => setOpen(false)}
+                  className={`flex items-center gap-2 rounded-lg px-2.5 py-2 text-sm transition ${
+                    active
+                      ? "bg-black/[0.06] font-semibold dark:bg-white/[0.08]"
+                      : "hover:bg-black/[0.04] dark:hover:bg-white/[0.06]"
+                  }`}
+                >
+                  {child.icon && (
+                    <span className="material-symbols-outlined text-[18px] text-[var(--console-muted)]">
+                      {child.icon}
+                    </span>
+                  )}
+                  {en ? child.labelEn : child.labelVi}
+                </Link>
+              );
+            })}
+          </div>
+        </FloatingPortal>
       )}
     </div>
   );
@@ -459,10 +515,16 @@ function MobileLink({
       href={item.href}
       onClick={onNavigate}
       className={`flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium ${
-        active ? activeClass : "text-[var(--console-fg)] hover:bg-black/[0.04] dark:hover:bg-white/[0.06]"
+        active
+          ? activeClass
+          : "text-[var(--console-fg)] hover:bg-black/[0.04] dark:hover:bg-white/[0.06]"
       }`}
     >
-      {item.icon && <span className="material-symbols-outlined text-[22px]">{item.icon}</span>}
+      {item.icon && (
+        <span className="material-symbols-outlined text-[22px]">
+          {item.icon}
+        </span>
+      )}
       {en ? item.labelEn : item.labelVi}
     </Link>
   );

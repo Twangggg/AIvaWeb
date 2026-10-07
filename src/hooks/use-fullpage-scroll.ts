@@ -5,6 +5,7 @@ import { useEffect, useRef } from "react";
 const SELECTOR = "[data-fp-section]";
 const INPUT_LOCK_MS = 1400;
 const STATEMENT_INPUT_LOCK_MS = 750;
+const SECTION_REVEAL_MS = 1100;
 
 type Dir = 1 | -1;
 
@@ -39,6 +40,7 @@ export function useFullpageScroll(enabled = true) {
       (
         window as unknown as {
           __lenis?: {
+            targetScroll?: number;
             scrollTo: (
               t: HTMLElement | number,
               opts?: Record<string, unknown>
@@ -239,8 +241,18 @@ export function useFullpageScroll(enabled = true) {
     let lastTouchY = 0;
     let touchSection: HTMLElement | null = null;
     let touchLocked = false;
+    let touchBlocked = false;
     let touchTarget: EventTarget | null = null;
     let inputLockUntil = 0;
+    let arrivingSection: HTMLElement | null = null;
+    let arrivalTimer = 0;
+
+    const finishArrival = () => {
+      if (!arrivingSection) return;
+      arrivingSection = null;
+      clearTimeout(arrivalTimer);
+      inputLockUntil = Date.now() + SECTION_REVEAL_MS;
+    };
 
     const sectionAtViewport = (): HTMLElement | null => {
       const { top, height: viewportHeight } = viewport();
@@ -248,12 +260,19 @@ export function useFullpageScroll(enabled = true) {
       let candidate: HTMLElement | null = null;
       let largestVisibleArea = 0;
       let closestStart = Infinity;
+      let leadingNative: HTMLElement | null = null;
 
       // A chapter owns input while it occupies most of the visible screen.
       // Comparing its top to the screen centre selects the following chapter
       // too early on tall screens, skipping the chapter actually being read.
       getSections().forEach((el) => {
         const rect = el.getBoundingClientRect();
+        if (
+          el.hasAttribute("data-fp-native") &&
+          rect.top <= viewportTop &&
+          rect.bottom > viewportTop
+        )
+          leadingNative = el;
         const visibleHeight = Math.max(
           0,
           Math.min(rect.bottom, top + viewportHeight) -
@@ -271,7 +290,9 @@ export function useFullpageScroll(enabled = true) {
           closestStart = startDistance;
         }
       });
-      return candidate;
+      // A short native section can occupy less area than its neighbour while
+      // its content is still being read. Keep its boundary as the input owner.
+      return leadingNative ?? candidate;
     };
 
     const isScrollableTarget = (target: EventTarget | null, dir: Dir) => {
@@ -300,39 +321,68 @@ export function useFullpageScroll(enabled = true) {
       !section.hasAttribute("data-fp-native") &&
       (window.innerWidth >= 640 || section.hasAttribute("data-fp-mobile-lock"));
 
-    const scrollToSection = (el: HTMLElement, dir: Dir) => {
-      const sections = getSections();
-      const index = sections.indexOf(el);
-      const target = sections[index + dir];
-      if (!target) return;
+    const enterSection = (target: HTMLElement, dir: Dir) => {
+      arrivingSection = target;
+      // Arrival, rather than the outgoing chapter, starts the reveal window.
+      // The timeout is a recovery path if a browser never dispatches scrollend.
+      clearTimeout(arrivalTimer);
+      arrivalTimer = window.setTimeout(finishArrival, 1800);
+      const count = sceneCount(target);
+      if (count > 1) setScene(target, dir > 0 ? 0 : count - 1, dir);
       const lenis = getLenis();
       if (lenis) {
-        lenis.scrollTo(target, { duration: 0.45, immediate: false });
+        lenis.scrollTo(target, {
+          duration: 0.45,
+          immediate: false,
+          lock: true,
+          onComplete: finishArrival,
+        });
       } else {
         target.scrollIntoView({ behavior: "smooth", block: "start" });
       }
     };
 
-    const alignMobileChapter = (section: HTMLElement, dir: Dir) => {
-      if (
-        window.innerWidth >= 640 ||
-        !section.hasAttribute("data-fp-mobile-lock")
-      )
-        return false;
+    const scrollToSection = (el: HTMLElement, dir: Dir) => {
+      const sections = getSections();
+      const target = sections[sections.indexOf(el) + dir];
+      if (target) enterSection(target, dir);
+    };
+
+    const anchorDistance = (section: HTMLElement) => {
+      const margin =
+        Number.parseFloat(getComputedStyle(section).scrollMarginTop) || 0;
+      const top = section.getBoundingClientRect().top + window.scrollY;
+      const limit = Math.max(
+        0,
+        document.documentElement.scrollHeight - window.innerHeight
+      );
+      // Browser/Lenis clamp anchors at both ends of the document. In
+      // particular the hero cannot sit 100px below the top at scrollY=0.
+      const destination = Math.max(0, Math.min(limit, top - margin));
+      return destination - window.scrollY;
+    };
+
+    const alignPagedChapter = (section: HTMLElement, dir: Dir) => {
+      if (!usesMobilePaging(section)) return false;
       const rect = section.getBoundingClientRect();
-      if (Math.abs(rect.top) <= 2) return false;
+      if (Math.abs(anchorDistance(section)) <= 2) return false;
       // Fluid sections can leave a story chapter only partly on screen.
       // Finish entering it before any swipe is allowed to change its scene.
       if (sceneCount(section) > 1 && dir > 0 && rect.top > 0)
         setScene(section, 0, dir);
       if (sceneCount(section) > 1 && dir < 0 && rect.top < 0)
         setScene(section, sceneCount(section) - 1, dir);
-      section.scrollIntoView({ behavior: "smooth", block: "start" });
-      inputLockUntil = Date.now() + 650;
+      enterSection(section, dir);
       return true;
     };
 
     const onScrollEnd = () => {
+      if (arrivingSection) {
+        // Lenis invokes onComplete itself. Only the native fallback needs this.
+        if (!getLenis() && Math.abs(anchorDistance(arrivingSection)) <= 3)
+          finishArrival();
+        return;
+      }
       if (window.innerWidth >= 640) return;
       if (touchSection) return;
       const section = sectionAtViewport();
@@ -342,13 +392,13 @@ export function useFullpageScroll(enabled = true) {
       const visible =
         Math.min(rect.bottom, top + height) - Math.max(rect.top, top);
       if (visible < height * 0.6) return;
-      alignMobileChapter(section, rect.top >= 0 ? 1 : -1);
+      alignPagedChapter(section, rect.top >= 0 ? 1 : -1);
     };
     window.addEventListener("scrollend", onScrollEnd);
 
     const advance = (section: HTMLElement, dir: Dir) => {
-      if (Date.now() < inputLockUntil) return;
-      if (alignMobileChapter(section, dir)) return;
+      if (arrivingSection || Date.now() < inputLockUntil) return;
+      if (alignPagedChapter(section, dir)) return;
       const count = sceneCount(section);
       const current = Number(section.dataset.fpScene || 0);
       const next =
@@ -374,13 +424,50 @@ export function useFullpageScroll(enabled = true) {
     const WHEEL_GESTURE_GAP_MS = 220;
 
     const onWheel = (event: WheelEvent) => {
+      if (event.ctrlKey || Math.abs(event.deltaX) > Math.abs(event.deltaY))
+        return;
+      if (arrivingSection || Date.now() < inputLockUntil) {
+        event.preventDefault();
+        (
+          event as WheelEvent & { lenisStopPropagation?: boolean }
+        ).lenisStopPropagation = true;
+        lastWheelAt = performance.now();
+        return;
+      }
       if (isScrollableTarget(event.target, event.deltaY > 0 ? 1 : -1)) return;
       const section = sectionAtViewport();
-      if (!section || !usesMobilePaging(section)) return;
+      if (!section) return;
+      if (!usesMobilePaging(section)) {
+        // Native chapters still hand off at a paged boundary. A large wheel
+        // delta must not send Lenis through the next chapter before it reveals.
+        const dir: Dir = event.deltaY > 0 ? 1 : -1;
+        const sections = getSections();
+        const neighbour = sections[sections.indexOf(section) + dir];
+        if (!neighbour || !usesMobilePaging(neighbour)) return;
+        // Crossing the native chapter's leading edge while scrolling up is
+        // the handoff. Waiting for the previous chapter's top lets momentum
+        // run through almost its entire viewport before paging takes over.
+        const boundary =
+          (dir > 0 ? neighbour : section).getBoundingClientRect().top +
+          window.scrollY;
+        const projected =
+          (getLenis()?.targetScroll ?? window.scrollY) + event.deltaY;
+        if (dir > 0 ? projected < boundary : projected > boundary) return;
+        event.preventDefault();
+        (
+          event as WheelEvent & { lenisStopPropagation?: boolean }
+        ).lenisStopPropagation = true;
+        lastWheelAt = performance.now();
+        enterSection(neighbour, dir);
+        return;
+      }
       const now = performance.now();
       const continuingGesture = now - lastWheelAt < WHEEL_GESTURE_GAP_MS;
       lastWheelAt = now;
       event.preventDefault();
+      (
+        event as WheelEvent & { lenisStopPropagation?: boolean }
+      ).lenisStopPropagation = true;
       // Track even tiny momentum events so a long trackpad gesture cannot
       // start another page transition when the fixed animation lock expires.
       if (Math.abs(event.deltaY) < 8 || continuingGesture) return;
@@ -389,6 +476,7 @@ export function useFullpageScroll(enabled = true) {
 
     const onTouchStart = (event: TouchEvent) => {
       touchTarget = event.target;
+      touchBlocked = Boolean(arrivingSection) || Date.now() < inputLockUntil;
       if (event.touches.length !== 1) {
         touchSection = null;
         touchLocked = false;
@@ -406,6 +494,13 @@ export function useFullpageScroll(enabled = true) {
     };
 
     const onTouchMove = (event: TouchEvent) => {
+      if (touchBlocked && event.touches.length === 1) {
+        event.preventDefault();
+        (
+          event as TouchEvent & { lenisStopPropagation?: boolean }
+        ).lenisStopPropagation = true;
+        return;
+      }
       if (!touchSection || event.touches.length !== 1) return;
       lastTouchY = event.touches[0]?.clientY ?? lastTouchY;
       const deltaY = lastTouchY - touchStartY;
@@ -430,19 +525,31 @@ export function useFullpageScroll(enabled = true) {
       const endY = event.changedTouches[0]?.clientY ?? lastTouchY;
       const delta = endY - touchStartY;
       touchSection = null;
+      if (touchBlocked) {
+        touchBlocked = false;
+        touchLocked = false;
+        return;
+      }
 
       if (!section || !touchLocked || Math.abs(delta) < 36) return;
       advance(section, delta < 0 ? 1 : -1);
       touchLocked = false;
     };
 
-    window.addEventListener("wheel", onWheel, { passive: false });
+    window.addEventListener("wheel", onWheel, {
+      passive: false,
+      capture: true,
+    });
     window.addEventListener("touchstart", onTouchStart, { passive: true });
-    window.addEventListener("touchmove", onTouchMove, { passive: false });
+    window.addEventListener("touchmove", onTouchMove, {
+      passive: false,
+      capture: true,
+    });
     window.addEventListener("touchend", onTouchEnd, { passive: true });
     const onTouchCancel = () => {
       touchSection = null;
       touchTarget = null;
+      touchBlocked = false;
       touchLocked = false;
     };
     window.addEventListener("touchcancel", onTouchCancel, { passive: true });
@@ -487,15 +594,16 @@ export function useFullpageScroll(enabled = true) {
     return () => {
       cancelAnimationFrame(rafId);
       clearTimeout(resizeTimer);
+      clearTimeout(arrivalTimer);
       sectionObserver.disconnect();
       window.visualViewport?.removeEventListener("resize", onResize);
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("scrollend", onScrollEnd);
       window.removeEventListener("resize", onResize);
       window.removeEventListener("keydown", onKey);
-      window.removeEventListener("wheel", onWheel);
+      window.removeEventListener("wheel", onWheel, true);
       window.removeEventListener("touchstart", onTouchStart);
-      window.removeEventListener("touchmove", onTouchMove);
+      window.removeEventListener("touchmove", onTouchMove, true);
       window.removeEventListener("touchend", onTouchEnd);
       window.removeEventListener("touchcancel", onTouchCancel);
     };

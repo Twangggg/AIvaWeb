@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { EditorialPanel } from "@/components/ui/narrative-motion";
 import { FamilyGreeting } from "@/components/common/family-greeting";
 import { Nav } from "@/components/common/nav";
 import { Footer } from "@/components/common/footer";
@@ -47,60 +48,52 @@ export default function NewsPage() {
           <div className="max-w-6xl mx-auto relative z-10">
             <FamilyGreeting topic="news" label="TIN TỨC & NỘI DUNG AIVA" />
 
-            {/* PURE NEWS ARTICLES GRID */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-fadeIn">
-              {NEWS_ARTICLES.map((article) => (
-                <Link
-                  key={article.id}
-                  href={article.href}
-                  className="group relative rounded-3xl overflow-hidden border backdrop-blur p-5 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 shadow-xl hover:border-[var(--ocean)]"
-                  style={{
-                    backgroundColor: "var(--glass-bg)",
-                    borderColor: "var(--glass-border)",
-                  }}
-                >
-                  <div>
-                    <div
-                      className="relative w-full h-48 rounded-2xl overflow-hidden mb-4 border"
-                      style={{ borderColor: "var(--glass-border)" }}
-                    >
+            <div className="grid grid-cols-1 gap-8">
+              {NEWS_ARTICLES.map((article, index) => (
+                <EditorialPanel key={article.id} index={index} kind="print">
+                  <Link
+                    href={article.href}
+                    className="group grid min-w-0 overflow-hidden rounded-[28px] border lg:grid-cols-[1.1fr_1fr]"
+                    style={{
+                      backgroundColor: "var(--glass-bg)",
+                      borderColor: "var(--glass-border)",
+                    }}
+                  >
+                    <div className="flex min-w-0 items-center bg-[var(--bg-subtle)] p-3 sm:p-5 lg:p-6">
                       <Image
                         src={article.image}
-                        alt={article.title}
-                        fill
-                        sizes="(max-width: 768px) 100vw, 33vw"
-                        className="object-cover group-hover:scale-105 transition-transform duration-500"
+                        alt="Giới thiệu AIVA: kính AI giúp bé khám phá thế giới, học tiếng Anh và đồng hành cùng ba mẹ"
+                        width={1462}
+                        height={846}
+                        sizes="(max-width: 1023px) calc(100vw - 88px), 560px"
+                        className="h-auto w-full rounded-2xl border border-[var(--border-subtle)]"
                       />
+                    </div>
+                    <div className="flex min-w-0 flex-col justify-center p-5 sm:p-7 lg:p-8">
+                      <span className="mb-4 self-start rounded-full bg-[var(--ocean-alpha)] px-3 py-1.5 text-[11px] font-bold text-[var(--ocean)]">
+                        {String(index + 1).padStart(2, "0")} / {article.tag}
+                      </span>
+                      <h3 className="text-2xl font-bold leading-tight text-[var(--text-on-glass)] transition-colors group-hover:text-[var(--ocean)] lg:text-[26px]">
+                        {article.title}
+                      </h3>
+                      <p className="mt-4 text-sm leading-relaxed text-[var(--text-dim)]">
+                        {article.desc}
+                      </p>
                       <div
-                        className="absolute top-3 left-3 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider border shadow-md backdrop-blur-md"
-                        style={{
-                          backgroundColor: "var(--badge-bg)",
-                          borderColor: "var(--ocean)",
-                          color: "var(--ocean)",
-                        }}
+                        className="mt-6 flex items-center justify-between border-t pt-5 text-sm font-bold text-[var(--ocean)]"
+                        style={{ borderColor: "var(--border-subtle)" }}
                       >
-                        #{article.tag}
+                        <span>Đọc bài viết</span>
+                        <span
+                          aria-hidden="true"
+                          className="text-2xl transition-transform group-hover:translate-x-2"
+                        >
+                          ↗
+                        </span>
                       </div>
                     </div>
-
-                    <h3 className="text-lg font-bold mb-2 leading-snug group-hover:text-[var(--ocean)] transition-colors text-[var(--text-on-glass)]">
-                      {article.title}
-                    </h3>
-                    <p className="text-xs line-clamp-3 leading-relaxed mb-4 text-[var(--text-dim)]">
-                      {article.desc}
-                    </p>
-                  </div>
-
-                  <div
-                    className="pt-3 border-t flex items-center justify-between text-xs font-bold text-[var(--ocean)]"
-                    style={{ borderColor: "var(--border-subtle)" }}
-                  >
-                    <span>Đọc Bài Viết ➔</span>
-                    <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">
-                      arrow_forward
-                    </span>
-                  </div>
-                </Link>
+                  </Link>
+                </EditorialPanel>
               ))}
             </div>
           </div>

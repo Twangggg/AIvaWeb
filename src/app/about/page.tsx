@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { EditorialPanel } from "@/components/ui/narrative-motion";
 import { FamilyGreeting } from "@/components/common/family-greeting";
 import { Nav } from "@/components/common/nav";
 import { Footer } from "@/components/common/footer";
@@ -84,10 +85,12 @@ function AboutUs() {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {TEAM.map((member) => (
-            <div
+          {TEAM.map((member, index) => (
+            <EditorialPanel
               key={member.name}
-              className="rounded-2xl p-6 backdrop-blur transition-transform hover:scale-[1.02]"
+              index={index}
+              kind="portrait"
+              className="rounded-2xl p-6 backdrop-blur"
               style={{
                 backgroundColor: "var(--glass-bg)",
                 border: "1px solid",
@@ -121,7 +124,7 @@ function AboutUs() {
               <p className="text-sm" style={{ color: "var(--text-dim)" }}>
                 {member.desc}
               </p>
-            </div>
+            </EditorialPanel>
           ))}
         </div>
 

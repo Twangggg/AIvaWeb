@@ -1,0 +1,27 @@
+.game-toolbar {
+  container-type: inline-size;
+  container-name: game-toolbar;
+}
+.game-toolbar-button-label {
+  display: none;
+}
+.game-toolbar-stats > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  max-width: 100%;
+}
+@container game-toolbar (min-width: 580px) {
+  .game-toolbar-button {
+    width: auto;
+    padding-inline: 12px;
+  }
+  .game-toolbar-button-label {
+    display: inline;
+  }
+}
+@container game-toolbar (max-width: 360px) {
+  .game-toolbar-icon {
+    display: none;
+  }
+}

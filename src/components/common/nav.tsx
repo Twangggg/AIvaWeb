@@ -3,11 +3,24 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { motion } from "motion/react";
+import {
+  FloatingPortal,
+  safePolygon,
+  useClick,
+  useDismiss,
+  useHover,
+  useInteractions,
+} from "@floating-ui/react";
+import { useFloatingSurface } from "@/hooks/use-floating-surface";
 
 import { ThemeLanguageControls } from "@/components/common/theme-language-controls";
 import { AppDownloadModal } from "@/components/common/app-download-modal";
 import { useAuthStore } from "@/features/auth/auth.store";
-import { resolveConsoleRole, roleHomePath } from "@/features/console/role-access";
+import {
+  resolveConsoleRole,
+  roleHomePath,
+} from "@/features/console/role-access";
 import { useI18n } from "@/lib/i18n/provider";
 import { markIntroSeen } from "@/components/home/site-intro";
 
@@ -21,6 +34,30 @@ export function Nav({ onPreorder }: NavProps) {
   const [scrolled, setScrolled] = useState(false);
   const [downloadModalOpen, setDownloadModalOpen] = useState(false);
   const [kidsDropdownOpen, setKidsDropdownOpen] = useState(false);
+  const {
+    setReference: setKidsReference,
+    setFloating: setKidsFloating,
+    floatingStyles: kidsStyles,
+    context: kidsContext,
+    isPositioned: kidsPositioned,
+  } = useFloatingSurface({
+    open: kidsDropdownOpen,
+    onOpenChange: setKidsDropdownOpen,
+    placement: "bottom-start",
+    width: 240,
+    animationFrame: true,
+  });
+  const kidsHover = useHover(kidsContext, {
+    handleClose: safePolygon(),
+    mouseOnly: true,
+  });
+  const kidsClick = useClick(kidsContext);
+  const kidsDismiss = useDismiss(kidsContext);
+  const { getReferenceProps, getFloatingProps } = useInteractions([
+    kidsHover,
+    kidsClick,
+    kidsDismiss,
+  ]);
 
   const bootstrap = useAuthStore((s) => s.bootstrap);
   const hydrated = useAuthStore((s) => s.hydrated);
@@ -29,7 +66,11 @@ export function Nav({ onPreorder }: NavProps) {
   const loggedIn = hydrated && status === "authenticated";
   const consoleHref = roleHomePath(role);
   const consoleLabel =
-    role === "parent" ? t.navConsoleParent : role === "admin" ? t.navConsoleAdmin : t.navConsoleTeacher;
+    role === "parent"
+      ? t.navConsoleParent
+      : role === "admin"
+        ? t.navConsoleAdmin
+        : t.navConsoleTeacher;
 
   useEffect(() => {
     bootstrap();
@@ -79,12 +120,16 @@ export function Nav({ onPreorder }: NavProps) {
           WebkitBackdropFilter: "blur(24px) saturate(180%)",
           boxShadow: scrolled
             ? "0 14px 40px -8px rgba(0,0,0,0.18), inset 0 1px 0 rgba(255,255,255,0.15)"
-            : "0 8px 30px -8px rgba(0,0,0,0.1), inset 0 1px 0 rgba(255,255,255,0.12)"
+            : "0 8px 30px -8px rgba(0,0,0,0.1), inset 0 1px 0 rgba(255,255,255,0.12)",
         }}
       >
         <div className="w-full px-5 py-2.5 flex items-center justify-between">
           {/* ZONE 1: BRAND LOGO */}
-          <Link href="/" onClick={returnHome} className="relative z-10 flex shrink-0 items-center mr-6">
+          <Link
+            href="/"
+            onClick={returnHome}
+            className="relative z-10 flex shrink-0 items-center mr-6"
+          >
             <Image
               src="/AIVALogo.png"
               alt="AIVA Logo"
@@ -102,14 +147,12 @@ export function Nav({ onPreorder }: NavProps) {
             style={{ color: "var(--text-muted)" }}
           >
             {/* Link 1: Cho trẻ em (Dropdown Menu) */}
-            <div
-              className="relative"
-              onMouseEnter={() => setKidsDropdownOpen(true)}
-              onMouseLeave={() => setKidsDropdownOpen(false)}
-            >
+            <div className="relative">
               <button
+                ref={setKidsReference}
+                {...getReferenceProps()}
                 type="button"
-                onClick={() => setKidsDropdownOpen(!kidsDropdownOpen)}
+                aria-expanded={kidsDropdownOpen}
                 className="group relative rounded-full px-3.5 py-1.5 whitespace-nowrap transition-all duration-200 flex items-center gap-1 hover:text-[var(--ocean)]"
               >
                 <span>Cho trẻ em</span>
@@ -129,71 +172,100 @@ export function Nav({ onPreorder }: NavProps) {
               </button>
 
               {kidsDropdownOpen && (
-                <div className="absolute top-full left-0 pt-2 w-60 z-50">
+                <FloatingPortal>
                   <div
-                    className="rounded-2xl p-2 shadow-2xl backdrop-blur-2xl border animate-in fade-in zoom-in-95 duration-150"
+                    ref={setKidsFloating}
+                    {...getFloatingProps()}
+                    className="z-[70] overflow-y-auto"
                     style={{
-                      backgroundColor: "var(--modal-bg)",
-                      borderColor: "var(--border-subtle)",
-                      boxShadow: "var(--shadow-modal)"
+                      ...kidsStyles,
+                      visibility: kidsPositioned ? "visible" : "hidden",
                     }}
                   >
-                    <Link
-                      href="/play"
-                      onClick={() => setKidsDropdownOpen(false)}
-                      className="flex items-center gap-3 p-2.5 rounded-xl transition-colors hover:bg-[var(--bg-subtle)]"
+                    <div
+                      className="rounded-2xl p-2 shadow-2xl backdrop-blur-2xl border animate-in fade-in zoom-in-95 duration-150"
+                      style={{
+                        backgroundColor: "var(--modal-bg)",
+                        borderColor: "var(--border-subtle)",
+                        boxShadow: "var(--shadow-modal)",
+                      }}
                     >
-                      <div
-                        className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0 border"
-                        style={{
-                          backgroundColor: "var(--ocean-alpha)",
-                          borderColor: "var(--ocean)",
-                          color: "var(--ocean)"
-                        }}
+                      <Link
+                        href="/play"
+                        onClick={() => setKidsDropdownOpen(false)}
+                        className="flex items-center gap-3 p-2.5 rounded-xl transition-colors hover:bg-[var(--bg-subtle)]"
                       >
-                        <span className="material-symbols-outlined text-lg">sports_esports</span>
-                      </div>
-                      <div>
-                        <div className="text-xs font-bold" style={{ color: "var(--text-on-glass)" }}>
-                          {locale === "en" ? "Play with AIVA" : "Chơi cùng AIVA"}
+                        <div
+                          className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0 border"
+                          style={{
+                            backgroundColor: "var(--ocean-alpha)",
+                            borderColor: "var(--ocean)",
+                            color: "var(--ocean)",
+                          }}
+                        >
+                          <span className="material-symbols-outlined text-lg">
+                            sports_esports
+                          </span>
                         </div>
-                        <div className="text-[10px]" style={{ color: "var(--text-dim)" }}>
-                          Trải nghiệm Minigames & Thử thách
+                        <div>
+                          <div
+                            className="text-xs font-bold"
+                            style={{ color: "var(--text-on-glass)" }}
+                          >
+                            {locale === "en"
+                              ? "Play with AIVA"
+                              : "Chơi cùng AIVA"}
+                          </div>
+                          <div
+                            className="text-[10px]"
+                            style={{ color: "var(--text-dim)" }}
+                          >
+                            Trải nghiệm Minigames & Thử thách
+                          </div>
                         </div>
-                      </div>
-                    </Link>
+                      </Link>
 
-                    <Link
-                      href="/news"
-                      onClick={() => setKidsDropdownOpen(false)}
-                      className="flex items-center gap-3 p-2.5 rounded-xl transition-colors hover:bg-[var(--bg-subtle)]"
-                    >
-                      <div
-                        className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0 border"
-                        style={{
-                          backgroundColor: "var(--ocean-alpha)",
-                          borderColor: "var(--ocean)",
-                          color: "var(--ocean)"
-                        }}
+                      <Link
+                        href="/news"
+                        onClick={() => setKidsDropdownOpen(false)}
+                        className="flex items-center gap-3 p-2.5 rounded-xl transition-colors hover:bg-[var(--bg-subtle)]"
                       >
-                        <span className="material-symbols-outlined text-lg">newspaper</span>
-                      </div>
-                      <div>
-                        <div className="text-xs font-bold" style={{ color: "var(--text-on-glass)" }}>
-                          Tin Tức, Khảo Sát & Sự Kiện
+                        <div
+                          className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0 border"
+                          style={{
+                            backgroundColor: "var(--ocean-alpha)",
+                            borderColor: "var(--ocean)",
+                            color: "var(--ocean)",
+                          }}
+                        >
+                          <span className="material-symbols-outlined text-lg">
+                            newspaper
+                          </span>
                         </div>
-                        <div className="text-[10px]" style={{ color: "var(--text-dim)" }}>
-                          Bài viết, Khảo sát & Workshop
+                        <div>
+                          <div
+                            className="text-xs font-bold"
+                            style={{ color: "var(--text-on-glass)" }}
+                          >
+                            Tin Tức, Khảo Sát & Sự Kiện
+                          </div>
+                          <div
+                            className="text-[10px]"
+                            style={{ color: "var(--text-dim)" }}
+                          >
+                            Bài viết, Khảo sát & Workshop
+                          </div>
                         </div>
-                      </div>
-                    </Link>
+                      </Link>
+                    </div>
                   </div>
-                </div>
+                </FloatingPortal>
               )}
             </div>
 
             <Link
-              href="/product" scroll={true}
+              href="/product"
+              scroll={true}
               className="rounded-full px-3 py-1.5 whitespace-nowrap transition-colors hover:text-[var(--ocean)]"
               title={t.navSpecs}
             >
@@ -221,7 +293,12 @@ export function Nav({ onPreorder }: NavProps) {
               onClick={() => setDownloadModalOpen(true)}
               className="group relative rounded-full px-3.5 py-1.5 whitespace-nowrap transition-all duration-200 flex items-center gap-1.5 hover:text-[var(--ocean)]"
             >
-              <span className="material-symbols-outlined text-base" style={{ color: "var(--ocean)" }}>download</span>
+              <span
+                className="material-symbols-outlined text-base"
+                style={{ color: "var(--ocean)" }}
+              >
+                download
+              </span>
               <span>Tải App AIVA</span>
               <span
                 className="absolute bottom-0.5 left-1/2 h-1 w-1 -translate-x-1/2 rounded-full opacity-0 transition-all duration-300 group-hover:w-4 group-hover:opacity-100"
@@ -248,10 +325,13 @@ export function Nav({ onPreorder }: NavProps) {
             </Link>
 
             {/* Single Primary Conversion Button: ĐẶT TRƯỚC NGAY */}
-            <button
+            <motion.button
               type="button"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ type: "spring", stiffness: 400, damping: 25 }}
               onClick={onPreorder}
-              className="rounded-full px-5 py-2 text-xs md:text-sm font-bold whitespace-nowrap transition-all duration-200 hover:brightness-110 active:scale-95 shadow-md"
+              className="rounded-full px-5 py-2 text-xs md:text-sm font-bold whitespace-nowrap cursor-pointer hover:brightness-110 shadow-md"
               style={{
                 background: "var(--gradient-ocean)",
                 color: "var(--text-on-accent)",
@@ -259,7 +339,7 @@ export function Nav({ onPreorder }: NavProps) {
               }}
             >
               {t.ctaPrimary}
-            </button>
+            </motion.button>
           </div>
         </div>
       </nav>
@@ -269,7 +349,7 @@ export function Nav({ onPreorder }: NavProps) {
         className="fixed left-1/2 -translate-x-1/2 z-50 lg:hidden max-w-full transition-all duration-500 ease-out"
         style={{
           top: scrolled ? 0 : "0.625rem",
-          width: scrolled ? "100%" : "min(calc(100% - 1rem), 56rem)"
+          width: scrolled ? "100%" : "min(calc(100% - 1rem), 56rem)",
         }}
       >
         <div
@@ -282,10 +362,14 @@ export function Nav({ onPreorder }: NavProps) {
             WebkitBackdropFilter: "blur(24px) saturate(180%)",
             boxShadow: scrolled
               ? "0 12px 32px -6px rgba(0,0,0,0.18), inset 0 1px 0 rgba(255,255,255,0.15)"
-              : "0 8px 24px -6px rgba(0,0,0,0.1), inset 0 1px 0 rgba(255,255,255,0.12)"
+              : "0 8px 24px -6px rgba(0,0,0,0.1), inset 0 1px 0 rgba(255,255,255,0.12)",
           }}
         >
-          <Link href="/" onClick={returnHome} className="flex items-center shrink-0 pl-0.5 sm:pl-1">
+          <Link
+            href="/"
+            onClick={returnHome}
+            className="flex items-center shrink-0 pl-0.5 sm:pl-1"
+          >
             <Image
               src="/AIVALogo.png"
               alt="AIVA Logo"
@@ -304,8 +388,15 @@ export function Nav({ onPreorder }: NavProps) {
               style={{ color: "var(--text-on-glass)" }}
               aria-label={accountLabel}
             >
-              <span className="material-symbols-outlined text-[17px] sm:text-lg" style={{ color: "var(--ocean)" }}>account_circle</span>
-              <span className="hidden min-[420px]:inline whitespace-nowrap">{accountLabel}</span>
+              <span
+                className="material-symbols-outlined text-[17px] sm:text-lg"
+                style={{ color: "var(--ocean)" }}
+              >
+                account_circle
+              </span>
+              <span className="hidden min-[420px]:inline whitespace-nowrap">
+                {accountLabel}
+              </span>
             </Link>
 
             <div className="h-3.5 w-px bg-[var(--border-subtle)] opacity-40 mx-0.5" />
@@ -323,7 +414,9 @@ export function Nav({ onPreorder }: NavProps) {
               style={{ color: "var(--text-on-glass)" }}
               aria-label="Toggle menu"
             >
-              <span className="material-symbols-outlined text-xl sm:text-2xl">{menuOpen ? "close" : "menu"}</span>
+              <span className="material-symbols-outlined text-xl sm:text-2xl">
+                {menuOpen ? "close" : "menu"}
+              </span>
             </button>
           </div>
         </div>
@@ -334,12 +427,18 @@ export function Nav({ onPreorder }: NavProps) {
             style={{
               backgroundColor: "var(--modal-bg)",
               borderColor: "var(--border-subtle)",
-              boxShadow: "var(--shadow-modal)"
+              boxShadow: "var(--shadow-modal)",
             }}
           >
             {/* Mobile Kids Links Sub-group */}
-            <div className="px-2 py-2 border-b mb-2" style={{ borderColor: "var(--border-subtle)" }}>
-              <div className="text-[11px] font-bold uppercase tracking-wider mb-2" style={{ color: "var(--ocean)" }}>
+            <div
+              className="px-2 py-2 border-b mb-2"
+              style={{ borderColor: "var(--border-subtle)" }}
+            >
+              <div
+                className="text-[11px] font-bold uppercase tracking-wider mb-2"
+                style={{ color: "var(--ocean)" }}
+              >
                 Cho Trẻ Em
               </div>
               <div className="flex flex-col gap-2 pl-2">
@@ -349,7 +448,12 @@ export function Nav({ onPreorder }: NavProps) {
                   className="flex items-center gap-2 text-sm font-medium py-1"
                   style={{ color: "var(--text-on-glass)" }}
                 >
-                  <span className="material-symbols-outlined text-base" style={{ color: "var(--ocean)" }}>sports_esports</span>
+                  <span
+                    className="material-symbols-outlined text-base"
+                    style={{ color: "var(--ocean)" }}
+                  >
+                    sports_esports
+                  </span>
                   Chơi cùng AIVA
                 </Link>
                 <Link
@@ -358,14 +462,20 @@ export function Nav({ onPreorder }: NavProps) {
                   className="flex items-center gap-2 text-sm font-medium py-1"
                   style={{ color: "var(--text-on-glass)" }}
                 >
-                  <span className="material-symbols-outlined text-base" style={{ color: "var(--ocean)" }}>newspaper</span>
+                  <span
+                    className="material-symbols-outlined text-base"
+                    style={{ color: "var(--ocean)" }}
+                  >
+                    newspaper
+                  </span>
                   Góc Trẻ Em & Tin Tức
                 </Link>
               </div>
             </div>
 
             <Link
-              href="/product" scroll={true}
+              href="/product"
+              scroll={true}
               onClick={closeMenu}
               className="block rounded-2xl px-4 py-2.5 text-sm font-medium transition-colors hover:bg-[var(--bg-subtle)]"
               style={{ color: "var(--text-on-glass)" }}
@@ -384,11 +494,19 @@ export function Nav({ onPreorder }: NavProps) {
 
             <button
               type="button"
-              onClick={() => { closeMenu(); setDownloadModalOpen(true); }}
+              onClick={() => {
+                closeMenu();
+                setDownloadModalOpen(true);
+              }}
               className="w-full rounded-2xl px-4 py-2.5 text-left text-sm font-medium flex items-center gap-2 transition-colors hover:bg-[var(--bg-subtle)]"
               style={{ color: "var(--text-on-glass)" }}
             >
-              <span className="material-symbols-outlined text-base" style={{ color: "var(--ocean)" }}>download</span>
+              <span
+                className="material-symbols-outlined text-base"
+                style={{ color: "var(--ocean)" }}
+              >
+                download
+              </span>
               Tải App AIVA Companion
             </button>
 
@@ -401,11 +519,20 @@ export function Nav({ onPreorder }: NavProps) {
               {accountLabel}
             </Link>
 
-            <div className="pt-2 border-t" style={{ borderColor: "var(--border-subtle)" }}>
-              <button
+            <div
+              className="pt-2 border-t"
+              style={{ borderColor: "var(--border-subtle)" }}
+            >
+              <motion.button
                 type="button"
-                onClick={() => { closeMenu(); onPreorder(); }}
-                className="w-full rounded-full py-3 text-sm font-bold transition-all duration-200 hover:brightness-110 active:scale-[0.98]"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.96 }}
+                transition={{ type: "spring", stiffness: 400, damping: 25 }}
+                onClick={() => {
+                  closeMenu();
+                  onPreorder();
+                }}
+                className="w-full rounded-full py-3 text-sm font-bold cursor-pointer hover:brightness-110"
                 style={{
                   background: "var(--gradient-ocean)",
                   color: "var(--text-on-accent)",
@@ -413,7 +540,7 @@ export function Nav({ onPreorder }: NavProps) {
                 }}
               >
                 {t.ctaPrimary}
-              </button>
+              </motion.button>
             </div>
           </div>
         )}

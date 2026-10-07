@@ -8,7 +8,7 @@ export default defineConfig({
   use: {
     baseURL: "http://127.0.0.1:3000",
     trace: "retain-on-failure",
-    screenshot: "only-on-failure"
+    screenshot: "only-on-failure",
   },
   projects: [
     {
@@ -17,26 +17,26 @@ export default defineConfig({
       use: {
         ...devices["iPhone 13"],
         browserName: "chromium",
-        reducedMotion: "no-preference"
-      }
+        reducedMotion: "no-preference",
+      },
     },
     {
       name: "desktop-chrome",
-      testMatch: /desktop-story-timing\.spec\.ts/,
+      testMatch: /(?:desktop-story-timing|floating-surfaces|narrative-scenes)\.spec\.ts/,
       use: {
         browserName: "chromium",
         viewport: { width: 1440, height: 900 },
         isMobile: false,
         hasTouch: false,
         deviceScaleFactor: 1,
-        reducedMotion: "no-preference"
-      }
-    }
+        reducedMotion: "no-preference",
+      },
+    },
   ],
   webServer: {
     command: "npm run dev -- --hostname 127.0.0.1",
     url: "http://127.0.0.1:3000",
     reuseExistingServer: true,
-    timeout: 120_000
-  }
+    timeout: 120_000,
+  },
 });

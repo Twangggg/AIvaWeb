@@ -6,6 +6,8 @@ import { useEffect, useState } from "react";
 import { Footer } from "@/components/common/footer";
 import { FamilyGreeting } from "@/components/common/family-greeting";
 import { Nav } from "@/components/common/nav";
+import { motion } from "motion/react";
+import confetti from "canvas-confetti";
 import { AivaGardenGame } from "@/features/public-play/components/aiva-garden-game";
 import { AivaVisionQuestGame } from "@/features/public-play/components/aiva-vision-quest-game";
 import { EnergySequenceGame } from "@/features/public-play/components/energy-sequence-game";
@@ -132,11 +134,14 @@ export default function PublicPlayPage() {
               <FamilyGreeting topic="play" />
               <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
                 {GAMES.map((game) => (
-                  <button
+                  <motion.button
                     key={game.id}
                     type="button"
+                    whileHover={{ y: -6, scale: 1.025 }}
+                    whileTap={{ scale: 0.97 }}
+                    transition={{ type: "spring", stiffness: 350, damping: 22 }}
                     onClick={() => openGame(game.id)}
-                    className={`ui-surface ui-border min-h-64 rounded-[2rem] border p-5 text-left shadow-lg transition active:scale-[0.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 sm:min-h-80 ${game.accent}`}
+                    className={`ui-surface ui-border min-h-64 rounded-[2rem] border p-5 text-left shadow-lg cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 sm:min-h-80 ${game.accent}`}
                   >
                     <div className="ui-surface-soft relative mb-2 h-36 overflow-hidden rounded-2xl">
                       <Image
@@ -155,7 +160,7 @@ export default function PublicPlayPage() {
                     <span className="ui-accent mt-6 inline-block text-xs font-bold">
                       Chơi ngay ➔
                     </span>
-                  </button>
+                  </motion.button>
                 ))}
               </div>
             </>
@@ -252,6 +257,16 @@ export default function PublicPlayPage() {
                           setMaxSteps(nextMax);
                           setHearts(nextHearts);
                           setMaxHearts(nextMaxHearts);
+                          if (nextCompleted && !completed) {
+                            try {
+                              confetti({
+                                particleCount: 90,
+                                spread: 75,
+                                origin: { y: 0.6 },
+                                colors: ["#10b981", "#38bdf8", "#fbbf24", "#f43f5e", "#a855f7"],
+                              });
+                            } catch {}
+                          }
                           setCompleted(nextCompleted);
                           setFailed(nextFailed);
                           setMessage(nextMessage);

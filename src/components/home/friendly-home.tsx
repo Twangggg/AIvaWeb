@@ -3,6 +3,7 @@
 import { useState, type ReactNode } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { motion, AnimatePresence } from "motion/react";
 import { useI18n } from "@/lib/i18n/provider";
 import "./friendly-home.css";
 
@@ -74,9 +75,26 @@ function Friend({
   stationary?: boolean;
 }) {
   const src = getMascotSrc(pose, variant);
+  if (stationary) {
+    return (
+      <div className={`garden-friend garden-friend-static ${className}`}>
+        <Image
+          src={src}
+          alt="AIVA, người bạn ếch nhỏ"
+          width={360}
+          height={360}
+          className="w-full h-full object-contain filter drop-shadow-sm select-none"
+          priority={pose === 4 || variant === "waving"}
+        />
+      </div>
+    );
+  }
   return (
-    <div
-      className={`garden-friend ${stationary ? "garden-friend-static" : ""} ${className}`}
+    <motion.div
+      whileHover={{ scale: 1.07, rotate: 2 }}
+      whileTap={{ scale: 0.94 }}
+      transition={{ type: "spring", stiffness: 380, damping: 20 }}
+      className={`garden-friend cursor-pointer ${className}`}
       aria-label="AIVA, người bạn ếch nhỏ"
     >
       <Image
@@ -87,7 +105,7 @@ function Friend({
         className="w-full h-full object-contain filter drop-shadow-sm select-none"
         priority={pose === 4 || variant === "waving"}
       />
-    </div>
+    </motion.div>
   );
 }
 
@@ -230,9 +248,12 @@ export function FriendlyHome({
         <div className="garden-playground">
           <div className="garden-activity-list">
             {activities.map((item, i) => (
-              <button
+              <motion.button
                 key={item.label}
                 type="button"
+                whileHover={{ scale: 1.03, x: 4 }}
+                whileTap={{ scale: 0.97 }}
+                transition={{ type: "spring", stiffness: 400, damping: 25 }}
                 aria-pressed={activity === i}
                 className={`garden-activity ${activity === i ? "is-selected" : ""}`}
                 onClick={() => setActivity(i)}
@@ -240,24 +261,35 @@ export function FriendlyHome({
                 <span aria-hidden="true">{item.icon}</span>
                 {item.label}
                 <span aria-hidden="true">↗</span>
-              </button>
+              </motion.button>
             ))}
             <Link href="/play" className="garden-text-link">
               {c("Đến góc trò chơi", "Visit the play corner")} →
             </Link>
           </div>
           <div className="garden-dialogue">
-            <Friend pose={activities[activity].pose} />
-            <div className="garden-speech" aria-live="polite">
-              <span>AIVA</span>
-              <p>{activities[activity].message}</p>
-              <small>
-                {c(
-                  "Một gợi ý nhỏ để bé và ba mẹ cùng chơi",
-                  "A little prompt for children and parents to share"
-                )}
-              </small>
-            </div>
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={`act-${activity}`}
+                initial={{ opacity: 0, scale: 0.92, y: 8 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.92, y: -8 }}
+                transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
+                className="flex items-center gap-3 w-full"
+              >
+                <Friend pose={activities[activity].pose} />
+                <div className="garden-speech" aria-live="polite">
+                  <span>AIVA</span>
+                  <p>{activities[activity].message}</p>
+                  <small>
+                    {c(
+                      "Một gợi ý nhỏ để bé và ba mẹ cùng chơi",
+                      "A little prompt for children and parents to share"
+                    )}
+                  </small>
+                </div>
+              </motion.div>
+            </AnimatePresence>
           </div>
         </div>
       </section>
@@ -307,14 +339,19 @@ export function FriendlyHome({
               pose: 5, // frog-explorer
             },
           ].map((item) => (
-            <article className="garden-card" key={item.title}>
+            <motion.article
+              className="garden-card cursor-pointer"
+              key={item.title}
+              whileHover={{ y: -8, scale: 1.025 }}
+              transition={{ type: "spring", stiffness: 350, damping: 22 }}
+            >
               <div className="garden-card-art">
                 <span aria-hidden="true">{item.icon}</span>
                 <Friend pose={item.pose} />
               </div>
               <h3>{item.title}</h3>
               <p>{item.text}</p>
-            </article>
+            </motion.article>
           ))}
         </div>
       </section>
@@ -344,6 +381,7 @@ export function FriendlyHome({
       <section
         data-fp-section
         data-fp-native
+        id="invitation"
         className="garden-invitation garden-wrap"
       >
         <Friend pose={6} />
@@ -363,9 +401,16 @@ export function FriendlyHome({
               "A new friend and a world of little discoveries await."
             )}
           </p>
-          <button type="button" className="garden-button" onClick={onPreorder}>
+          <motion.button
+            type="button"
+            className="garden-button"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ type: "spring", stiffness: 400, damping: 25 }}
+            onClick={onPreorder}
+          >
             {c("Đăng ký đặt trước", "Preorder AIVA")} →
-          </button>
+          </motion.button>
         </div>
       </section>
       <section

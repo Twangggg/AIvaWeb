@@ -1,6 +1,15 @@
 "use client";
 
-import React, { createContext, useContext, useCallback, useEffect, useRef, useState } from "react";
+import React, {
+  createContext,
+  useContext,
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
+
+import "./game-toolbar.css";
 
 interface GameFullscreenContextValue {
   isFullscreen: boolean;
@@ -13,7 +22,9 @@ interface GameFullscreenContextValue {
   exitFullscreen: () => void;
 }
 
-const GameFullscreenContext = createContext<GameFullscreenContextValue | null>(null);
+const GameFullscreenContext = createContext<GameFullscreenContextValue | null>(
+  null
+);
 
 export function useGameFullscreen() {
   return useContext(GameFullscreenContext);
@@ -30,14 +41,17 @@ export function FullscreenToggleBtn({ className }: { className?: string }) {
       onClick={toggleFullscreen}
       className={
         className ||
-        "inline-flex h-8 w-8 sm:h-9 sm:w-9 lg:w-auto items-center justify-center lg:px-3 gap-1 rounded-full border border-slate-200 dark:border-slate-700 bg-white/90 dark:bg-slate-900/90 text-xs font-semibold text-slate-700 dark:text-slate-200 shadow-sm transition hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-slate-950 dark:hover:text-white active:scale-95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 whitespace-nowrap shrink-0"
+        "game-toolbar-button inline-flex h-11 w-11 items-center justify-center gap-1 rounded-full border border-slate-200 dark:border-slate-700 bg-white/90 dark:bg-slate-900/90 text-xs font-semibold text-slate-700 dark:text-slate-200 shadow-sm transition hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-slate-950 dark:hover:text-white active:scale-95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 whitespace-nowrap shrink-0"
       }
+      aria-label={isFullscreen ? "Thu nhỏ màn hình" : "Mở toàn màn hình"}
       title={isFullscreen ? "Thu nhỏ màn hình (Esc)" : "Mở toàn màn hình"}
     >
       <span className="material-symbols-outlined text-base">
         {isFullscreen ? "fullscreen_exit" : "fullscreen"}
       </span>
-      <span className="hidden lg:inline">{isFullscreen ? "Thu nhỏ" : "Toàn màn hình"}</span>
+      <span className="game-toolbar-button-label">
+        {isFullscreen ? "Thu nhỏ" : "Toàn màn hình"}
+      </span>
     </button>
   );
 }
@@ -59,7 +73,9 @@ export function RotateToggleBtn({ className }: { className?: string }) {
       }
       title="Xoay hướng hiển thị ngang/dọc"
     >
-      <span className="material-symbols-outlined text-sm sm:text-base">screen_rotation</span>
+      <span className="material-symbols-outlined text-sm sm:text-base">
+        screen_rotation
+      </span>
       <span className="hidden sm:inline text-[11px]">Xoay</span>
     </button>
   );
@@ -93,51 +109,58 @@ export function GameHeaderBar({
     <header
       className={
         className ||
-        "w-full rounded-2xl sm:rounded-3xl border border-slate-200/80 dark:border-slate-800 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md shadow-sm p-2.5 sm:px-4 sm:py-3 space-y-2 sm:space-y-0"
+        "game-toolbar w-full rounded-2xl sm:rounded-3xl border border-slate-200/80 dark:border-slate-800 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md shadow-sm p-2.5 sm:px-4 sm:py-3 space-y-2 sm:space-y-0"
       }
     >
-      {/* Row 1: Left (Back + Icon + Title) & Top-Right Actions (Stats + Actions + Replay + Fullscreen) */}
-      <div className="flex items-center justify-between gap-2 min-w-0">
-        {/* Left: Back button + Icon + Title (Never squished) */}
-        <div className="flex items-center gap-2 sm:gap-2.5 min-w-0 shrink-0">
+      {/* Identity and controls share a row when the game container has room */}
+      <div className="flex flex-wrap items-center justify-between gap-2 min-w-0">
+        {/* Identity can wrap independently of the controls. */}
+        <div className="flex flex-[1_1_230px] items-center gap-2 sm:gap-2.5 min-w-0">
           {onBack && (
             <button
               type="button"
               onClick={onBack}
-              className="inline-flex h-8 w-8 sm:h-9 sm:w-9 items-center justify-center rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 active:scale-95 transition shadow-sm shrink-0"
+              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 active:scale-95 transition shadow-sm shrink-0"
+              aria-label="Quay lại danh sách trò chơi"
               title="Quay lại danh sách trò chơi"
             >
-              <span className="material-symbols-outlined text-base sm:text-lg">arrow_back</span>
+              <span className="material-symbols-outlined text-base sm:text-lg">
+                arrow_back
+              </span>
             </button>
           )}
-          <div className="flex h-8 w-8 sm:h-9 sm:w-9 items-center justify-center rounded-xl sm:rounded-2xl bg-[var(--ocean-alpha)] text-[var(--ocean)] shrink-0 border border-[var(--ocean)]/30">
-            <span className="material-symbols-outlined text-base sm:text-xl">{icon}</span>
+          <div className="game-toolbar-icon flex h-9 w-9 items-center justify-center rounded-xl sm:rounded-2xl bg-[var(--ocean-alpha)] text-[var(--ocean)] shrink-0 border border-[var(--ocean)]/30">
+            <span className="material-symbols-outlined text-base sm:text-xl">
+              {icon}
+            </span>
           </div>
           <div className="min-w-0">
-            <h2 className="text-xs sm:text-sm font-bold text-slate-900 dark:text-white truncate tracking-tight">{title}</h2>
+            <h2 className="text-xs sm:text-sm font-bold text-slate-900 dark:text-white break-words tracking-tight">
+              {title}
+            </h2>
             {subtitle && (
-              <p className="hidden md:block text-[11px] text-slate-500 dark:text-slate-400 truncate">{subtitle}</p>
+              <p className="text-[11px] text-slate-500 dark:text-slate-400 leading-relaxed break-words">
+                {subtitle}
+              </p>
             )}
           </div>
         </div>
 
-        {/* Right side controls: Desktop Stats + Action buttons + Replay + Fullscreen */}
-        <div className="flex items-center gap-1.5 sm:gap-2 shrink-0 min-w-0">
-          {stats && (
-            <div className="hidden md:flex items-center gap-1.5 shrink-0">
-              {stats}
-            </div>
-          )}
+        {/* Controls wrap within the game container, including fullscreen. */}
+        <div className="game-toolbar-actions flex flex-wrap items-center justify-end gap-1.5 sm:gap-2 min-w-0 max-w-full">
           {actions}
           {onReset && (
             <button
               type="button"
               onClick={onReset}
-              className="inline-flex h-8 w-8 sm:h-9 sm:w-9 lg:w-auto items-center justify-center lg:px-3 gap-1 rounded-full border border-slate-200 dark:border-slate-700 bg-white/90 dark:bg-slate-900/90 text-xs font-semibold text-slate-700 dark:text-slate-200 shadow-sm transition hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-slate-950 dark:hover:text-white active:scale-95 whitespace-nowrap shrink-0"
+              className="game-toolbar-button inline-flex h-11 w-11 items-center justify-center gap-1 rounded-full border border-slate-200 dark:border-slate-700 bg-white/90 dark:bg-slate-900/90 text-xs font-semibold text-slate-700 dark:text-slate-200 shadow-sm transition hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-slate-950 dark:hover:text-white active:scale-95 whitespace-nowrap shrink-0"
+              aria-label="Chơi lại từ đầu"
               title="Chơi lại từ đầu"
             >
-              <span className="material-symbols-outlined text-base">replay</span>
-              <span className="hidden lg:inline">Chơi lại</span>
+              <span className="material-symbols-outlined text-base">
+                replay
+              </span>
+              <span className="game-toolbar-button-label">Chơi lại</span>
             </button>
           )}
           <FullscreenToggleBtn />
@@ -145,19 +168,9 @@ export function GameHeaderBar({
         </div>
       </div>
 
-      {/* Row 2 on Mobile & Tablet (when screen < md): Stats + Subtitle */}
-      {(stats || subtitle) && (
-        <div className="flex md:hidden items-center justify-between gap-2 pt-1 border-t border-slate-100 dark:border-slate-800/60 text-xs">
-          {stats && (
-            <div className="flex items-center gap-1.5 flex-wrap shrink-0">
-              {stats}
-            </div>
-          )}
-          {subtitle && (
-            <p className="text-[11px] text-slate-500 dark:text-slate-400 truncate flex-1 text-right">
-              {subtitle}
-            </p>
-          )}
+      {stats && (
+        <div className="game-toolbar-stats min-w-0 border-t border-slate-100 dark:border-slate-800/60 pt-2 mt-2 text-xs">
+          {stats}
         </div>
       )}
     </header>
@@ -209,7 +222,9 @@ export function GameFullscreenWrapper({
         fullscreenElement?: Element;
         webkitFullscreenElement?: Element;
       };
-      const active = Boolean(doc.fullscreenElement || doc.webkitFullscreenElement);
+      const active = Boolean(
+        doc.fullscreenElement || doc.webkitFullscreenElement
+      );
       if (!active && isFullscreen) {
         setIsFullscreen(false);
         setIsVirtualLandscape(false);
@@ -221,7 +236,10 @@ export function GameFullscreenWrapper({
 
     return () => {
       document.removeEventListener("fullscreenchange", onFullscreenChange);
-      document.removeEventListener("webkitfullscreenchange", onFullscreenChange);
+      document.removeEventListener(
+        "webkitfullscreenchange",
+        onFullscreenChange
+      );
     };
   }, [isFullscreen]);
 
@@ -270,7 +288,8 @@ export function GameFullscreenWrapper({
       const el = containerRef.current || document.documentElement;
       const rfs =
         el.requestFullscreen ||
-        (el as unknown as { webkitRequestFullscreen?: () => Promise<void> }).webkitRequestFullscreen;
+        (el as unknown as { webkitRequestFullscreen?: () => Promise<void> })
+          .webkitRequestFullscreen;
       if (rfs) {
         await rfs.call(el);
       }
@@ -366,7 +385,9 @@ export function GameFullscreenWrapper({
             >
               {/* Main Game Viewport - Responsive Container */}
               <div className="w-full min-h-full flex flex-col items-center justify-start p-2 sm:p-3 md:p-4 max-w-4xl mx-auto">
-                <div className="w-full flex flex-col items-center">{children}</div>
+                <div className="w-full flex flex-col items-center">
+                  {children}
+                </div>
               </div>
             </div>
           </div>

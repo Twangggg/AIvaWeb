@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { EditorialPanel, JourneyTrace } from "@/components/ui/narrative-motion";
 import { Home3DScroll } from "@/components/home-3d-scroll";
 import { FamilyGreeting } from "@/components/common/family-greeting";
 import { Nav } from "@/components/common/nav";
@@ -37,10 +38,13 @@ function HowItWorks() {
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-3 gap-6 relative">
+          <JourneyTrace />
           {STEPS.map((s, i) => (
-            <div
+            <EditorialPanel
               key={s.num}
+              index={i}
+              kind="print"
               className="relative p-8 rounded-2xl backdrop-blur transition-colors"
               style={{
                 backgroundColor: "var(--bg-subtle)",
@@ -58,7 +62,7 @@ function HowItWorks() {
                 {s.title}
               </h3>
               <p style={{ color: "var(--text-dim)" }}>{s.desc}</p>
-            </div>
+            </EditorialPanel>
           ))}
         </div>
       </div>

@@ -1,6 +1,14 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useId, useRef, useState } from "react";
+import { motion, useReducedMotion } from "motion/react";
+import {
+  EditorialPanel,
+  MaskedWords,
+  SceneSwap,
+  STORY_DURATION,
+  STORY_EASE,
+} from "@/components/ui/narrative-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useI18n } from "@/lib/i18n/provider";
@@ -35,10 +43,34 @@ function Heading({
   title: string;
   description?: string;
 }) {
+  const frame = useRef<HTMLElement>(null);
+  useEffect(() => {
+    const chapter = frame.current?.closest(".storybook-chapter");
+    if (!chapter) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        chapter.setAttribute(
+          "data-narrative-visible",
+          String(entry.isIntersecting)
+        );
+        if (entry.isIntersecting) {
+          chapter.setAttribute(
+            "data-narrative-direction",
+            entry.boundingClientRect.top < -1 ? "back" : "forward"
+          );
+        }
+      },
+      { threshold: 0.01 }
+    );
+    observer.observe(chapter);
+    return () => observer.disconnect();
+  }, []);
   return (
-    <header className="storybook-heading">
+    <header ref={frame} className="storybook-heading">
       <span className="garden-eyebrow">{label}</span>
-      <h2>{title}</h2>
+      <h2>
+        <MaskedWords text={title} />
+      </h2>
       {description && <p>{description}</p>}
     </header>
   );
@@ -52,6 +84,8 @@ function SceneChoices({
   active: number;
   onSelect: (index: number) => void;
 }) {
+  const selectionId = useId();
+  const reduced = useReducedMotion();
   return (
     <div className="storybook-choices">
       {labels.map((label, index) => (
@@ -61,7 +95,18 @@ function SceneChoices({
           aria-pressed={active === index}
           onClick={() => onSelect(index)}
         >
-          <span aria-hidden="true">{active === index ? "✦" : "○"}</span> {label}
+          {active === index && (
+            <motion.span
+              className="storybook-choice-highlight"
+              layoutId={selectionId}
+              transition={{ duration: reduced ? 0 : 0.35, ease: STORY_EASE }}
+              aria-hidden="true"
+            />
+          )}
+          <span className="storybook-choice-label">
+            <span aria-hidden="true">{active === index ? "✦" : "○"}</span>{" "}
+            {label}
+          </span>
         </button>
       ))}
     </div>
@@ -74,7 +119,7 @@ function useWords() {
 
 export function FriendlyVisionChapter() {
   const { t, c } = useWords();
-  const { step, setScene } = useFpSceneSync("vision", 3);
+  const { step, dir, setScene } = useFpSceneSync("vision", 3);
   const scenes = [
     {
       title: c("Một mầm xanh nhỏ", "A little green sprout"),
@@ -110,30 +155,50 @@ export function FriendlyVisionChapter() {
         )}
       />
       <div className="storybook-discovery">
-        <div className="storybook-photo">
-          <Image
-            key={scene.image}
-            src={scene.image}
-            alt={scene.title}
-            fill
-            sizes="(min-width: 1024px) 450px, 80vw"
-            className="object-cover"
-          />
+        <motion.div
+          className="storybook-photo"
+          animate={{ rotate: [-3, 2, -1][step] }}
+          transition={{ duration: STORY_DURATION, ease: STORY_EASE }}
+        >
+          <span className="storybook-discovery-stamp" aria-hidden="true">
+            {String(step + 1).padStart(2, "0")} / 03
+          </span>
+          <SceneSwap
+            scene={step}
+            kind="iris"
+            direction={dir}
+            slotClassName="storybook-photo-window"
+          >
+            <Image
+              src={scene.image}
+              alt={scene.title}
+              fill
+              sizes="(min-width: 1024px) 450px, 80vw"
+              className="object-cover"
+            />
+          </SceneSwap>
           <span className="storybook-photo-caption">
             {scene.icon} {scene.title}
           </span>
-        </div>
+        </motion.div>
         <div className="storybook-narrator">
           <Pal variant="peek" />
-          <div key={step} className="storybook-bubble" aria-live="polite">
-            <span>{c("AIVA kể bạn nghe", "AIVA has a story for you")}</span>
-            <p>{scene.voice}</p>
-            <small>
-              {c(
-                "Minh họa trải nghiệm khám phá cùng AIVA",
-                "An illustration of exploring with AIVA"
-              )}
-            </small>
+          <div aria-live="polite">
+            <SceneSwap
+              scene={step}
+              kind="shutter"
+              direction={dir}
+              className="storybook-bubble"
+            >
+              <span>{c("AIVA kể bạn nghe", "AIVA has a story for you")}</span>
+              <p>{scene.voice}</p>
+              <small>
+                {c(
+                  "Minh họa trải nghiệm khám phá cùng AIVA",
+                  "An illustration of exploring with AIVA"
+                )}
+              </small>
+            </SceneSwap>
           </div>
         </div>
       </div>
@@ -148,7 +213,7 @@ export function FriendlyVisionChapter() {
 
 export function FriendlyFeaturesChapter() {
   const { c } = useWords();
-  const { step, setScene } = useFpSceneSync("features", 4);
+  const { step, dir, setScene } = useFpSceneSync("features", 4);
   const scenes = [
     {
       title: c("Ngẩng đầu, nhìn quanh", "Look up, look around"),
@@ -200,21 +265,74 @@ export function FriendlyFeaturesChapter() {
           "Shall we try something new?"
         )}
       />
-      <div key={step} className="storybook-feature-page">
-        <div className="storybook-feature-art">
-          <span aria-hidden="true">{scene.icon}</span>
-          <Pal variant={scene.variant} />
-        </div>
-        <div className="storybook-feature-copy" aria-live="polite">
-          <span className="storybook-page-number">
-            {c("Chuyến khám phá", "Discovery")} {step + 1} / 4
+      <div className="storybook-feature-deck" data-discovery={step}>
+        <div
+          className="storybook-deck-sheet storybook-deck-sheet-one"
+          aria-hidden="true"
+        />
+        <div
+          className="storybook-deck-sheet storybook-deck-sheet-two"
+          aria-hidden="true"
+        />
+        <SceneSwap
+          scene={step}
+          kind="ticket"
+          direction={dir}
+          className="storybook-feature-page"
+        >
+          <span className="storybook-ticket-index" aria-hidden="true">
+            0{step + 1}
           </span>
-          <h3>{scene.title}</h3>
-          <p>{scene.desc}</p>
-          <a href="/product" className="garden-text-link">
-            {c("Ba mẹ tìm hiểu thêm", "More for parents")} →
-          </a>
-        </div>
+          <div className="storybook-feature-art">
+            <span aria-hidden="true">
+              <svg
+                width="38"
+                height="38"
+                viewBox="0 0 40 40"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.3"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                {step === 0 ? (
+                  <>
+                    <circle cx="20" cy="20" r="7" />
+                    <path d="M20 3v5m0 24v5M3 20h5m24 0h5M8 8l4 4m16 16 4 4M8 32l4-4m16-16 4-4" />
+                  </>
+                ) : step === 1 ? (
+                  <>
+                    <circle cx="17" cy="17" r="11" />
+                    <path d="m26 26 10 10M12 17h10m-5-5v10" />
+                  </>
+                ) : step === 2 ? (
+                  <>
+                    <path d="M5 7h30v22H17L8 36v-7H5Z" />
+                    <circle cx="13" cy="18" r="1" />
+                    <circle cx="20" cy="18" r="1" />
+                    <circle cx="27" cy="18" r="1" />
+                  </>
+                ) : (
+                  <>
+                    <path d="M10 14h20v22H10Z M15 14V9a5 5 0 0 1 10 0v5 M10 23h20 M15 28h10" />
+                    <path d="M7 19H4v11h6m23-11h3v11h-6" />
+                  </>
+                )}
+              </svg>
+            </span>
+            <Pal variant={scene.variant} />
+          </div>
+          <div className="storybook-feature-copy" aria-live="polite">
+            <span className="storybook-page-number">
+              {c("Chuyến khám phá", "Discovery")} {step + 1} / 4
+            </span>
+            <h3>{scene.title}</h3>
+            <p>{scene.desc}</p>
+            <a href="/product" className="garden-text-link">
+              {c("Ba mẹ tìm hiểu thêm", "More for parents")} →
+            </a>
+          </div>
+        </SceneSwap>
       </div>
       <SceneChoices
         labels={scenes.map((s) => s.title)}
@@ -227,6 +345,7 @@ export function FriendlyFeaturesChapter() {
 
 export function FriendlyCompareChapter() {
   const { t, c } = useWords();
+  const reduced = useReducedMotion();
   const rows = [
     [t.homeCompareRow1Label, t.homeCompareRow1Screen, t.homeCompareRow1Aiva],
     [t.homeCompareRow2Label, t.homeCompareRow2Screen, t.homeCompareRow2Aiva],
@@ -256,15 +375,32 @@ export function FriendlyCompareChapter() {
               <th scope="col">{t.homeCompareColAiva} ♡</th>
             </tr>
           </thead>
-          <tbody>
-            {rows.map(([label, screen, aiva]) => (
-              <tr key={label}>
+          <motion.tbody
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.01 }}
+          >
+            {rows.map(([label, screen, aiva], index) => (
+              <motion.tr
+                key={label}
+                variants={{
+                  hidden: {
+                    clipPath: reduced ? "inset(0 0% 0 0)" : "inset(0 100% 0 0)",
+                  },
+                  visible: { clipPath: "inset(0 0% 0 0)" },
+                }}
+                transition={{
+                  duration: reduced ? 0 : STORY_DURATION,
+                  delay: index * 0.07,
+                  ease: STORY_EASE,
+                }}
+              >
                 <th scope="row">{label}</th>
                 <td>{screen}</td>
                 <td>{aiva}</td>
-              </tr>
+              </motion.tr>
             ))}
-          </tbody>
+          </motion.tbody>
         </table>
       </div>
       <div className="storybook-footnote">
@@ -297,11 +433,14 @@ export function FriendlySpecsChapter() {
         title={c("Thông số mắt kính AIVA", "AIVA glasses specifications")}
       />
       <dl className="storybook-specs-grid">
-        {specs.map(([label, value]) => (
-          <div key={label}>
+        {specs.map(([label, value], index) => (
+          <EditorialPanel key={label} index={index} kind="print">
+            <span className="storybook-spec-index" aria-hidden="true">
+              0{index + 1}
+            </span>
             <dt>{label}</dt>
             <dd>{value}</dd>
-          </div>
+          </EditorialPanel>
         ))}
       </dl>
       <Link href="/product" className="garden-text-link">
@@ -313,25 +452,34 @@ export function FriendlySpecsChapter() {
 
 export function FriendlyParentChapter() {
   const { c } = useWords();
-  const { step, setScene } = useFpSceneSync("companion", 3);
+  const { step, dir, setScene } = useFpSceneSync("companion", 3);
   const [downloadOpen, setDownloadOpen] = useState(false);
   const scenes = [
     {
       image: "/app/3a97d9280a498a17d358.jpg",
       title: c("Nhật ký những khám phá", "A diary of discoveries"),
-      desc: c("Xem lại câu hỏi, những lần tra cứu và ảnh chụp để cùng bé trò chuyện về điều mới mỗi ngày.", "Revisit questions, lookups and photos to talk with your child about each day’s discoveries."),
+      desc: c(
+        "Xem lại câu hỏi, những lần tra cứu và ảnh chụp để cùng bé trò chuyện về điều mới mỗi ngày.",
+        "Revisit questions, lookups and photos to talk with your child about each day’s discoveries."
+      ),
       label: c("Nhật ký của bé", "Discovery diary"),
     },
     {
       image: "/app/0ad97e66ad072d597416.jpg",
       title: c("Một ngày của bé", "Your child’s day"),
-      desc: c("Theo dõi thời lượng sử dụng và hoạt động gần đây ngay trên màn hình chính của ứng dụng.", "See usage time and recent activities on the app’s home screen."),
+      desc: c(
+        "Theo dõi thời lượng sử dụng và hoạt động gần đây ngay trên màn hình chính của ứng dụng.",
+        "See usage time and recent activities on the app’s home screen."
+      ),
       label: c("Hoạt động mỗi ngày", "Daily activities"),
     },
     {
       image: "/app/fb81543c875d07035e4c.jpg",
       title: c("Cùng bé chơi và khám phá", "Play and explore together"),
-      desc: c("Chọn trò săn đồ, thẻ từ, câu đố hay một câu chuyện và chỉnh nội dung để cùng bé chơi.", "Choose a scavenger hunt, word cards, a quiz or a story, and tailor the activities for your child."),
+      desc: c(
+        "Chọn trò săn đồ, thẻ từ, câu đố hay một câu chuyện và chỉnh nội dung để cùng bé chơi.",
+        "Choose a scavenger hunt, word cards, a quiz or a story, and tailor the activities for your child."
+      ),
       label: c("Cùng đồng hành", "Stay connected"),
     },
   ];
@@ -348,19 +496,30 @@ export function FriendlyParentChapter() {
         />
         <div className="storybook-parent-page">
           <div className="storybook-app-art">
-            <Image
-              src={scene.image}
-              alt={scene.label}
-              width={965}
-              height={2048}
-              className="storybook-app-screen"
-            />
+            <div className="storybook-phone-frame">
+              <SceneSwap
+                scene={step}
+                kind="shutter"
+                direction={dir}
+                slotClassName="storybook-phone-display"
+              >
+                <Image
+                  src={scene.image}
+                  alt={scene.label}
+                  width={965}
+                  height={2048}
+                  className="storybook-app-screen"
+                />
+              </SceneSwap>
+            </div>
             <Pal variant="parent-app" />
           </div>
           <div className="storybook-parent-copy">
             <div aria-live="polite">
-              <h3>{scene.title}</h3>
-              <p>{scene.desc}</p>
+              <SceneSwap scene={step} kind="shutter" direction={dir}>
+                <h3>{scene.title}</h3>
+                <p>{scene.desc}</p>
+              </SceneSwap>
             </div>
             <SceneChoices
               labels={scenes.map((s) => s.label)}
@@ -388,6 +547,7 @@ export function FriendlyParentChapter() {
 export function FriendlyColorChapter() {
   const { t, c } = useWords();
   const [selected, setSelected] = useState(0);
+  const reduced = useReducedMotion();
   const color = COLORS[selected];
   return (
     <section data-fp-scroll className="storybook-chapter storybook-color">
@@ -403,10 +563,23 @@ export function FriendlyColorChapter() {
         )}
       />
       <div className="storybook-color-page">
+        <motion.div
+          key={color.id}
+          className="storybook-color-bloom"
+          aria-hidden="true"
+          style={{ backgroundColor: color.accent }}
+          initial={reduced ? false : { clipPath: "circle(0% at 75% 50%)" }}
+          animate={{ clipPath: "circle(140% at 75% 50%)" }}
+          transition={{ duration: reduced ? 0 : 0.85, ease: STORY_EASE }}
+        />
         <Pal variant="shopping" />
         <div className="storybook-color-preview">
           <GlassesPreview hex={color.hex} accent={color.accent} />
-          <p aria-live="polite">{t[color.labelKey]}</p>
+          <div aria-live="polite">
+            <SceneSwap scene={selected} kind="shutter">
+              <p>{t[color.labelKey]}</p>
+            </SceneSwap>
+          </div>
         </div>
       </div>
       <div
@@ -474,12 +647,17 @@ export function FriendlyMissionChapter() {
         )}
       />
       <div className="storybook-values">
-        {notes.map(([icon, title, desc]) => (
-          <article key={title}>
+        {notes.map(([icon, title, desc], index) => (
+          <EditorialPanel
+            key={title}
+            kind="fold"
+            index={index}
+            className="storybook-value-note"
+          >
             <span aria-hidden="true">{icon}</span>
             <h3>{title}</h3>
             <p>{desc}</p>
-          </article>
+          </EditorialPanel>
         ))}
       </div>
     </section>

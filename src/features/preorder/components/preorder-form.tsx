@@ -9,6 +9,8 @@ import { getPreorderSchema, type PreorderInput } from "@/features/preorder/schem
 import { submitPreorder } from "@/features/preorder/services/preorder-service";
 import { useI18n } from "@/lib/i18n/provider";
 import Image from "next/image";
+import { motion } from "motion/react";
+import confetti from "canvas-confetti";
 
 interface PreorderFormProps {
   onClose: () => void;
@@ -34,6 +36,14 @@ export function PreorderForm({ onClose }: PreorderFormProps) {
     onSuccess: (_data, variables) => {
       reset();
       setSubmittedData(variables);
+      try {
+        confetti({
+          particleCount: 90,
+          spread: 75,
+          origin: { y: 0.55 },
+          colors: ["#38bdf8", "#34d399", "#fbbf24", "#f43f5e", "#a855f7"],
+        });
+      } catch {}
     },
     onError: () => {}
   });
@@ -41,7 +51,12 @@ export function PreorderForm({ onClose }: PreorderFormProps) {
   if (submittedData) {
     return (
       <div className="flex flex-col items-center gap-5 py-3 text-center">
-        <div className="relative w-36 h-36 flex items-center justify-center animate-bounce-short">
+        <motion.div
+          initial={{ scale: 0.6, opacity: 0, rotate: -6 }}
+          animate={{ scale: 1, opacity: 1, rotate: 0 }}
+          transition={{ type: "spring", stiffness: 350, damping: 20 }}
+          className="relative w-36 h-36 flex items-center justify-center animate-bounce-short"
+        >
           <Image
             src="/mascots/frog-success.webp"
             alt="AIva chúc mừng thành công"
@@ -50,7 +65,7 @@ export function PreorderForm({ onClose }: PreorderFormProps) {
             className="w-full h-full object-contain drop-shadow-md"
             priority
           />
-        </div>
+        </motion.div>
 
         <div className="space-y-1">
           <p className="text-2xl font-bold" style={{ color: "var(--text-on-glass)" }}>{t.successTitle}</p>
