@@ -66,15 +66,17 @@ function Friend({
   pose = 0,
   variant,
   className = "",
+  stationary = false,
 }: {
   pose?: number;
   variant?: MascotVariant;
   className?: string;
+  stationary?: boolean;
 }) {
   const src = getMascotSrc(pose, variant);
   return (
     <div
-      className={`garden-friend ${className}`}
+      className={`garden-friend ${stationary ? "garden-friend-static" : ""} ${className}`}
       aria-label="AIVA, người bạn ếch nhỏ"
     >
       <Image
@@ -181,7 +183,7 @@ export function FriendlyHome({
                 {c("Làm bạn với mình nhé?", "Shall we be friends?")}
               </small>
             </div>
-            <Friend pose={4} className="garden-hero-friend" />
+            <Friend pose={4} className="garden-hero-friend" stationary />
             <span
               className="garden-flower garden-flower-one"
               aria-hidden="true"

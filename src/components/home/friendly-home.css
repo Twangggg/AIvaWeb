@@ -167,6 +167,12 @@
   transform: translateX(-50%);
   filter: drop-shadow(0 15px 10px #4a693526);
 }
+.garden-hero-friend.garden-friend-static {
+  transition: none;
+}
+.garden-hero-friend.garden-friend-static:hover {
+  transform: translateX(-50%);
+}
 .garden-hello {
   position: absolute;
   top: 38px;
