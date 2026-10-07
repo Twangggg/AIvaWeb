@@ -355,20 +355,6 @@ body,
   opacity: 0.7;
   pointer-events: none;
 }
-.cx-statement-marked-text {
-  position: relative;
-  isolation: isolate;
-}
-.cx-statement-ink {
-  position: absolute;
-  left: -1%;
-  right: -1%;
-  bottom: 0.06em;
-  height: 0.19em;
-  z-index: -1;
-  background: var(--brand-sunlight);
-  transform-origin: left;
-}
 @media (prefers-reduced-motion: no-preference) {
   .cx-statement-frame .cx-statement-line {
     transition:

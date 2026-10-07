@@ -2,14 +2,11 @@
 
 import { useFpSceneSync } from "@/hooks/use-fp-scene-sync";
 import { useI18n } from "@/lib/i18n/provider";
-import { motion, useReducedMotion } from "motion/react";
-import { STORY_EASE } from "@/components/ui/narrative-motion";
 
 /** Manifesto — wheel reveals / hides each line (forward & reverse). */
 export function StatementChapter() {
   const { t } = useI18n();
   const { step, dir } = useFpSceneSync("statement", 3);
-  const reduced = useReducedMotion();
 
   const lines = [
     { text: t.cxStatement1, tone: "dim" as const, scene: 0 },
@@ -37,19 +34,7 @@ export function StatementChapter() {
                 data-current={current ? "true" : "false"}
                 style={{ fontSize: "clamp(1.75rem, 5.5vw, 4.25rem)" }}
               >
-                <span className="cx-statement-marked-text">
-                  <motion.span
-                    className="cx-statement-ink"
-                    aria-hidden="true"
-                    initial={false}
-                    animate={{ scaleX: current ? 1 : 0 }}
-                    transition={{
-                      duration: reduced ? 0 : 0.55,
-                      ease: STORY_EASE,
-                    }}
-                  />
-                  {line.text}
-                </span>
+                {line.text}
               </p>
             );
           })}
