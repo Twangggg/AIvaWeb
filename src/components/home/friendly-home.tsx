@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "motion/react";
 import { useI18n } from "@/lib/i18n/provider";
+import { AivaVisionBg } from "@/components/ui/aiva-vision-bg";
 import "./friendly-home.css";
 
 const MASCOT_IMAGES: Record<string, string> = {
@@ -157,7 +158,8 @@ export function FriendlyHome({
     { q: t.faq5Q, a: t.faq5A },
   ];
   return (
-    <main className="garden-home">
+    <main className="garden-home relative">
+      <AivaVisionBg />
       <section data-fp-section className="garden-intro-chapter" id="hero">
         <div className="garden-hero garden-wrap">
           <div className="garden-hero-copy">

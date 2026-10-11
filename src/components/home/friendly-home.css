@@ -10,14 +10,29 @@
   --garden-mint: #e3edd7;
   background:
     radial-gradient(
-      ellipse 70% 650px at 100% 0,
-      color-mix(in srgb, var(--garden-sky) 70%, transparent),
-      transparent
+      ellipse 70% 700px at 95% 0%,
+      color-mix(in srgb, var(--garden-sky) 75%, transparent),
+      transparent 70%
     ),
     radial-gradient(
-      ellipse 65% 600px at 0 500px,
-      color-mix(in srgb, var(--garden-sunlight) 65%, transparent),
-      transparent
+      ellipse 65% 650px at 5% 550px,
+      color-mix(in srgb, var(--garden-sunlight) 70%, transparent),
+      transparent 65%
+    ),
+    radial-gradient(
+      ellipse 60% 800px at 90% 1600px,
+      color-mix(in srgb, var(--garden-mint) 65%, transparent),
+      transparent 65%
+    ),
+    radial-gradient(
+      ellipse 65% 850px at 10% 2800px,
+      color-mix(in srgb, var(--garden-sky) 65%, transparent),
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 60% 800px at 85% 4200px,
+      color-mix(in srgb, var(--garden-sunlight) 60%, transparent),
+      transparent 65%
     ),
     var(--garden-paper);
   color: var(--garden-ink);

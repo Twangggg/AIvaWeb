@@ -9,7 +9,7 @@
   align-items: center;
   gap: 24px;
   overflow-y: auto;
-  background: var(--garden-paper);
+  background: transparent;
 }
 .storybook-specs {
   height: auto;
