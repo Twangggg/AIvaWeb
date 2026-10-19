@@ -13,47 +13,68 @@ import { AivaVisionQuestGame } from "@/features/public-play/components/aiva-visi
 import { EnergySequenceGame } from "@/features/public-play/components/energy-sequence-game";
 import { RouteBuilderGame } from "@/features/public-play/components/route-builder-game";
 import { PreorderModal } from "@/features/preorder/components/preorder-modal";
+import { AviaQuizGame } from "@/features/avia-quiz/avia-quiz-game";
 
 import {
   GameFullscreenWrapper,
   GameHeaderBar,
 } from "@/features/public-play/components/game-fullscreen-wrapper";
 
-type GameId = "vision-quest" | "garden" | "sequence" | "route";
+type GameId = "avia-quiz" | "vision-quest" | "garden" | "sequence" | "route";
 
-const GAMES: {
+interface GameItem {
   id: GameId;
   title: string;
   description: string;
   accent: string;
+  borderGlow: string;
   image: string;
-}[] = [
+}
+
+const GAMES: GameItem[] = [
+  {
+    id: "avia-quiz",
+    title: "Avia Quiz Game 🐸",
+    description:
+      "Cùng Ếch Avia vượt mốc bài học SGK Lớp 1 - 5, bứt phá chuỗi combo đúng rực lửa và chinh phục các huy hiệu danh giá!",
+    accent: "border-emerald-400/60 hover:bg-emerald-400/10",
+    borderGlow: "border-emerald-400/50 hover:border-emerald-400 hover:shadow-emerald-500/20",
+    image: "/MASCOT ko nền.png",
+  },
   {
     id: "vision-quest",
     title: "AIVA Vision Quest",
-    description: "Dùng ống kính AIVA quét đồ vật & nhận Bằng Khám Phá Nhí.",
+    description:
+      "Dùng ống kính AI quét và nhận diện đồ vật quanh bé, tích lũy điểm nhận Bằng Khám Phá Nhí.",
     accent: "border-amber-400/50 hover:bg-amber-400/10",
+    borderGlow: "border-amber-400/50 hover:border-amber-400 hover:shadow-amber-500/20",
     image: "/games/robot-portal.webp",
   },
   {
     id: "garden",
     title: "Giải cứu khu vườn",
-    description: "Tìm đường, nhặt năng lượng và mở cổng.",
+    description:
+      "Né bọ tuần tra, gỡ bẫy thông minh, nhặt đủ mảnh năng lượng và mở cánh cổng bí mật.",
     accent: "border-emerald-300/50 hover:bg-emerald-300/10",
+    borderGlow: "border-emerald-400/40 hover:border-emerald-400 hover:shadow-emerald-500/20",
     image: "/games/garden-maze.webp",
   },
   {
     id: "sequence",
     title: "Mật mã năng lượng",
-    description: "Ghi nhớ chuỗi ánh sáng ngày một dài hơn.",
+    description:
+      "Quan sát và ghi nhớ chuỗi ánh sáng quang học ngày một dài hơn để mở khóa mật mã.",
     accent: "border-fuchsia-300/50 hover:bg-fuchsia-300/10",
+    borderGlow: "border-fuchsia-400/40 hover:border-fuchsia-400 hover:shadow-fuchsia-500/20",
     image: "/games/energy-code.webp",
   },
   {
     id: "route",
     title: "Kỹ sư đường đi",
-    description: "Xếp lệnh để dẫn AIVA tránh chướng ngại.",
+    description:
+      "Kéo thả và sắp xếp các khối lệnh điều hướng để dẫn AIVA vượt qua mọi chướng ngại.",
     accent: "border-cyan-300/50 hover:bg-cyan-300/10",
+    borderGlow: "border-cyan-400/40 hover:border-cyan-400 hover:shadow-cyan-500/20",
     image: "/games/route-builder.webp",
   },
 ];
@@ -121,51 +142,133 @@ export default function PublicPlayPage() {
     restartGarden();
   };
 
+  const heroGame = GAMES[0];
+  const companionGames = GAMES.slice(1);
+
   return (
     <>
       <Nav onPreorder={() => setPreorderOpen(true)} />
       <main
-        className={`ui-page min-h-screen overflow-x-hidden px-3 sm:px-6 ${selectedGame ? "pt-16 sm:pt-20 pb-4" : "family-page pb-12"}`}
+        className={`ui-page min-h-screen overflow-x-hidden px-3 sm:px-6 ${selectedGame ? "pt-24 sm:pt-28 lg:pt-32 pb-8" : "family-page pt-24 sm:pt-28 pb-12"}`}
       >
         <div className="pointer-events-none absolute left-1/2 top-20 h-80 w-80 -translate-x-1/2 rounded-full bg-yellow-400/20 blur-[100px]" />
-        <section className={`relative mx-auto max-w-5xl ${selectedGame ? "" : "play-lobby"}`}>
+        <section className={`relative mx-auto ${selectedGame ? "max-w-5xl" : "max-w-6xl play-lobby"}`}>
           {!selectedGame ? (
             <>
               <FamilyGreeting topic="play" />
-              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-                {GAMES.map((game) => (
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 auto-rows-fr">
+                  {/* Hero Card: Avia Quiz Game (Spans 2 cols x 2 rows on desktop) */}
                   <motion.button
-                    key={game.id}
+                    key={heroGame.id}
                     type="button"
-                    whileHover={{ y: -6, scale: 1.025 }}
-                    whileTap={{ scale: 0.97 }}
-                    transition={{ type: "spring", stiffness: 350, damping: 22 }}
-                    onClick={() => openGame(game.id)}
-                    className={`ui-surface ui-border min-h-64 rounded-[2rem] border p-5 text-left shadow-lg cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 sm:min-h-80 ${game.accent}`}
+                    whileHover={{ y: -4, scale: 1.01 }}
+                    whileTap={{ scale: 0.98 }}
+                    transition={{ type: "spring", stiffness: 350, damping: 24 }}
+                    onClick={() => openGame(heroGame.id)}
+                    className="group relative sm:col-span-2 lg:col-span-2 lg:row-span-2 ui-surface ui-border rounded-[2.25rem] border p-6 sm:p-7 text-left shadow-xl hover:shadow-2xl transition-all duration-300 cursor-pointer overflow-hidden flex flex-col justify-between border-emerald-400/50 hover:border-emerald-400 bg-gradient-to-br from-emerald-500/[0.08] via-transparent to-amber-500/[0.05] dark:from-emerald-950/40 dark:to-slate-900/40"
                   >
-                    <div className="ui-surface-soft relative mb-2 h-36 overflow-hidden rounded-2xl">
-                      <Image
-                        src={game.image}
-                        alt=""
-                        fill
-                        unoptimized
-                        sizes="(min-width: 768px) 30vw, 100vw"
-                        className="object-contain object-center"
-                      />
+                    {/* Decorative ambient glows */}
+                    <div className="pointer-events-none absolute -right-16 -top-16 w-64 h-64 rounded-full bg-emerald-400/20 blur-3xl group-hover:bg-emerald-400/30 transition-all duration-500" />
+                    <div className="pointer-events-none absolute -left-16 -bottom-16 w-64 h-64 rounded-full bg-amber-400/15 blur-3xl group-hover:bg-amber-400/25 transition-all duration-500" />
+
+                    <div className="relative z-10 flex flex-col justify-between h-full">
+                      {/* Top content & Mascot */}
+                      <div className="flex flex-col sm:flex-row lg:flex-col justify-between gap-4 sm:gap-6">
+                        <div className="flex-1">
+                          <h3 className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white tracking-tight flex items-center gap-2">
+                            {heroGame.title}
+                          </h3>
+                          <p className="mt-2 text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed max-w-md">
+                            {heroGame.description}
+                          </p>
+                        </div>
+
+                        {/* Mascot Showcase Illustration */}
+                        <div className="relative shrink-0 flex items-center justify-center self-center my-2 sm:my-0 lg:my-3">
+                          <div className="relative w-40 h-40 sm:w-48 sm:h-48 lg:w-56 lg:h-56 group-hover:scale-105 transition-transform duration-500">
+                            <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-emerald-400/25 to-amber-300/20 blur-2xl scale-95" />
+                            <Image
+                              src={heroGame.image}
+                              alt={heroGame.title}
+                              fill
+                              unoptimized
+                              sizes="(min-width: 1024px) 30vw, 50vw"
+                              className="object-contain object-center drop-shadow-xl"
+                            />
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Bottom CTA Bar */}
+                      <div className="mt-4 pt-3.5 border-t border-slate-200/60 dark:border-slate-800/60 flex items-center justify-between gap-4">
+                        <div className="text-xs font-bold text-emerald-600 dark:text-emerald-400 flex items-center gap-1.5">
+                          <span>Thử thách cùng Ếch Avia</span>
+                          <span className="inline-block transform group-hover:translate-x-1.5 transition-transform">
+                            ➔
+                          </span>
+                        </div>
+                        <span
+                          className="rounded-full px-5 py-2 text-xs font-black text-slate-950 shadow-md group-hover:shadow-lg transition-all active:scale-95 whitespace-nowrap"
+                          style={{ background: "var(--gradient-ocean)" }}
+                        >
+                          Chơi Ngay 🎮
+                        </span>
+                      </div>
                     </div>
-                    <p className="text-xl font-black">{game.title}</p>
-                    <p className="ui-muted mt-2 text-xs leading-relaxed">
-                      {game.description}
-                    </p>
-                    <span className="ui-accent mt-6 inline-block text-xs font-bold">
-                      Chơi ngay ➔
-                    </span>
                   </motion.button>
-                ))}
-              </div>
+
+                  {/* The 4 Companion Cards (Filled 2x2 on desktop) */}
+                  {companionGames.map((game) => (
+                    <motion.button
+                      key={game.id}
+                      type="button"
+                      whileHover={{ y: -5, scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                      transition={{ type: "spring", stiffness: 350, damping: 24 }}
+                      onClick={() => openGame(game.id)}
+                      className={`group relative lg:col-span-1 ui-surface ui-border rounded-[2rem] border p-4 sm:p-5 text-left shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden flex flex-col justify-between ${game.borderGlow} ${game.accent}`}
+                    >
+                      <div>
+                        {/* Image Preview */}
+                        <div className="ui-surface-soft relative mb-3 h-32 sm:h-36 overflow-hidden rounded-2xl group-hover:scale-[1.02] transition-transform duration-300">
+                          <Image
+                            src={game.image}
+                            alt={game.title}
+                            fill
+                            unoptimized
+                            sizes="(min-width: 1024px) 20vw, 50vw"
+                            className="object-contain object-center p-2"
+                          />
+                        </div>
+
+                        {/* Title & Desc */}
+                        <p className="text-base sm:text-lg font-black text-slate-900 dark:text-white group-hover:text-emerald-500 dark:group-hover:text-emerald-400 transition-colors">
+                          {game.title}
+                        </p>
+                        <p className="ui-muted mt-1 text-xs leading-relaxed line-clamp-2">
+                          {game.description}
+                        </p>
+                      </div>
+
+                      {/* Footer */}
+                      <div className="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-end">
+                        <span className="ui-accent text-xs font-black flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                          Chơi ngay ➔
+                        </span>
+                      </div>
+                    </motion.button>
+                  ))}
+                </div>
             </>
           ) : (
             <>
+              {selectedGame === "avia-quiz" && (
+                <GameFullscreenWrapper onBack={() => setSelectedGame(null)}>
+                  <AviaQuizGame onBackToLobby={() => setSelectedGame(null)} />
+                </GameFullscreenWrapper>
+              )}
+
               {selectedGame === "vision-quest" && (
                 <GameFullscreenWrapper onBack={() => setSelectedGame(null)}>
                   <AivaVisionQuestGame />
