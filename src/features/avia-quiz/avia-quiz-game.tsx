@@ -26,6 +26,8 @@ export function AviaQuizGame({ onBackToLobby }: AviaQuizGameProps) {
     screen,
     selectedGrade,
     selectedBook,
+    selectedChapter,
+    isLoadingBook,
     availableBooks,
     currentQuestion,
     currentIndex,
@@ -37,14 +39,18 @@ export function AviaQuizGame({ onBackToLobby }: AviaQuizGameProps) {
     currentCombo,
     elapsedSeconds,
     summary,
+    lastReward,
     selectGrade,
     selectBook,
     backToGradeSelect,
     backToBookSelect,
+    backToLessonSelect,
     startLesson,
     startChapterReview,
     answerQuestion,
     restartCurrent,
+    nextLessonInfo,
+    startNextLesson,
   } = useQuizGame();
 
   return (
@@ -63,6 +69,7 @@ export function AviaQuizGame({ onBackToLobby }: AviaQuizGameProps) {
         <BookSelectScreen
           grade={selectedGrade}
           books={availableBooks}
+          isLoadingBook={isLoadingBook}
           soundEnabled={soundEnabled}
           onToggleSound={toggleSound}
           onSelectBook={selectBook}
@@ -73,6 +80,7 @@ export function AviaQuizGame({ onBackToLobby }: AviaQuizGameProps) {
       {screen === "lesson-select" && selectedBook && (
         <LessonSelectScreen
           book={selectedBook}
+          initialChapterId={selectedChapter?.id}
           soundEnabled={soundEnabled}
           onToggleSound={toggleSound}
           onSelectLesson={startLesson}
@@ -88,6 +96,7 @@ export function AviaQuizGame({ onBackToLobby }: AviaQuizGameProps) {
           totalQuestions={questions.length}
           score={score}
           currentCombo={currentCombo}
+          lastReward={lastReward}
           frogState={frogState}
           selectedAnswer={selectedAnswer}
           isAnswered={isAnswered}
@@ -95,15 +104,17 @@ export function AviaQuizGame({ onBackToLobby }: AviaQuizGameProps) {
           soundEnabled={soundEnabled}
           onToggleSound={toggleSound}
           onSelectAnswer={answerQuestion}
-          onExit={backToBookSelect}
+          onExit={backToLessonSelect}
         />
       )}
 
       {screen === "summary" && summary && (
         <QuizResultScreen
           summary={summary}
+          nextLessonTitle={nextLessonInfo?.title}
+          onNextLesson={nextLessonInfo ? startNextLesson : undefined}
           onRestart={restartCurrent}
-          onChooseOtherLesson={backToBookSelect}
+          onChooseOtherLesson={backToLessonSelect}
         />
       )}
     </div>

@@ -1,0 +1,1514 @@
+{
+  "id": "g3-tinhoc",
+  "grade": 3,
+  "subjectKey": "tinhoc",
+  "title": "Tin học lớp 3",
+  "color": "#2563EB",
+  "coverImage": "/mascots/bia-sach-mon-hoc.png",
+  "chapters": [
+    {
+      "id": "c1-chu-de-1",
+      "chapterNumber": 1,
+      "title": "CHỦ ĐỀ 1: MÁY TÍNH VÀ EM",
+      "lessons": [
+        {
+          "id": "l1-bai-1",
+          "lessonNumber": 1,
+          "title": "BÀI 1: THÔNG TIN VÀ QUYẾT ĐỊNH",
+          "description": "Nhận biết các dạng thông tin và vai trò của thông tin trong việc ra quyết định",
+          "questions": [
+            {
+              "id": "g3-th-c1-l1-q1",
+              "type": "knowledge",
+              "prompt": "Nghe tiếng chuông đồng hồ reo, Minh thức dậy chuẩn bị đi học. Đâu là thông tin Minh thu nhận được?",
+              "options": [
+                "Bạn Minh quyết định thức dậy rời khỏi giường",
+                "Âm thanh tiếng chuông đồng hồ báo thức reo",
+                "Bạn Minh thực hiện vệ sinh cá nhân và ăn sáng",
+                "Bạn Minh mặc bộ quần áo đồng phục đi học"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Tiếng chuông đồng hồ reo là thông tin âm thanh mà tai bạn Minh thu nhận được."
+            },
+            {
+              "id": "g3-th-c1-l1-q2",
+              "type": "knowledge",
+              "prompt": "Biết hôm nay đi đá bóng, Minh liền chọn mặc bộ đồ thể thao. Việc \"mặc bộ đồ thể thao\" là gì?",
+              "options": [
+                "Thông tin mà Minh vừa thu nhận được",
+                "Quyết định của Minh dựa trên thông tin thu được",
+                "Âm thanh báo thức phát ra từ đồng hồ",
+                "Vật liệu làm đồ thủ công ở trên lớp"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Quyết định mặc bộ đồ thể thao được đưa ra sau khi Minh biết hôm nay có lịch đá bóng."
+            },
+            {
+              "id": "g3-th-c1-l1-q3",
+              "type": "scenario",
+              "prompt": "Thấy trời mưa to qua cửa sổ, Khoa lấy áo mưa cho vào cặp. Câu nào thể hiện đúng vai trò của thông tin?",
+              "options": [
+                "Thông tin \"trời mưa\" giúp Khoa đưa ra quyết định \"mang áo mưa\"",
+                "Quyết định mang áo mưa giúp trời dừng mưa ngay",
+                "Khoa không cần thông tin gì vẫn tự quyết định được",
+                "Việc mang áo mưa là thông tin, còn trời mưa là quyết định"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Nhìn thấy trời mưa to là thông tin, từ đó Khoa quyết định lấy áo mưa mang theo."
+            },
+            {
+              "id": "g3-th-c1-l1-q4",
+              "type": "scenario",
+              "prompt": "Định ra sân đá bóng nhưng nghe tiếng trống báo vào lớp, Minh quay lại lớp. Thông tin nào làm Minh đổi quyết định?",
+              "options": [
+                "Tiếng các bạn gọi nhau ngoài sân trường",
+                "Tiếng trống báo hiệu bắt đầu vào giờ học",
+                "Hình ảnh quả bóng tròn trên sân trường",
+                "Lịch thời khóa biểu môn học thể dục"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Tình huống",
+              "explanation": "Tiếng trống trường báo hiệu giờ học bắt đầu là thông tin khiến Minh thay đổi ý định chơi bóng để về lớp."
+            },
+            {
+              "id": "g3-th-c1-l1-q5",
+              "type": "knowledge",
+              "prompt": "Thấy biển chữ \"TRƯỜNG HỌC\", tranh vẽ mũ bảo hiểm và nghe còi xe, em nhận được những dạng thông tin nào?",
+              "options": [
+                "Chỉ nhận được thông tin dạng chữ viết",
+                "Chỉ nhận được thông tin dạng âm thanh",
+                "Đủ ba dạng: dạng chữ, dạng hình ảnh và dạng âm thanh",
+                "Chỉ nhận được thông tin dạng hình ảnh"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Kiến thức",
+              "explanation": "Biển báo có chữ (dạng chữ), hình ảnh mũ (dạng hình ảnh) và tiếng còi (dạng âm thanh)."
+            },
+            {
+              "id": "g3-th-c1-l1-q6",
+              "type": "knowledge",
+              "prompt": "Thùng rác phân loại ghi dòng chữ \"RÁC HỮU CƠ\" kèm hình vỏ quả. Dòng chữ \"RÁC HỮU CƠ\" thuộc dạng thông tin nào?",
+              "options": [
+                "Thông tin dạng âm thanh",
+                "Thông tin dạng chữ",
+                "Thông tin dạng hình ảnh",
+                "Thông tin dạng video"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Dòng chữ 'RÁC HỮU CƠ' cung cấp thông tin dưới dạng chữ viết."
+            }
+          ]
+        },
+        {
+          "id": "l2-bai-2",
+          "lessonNumber": 2,
+          "title": "BÀI 2: XỬ LÝ THÔNG TIN",
+          "description": "Bộ não xử lý thông tin và nguyên lý xử lý thông tin của thiết bị thông minh",
+          "questions": [
+            {
+              "id": "g3-th-c1-l2-q1",
+              "type": "knowledge",
+              "prompt": "Mắt nhìn lời bài hát, tai nghe nhạc và hát theo tivi. Bộ phận nào đóng vai trò xử lý thông tin?",
+              "options": [
+                "Đôi mắt và đôi tai",
+                "Bộ não",
+                "Đôi bàn tay",
+                "Đôi chân"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Bộ não là cơ quan tiếp nhận thông tin từ các giác quan và thực hiện xử lý thông tin."
+            },
+            {
+              "id": "g3-th-c1-l2-q2",
+              "type": "knowledge",
+              "prompt": "Thấy dây diều bị chùng, Minh suy nghĩ rồi chạy ngược chiều gió. Việc \"chạy ngược chiều gió\" là gì?",
+              "options": [
+                "Thông tin thu nhận ban đầu",
+                "Kết quả sau khi bộ não xử lý thông tin",
+                "Thiết bị điều khiển từ xa",
+                "Dạng thông tin âm thanh"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Hành động chạy ngược chiều gió là quyết định được bộ não xử lý dựa trên thông tin dây diều bị chùng."
+            },
+            {
+              "id": "g3-th-c1-l2-q3",
+              "type": "scenario",
+              "prompt": "Khi bấm phím số 3 trên điều khiển, tivi chuyển kênh VTV3. Tivi đã xử lý thông tin thế nào?",
+              "options": [
+                "Nhận tín hiệu phím số 3 -> Chuyển sang kênh VTV3",
+                "Nhận tín hiệu tiếng còi -> Thực hiện tắt tivi",
+                "Nhận tín hiệu hình ảnh -> Thực hiện tăng âm lượng",
+                "Tivi không thu nhận hay xử lý thông tin nào"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Tivi nhận tín hiệu từ phím bấm trên điều khiển và xử lý chuyển đúng sang kênh tương ứng."
+            },
+            {
+              "id": "g3-th-c1-l2-q4",
+              "type": "scenario",
+              "prompt": "Dùng điện thoại chụp ảnh bông hoa, thông tin thu nhận và kết quả sau khi máy xử lý là gì?",
+              "options": [
+                "Thu nhận dạng âm thanh -> Phát ra một bản nhạc",
+                "Thu nhận dạng hình ảnh -> Lưu bức ảnh vào máy",
+                "Thu nhận dạng chữ viết -> Thực hiện gửi tin nhắn",
+                "Thu nhận dạng nhiệt độ -> Làm cho quạt quay"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Tình huống",
+              "explanation": "Điện thoại thu nhận hình ảnh qua camera và xử lý lưu tệp ảnh vào bộ nhớ."
+            },
+            {
+              "id": "g3-th-c1-l2-q5",
+              "type": "knowledge",
+              "prompt": "Khi bấm nút dấu cộng (+) trên bếp từ đang đun, thông tin bếp nhận và xử lý là gì?",
+              "options": [
+                "Bếp nhận tín hiệu nút (+), xử lý tăng nhiệt độ đun",
+                "Bếp nhận tín hiệu nút (+), xử lý tự động tắt bếp",
+                "Bếp nhận tín hiệu giọng nói, tự động hẹn giờ đun",
+                "Bếp không tiếp nhận hay xử lý thông tin này"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Bếp từ nhận tín hiệu phím cảm ứng (+) và xử lý tăng mức công suất/nhiệt độ đun nấu."
+            },
+            {
+              "id": "g3-th-c1-l2-q6",
+              "type": "knowledge",
+              "prompt": "Điểm giống nhau căn bản giữa con người và thiết bị thông minh khi hoạt động là gì?",
+              "options": [
+                "Đều có thể tự di chuyển bằng hai chân",
+                "Đều tiếp nhận, xử lý thông tin và đưa ra hành động",
+                "Đều phải sử dụng pin để hoạt động",
+                "Đều nghe được tiếng chim hót ngoài sân"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Cả con người và thiết bị thông minh đều hoạt động theo quy trình: Thu nhận -> Xử lý thông tin -> Hành động/Kết quả."
+            }
+          ]
+        },
+        {
+          "id": "l3-bai-3",
+          "lessonNumber": 3,
+          "title": "BÀI 3: MÁY TÍNH VÀ EM",
+          "description": "Các bộ phận chính của máy tính và quy tắc an toàn khi sử dụng thiết bị",
+          "questions": [
+            {
+              "id": "g3-th-c1-l3-q1",
+              "type": "knowledge",
+              "prompt": "Bộ phận nào chứa bộ xử lý, được ví như \"bộ não\" điều khiển mọi hoạt động của máy tính?",
+              "options": ["Màn hình", "Thân máy", "Bàn phím", "Chuột máy tính"],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Thân máy tính chứa bộ vi xử lý (CPU) được ví như bộ não điều khiển toàn bộ hoạt động."
+            },
+            {
+              "id": "g3-th-c1-l3-q2",
+              "type": "knowledge",
+              "prompt": "Bộ phận nào trên điện thoại thông minh đảm nhận chức năng của cả bàn phím và chuột?",
+              "options": [
+                "Thân máy",
+                "Màn hình cảm ứng",
+                "Loa ngoài",
+                "Phím nguồn"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Màn hình cảm ứng trên điện thoại cho phép chạm để chọn (chuột) và hiển thị bàn phím ảo để gõ văn bản."
+            },
+            {
+              "id": "g3-th-c1-l3-q3",
+              "type": "knowledge",
+              "prompt": "Mở video trên máy tính chỉ thấy hình mà không có tiếng, em cần lắp thêm thiết bị nào?",
+              "options": [
+                "Máy in",
+                "Bàn phím ảo",
+                "Loa máy tính",
+                "Vùng cảm ứng chuột"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Kiến thức",
+              "explanation": "Loa máy tính là thiết bị xuất âm thanh, giúp chúng ta nghe được tiếng từ video và bài giảng."
+            },
+            {
+              "id": "g3-th-c1-l3-q4",
+              "type": "knowledge",
+              "prompt": "Thấy có mùi khét bốc ra từ phía dây điện ổ cắm trong phòng máy, em nên làm gì?",
+              "options": [
+                "Tự tay rút ngay phích cắm điện ra khỏi ổ",
+                "Tiếp tục ngồi dùng máy tính xem có chuyện gì",
+                "Báo ngay với thầy cô giáo hoặc người lớn",
+                "Lấy bình xịt nước xịt thẳng vào ổ cắm điện"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Kiến thức",
+              "explanation": "Khi thấy mùi khét hoặc chập điện, tuyệt đối không tự ý chạm vào mà phải báo ngay cho người lớn xử lý."
+            },
+            {
+              "id": "g3-th-c1-l3-q5",
+              "type": "knowledge",
+              "prompt": "Để vệ sinh bàn phím máy tính an toàn và không bị hỏng, em nên chọn công cụ nào?",
+              "options": [
+                "Khăn mềm khô hoặc chổi phủi bụi chuyên dụng",
+                "Dùng khăn ướt vắt đẫm nước để lau chùi",
+                "Dùng bình xịt nước xịt trực tiếp lên bàn phím",
+                "Dùng tô-vít hoặc chìa khóa cạo sạch vết bẩn"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Chỉ dùng khăn mềm khô hoặc dụng cụ chuyên dụng, tránh để nước hoặc chất lỏng dính vào linh kiện điện tử."
+            },
+            {
+              "id": "g3-th-c1-l3-q6",
+              "type": "knowledge",
+              "prompt": "Thói quen vừa cắm sạc điện thoại vừa chơi game gây ra nguy cơ mất an toàn như thế nào?",
+              "options": [
+                "Giúp cho pin điện thoại sạc nhanh đầy hơn",
+                "Dễ làm máy phát nóng, gây cháy nổ hoặc giật điện",
+                "Giúp cho điện thoại hoạt động mượt mà hơn",
+                "Không gây bất kỳ ảnh hưởng nào tới thiết bị"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Vừa dùng vừa sạc khiến pin sinh nhiệt rất lớn, dễ gây phồng pin, cháy nổ và rò rỉ điện nguy hiểm."
+            }
+          ]
+        },
+        {
+          "id": "l4-bai-4",
+          "lessonNumber": 4,
+          "title": "BÀI 4: LÀM VIỆC VỚI MÁY TÍNH",
+          "description": "Tư thế ngồi chuẩn, quy tắc bảo vệ sức khỏe và các thao tác cơ bản với máy tính",
+          "questions": [
+            {
+              "id": "g3-th-c1-l4-q1",
+              "type": "knowledge",
+              "prompt": "Ngồi học máy tính đúng tư thế, mắt cách màn hình 50 cm - 80 cm giúp phòng tránh những bệnh nào?",
+              "options": [
+                "Bệnh vẹo cột sống và bệnh cận thị",
+                "Đau tai và đau răng hằng ngày",
+                "Đau chân và bị sổ mũi kéo dài",
+                "Mỏi tay và đau bụng khi ngồi học"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Ngồi sai tư thế, cúi gập lưng và nhìn quá sát màn hình dễ gây cận thị và tật cong vẹo cột sống."
+            },
+            {
+              "id": "g3-th-c1-l4-q2",
+              "type": "knowledge",
+              "prompt": "Ngồi máy tính liên tục hơn 2 tiếng không nghỉ, em nên khuyên bạn điều gì?",
+              "options": [
+                "\"Cậu nên tiếp tục chơi thêm 2 tiếng nữa cho giỏi!\"",
+                "\"Cậu nên nghỉ ngơi sau khoảng 30 phút ngồi máy tính nhé!\"",
+                "\"Cậu nên ghé sát mắt vào màn hình nhìn cho rõ hơn\"",
+                "\"Cậu nên tắt hết đèn trong phòng đi để nhìn cho nét\""
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Cứ sau mỗi 30 phút dùng máy tính, em nên rời mắt khỏi màn hình và vận động nhẹ để mắt nghỉ ngơi."
+            },
+            {
+              "id": "g3-th-c1-l4-q3",
+              "type": "scenario",
+              "prompt": "Khi cầm chuột máy tính bằng tay phải, ngón trỏ và ngón giữa đặt ở vị trí nào?",
+              "options": [
+                "Ngón trỏ đặt vào nút phải, ngón giữa đặt nút trái",
+                "Ngón trỏ đặt vào nút trái, ngón giữa đặt nút phải",
+                "Cả hai ngón tay cùng đặt lên trên nút cuộn ở giữa",
+                "Cầm ngửa ngược con chuột lên trên mặt bàn học"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Tình huống",
+              "explanation": "Tư thế cầm chuột chuẩn: Ngón trỏ đặt nhẹ lên nút chuột trái, ngón giữa đặt lên nút chuột phải."
+            },
+            {
+              "id": "g3-th-c1-l4-q4",
+              "type": "scenario",
+              "prompt": "Muốn mở một phần mềm ứng dụng trên màn hình, em thực hiện thao tác chuột nào?",
+              "options": [
+                "Nháy chuột (nhấn nút trái chuột 1 lần)",
+                "Nháy đúp chuột (nhấn nút trái nhanh 2 lần)",
+                "Nháy nút phải chuột vào biểu tượng phần mềm",
+                "Kéo thả chuột đến vị trí khác trên màn hình"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Tình huống",
+              "explanation": "Nháy đúp chuột là thao tác bấm nút chuột trái hai lần liên tiếp thật nhanh để mở chương trình."
+            },
+            {
+              "id": "g3-th-c1-l4-q5",
+              "type": "knowledge",
+              "prompt": "Quy trình tắt máy tính an toàn và đúng kỹ thuật nhất là gì?",
+              "options": [
+                "Đóng phần mềm -> Nháy nút Start -> Chọn Power -> Chọn Shut down",
+                "Nhấn nút công tắc nguồn trên thân máy tính ngay lập tức",
+                "Đứng dậy đi về, không cần đóng phần mềm hay tắt máy",
+                "Dùng tay rút thẳng phích cắm điện ra khỏi ổ cắm"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Quy trình tắt máy tính chuẩn: Đóng các ứng dụng -> Nháy Start -> Chọn biểu tượng Power -> Chọn Shut down."
+            },
+            {
+              "id": "g3-th-c1-l4-q6",
+              "type": "knowledge",
+              "prompt": "Tắt máy tính bằng cách nhấn giữ nút nguồn trên thân máy gây ra hậu quả gì?",
+              "options": [
+                "Giúp thiết bị máy tính bền hơn và chạy nhanh hơn",
+                "Giúp tiết kiệm thêm nhiều điện năng cho nhà trường",
+                "Dễ gây lỗi hệ thống, mất dữ liệu và hỏng linh kiện",
+                "Không gây bất kỳ ảnh hưởng nào tới máy tính"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Kiến thức",
+              "explanation": "Nhấn giữ nút nguồn tắt đột ngột làm hệ điều hành và các ứng dụng bị dừng bất thường, dễ mất dữ liệu và hỏng tệp."
+            }
+          ]
+        },
+        {
+          "id": "l5-bai-5",
+          "lessonNumber": 5,
+          "title": "BÀI 5: SỬ DỤNG BÀN PHÍM",
+          "description": "Cấu tạo các hàng phím, vị trí phím F, J và cách đặt 10 ngón tay gõ phím",
+          "questions": [
+            {
+              "id": "g3-th-c1-l5-q1",
+              "type": "knowledge",
+              "prompt": "Hai phím có gờ nổi nhỏ làm vị trí xuất phát cho hai ngón trỏ trên hàng phím cơ sở là hai phím nào?",
+              "options": [
+                "Phím A và phím L",
+                "Phím F và phím J",
+                "Phím G và phím H",
+                "Phím Q và phím P"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Phím F và phím J trên hàng cơ sở có gờ nổi để hai ngón trỏ định vị vị trí chuẩn mà không cần nhìn."
+            },
+            {
+              "id": "g3-th-c1-l5-q2",
+              "type": "knowledge",
+              "prompt": "Hàng phím nào chứa các phím gốc để em đặt ngón tay vào trước khi gõ và quay trở về sau khi gõ xong?",
+              "options": [
+                "Hàng phím số",
+                "Hàng phím trên",
+                "Hàng phím cơ sở",
+                "Hàng phím dưới"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Kiến thức",
+              "explanation": "Hàng phím chứa các phím A S D F G H J K L là hàng phím cơ sở, nơi các ngón tay luôn xuất phát và trở về."
+            },
+            {
+              "id": "g3-th-c1-l5-q3",
+              "type": "knowledge",
+              "prompt": "Phím dài nhất nằm ở hàng phím dưới cùng (phím Dấu cách) do hai ngón tay nào phụ trách gõ?",
+              "options": [
+                "Hai ngón trỏ",
+                "Hai ngón giữa",
+                "Hai ngón cái",
+                "Hai ngón út"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Kiến thức",
+              "explanation": "Phím Dấu cách (Spacebar) dài nhất nằm ở hàng phím dưới cùng do hai ngón tay cái đảm nhận gõ."
+            },
+            {
+              "id": "g3-th-c1-l5-q4",
+              "type": "knowledge",
+              "prompt": "Sau khi ngón trỏ vươn lên gõ xong phím R ở hàng phím trên, em cần thực hiện ngay thao tác nào?",
+              "options": [
+                "Giữ nguyên ngón tay ở phím R không di chuyển",
+                "Rút ngón tay về đặt ngay tại phím gốc F trên hàng phím cơ sở",
+                "Đặt ngón tay di chuyển xuống hàng phím số",
+                "Thả hẳn hai tay ra khỏi bàn phím máy tính"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Quy tắc gõ 10 ngón: Sau khi vươn ngón tay gõ phím ở các hàng khác, phải rút ngón tay về ngay phím gốc trên hàng cơ sở."
+            },
+            {
+              "id": "g3-th-c1-l5-q5",
+              "type": "knowledge",
+              "prompt": "Thấy bạn chỉ dùng 2 ngón trỏ và cúi mỏi cổ nhìn bàn phím khi gõ, em nên khuyên bạn điều gì?",
+              "options": [
+                "\"Cậu cứ dùng 2 ngón trỏ gõ tiếp cho quen tay!\"",
+                "\"Cậu nên tập gõ bằng 10 ngón để gõ nhanh và không bị mỏi cổ!\"",
+                "\"Cậu nên dùng ngón cái gõ tất cả các phím chữ!\"",
+                "\"Cậu nên vừa gõ vừa bấm nút nguồn máy tính!\""
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Gõ 'mổ cò' hai ngón làm giảm tốc độ gõ, khiến cổ bị gập mỏi và không theo dõi được nội dung trên màn hình."
+            },
+            {
+              "id": "g3-th-c1-l5-q6",
+              "type": "knowledge",
+              "prompt": "Rèn luyện thói quen gõ 10 ngón đúng vị trí xuất phát mang lại lợi ích thiết thực nhất là gì?",
+              "options": [
+                "Gõ nhanh, chính xác và mắt nhìn thẳng màn hình không cần nhìn bàn phím",
+                "Giúp bàn phím máy tính không bao giờ bị bám bụi bẩn",
+                "Giúp máy tính tự động bật lên mỗi khi em đặt tay vào",
+                "Giúp tăng âm lượng của loa máy tính lên mức to hơn"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Luyện gõ 10 ngón đúng cách giúp gõ văn bản nhanh, chính xác và rèn thói quen gõ phím không cần nhìn."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c2-chu-de-2",
+      "chapterNumber": 2,
+      "title": "CHỦ ĐỀ 2: MẠNG MÁY TÍNH VÀ INTERNET",
+      "lessons": [
+        {
+          "id": "l6-bai-6",
+          "lessonNumber": 6,
+          "title": "BÀI 6: KHÁM PHÁ THÔNG TIN TRÊN INTERNET",
+          "description": "Khai thác thông tin bổ ích trên Internet và nguyên tắc sử dụng mạng an toàn",
+          "questions": [
+            {
+              "id": "g3-th-c2-l6-q1",
+              "type": "knowledge",
+              "prompt": "Cuối tuần, Nam có thể truy cập Internet để xem nội dung bổ ích nào?",
+              "options": [
+                "Phim hoạt hình thiếu nhi, tin thể thao, thế giới động vật",
+                "Các video có nội dung bạo lực, dọa nạt hoặc kinh dị",
+                "Trang web hướng dẫn những trò chơi nguy hiểm",
+                "Trang tin tức dành riêng cho người lớn không phù hợp"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Học sinh lớp 3 nên xem những nội dung giải trí lành mạnh, phim hoạt hình và video khoa học bổ ích."
+            },
+            {
+              "id": "g3-th-c2-l6-q2",
+              "type": "knowledge",
+              "prompt": "Muốn tìm video hướng dẫn quàng khăn quàng đỏ trên Internet, An nên làm gì?",
+              "options": [
+                "Nhờ người lớn hướng dẫn mở Internet để tìm kiếm video",
+                "Bỏ qua không chuẩn bị bài vì máy tính không có sẵn file",
+                "Tháo máy tính ra để tìm kiếm video bên trong thân máy",
+                "Ngồi chờ máy tính tự động tạo ra video mới cho mình"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Khi cần tìm kiếm thông tin học tập, em nên nhờ người lớn mở trang web uy tín để đảm bảo nội dung chuẩn xác."
+            },
+            {
+              "id": "g3-th-c2-l6-q3",
+              "type": "scenario",
+              "prompt": "Xem dự báo thời tiết thấy thông báo \"Trời có mưa rào\", lớp An nên quyết định thế nào?",
+              "options": [
+                "Cắm trại ngoài trời mà không cần mang theo đồ che mưa",
+                "Chuyển các hoạt động tập thể vào trong nhà để tránh ướt",
+                "Không chú ý dự báo thời tiết vì không quan trọng",
+                "Hủy bỏ hoàn toàn tất cả các buổi học ở trên trường"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Tình huống",
+              "explanation": "Biết thông tin thời tiết có mưa giúp chúng ta chủ động thay đổi kế hoạch hoạt động ngoài trời vào nơi có mái che."
+            },
+            {
+              "id": "g3-th-c2-l6-q4",
+              "type": "scenario",
+              "prompt": "Tìm hiểu trước giá cả và kiểu dáng sách trên Internet mang lại lợi ích gì?",
+              "options": [
+                "Nắm rõ thông tin, chọn đồ phù hợp và chuẩn bị chi phí",
+                "Để cửa hàng tự động mang đồ dùng đến tặng miễn phí",
+                "Làm cho đồ dùng học tập ở cửa hàng bị tăng giá lên",
+                "Không mang lại bất kỳ lợi ích thiết thực nào cho em"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Tra cứu trước giá cả và kiểu dáng giúp em chuẩn bị chi phí đầy đủ và lựa chọn món đồ phù hợp."
+            },
+            {
+              "id": "g3-th-c2-l6-q5",
+              "type": "scenario",
+              "prompt": "Vô tình thấy hình ảnh bạo lực, đáng sợ trên Internet, em nên xử lý thế nào?",
+              "options": [
+                "Tiếp tục ngồi xem và giữ bí mật không nói cho ai biết",
+                "Tắt ngay trang web và báo với bố mẹ hoặc thầy cô giáo",
+                "Gửi đường link đó cho các bạn học trong lớp cùng xem",
+                "Tự tìm thêm các video đáng sợ khác để xem tiếp"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Tình huống",
+              "explanation": "Gặp nội dung xấu, bạo lực, em cần tắt ngay trang web và thông báo cho người lớn để được hỗ trợ chặn trang web đó."
+            },
+            {
+              "id": "g3-th-c2-l6-q6",
+              "type": "scenario",
+              "prompt": "Thói quen đúng đắn nhất giúp học sinh tiểu học sử dụng Internet an toàn là gì?",
+              "options": [
+                "Xin phép và có sự hướng dẫn, giám sát của người lớn",
+                "Tự ý mở máy tính sử dụng Internet giấu bố mẹ ban đêm",
+                "Nhấp chuột vào tất cả các quảng cáo lạ xuất hiện",
+                "Nhập tên, số điện thoại và địa chỉ nhà lên trang web lạ"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Nguyên tắc vàng khi dùng mạng Internet ở lứa tuổi tiểu học là luôn xin phép và có sự đồng hành của bố mẹ hoặc thầy cô."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c3-chu-de-3",
+      "chapterNumber": 3,
+      "title": "CHỦ ĐỀ 3: TỔ CHỨC LƯU TRỮ, TÌM KIẾM VÀ TRAO ĐỔI THÔNG TIN",
+      "lessons": [
+        {
+          "id": "l7-bai-7",
+          "lessonNumber": 7,
+          "title": "BÀI 7: SẮP XẾP ĐỂ DỄ TÌM",
+          "description": "Kỹ năng phân loại, sắp xếp đồ vật và dữ liệu khoa học, ngăn nắp",
+          "questions": [
+            {
+              "id": "g3-th-c3-l7-q1",
+              "type": "knowledge",
+              "prompt": "Đồ dùng xáo trộn làm An phải bới tung bàn học để tìm tẩy. An nên làm gì để tìm đồ nhanh hơn?",
+              "options": [
+                "Để nguyên đồ đạc xáo trộn như vậy cho tự nhiên",
+                "Sắp xếp đồ dùng cùng loại vào từng nhóm, ngăn riêng",
+                "Cất hết tất cả đồ dùng vào trong cặp sách đóng kín lại",
+                "Mua thêm nhiều cục tẩy mới để sẵn ở trên mặt bàn"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Phân loại đồ dùng vào các ngăn riêng giúp đồ vật không bị lẫn lộn, tìm kiếm nhanh chóng khi cần."
+            },
+            {
+              "id": "g3-th-c3-l7-q2",
+              "type": "knowledge",
+              "prompt": "Việc siêu thị xếp riêng thực phẩm, bánh kẹo, nước giải khát ở từng khu giúp ích gì?",
+              "options": [
+                "Giúp cho khách hàng phải mất thời gian đi tìm lâu hơn",
+                "Dễ quản lý đồ đạc và giúp khách tìm hàng nhanh chóng",
+                "Làm cho không gian trong cửa hàng trông đông đúc hơn",
+                "Làm cho người khác không thể tìm thấy đồ đạc cần mua"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Siêu thị phân chia khu vực hàng hóa khoa học giúp khách hàng dễ chọn mua và việc kiểm kê quản lý thuận tiện."
+            },
+            {
+              "id": "g3-th-c3-l7-q3",
+              "type": "scenario",
+              "prompt": "Muốn lấy áo cộc tay trong tủ đã chia sẵn ngăn áo (gồm chồng áo dài và cộc), Minh tìm thế nào?",
+              "options": [
+                "Tìm lần lượt ở tất cả các ngăn kéo có trong tủ",
+                "Mở ngay ngăn đựng áo và tìm ở chồng áo cộc tay",
+                "Bới tung ngăn đựng quần ra để tìm kiếm áo cộc",
+                "Nhờ mẹ đi ra cửa hàng mua cho chiếc áo mới"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Tình huống",
+              "explanation": "Dựa vào sơ đồ phân loại tủ đồ, áo cộc tay nằm trong nhóm 'Áo' nên chỉ cần tìm đúng vị trí đó."
+            },
+            {
+              "id": "g3-th-c3-l7-q4",
+              "type": "scenario",
+              "prompt": "Nam phân loại đồ chơi thành nhóm \"Giao thông\" và \"Thể thao\". Món đồ nào không thuộc 2 nhóm trên?",
+              "options": [
+                "Quả bóng đá",
+                "Ô tô nhựa",
+                "Ghế gỗ nhỏ",
+                "Xe đạp chơi"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Tình huống",
+              "explanation": "Ghế gỗ nhỏ là đồ dùng nội thất trong nhà, không thuộc nhóm phương tiện giao thông hay dụng cụ thể thao."
+            },
+            {
+              "id": "g3-th-c3-l7-q5",
+              "type": "knowledge",
+              "prompt": "Muốn chia các số từ 1 đến 20 thành 2 nhóm, mỗi nhóm 10 số có điểm chung, An nên làm thế nào?",
+              "options": [
+                "Nhóm 1 gồm các số chẵn và Nhóm 2 gồm các số lẻ",
+                "Xếp ngẫu nhiên 10 số bất kỳ vào chung một nhóm",
+                "Xếp các số nhỏ hơn 5 vào nhóm 1, các số còn lại vào nhóm 2",
+                "Không thể phân loại được các số tự nhiên từ 1 đến 20"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Chia các số thành nhóm chẵn (chia hết cho 2) và nhóm lẻ là cách phân loại toán học rõ ràng và phổ biến nhất."
+            },
+            {
+              "id": "g3-th-c3-l7-q6",
+              "type": "knowledge",
+              "prompt": "Thói quen tốt nhất em nên làm tại góc học tập sau khi hoàn thành xong bài tập về nhà là gì?",
+              "options": [
+                "Để nguyên sách vở mở sẵn trên bàn học rồi đi ngủ",
+                "Dọn dẹp, sắp xếp ngay ngắn sách vở vào giá sách",
+                "Dồn tất cả sách vở bừa bãi vào trong gầm bàn học",
+                "Vứt bừa bãi sách vở và hộp bút xuống dưới sàn nhà"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Sắp xếp đồ dùng học tập lên giá và cất đồ chơi vào thùng giúp bàn học luôn gọn gàng, tăng hứng thú học tập."
+            }
+          ]
+        },
+        {
+          "id": "l8-bai-8",
+          "lessonNumber": 8,
+          "title": "BÀI 8: SƠ ĐỒ HÌNH CÂY. TỔ CHỨC THÔNG TIN TRONG MÁY TÍNH",
+          "description": "Cấu trúc sơ đồ hình cây, khái niệm tệp và thư mục trong máy tính",
+          "questions": [
+            {
+              "id": "g3-th-c3-l8-q1",
+              "type": "knowledge",
+              "prompt": "Sơ đồ bắt đầu từ gốc \"SỞ THÍCH\", tách ra các nhánh lớn và các nhánh nhỏ được gọi là gì?",
+              "options": [
+                "Sơ đồ hình tròn",
+                "Sơ đồ hình cây",
+                "Sơ đồ hình vuông",
+                "Sơ đồ đường thẳng"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Sơ đồ biểu diễn bắt đầu từ một nút gốc tỏa ra các nhánh con giống như cành cây được gọi là sơ đồ hình cây."
+            },
+            {
+              "id": "g3-th-c3-l8-q2",
+              "type": "knowledge",
+              "prompt": "Ở nhánh chính \"Sách vở\" trên sơ đồ hình cây, em nên chia tiếp thành hai nhánh con nào?",
+              "options": [
+                "Sách giáo khoa và Vở viết",
+                "Truyện cổ tích và Báo nhi đồng",
+                "Đồ chơi và Hộp đựng bút",
+                "Quần áo và Giày dép đi học"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Nhánh con phân loại của 'Đồ dùng học tập' phù hợp nhất là Sách vở và Dụng cụ học tập."
+            },
+            {
+              "id": "g3-th-c3-l8-q3",
+              "type": "knowledge",
+              "prompt": "Biểu tượng kẹp giấy màu vàng dùng để gom và quản lý các tệp trong máy tính gọi là gì?",
+              "options": ["Ổ đĩa", "Thư mục", "Bàn phím", "Phần mềm"],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Biểu tượng kẹp giấy màu vàng đại diện cho thư mục (Folder), dùng để nhóm và lưu trữ các tệp cùng chủ đề."
+            },
+            {
+              "id": "g3-th-c3-l8-q4",
+              "type": "knowledge",
+              "prompt": "Quy tắc nào sau đây về việc đặt tên thư mục con trong máy tính là đúng?",
+              "options": [
+                "Các thư mục con trong cùng một thư mục mẹ không được trùng tên",
+                "Có thể tạo nhiều thư mục con trùng tên trong cùng một thư mục mẹ",
+                "Thư mục con bắt buộc phải đặt tên hoàn toàn bằng tiếng Anh",
+                "Thư mục con không được phép chứa bất kỳ tệp dữ liệu nào"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Trong cùng một thư mục mẹ, hệ điều hành không cho phép tồn tại hai thư mục con trùng tên nhau."
+            },
+            {
+              "id": "g3-th-c3-l8-q5",
+              "type": "knowledge",
+              "prompt": "Mở thư mục \"Truyện tranh\" thấy có hai thư mục con \"Đô-rê-mon\" và \"Cô-nan\". Khẳng định nào đúng?",
+              "options": [
+                "Thư mục \"Đô-rê-mon\" là thư mục mẹ chứa thư mục \"Truyện tranh\"",
+                "Thư mục \"Truyện tranh\" chứa hai thư mục con \"Đô-rê-mon\" và \"Cô-nan\"",
+                "Ổ đĩa D: là thư mục con nằm bên trong thư mục \"Cô-nan\"",
+                "Thư mục \"Đô-rê-mon\" và \"Cô-nan\" nằm ở hai ổ đĩa hoàn toàn khác nhau"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Thư mục 'Truyện tranh' đóng vai trò là thư mục mẹ, chứa hai thư mục con là 'Đô-rê-mon' và 'Cô-nan'."
+            },
+            {
+              "id": "g3-th-c3-l8-q6",
+              "type": "knowledge",
+              "prompt": "Sắp xếp tệp và dữ liệu theo cấu trúc cây thư mục trong máy tính mang lại lợi ích gì?",
+              "options": [
+                "Giúp cho máy tính có thể khởi động nhanh hơn",
+                "Quản lý dữ liệu gọn gàng và tìm kiếm tệp nhanh chóng",
+                "Giúp cho máy tính không bao giờ bị tình trạng hết pin",
+                "Giúp tăng độ phân giải hình ảnh của màn hình"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Tổ chức dữ liệu theo cây thư mục giúp máy tính ngăn nắp, dễ quản lý và tìm kiếm tệp tin rất nhanh."
+            }
+          ]
+        },
+        {
+          "id": "l9-bai-9",
+          "lessonNumber": 9,
+          "title": "BÀI 9: THỰC HÀNH VỚI TỆP VÀ THƯ MỤC TRONG MÁY TÍNH",
+          "description": "Thao tác mở, tạo mới, đổi tên và quản lý tệp, thư mục an toàn",
+          "questions": [
+            {
+              "id": "g3-th-c3-l9-q1",
+              "type": "knowledge",
+              "prompt": "Muốn mở cửa sổ quản lý tệp trên biểu tượng This PC ở màn hình nền, An thực hiện thao tác nào?",
+              "options": [
+                "Nháy chuột (nhấn nút trái 1 lần)",
+                "Nháy đúp chuột (nhấn nút trái nhanh 2 lần)",
+                "Kéo thả chuột sang góc màn hình",
+                "Nháy nút phải chuột rồi tắt máy"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Để mở biểu tượng This PC trên màn hình nền Desktop, em nháy đúp chuột (nhấn nút trái 2 lần liên tiếp)."
+            },
+            {
+              "id": "g3-th-c3-l9-q2",
+              "type": "knowledge",
+              "prompt": "Khi đang ở trong ổ đĩa D:, Khoa chọn nút lệnh nào trên dải lệnh Home để tạo thư mục mới?",
+              "options": [
+                "Nút lệnh Delete (Xóa)",
+                "Nút lệnh Rename (Đổi tên)",
+                "Nút lệnh New folder (Tạo thư mục mới)",
+                "Nút lệnh Copy (Sao chép)"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Kiến thức",
+              "explanation": "Nút lệnh New folder (hoặc phím tắt Ctrl+Shift+N) dùng để tạo một thư mục mới."
+            },
+            {
+              "id": "g3-th-c3-l9-q3",
+              "type": "knowledge",
+              "prompt": "Sau khi chọn thư mục cũ, Nam chọn lệnh nào trên dải lệnh Home để gõ tên mới cho thư mục?",
+              "options": [
+                "Lệnh Rename",
+                "Lệnh New folder",
+                "Lệnh Delete",
+                "Lệnh Shut down"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Lệnh Rename (Đổi tên) cho phép em chỉnh sửa và nhập tên mới cho tệp hoặc thư mục đã chọn."
+            },
+            {
+              "id": "g3-th-c3-l9-q4",
+              "type": "knowledge",
+              "prompt": "Trước khi nhấn nút Delete để xóa một thư mục, An cần lưu ý điều quan trọng nào?",
+              "options": [
+                "Mở thư mục kiểm tra kỹ xem có tệp quan trọng không trước khi xóa",
+                "Xóa ngay lập tức mà không cần kiểm tra bên trong",
+                "Thực hiện tắt máy tính đi rồi mới chọn xóa",
+                "Đổi tên thư mục thành chữ tiếng Anh rồi mới xóa"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Trước khi xóa một thư mục, cần mở xem bên trong có dữ liệu quan trọng không để tránh làm mất tài liệu."
+            },
+            {
+              "id": "g3-th-c3-l9-q5",
+              "type": "knowledge",
+              "prompt": "Trình tự các bước đúng và nhanh nhất để tìm tệp Anh.jpg trong thư mục \"Truyện tranh\" ở ổ D: là gì?",
+              "options": [
+                "Mở This PC -> Mở ổ đĩa D: -> Mở thư mục \"Truyện tranh\" -> Tìm tệp Anh.jpg",
+                "Tìm trực tiếp thông qua các phím bấm trên bàn phím",
+                "Thực hiện mở ổ đĩa C: rồi tắt máy",
+                "Tạo một thư mục mới đặt tên là Anh.jpg"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đường dẫn tìm kiếm: Mở This PC -> Vào Ổ đĩa D: -> Mở thư mục Truyện tranh -> Chọn xem tệp ảnh Anh.jpg."
+            },
+            {
+              "id": "g3-th-c3-l9-q6",
+              "type": "knowledge",
+              "prompt": "Để lưu giữ ảnh du lịch gia đình một cách khoa học và dễ tìm kiếm sau này, Nam nên làm gì?",
+              "options": [
+                "Để tất cả các tệp ảnh tự do ngoài màn hình nền",
+                "Tạo thư mục \"Ảnh du lịch\", bên trong tạo các thư mục con theo địa điểm",
+                "Lưu tất cả các tệp ảnh vào trong thùng rác",
+                "Xóa bớt các tệp ảnh đi vì không cần thiết lưu trữ"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Tạo thư mục chính rồi phân nhánh thư mục con theo chuyến đi/địa điểm giúp album ảnh gia đình luôn gọn gàng."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c4-chu-de-4",
+      "chapterNumber": 4,
+      "title": "CHỦ ĐỀ 4: ĐẠO ĐỨC, PHÁP LUẬT VÀ VĂN HÓA TRONG MÔI TRƯỜNG SỐ",
+      "lessons": [
+        {
+          "id": "l10-bai-10",
+          "lessonNumber": 10,
+          "title": "BÀI 10: BẢO VỆ THÔNG TIN KHI DÙNG MÁY TÍNH",
+          "description": "Bảo vệ thông tin cá nhân, gia đình và giữ an toàn trên không gian mạng",
+          "questions": [
+            {
+              "id": "g3-th-c4-l10-q1",
+              "type": "knowledge",
+              "prompt": "Họ tên, ngày sinh, địa chỉ nhà và số điện thoại bố mẹ lưu trong máy tính gọi là gì?",
+              "options": [
+                "Thông tin công cộng ai cũng có quyền được biết",
+                "Thông tin cá nhân và gia đình cần được bảo vệ",
+                "Các trò chơi điện tử giải trí trực tuyến",
+                "Bài tập thực hành làm thủ công ở trên lớp"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Họ tên, ngày sinh, địa chỉ nhà, số điện thoại là thông tin cá nhân quan trọng cần được giữ bí mật và bảo vệ."
+            },
+            {
+              "id": "g3-th-c4-l10-q2",
+              "type": "knowledge",
+              "prompt": "Muốn gửi ảnh chụp chuyến tham quan cho bạn, An nên sử dụng cách nào an toàn?",
+              "options": [
+                "Nhờ người lớn gửi qua Email hoặc sao chép qua USB",
+                "Đăng tải công khai ảnh lên các trang web xa lạ",
+                "Gửi ảnh cho tất cả những người không quen biết",
+                "Nhờ người lạ mặt ngoài đường gửi hộ ảnh giúp"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Nhờ người lớn gửi qua kênh an toàn hoặc chép vào USB giúp ảnh không bị lộ ra các trang web công cộng."
+            },
+            {
+              "id": "g3-th-c4-l10-q3",
+              "type": "scenario",
+              "prompt": "Người lạ xin địa chỉ nhà, số điện thoại để tặng quà, nếu Nam cho thì bị nguy hại gì?",
+              "options": [
+                "Kẻ xấu có thể lợi dụng thông tin để lừa đảo, đe dọa",
+                "Nam sẽ nhận được quà tặng đắt tiền ngay lập tức",
+                "Máy tính của Nam sẽ hoạt động chạy nhanh hơn",
+                "Không có bất kỳ nguy hiểm nào xảy ra cho Nam"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Tiết lộ thông tin cá nhân cho người lạ rất nguy hiểm, kẻ xấu có thể lợi dụng để lừa đảo hoặc tiếp cận đe dọa."
+            },
+            {
+              "id": "g3-th-c4-l10-q4",
+              "type": "scenario",
+              "prompt": "Thói quen nào giúp em bảo vệ mật khẩu máy tính và tài khoản an toàn nhất?",
+              "options": [
+                "Viết mật khẩu lên bảng lớp cho các bạn cùng biết",
+                "Giữ bí mật mật khẩu, chỉ chia sẻ với bố mẹ khi cần",
+                "Đặt mật khẩu đơn giản \"123456\" và nói cho người lạ",
+                "Nhập mật khẩu vào tất cả trang web quảng cáo lạ"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Tình huống",
+              "explanation": "Mật khẩu chỉ nên chia sẻ với bố mẹ, không tiết lộ cho bạn bè hay người lạ để tránh bị chiếm đoạt tài khoản."
+            },
+            {
+              "id": "g3-th-c4-l10-q5",
+              "type": "scenario",
+              "prompt": "Hộp thư điện tử nhận tệp từ người lạ ghi \"Nhận thưởng 100 triệu\", An nên xử lý thế nào?",
+              "options": [
+                "Nháy đúp chuột mở ngay tệp đó ra để xem thử",
+                "Không mở tệp, không tải về và báo ngay cho người lớn",
+                "Gửi tệp đó cho các bạn khác trong lớp cùng mở",
+                "Nhập ngay họ tên và địa chỉ nhà mình vào tin nhắn"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Tình huống",
+              "explanation": "Các thông báo trúng thưởng lớn từ người lạ thường là bẫy lừa đảo, tuyệt đối không mở tệp đính kèm mà báo ngay người lớn."
+            },
+            {
+              "id": "g3-th-c4-l10-q6",
+              "type": "scenario",
+              "prompt": "Nguyên tắc quan trọng nhất để bảo vệ an toàn cho em khi dùng Internet là gì?",
+              "options": [
+                "Đăng công khai địa chỉ nhà và số điện thoại lên mạng",
+                "Không đưa thông tin cho người lạ, hỏi ý kiến người lớn",
+                "Tự ý kết bạn và hẹn gặp mặt người lạ quen qua mạng",
+                "Chia sẻ tài khoản và mật khẩu máy tính cho mọi người"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Tình huống",
+              "explanation": "Không tùy tiện chia sẻ thông tin cá nhân với người lạ và luôn tham khảo ý kiến người lớn khi dùng Internet."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c5-chu-de-5",
+      "chapterNumber": 5,
+      "title": "CHỦ ĐỀ 5: ỨNG DỤNG TIN HỌC",
+      "lessons": [
+        {
+          "id": "l11-bai-11",
+          "lessonNumber": 11,
+          "title": "BÀI 11: BÀI TRÌNH CHIẾU CỦA EM",
+          "description": "Khởi động phần mềm trình chiếu, thêm trang chiếu, chèn ảnh và trình chiếu",
+          "questions": [
+            {
+              "id": "g3-th-c5-l11-q1",
+              "type": "knowledge",
+              "prompt": "Muốn tạo bài trình chiếu báo cáo trước lớp, An cần mở phần mềm có biểu tượng nào?",
+              "options": [
+                "Biểu tượng hình chữ W màu xanh dương (Microsoft Word)",
+                "Biểu tượng hình chữ P màu đỏ (Microsoft PowerPoint)",
+                "Biểu tượng hình chú chim cánh cụt trên màn hình",
+                "Biểu tượng hình cây chổi phủi bụi ngoài màn hình"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Phần mềm trình chiếu Microsoft PowerPoint có biểu tượng đặc trưng là chữ P màu đỏ hoặc cam đỏ."
+            },
+            {
+              "id": "g3-th-c5-l11-q2",
+              "type": "knowledge",
+              "prompt": "Khi thấy biểu tượng phần mềm trình chiếu, Nam thực hiện thao tác chuột nào để mở?",
+              "options": [
+                "Nháy chuột (nhấn nút trái 1 lần)",
+                "Nháy đúp chuột (nhấn nút trái nhanh 2 lần)",
+                "Kéo thả biểu tượng phần mềm vào thùng rác",
+                "Nháy nút phải chuột rồi thực hiện tắt màn hình"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Thao tác nháy đúp nút chuột trái lên biểu tượng ứng dụng là cách chuẩn để mở phần mềm."
+            },
+            {
+              "id": "g3-th-c5-l11-q3",
+              "type": "knowledge",
+              "prompt": "Muốn thêm một trang chiếu mới vào bài, Minh chọn dải lệnh Home rồi chọn nút lệnh nào?",
+              "options": [
+                "Nút lệnh New Slide",
+                "Nút lệnh Picture",
+                "Nút lệnh Save",
+                "Nút lệnh Close"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Lệnh 'New Slide' trên dải lệnh Home cho phép em thêm một trang trình chiếu mới vào bài báo cáo."
+            },
+            {
+              "id": "g3-th-c5-l11-q4",
+              "type": "knowledge",
+              "prompt": "Để chèn bức ảnh hoa mai chụp sẵn vào trang chiếu, Khoa chọn dải lệnh Insert và nút lệnh nào?",
+              "options": [
+                "Nút lệnh Picture",
+                "Nút lệnh New Slide",
+                "Nút lệnh Font",
+                "Nút lệnh Shut down"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Lệnh 'Picture' trong dải lệnh Insert dùng để chèn hình ảnh từ máy tính vào trang chiếu."
+            },
+            {
+              "id": "g3-th-c5-l11-q5",
+              "type": "knowledge",
+              "prompt": "Sau khi làm xong bài, An có thể bấm phím nào trên bàn phím để trình chiếu toàn màn hình?",
+              "options": [
+                "Phím F5",
+                "Phím Delete",
+                "Phím Backspace",
+                "Phím Enter"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Nhấn phím F5 trên bàn phím là phím tắt nhanh để bắt đầu trình chiếu toàn màn hình từ trang đầu tiên."
+            },
+            {
+              "id": "g3-th-c5-l11-q6",
+              "type": "knowledge",
+              "prompt": "Thói quen lưu và đặt tên tệp bài trình chiếu nào sau đây là khoa học và dễ tìm kiếm?",
+              "options": [
+                "Đặt tên gắn với nội dung bài học và lưu vào thư mục riêng",
+                "Đặt tên bừa bãi bằng vài ký tự bất kỳ như \"hhhhh\"",
+                "Không cần đặt tên tệp, tắt máy luôn để máy tự xóa",
+                "Thực hiện lưu bài trình chiếu vào thư mục Thùng rác"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đặt tên tệp rõ ràng, đúng nội dung và lưu vào thư mục học tập giúp việc tìm lại bài trình chiếu rất nhanh chóng."
+            }
+          ]
+        },
+        {
+          "id": "l12-bai-12",
+          "lessonNumber": 12,
+          "title": "BÀI 12: TÌM HIỂU VỀ THẾ GIỚI TỰ NHIÊN",
+          "description": "Sử dụng phần mềm khám phá vũ trụ, Hệ Mặt Trời và vòng đời động vật",
+          "questions": [
+            {
+              "id": "g3-th-c5-l12-q1",
+              "type": "knowledge",
+              "prompt": "Khó chụp ảnh Hệ Mặt Trời ngoài thực tế, giải pháp tốt nhất cho nhóm của Minh là gì?",
+              "options": [
+                "Dùng phần mềm khám phá khoa học để tìm hiểu hình ảnh và video",
+                "Bỏ qua không tiếp tục tìm hiểu về các hành tinh trong Hệ Mặt Trời",
+                "Đợi đến ban đêm nhìn lên bầu trời rồi lấy giấy vẽ lại bằng tay",
+                "Mua kính thiên văn thật đắt tiền về tự lắp ráp tại góc học tập"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Phần mềm mô phỏng không gian khoa học giúp học sinh quan sát sinh động Hệ Mặt Trời mà không cần đi xa hay thiết bị đắt đỏ."
+            },
+            {
+              "id": "g3-th-c5-l12-q2",
+              "type": "knowledge",
+              "prompt": "Khi trải nghiệm phần mềm tìm hiểu về thiên văn, đặc điểm đúng của Kim tinh là gì?",
+              "options": [
+                "Kim tinh là hành tinh có kích thước lớn nhất trong Hệ Mặt Trời",
+                "Kim tinh là hành tinh sáng nhất và nóng nhất trong Hệ Mặt Trời",
+                "Kim tinh là hành tinh duy nhất hiện nay có con người sinh sống",
+                "Kim tinh là hành tinh nằm ở vị trí xa Mặt Trời nhất hiện nay"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Kim tinh (Sao Kim) là hành tinh sáng nhất trên bầu trời đêm sau Mặt Trăng và có nhiệt độ bề mặt nóng nhất Hệ Mặt Trời."
+            },
+            {
+              "id": "g3-th-c5-l12-q3",
+              "type": "knowledge",
+              "prompt": "Thứ tự chuẩn xác đại diện cho 4 giai đoạn trong vòng đời phát triển của loài bướm là gì?",
+              "options": [
+                "Bướm -> Trứng -> Sâu bướm -> Con nhộng",
+                "Trứng -> Sâu bướm -> Con nhộng -> Con bướm",
+                "Con nhộng -> Trứng -> Con bướm -> Sâu bướm",
+                "Trứng -> Con bướm -> Con nhộng -> Sâu bướm"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Vòng đời sinh trưởng của bướm gồm 4 giai đoạn nối tiếp: Trứng -> Sâu bướm -> Con nhộng -> Bướm trưởng thành."
+            },
+            {
+              "id": "g3-th-c5-l12-q4",
+              "type": "knowledge",
+              "prompt": "Muốn đưa hình ảnh \"Con nhộng\" vào đúng vị trí ô trống trên phần mềm, em thực hiện thao tác nào?",
+              "options": [
+                "Nháy nút phải chuột vào hình ảnh rồi thực hiện tắt máy",
+                "Nhấn giữ nút trái, kéo hình ảnh đến vị trí đúng rồi thả (Kéo thả chuột)",
+                "Lăn nút cuộn ở giữa con chuột lên xuống liên tục",
+                "Nháy đúp chuột vào góc trống trên màn hình nền"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Thao tác nhấn giữ nút chuột trái, di chuyển đến vị trí đích rồi nhả chuột gọi là thao tác kéo thả chuột."
+            },
+            {
+              "id": "g3-th-c5-l12-q5",
+              "type": "knowledge",
+              "prompt": "Em có thể dùng phần mềm máy tính để tìm hiểu vòng đời phát triển của những động vật nào?",
+              "options": [
+                "Loài gà, loài ếch, loài muỗi, loài rùa và cá",
+                "Ô tô, xe máy, máy bay và các loại xe đồ chơi",
+                "Thước kẻ, com-pa, kéo cắt giấy và lọ hồ dán",
+                "Tivi, tủ lạnh, quạt điện và điều hòa nhiệt độ"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Các phần mềm sinh học có thể mô phỏng vòng đời sinh sản, phát triển của nhiều loài động vật như gà, ếch, muỗi, cá,..."
+            },
+            {
+              "id": "g3-th-c5-l12-q6",
+              "type": "knowledge",
+              "prompt": "Lợi ích vượt trội nhất khi dùng phần mềm máy tính khám phá thế giới tự nhiên là gì?",
+              "options": [
+                "Quan sát trực quan, sinh động, dễ nhớ mà không gây nguy hiểm",
+                "Giúp thay thế hoàn toàn tất cả các môn học khác ở trên trường",
+                "Giúp máy tính tự động giải xong toàn bộ bài tập về nhà",
+                "Giúp tăng dung lượng bộ nhớ của ổ đĩa D: trên máy tính"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Phần mềm học tập mang lại hình ảnh trực quan, mô phỏng an toàn và giúp việc tiếp thu kiến thức trở nên hứng thú."
+            }
+          ]
+        },
+        {
+          "id": "l13-bai-13",
+          "lessonNumber": 13,
+          "title": "BÀI 13: LUYỆN TẬP SỬ DỤNG CHUỘT",
+          "description": "Thực hành thành thạo nháy chuột, nháy đúp, kéo thả và nút cuộn",
+          "questions": [
+            {
+              "id": "g3-th-c5-l13-q1",
+              "type": "knowledge",
+              "prompt": "Muốn mở một phần mềm học tập trên màn hình nền, em thực hiện thao tác chuột nào?",
+              "options": [
+                "Nháy chuột (nhấn nút trái 1 lần)",
+                "Nháy đúp chuột (nhấn nút trái nhanh 2 lần)",
+                "Lăn nút cuộn chuột lên xuống liên tục",
+                "Kéo thả chuột sang góc màn hình nền"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Thao tác nháy đúp nút chuột trái (nhấn nhanh 2 lần) dùng để khởi động các phần mềm trên màn hình."
+            },
+            {
+              "id": "g3-th-c5-l13-q2",
+              "type": "knowledge",
+              "prompt": "Để di chuyển biểu tượng vào bên trong cửa sổ phần mềm, em thực hiện thao tác nào?",
+              "options": [
+                "Nhấn giữ nút trái, di chuyển đến vị trí mới rồi thả ra (Kéo thả chuột)",
+                "Nháy nút phải chuột 3 lần liên tiếp",
+                "Lăn nút cuộn tiến để đẩy biểu tượng vào",
+                "Thực hiện tắt công tắc màn hình máy tính"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Nhấn giữ nút chuột trái, di chuyển biểu tượng đến cửa sổ mới rồi thả tay là thao tác kéo thả chuột."
+            },
+            {
+              "id": "g3-th-c5-l13-q3",
+              "type": "knowledge",
+              "prompt": "Khi đặt con trỏ chuột và lăn nút cuộn lùi (về phía mình), trang chiếu sẽ thay đổi thế nào?",
+              "options": [
+                "Chuyển tới trang chiếu nằm sau trang hiện tại",
+                "Chuyển tới trang chiếu nằm trước trang hiện tại",
+                "Tắt phần mềm trình chiếu ngay lập tức",
+                "Đổi màu nền trang trí của bài trình chiếu"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Lăn nút cuộn chuột về phía lòng bàn tay (cuộn lùi) sẽ làm trang hiển thị trượt xuống trang chiếu phía sau."
+            },
+            {
+              "id": "g3-th-c5-l13-q4",
+              "type": "knowledge",
+              "prompt": "Để chuyển tới trang chiếu nằm trước trang hiện tại, em thao tác nút cuộn chuột thế nào?",
+              "options": [
+                "Lăn nút cuộn tiến (lăn về phía trước/xa người)",
+                "Lăn nút cuộn lùi (lăn về phía mình)",
+                "Nhấn giữ phím Power trên bàn phím máy tính",
+                "Nháy đúp nút phải chuột vào vùng trống"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Lăn nút cuộn chuột về phía trước (cuộn tiến) sẽ đưa màn hình hiển thị trở lại các trang chiếu phía trước."
+            },
+            {
+              "id": "g3-th-c5-l13-q5",
+              "type": "knowledge",
+              "prompt": "Muốn mở danh sách lệnh tại vùng trống để tạo nhanh thư mục mới, An thực hiện thao tác nào?",
+              "options": [
+                "Nháy nút phải chuột vào vùng trống",
+                "Nháy đúp chuột liên tục vào góc màn hình",
+                "Giữ chặt nút cuộn chuột và kéo đi",
+                "Nháy chuột trái rồi thực hiện tắt màn hình"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Nháy nút phải chuột vào vùng trống sẽ làm xuất hiện menu ngữ cảnh chứa các lệnh thao tác như New, View, Sort by,..."
+            },
+            {
+              "id": "g3-th-c5-l13-q6",
+              "type": "knowledge",
+              "prompt": "Muốn mở bảng chọn lệnh tắt (Menu ngữ cảnh) của một biểu tượng, em thực hiện thao tác nào?",
+              "options": [
+                "Kéo thả chuột sang phía bên trái màn hình",
+                "Nháy nút phải chuột vào biểu tượng đó",
+                "Nháy đúp chuột 5 lần liên tiếp vào biểu tượng",
+                "Lăn nút cuộn chuột thật nhanh liên tục"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Nháy nút phải chuột vào bất kỳ biểu tượng nào để mở menu ngữ cảnh hiển thị danh sách các lệnh dành riêng cho đối tượng đó."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c6-chu-de-6",
+      "chapterNumber": 6,
+      "title": "CHỦ ĐỀ 6: GIẢI QUYẾT VẤN ĐỀ VỚI SỰ TRỢ GIÚP CỦA MÁY TÍNH",
+      "lessons": [
+        {
+          "id": "l14-bai-14",
+          "lessonNumber": 14,
+          "title": "BÀI 14: EM THỰC HIỆN CÔNG VIỆC NHƯ THẾ NÀO?",
+          "description": "Kỹ năng chia nhỏ công việc phức tạp thành các bước rõ ràng để hoàn thành",
+          "questions": [
+            {
+              "id": "g3-th-c6-l14-q1",
+              "type": "scenario",
+              "prompt": "Việc An cần hoàn thành trước khi đi giày dép để đến trường mỗi buổi sáng là gì?",
+              "options": [
+                "Phải thức dậy, vệ sinh cá nhân, ăn sáng và thay quần áo",
+                "Thực hiện đi giày dép trước rồi mới bắt đầu thức dậy",
+                "Ăn sáng sau khi đã di chuyển tới tận lớp học ở trường",
+                "Tùy ý thực hiện các công việc không cần theo thứ tự nào"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Buổi sáng trước khi xỏ giày đi học, em cần thức dậy, vệ sinh răng miệng, ăn sáng nạp năng lượng và mặc đồng phục."
+            },
+            {
+              "id": "g3-th-c6-l14-q2",
+              "type": "scenario",
+              "prompt": "Thứ tự các bước hợp lý nhất để Minh vẽ một ngôi nhà đơn giản trên giấy là gì?",
+              "options": [
+                "Vẽ cánh cửa ra vào -> Vẽ mái nhà -> Tô màu nền",
+                "Vẽ khung và mái nhà -> Vẽ khung cửa -> Vẽ cánh cửa -> Vẽ cửa sổ",
+                "Thực hiện vẽ hai cửa sổ trước -> Vẽ mái nhà sau",
+                "Tiến hành tô màu hoàn thiện trước rồi mới vẽ khung nhà"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Tình huống",
+              "explanation": "Thứ tự vẽ nhà hợp lý: Phác thảo khung nhà và mái trước -> vẽ khung cửa lớn -> cánh cửa -> cửa sổ và chi tiết."
+            },
+            {
+              "id": "g3-th-c6-l14-q3",
+              "type": "scenario",
+              "prompt": "Trình tự 5 việc nhỏ đại diện cho quy trình đánh răng đúng cách hằng ngày là gì?",
+              "options": [
+                "Chuẩn bị -> Lấy kem -> Chải răng -> Súc miệng -> Rửa bàn chải",
+                "Súc miệng -> Rửa bàn chải -> Chải răng -> Lấy kem",
+                "Lấy kem -> Rửa bàn chải -> Chuẩn bị dụng cụ",
+                "Chải răng -> Chuẩn bị -> Lấy kem -> Súc miệng"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Quy trình đánh răng khoa học: Chuẩn bị cốc nước -> Lấy kem đánh răng -> Chải đều các mặt răng -> Súc miệng sạch -> Rửa bàn chải."
+            },
+            {
+              "id": "g3-th-c6-l14-q4",
+              "type": "scenario",
+              "prompt": "Khi thực hiện bước \"Chải răng\", em chia thành các việc nhỏ nào để làm sạch hoàn toàn?",
+              "options": [
+                "Chải mặt răng cửa -> Chải răng hàm trái -> Chải răng hàm phải",
+                "Chỉ tập trung chải răng cửa còn răng hàm thì bỏ qua",
+                "Chải mặt ngoài rồi đi ngủ ngay không cần chải mặt trong",
+                "Ngâm bàn chải trong ly nước mà không thực hiện chải"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Khi chải răng cần chia theo các khu vực: Chải mặt ngoài và trong răng cửa -> Răng hàm bên trái -> Răng hàm bên phải."
+            },
+            {
+              "id": "g3-th-c6-l14-q5",
+              "type": "scenario",
+              "prompt": "Để hoàn thành nhiệm vụ \"Trực nhật lớp học\" nhanh chóng, An nên làm thế nào?",
+              "options": [
+                "Chia thành các việc nhỏ và phân công cụ thể cho từng bạn",
+                "Để cho một bạn trong tổ tự làm tất cả từ đầu đến cuối",
+                "Cả tổ cùng xô vào thực hiện quét tại một vị trí",
+                "Bỏ qua nhiệm vụ trực nhật và đi ra sân trường chơi"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Chia nhiệm vụ trực nhật thành từng việc nhỏ (lau bảng, quét lớp, kê bàn ghế) và phân công cụ thể giúp công việc hoàn thành nhanh."
+            },
+            {
+              "id": "g3-th-c6-l14-q6",
+              "type": "scenario",
+              "prompt": "Việc chia một công việc lớn thành nhiều việc nhỏ hơn mang lại lợi ích gì?",
+              "options": [
+                "Làm cho công việc trở nên phức tạp và khó khăn hơn",
+                "Giúp công việc dễ hiểu, dễ thực hiện và hoàn thành hơn",
+                "Làm tốn nhiều thời gian và công sức hơn khi thực hiện",
+                "Không mang lại bất kỳ lợi ích thiết thực nào cho em"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Tình huống",
+              "explanation": "Chia công việc lớn thành các bước nhỏ theo thứ tự giúp công việc trở nên rõ ràng, dễ làm và không bị bỏ sót."
+            }
+          ]
+        },
+        {
+          "id": "l15-bai-15",
+          "lessonNumber": 15,
+          "title": "BÀI 15: CÔNG VIỆC ĐƯỢC THỰC HIỆN THEO ĐIỀU KIỆN",
+          "description": "Quy tắc logic 'Nếu ... thì ...' và cách xử lý công việc theo điều kiện",
+          "questions": [
+            {
+              "id": "g3-th-c6-l15-q1",
+              "type": "scenario",
+              "prompt": "Đang đi bộ đến ngã tư chuẩn bị sang đường mà thấy đèn đỏ, Nam nên làm gì?",
+              "options": [
+                "Dừng lại trên vỉa hè và chờ đèn chuyển màu xanh",
+                "Tiếp tục di chuyển sang đường thật nhanh chóng",
+                "Chạy vèo qua đường mà không cần chú ý quan sát đèn",
+                "Quay lại đi về nhà luôn không sang đường nữa"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Quy tắc an toàn giao thông: Khi đèn tín hiệu chuyển đỏ, người đi bộ phải dừng lại trên vỉa hè kiên nhẫn chờ đèn xanh."
+            },
+            {
+              "id": "g3-th-c6-l15-q2",
+              "type": "scenario",
+              "prompt": "Khi phát hiện có đám cháy xảy ra, em cần gọi đến số điện thoại khẩn cấp nào?",
+              "options": [
+                "Gọi số 111 (Tổng đài quốc gia bảo vệ trẻ em)",
+                "Gọi số 113 (Cảnh sát giao thông và phản ứng nhanh)",
+                "Gọi số 114 (Lực lượng cứu hỏa và báo cháy)",
+                "Gọi số 115 (Dịch vụ cấp cứu y tế khẩn cấp)"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Tình huống",
+              "explanation": "Số điện thoại khẩn cấp 114 là số gọi đội Cứu hỏa và cứu hộ cứu nạn khi xảy ra cháy nổ hoặc sự cố nguy hiểm."
+            },
+            {
+              "id": "g3-th-c6-l15-q3",
+              "type": "scenario",
+              "prompt": "Câu nào dưới đây diễn đạt đúng quy tắc điều kiện \"Nếu ... thì ...\"?",
+              "options": [
+                "\"Nếu trời không mưa thì Khoa sẽ đi đá bóng\"",
+                "\"Trời mưa thì Khoa mới bắt đầu đi đá bóng\"",
+                "\"Nếu Khoa đi đá bóng thì trời mới không mưa\"",
+                "\"Khoa sẽ đi đá bóng nếu như trời mưa to\""
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Cấu trúc điều kiện chuẩn: 'Nếu <điều kiện xảy ra> thì <hành động được thực hiện>'. Ví dụ: Nếu trời không mưa thì Khoa đi đá bóng."
+            },
+            {
+              "id": "g3-th-c6-l15-q4",
+              "type": "scenario",
+              "prompt": "Thấy mùi khét từ dây điện máy tính, câu nào diễn đạt đúng cách xử lý tình huống?",
+              "options": [
+                "\"Nếu thấy mùi khét thì báo ngay cho người lớn\"",
+                "\"Nếu em chạy ra ngoài thì máy tính mới bốc mùi\"",
+                "\"Nếu tiếp tục ngồi dùng thì dây điện hết mùi\"",
+                "\"Nếu em bật máy tính thì dây điện mới hết khét\""
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Khi gặp sự cố nguy hiểm (mùi khét từ điện): Nếu phát hiện mùi khét thì phải báo ngay cho người lớn xử lý."
+            },
+            {
+              "id": "g3-th-c6-l15-q5",
+              "type": "scenario",
+              "prompt": "Muốn hướng dẫn bạn bỏ vỏ hộp sữa bằng giấy đúng thùng, An nên nói thế nào?",
+              "options": [
+                "\"Nếu rác là vỏ hộp sữa giấy thì bỏ vào thùng Giấy\"",
+                "\"Nếu rác là vỏ hộp sữa thì vứt trực tiếp ra sàn\"",
+                "\"Nếu bỏ vào thùng rác hữu cơ thì đó là vỏ hộp sữa\"",
+                "\"Nếu thực hiện vứt rác thì đó là vỏ hộp sữa\""
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Câu điều kiện hướng dẫn phân loại rác: Nếu rác là vỏ hộp sữa giấy thì bỏ vào thùng rác Giấy tái chế."
+            },
+            {
+              "id": "g3-th-c6-l15-q6",
+              "type": "scenario",
+              "prompt": "Khi màn hình máy tính hiện thông báo \"Pin sắp hết\", câu diễn đạt đúng nhất là gì?",
+              "options": [
+                "\"Nếu máy báo pin yếu thì báo người lớn cắm sạc\"",
+                "\"Nếu em cắm sạc thì máy tính mới báo hết pin\"",
+                "\"Nếu rút phích cắm điện thì máy tính mới đầy pin\"",
+                "\"Nếu tiếp tục sử dụng thì máy sẽ tự sạc pin\""
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Thông báo máy tính: Nếu màn hình hiện cảnh báo pin yếu thì cần báo người lớn cắm sạc kịp thời để không bị tắt máy."
+            }
+          ]
+        },
+        {
+          "id": "l16-bai-16",
+          "lessonNumber": 16,
+          "title": "BÀI 16: CÔNG VIỆC CỦA EM VÀ SỰ TRỢ GIÚP CỦA MÁY TÍNH",
+          "description": "Quy trình lập bài trình chiếu hoàn chỉnh với sự hỗ trợ đắc lực từ máy tính",
+          "questions": [
+            {
+              "id": "g3-th-c6-l16-q1",
+              "type": "knowledge",
+              "prompt": "Dựa vào đâu nhóm bạn An bắt đầu nhiệm vụ lập bài trình chiếu \"Trồng hoa trước cửa lớp\"?",
+              "options": [
+                "Thông báo của nhà trường và kế hoạch hoạt động của lớp",
+                "Các video quảng cáo trò chơi trên mạng xã hội",
+                "Các cuốn sách truyện cổ tích trong thư viện trường",
+                "Kết quả của bản tin dự báo thời tiết từ tuần trước"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Nhiệm vụ của nhóm được khởi xướng dựa trên thông báo của nhà trường và kế hoạch phát động của lớp học."
+            },
+            {
+              "id": "g3-th-c6-l16-q2",
+              "type": "knowledge",
+              "prompt": "Trình tự 4 việc nhỏ để tạo ra bài trình chiếu hoàn chỉnh là gì?",
+              "options": [
+                "Tạo bài trình chiếu -> Lên ý tưởng -> Chuẩn bị nội dung -> Hoàn thiện",
+                "Lên ý tưởng -> Chuẩn bị nội dung -> Tạo bài trình chiếu -> Hoàn thiện",
+                "Hoàn thiện -> Lên ý tưởng -> Tạo bài trình chiếu -> Chuẩn bị nội dung",
+                "Chuẩn bị nội dung -> Hoàn thiện -> Lên ý tưởng -> Tạo bài trình chiếu"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Trình tự làm việc khoa học: Lên ý tưởng đề tài -> Chuẩn bị nội dung và ảnh -> Mở máy tính tạo bài trình chiếu -> Hoàn thiện sản phẩm."
+            },
+            {
+              "id": "g3-th-c6-l16-q3",
+              "type": "knowledge",
+              "prompt": "Việc nào trong bài bắt buộc phải thực hiện trực tiếp trên máy tính?",
+              "options": [
+                "Chỉ duy nhất việc lên ý tưởng cho nội dung",
+                "Việc \"Tạo bài trình chiếu\" và \"Hoàn thiện sản phẩm\"",
+                "Cả 4 việc đều thực hiện trực tiếp ngoài sân trường",
+                "Không có bất kỳ việc nào cần sử dụng đến máy tính"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Bước 'Tạo bài trình chiếu' và 'Hoàn thiện chỉnh sửa' là hai bước đòi hỏi thao tác trực tiếp trên phần mềm máy tính."
+            },
+            {
+              "id": "g3-th-c6-l16-q4",
+              "type": "knowledge",
+              "prompt": "Trang đầu tiên (Trang 1) của bài trình chiếu nên bao gồm những nội dung cơ bản nào?",
+              "options": [
+                "Lời cảm ơn dành cho thầy cô giáo và các bạn học",
+                "Tên bài trình chiếu và danh sách các thành viên nhóm",
+                "Bảng phân công nhiệm vụ tưới nước cây hằng ngày",
+                "Danh sách chi tiết các dụng cụ trồng cây cần mua"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Trang đầu tiên (trang tiêu đề) luôn cần có Tên chủ đề bài trình chiếu và Danh sách các bạn trong nhóm thực hiện."
+            },
+            {
+              "id": "g3-th-c6-l16-q5",
+              "type": "knowledge",
+              "prompt": "Để bài trình chiếu 6 trang thêm sinh động và hấp dẫn người xem, Minh nên làm gì?",
+              "options": [
+                "Chèn thêm hình ảnh minh họa phù hợp vào các trang",
+                "Xóa hết toàn bộ chữ viết có trên các trang chiếu",
+                "Thực hiện tắt phần mềm trình chiếu mà không lưu tệp",
+                "Gõ lại nội dung hoàn toàn giống hệt nhau ở cả 6 trang"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Bổ sung hình ảnh minh họa chân thực, sinh động giúp bài thuyết trình trực quan, cuốn hút người xem hơn rất nhiều."
+            },
+            {
+              "id": "g3-th-c6-l16-q6",
+              "type": "knowledge",
+              "prompt": "Yếu tố nào sau đây đóng vai trò là kết quả (sản phẩm số) em cần tạo ra?",
+              "options": [
+                "Phần mềm tạo bài trình chiếu có sẵn trên máy tính",
+                "Tệp bài trình chiếu hoàn chỉnh chứa thông tin và hình ảnh",
+                "Bàn phím và con chuột máy tính dùng thực hành",
+                "Cuốn sách giáo khoa môn Tin học Lớp 3"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Kết quả của quá trình làm việc với phần mềm là một tệp bài trình chiếu điện tử hoàn chỉnh chứa đầy đủ văn bản và hình ảnh."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

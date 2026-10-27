@@ -1,0 +1,2757 @@
+{
+  "id": "g5-khoahoc",
+  "grade": 5,
+  "subjectKey": "khoahoc",
+  "title": "Khoa học lớp 5",
+  "color": "#10B981",
+  "coverImage": "/mascots/bia-sach-mon-hoc.png",
+  "chapters": [
+    {
+      "id": "c1-kh5",
+      "chapterNumber": 1,
+      "title": "Chủ đề 1: Chất",
+      "lessons": [
+        {
+          "id": "l1-kh5",
+          "lessonNumber": 1,
+          "title": "BÀI 1: THÀNH PHẦN VÀ VAI TRÒ CỦA ĐẤT ĐỐI VỚI CÂY TRỒNG",
+          "questions": [
+            {
+              "id": "g5-kh-l1-q1",
+              "type": "knowledge",
+              "prompt": "Thả cục đất khô vào cốc nước thấy sủi bọt khí giúp chứng minh trong đất có thành phần nào?",
+              "options": ["Chất khoáng", "Mùn", "Không khí", "Nước"],
+              "correctIndex": 2,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Không khí\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l1-q2",
+              "type": "knowledge",
+              "prompt": "Đun ống nghiệm chứa đất thấy xuất hiện các giọt nước nhỏ bám trên thành ống cho thấy trong đất có chứa thành phần gì?",
+              "options": ["Nước", "Khí ô-xi", "Hạt cát", "Hạt sét"],
+              "correctIndex": 0,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Nước\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l1-q3",
+              "type": "knowledge",
+              "prompt": "Thành phần màu đen/nâu xốp hình thành do xác động, thực vật phân hủy làm đất tơi xốp gọi là gì?",
+              "options": [
+                "Chất khoáng – do đá bị đập vỡ nhỏ ra",
+                "Mùn – do xác động vật và thực vật phân hủy dưới tác động của sinh vật trong đất",
+                "Phân bón hóa học – do con người tự phun vào đất",
+                "Cát – do nước mưa bồi đắp từ sông hồ"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Mùn – do xác động vật và thực vật phân hủy dưới tác động của sinh vật trong đất\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l1-q4",
+              "type": "knowledge",
+              "prompt": "Sự khác biệt giữa các loại đất (đất cát, đất thịt, đất sét) chủ yếu phụ thuộc vào yếu tố nào?",
+              "options": [
+                "Tỉ lệ các loại hạt (kích thước và hình dạng hạt như hạt cát, hạt sét) có trong đất",
+                "Số lượng cây trồng trên mặt đất",
+                "Số lượng công trình xây dựng ở khu vực đó",
+                "Màu sắc của phân bón hóa học được thêm vào"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Tỉ lệ các loại hạt (kích thước và hình dạng hạt như hạt cát, hạt sét) có trong đất\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l1-q5",
+              "type": "knowledge",
+              "prompt": "Đất đóng vai trò gì giúp cho cây vừa không bị gió quật đổ vừa có thể tươi tốt?",
+              "options": [
+                "Đất chỉ có tác dụng làm điểm tựa để giữ cho cây đứng vững, không bị đổ",
+                "Đất chỉ cung cấp ánh sáng mặt trời cho lá cây",
+                "Đất giúp giữ cho cây đứng vững, đồng thời cung cấp chất khoáng, mùn, nước và không khí cho cây sống và phát triển",
+                "Đất che chắn cho cây không bị mưa làm ướt"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Đất giúp giữ cho cây đứng vững, đồng thời cung cấp chất khoáng, mùn, nước và không khí cho cây sống và phát triển\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l1-q6",
+              "type": "knowledge",
+              "prompt": "Việc làm tơi xốp đất (xới đất) và bón phân hữu cơ mang lại tác dụng trực tiếp nào cho đất và cây trồng?",
+              "options": [
+                "Làm giảm lượng không khí và triệt tiêu chất dinh dưỡng trong đất",
+                "Làm tăng lượng không khí, bổ sung chất khoáng và mùn, giúp đất tơi xốp và cây trồng phát triển tốt hơn",
+                "Làm cho đất bị nén chặt lại để ngăn rễ cây phát triển",
+                "Làm bay hơi toàn bộ lượng nước có trong đất"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Làm tăng lượng không khí, bổ sung chất khoáng và mùn, giúp đất tơi xốp và cây trồng phát triển tốt hơn\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            }
+          ]
+        },
+        {
+          "id": "l2-kh5",
+          "lessonNumber": 2,
+          "title": "BÀI 2: Ô NHIỄM, XÓI MÒN ĐẤT VÀ BẢO VỆ MÔI TRƯỜNG ĐẤT",
+          "questions": [
+            {
+              "id": "g5-kh-l2-q1",
+              "type": "knowledge",
+              "prompt": "Trong sản xuất và sinh hoạt, hành vi nào của con người là nguyên nhân trực tiếp gây ô nhiễm môi trường đất?",
+              "options": [
+                "Tăng cường bón phân hữu cơ và phân vi sinh cho cây trồng",
+                "Lạm dụng phân bón hóa học, thuốc bảo vệ thực vật trong thời gian dài và vứt rác thải chưa qua xử lý ra đất",
+                "Trồng thảm cỏ và trồng cây phủ xanh đồi trọc",
+                "Phân loại rác thải sinh hoạt tại nguồn trước khi xử lý"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Lạm dụng phân bón hóa học, thuốc bảo vệ thực vật trong thời gian dài và vứt rác thải chưa qua xử lý ra đất\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l2-q2",
+              "type": "knowledge",
+              "prompt": "Đất bị ô nhiễm gây ra tác hại nguy hiểm nào đối với đời sống sinh vật và con người?",
+              "options": [
+                "Làm ngấm chất độc vào nguồn nước ngầm, tích tụ trong sinh vật và gây bệnh cho con người khi sử dụng",
+                "Giúp không khí xung quanh trở nên sạch sẽ và trong lành hơn",
+                "Làm cho đất ngày càng trở nên phì nhiêu, tơi xốp hơn",
+                "Giúp cây trồng phát triển nhanh gấp hai lần so với bình thường"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Làm ngấm chất độc vào nguồn nước ngầm, tích tụ trong sinh vật và gây bệnh cho con người khi sử dụng\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l2-q3",
+              "type": "knowledge",
+              "prompt": "Hiện tượng lớp đất màu mỡ trên bề mặt bị nước chảy trôi đi sau mưa lớn ở vùng đất dốc được gọi là gì và do đâu?",
+              "options": [
+                "Ô nhiễm đất – do núi lửa phun trào",
+                "Xói mòn đất – do tác động của nước chảy kết hợp với việc chặt phá rừng làm mất thảm thực vật che phủ",
+                "Xâm nhập mặn – do đắp đập ngăn nước biển",
+                "Phèn hóa đất – do bón nhiều phân hữu cơ"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Xói mòn đất – do tác động của nước chảy kết hợp với việc chặt phá rừng làm mất thảm thực vật che phủ\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l2-q4",
+              "type": "knowledge",
+              "prompt": "Hiện tượng xói mòn đất kéo dài ở đồi núi, bờ sông dẫn đến hậu quả thiên tai nghiêm trọng nào?",
+              "options": [
+                "Tăng cường lượng mưa tự nhiên cho khu vực",
+                "Sạt lở đất, làm mất đất ở, đất trồng trọt và đe dọa trực tiếp đến tính mạng con người",
+                "Giúp hình thành thêm nhiều mỏ khoáng sản quý giá",
+                "Làm cho khí hậu khu vực trở nên mát mẻ hơn"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Sạt lở đất, làm mất đất ở, đất trồng trọt và đe dọa trực tiếp đến tính mạng con người\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l2-q5",
+              "type": "knowledge",
+              "prompt": "Vì sao trồng cây gây rừng và phủ xanh đất trống, đồi trọc lại là biện pháp hiệu quả nhất chống xói mòn?",
+              "options": [
+                "Vì lá cây che chắn mưa/gió, đồng thời rễ cây giữ chặt đất và thảm mục giữ nước lại",
+                "Vì cây xanh thu hút các loài động vật đến đào hang giữ đất",
+                "Vì cây xanh làm cho đất biến thành đá cứng không thể bị trôi",
+                "Vì trồng cây giúp thu hẹp diện tích đất trồng trọt"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Vì lá cây che chắn mưa/gió, đồng thời rễ cây giữ chặt đất và thảm mục giữ nước lại\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l2-q6",
+              "type": "knowledge",
+              "prompt": "Là học sinh lớp 5, việc làm thiết thực nào hằng ngày giúp em góp phần bảo vệ môi trường đất?",
+              "options": [
+                "Vứt vỏ chai nhựa và túi ni-lông trực tiếp ra vườn trường",
+                "Tự giác phân loại rác thải sinh hoạt, không xả rác bừa bãi và tích cực chăm sóc cây xanh",
+                "Khuyên bố mẹ phun thật nhiều thuốc trừ sâu hóa học để diệt cỏ",
+                "Đốt tất cả rác thải nhựa ngay trên mặt đất trong vườn"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Tự giác phân loại rác thải sinh hoạt, không xả rác bừa bãi và tích cực chăm sóc cây xanh\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            }
+          ]
+        },
+        {
+          "id": "l3-kh5",
+          "lessonNumber": 3,
+          "title": "BÀI 3: HỖN HỢP VÀ DUNG DỊCH",
+          "questions": [
+            {
+              "id": "g5-kh-l3-q1",
+              "type": "knowledge",
+              "prompt": "Trộn muối ăn và hạt tiêu trên đĩa rồi trộn đều, sản phẩm thu được gọi là gì và vì sao?",
+              "options": [
+                "Dung dịch – vì hai chất đã hòa tan hoàn toàn vào nhau",
+                "Hỗn hợp – vì được tạo thành từ hai hay nhiều chất trộn lẫn với nhau và mỗi chất vẫn giữ nguyên tính chất của nó",
+                "Chất tinh khiết – vì muối và tiêu biến thành một chất mới hoàn toàn",
+                "Dung dịch đậm đặc – vì hạt tiêu bị biến mất trong muối"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Hỗn hợp – vì được tạo thành từ hai hay nhiều chất trộn lẫn với nhau và mỗi chất vẫn giữ nguyên tính chất của nó\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l3-q2",
+              "type": "knowledge",
+              "prompt": "Cho 1 thìa đường vào cốc nước ấm rồi khuấy đều, đường tan hoàn toàn tạo thành chất lỏng trong suốt gọi là gì?",
+              "options": [
+                "Hỗn hợp không hòa tan",
+                "Dung dịch",
+                "Chất rắn",
+                "Khí sinh học"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Dung dịch\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l3-q3",
+              "type": "knowledge",
+              "prompt": "Trong các trường hợp khuấy đều (1) Cát và nước, (2) Giấm ăn và nước, (3) Dầu ăn và nước, (4) Muối và nước, trường hợp nào tạo thành dung dịch?",
+              "options": [
+                "(1) Cát và nước, (3) Dầu ăn và nước",
+                "(2) Giấm ăn và nước, (4) Muối và nước",
+                "(1) Cát và nước, (2) Giấm ăn và nước",
+                "(3) Dầu ăn và nước, (4) Muối và nước"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"(1) Cát và nước, (2) Giấm ăn và nước\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l3-q4",
+              "type": "knowledge",
+              "prompt": "Dung dịch nước muối sinh lý 0,9% được sử dụng rất phổ biến trong đời sống hằng ngày để làm gì?",
+              "options": [
+                "Đun làm nhiên liệu chạy máy móc",
+                "Rửa sạch vết thương, súc miệng, rửa mũi,...",
+                "Tưới cây để giúp cây phát triển nhanh hơn",
+                "Tẩy rửa các vết dầu mỡ bám trên bếp"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Rửa sạch vết thương, súc miệng, rửa mũi,...\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l3-q5",
+              "type": "knowledge",
+              "prompt": "Khi đun nóng bát sứ chứa dung dịch nước muối để tách muối, hiện tượng nào xảy ra?",
+              "options": [
+                "Muối bị cháy biến thành khói đen",
+                "Nước bị đun nóng bay hơi hết, còn lại muối bám ở đáy bát sứ",
+                "Muối biến thành chất lỏng và chảy ra ngoài",
+                "Cả nước và muối đều biến mất không để lại vết gì"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Nước bị đun nóng bay hơi hết, còn lại muối bám ở đáy bát sứ\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l3-q6",
+              "type": "knowledge",
+              "prompt": "Diêm dân sản xuất muối ăn từ nước biển dựa trên nguyên lý khoa học nào?",
+              "options": [
+                "Trộn thêm cát vào nước biển để muối lắng xuống",
+                "Dẫn nước biển vào các ô ruộng muối, nhờ năng lượng ánh nắng mặt trời và gió làm bay hơi nước, thu được muối hạt",
+                "Cho chất hóa học vào nước biển để kết tủa muối",
+                "Lọc nước biển qua giấy lọc để giữ lại muối"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Dẫn nước biển vào các ô ruộng muối, nhờ năng lượng ánh nắng mặt trời và gió làm bay hơi nước, thu được muối hạt\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            }
+          ]
+        },
+        {
+          "id": "l4-kh5",
+          "lessonNumber": 4,
+          "title": "BÀI 4: ĐẶC ĐIỂM CỦA CHẤT Ở TRẠNG THÁI RẮN, LỎNG, KHÍ. SỰ BIẾN ĐỔI TRẠNG THÁI CỦA CHẤT",
+          "questions": [
+            {
+              "id": "g5-kh-l4-q1",
+              "type": "knowledge",
+              "prompt": "Khi phân loại các chất ở nhiệt độ phòng thành ba trạng thái rắn, lỏng, khí, nhóm chất nào được sắp xếp đúng hoàn toàn ở trạng thái lỏng?",
+              "options": [
+                "Muối ăn, nhôm, thủy tinh",
+                "Nước uống, dầu ăn, giấm ăn",
+                "Hơi nước, ô-xi, ni-tơ",
+                "Cồn, gỗ, không khí"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Nước uống, dầu ăn, giấm ăn\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l4-q2",
+              "type": "knowledge",
+              "prompt": "Thí nghiệm bơm không khí vào hai quả bóng bay có hình dáng khác nhau giúp chứng minh đặc điểm nào của chất ở trạng thái khí?",
+              "options": [
+                "Có hình dạng xác định và chiếm khoảng không gian xác định",
+                "Không có hình dạng xác định và chiếm khoảng không gian không xác định (chiếm toàn bộ vật chứa)",
+                "Có hình dạng xác định nhưng không chiếm khoảng không gian",
+                "Luôn có hình dạng cố định dù chuyển sang vật chứa nào"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Không có hình dạng xác định và chiếm khoảng không gian không xác định (chiếm toàn bộ vật chứa)\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l4-q3",
+              "type": "knowledge",
+              "prompt": "Nhận xét nào sau đây là đúng về đặc điểm hình dạng và không gian của chất lỏng và chất rắn?",
+              "options": [
+                "Chất lỏng và chất rắn đều có hình dạng xác định",
+                "Chất lỏng không có hình dạng xác định nhưng chiếm không gian xác định; chất rắn có hình dạng và không gian xác định",
+                "Chất lỏng có hình dạng xác định; chất rắn không có hình dạng xác định",
+                "Cả chất lỏng và chất rắn đều không chiếm khoảng không gian xác định"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Chất lỏng không có hình dạng xác định nhưng chiếm không gian xác định; chất rắn có hình dạng và không gian xác định\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l4-q4",
+              "type": "knowledge",
+              "prompt": "Hiện tượng con quạ thả sỏi làm nước trong bình dâng lên thể hiện đặc điểm nào của viên sỏi (chất rắn)?",
+              "options": [
+                "Viên sỏi bị hòa tan hoàn toàn vào trong nước",
+                "Viên sỏi chiếm một khoảng không gian xác định trong bình, đẩy nước dâng lên cao",
+                "Viên sỏi biến đổi từ trạng thái rắn sang trạng thái khí",
+                "Viên sỏi hấp thụ toàn bộ nước làm nước sôi lên"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Viên sỏi chiếm một khoảng không gian xác định trong bình, đẩy nước dâng lên cao\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l4-q5",
+              "type": "knowledge",
+              "prompt": "Thí nghiệm nến vụn đun nóng chảy rồi để nguội đông cứng lại chứng minh điều gì?",
+              "options": [
+                "Nến đã bị biến đổi thành một chất hoàn toàn mới",
+                "Dưới tác dụng của nhiệt độ phù hợp, chất có thể biến đổi từ trạng thái này sang trạng thái khác",
+                "Chất rắn không bao giờ có thể chuyển sang trạng thái lỏng",
+                "Khi đun nóng, mọi chất đều biến mất hoàn toàn"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Dưới tác dụng của nhiệt độ phù hợp, chất có thể biến đổi từ trạng thái này sang trạng thái khác\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l4-q6",
+              "type": "knowledge",
+              "prompt": "Nguyên nhân chính khiến lượng băng ở Bắc Cực tan chảy thành nước là do sự biến đổi trạng thái nào của nước?",
+              "options": [
+                "Sự chuyển từ trạng thái rắn (băng) sang trạng thái lỏng (nước) do nhiệt độ Trái Đất tăng lên",
+                "Sự chuyển từ trạng thái khí (hơi nước) sang trạng thái rắn (băng) do thời tiết quá lạnh",
+                "Sự chuyển từ trạng thái lỏng sang trạng thái khí",
+                "Sự ngưng tụ của hơi nước thành mây"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Sự chuyển từ trạng thái khí (hơi nước) sang trạng thái rắn (băng) do thời tiết quá lạnh\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            }
+          ]
+        },
+        {
+          "id": "l5-kh5",
+          "lessonNumber": 5,
+          "title": "BÀI 5: SỰ BIẾN ĐỔI HÓA HỌC CỦA CHẤT",
+          "questions": [
+            {
+              "id": "g5-kh-l5-q1",
+              "type": "knowledge",
+              "prompt": "Sự biến đổi hóa học của chất xảy ra khi nào và nhận biết nhờ dấu hiệu cơ bản nào?",
+              "options": [
+                "Khai thác chất từ trong đất và không làm thay đổi màu sắc",
+                "Có sự tạo thành chất mới, nhận biết nhờ sự thay đổi tính chất của chất như màu sắc, mùi, vị,...",
+                "Chất chỉ chuyển từ dạng viên sang dạng bột nhưng giữ nguyên chất ban đầu",
+                "Chất bị đông đặc lại khi để trong tủ lạnh"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Có sự tạo thành chất mới, nhận biết nhờ sự thay đổi tính chất của chất như màu sắc, mùi, vị,...\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l5-q2",
+              "type": "knowledge",
+              "prompt": "Đốt giấy trắng hoặc đun nóng đường trắng đến khi chuyển sang màu nâu đen chứng minh điều gì?",
+              "options": [
+                "Đã xảy ra sự biến đổi hóa học vì tờ giấy biến thành tro than đen và đường biến thành chất mới có màu nâu/đen",
+                "Chỉ có sự biến đổi trạng thái từ rắn sang lỏng của chất",
+                "Không có bất kỳ chất mới nào được tạo thành sau thí nghiệm",
+                "Chất chỉ bị thu nhỏ kích thước lại dưới tác dụng của nhiệt độ"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Chỉ có sự biến đổi trạng thái từ rắn sang lỏng của chất\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l5-q3",
+              "type": "knowledge",
+              "prompt": "Trong các trường hợp dưới đây, trường hợp nào là sự biến đổi hóa học?",
+              "options": [
+                "Nước đun trong ấm bay hơi thành hơi nước vào không khí",
+                "Xi măng khô được trộn đều với cát khô thành hỗn hợp",
+                "Nến (sáp) được đun nóng chảy rồi đổ vào khuôn thành cây nến",
+                "Thanh củi bị đốt cháy chuyển thành than củi màu đen"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Xi măng khô được trộn đều với cát khô thành hỗn hợp\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l5-q4",
+              "type": "knowledge",
+              "prompt": "Đinh sắt hoặc cửa sắt để lâu ngoài không khí ẩm xuất hiện lớp gỉ màu nâu đỏ là do đâu?",
+              "options": [
+                "Do đinh sắt bị ngấm nước mưa nên chỉ thay đổi hình dạng bên ngoài",
+                "Do xảy ra sự biến đổi hóa học, sắt kết hợp với các chất trong không khí ẩm tạo thành chất mới là gỉ sắt màu nâu đỏ",
+                "Do đinh sắt bị nóng chảy dưới tác dụng của ánh nắng mặt trời",
+                "Do các hạt bụi bẩn bám vào bề mặt đinh sắt theo thời gian"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Do xảy ra sự biến đổi hóa học, sắt kết hợp với các chất trong không khí ẩm tạo thành chất mới là gỉ sắt màu nâu đỏ\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l5-q5",
+              "type": "knowledge",
+              "prompt": "Để bảo vệ các vật dụng bằng sắt không bị gỉ sét do sự biến đổi hóa học ngoài không khí, người ta thường áp dụng biện pháp gì?",
+              "options": [
+                "Ngâm các vật dụng bằng sắt liên tục trong nước để làm sạch",
+                "Rửa vật dụng bằng nước chanh hoặc giấm ăn hằng ngày",
+                "Sơn hoặc bôi dầu mỡ lên bề mặt của vật dụng bằng sắt để ngăn cách với không khí",
+                "Để vật dụng sắt trần ra ngoài trời mưa nắng dầm dề"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Sơn hoặc bôi dầu mỡ lên bề mặt của vật dụng bằng sắt để ngăn cách với không khí\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l5-q6",
+              "type": "knowledge",
+              "prompt": "Khi sơ ý đun nấu làm thức ăn bị cháy đen và có mùi khét, hiện tượng này thể hiện điều gì?",
+              "options": [
+                "Thức ăn chỉ bị mất đi lượng nước bên trong do bay hơi",
+                "Dưới tác dụng của nhiệt độ cao, các chất trong thức ăn đã bị biến đổi hóa học tạo thành chất mới có màu đen và mùi khét",
+                "Thức ăn chuyển từ trạng thái rắn sang trạng thái khí hoàn toàn",
+                "Thức ăn trở nên chín nhừ và bổ dưỡng hơn bình thường"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Dưới tác dụng của nhiệt độ cao, các chất trong thức ăn đã bị biến đổi hóa học tạo thành chất mới có màu đen và mùi khét\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            }
+          ]
+        },
+        {
+          "id": "l6-kh5",
+          "lessonNumber": 6,
+          "title": "BÀI 6: ÔN TẬP CHỦ ĐỀ CHẤT",
+          "questions": [
+            {
+              "id": "g5-kh-l6-q1",
+              "type": "knowledge",
+              "prompt": "Việc làm ruộng bậc thang kết hợp trồng rặng cây chắn gió ở vùng đồi núi dốc mang lại lợi ích gì đối với đất?",
+              "options": [
+                "Làm tăng quá trình phong hóa đá thành chất dinh dưỡng cho cây",
+                "Hạn chế xói mòn, rửa trôi đất do nước mưa chảy dốc và giữ lại chất dinh dưỡng cho cây lúa",
+                "Làm cho đất bị nén chặt để không cho rễ cây phát triển mạnh",
+                "Tăng độ chua (nhiễm phèn) cho đất trồng trọt ở các sườn đồi"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Hạn chế xói mòn, rửa trôi đất do nước mưa chảy dốc và giữ lại chất dinh dưỡng cho cây lúa\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l6-q2",
+              "type": "knowledge",
+              "prompt": "Để tách lấy lại muối ăn sạch từ hỗn hợp gồm cát mịn và muối ăn khô, nhóm học sinh cần thực hiện các bước theo trình tự khoa học nào dưới đây?",
+              "options": [
+                "Đun nóng khô hỗn hợp trên lửa cho cát bay hơi hết",
+                "Cho hỗn hợp vào nước khuấy đều cho muối tan  Lọc lấy phần nước trong  Đun nóng nước muối cho nước bay hơi hết thu được muối khô",
+                "Dùng quạt thổi cho muối bay đi vì muối nhẹ hơn cát",
+                "Dùng nam châm để hút toàn bộ muối ra khỏi cát"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Cho hỗn hợp vào nước khuấy đều cho muối tan  Lọc lấy phần nước trong  Đun nóng nước muối cho nước bay hơi hết thu được muối khô\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l6-q3",
+              "type": "knowledge",
+              "prompt": "Đun đường trắng ngả sang màu nâu sẫm, có mùi thơm đặc trưng và vị đắng nhẹ (làm nước màu) thuộc loại biến đổi nào?",
+              "options": [
+                "Biến đổi trạng thái đơn thuần từ rắn sang lỏng của đường",
+                "Sự biến đổi hóa học vì đường đã bị nhiệt phân tạo thành chất mới (ca-ra-men) có màu sắc và hương vị hoàn toàn mới",
+                "Sự hòa tan cơ học giữa đường trong chảo và không khí",
+                "Hiện tượng xói mòn chất rắn do nhiệt độ cao"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Sự biến đổi hóa học vì đường đã bị nhiệt phân tạo thành chất mới (ca-ra-men) có màu sắc và hương vị hoàn toàn mới\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l6-q4",
+              "type": "knowledge",
+              "prompt": "Quy trình làm sô-cô-la tạo hình bằng cách đun chảy rồi để nguội trong khuôn đã vận dụng hiện tượng khoa học nào?",
+              "options": [
+                "Sự biến đổi hóa học làm sô-cô-la biến thành chất khác hoàn toàn",
+                "Sự biến đổi trạng thái của chất dưới tác dụng của nhiệt độ (nóng chảy từ rắn sang lỏng và đông đặc từ lỏng sang rắn)",
+                "Sự phân hủy chất hữu cơ bởi vi khuẩn trong không khí",
+                "Thí nghiệm tạo bọt khí không khí trong chất lỏng"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Sự biến đổi trạng thái của chất dưới tác dụng của nhiệt độ (nóng chảy từ rắn sang lỏng và đông đặc từ lỏng sang rắn)\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l6-q5",
+              "type": "knowledge",
+              "prompt": "Để khắc phục hiện tượng cửa sắt, hàng rào sắt bị gỉ sét (biến đổi hóa học) ngoài không khí, biện pháp nào hiệu quả nhất?",
+              "options": [
+                "Cạo sạch lớp gỉ cũ rồi sơn một lớp sơn chống gỉ (hoặc bôi dầu mỡ) lên bề mặt kim loại",
+                "Múc nước tưới thường xuyên lên hàng rào sắt để làm sạch bụi bẩn",
+                "Phun phân hóa học lên bề mặt sắt để kích thích phản ứng",
+                "Dùng khăn giấy khô quấn chặt xung quanh hàng rào sắt"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Cạo sạch lớp gỉ cũ rồi sơn một lớp sơn chống gỉ (hoặc bôi dầu mỡ) lên bề mặt kim loại\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l6-q6",
+              "type": "knowledge",
+              "prompt": "Hoạt động sinh hoạt nào hằng ngày thể hiện ý thức bảo vệ môi trường đất và giảm thiểu ô nhiễm của học sinh?",
+              "options": [
+                "Gom tất cả rác thải nhựa, kim loại và rác thức ăn thừa bỏ chung vào một túi ni-lông rồi đem chôn xuống đất vườn",
+                "Tự giác phân loại rác thải tại nguồn, hạn chế sử dụng đồ nhựa dùng một lần và tích cực tham gia trồng cây xanh",
+                "Đốt túi ni-lông và pin cũ ngay tại góc vườn nhà để xử lý nhanh chóng",
+                "Đổ trực tiếp nước xà phòng giặt đồ ra thảm cỏ ngoài sân trường"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Tự giác phân loại rác thải tại nguồn, hạn chế sử dụng đồ nhựa dùng một lần và tích cực tham gia trồng cây xanh\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c2-kh5",
+      "chapterNumber": 2,
+      "title": "Chủ đề 2: Năng lượng",
+      "lessons": [
+        {
+          "id": "l7-kh5",
+          "lessonNumber": 7,
+          "title": "BÀI 7: VAI TRÒ CỦA NĂNG LƯỢNG",
+          "questions": [
+            {
+              "id": "g5-kh-l7-q1",
+              "type": "knowledge",
+              "prompt": "Quan sát các hoạt động trong đời sống, đối tượng nào cần năng lượng để sống, vận động và thực hiện chức năng?",
+              "options": [
+                "Chỉ có con người và động vật",
+                "Chỉ có các loại máy móc và phương tiện giao thông",
+                "Tất cả con người, động vật, thực vật và máy móc",
+                "Chỉ có thực vật khi quang hợp dưới ánh nắng mặt trời"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Tất cả con người, động vật, thực vật và máy móc\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l7-q2",
+              "type": "knowledge",
+              "prompt": "Nguồn năng lượng giúp cơ thể Nam phục hồi sức khỏe sau khi chạy bộ tập thể dục lấy từ đâu?",
+              "options": [
+                "Từ điện lưới gia đình",
+                "Từ thức ăn, đồ uống (lương thực, thực phẩm) mà Nam ăn hằng ngày",
+                "Từ năng lượng gió thổi xung quanh sân trường",
+                "Từ xăng dầu nạp trực tiếp vào cơ thể"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Từ thức ăn, đồ uống (lương thực, thực phẩm) mà Nam ăn hằng ngày\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l7-q3",
+              "type": "knowledge",
+              "prompt": "Khi cắm dây điện để quạt mát hoạt động, dạng năng lượng nào đã được biến đổi để tạo ra gió làm mát?",
+              "options": [
+                "Năng lượng chất đốt",
+                "Năng lượng điện (lấy từ nguồn điện gia đình)",
+                "Năng lượng mặt trời",
+                "Năng lượng nước chảy"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Năng lượng điện (lấy từ nguồn điện gia đình)\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l7-q4",
+              "type": "knowledge",
+              "prompt": "Khi đạp xe đi học xuôi theo chiều gió thổi giúp đạp nhẹ nhàng hơn, nguồn năng lượng tự nhiên nào đã tác động hỗ trợ?",
+              "options": [
+                "Năng lượng mặt trời",
+                "Năng lượng gió",
+                "Năng lượng nước chảy",
+                "Năng lượng điện"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Năng lượng gió\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l7-q5",
+              "type": "knowledge",
+              "prompt": "Xe máy, ô tô hoặc máy xúc đất trên công trường muốn di chuyển và hoạt động được cần nguồn năng lượng nào cung cấp?",
+              "options": [
+                "Năng lượng từ thức ăn của người lái",
+                "Năng lượng chất đốt (xăng, dầu...)",
+                "Năng lượng thủy triều",
+                "Năng lượng từ quạt gió"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Năng lượng chất đốt (xăng, dầu...)\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l7-q6",
+              "type": "knowledge",
+              "prompt": "Để bảo vệ môi trường và giảm phụ thuộc năng lượng cạn kiệt, con người hiện nay hướng tới khai thác nguồn năng lượng tự nhiên mới nào?",
+              "options": [
+                "Năng lượng thủy triều và năng lượng sinh khối (từ rơm rạ, gỗ, rác thải)",
+                "Năng lượng than đá bã mía",
+                "Năng lượng từ việc đốt nhựa dùng một lần",
+                "Năng lượng từ ắc-quy cũ xả thải"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Năng lượng thủy triều và năng lượng sinh khối (từ rơm rạ, gỗ, rác thải)\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            }
+          ]
+        },
+        {
+          "id": "l8-kh5",
+          "lessonNumber": 8,
+          "title": "BÀI 8: SỬ DỤNG NĂNG LƯỢNG ĐIỆN",
+          "questions": [
+            {
+              "id": "g5-kh-l8-q1",
+              "type": "knowledge",
+              "prompt": "Dòng điện truyền tải từ Nhà máy điện đến các thiết bị điện trong gia đình, trường học theo con đường nào?",
+              "options": [
+                "Nhà máy điện  Ổ cắm gia đình (không cần đường dây truyền tải)",
+                "Nhà máy điện  Trạm biến thế (tăng áp)  Đường dây cao thế  Trạm biến thế (hạ áp)  Nơi sử dụng điện",
+                "Trạm biến thế (hạ áp)  Đường dây cao thế  Nhà máy điện",
+                "Nơi sử dụng điện  Trạm biến thế  Nhà máy điện"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Nhà máy điện  Trạm biến thế (tăng áp)  Đường dây cao thế  Trạm biến thế (hạ áp)  Nơi sử dụng điện\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l8-q2",
+              "type": "knowledge",
+              "prompt": "Hành vi nào trong sinh hoạt hằng ngày là nguy hiểm, KHÔNG AN TOÀN và có nguy cơ cao gây giật điện?",
+              "options": [
+                "Rút phích cắm điện bằng cách nắm chắc vào phần vỏ nhựa cách điện bên ngoài",
+                "Dùng tay đang ướt nước để bấm bật công tắc hoặc cắm phích điện vào ổ cắm",
+                "Tránh xa khu vực các trạm biến áp và đường dây điện cao thế ngoài trời",
+                "Tuân thủ nghiêm túc các biển cảnh báo an toàn điện ở nơi công cộng"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Dùng tay đang ướt nước để bấm bật công tắc hoặc cắm phích điện vào ổ cắm\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l8-q3",
+              "type": "knowledge",
+              "prompt": "Khi phát hiện một ổ điện trong nhà bị chập cháy nổ bắn ra tia lửa điện, hành động đúng đắn và an toàn đầu tiên là gì?",
+              "options": [
+                "Dùng tay trần giật mạnh dây điện ra khỏi ổ cắm",
+                "Dội ngay một gáo nước sạch vào ổ điện đang bị cháy",
+                "Giữ khoảng cách an toàn, ngắt ngay cầu dao điện tổng và hô hoán người lớn hỗ trợ",
+                "Bỏ chạy ra ngoài chơi và giấu không cho bố mẹ biết sự việc"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Giữ khoảng cách an toàn, ngắt ngay cầu dao điện tổng và hô hoán người lớn hỗ trợ\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l8-q4",
+              "type": "knowledge",
+              "prompt": "Vì sao chúng ta cần phải sử dụng năng lượng điện một cách hợp lý và tiết kiệm hằng ngày?",
+              "options": [
+                "Vì các nguồn tài nguyên sản xuất điện (như than đá, dầu mỏ) cần hàng triệu năm hình thành và đang dần cạn kiệt",
+                "Vì sử dụng nhiều điện làm cho bóng đèn bị cháy hỏng ngay lập tức",
+                "Vì nguồn điện tự nhiên là vô tận và không bao giờ cạn kiệt",
+                "Vì các nhà máy điện không muốn bán điện cho người dân sử dụng"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Vì các nguồn tài nguyên sản xuất điện (như than đá, dầu mỏ) cần hàng triệu năm hình thành và đang dần cạn kiệt\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l8-q5",
+              "type": "knowledge",
+              "prompt": "Việc làm nào dưới đây tại trường học hoặc gia đình thể hiện sự tiết kiệm năng lượng điện thực tế và hiệu quả?",
+              "options": [
+                "Bật máy điều hòa nhiệt độ ở mức 16 độ và mở tung tất cả các cửa sổ",
+                "Mở cửa tủ lạnh liên tục nhiều lần trong ngày để làm mát không khí trong phòng",
+                "Tắt tất cả các thiết bị điện khi ra khỏi phòng và cài đặt nhiệt độ điều hòa hợp lý",
+                "Bật sẵn toàn bộ hệ thống đèn chiếu sáng ở sân trường vào ban ngày để trang trí"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Tắt tất cả các thiết bị điện khi ra khỏi phòng và cài đặt nhiệt độ điều hòa hợp lý\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l8-q6",
+              "type": "knowledge",
+              "prompt": "Vì sao gia đình KHÔNG NÊN vừa bật máy điều hòa nhiệt độ vừa dùng bàn là (ủi) quần áo trong cùng một lúc?",
+              "options": [
+                "Vì bàn là sẽ làm máy điều hòa bị đông đá hoàn toàn",
+                "Vì cả hai thiết bị đều có công suất tiêu thụ điện lớn, cùng hoạt động gây lãng phí điện năng và nguy cơ quá tải đường dây",
+                "Vì hơi lạnh của điều hòa sẽ làm bàn là điện bị hỏng hóc ngay lập tức",
+                "Vì bàn là phát ra ánh sáng chói làm hỏng các cảm biến của điều hòa"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Vì cả hai thiết bị đều có công suất tiêu thụ điện lớn, cùng hoạt động gây lãng phí điện năng và nguy cơ quá tải đường dây\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            }
+          ]
+        },
+        {
+          "id": "l9-kh5",
+          "lessonNumber": 9,
+          "title": "BÀI 9: MẠCH ĐIỆN ĐƠN GIẢN. VẬT DẪN ĐIỆN VÀ VẬT CÁCH ĐIỆN",
+          "questions": [
+            {
+              "id": "g5-kh-l9-q1",
+              "type": "knowledge",
+              "prompt": "Một mạch điện thắp sáng đơn giản để hoạt động bình thường cần phải bao gồm đầy đủ các bộ phận cơ bản nào?",
+              "options": [
+                "Nguồn điện (pin), bóng đèn, dây dẫn điện và công tắc",
+                "Chỉ cần nguồn điện (pin) và công tắc",
+                "Chỉ cần dây dẫn điện và bóng đèn",
+                "Nguồn điện (pin) và vỏ nhựa cách điện"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Chỉ cần nguồn điện (pin) và công tắc\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l9-q2",
+              "type": "knowledge",
+              "prompt": "Khi bấm bật công tắc (đóng khóa K) của đèn pin, bóng đèn phát sáng là do đâu?",
+              "options": [
+                "Công tắc đã tạo thành mạch kín, giúp dòng điện chạy từ cực dương qua bóng đèn về cực âm của pin",
+                "Công tắc làm ngắt dòng điện hoàn toàn khỏi mạch điện",
+                "Nguồn điện pin tự ngắt kết nối với bóng đèn",
+                "Mạch điện bị hở làm bóng đèn nóng lên phát sáng"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Công tắc làm ngắt dòng điện hoàn toàn khỏi mạch điện\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l9-q3",
+              "type": "knowledge",
+              "prompt": "Thí nghiệm kẹp lưỡi kéo bằng thép đèn sáng, kẹp miếng bìa giấy đèn không sáng rút ra kết luận gì?",
+              "options": [
+                "Thép và giấy đều là vật dẫn điện tốt",
+                "Thép là vật dẫn điện, bìa giấy là vật cách điện",
+                "Thép là vật cách điện, bìa giấy là vật dẫn điện",
+                "Cả thép và bìa giấy đều là vật cách điện"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Thép là vật dẫn điện, bìa giấy là vật cách điện\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l9-q4",
+              "type": "knowledge",
+              "prompt": "Nhóm các vật liệu nào dưới đây đều thuộc nhóm vật cách điện được ứng dụng phổ biến để đảm bảo an toàn?",
+              "options": [
+                "Đồng, sắt, nhôm, bạc, vàng",
+                "Sứ, nhựa, gỗ khô, cao su, thủy tinh",
+                "Nhựa, đồng, cao su, gang",
+                "Thủy tinh, sắt, gỗ khô, thiếc"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Sứ, nhựa, gỗ khô, cao su, thủy tinh\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l9-q5",
+              "type": "knowledge",
+              "prompt": "Vì sao chân phích cắm điện làm bằng kim loại còn vỏ cầm nắm bên ngoài làm bằng nhựa đúc?",
+              "options": [
+                "Chân cắm bằng kim loại để dẫn điện, vỏ nhựa là vật cách điện giúp người dùng cầm cắm không bị điện giật",
+                "Chân cắm bằng kim loại để cách điện, vỏ nhựa để dẫn điện",
+                "Cả hai bộ phận đều làm bằng vật dẫn điện để tăng công suất",
+                "Để phích cắm trông đẹp mắt hơn chứ không có tác dụng an toàn"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Chân cắm bằng kim loại để cách điện, vỏ nhựa để dẫn điện\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l9-q6",
+              "type": "knowledge",
+              "prompt": "Khi bật công tắc nhưng đèn pin không sáng, bước kiểm tra khoa học đầu tiên để khắc phục là gì?",
+              "options": [
+                "Vứt ngay chiếc đèn pin vào thùng rác",
+                "Kiểm tra xem pin có bị lắp ngược chiều không, pin đã hết điện chưa, hoặc bóng đèn có bị hỏng/lỏng không",
+                "Dùng đập thật mạnh đèn pin xuống sàn nhà cho các bộ phận khớp lại",
+                "Đổ nước vào bên trong thân đèn pin để tăng độ dẫn điện"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Kiểm tra xem pin có bị lắp ngược chiều không, pin đã hết điện chưa, hoặc bóng đèn có bị hỏng/lỏng không\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            }
+          ]
+        },
+        {
+          "id": "l10-kh5",
+          "lessonNumber": 10,
+          "title": "BÀI 10: NĂNG LƯỢNG CHẤT ĐỐT",
+          "questions": [
+            {
+              "id": "g5-kh-l10-q1",
+              "type": "knowledge",
+              "prompt": "Loại chất đốt nào được tạo ra từ việc ủ các chất thải hữu cơ (mùn, rác, phân động vật) trong các bể chứa kín?",
+              "options": [
+                "Than đá",
+                "Khí tự nhiên (khí ga)",
+                "Khí sinh học (bi-ô-ga)",
+                "Dầu đi-ô-den"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Khí tự nhiên (khí ga)\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l10-q2",
+              "type": "knowledge",
+              "prompt": "Từ dầu mỏ, người ta chế biến và tách ra các sản phẩm nào dùng làm chất đốt cho máy móc, phương tiện giao thông?",
+              "options": [
+                "Khí sinh học và phân bón",
+                "Xăng, dầu hỏa, dầu đi-ô-den",
+                "Than đá và củi khô",
+                "Điện năng và nước sạch"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Xăng, dầu hỏa, dầu đi-ô-den\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l10-q3",
+              "type": "knowledge",
+              "prompt": "Khi các loại chất đốt (than, củi, xăng, dầu, khí ga) bị cháy, chúng đều sinh ra chất khí nào gây ô nhiễm không khí và ảnh hưởng xấu đến sức khỏe?",
+              "options": [
+                "Khí ô-xi",
+                "Khí ni-tơ",
+                "Khí các-bô-níc cùng nhiều khí độc khác",
+                "Hơi nước sạch"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Khí ni-tơ\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l10-q4",
+              "type": "knowledge",
+              "prompt": "Để phòng tránh nguy cơ cháy, nổ khi sử dụng bếp ga trong đun nấu hằng ngày tại gia đình, việc làm nào ĐÚNG quy định an toàn?",
+              "options": [
+                "Đặt bình ga ngay sát bên cạnh bếp than đang cháy đỏ",
+                "Tự ý dùng bình ga nhỏ để sang chiết ga không an toàn",
+                "Kiểm tra thiết bị thường xuyên, khóa van bình ga sau khi nấu và đặt bình ga cách bếp một khoảng an toàn",
+                "Khi phát hiện mùi ga rò rỉ liền bật bật lửa lên ngay để kiểm tra vị trí hở"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Tự ý dùng bình ga nhỏ để sang chiết ga không an toàn\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l10-q5",
+              "type": "knowledge",
+              "prompt": "Trong sinh hoạt gia đình, hành vi nào dưới đây thể hiện việc tiết kiệm năng lượng chất đốt hiệu quả?",
+              "options": [
+                "Đun nước sôi xong nhưng vẫn để bếp ga cháy to không tắt",
+                "Điều chỉnh ngọn lửa bếp ga vừa phải phù hợp với đáy nồi khi đun nấu",
+                "Để xe máy nổ máy chờ suốt 30 phút trong sân nhà",
+                "Mở to lửa để đun một lượng nước rất nhỏ trong chiếc nồi lớn"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Điều chỉnh ngọn lửa bếp ga vừa phải phù hợp với đáy nồi khi đun nấu\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l10-q6",
+              "type": "knowledge",
+              "prompt": "Vì sao vào mùa đông lạnh giá, chúng ta tuyệt đối KHÔNG ĐƯỢC đốt than, củi để sưởi ấm trong phòng kín?",
+              "options": [
+                "Vì than củi không tỏa ra nhiệt năng",
+                "Vì than củi khi cháy trong phòng kín sẽ tiêu thụ hết khí ô-xi và sinh ra khí độc gây ngạt thở, nguy hiểm đến tính mạng",
+                "Vì khí từ than củi làm thức ăn bị biến đổi mùi vị",
+                "Vì đốt than củi khiến phòng bị đóng băng"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Vì than củi khi cháy trong phòng kín sẽ tiêu thụ hết khí ô-xi và sinh ra khí độc gây ngạt thở, nguy hiểm đến tính mạng\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            }
+          ]
+        },
+        {
+          "id": "l11-kh5",
+          "lessonNumber": 11,
+          "title": "BÀI 11: SỬ DỤNG NĂNG LƯỢNG MẶT TRỜI, NĂNG LƯỢNG GIÓ, NĂNG LƯỢNG NƯỚC CHẢY",
+          "questions": [
+            {
+              "id": "g5-kh-l11-q1",
+              "type": "knowledge",
+              "prompt": "Việc người dân lắp đặt hệ thống pin mặt trời trên mái nhà mang lại tác dụng trực tiếp nào?",
+              "options": [
+                "Biến đổi trực tiếp năng lượng mặt trời thành điện năng để thắp sáng và chạy các thiết bị điện",
+                "Làm cho thời tiết xung quanh nhà trở nên mát mẻ hơn vào giữa trưa hè",
+                "Tạo ra năng lượng gió nhân tạo làm quay quạt máy trong nhà",
+                "Thay thế hoàn toàn nguồn nước sinh hoạt trong gia đình"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Làm cho thời tiết xung quanh nhà trở nên mát mẻ hơn vào giữa trưa hè\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l11-q2",
+              "type": "knowledge",
+              "prompt": "Cối xay gió hay các tua-bin gió hiện đại xây dựng ở dải đất ven biển sử dụng nguồn năng lượng gió phục vụ hoạt động gì?",
+              "options": [
+                "Làm nóng nước sinh hoạt gia đình vào mùa đông",
+                "Sản xuất điện và bơm nước phục vụ sinh hoạt, sản xuất",
+                "Sấy khô các loại nông sản trong phòng kín hoàn toàn",
+                "Luyện kim và sản xuất gốm sứ thủ công"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Sản xuất điện và bơm nước phục vụ sinh hoạt, sản xuất\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l11-q3",
+              "type": "knowledge",
+              "prompt": "Việc người dân vùng cao xây dựng các bánh xe nước (cọn nước) bên bờ sông, suối sử dụng năng lượng nước chảy nhằm mục đích gì?",
+              "options": [
+                "Đưa nước từ sông, suối lên cao để dẫn vào đồng ruộng tưới tiêu và sinh hoạt",
+                "Làm cho dòng nước chảy ngược về thượng nguồn núi cao",
+                "Sưởi ấm không khí xung quanh vào mùa đông lạnh giá",
+                "Lọc sạch hoàn toàn các chất bẩn có trong nước sông"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Làm cho dòng nước chảy ngược về thượng nguồn núi cao\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l11-q4",
+              "type": "knowledge",
+              "prompt": "Khi một chiếc thuyền buồm di chuyển trên sông gặp phải luồng gió thổi ngược chiều, người lái thuyền cần làm gì để tránh bị đẩy lùi?",
+              "options": [
+                "Mở rộng toàn bộ cánh buồm để hứng tối đa sức gió",
+                "Hạ buồm xuống để giảm tác động cản của gió ngược chiều",
+                "Đốt thêm củi trên thuyền để tạo nhiệt lượng đẩy thuyền",
+                "Bơm thêm không khí vào buồm để giữ thăng bằng"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Hạ buồm xuống để giảm tác động cản của gió ngược chiều\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l11-q5",
+              "type": "knowledge",
+              "prompt": "Việc sử dụng điện năng từ mặt trời, gió và nước chảy mang lại ưu điểm lớn nhất nào so với nhiệt điện chạy than/dầu?",
+              "options": [
+                "Chi phí lắp đặt thiết bị ban đầu hoàn toàn miễn phí cho mọi nhà",
+                "Là nguồn năng lượng sạch, sẵn có trong tự nhiên, góp phần bảo vệ môi trường và hạn chế ô nhiễm",
+                "Có thể tạo ra điện năng bất kể ngày hay đêm mà không phụ thuộc vào thời tiết",
+                "Không cần sử dụng bất kỳ hệ thống dây dẫn điện phức tạp nào"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Là nguồn năng lượng sạch, sẵn có trong tự nhiên, góp phần bảo vệ môi trường và hạn chế ô nhiễm\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l11-q6",
+              "type": "knowledge",
+              "prompt": "Nguồn năng lượng nào đã trực tiếp giúp các bè gỗ, bè tre trôi xuôi từ thượng nguồn về hạ lưu mà không cần gắn động cơ?",
+              "options": [
+                "Năng lượng chất đốt từ tự nhiên",
+                "Năng lượng nước chảy",
+                "Năng lượng điện từ pin tích trữ",
+                "Năng lượng từ thức ăn của người lái bè"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Năng lượng nước chảy\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            }
+          ]
+        },
+        {
+          "id": "l12-kh5",
+          "lessonNumber": 12,
+          "title": "BÀI 12: ÔN TẬP CHỦ ĐỀ NĂNG LƯỢNG",
+          "questions": [
+            {
+              "id": "g5-kh-l12-q1",
+              "type": "knowledge",
+              "prompt": "Nhóm các nguồn năng lượng nào dưới đây thuộc nhóm năng lượng tái tạo tự nhiên, giúp giảm nhẹ nguy cơ ô nhiễm môi trường và cạn kiệt tài nguyên?",
+              "options": [
+                "Than đá, dầu mỏ và khí tự nhiên",
+                "Năng lượng mặt trời, năng lượng gió và năng lượng nước chảy",
+                "Xăng, dầu hỏa và khí ga",
+                "Điện lưới, bình ắc-quy và pin khô"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Năng lượng mặt trời, năng lượng gió và năng lượng nước chảy\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l12-q2",
+              "type": "knowledge",
+              "prompt": "Biện pháp phòng tránh nguy hiểm đúng quy định an toàn cho các tình huống (thả diều gần lưới điện, phơi đồ lên dây điện, đun bếp ga gần vật dễ cháy) là gì?",
+              "options": [
+                "Mở rộng diện tích phơi quần áo lên dây dẫn điện trong nhà",
+                "Thả diều ở nơi rộng rãi xa đường dây điện; không phơi đồ lên dây điện; đặt bếp ga xa các vật dễ cháy",
+                "Dùng sào sắt để gỡ diều khi bị vướng vào đường dây điện cao thế",
+                "Bật bếp ga cháy thật to rồi bỏ đi chơi chỗ khác"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Thả diều ở nơi rộng rãi xa đường dây điện; không phơi đồ lên dây điện; đặt bếp ga xa các vật dễ cháy\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l12-q3",
+              "type": "knowledge",
+              "prompt": "Việc sử dụng nguồn năng lượng nào để đun nước vừa AN TOÀN vừa TIẾT KIỆM chi phí nhiên liệu nhất?",
+              "options": [
+                "Dùng bếp than đá đun liên tục trong phòng kín",
+                "Dùng cắm bình đun siêu tốc bằng điện công suất cực lớn",
+                "Sử dụng năng lượng ánh nắng mặt trời",
+                "Dùng bếp ga đun liên tục ở mức lửa lớn nhất suốt cả ngày"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Sử dụng năng lượng ánh nắng mặt trời\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l12-q4",
+              "type": "knowledge",
+              "prompt": "Hành vi nào của gia đình thể hiện việc sử dụng năng lượng điện và chất đốt tiết kiệm, hợp lý?",
+              "options": [
+                "Bật máy điều hòa 18 độ cùng lúc với quạt máy và mở toang cửa sổ",
+                "Điều chỉnh ngọn lửa bếp ga vừa đáy nồi, tắt các thiết bị điện khi ra khỏi phòng và tận dụng ánh sáng tự nhiên",
+                "Bật sẵn bình nóng lạnh suốt 24/24 giờ trong ngày để lúc nào cũng có nước nóng",
+                "Đun một lượng nước rất nhỏ trong chiếc nồi siêu lớn bằng bếp ga mở to"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Điều chỉnh ngọn lửa bếp ga vừa đáy nồi, tắt các thiết bị điện khi ra khỏi phòng và tận dụng ánh sáng tự nhiên\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l12-q5",
+              "type": "knowledge",
+              "prompt": "Khi phát hiện nhà hàng xóm có mùi khí ga rò rỉ nồng nặc hoặc chập điện bắn tia lửa, hành động KHÔNG NÊN LÀM vì cực kỳ nguy hiểm là gì?",
+              "options": [
+                "Bật ngay công tắc điện hoặc bật quạt máy để quạt cho hơi ga bay đi nhanh",
+                "Báo ngay cho người lớn và gọi điện thoại cho lực lượng cứu hộ chuyên nghiệp",
+                "Giữ khoảng cách an toàn, ngắt cầu dao điện tổng (aptomat) của khu vực nếu có thể",
+                "Khóa van bình ga lại cẩn thận nếu đảm bảo an toàn xung quanh"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Bật ngay công tắc điện hoặc bật quạt máy để quạt cho hơi ga bay đi nhanh\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l12-q6",
+              "type": "knowledge",
+              "prompt": "Việc mỗi học sinh thực hiện các quy tắc an toàn, tiết kiệm điện, chất đốt và tuyên truyền sử dụng năng lượng sạch mang lại giá trị cốt lõi gì?",
+              "options": [
+                "Giúp học sinh được nhà trường miễn tất cả các bài kiểm tra văn hóa",
+                "Bảo vệ tính mạng bản thân, tiết kiệm tài chính gia đình, gìn giữ tài nguyên thiên nhiên và bảo vệ môi trường sống bền vững",
+                "Giúp các nhà máy điện không cần phải hoạt động sản xuất nữa",
+                "Đảm bảo Trái Đất không bao giờ xảy ra thiên tai thời tiết"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Bảo vệ tính mạng bản thân, tiết kiệm tài chính gia đình, gìn giữ tài nguyên thiên nhiên và bảo vệ môi trường sống bền vững\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c3-kh5",
+      "chapterNumber": 3,
+      "title": "Chủ đề 3: Thực vật và động vật",
+      "lessons": [
+        {
+          "id": "l13-kh5",
+          "lessonNumber": 13,
+          "title": "BÀI 13: SINH SẢN CỦA THỰC VẬT CÓ HOA",
+          "questions": [
+            {
+              "id": "g5-kh-l13-q1",
+              "type": "knowledge",
+              "prompt": "Khi quan sát cây cà chua hoặc cây bưởi đang ra hoa kết quả, bộ phận nào giữ vai trò là cơ quan sinh sản của thực vật có hoa?",
+              "options": ["Rễ cây", "Thân cây", "Lá cây", "Hoa"],
+              "correctIndex": 3,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Hoa\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l13-q2",
+              "type": "knowledge",
+              "prompt": "Hoa bưởi có cả nhị và nhụy trên cùng một hoa, còn cây bí ngô có hoa chỉ mang nhị hoặc chỉ mang nhụy. Kết luận nào là đúng?",
+              "options": [
+                "Hoa bưởi là hoa đơn tính, hoa bí ngô là hoa lưỡng tính",
+                "Hoa bưởi là hoa lưỡng tính, hoa bí ngô là hoa đơn tính",
+                "Cả hoa bưởi và hoa bí ngô đều là hoa đơn tính",
+                "Cả hoa bưởi và hoa bí ngô đều là hoa lưỡng tính"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Hoa bưởi là hoa lưỡng tính, hoa bí ngô là hoa đơn tính\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l13-q3",
+              "type": "knowledge",
+              "prompt": "Trên sơ đồ cơ quan sinh sản của thực vật có hoa, tế bào sinh dục đực và tế bào sinh dục cái nằm ở đâu?",
+              "options": [
+                "Tế bào sinh dục đực chứa trong hạt phấn; tế bào sinh dục cái chứa trong noãn",
+                "Tế bào sinh dục đực chứa trong noãn; tế bào sinh dục cái chứa trong hạt phấn",
+                "Cả hai tế bào sinh dục đực và cái đều nằm ở đài hoa",
+                "Cả hai tế bào sinh dục đều nằm ở cánh hoa"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Tế bào sinh dục đực chứa trong hạt phấn; tế bào sinh dục cái chứa trong noãn\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l13-q4",
+              "type": "knowledge",
+              "prompt": "Sau khi thụ tinh xảy ra, bầu nhụy và noãn sẽ phát triển tương ứng thành những bộ phận nào của cây?",
+              "options": [
+                "Bầu nhụy phát triển thành hạt; noãn phát triển thành quả",
+                "Bầu nhụy phát triển thành cánh hoa; noãn phát triển thành đài hoa",
+                "Bầu nhụy phát triển thành quả; noãn phát triển thành hạt chứa phôi",
+                "Bầu nhụy phát triển thành rễ; noãn phát triển thành lá"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Bầu nhụy phát triển thành quả; noãn phát triển thành hạt chứa phôi\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l13-q5",
+              "type": "knowledge",
+              "prompt": "Hoa hồng, hoa bưởi có màu sặc sỡ, hương thơm thu hút ong bướm; hoa ngô, hoa lúa cánh nhỏ không có màu nổi bật. Hình thức thụ phấn tương ứng là gì?",
+              "options": [
+                "Hoa bưởi/hoa hồng thụ phấn nhờ côn trùng; hoa ngô/hoa lúa thụ phấn nhờ gió",
+                "Hoa bưởi/hoa hồng thụ phấn nhờ gió; hoa ngô/hoa lúa thụ phấn nhờ côn trùng",
+                "Cả hai nhóm hoa đều thụ phấn nhờ con người",
+                "Cả hai nhóm hoa đều không cần thụ phấn"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Hoa bưởi/hoa hồng thụ phấn nhờ côn trùng; hoa ngô/hoa lúa thụ phấn nhờ gió\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l13-q6",
+              "type": "knowledge",
+              "prompt": "Nếu một bông hoa bí ngô cái trong vườn không được thụ phấn, thụ tinh, hiện tượng tiếp theo sẽ xảy ra là gì?",
+              "options": [
+                "Hoa vẫn phát triển thành quả bí ngô to bình thường",
+                "Hoa sẽ héo, rụng đi và không thể hình thành quả và hạt",
+                "Bầu nhụy tự biến thành phôi cây con ngay lập tức",
+                "Hoa chuyển thành hoa lưỡng tính"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Hoa sẽ héo, rụng đi và không thể hình thành quả và hạt\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            }
+          ]
+        },
+        {
+          "id": "l14-kh5",
+          "lessonNumber": 14,
+          "title": "BÀI 14: SỰ PHÁT TRIỂN CỦA CÂY CON",
+          "questions": [
+            {
+              "id": "g5-kh-l14-q1",
+              "type": "knowledge",
+              "prompt": "Khi tách đôi một hạt đậu (hoặc hạt lạc) đã được ngâm mềm trong nước, cấu tạo bên trong của hạt gồm những bộ phận cơ bản nào?",
+              "options": [
+                "Vỏ hạt, phôi và chất dinh dưỡng dự trữ",
+                "Rễ cọc, thân chính và lá mầm",
+                "Hoa, quả và hạt chứa phôi",
+                "Bao phấn, chỉ nhị và bầu nhụy"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Vỏ hạt, phôi và chất dinh dưỡng dự trữ\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l14-q2",
+              "type": "knowledge",
+              "prompt": "Trình tự các giai đoạn phát triển chính trong vòng đời của cây đậu mọc lên từ hạt diễn ra theo thứ tự khoa học nào?",
+              "options": [
+                "Cây trưởng thành  Nảy mầm  Cây con  Cây ra hoa tạo quả",
+                "Nảy mầm  Cây con phát triển lá/rễ  Cây trưởng thành ra hoa, tạo quả",
+                "Cây con  Ra hoa kết quả  Nảy mầm  Cây trưởng thành",
+                "Ra hoa kết quả  Nảy chồi  Cây con  Hạt ngâm nước"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Nảy mầm  Cây con phát triển lá/rễ  Cây trưởng thành ra hoa, tạo quả\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l14-q3",
+              "type": "knowledge",
+              "prompt": "Nhóm cây nào dưới đây có thể mọc lên cây con trực tiếp từ cơ quan sinh dưỡng (lá hoặc thân/cành) của cây mẹ?",
+              "options": [
+                "Cây ngô, cây lúa, cây đỗ đen",
+                "Cây lá bỏng (sống đời) mọc từ lá; cây dâu tây, rau muống, sắn mọc từ thân/cành",
+                "Cây cà chua, cây bưởi, cây vú sữa",
+                "Cây xoài, cây nhãn, cây dưa hấu"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Cây lá bỏng (sống đời) mọc từ lá; cây dâu tây, rau muống, sắn mọc từ thân/cành\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l14-q4",
+              "type": "knowledge",
+              "prompt": "Quan sát sự mọc mầm của củ trong bếp, cây con của khoai lang mọc ra từ bộ phận nào và cây con của khoai tây mọc ra từ đâu?",
+              "options": [
+                "Khoai lang mọc từ củ; Khoai tây mọc từ củ",
+                "Cả khoai lang và khoai tây đều mọc ra từ hạt nằm trong củ",
+                "Khoai lang mọc từ hoa; Khoai tây mọc từ quả",
+                "Cả hai cây đều mọc từ lá hoại mục dưới đất"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Khoai lang mọc từ củ; Khoai tây mọc từ củ\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l14-q5",
+              "type": "knowledge",
+              "prompt": "Trong tiết thực hành trồng cây bằng đoạn thân (cành rau muống, cành sắn), thao tác kỹ thuật nào là BẮT BUỘC để cây ra rễ tốt?",
+              "options": [
+                "Cắm ngược ngọn cành xuống đất, quay phần gốc lên trời",
+                "Cắm cành xuống đất đúng chiều xuôi từ gốc đến ngọn, ấn nhẹ đất quanh gốc và tưới ẩm hằng ngày",
+                "Phủ đất kín toàn bộ các mắt chồi của cành rồi ngâm ngập nước",
+                "Đặt cành dưới ánh nắng gay gắt hoàn toàn và không tưới nước"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Cắm cành xuống đất đúng chiều xuôi từ gốc đến ngọn, ấn nhẹ đất quanh gốc và tưới ẩm hằng ngày\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l14-q6",
+              "type": "knowledge",
+              "prompt": "Khi ngâm hạt đậu vào nước ấm rồi đặt lên khăn ẩm, bộ phận nào của hạt sẽ mọc ra đầu tiên để đâm xuống đất hút nước và khoáng chất?",
+              "options": [
+                "Chồi mầm vươn lên cao trước",
+                "Lá mầm xòe rộng thành lá xanh trước",
+                "Rễ mầm mọc và đâm xuống đất trước",
+                "Cánh hoa màu đỏ mọc ra trước"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Lá mầm xòe rộng thành lá xanh trước\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            }
+          ]
+        },
+        {
+          "id": "l15-kh5",
+          "lessonNumber": 15,
+          "title": "BÀI 15: SINH SẢN CỦA ĐỘNG VẬT",
+          "questions": [
+            {
+              "id": "g5-kh-l15-q1",
+              "type": "knowledge",
+              "prompt": "Khi quan sát các loài động vật trong tự nhiên và nông trại, nhóm động vật nào thuộc nhóm động vật đẻ trứng?",
+              "options": [
+                "Con chó, con mèo, con bò, con lợn",
+                "Con gà, con vịt, con cá, con ếch, con bướm",
+                "Con trâu, con ngựa, con cá voi, con khỉ",
+                "Con thỏ, con chuột, con dơi, con hổ"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Con gà, con vịt, con cá, con ếch, con bướm\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l15-q2",
+              "type": "knowledge",
+              "prompt": "Ở đa số động vật trưởng thành, tế bào sinh dục đực và tế bào sinh dục cái do cơ quan nào tạo ra?",
+              "options": [
+                "Cơ quan sinh dục con đực tạo ra trứng; cơ quan sinh dục con cái tạo ra tinh trùng",
+                "Cơ quan sinh dục con đực tạo ra tinh trùng; cơ quan sinh dục con cái tạo ra trứng",
+                "Cả hai con đực và con cái đều tự tạo ra hợp tử trong cơ thể",
+                "Tế bào sinh dục được tạo ra trực tiếp từ thức ăn động vật ăn hằng ngày"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Cơ quan sinh dục con đực tạo ra tinh trùng; cơ quan sinh dục con cái tạo ra trứng\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l15-q3",
+              "type": "knowledge",
+              "prompt": "Loài động vật nào dưới đây có hiện tượng thụ tinh bên ngoài cơ thể con cái (trứng gặp tinh trùng trong nước)?",
+              "options": [
+                "Con chó, con mèo, con bò",
+                "Con gà, con chim bồ câu, con thỏ",
+                "Con cá, con ếch, con tôm, con cua",
+                "Con ngựa, con lợn, con dơi"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Con gà, con chim bồ câu, con thỏ\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l15-q4",
+              "type": "knowledge",
+              "prompt": "Ở các loài động vật đẻ con (như bò, chó, mèo), sau khi thụ tinh, phôi và thai nhi phát triển ở đâu?",
+              "options": [
+                "Phát triển bên trong vỏ trứng nằm ngoài môi trường tự nhiên",
+                "Phát triển thành thai bên trong cơ quan sinh dục của con cái cho đến khi sinh ra",
+                "Phát triển bên trong cơ quan sinh dục của con đực",
+                "Phát triển tự do trôi nổi trong nguồn nước ao hồ"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Phát triển thành thai bên trong cơ quan sinh dục của con cái cho đến khi sinh ra\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l15-q5",
+              "type": "knowledge",
+              "prompt": "Loài cá voi tuy sống dưới nước nhưng không sinh sản giống đa số loài cá kháHình thức sinh sản và nuôi con đặc trưng của cá voi là gì?",
+              "options": [
+                "Đẻ trứng dưới cát và tự nở thành con non",
+                "Đẻ con và nuôi con non bằng sữa mẹ",
+                "Đẻ ấu trùng và nuôi bằng rong biển tự nhiên",
+                "Thụ tinh bên ngoài rồi đẻ vô số trứng trong nước"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Đẻ con và nuôi con non bằng sữa mẹ\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l15-q6",
+              "type": "knowledge",
+              "prompt": "Khi tinh trùng kết hợp thành công với trứng trong quá trình thụ tinh, sản phẩm đầu tiên được tạo thành là gì?",
+              "options": [
+                "Thai nhi hoàn chỉnh",
+                "Ấu trùng",
+                "Hợp tử",
+                "Con non trưởng thành"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Ấu trùng\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            }
+          ]
+        },
+        {
+          "id": "l16-kh5",
+          "lessonNumber": 16,
+          "title": "BÀI 16: VÒNG ĐỜI VÀ SỰ PHÁT TRIỂN CỦA ĐỘNG VẬT",
+          "questions": [
+            {
+              "id": "g5-kh-l16-q1",
+              "type": "knowledge",
+              "prompt": "Vòng đời phát triển của muỗi trải qua 4 giai đoạn nối tiếp nhau theo trình tự nào?",
+              "options": [
+                "Trứng  Nhộng  Ấu trùng (bọ gậy)  Muỗi trưởng thành",
+                "Trứng  Ấu trùng (bọ gậy)  Nhộng  Muỗi trưởng thành",
+                "Muỗi trưởng thành  Nhộng  Ấu trùng  Trứng",
+                "Ấu trùng  Trứng  Nhộng  Muỗi trưởng thành"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Trứng  Nhộng  Ấu trùng (bọ gậy)  Muỗi trưởng thành\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l16-q2",
+              "type": "knowledge",
+              "prompt": "Dựa vào đặc điểm vòng đời của muỗi sinh sống trong nước, biện pháp nào hiệu quả để phòng bệnh sốt xuất huyết?",
+              "options": [
+                "Phun nước tràn lan ra khắp sân trường",
+                "Thường xuyên đậy kín dụng cụ chứa nước, thả cá diệt bọ gậy và úp ngược các vật dụng đọng nước",
+                "Giữ cho các chum vại chứa nước đọng lâu ngày không cần cọ rửa",
+                "Tăng cường trồng nhiều cây thủy sinh trong phòng ngủ kín"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Thường xuyên đậy kín dụng cụ chứa nước, thả cá diệt bọ gậy và úp ngược các vật dụng đọng nước\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l16-q3",
+              "type": "knowledge",
+              "prompt": "Trong vòng đời của bướm, giai đoạn ấu trùng (sâu bướm) có đặc điểm tác hại nào đối với sản xuất nông nghiệp?",
+              "options": [
+                "Sâu bướm cắn phá lá cây, làm giảm năng suất cây trồng",
+                "Sâu bướm giúp thụ phấn cho hoa nở đẹp hơn",
+                "Sâu bướm chỉ hút mật hoa mà không ăn lá",
+                "Sâu bướm đẻ ra trứng ngay trên mặt đất khô"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Sâu bướm cắn phá lá cây, làm giảm năng suất cây trồng\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l16-q4",
+              "type": "knowledge",
+              "prompt": "Giai đoạn gà con mới nở ra từ trứng có hình dạng như thế nào so với gà trưởng thành?",
+              "options": [
+                "Khác hoàn toàn, phải trải qua dạng ấu trùng bơi trong nước",
+                "Có hình dạng gần giống với gà trưởng thành, chỉ khác về kích thước nhỏ hơn và mang lớp lông nhung",
+                "Có hình dạng giống như con nhộng bọc kín",
+                "Chưa có chân và chưa có mắt để quan sát"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Có hình dạng gần giống với gà trưởng thành, chỉ khác về kích thước nhỏ hơn và mang lớp lông nhung\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l16-q5",
+              "type": "knowledge",
+              "prompt": "Sau khi chó con được sinh ra từ cơ thể chó mẹ, chúng được nuôi dưỡng bằng nguồn thức ăn nào đầu tiên?",
+              "options": [
+                "Tự ăn cỏ và lá cây khô ngoài vườn",
+                "Được chó mẹ nuôi dưỡng hoàn toàn bằng sữa mẹ",
+                "Bắt cá nhỏ dưới ao hồ để ăn",
+                "Ăn các loại hạt ngâm nước"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Được chó mẹ nuôi dưỡng hoàn toàn bằng sữa mẹ\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l16-q6",
+              "type": "knowledge",
+              "prompt": "Giai đoạn nòng nọc (nở ra từ trứng ếch) bơi trong nước có đặc điểm nào?",
+              "options": [
+                "Đã có 4 chân ngay lập tức và nhảy trên bờ",
+                "Có đuôi, bơi trong nước và hô hấp khác với ếch trưởng thành",
+                "Đã biết đẻ trứng xuống nước giống ếch bố mẹ",
+                "Có hình dạng giống hệt ếch trưởng thành nhưng nhỏ hơn rất nhiều"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Có đuôi, bơi trong nước và hô hấp khác với ếch trưởng thành\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            }
+          ]
+        },
+        {
+          "id": "l17-kh5",
+          "lessonNumber": 17,
+          "title": "BÀI 17: ÔN TẬP CHỦ ĐỀ THỰC VẬT VÀ ĐỘNG VẬT",
+          "questions": [
+            {
+              "id": "g5-kh-l17-q1",
+              "type": "knowledge",
+              "prompt": "Nhóm cây nào dưới đây được xếp đúng vào nhóm cây con mọc lên từ rễ, thân hoặc lá của cây mẹ?",
+              "options": [
+                "Cây lúa, cây ngô, cây đậu đỗ",
+                "Cây lá bỏng, cây mía/dâu tây, cây khoai lang",
+                "Cây cà chua, cây bưởi, cây nhãn",
+                "Cây xoài, cây dưa hấu, cây đu đủ"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Cây lá bỏng, cây mía/dâu tây, cây khoai lang\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l17-q2",
+              "type": "knowledge",
+              "prompt": "Khi người nông dân chặt thân cây mía thành từng đoạn ngắn (giâm cành) đem đặt xuống rãnh đất ẩm, cây mía con sẽ mọc ra từ bộ phận nào?",
+              "options": [
+                "Từ hạt chín rụng xuống đất",
+                "Từ các mắt chồi nằm trên đoạn thân cây mía mẹ",
+                "Từ cánh hoa mía hoại mục",
+                "Từ rễ cọc đâm sâu dưới lòng đất"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Từ các mắt chồi nằm trên đoạn thân cây mía mẹ\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l17-q3",
+              "type": "knowledge",
+              "prompt": "Trình tự phát triển đúng theo vòng đời tự nhiên của ếch từ khi sinh ra đến khi trưởng thành là gì?",
+              "options": [
+                "Ếch trưởng thành → Nòng nọc → Trứng → Ếch con",
+                "Trứng → Nòng nọc → Ếch con → Ếch trưởng thành",
+                "Nòng nọc → Trứng → Ếch trưởng thành → Ếch con",
+                "Trứng → Ếch con → Nòng nọc → Ếch trưởng thành"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Trứng → Nòng nọc → Ếch con → Ếch trưởng thành\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l17-q4",
+              "type": "knowledge",
+              "prompt": "Nhóm gồm toàn các loài động vật đẻ con và nuôi con bằng sữa mẹ trong các loài đã cho là gì?",
+              "options": [
+                "Con gà, Con muỗi, Con ếch",
+                "Con chó, Con cá voi, Con mèo",
+                "Con gà, Con chó, Con ếch",
+                "Con cá voi, Con muỗi, Con mèo"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Con chó, Con cá voi, Con mèo\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l17-q5",
+              "type": "knowledge",
+              "prompt": "Việc thả cá nhỏ vào các bể/dụng cụ chứa nước sinh hoạt giúp tiêu diệt muỗi ở những giai đoạn nào trong vòng đời của muỗi?",
+              "options": [
+                "Giai đoạn muỗi trưởng thành đang bay trên không trung",
+                "Giai đoạn ấu trùng và nhộng đang sống trong môi trường nước",
+                "Giai đoạn muỗi đang bay lượn đẻ trứng ngoài sân",
+                "Chỉ diệt được muỗi cái sau khi đã hút máu người"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Giai đoạn ấu trùng và nhộng đang sống trong môi trường nước\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l17-q6",
+              "type": "knowledge",
+              "prompt": "Để giúp cây con mọc từ hạt hoặc đoạn thân phát triển khỏe mạnh thành cây trưởng thành ra hoa kết quả, điều kiện chăm sóc nào là cần thiết và đúng khoa học?",
+              "options": [
+                "Cung cấp đủ nước ẩm, ánh sáng thích hợp, chất dinh dưỡng và phòng trừ sâu bệnh kịp thời",
+                "Ngâm ngập toàn bộ cây con trong nước 24/24 giờ liên tục",
+                "Để cây trong phòng tối hoàn toàn và không tưới nước bao giờ",
+                "Phun thật nhiều phân hóa học đậm đặc ngay khi hạt vừa nảy mầm"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Cung cấp đủ nước ẩm, ánh sáng thích hợp, chất dinh dưỡng và phòng trừ sâu bệnh kịp thời\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c4-kh5",
+      "chapterNumber": 4,
+      "title": "Chủ đề 4: Vi khuẩn",
+      "lessons": [
+        {
+          "id": "l18-kh5",
+          "lessonNumber": 18,
+          "title": "BÀI 18: VI KHUẨN XUNG QUANH CHÚNG TA",
+          "questions": [
+            {
+              "id": "g5-kh-l18-q1",
+              "type": "knowledge",
+              "prompt": "Trong các nhận định về vi khuẩn, nhận định nào là đúng?",
+              "options": [
+                "Vi khuẩn là sinh vật có kích thước lớn, có thể nhìn thấy rõ bằng mắt thường.",
+                "Vi khuẩn có kích thước rất nhỏ, không thể nhìn thấy bằng mắt thường mà phải sử dụng kính hiển vi có độ phóng đại lớn để quan sát.",
+                "Vi khuẩn chỉ xuất hiện khi thức ăn để ở nhiệt độ ngoài trời quá lâu.",
+                "Vi khuẩn chỉ sống duy nhất bên trong cơ thể thực vật có hoa."
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Vi khuẩn chỉ xuất hiện khi thức ăn để ở nhiệt độ ngoài trời quá lâu.\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l18-q2",
+              "type": "knowledge",
+              "prompt": "Kết luận nào đúng về môi trường sống của vi khuẩn trong tự nhiên?",
+              "options": [
+                "Vi khuẩn chỉ sống ở trong nước sôi và dung dịch hóa chất độc hại.",
+                "Vi khuẩn chỉ sống trong không gian phòng thí nghiệm vô trùng.",
+                "Vi khuẩn sống ở khắp mọi nơi: trong đất, nước, không khí, thực phẩm, trên bề mặt đồ vật và cơ thể sinh vật.",
+                "Vi khuẩn chỉ tồn tại ở những vùng băng giá ở Bắc Cực."
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Vi khuẩn chỉ sống trong không gian phòng thí nghiệm vô trùng.\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l18-q3",
+              "type": "knowledge",
+              "prompt": "Theo Tổ chức Y tế Thế giới (WHO), trên mỗi cm2 da của người bình thường có thể chứa tới bao nhiêu vi khuẩn?",
+              "options": [
+                "Khoảng 40 vi khuẩn",
+                "Khoảng 400 vi khuẩn",
+                "Khoảng 40 000 vi khuẩn",
+                "Khoảng 40 000 000 vi khuẩn"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Khoảng 40 000 vi khuẩn\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l18-q4",
+              "type": "knowledge",
+              "prompt": "Vì sao chúng ta cần phải rửa tay sạch sẽ bằng nước sạch và xà phòng trước khi ăn và sau khi đi vệ sinh?",
+              "options": [
+                "Để làm sạch vết mực dính trên tay khi viết bài.",
+                "Để phòng chống lây nhiễm các bệnh nhiễm khuẩn nguy hiểm do vi khuẩn bám trên tay.",
+                "Để giúp da tay trở nên mềm mại và trắng sáng hơn.",
+                "Để làm tay nhanh bị khô rát khi cầm nắm đồ vật."
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Để phòng chống lây nhiễm các bệnh nhiễm khuẩn nguy hiểm do vi khuẩn bám trên tay.\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l18-q5",
+              "type": "knowledge",
+              "prompt": "Khi bảo quản thực phẩm trong tủ lạnh, tại sao người ta thường bọc kín bằng màng bọc hoặc để trong hộp kín?",
+              "options": [
+                "Để ngăn chặn vi khuẩn xâm nhập, phát triển và tránh lây nhiễm chéo giữa các loại thực phẩm.",
+                "Để làm cho thực phẩm tự biến mất hoàn toàn sau một đêm.",
+                "Để tủ lạnh tiêu thụ ít điện năng hơn bình thường.",
+                "Để làm cho thực phẩm chuyển sang dạng đông đá nhanh hơn."
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Để làm cho thực phẩm tự biến mất hoàn toàn sau một đêm.\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l18-q6",
+              "type": "knowledge",
+              "prompt": "Đâu là nội dung tóm tắt chính xác nhất về đặc điểm và nơi sống của vi khuẩn?",
+              "options": [
+                "Vi khuẩn là sinh vật đa bào lớn, sống độc lập ở ngoài không gian vũ trụ.",
+                "Vi khuẩn có kích thước rất nhỏ, sống ở khắp mọi nơi và cần kính hiển vi phóng đại lớn để nghiên cứu.",
+                "Vi khuẩn chỉ sống dưới đáy đại dương và không liên quan gì đến con người.",
+                "Vi khuẩn là thực vật chuyên sản xuất ra chất dinh dưỡng cho cây xanh."
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Vi khuẩn có kích thước rất nhỏ, sống ở khắp mọi nơi và cần kính hiển vi phóng đại lớn để nghiên cứu.\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            }
+          ]
+        },
+        {
+          "id": "l19-kh5",
+          "lessonNumber": 19,
+          "title": "BÀI 19: VI KHUẨN CÓ ÍCH TRONG CHẾ BIẾN THỰC PHẨM",
+          "questions": [
+            {
+              "id": "g5-kh-l19-q1",
+              "type": "knowledge",
+              "prompt": "Loại vi khuẩn nào thường có sẵn trong tự nhiên và được con người sử dụng phổ biến trong quá trình muối chua rau, củ, quả?",
+              "options": [
+                "Vi khuẩn tả",
+                "Vi khuẩn lactic",
+                "Vi khuẩn gây sâu răng",
+                "Vi khuẩn uốn ván"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Vi khuẩn lactic\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l19-q2",
+              "type": "knowledge",
+              "prompt": "Khi tiến hành muối chua rau, củ, quả, vi khuẩn lactic sẽ sử dụng chất nào có sẵn trong thực phẩm để làm thức ăn?",
+              "options": ["Chất béo", "Đường", "Tinh bột sống", "Chất khoáng"],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Đường\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l19-q3",
+              "type": "knowledge",
+              "prompt": "Để vi khuẩn lactic hoạt động tốt nhất trong quá trình lên men muối chua rau, củ, quả, chúng ta cần duy trì khoảng nhiệt độ nào?",
+              "options": [
+                "Từ 10 độ C đến 20 độ C",
+                "Từ 30 độ C đến 50 độ C",
+                "Từ 60 độ C đến 80 độ C",
+                "Từ 80 độ C đến 100 độ C"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Từ 30 độ C đến 50 độ C\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l19-q4",
+              "type": "knowledge",
+              "prompt": "Sữa chua được chế biến từ sữa nhờ sự tác động của loại vi khuẩn có ích nào dưới đây?",
+              "options": [
+                "Vi khuẩn lactic",
+                "Vi khuẩn tả",
+                "Vi khuẩn lao",
+                "Vi khuẩn đóng hộp"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Vi khuẩn tả\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l19-q5",
+              "type": "knowledge",
+              "prompt": "Trong quy trình làm sữa chua, vì sao người ta cần ủ ấm hỗn hợp sữa ở nhiệt độ khoảng 40 độ C đến 50 độ C trong thời gian từ 8 đến 12 giờ?",
+              "options": [
+                "Để làm bay hơi hết lượng nước có trong sữa",
+                "Để tạo điều kiện thuận lợi cho vi khuẩn lactic hoạt động và phát triển",
+                "Để tiêu diệt toàn bộ các chất dinh dưỡng có trong sữa",
+                "Để làm cho sữa chuyển hoàn toàn sang dạng lỏng như nước"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Để tạo điều kiện thuận lợi cho vi khuẩn lactic hoạt động và phát triển\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l19-q6",
+              "type": "knowledge",
+              "prompt": "Sau khi sữa chua đã ủ thành công, chúng ta nên bảo quản sản phẩm ở đâu để sử dụng được lâu và giữ chất lượng tốt nhất?",
+              "options": [
+                "Để trực tiếp dưới ánh nắng mặt trời",
+                "Để ở góc bếp nơi có nhiệt độ cao",
+                "Bảo quản trong ngăn mát tủ lạnh",
+                "Để ở ngoài sân qua đêm"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Để ở góc bếp nơi có nhiệt độ cao\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            }
+          ]
+        },
+        {
+          "id": "l20-kh5",
+          "lessonNumber": 20,
+          "title": "BÀI 20: VI KHUẨN GÂY BỆNH Ở NGƯỜI VÀ CÁCH PHÒNG TRÁNH",
+          "questions": [
+            {
+              "id": "g5-kh-l20-q1",
+              "type": "knowledge",
+              "prompt": "Trong khoang miệng, vi khuẩn gây ra bệnh sâu răng bằng cách sử dụng loại chất nào từ thức ăn thừa bám trên răng để tiết ra các chất có hại, phá hủy men răng và ngà răng?",
+              "options": [
+                "Chất béo và chất khoáng",
+                "Đường và tinh bột",
+                "Vitamin và nước",
+                "Chất xơ và protein"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Đường và tinh bột\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l20-q2",
+              "type": "knowledge",
+              "prompt": "Thói quen sinh hoạt và ăn uống nào dưới đây là nguyên nhân chính làm tăng nguy cơ mắc bệnh sâu răng ở lứa tuổi học sinh?",
+              "options": [
+                "Thường xuyên ăn chín, uống sôi",
+                "Ăn nhiều đồ ngọt và không chải răng sau khi ăn",
+                "Rửa tay bằng xà phòng trước khi ăn",
+                "Súc miệng bằng nước muối sau khi chải răng"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Ăn nhiều đồ ngọt và không chải răng sau khi ăn\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l20-q3",
+              "type": "knowledge",
+              "prompt": "Khi con người bị vi khuẩn tả xâm nhập vào cơ thể qua đường tiêu hóa, người bệnh thường xuất hiện những dấu hiệu đặc trưng nào?",
+              "options": [
+                "Ho kéo dài, sốt cao và đau ngực",
+                "Nôn mửa liên tục và đi ngoài nhiều lần khó kiềm chế",
+                "Sưng tấy các khớp ngón tay và ngón chân",
+                "Nổi nốt rát đỏ khắp toàn thân và ngứa ngáy"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Nôn mửa liên tục và đi ngoài nhiều lần khó kiềm chế\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l20-q4",
+              "type": "knowledge",
+              "prompt": "Hành vi nào trong sinh hoạt hằng ngày có thể trực tiếp dẫn đến việc lây nhiễm vi khuẩn tả vào cơ thể?",
+              "options": [
+                "Sử dụng thức ăn, nước uống chưa được nấu chín hoặc đun sôi",
+                "Đánh răng hai lần mỗi ngày vào buổi sáng và buổi tối",
+                "Đeo khẩu trang khi đi ngoài đường nhiều bụi",
+                "Rửa tay sạch bằng xà phòng sau khi đi vệ sinh"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Sử dụng thức ăn, nước uống chưa được nấu chín hoặc đun sôi\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l20-q5",
+              "type": "knowledge",
+              "prompt": "Để ngăn ngừa vi khuẩn có hại lây nhiễm và gây bệnh qua đường tiêu hóa, chúng ta cần thực hiện nghiêm túc nguyên tắc vệ sinh ăn uống nào?",
+              "options": [
+                "Thường xuyên ăn thực phẩm tái sống để giữ nguyên chất dinh dưỡng",
+                "Thực hiện ăn chín, uống sôi và che đậy thức ăn cẩn thận bằng lồng bàn",
+                "Cất giữ thức ăn đã ôi thiu trong tủ lạnh để dùng dần hôm sau",
+                "Dùng chung đồ dùng cá nhân như khăn mặt, bàn chải đánh răng với người bệnh"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Thực hiện ăn chín, uống sôi và che đậy thức ăn cẩn thận bằng lồng bàn\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l20-q6",
+              "type": "knowledge",
+              "prompt": "Khi cơ thể xuất hiện các dấu hiệu nhiễm vi khuẩn gây bệnh nặng (như bệnh tả hoặc sâu răng kéo dài), biện pháp xử lý nào là đúng đắn và an toàn nhất?",
+              "options": [
+                "Tự ý mua và sử dụng các loại thuốc kháng sinh khi chưa có chỉ định của bác sĩ",
+                "Đến cơ sở y tế để bác sĩ khám, chẩn đoán và điều trị kịp thời",
+                "Tiếp tục ăn uống đồ lạnh và nghỉ ngơi tại nhà mà không cần điều trị y tế",
+                "Dùng thực phẩm chưa nấu chín để tăng cường sức đề kháng tự nhiên"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Đến cơ sở y tế để bác sĩ khám, chẩn đoán và điều trị kịp thời\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            }
+          ]
+        },
+        {
+          "id": "l21-kh5",
+          "lessonNumber": 21,
+          "title": "BÀI 21: ÔN TẬP CHỦ ĐỀ VI KHUẨN",
+          "questions": [
+            {
+              "id": "g5-kh-l21-q1",
+              "type": "knowledge",
+              "prompt": "Đặc điểm nào dưới đây mô tả đúng về vi khuẩn trong tự nhiên?",
+              "options": [
+                "Có kích thước rất lớn, quan sát được bằng mắt thường",
+                "Chỉ sống ở trong nước biển sâu, không có ở trên mặt đất",
+                "Có kích thước rất nhỏ, hình dạng đa dạng và phân bố ở khắp nơi",
+                "Tất cả các loài vi khuẩn đều có dạng hình cầu tròn tuyệt đối"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Có kích thước rất nhỏ, hình dạng đa dạng và phân bố ở khắp nơi\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l21-q2",
+              "type": "knowledge",
+              "prompt": "Vi khuẩn lactic được ứng dụng trong chế biến thực phẩm nhằm mục đích chính nào dưới đây?",
+              "options": [
+                "Tạo vị chua nhẹ, hương vị đặc trưng và giúp bảo quản thực phẩm",
+                "Làm đông cứng thực phẩm trong tủ lạnh",
+                "Giúp thực phẩm chuyển sang màu đen và có vị đắng",
+                "Biến thực phẩm thành dạng đá cứng"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Tạo vị chua nhẹ, hương vị đặc trưng và giúp bảo quản thực phẩm\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l21-q3",
+              "type": "knowledge",
+              "prompt": "Khi làm vườn hoặc tiếp xúc trực tiếp với đất trồng, chúng ta nên đeo găng tay vì nguyên nhân nào?",
+              "options": [
+                "Đất chứa nhiều vi khuẩn và vi sinh vật có thể xâm nhập gây bệnh",
+                "Đất làm tay bị đông cứng không thể cử động",
+                "Đất làm nhiệt độ bàn tay tăng lên quá cao",
+                "Để ngăn tay không bị dính màu đen của than củi"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Đất chứa nhiều vi khuẩn và vi sinh vật có thể xâm nhập gây bệnh\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l21-q4",
+              "type": "knowledge",
+              "prompt": "Việc thường xuyên mở cửa sổ phòng học và phòng ở giúp giảm nguy cơ mắc bệnh do vi khuẩn vì lý do nào?",
+              "options": [
+                "Ánh sáng và gió giúp không khí thông thoáng, giảm độ ẩm, hạn chế sự phát triển của vi khuẩn và nấm mốc",
+                "Giúp thu hút thêm các loài côn trùng vào nhà",
+                "Làm cho nhiệt độ trong phòng luôn ở mức sôi 100 độ C",
+                "Để vi khuẩn từ bên ngoài bay vào phòng nhiều hơn"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Ánh sáng và gió giúp không khí thông thoáng, giảm độ ẩm, hạn chế sự phát triển của vi khuẩn và nấm mốc\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l21-q5",
+              "type": "knowledge",
+              "prompt": "Khi một thành viên trong gia đình mắc bệnh truyền nhiễm do vi khuẩn (như bệnh tả), việc làm nào dưới đây là cần thiết để tránh lây lan sang người khác?",
+              "options": [
+                "Tăng cường tụ tập đông người tại nhà người bệnh",
+                "Cho người bệnh dùng chung đồ dùng cá nhân với cả gia đình",
+                "Cách ly phù hợp, tuân thủ vệ sinh cá nhân, đeo khẩu trang và khử khuẩn môi trường sống",
+                "Không rửa tay sau khi chăm sóc người bệnh"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Cách ly phù hợp, tuân thủ vệ sinh cá nhân, đeo khẩu trang và khử khuẩn môi trường sống\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l21-q6",
+              "type": "knowledge",
+              "prompt": "Biện pháp nào dưới đây là sự kết hợp đầy đủ nhất giúp phòng tránh các bệnh do vi khuẩn gây ra?",
+              "options": [
+                "Ăn đồ sống chưa qua chế biến và uống nước mưa trực tiếp",
+                "Giữ vệ sinh cá nhân, ăn chín uống sôi, vệ sinh môi trường sống và tiêm vắc-xin phòng bệnh theo chỉ định",
+                "Chỉ cần uống thuốc kháng sinh mỗi ngày mà không cần rửa tay",
+                "Đóng kín tất cả cửa sổ quanh năm để tránh gió lùa"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Giữ vệ sinh cá nhân, ăn chín uống sôi, vệ sinh môi trường sống và tiêm vắc-xin phòng bệnh theo chỉ định\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c5-kh5",
+      "chapterNumber": 5,
+      "title": "Chủ đề 5: Con người và sức khỏe",
+      "lessons": [
+        {
+          "id": "l22-kh5",
+          "lessonNumber": 22,
+          "title": "BÀI 22: SỰ HÌNH THÀNH CƠ THỂ NGƯỜI",
+          "questions": [
+            {
+              "id": "g5-kh-l22-q1",
+              "type": "knowledge",
+              "prompt": "Sự sinh sản ở người có ý nghĩa quan trọng nào đối với mỗi gia đình và xã hội?",
+              "options": [
+                "Giúp duy trì nòi giống, gia tăng thành viên, gắn kết các thế hệ và tạo nguồn lao động tương lai",
+                "Làm tăng nhanh tình trạng ô nhiễm môi trường đất và nước",
+                "Biến tất cả thành viên trong gia đình thành người cùng độ tuổi",
+                "Không mang lại ý nghĩa gì cho đời sống con người"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Giúp duy trì nòi giống, gia tăng thành viên, gắn kết các thế hệ và tạo nguồn lao động tương lai\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l22-q2",
+              "type": "knowledge",
+              "prompt": "Cơ thể người được bắt đầu hình thành từ sự kết hợp của hai yếu tố nào qua quá trình thụ tinh?",
+              "options": [
+                "Tế bào máu của bố và tế bào da của mẹ",
+                "Tinh trùng của bố và trứng của mẹ",
+                "Vitamin từ thực phẩm và chất khoáng",
+                "Tế bào cơ của bố và tế bào xương của mẹ"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Tinh trùng của bố và trứng của mẹ\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l22-q3",
+              "type": "knowledge",
+              "prompt": "Hiện tượng tinh trùng kết hợp với trứng thành công sẽ tạo ra sản phẩm ban đầu nào dưới đây?",
+              "options": [
+                "Thai nhi hoàn chỉnh",
+                "Hợp tử",
+                "Em bé sơ sinh",
+                "Cơ quan vận động"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Hợp tử\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l22-q4",
+              "type": "knowledge",
+              "prompt": "Sau khi được hình thành từ hợp tử, phôi sẽ làm tổ và phát triển ở bộ phận nào trong cơ thể người mẹ?",
+              "options": ["Dạ dày", "Tử cung", "Phổi", "Mạch máu"],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Tử cung\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l22-q5",
+              "type": "knowledge",
+              "prompt": "Thời gian trung bình từ khi thụ tinh đến khi em bé được sinh ra là bao lâu?",
+              "options": [
+                "Khoảng 3 tháng",
+                "Khoảng 6 tháng",
+                "Khoảng 9 tháng (hoặc 9 tháng 10 ngày)",
+                "Khoảng 12 tháng"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Khoảng 9 tháng (hoặc 9 tháng 10 ngày)\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l22-q6",
+              "type": "knowledge",
+              "prompt": "Sơ đồ nào dưới đây thể hiện đúng thứ tự các giai đoạn hình thành cơ thể người?",
+              "options": [
+                "Thai nhi  Tinh trùng + Trứng  Hợp tử  Phôi  Em bé",
+                "Tinh trùng + Trứng  Thụ tinh  Hợp tử  Phôi  Thai nhi  Em bé",
+                "Phôi  Thai nhi  Thụ tinh  Em bé",
+                "Thụ tinh  Thai nhi  Phôi  Em bé"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Tinh trùng + Trứng  Thụ tinh  Hợp tử  Phôi  Thai nhi  Em bé\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            }
+          ]
+        },
+        {
+          "id": "l23-kh5",
+          "lessonNumber": 23,
+          "title": "BÀI 23: CÁC GIAI ĐOẠN PHÁT TRIỂN CHÍNH CỦA CON NGƯỜI",
+          "questions": [
+            {
+              "id": "g5-kh-l23-q1",
+              "type": "knowledge",
+              "prompt": "Theo Tổ chức Y tế Thế giới (WHO), từ khi được sinh ra, sự phát triển của con người được chia thành 4 giai đoạn chính theo thứ tự nào?",
+              "options": [
+                "Tuổi ấu thơ  Tuổi vị thành niên  Tuổi trưởng thành  Tuổi già",
+                "Tuổi mầm non  Tuổi học sinh  Tuổi thanh niên  Tuổi già",
+                "Tuổi sơ sinh  Tuổi dậy thì  Tuổi trung niên  Tuổi già",
+                "Tuổi ấu thơ  Tuổi trưởng thành  Tuổi vị thành niên  Tuổi già"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Tuổi ấu thơ  Tuổi vị thành niên  Tuổi trưởng thành  Tuổi già\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l23-q2",
+              "type": "knowledge",
+              "prompt": "Trẻ ở độ tuổi nào thuộc giai đoạn tuổi ấu thơ bắt đầu thay răng sữa bằng răng vĩnh viễn và hoạt động học tập giữ vai trò chủ đạo?",
+              "options": [
+                "Dưới 1 tuổi",
+                "Từ 1 đến dưới 3 tuổi",
+                "Từ 3 đến 5 tuổi",
+                "Từ 6 đến 9 tuổi"
+              ],
+              "correctIndex": 3,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Từ 6 đến 9 tuổi\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l23-q3",
+              "type": "knowledge",
+              "prompt": "Giai đoạn đặc biệt nào nằm trong phần đầu của tuổi vị thành niên dẫn đến nhiều thay đổi mạnh mẽ về ngoại hình, sinh lý và tâm lý?",
+              "options": [
+                "Tuổi sơ sinh",
+                "Tuổi dậy thì",
+                "Tuổi trưởng thành",
+                "Tuổi già"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Tuổi dậy thì\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l23-q4",
+              "type": "knowledge",
+              "prompt": "Biến đổi sinh lý nào là đặc trưng riêng biệt chỉ xuất hiện ở nam giới trong độ tuổi dậy thì?",
+              "options": [
+                "Xuất hiện kinh nguyệt",
+                "Vú, hông, xương chậu phát triển tròn trịa",
+                "Xuất hiện râu, giọng nói trầm hơn (vỡ giọng) và có hiện tượng xuất tinh lần đầu",
+                "Chiều cao tăng nhanh và gia tăng tiết chất nhờn ở da (gây mụn trứng cá)"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Xuất hiện râu, giọng nói trầm hơn (vỡ giọng) và có hiện tượng xuất tinh lần đầu\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l23-q5",
+              "type": "knowledge",
+              "prompt": "Giai đoạn tuổi trưởng thành (từ 20 đến 60 tuổi) giữ vai trò quan trọng nào đối với gia đình và xã hội?",
+              "options": [
+                "Là lực lượng chủ yếu tham gia các hoạt động lao động, sản xuất và gánh vác trách nhiệm xã hội",
+                "Chủ yếu tập trung vào hoạt động học tập cơ bản và phụ thuộc hoàn toàn vào cha mẹ",
+                "Cơ thể ngừng hoạt động lao động để rèn luyện thân thể và nghỉ ngơi",
+                "Chỉ tập trung tập đi, tập nói và hoàn thiện hệ răng sữa trong gia đình"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Là lực lượng chủ yếu tham gia các hoạt động lao động, sản xuất và gánh vác trách nhiệm xã hội\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l23-q6",
+              "type": "knowledge",
+              "prompt": "Khi con người bước vào tuổi già (trên 60 tuổi), để giữ gìn sức khỏe và kéo dài tuổi thọ, người già nên làm gì?",
+              "options": [
+                "Tránh vận động hoàn toàn và không giao tiếp với mọi người xung quanh",
+                "Tham gia các hoạt động phù hợp, kết hợp rèn luyện thân thể và giữ tinh thần thoải mái",
+                "Lao động sản xuất với cường độ cao như người ở tuổi trưởng thành",
+                "Tự ý sử dụng nhiều loại thuốc bổ mà không cần hướng dẫn của bác sĩ"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Tham gia các hoạt động phù hợp, kết hợp rèn luyện thân thể và giữ tinh thần thoải mái\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            }
+          ]
+        },
+        {
+          "id": "l24-kh5",
+          "lessonNumber": 24,
+          "title": "BÀI 24: NAM VÀ NỮ",
+          "questions": [
+            {
+              "id": "g5-kh-l24-q1",
+              "type": "knowledge",
+              "prompt": "Yếu tố chính nào dưới đây dùng để phân biệt nam và nữ về mặt sinh học?",
+              "options": [
+                "Sở thích màu sắc trang phục",
+                "Cơ quan sinh dục",
+                "Nghề nghiệp trong xã hội",
+                "Tác phong làm việc và tính cách"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Cơ quan sinh dục\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l24-q2",
+              "type": "knowledge",
+              "prompt": "Các đặc điểm xã hội như tính cách, sở thích, trang phục, nghề nghiệp... chủ yếu được hình thành do yếu tố nào?",
+              "options": [
+                "Được quyết định hoàn toàn bởi yếu tố di truyền từ phôi thai",
+                "Do ảnh hưởng của văn hóa, giáo dục và môi trường sống",
+                "Không bao giờ thay đổi trong suốt cuộc đời con người",
+                "Do cấu tạo cơ quan sinh dục tự động quyết định hoàn toàn"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Do ảnh hưởng của văn hóa, giáo dục và môi trường sống\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l24-q3",
+              "type": "knowledge",
+              "prompt": "Đặc điểm nào dưới đây là đặc điểm sinh học đặc trưng riêng biệt của nữ giới?",
+              "options": [
+                "Cơ quan sinh dục tạo ra tinh trùng",
+                "Có râu và giọng nói trầm",
+                "Cơ quan sinh dục tạo ra trứng, có khả năng mang thai, sinh con và nuôi con bằng sữa mẹ",
+                "Thích mặc áo sơ mi và để tóc ngắn gọn gàng"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Cơ quan sinh dục tạo ra trứng, có khả năng mang thai, sinh con và nuôi con bằng sữa mẹ\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l24-q4",
+              "type": "knowledge",
+              "prompt": "Đặc điểm nào dưới đây thuộc về đặc điểm xã hội và có thể xuất hiện ở cả nam lẫn nữ?",
+              "options": [
+                "Khả năng mang thai",
+                "Hiện tượng kinh nguyệt",
+                "Tham gia làm nghề giáo viên, chăm sóc gia đình, làm việc nhà hoặc sở thích để tóc ngắn",
+                "Cơ quan sinh dục tạo ra tinh trùng"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Tham gia làm nghề giáo viên, chăm sóc gia đình, làm việc nhà hoặc sở thích để tóc ngắn\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l24-q5",
+              "type": "knowledge",
+              "prompt": "Hành động nào thể hiện sự tôn trọng, quan tâm đối với bạn cùng giới và khác giới trong môi trường học đường?",
+              "options": [
+                "Trêu chọc, giễu cợt khi thấy bạn nữ bị đau bụng do đến kỳ kinh nguyệt",
+                "Phân biệt đối xử, cho rằng công việc chung của lớp chỉ là việc riêng của con gái",
+                "Khen ngợi, giúp đỡ và xin phép giáo viên cho bạn nghỉ vận động khi bạn không khỏe",
+                "Xa lánh và không chịu hợp tác làm việc nhóm với các bạn khác giới"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Khen ngợi, giúp đỡ và xin phép giáo viên cho bạn nghỉ vận động khi bạn không khỏe\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l24-q6",
+              "type": "knowledge",
+              "prompt": "Các thành viên trong gia đình thể hiện sự tôn trọng và chia sẻ trách nhiệm với nhau thông qua thói quen ứng xử nào?",
+              "options": [
+                "Phân chia mặc định tất cả công việc nhà là của riêng người mẹ",
+                "Cùng nhau chủ động chia sẻ, hỗ trợ làm công việc nhà và tạo điều kiện cho nhau nghỉ ngơi",
+                "Không cho thành viên nam tham gia vào các công việc nấu nướng, dọn dẹp",
+                "Chỉ có người cha mới có quyền quyết định mọi công việc trong gia đình"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Cùng nhau chủ động chia sẻ, hỗ trợ làm công việc nhà và tạo điều kiện cho nhau nghỉ ngơi\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            }
+          ]
+        },
+        {
+          "id": "l25-kh5",
+          "lessonNumber": 25,
+          "title": "BÀI 25: CHĂM SÓC SỨC KHOẺ TUỔI DẬY THÌ",
+          "questions": [
+            {
+              "id": "g5-kh-l25-q1",
+              "type": "knowledge",
+              "prompt": "Để giúp xương phát triển tốt và tăng chiều cao ở tuổi dậy thì, em nên ưu tiên ăn nhóm thực phẩm nào?",
+              "options": [
+                "Đồ ăn nhanh và nước ngọt có gas",
+                "Thực phẩm giàu can-xi như sữa, tôm, cá, rau xanh",
+                "Bánh kẹo ngọt và đồ chiên rán nhiều mỡ",
+                "Đồ đóng hộp và thực phẩm chế biến sẵn"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Thực phẩm giàu can-xi như sữa, tôm, cá, rau xanh\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l25-q2",
+              "type": "knowledge",
+              "prompt": "Vì sao ở tuổi dậy thì em cần tắm rửa và giữ vệ sinh cơ thể thường xuyên hơn?",
+              "options": [
+                "Vì thời tiết tự nhiên khi lớn lên sẽ nóng hơn",
+                "Vì quần áo của người lớn dễ bám bẩn hơn",
+                "Vì tuyến mồ hôi và bã nhờn hoạt động mạnh hơn",
+                "Vì da ở tuổi dậy thì không thể tự làm sạch"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Vì tuyến mồ hôi và bã nhờn hoạt động mạnh hơn\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l25-q3",
+              "type": "knowledge",
+              "prompt": "Việc thay đồ lót và vệ sinh cơ quan sinh dục hằng ngày mang lại lợi ích gì?",
+              "options": [
+                "Giúp tăng chiều cao nhanh chóng",
+                "Phòng tránh bệnh viêm nhiễm và nấm ngứa",
+                "Giúp đạt kết quả cao trong học tập",
+                "Giúp da mặt trắng sáng tự nhiên"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Phòng tránh bệnh viêm nhiễm và nấm ngứa\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l25-q4",
+              "type": "knowledge",
+              "prompt": "Khi cảm thấy lo lắng hoặc căng thẳng ở tuổi dậy thì, em NÊN làm gì?",
+              "options": [
+                "Giấu kín trong lòng và không nói với ai",
+                "Đóng cửa phòng và giận dỗi cha mẹ",
+                "Chủ động tâm sự với cha mẹ hoặc thầy cô",
+                "Bỏ học để chơi game giải tỏa áp lực"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Chủ động tâm sự với cha mẹ hoặc thầy cô\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l25-q5",
+              "type": "knowledge",
+              "prompt": "Thói quen nào dưới đây gây hại cho sức khỏe mà em NÊN TRÁNH ở tuổi dậy thì?",
+              "options": [
+                "Thức khuya, dùng điện thoại nhiều và bỏ bữa",
+                "Ngủ đủ 8 tiếng mỗi ngày và tập thể thao",
+                "Tắm gội sạch sẽ và thay đồ lót hằng ngày",
+                "Rửa mặt bằng nước sạch mỗi sáng thức dậy"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Thức khuya, dùng điện thoại nhiều và bỏ bữa\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l25-q6",
+              "type": "knowledge",
+              "prompt": "Cách chăm sóc sức khỏe toàn diện và đúng đắn nhất ở tuổi dậy thì là gì?",
+              "options": [
+                "Ăn thật nhiều đồ bổ và không cần vận động",
+                "Ăn đủ chất, tập thể thao và giữ vệ sinh sạch sẽ",
+                "Chỉ giữ vệ sinh, không cần ăn uống đủ chất",
+                "Không cần chăm sóc vì cơ thể tự phát triển"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Ăn đủ chất, tập thể thao và giữ vệ sinh sạch sẽ\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            }
+          ]
+        },
+        {
+          "id": "l26-kh5",
+          "lessonNumber": 26,
+          "title": "BÀI 26: AN TOÀN PHÒNG TRÁNH BỊ XÂM HẠI",
+          "questions": [
+            {
+              "id": "g5-kh-l26-q1",
+              "type": "knowledge",
+              "prompt": "Trong các hành vi dưới đây, hành vi nào là xâm hại hoặc có nguy cơ gây nguy hiểm cho trẻ em?",
+              "options": [
+                "Bác sĩ khám bệnh cho em khi có cha mẹ ở bên",
+                "Thầy cô xoa đầu, khen ngợi khi em đạt điểm tốt",
+                "Người lạ cố tình đụng chạm vào vùng riêng tư của em",
+                "Cha mẹ ôm chặt và dặn dò em trước khi vào lớp"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Thầy cô xoa đầu, khen ngợi khi em đạt điểm tốt\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l26-q2",
+              "type": "knowledge",
+              "prompt": "Theo quy tắc an toàn, những ai được phép chạm vào vùng riêng tư của em để tắm rửa hoặc khám bệnh?",
+              "options": [
+                "Bất kỳ người hàng xóm nào sống gần nhà em",
+                "Người lạ mặt em gặp trên đường hoặc trên mạng",
+                "Cha mẹ, người nuôi dưỡng hoặc bác sĩ (khi có cha mẹ chứng kiến)",
+                "Bạn bè cùng lớp hoặc anh chị em họ"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Cha mẹ, người nuôi dưỡng hoặc bác sĩ (khi có cha mẹ chứng kiến)\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l26-q3",
+              "type": "knowledge",
+              "prompt": "Tình huống nào dưới đây tiềm ẩn nguy cơ cao khiến em dễ gặp nguy hiểm hoặc bị xâm hại?",
+              "options": [
+                "Đi học cùng nhóm bạn trên con đường đông đúc",
+                "Đi một mình nơi đường tối, vắng vẻ hoặc đi theo người lạ",
+                "Ở nhà cùng cha mẹ và người thân trong gia đình",
+                "Vui chơi cùng các bạn ở sân trường giờ ra chơi"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Đi một mình nơi đường tối, vắng vẻ hoặc đi theo người lạ\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l26-q4",
+              "type": "knowledge",
+              "prompt": "Khi có người đe dọa, đụng chạm bất thường hoặc cố kéo em đi, em NÊN làm gì ngay lập tức?",
+              "options": [
+                "Im lặng, lo sợ và ngoan ngoãn đi theo người đó",
+                "Thét lớn, bỏ chạy đến nơi đông người và kêu cứu",
+                "Hứa giữ bí mật và không kể lại cho ai nghe",
+                "Tự thu mình lại và giấu kín vì cảm thấy xấu hổ"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Thét lớn, bỏ chạy đến nơi đông người và kêu cứu\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l26-q5",
+              "type": "knowledge",
+              "prompt": "Nếu không may gặp tình huống bị ai đó đe dọa hoặc có hành vi xâm hại, em NÊN làm gì?",
+              "options": [
+                "Báo ngay cho cha mẹ, thầy cô hoặc gọi Tổng đài 111 để nhờ giúp đỡ",
+                "Giấu kín sự việc vì sợ bị người đe dọa trả thù",
+                "Tự đổ lỗi cho bản thân và quyết định bỏ học",
+                "Nhốt mình trong phòng và không nói chuyện với ai"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Báo ngay cho cha mẹ, thầy cô hoặc gọi Tổng đài 111 để nhờ giúp đỡ\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l26-q6",
+              "type": "knowledge",
+              "prompt": "Nhận định nào dưới đây là chính xác nhất về việc tự bảo vệ bản thân khỏi nguy cơ bị xâm hại?",
+              "options": [
+                "Chỉ có bé gái mới gặp nguy cơ bị xâm hại",
+                "Cần nhớ quy tắc an toàn, tránh xa nơi vắng và chủ động lên tiếng nhờ giúp đỡ",
+                "Người lớn có quyền đụng chạm vào vùng riêng tư của trẻ em",
+                "Không cần học tự bảo vệ vì luôn có người lớn ở cạnh"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Cần nhớ quy tắc an toàn, tránh xa nơi vắng và chủ động lên tiếng nhờ giúp đỡ\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            }
+          ]
+        },
+        {
+          "id": "l27-kh5",
+          "lessonNumber": 27,
+          "title": "BÀI 27: ÔN TẬP CHỦ ĐỀ CON NGƯỜI VÀ SỨC KHOẺ",
+          "questions": [
+            {
+              "id": "g5-kh-l27-q1",
+              "type": "knowledge",
+              "prompt": "Quá trình thụ tinh ở người diễn ra khi nào?",
+              "options": [
+                "Khi trứng kết hợp với tinh trùng để tạo thành hợp tử",
+                "Khi cơ thể bắt đầu bước vào giai đoạn tuổi dậy thì",
+                "Khi thai nhi bắt đầu cất tiếng khóc chào đời",
+                "Khi cơ thể trưởng thành và bắt đầu đi làm"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Khi trứng kết hợp với tinh trùng để tạo thành hợp tử\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l27-q2",
+              "type": "knowledge",
+              "prompt": "Giai đoạn tuổi dậy thì ở người có đặc điểm nổi bật nào dưới đây?",
+              "options": [
+                "Cơ thể ngừng phát triển hoàn toàn về chiều cao và cân nặng",
+                "Cơ thể phát triển nhanh về thể chất, biến đổi cơ quan sinh dục và thay đổi tâm sinh lý",
+                "Răng sữa bắt đầu mọc và thay thế hoàn toàn bằng răng vĩnh viễn",
+                "Trí brains suy giảm và cơ thể dễ bị co rút cơ"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Cơ thể phát triển nhanh về thể chất, biến đổi cơ quan sinh dục và thay đổi tâm sinh lý\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l27-q3",
+              "type": "knowledge",
+              "prompt": "Để chăm sóc và bảo vệ sức khỏe toàn diện ở tuổi dậy thì, chúng ta NÊN thực hiện thói quen nào?",
+              "options": [
+                "Ăn uống thiếu chất, thường xuyên thức khuya xem điện thoại",
+                "Tắm rửa, thay đồ lót hằng ngày, ăn đủ chất, tập thể thao và giữ tinh thần cởi mở",
+                "Nhốt mình trong phòng, không giao tiếp hay tâm sự với ai khi căng thẳng",
+                "Sử dụng chung đồ dùng cá nhân với bạn bè"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Tắm rửa, thay đồ lót hằng ngày, ăn đủ chất, tập thể thao và giữ tinh thần cởi mở\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l27-q4",
+              "type": "knowledge",
+              "prompt": "Theo quy tắc an toàn bảo vệ cơ thể, vùng riêng tư (vùng mặc đồ lót) của em là nơi như thế nào?",
+              "options": [
+                "Bất kỳ ai cũng có quyền đụng chạm hoặc quan sát tự do",
+                "Nơi không ai được phép chạm vào, trừ khi cha mẹ/bác sĩ hỗ trợ tắm rửa hoặc khám bệnh",
+                "Nơi chỉ bạn bè thân thiết trong lớp mới được chạm vào",
+                "Nơi người lạ có thể chạm vào nếu họ cho em quà hoặc tiền"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Nơi không ai được phép chạm vào, trừ khi cha mẹ/bác sĩ hỗ trợ tắm rửa hoặc khám bệnh\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l27-q5",
+              "type": "knowledge",
+              "prompt": "Khi nhận thấy mình đang ở trong tình huống có nguy cơ bị đe dọa hoặc bị xâm hại, em NÊN làm gì?",
+              "options": [
+                "Im lặng chịu đựng và hứa giữ bí mật với người đe dọa",
+                "Hét to, bỏ chạy đến nơi đông người và báo cho cha mẹ, thầy cô hoặc gọi Tổng đài 111",
+                "Tự dằn dằn, đổ lỗi cho bản thân và bỏ học",
+                "Đi theo người lạ đến nơi vắng vẻ để nói chuyện riêng"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Hét to, bỏ chạy đến nơi đông người và báo cho cha mẹ, thầy cô hoặc gọi Tổng đài 111\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l27-q6",
+              "type": "knowledge",
+              "prompt": "Nhận định nào dưới đây thể hiện đúng nhất thái độ trách nhiệm của học sinh đối với sức khỏe và sự an toàn của bản thân?",
+              "options": [
+                "Chủ động vệ sinh cá nhân, ăn uống tập luyện khoa học và nắm vững quy tắc tự bảo vệ bản thân",
+                "Chỉ cần chú ý học tập, sức khỏe và sự an toàn không cần phải bận tâm",
+                "Phụ thuộc hoàn toàn vào người lớn và không cần học cách tự bảo vệ mình",
+                "Chỉ phòng tránh nguy cơ bị xâm hại khi ở ngoài đường, còn ở nhà thì không cần đề phòng"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Chủ động vệ sinh cá nhân, ăn uống tập luyện khoa học và nắm vững quy tắc tự bảo vệ bản thân\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c6-kh5",
+      "chapterNumber": 6,
+      "title": "Chủ đề 6: Sinh vật và môi trường",
+      "lessons": [
+        {
+          "id": "l28-kh5",
+          "lessonNumber": 28,
+          "title": "BÀI 28: CHỨC NĂNG CỦA MÔI TRƯỜNG ĐỐI VỚI SINH VẬT",
+          "questions": [
+            {
+              "id": "g5-kh-l28-q1",
+              "type": "knowledge",
+              "prompt": "Môi trường có vai trò trực tiếp nào đối với sự sống và phát triển của con người, động vật và thực vật?",
+              "options": [
+                "Cung cấp thức ăn, nước uống, không khí và ánh sáng cần thiết cho sự sống",
+                "Chỉ cung cấp nơi để giải trí và vui chơi cuối tuần",
+                "Cung cấp các loại thiết bị điện tử và máy móc hiện đại",
+                "Không có vai trò gì vì sinh vật có thể tự sinh tồn"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Cung cấp thức ăn, nước uống, không khí và ánh sáng cần thiết cho sự sống\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l28-q2",
+              "type": "knowledge",
+              "prompt": "Môi trường đóng vai trò như thế nào đối với các loài sinh vật như chim, cá, cây cối?",
+              "options": [
+                "Là nơi lưu trữ các sản phẩm nhân tạo do con người tạo ra",
+                "Là nơi ở, nơi kiếm ăn, sinh sản và trú ẩn của sinh vật",
+                "Là nơi ngăn cản sự phát triển của các loài động thực vật",
+                "Là nơi chỉ dành riêng cho các loài vi khuẩn sinh sống"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Là nơi ở, nơi kiếm ăn, sinh sản và trú ẩn của sinh vật\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l28-q3",
+              "type": "knowledge",
+              "prompt": "Trong quá trình sống và hoạt động, con người và sinh vật thải ra môi trường những gì?",
+              "options": [
+                "Chỉ thải ra năng lượng mặt trời",
+                "Các chất thải sinh hoạt, khí thải, rác thải và môi trường là nơi tiếp nhận, phân hủy chúng",
+                "Các loại tài nguyên khoáng sản mới",
+                "Không thải ra bất kỳ chất gì vào môi trường"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Các chất thải sinh hoạt, khí thải, rác thải và môi trường là nơi tiếp nhận, phân hủy chúng\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l28-q4",
+              "type": "knowledge",
+              "prompt": "Điều gì sẽ xảy ra với sức khỏe và sự sống của sinh vật nếu môi trường sống bị ô nhiễm nặng nề?",
+              "options": [
+                "Sinh vật sẽ phát triển nhanh hơn và khỏe mạnh hơn",
+                "Môi trường bị ô nhiễm làm suy giảm sức khỏe, gây bệnh tật và có thể làm suy vong sinh vật",
+                "Sinh vật không chịu bất kỳ ảnh hưởng nào",
+                "Môi trường bị ô nhiễm giúp cây xanh quang hợp tốt hơn"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Môi trường bị ô nhiễm làm suy giảm sức khỏe, gây bệnh tật và có thể làm suy vong sinh vật\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l28-q5",
+              "type": "knowledge",
+              "prompt": "Khi thấy bạn học vứt vỏ hộp sữa và túi nilon ra sân trường sau giờ ra chơi, em NÊN làm gì?",
+              "options": [
+                "Lờ đi và vứt rác theo bạn cho tiện",
+                "Nhắc bạn nhặt rác bỏ vào thùng và giải thích giữ gìn môi trường giúp trường lớp sạch đẹp",
+                "Tức giận và nhốt bạn vào phòng học",
+                "Mang rác đó vứt sang sân nhà bên cạnh"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Nhắc bạn nhặt rác bỏ vào thùng và giải thích giữ gìn môi trường giúp trường lớp sạch đẹp\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l28-q6",
+              "type": "knowledge",
+              "prompt": "Nhận định nào dưới đây là tổng kết đúng nhất về các chức năng cơ bản của môi trường?",
+              "options": [
+                "Môi trường chỉ cung cấp thức ăn, không có chức năng chứa chất thải",
+                "Môi trường cung cấp yếu tố sống, là nơi sống và tiếp nhận chất thải; do đó cần phải bảo vệ môi trường",
+                "Môi trường là tài nguyên vô tận, con người có thể xả thải thoải mái",
+                "Môi trường chỉ quan trọng đối với con người, không quan trọng với động thực vật"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Môi trường cung cấp yếu tố sống, là nơi sống và tiếp nhận chất thải; do đó cần phải bảo vệ môi trường\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            }
+          ]
+        },
+        {
+          "id": "l29-kh5",
+          "lessonNumber": 29,
+          "title": "BÀI 29: TÁC ĐỘNG CỦA CON NGƯỜI VÀ MỘT SỐ BIỆN PHÁP BẢO VỆ MÔI TRƯỜNG",
+          "questions": [
+            {
+              "id": "g5-kh-l29-q1",
+              "type": "knowledge",
+              "prompt": "Hành vi chặt phá rừng trái phép và đốt rừng làm nương rẫy dẫn đến hậu quả nghiêm trọng nào sau đây?",
+              "options": [
+                "Gây xói mòn, sạt lở đất, lũ lụt và biến đổi khí hậu",
+                "Giúp không khí trong lành hơn và tăng lượng mưa",
+                "Mở rộng nơi sống cho các loài động vật hoang dã",
+                "Giúp nguồn nước ngầm ngày càng dồi dào hơn"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Giúp không khí trong lành hơn và tăng lượng mưa\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l29-q2",
+              "type": "knowledge",
+              "prompt": "Việc xả rác thải sinh hoạt và nước thải công nghiệp chưa qua xử lý ra sông, biển gây ra tác hại gì?",
+              "options": [
+                "Giúp cá và sinh vật thủy sinh phát triển nhanh hơn",
+                "Làm ô nhiễm nguồn nước và ảnh hưởng sức khỏe con người",
+                "Làm cho nước sông trong sạch và giàu khoáng chất hơn",
+                "Không gây ảnh hưởng gì vì sông biển tự làm sạch được"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Làm ô nhiễm nguồn nước và ảnh hưởng sức khỏe con người\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l29-q3",
+              "type": "knowledge",
+              "prompt": "Lạm dụng quá nhiều thuốc trừ sâu và phân bón hóa học trong trồng trọt sẽ gây ra hậu quả nào?",
+              "options": [
+                "Làm cho đất ngày càng phì nhiêu và nước sạch hơn",
+                "Làm chai cứng đất, ô nhiễm nước ngầm và diệt sinh vật có ích",
+                "Giúp cây trồng phát triển mà không cần tưới nước",
+                "Giúp đất tăng khả năng giữ ẩm tự nhiên tốt hơn"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Làm chai cứng đất, ô nhiễm nước ngầm và diệt sinh vật có ích\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l29-q4",
+              "type": "knowledge",
+              "prompt": "Hoạt động nào dưới đây là biện pháp thiết thực góp phần bảo vệ và cải thiện môi trường sống?",
+              "options": [
+                "Săn bắt các loài động vật hoang dã quý hiếm",
+                "Trồng cây gây rừng và phân loại rác tại nguồn",
+                "Vứt túi nilon và đồ nhựa dùng một lần ra bãi biển",
+                "Đốt chất thải nhựa ngoài trời tạo ra khói độc"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Trồng cây gây rừng và phân loại rác tại nguồn\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l29-q5",
+              "type": "knowledge",
+              "prompt": "Để giảm thiểu tác động xấu đến môi trường khi đi chợ mua thực phẩm, em NÊN khuyên cha mẹ làm gì?",
+              "options": [
+                "Dùng thật nhiều túi nilon nhỏ để đựng riêng từng món",
+                "Mang theo làn, túi vải hoặc hộp đựng dùng nhiều lần",
+                "Mua đồ về rồi vứt toàn bộ túi nilon xuống sông",
+                "Chỉ mua đồ đóng hộp bằng nhựa rồi vứt ra đường"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Mang theo làn, túi vải hoặc hộp đựng dùng nhiều lần\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l29-q6",
+              "type": "knowledge",
+              "prompt": "Nhận định nào dưới đây là tổng kết đúng nhất về trách nhiệm bảo vệ môi trường của con người?",
+              "options": [
+                "Con người chỉ gây tác hại, không thể bảo vệ môi trường",
+                "Con người cần tích cực thực hiện các biện pháp bảo vệ môi trường trong sinh hoạt và sản xuất",
+                "Môi trường sẽ tự phục hồi dù con người tàn phá bao nhiêu",
+                "Bảo vệ môi trường là việc của nhà khoa học, học sinh không cần làm"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Con người cần tích cực thực hiện các biện pháp bảo vệ môi trường trong sinh hoạt và sản xuất\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            }
+          ]
+        },
+        {
+          "id": "l30-kh5",
+          "lessonNumber": 30,
+          "title": "BÀI 30: ÔN TẬP CHỦ ĐỀ SINH VẬT VÀ MÔI TRƯỜNG",
+          "questions": [
+            {
+              "id": "g5-kh-l30-q1",
+              "type": "knowledge",
+              "prompt": "Đâu KHÔNG PHẢI là một trong các chức năng cơ bản của môi trường?",
+              "options": [
+                "Cung cấp các yếu tố sống (thức ăn, nước uống, không khí)",
+                "Là nơi sống, nơi kiếm ăn và sinh sản của các loài sinh vật",
+                "Tiếp nhận và phân hủy các chất thải do con người tạo ra",
+                "Sản xuất tự động các loại máy móc điện tử hiện đại"
+              ],
+              "correctIndex": 3,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Sản xuất tự động các loại máy móc điện tử hiện đại\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l30-q2",
+              "type": "knowledge",
+              "prompt": "Khi môi trường bị ô nhiễm hoặc suy thoái nghiêm trọng, hậu quả trực tiếp nào sẽ xảy ra?",
+              "options": [
+                "Giúp các loài sinh vật thích nghi và phát triển nhanh hơn",
+                "Làm suy giảm sức khỏe con người, gây bệnh tật và đe dọa sinh vật",
+                "Làm cho nguồn nước ngầm trở nên trong sạch hơn",
+                "Giúp cây cối ra hoa và kết quả quanh năm không cần chăm sóc"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Làm suy giảm sức khỏe con người, gây bệnh tật và đe dọa sinh vật\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l30-q3",
+              "type": "knowledge",
+              "prompt": "Việc chặt phá rừng phòng hộ, rừng đầu nguồn sẽ trực tiếp gây ra thiên tai nguy hiểm nào dưới đây?",
+              "options": [
+                "Động đất và núi lửa phun trào",
+                "Xói mòn, sạt lở đất, lũ lụt và hạn hán kéo dài",
+                "Tăng lượng nước ngọt trong các sông hồ",
+                "Giúp khí hậu khu vực trở nên mát mẻ hơn"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Xói mòn, sạt lở đất, lũ lụt và hạn hán kéo dài\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l30-q4",
+              "type": "knowledge",
+              "prompt": "Để chung tay bảo vệ môi trường tại trường học và gia đình, em NÊN duy trì thói quen nào hằng ngày?",
+              "options": [
+                "Phân loại rác, bỏ rác đúng nơi quy định, tiết kiệm điện nước và trồng cây",
+                "Dùng túi nilon một lần rồi vứt ngay xuống cống rãnh hoặc sông hồ",
+                "Xả nước thải sinh hoạt chưa qua xử lý trực tiếp ra sân trường",
+                "Đốt toàn bộ rác thải nhựa ngoài trời để làm sạch khuôn viên"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Phân loại rác, bỏ rác đúng nơi quy định, tiết kiệm điện nước và trồng cây\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l30-q5",
+              "type": "knowledge",
+              "prompt": "Sau khi ăn uống xong trong chuyến dã ngoại tại công viên, em NÊN xử lý rác thải thế nào cho đúng?",
+              "options": [
+                "Vứt ngay tại chỗ ngồi vì đã có người dọn vệ sinh",
+                "Nhét toàn bộ rác vào các bụi cây gần đó để giấu",
+                "Thu gom toàn bộ rác, phân loại và bỏ vào đúng thùng rác quy định",
+                "Gạt toàn bộ rác xuống hồ nước cho nhanh gọn"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Thu gom toàn bộ rác, phân loại và bỏ vào đúng thùng rác quy định\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            },
+            {
+              "id": "g5-kh-l30-q6",
+              "type": "knowledge",
+              "prompt": "Nhận định nào dưới đây là tổng kết chính xác nhất về trách nhiệm của mỗi cá nhân đối với môi trường?",
+              "options": [
+                "Bảo vệ môi trường là việc của người lớn, học sinh không cần làm",
+                "Môi trường cung cấp mọi điều kiện sống; bảo vệ môi trường là bảo vệ chính cuộc sống của chúng ta",
+                "Tài nguyên thiên nhiên là vô tận, con người cứ thoải mái khai thác",
+                "Chỉ cần giữ vệ sinh trong nhà mình, môi trường xung quanh không quan trọng"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Khoa học",
+              "explanation": "Đáp án chính xác: \"Môi trường cung cấp mọi điều kiện sống; bảo vệ môi trường là bảo vệ chính cuộc sống của chúng ta\". Môn Khoa học lớp 5 giúp em khám phá tự nhiên, đời sống và khoa học thực nghiệm."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -336,7 +336,7 @@ export function AivaVisionQuestGame() {
   const allScanned = discoveredIds.length === ITEMS.length;
 
   return (
-    <div className="w-full max-w-4xl mx-auto space-y-3 sm:space-y-4">
+    <div className="w-full max-w-3xl lg:max-w-4xl mx-auto space-y-3 sm:space-y-4">
       {/* Unified Game Header Bar */}
       <GameHeaderBar
         title="Ống Kính AIVA"
@@ -415,7 +415,7 @@ export function AivaVisionQuestGame() {
           className={`relative w-full rounded-2xl sm:rounded-3xl border overflow-hidden shadow-2xl flex flex-col justify-between transition-all ${
             isFullscreen
               ? "h-[calc(100svh-6.5rem)] sm:h-[calc(100vh-7rem)] max-h-[82vh]"
-              : "min-h-[400px] h-[calc(100svh-13rem)] sm:h-[480px] max-h-[580px]"
+              : "min-h-[380px] h-[calc(100svh-13rem)] sm:h-[420px] lg:h-[460px] max-h-[500px]"
           }`}
           style={{
             backgroundColor: "var(--game-canvas)",

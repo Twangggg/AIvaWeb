@@ -6,12 +6,16 @@ import { QuizScoreSummary } from "../types";
 
 interface QuizResultScreenProps {
   summary: QuizScoreSummary;
+  nextLessonTitle?: string | null;
+  onNextLesson?: () => void;
   onRestart: () => void;
   onChooseOtherLesson: () => void;
 }
 
 export function QuizResultScreen({
   summary,
+  nextLessonTitle,
+  onNextLesson,
   onRestart,
   onChooseOtherLesson,
 }: QuizResultScreenProps) {
@@ -26,7 +30,7 @@ export function QuizResultScreen({
   };
 
   return (
-    <div className="relative mx-auto w-full max-w-2xl px-4 py-8">
+    <div className="relative mx-auto w-full max-w-xl xl:max-w-2xl px-4 py-8">
       {/* Result Card */}
       <motion.div
         initial={{ opacity: 0, scale: 0.9, y: 20 }}
@@ -47,8 +51,12 @@ export function QuizResultScreen({
         <div className="relative mx-auto mb-4 flex h-36 w-36 items-center justify-center">
           <motion.div
             initial={{ scale: 0 }}
-            animate={{ scale: 1, rotate: [0, -5, 5, 0] }}
-            transition={{ delay: 0.2, type: "spring" }}
+            animate={{ scale: [0, 1.1, 1], rotate: [0, -5, 5, 0] }}
+            transition={{
+              duration: 0.5,
+              delay: 0.2,
+              ease: "easeOut",
+            }}
             className="relative h-full w-full"
           >
             <Image
@@ -76,7 +84,7 @@ export function QuizResultScreen({
                 : "bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300"
             }`}
           >
-            {summary.isPerfect ? "🎉 HOÀN HẢO 100% 🎉" : "✨ HOÀN THÀNH BÀI HỌC ✨"}
+            {summary.isPerfect ? "HOÀN HẢO 100%" : "HOÀN THÀNH BÀI HỌC"}
           </span>
 
           <h2
@@ -133,7 +141,7 @@ export function QuizResultScreen({
               Chuỗi Kỷ Lục
             </span>
             <p className="text-xl font-black text-orange-600 dark:text-orange-400">
-              🔥 x{summary.maxCombo}
+              x{summary.maxCombo}
             </p>
             <span className="text-[11px] font-bold uppercase tracking-wider text-orange-600 dark:text-orange-300">
               Chuỗi
@@ -152,7 +160,7 @@ export function QuizResultScreen({
               Tổng Điểm
             </span>
             <p className="text-xl font-black text-amber-600 dark:text-amber-400">
-              ✨ {summary.score}
+              {summary.score}
             </p>
             <span className="text-[11px] font-semibold text-slate-500">
               Điểm thưởng
@@ -165,7 +173,7 @@ export function QuizResultScreen({
               Thời Gian
             </span>
             <p className="text-xl font-black text-slate-800 dark:text-slate-100">
-              ⏱️ {summary.elapsedSeconds}s
+              {summary.elapsedSeconds}s
             </p>
             <span className="text-[11px] font-semibold text-slate-500">
               {formatTime(summary.elapsedSeconds)}
@@ -174,26 +182,60 @@ export function QuizResultScreen({
         </div>
 
         {/* Action Buttons */}
-        <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-          <motion.button
-            type="button"
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-            onClick={onRestart}
-            className="flex-1 rounded-2xl bg-emerald-600 py-3 text-sm font-black text-white shadow-md transition hover:bg-emerald-700 active:scale-95"
-          >
-            🔄 Chơi lại bài này
-          </motion.button>
+        <div className="mt-6 flex flex-col gap-3">
+          {onNextLesson && (
+            <motion.button
+              type="button"
+              whileHover={{ scale: 1.02, y: -2 }}
+              whileTap={{ scale: 0.98 }}
+              onClick={onNextLesson}
+              className="group relative flex w-full items-center justify-between gap-3 rounded-2xl bg-gradient-to-r from-amber-500 via-orange-500 to-amber-500 bg-[length:200%_auto] px-5 sm:px-6 py-3.5 text-white shadow-lg shadow-orange-500/25 transition-all hover:bg-right hover:shadow-orange-500/40 active:scale-95 cursor-pointer text-left"
+            >
+              <div className="flex flex-col min-w-0 flex-1">
+                <span className="text-[11px] sm:text-xs font-black uppercase tracking-wider text-amber-100/95">
+                  Bài học tiếp theo
+                </span>
+                <span className="text-sm sm:text-base md:text-lg font-black text-white truncate w-full mt-0.5 drop-shadow-xs">
+                  {nextLessonTitle || "Tiếp tục bài mới"}
+                </span>
+              </div>
+              <div className="flex h-10 w-10 sm:h-11 sm:w-11 shrink-0 items-center justify-center rounded-xl bg-white/20 backdrop-blur-xs text-white shadow-inner group-hover:bg-white group-hover:text-orange-600 transition-colors">
+                <span className="text-lg sm:text-xl font-black transform group-hover:translate-x-1 transition-transform">
+                  ➔
+                </span>
+              </div>
+            </motion.button>
+          )}
 
-          <motion.button
-            type="button"
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-            onClick={onChooseOtherLesson}
-            className="flex-1 rounded-2xl border-2 border-emerald-600/30 bg-white py-3 text-sm font-black text-emerald-800 shadow-sm transition hover:bg-emerald-50 active:scale-95 dark:border-emerald-700 dark:bg-slate-800 dark:text-emerald-200"
-          >
-            📚 Chọn bài học khác
-          </motion.button>
+          {!onNextLesson && (
+            <div className="rounded-2xl border border-amber-300 bg-amber-50/80 dark:border-amber-700/60 dark:bg-amber-950/30 p-3 text-center">
+              <p className="text-xs sm:text-sm font-bold text-amber-800 dark:text-amber-200">
+                Bé đã hoàn thành tất cả các bài học trong sách này! Xuất sắc!
+              </p>
+            </div>
+          )}
+
+          <div className="flex flex-col sm:flex-row gap-3">
+            <motion.button
+              type="button"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              onClick={onRestart}
+              className="flex-1 rounded-2xl bg-emerald-600 py-3 text-sm font-black text-white shadow-md transition hover:bg-emerald-700 active:scale-95 cursor-pointer"
+            >
+              Chơi lại bài này
+            </motion.button>
+
+            <motion.button
+              type="button"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              onClick={onChooseOtherLesson}
+              className="flex-1 rounded-2xl border-2 border-emerald-600/30 bg-white py-3 text-sm font-black text-emerald-800 shadow-sm transition hover:bg-emerald-50 active:scale-95 dark:border-emerald-700 dark:bg-slate-800 dark:text-emerald-200 cursor-pointer"
+            >
+              Danh sách bài học
+            </motion.button>
+          </div>
         </div>
       </motion.div>
     </div>

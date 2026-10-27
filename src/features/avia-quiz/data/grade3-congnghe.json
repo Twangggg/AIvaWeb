@@ -1,0 +1,934 @@
+{
+  "id": "g3-congnghe",
+  "grade": 3,
+  "subjectKey": "congnghe",
+  "title": "Công nghệ lớp 3",
+  "color": "#0284C7",
+  "coverImage": "/mascots/bia-sach-mon-hoc.png",
+  "chapters": [
+    {
+      "id": "c1-cong-nghe-va-doi-song",
+      "chapterNumber": 1,
+      "title": "Phần một: Công nghệ và đời sống",
+      "lessons": [
+        {
+          "id": "l1-tu-nhien-va-cong-nghe",
+          "lessonNumber": 1,
+          "title": "Bài 1: Tự nhiên và công nghệ",
+          "description": "Phân biệt đối tượng tự nhiên và sản phẩm công nghệ",
+          "questions": [
+            {
+              "id": "g3-cn-c1-l1-q1",
+              "type": "knowledge",
+              "prompt": "Đâu là sản phẩm công nghệ do con người làm ra để phục vụ cuộc sống?",
+              "options": [
+                "Cây xanh, núi đá, dòng sông",
+                "Đèn học, quạt điện, ti vi, tủ lạnh",
+                "Mặt Trời, Mặt Trăng, mây trắng",
+                "Đất, nước, không khí, động vật"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đèn học, quạt điện, ti vi, tủ lạnh là những sản phẩm công nghệ do con người sáng tạo và chế tạo."
+            },
+            {
+              "id": "g3-cn-c1-l1-q2",
+              "type": "knowledge",
+              "prompt": "Mô tả nào sau đây là đúng nhất về đối tượng tự nhiên?",
+              "options": [
+                "Là sản phẩm do con người chế tạo ra bằng máy móc",
+                "Là đối tượng không do con người tạo ra, có sẵn trong tự nhiên",
+                "Là những đồ vật được bày bán nhiều trong siêu thị",
+                "Là tất cả những đồ dùng phục vụ riêng cho việc học tập"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đối tượng tự nhiên là những gì có sẵn trong tự nhiên, không phải do con người làm ra."
+            },
+            {
+              "id": "g3-cn-c1-l1-q3",
+              "type": "knowledge",
+              "prompt": "Tác dụng chính của chiếc tủ lạnh trong gia đình là gì?",
+              "options": [
+                "Chiếu sáng không gian căn phòng",
+                "Phát các chương trình ca nhạc, tin tức",
+                "Cất giữ và bảo quản thực phẩm tươi ngon",
+                "Tạo luồng gió làm mát không khí mùa hè"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Kiến thức",
+              "explanation": "Tủ lạnh giúp duy trì nhiệt độ thấp để cất giữ và bảo quản thực phẩm được tươi ngon lâu hơn."
+            },
+            {
+              "id": "g3-cn-c1-l1-q4",
+              "type": "knowledge",
+              "prompt": "Điểm khác nhau căn bản giữa bóng đèn điện và Mặt Trời là gì?",
+              "options": [
+                "Bóng đèn chiếu sáng ban ngày, Mặt Trời chiếu sáng ban đêm",
+                "Bóng đèn là sản phẩm công nghệ, Mặt Trời là đối tượng tự nhiên",
+                "Cả bóng đèn và Mặt Trời đều không phải do con người làm ra",
+                "Mặt Trời hoạt động bằng điện, bóng đèn không dùng điện"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Bóng đèn điện do con người chế tạo (sản phẩm công nghệ), còn Mặt Trời có sẵn trong vũ trụ (đối tượng tự nhiên)."
+            },
+            {
+              "id": "g3-cn-c1-l1-q5",
+              "type": "scenario",
+              "prompt": "Để giữ gìn chiếc quạt điện trong nhà sử dụng được bền lâu, em nên làm gì?",
+              "options": [
+                "Chơi đá bóng trong nhà làm bóng đập trúng quạt",
+                "Cùng người lớn lau chùi, vệ sinh quạt định kỳ",
+                "Giật mạnh dây nguồn mỗi khi muốn tắt quạt",
+                "Cho ngón tay vào lồng quạt khi quạt đang quay"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Ứng xử",
+              "explanation": "Vệ sinh và bảo dưỡng quạt định kỳ giúp quạt chạy êm ái, bền bỉ và tiết kiệm điện năng."
+            },
+            {
+              "id": "g3-cn-c1-l1-q6",
+              "type": "scenario",
+              "prompt": "Thấy bạn đá bóng trong phòng khách dễ làm hỏng ti vi, em sẽ khuyên bạn điều gì?",
+              "options": [
+                "\"Cậu nên ra sân bóng chơi để tránh làm vỡ ti vi nhé!\"",
+                "\"Cậu đá mạnh hơn nữa xem bóng có trúng ti vi không!\"",
+                "Không nói gì và tham gia đá bóng cùng bạn trong phòng",
+                "Tắt ti vi đi rồi tiếp tục đá bóng ở trong phòng"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Ứng xử",
+              "explanation": "Đá bóng trong nhà rất nguy hiểm, dễ làm vỡ ti vi và gây tai nạn. Cần ra sân bóng để vui chơi an toàn."
+            }
+          ]
+        },
+        {
+          "id": "l2-su-dung-den-hoc",
+          "lessonNumber": 2,
+          "title": "Bài 2: Sử dụng đèn học",
+          "description": "Sử dụng đèn học an toàn, đúng cách và bảo vệ thị lực",
+          "questions": [
+            {
+              "id": "g3-cn-c1-l2-q1",
+              "type": "knowledge",
+              "prompt": "Tác dụng quan trọng nhất của chiếc đèn học đối với học sinh là gì?",
+              "options": [
+                "Làm mát căn phòng khi thời tiết quá oi nóng",
+                "Cung cấp ánh sáng hỗ trợ việc học và bảo vệ mắt",
+                "Phát các bản nhạc thiếu nhi hay mỗi khi học bài",
+                "Trang trí phòng khách gia đình đẹp mắt hơn"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đèn học cung cấp đủ ánh sáng tập trung vào bàn học, giúp bé đọc viết rõ ràng và phòng tránh cận thị."
+            },
+            {
+              "id": "g3-cn-c1-l2-q2",
+              "type": "knowledge",
+              "prompt": "Bộ phận nào của đèn học giúp tập trung ánh sáng và bảo vệ bóng đèn?",
+              "options": ["Đế đèn", "Chụp đèn", "Công tắc", "Dây nguồn"],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Chụp đèn có tác dụng định hướng luồng sáng rọi xuống sách vở và che chắn bảo vệ bóng đèn bên trong."
+            },
+            {
+              "id": "g3-cn-c1-l2-q3",
+              "type": "knowledge",
+              "prompt": "Thứ tự đúng các bước khi sử dụng đèn học hằng ngày là gì?",
+              "options": [
+                "Bật đèn -> Đặt đèn ở vị trí phù hợp -> Tắt đèn -> Điều chỉnh ánh sáng",
+                "Đặt đèn phù hợp -> Bật đèn -> Điều chỉnh độ sáng, góc chiếu -> Tắt đèn khi xong",
+                "Điều chỉnh ánh sáng -> Tắt đèn -> Bật đèn -> Đặt đèn lên bàn học",
+                "Bật đèn -> Tắt đèn -> Điều chỉnh hướng chiếu sáng của bóng đèn"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Quy trình",
+              "explanation": "Quy trình chuẩn: Đặt đèn vững vàng -> Bật công tắc -> Chỉnh góc chiếu phù hợp -> Tắt đèn sau khi học xong."
+            },
+            {
+              "id": "g3-cn-c1-l2-q4",
+              "type": "scenario",
+              "prompt": "Hành vi nào dưới đây khi sử dụng đèn học là mất an toàn?",
+              "options": [
+                "Tắt đèn bằng công tắc sau khi đã học xong bài",
+                "Đặt đèn học trên bề mặt bàn khô ráo và phẳng",
+                "Dùng tay chạm trực tiếp vào bóng đèn đang sáng",
+                "Điều chỉnh chụp đèn hướng ánh sáng vào quyển vở"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "An toàn",
+              "explanation": "Bóng đèn đang phát sáng tỏa nhiệt rất nóng, chạm tay trực tiếp vào có thể gây bỏng hoặc nguy hiểm điện giật."
+            },
+            {
+              "id": "g3-cn-c1-l2-q5",
+              "type": "scenario",
+              "prompt": "Tắt đèn bằng cách giật mạnh dây nguồn gây ra nguy hiểm gì?",
+              "options": [
+                "Giúp tắt đèn nhanh hơn và tiết kiệm nhiều điện năng",
+                "Dễ làm đứt dây điện, hỏng phích cắm và gây điện giật",
+                "Giúp cho bóng đèn sáng rõ hơn vào những lần sau",
+                "Không gây ra bất kỳ ảnh hưởng hay nguy hiểm nào"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "An toàn",
+              "explanation": "Giật dây nguồn làm hỏng lõi đồng bên trong, hở điện và có nguy cơ cao gây chập cháy, điện giật."
+            },
+            {
+              "id": "g3-cn-c1-l2-q6",
+              "type": "scenario",
+              "prompt": "Thấy đèn học nhấp nháy liên tục hoặc không sáng, em nên làm gì?",
+              "options": [
+                "Tự lấy tay tháo bóng đèn ra để kiểm tra ngay",
+                "Tiếp tục ngồi học bài dưới ánh đèn nhấp nháy",
+                "Tắt đèn và báo ngay với người lớn để kiểm tra",
+                "Dùng tay đập nhẹ vào chụp đèn cho đèn sáng lại"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Ứng xử",
+              "explanation": "Học sinh không được tự ý sửa chữa đồ điện. Cần tắt công tắc và nhờ bố mẹ kiểm tra an toàn."
+            }
+          ]
+        },
+        {
+          "id": "l3-su-dung-quat-dien",
+          "lessonNumber": 3,
+          "title": "Bài 3: Sử dụng quạt điện",
+          "description": "Nguyên lý làm mát và sử dụng quạt điện an toàn",
+          "questions": [
+            {
+              "id": "g3-cn-c1-l3-q1",
+              "type": "knowledge",
+              "prompt": "Tác dụng chính của chiếc quạt điện trong gia đình là gì?",
+              "options": [
+                "Phát hình ảnh và âm thanh giải trí",
+                "Tạo ra gió, giúp làm mát không gian",
+                "Chiếu sáng cho góc học tập hằng ngày",
+                "Bảo quản thực phẩm không bị ôi thiu"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Quạt điện biến đổi điện năng thành cơ năng làm quay cánh quạt, tạo luồng gió mát mẻ."
+            },
+            {
+              "id": "g3-cn-c1-l3-q2",
+              "type": "knowledge",
+              "prompt": "Bộ phận nào của quạt điện giúp bảo vệ cánh quạt và giữ an toàn cho người dùng?",
+              "options": [
+                "Cánh quạt",
+                "Động cơ quạt",
+                "Lồng quạt",
+                "Thân quạt"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Kiến thức",
+              "explanation": "Lồng quạt bao bọc quanh cánh quạt giúp ngăn chặn người và vật chạm vào cánh quạt đang quay."
+            },
+            {
+              "id": "g3-cn-c1-l3-q3",
+              "type": "knowledge",
+              "prompt": "Các bước sử dụng quạt điện đúng cách và an toàn là gì?",
+              "options": [
+                "Đặt quạt bằng phẳng -> Bật quạt và chọn tốc độ -> Điều chỉnh hướng gió -> Tắt quạt khi không dùng",
+                "Bật quạt -> Di chuyển quạt đi nơi khác -> Tắt quạt",
+                "Chọn tốc độ quạt -> Tắt quạt -> Rút phích cắm điện",
+                "Điều chỉnh hướng gió -> Tắt quạt -> Bật quạt lại"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Quy trình",
+              "explanation": "Các bước an toàn: Đặt nơi bằng phẳng vững chãi -> Chọn tốc độ gió phù hợp -> Chỉnh hướng gió -> Tắt khi rời đi."
+            },
+            {
+              "id": "g3-cn-c1-l3-q4",
+              "type": "scenario",
+              "prompt": "Thò ngón tay vào trong lồng quạt khi quạt đang quay nhanh nguy hiểm như thế nào?",
+              "options": [
+                "Làm cho cánh quạt quay nhanh hơn",
+                "Dễ bị cánh quạt chém trúng gây chấn thương tay",
+                "Giúp làm mát ngón tay nhanh hơn",
+                "Không gây ảnh hưởng vì đã có lồng quạt"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "An toàn",
+              "explanation": "Cánh quạt quay với tốc độ rất lớn, thò tay vào sẽ bị va đập mạnh làm rách da hoặc gãy ngón tay."
+            },
+            {
+              "id": "g3-cn-c1-l3-q5",
+              "type": "scenario",
+              "prompt": "Vị trí đặt quạt điện nào dưới đây là mất an toàn?",
+              "options": [
+                "Đặt quạt trên nền nhà bằng phẳng, khô ráo",
+                "Đặt quạt chênh vênh trên mép ghế đẩu cao",
+                "Đặt quạt bàn trên mặt bàn học chắc chắn",
+                "Đặt quạt hộp ngay ngắn dưới sàn nhà phẳng"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "An toàn",
+              "explanation": "Đặt quạt chênh vênh dễ làm quạt rơi vỡ, gãy cánh quạt hoặc đè trúng người xung quanh."
+            },
+            {
+              "id": "g3-cn-c1-l3-q6",
+              "type": "scenario",
+              "prompt": "Khi quạt điện đang chạy mà phát ra tiếng kêu lạ hoặc rung lắc mạnh, em nên làm gì?",
+              "options": [
+                "Ngồi sát vào quạt để xem tiếng kêu từ đâu",
+                "Nhanh chóng tắt quạt và báo cho người lớn kiểm tra",
+                "Dùng tay đập mạnh vào hộp động cơ quạt",
+                "Cứ để quạt tiếp tục chạy không cần quan tâm"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Ứng xử",
+              "explanation": "Tiếng kêu lạ là dấu hiệu quạt bị kẹt trục hoặc hỏng động cơ. Cần tắt ngay để tránh chập cháy."
+            }
+          ]
+        },
+        {
+          "id": "l4-su-dung-may-thu-thanh",
+          "lessonNumber": 4,
+          "title": "Bài 4: Sử dụng máy thu thanh",
+          "description": "Tìm hiểu và sử dụng ra-đi-ô đúng cách",
+          "questions": [
+            {
+              "id": "g3-cn-c1-l4-q1",
+              "type": "knowledge",
+              "prompt": "Máy thu thanh (còn gọi là ra-đi-ô) dùng để làm gì?",
+              "options": [
+                "Xem các bộ phim hoạt hình sắc nét",
+                "Bơm nước và làm mát không gian phòng",
+                "Nghe các chương trình tin tức, giải trí",
+                "Chụp ảnh và quay video gia đình"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Kiến thức",
+              "explanation": "Máy thu thanh thu tín hiệu sóng vô tuyến và phát ra âm thanh (lời nói, ca nhạc, tin tức)."
+            },
+            {
+              "id": "g3-cn-c1-l4-q2",
+              "type": "fill-blank",
+              "prompt": "Điền từ còn thiếu: \"...... là nơi sản xuất các chương trình phát thanh và phát tín hiệu qua ăng-ten.\"",
+              "options": [
+                "Máy thu hình",
+                "Đài phát thanh",
+                "Máy thu thanh",
+                "Tủ lạnh"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Điền khuyết",
+              "explanation": "Đài phát thanh (như Đài Tiếng nói Việt Nam) là cơ quan sản xuất nội dung và truyền phát tín hiệu phát thanh."
+            },
+            {
+              "id": "g3-cn-c1-l4-q3",
+              "type": "knowledge",
+              "prompt": "Chương trình phát thanh nào dưới đây phù hợp nhất với lứa tuổi học sinh?",
+              "options": [
+                "Chương trình Quốc hội với cử tri",
+                "Ca nhạc thiếu nhi / Kể chuyện thiếu nhi",
+                "Chương trình Chuyên gia của bạn",
+                "Chương trình Quân đội nhân dân"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Các chương trình kể chuyện cổ tích, ca nhạc thiếu nhi mang tính giáo dục nhẹ nhàng, bổ ích cho các bé."
+            },
+            {
+              "id": "g3-cn-c1-l4-q4",
+              "type": "knowledge",
+              "prompt": "Để điều chỉnh âm thanh to hoặc nhỏ trên máy thu thanh, em sử dụng núm/nút nào?",
+              "options": [
+                "Núm TUNING (dò kênh)",
+                "Nút BAND (chọn băng tần)",
+                "Núm VOLUME (điều chỉnh âm lượng)",
+                "Nút Anten (ăng-ten)"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Kỹ năng",
+              "explanation": "Núm VOLUME dùng để tăng giảm độ lớn của âm thanh phát ra từ loa."
+            },
+            {
+              "id": "g3-cn-c1-l4-q5",
+              "type": "knowledge",
+              "prompt": "Để nghe kênh phát thanh có số chỉ 100, em thao tác núm TUNING như thế nào?",
+              "options": [
+                "Xoay núm TUNING đến vạch chỉ số 100 cho âm thanh rõ nét",
+                "Xoay núm TUNING trả về vạch số 0",
+                "Rút và giật đứt ăng-ten của máy",
+                "Bấm tắt ngay công tắc nguồn của máy"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kỹ năng",
+              "explanation": "Núm TUNING dùng để dò tần số sóng. Xoay núm đến đúng chỉ số 100 của đài phát để bắt sóng trong trẻo nhất."
+            },
+            {
+              "id": "g3-cn-c1-l4-q6",
+              "type": "scenario",
+              "prompt": "Khi âm thanh phát ra bị rè hoặc nghe không rõ, em nên làm gì để thu tín hiệu tốt hơn?",
+              "options": [
+                "Đập mạnh máy thu thanh xuống bàn",
+                "Đổi vị trí đặt máy hoặc điều chỉnh độ dài ăng-ten",
+                "Vặn âm lượng lên mức to nhất ngay lập tức",
+                "Tắt máy thu thanh đi và đổi sang nghe tivi"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Ứng xử",
+              "explanation": "Kéo dài ăng-ten và xoay hướng hoặc đặt máy gần cửa sổ giúp ăng-ten bắt sóng vô tuyến tốt hơn."
+            }
+          ]
+        },
+        {
+          "id": "l5-su-dung-may-thu-hinh",
+          "lessonNumber": 5,
+          "title": "Bài 5: Sử dụng máy thu hình",
+          "description": "Xem ti vi an toàn, điều độ và bảo vệ sức khỏe thị giác",
+          "questions": [
+            {
+              "id": "g3-cn-c1-l5-q1",
+              "type": "knowledge",
+              "prompt": "Máy thu hình (ti vi) khác với máy thu thanh ở điểm đặc trưng nào?",
+              "options": [
+                "Ti vi chỉ phát ra tiếng chứ không có hình ảnh",
+                "Ti vi phát cả hình ảnh sống động và âm thanh",
+                "Ti vi không cần nguồn điện vẫn hoạt động được",
+                "Ti vi được sử dụng để làm mát không khí"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Máy thu hình truyền tải đồng thời cả tín hiệu âm thanh và hình ảnh động trực quan."
+            },
+            {
+              "id": "g3-cn-c1-l5-q2",
+              "type": "knowledge",
+              "prompt": "Nơi sản xuất các chương trình truyền hình và phát tín hiệu đến gia đình gọi là gì?",
+              "options": [
+                "Máy thu hình",
+                "Đài truyền hình",
+                "Đài phát thanh",
+                "Cửa hàng điện máy"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đài truyền hình (như VTV) là nơi ghi hình, biên tập và phát sóng các chương trình truyền hình."
+            },
+            {
+              "id": "g3-cn-c1-l5-q3",
+              "type": "knowledge",
+              "prompt": "Kênh truyền hình nào chuyên về giáo dục và các chương trình bổ ích dành cho học sinh?",
+              "options": ["VTV1", "VTV3", "VTV7", "VTV6"],
+              "correctIndex": 2,
+              "typeLabel": "Kiến thức",
+              "explanation": "VTV7 là Kênh Truyền hình Giáo dục Quốc gia của Đài Truyền hình Việt Nam."
+            },
+            {
+              "id": "g3-cn-c1-l5-q4",
+              "type": "scenario",
+              "prompt": "Khi ngồi xem ti vi, tư thế và vị trí an toàn cho mắt của em là như thế nào?",
+              "options": [
+                "Ngồi chính diện và giữ khoảng cách an toàn với màn hình",
+                "Ghé sát mặt vào gần màn hình ti vi",
+                "Nằm nghiêng dưới sàn nhà nhìn xéo vào ti vi",
+                "Tắt hết đèn trong phòng và ngồi thật gần màn hình"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "An toàn",
+              "explanation": "Nên ngồi thẳng lưng, chính diện và cách màn hình tối thiểu 2 đến 3 mét để mắt không bị mỏi."
+            },
+            {
+              "id": "g3-cn-c1-l5-q5",
+              "type": "scenario",
+              "prompt": "Thói quen xem ti vi nào dưới đây gây hại xấu cho sức khỏe và thị lực của em?",
+              "options": [
+                "Xem ở khoảng cách phù hợp và với thời gian vừa đủ",
+                "Xem quá gần, xem quá lâu và ngồi lệch góc",
+                "Ngồi thẳng lưng chính diện với màn hình ti vi",
+                "Tắt ti vi bằng điều khiển khi không còn sử dụng"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "An toàn",
+              "explanation": "Xem quá gần và kéo dài liên tục làm mắt điều tiết quá mức, dễ dẫn đến cận thị và mệt mỏi."
+            },
+            {
+              "id": "g3-cn-c1-l5-q6",
+              "type": "knowledge",
+              "prompt": "Phím bấm nào trên điều khiển từ xa (Remote) dùng để bật hoặc tắt ti vi?",
+              "options": [
+                "Phím P (chuyển kênh)",
+                "Phím ON / OFF (phím nguồn)",
+                "Phím MUTE (tắt tiếng)",
+                "Các phím số từ 0 đến 9"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kỹ năng",
+              "explanation": "Phím ON / OFF (thường có màu đỏ hoặc ký hiệu nguồn tròn) dùng để bật hoặc tắt ti vi."
+            }
+          ]
+        },
+        {
+          "id": "l6-an-toan-moi-truong-cong-nghe",
+          "lessonNumber": 6,
+          "title": "Bài 6: An toàn với môi trường công nghệ trong gia đình",
+          "description": "Phòng tránh tai nạn điện, nhiệt và kỹ năng xử lý khẩn cấp",
+          "questions": [
+            {
+              "id": "g3-cn-c1-l6-q1",
+              "type": "scenario",
+              "prompt": "Hành vi nào dưới đây cực kỳ nguy hiểm, có thể dẫn đến bị điện giật?",
+              "options": [
+                "Chọc đồ vật kim loại (đinh, kéo, tô-vít) vào ổ cắm điện",
+                "Nhắc nhở người lớn tắt quạt điện khi đi ra khỏi phòng",
+                "Rút phích cắm điện bằng cách cầm đúng phần phích cắm khô",
+                "Mở cửa tủ lạnh ra lấy thức ăn rồi đóng lại ngay"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "An toàn",
+              "explanation": "Kim loại dẫn điện cực tốt. Chọc kim loại vào ổ điện sẽ bị dòng điện truyền qua người gây giật tử vong."
+            },
+            {
+              "id": "g3-cn-c1-l6-q2",
+              "type": "scenario",
+              "prompt": "Tình huống nào sau đây có thể gây ra bỏng nguy hiểm cho em?",
+              "options": [
+                "Sờ tay vào ấm đun nước đang bốc hơi hoặc bàn là đang nóng",
+                "Nghe các chương trình trên đài ra-đi-ô ở âm lượng vừa đủ",
+                "Ngồi xem chương trình phim hoạt hình thiếu nhi trên ti vi",
+                "Cùng người lớn lau chùi quạt điện khi đã rút phích cắm"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "An toàn",
+              "explanation": "Ấm nước sôi và bàn là có nhiệt độ rất cao, chạm tay vào sẽ gây bỏng rát tổn thương da nghiêm trọng."
+            },
+            {
+              "id": "g3-cn-c1-l6-q3",
+              "type": "scenario",
+              "prompt": "Để sử dụng điện an toàn và tiết kiệm, em KHÔNG nên làm điều nào?",
+              "options": [
+                "Cắm quá nhiều thiết bị điện công suất lớn vào một ổ cắm",
+                "Đóng kín ngay cửa tủ lạnh sau khi đã lấy xong thực phẩm",
+                "Tắt toàn bộ đèn và quạt mỗi khi rời khỏi phòng học",
+                "Bật máy điều hòa nhiệt độ ở mức hợp lý (26°C - 28°C)"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "An toàn",
+              "explanation": "Cắm quá nhiều thiết bị vào cùng 1 ổ điện gây quá tải, làm nóng chảy dây dẫn và phát hỏa cháy nhà."
+            },
+            {
+              "id": "g3-cn-c1-l6-q4",
+              "type": "scenario",
+              "prompt": "Khi chẳng may bị bỏng nước sôi nhẹ ở tay, việc cần làm đầu tiên là gì?",
+              "options": [
+                "Bôi ngay mỡ trăn hoặc kem đánh răng lên trên vết bỏng",
+                "Ngâm hoặc rửa vết bỏng dưới dòng nước nguội sạch nhẹ nhàng",
+                "Dùng gạch chà xát thật mạnh lên chỗ da vừa bị bỏng",
+                "Băng kín vết bỏng lại bằng một miếng vải đang bẩn"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Sơ cấp cứu",
+              "explanation": "Xả nước mát sạch nhẹ nhàng trong 15-20 phút giúp hạ nhiệt mô da, giảm đau rát và ngăn tổn thương sâu."
+            },
+            {
+              "id": "g3-cn-c1-l6-q5",
+              "type": "scenario",
+              "prompt": "Phát hiện có cháy và khói bốc lên, em cần thực hiện kỹ năng thoát hiểm nào?",
+              "options": [
+                "Đứng thẳng người hô to rồi chạy vào phòng đóng kín cửa lại",
+                "Dùng khăn ẩm che mũi miệng, cúi khom người di chuyển ra ngoài",
+                "Mở hết toàn bộ quạt điện lên cho khói bụi bay đi mất",
+                "Nằm xuống sàn nhà ngủ để chờ người lớn đến cứu"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Thoát hiểm",
+              "explanation": "Khói độc nhẹ hơn không khí nên bốc lên cao. Cúi thấp người và bịt khăn ướt giúp lọc khí độc để thoát thân."
+            },
+            {
+              "id": "g3-cn-c1-l6-q6",
+              "type": "knowledge",
+              "prompt": "Số điện thoại khẩn cấp để gọi Cứu hỏa và gọi Cấp cứu y tế là số nào?",
+              "options": [
+                "Số 113 (Công an) và số 114 (Chữa cháy)",
+                "Số 114 (Cứu hỏa) và số 115 (Cấp cứu y tế)",
+                "Số 111 (Bảo vệ trẻ em) và số 112 (Cứu hộ)",
+                "Số 1080 (Tổng đài) và số 115 (Cấp cứu y tế)"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "114 là số gọi đội Cứu hỏa PCCC, 115 là số điều động xe Cấp cứu y tế."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c2-thu-cong-ki-thuat",
+      "chapterNumber": 2,
+      "title": "Phần hai: Thủ công kĩ thuật",
+      "lessons": [
+        {
+          "id": "l7-dung-cu-vat-lieu-thu-cong",
+          "lessonNumber": 7,
+          "title": "Bài 7: Dụng cụ và vật liệu làm thủ công",
+          "description": "Nhận biết và sử dụng dụng cụ, vật liệu thủ công an toàn",
+          "questions": [
+            {
+              "id": "g3-cn-c2-l7-q1",
+              "type": "knowledge",
+              "prompt": "Nhóm vật dụng nào dưới đây gồm toàn các vật liệu thủ công?",
+              "options": [
+                "Kéo, com-pa, thước kẻ, hồ dán",
+                "Giấy màu, bìa cứng, que gỗ, đất nặn",
+                "Bút chì, kéo cắt giấy, keo sữa, dây buộc",
+                "Băng dính, com-pa, kéo, thước kẻ"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Giấy màu, bìa cứng, que gỗ, đất nặn là vật liệu cấu thành nên sản phẩm; kéo, com-pa, thước kẻ là dụng cụ."
+            },
+            {
+              "id": "g3-cn-c2-l7-q2",
+              "type": "scenario",
+              "prompt": "Khi lựa chọn vật liệu làm thủ công, em nên ưu tiên tiêu chuẩn nào?",
+              "options": [
+                "Phù hợp, an toàn, không độc hại và tận dụng đồ tái chế",
+                "Mua vật liệu đắt tiền nhất trong cửa hàng đồ chơi",
+                "Chọn vật liệu sắc nhọn dễ gây trầy xước tay",
+                "Chỉ chọn vật liệu bằng kim loại cứng và nặng"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Ứng xử",
+              "explanation": "Ưu tiên vật liệu an toàn, thân thiện với môi trường và tái chế đồ cũ giúp rèn luyện tính tiết kiệm."
+            },
+            {
+              "id": "g3-cn-c2-l7-q3",
+              "type": "knowledge",
+              "prompt": "Thao tác tạo hình nào dưới đây được thực hiện trực tiếp bằng bàn tay?",
+              "options": [
+                "Cắt đường cong trên giấy màu bằng kéo",
+                "Dán giấy màu lên bìa bằng hồ dán",
+                "Xé dán, nặn hình và gấp giấy thủ công",
+                "Dán các chi tiết bằng keo sữa chuyên dụng"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Kỹ năng",
+              "explanation": "Xé dán, nặn đất và gấp giấy sử dụng khéo léo đôi bàn tay mà không bắt buộc dùng dụng cụ cắt gọt."
+            },
+            {
+              "id": "g3-cn-c2-l7-q4",
+              "type": "scenario",
+              "prompt": "Thao tác nào đảm bảo an toàn khi dùng com-pa và kéo để cắt hình tròn?",
+              "options": [
+                "Tập trung khi thao tác và cất gọn dụng cụ sau khi dùng",
+                "Vừa cầm kéo vừa quay sang đùa nghịch với bạn",
+                "Cầm đầu kim nhọn của com-pa chĩa vào người bạn",
+                "Dùng kéo quay tít trên tay sau khi cắt xong"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "An toàn",
+              "explanation": "Kéo và com-pa có đầu kim nhọn sắc, khi sử dụng phải tập trung cao độ để tránh đâm vào tay hoặc bạn bên cạnh."
+            },
+            {
+              "id": "g3-cn-c2-l7-q5",
+              "type": "scenario",
+              "prompt": "Tình huống nào khi làm bài thực hành thủ công có thể gây nguy hiểm?",
+              "options": [
+                "Chọn dụng cụ vừa tầm tay và cất gọn sau khi dùng",
+                "Cầm kéo cắt giấy nhưng không tập trung, mải đùa giỡn",
+                "Bôi một lượng hồ dán vừa đủ lên mặt sau tờ giấy",
+                "Vệ sinh sạch sẽ bàn học sau khi hoàn thành xong"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "An toàn",
+              "explanation": "Mải đùa giỡn khi đang cầm kéo rất dễ gây vết cắt rách da chảy máu nguy hiểm."
+            },
+            {
+              "id": "g3-cn-c2-l7-q6",
+              "type": "scenario",
+              "prompt": "Thói quen đúng đắn giúp bảo quản lọ hồ dán sau khi dùng xong là gì?",
+              "options": [
+                "Đặt lọ hồ nằm ngang trên bàn và không cần đậy nắp",
+                "Đậy chặt nắp lọ hồ ngay để tránh bị khô hoặc đổ ra ngoài",
+                "Đổ hết phần hồ dán còn thừa ra mặt bàn học",
+                "Bỏ kéo và lọ hồ dán vứt bừa bãi dưới sàn nhà"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Bảo quản",
+              "explanation": "Đậy chặt nắp giữ cho hồ không bị đông cứng và không bị tràn đổ ra làm bẩn sách vở, bàn học."
+            }
+          ]
+        },
+        {
+          "id": "l8-lam-do-dung-hoc-tap",
+          "lessonNumber": 8,
+          "title": "Bài 8: Làm đồ dùng học tập",
+          "description": "Tự làm thước kẻ và đồ dùng học tập thủ công",
+          "questions": [
+            {
+              "id": "g3-cn-c2-l8-q1",
+              "type": "knowledge",
+              "prompt": "Đồ dùng học tập nào dưới đây có tác dụng giúp em đo độ dài và vẽ các đường thẳng?",
+              "options": [
+                "Thẻ đánh dấu trang sách",
+                "Thước kẻ",
+                "Ống đựng bút",
+                "Vở học sinh"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Thước kẻ có các vạch chia xentimet giúp đo độ dài và làm cữ để kẻ các đoạn thẳng chuẩn xác."
+            },
+            {
+              "id": "g3-cn-c2-l8-q2",
+              "type": "knowledge",
+              "prompt": "Vật liệu đơn giản nào dưới đây thường dùng để tự làm một chiếc thước kẻ thủ công?",
+              "options": [
+                "Đất sét tươi chưa nướng",
+                "Giấy màu, bìa cứng, hồ dán",
+                "Thủy tinh dẻo",
+                "Kim loại đồng, sắt"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Thực hành",
+              "explanation": "Giấy bìa cứng và giấy màu là vật liệu sẵn có, dễ cắt dán và đủ độ cứng để làm thước kẻ thủ công."
+            },
+            {
+              "id": "g3-cn-c2-l8-q3",
+              "type": "knowledge",
+              "prompt": "Vì sao nên dán thêm một lớp bìa cứng ở mặt sau của chiếc thước kẻ thủ công?",
+              "options": [
+                "Giúp thước cứng cáp, không bị cong gập khi kẻ đường thẳng",
+                "Để làm cho chiếc thước kẻ trông dày và nặng hơn",
+                "Để chiếc thước kẻ dễ dàng bị gập lại khi cất vào hộp",
+                "Để sử dụng tốn nhiều hồ dán hơn khi thực hành"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kỹ thuật",
+              "explanation": "Lớp bìa cứng tạo độ thẳng và độ vững chắc, giúp cạnh thước không bị xô lệch khi đưa bút chì kẻ."
+            },
+            {
+              "id": "g3-cn-c2-l8-q4",
+              "type": "scenario",
+              "prompt": "Em có thể sử dụng chiếc thước kẻ vừa làm vào việc thiết thực nào tại góc học tập?",
+              "options": [
+                "Dùng chiếc thước kẻ để làm đồ chơi phi tiêu",
+                "Đo độ dài cuốn sách, chiếc bút chì và kẻ đường thẳng ngay ngắn",
+                "Dùng chiếc thước kẻ để gạt bụi bẩn trên mặt bàn học",
+                "Dùng thước kẻ gõ mạnh xuống mặt bàn gây mất trật tự"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Ứng dụng",
+              "explanation": "Thước kẻ tự làm phục vụ trực tiếp việc đo kích thước đồ vật và kẻ lề vở khi làm bài tập."
+            },
+            {
+              "id": "g3-cn-c2-l8-q5",
+              "type": "knowledge",
+              "prompt": "Tiêu chí quan trọng nhất để đánh giá một chiếc thước kẻ thủ công đạt chuẩn là gì?",
+              "options": [
+                "Thước phải làm bằng nhựa dẻo mua ở cửa hàng",
+                "Thước thẳng, chắc chắn, đúng kích thước và vạch chia đều",
+                "Kích thước chiếc thước kẻ càng dài càng tốt",
+                "Chỉ cần có màu sắc đẹp mắt, không cần vạch số chính xác"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Đánh giá",
+              "explanation": "Thước đạt chuẩn phải có cạnh thẳng tắp, vạch chia milimet/xentimet đều đặn và độ cứng chắc chắn."
+            },
+            {
+              "id": "g3-cn-c2-l8-q6",
+              "type": "scenario",
+              "prompt": "Thói quen tốt cần thực hiện ngay sau khi hoàn thành chiếc thước kẻ thủ công là gì?",
+              "options": [
+                "Cất gọn dụng cụ, thu dọn rác và rửa sạch tay",
+                "Để kéo đang mở sẵn lên trên mặt bàn học",
+                "Vứt vỏ giấy bìa thừa xuống dưới gầm bàn",
+                "Đóng tập vở lại và chạy đi chơi ngay lập tức"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Thói quen",
+              "explanation": "Dọn dẹp mẩu giấy vụn, cất kéo vào hộp và rửa tay sạch keo dán giúp giữ góc học tập luôn ngăn nắp."
+            }
+          ]
+        },
+        {
+          "id": "l9-lam-bien-bao-giao-thong",
+          "lessonNumber": 9,
+          "title": "Bài 9: Làm biển báo giao thông",
+          "description": "Tìm hiểu ý nghĩa biển báo và thực hành tạo mô hình",
+          "questions": [
+            {
+              "id": "g3-cn-c2-l9-q1",
+              "type": "knowledge",
+              "prompt": "Biển báo giao thông hình tròn, viền màu đỏ tươi và nền màu trắng có ý nghĩa gì?",
+              "options": [
+                "Báo trước cho người đi đường biết phía trước có nguy hiểm",
+                "Hướng dẫn lối đi hoặc khu vực tiện ích cho người đi đường",
+                "Báo hiệu điều cấm mà người tham gia giao thông không được vi phạm",
+                "Chỉ dùng để trang trí trên đường cho đẹp mắt và sinh động"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Kiến thức",
+              "explanation": "Biển báo hình tròn viền đỏ nền trắng thuộc nhóm biển báo cấm (như cấm đi ngược chiều, cấm bấm còi)."
+            },
+            {
+              "id": "g3-cn-c2-l9-q2",
+              "type": "scenario",
+              "prompt": "Thấy biển cấm đi ngược chiều phía trước, em nên nói gì với bố đang lái xe?",
+              "options": [
+                "\"Đường này cấm đi ngược chiều rồi, bố quay đầu tìm đường khác nhé!\"",
+                "\"Bố cứ đi thật nhanh qua đây chắc sẽ không sao đâu bố!\"",
+                "\"Bố đi xe lên trên vỉa hè để tránh biển báo cấm này nhé!\"",
+                "Không nói gì vì biển báo này chỉ dành riêng cho xe ô tô"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Ứng xử",
+              "explanation": "Nhắc nhở người lớn chấp hành nghiêm túc biển báo giao thông để bảo đảm an toàn tính mạng cho mọi người."
+            },
+            {
+              "id": "g3-cn-c2-l9-q3",
+              "type": "knowledge",
+              "prompt": "Để mặt biển báo bằng giấy màu cứng cáp và giữ nguyên hình dạng, em nên làm gì?",
+              "options": [
+                "Dán chồng giấy màu lên một miếng bìa cứng rồi dán vào cột",
+                "Bôi thật nhiều nước lên mặt giấy cho giấy cứng lại",
+                "Lấy kéo cắt nhỏ bớt mặt biển báo giấy đi",
+                "Dùng dây chỉ buộc chặt mặt giấy vào cột gỗ"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kỹ thuật",
+              "explanation": "Bìa cứng đóng vai trò làm khung đỡ chịu lực, giúp mặt biển báo phẳng phiu và không bị rũ gập."
+            },
+            {
+              "id": "g3-cn-c2-l9-q4",
+              "type": "knowledge",
+              "prompt": "Khi cắm biển báo vào đất nặn bị nghiêng ngả, em cần điều chỉnh phần đế như thế nào?",
+              "options": [
+                "Nặn phần đất nặn to hơn và ấn phẳng mặt đáy tạo chân đế vững",
+                "Bỏ phần đất nặn đi và đặt cột gỗ trực tiếp lên mặt bàn",
+                "Dán một miếng giấy màu mỏng ngay bên dưới chân cột",
+                "Vung mạnh tay cho cột cắm sâu xuống phần đất nặn"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kỹ thuật",
+              "explanation": "Chân đế đất nặn có diện tích tiếp xúc đáy càng rộng và phẳng thì biển báo đứng càng vững vàng."
+            },
+            {
+              "id": "g3-cn-c2-l9-q5",
+              "type": "scenario",
+              "prompt": "Thói quen an toàn nào giúp em không gây nguy hiểm khi dùng com-pa và kéo?",
+              "options": [
+                "Cầm kéo đùa giỡn hoặc chĩa đầu nhọn com-pa về phía bạn",
+                "Vừa cắt giấy vừa quay sang nói chuyện không quan sát tay",
+                "Tập trung thao tác, cẩn thận đầu nhọn và cất gọn sau khi dùng",
+                "Đặt chiếc kéo đang mở sẵn lên trên ghế ngồi học"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "An toàn",
+              "explanation": "Luôn chú ý quan sát tay khi cắt và cất kéo đóng lưỡi vào bao đựng sau khi làm xong."
+            },
+            {
+              "id": "g3-cn-c2-l9-q6",
+              "type": "scenario",
+              "prompt": "Sau khi hoàn thành mô hình biển báo, em có thể sử dụng vào hoạt động bổ ích nào?",
+              "options": [
+                "Dùng mô hình làm đồ chơi phi tiêu hoặc ném nhau giờ ra chơi",
+                "Bỏ mô hình vào thùng rác ngay sau khi giáo viên chấm điểm",
+                "Cùng các bạn chơi \"Em làm công an giao thông\" để ôn luyện luật",
+                "Dùng cột gỗ gõ mạnh xuống mặt bàn tạo tiếng động lớn"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Ứng dụng",
+              "explanation": "Mô hình biển báo dùng để đóng vai trải nghiệm luật giao thông đường bộ sinh động cùng bạn bè."
+            }
+          ]
+        },
+        {
+          "id": "l10-lam-do-choi",
+          "lessonNumber": 10,
+          "title": "Bài 10: Làm đồ chơi",
+          "description": "Sáng tạo mô hình xe đồ chơi từ vật liệu tái chế",
+          "questions": [
+            {
+              "id": "g3-cn-c2-l10-q1",
+              "type": "scenario",
+              "prompt": "Thấy bạn chơi xe đồ chơi đến đêm muộn làm ảnh hưởng sức khỏe, em nên khuyên bạn điều gì?",
+              "options": [
+                "\"Cậu cứ chơi thoải mái, khi nào cảm thấy mệt thì ngủ!\"",
+                "\"Cậu nên chơi đúng thời lượng và nghỉ ngơi đúng giờ nhé!\"",
+                "\"Cậu nên giấu đồ chơi mang lên giường nằm chơi dưới chăn!\"",
+                "\"Cậu nên bỏ học để có thêm nhiều thời gian chơi đồ chơi!\""
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Ứng xử",
+              "explanation": "Cần cân đối giữa học tập, vui chơi giải trí và ngủ đủ giấc để bảo vệ sức khỏe và tinh thần minh mẫn."
+            },
+            {
+              "id": "g3-cn-c2-l10-q2",
+              "type": "scenario",
+              "prompt": "Thấy các bạn rủ nhau ra lòng đường thả diều và chạy xe đồ chơi, em sẽ xử lý thế nào?",
+              "options": [
+                "Tham gia chơi cùng các bạn ngay lập tức cho vui",
+                "Nhắc các bạn chuyển vào sân nhà hoặc công viên để chơi",
+                "Đứng xem và cổ vũ các bạn chạy nhanh hơn nữa",
+                "Không quan tâm và bỏ đi chơi ở chỗ khác"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "An toàn",
+              "explanation": "Chơi đùa dưới lòng đường xe cộ qua lại rất nguy hiểm. Cần vào công viên hoặc sân bóng vui chơi an toàn."
+            },
+            {
+              "id": "g3-cn-c2-l10-q3",
+              "type": "knowledge",
+              "prompt": "Khi bánh xe đồ chơi bị dính chặt vào thân không quay được, em cần khắc phục thế nào?",
+              "options": [
+                "Bôi thêm thật nhiều hồ dán đè lên bánh xe và thân xe",
+                "Đặt lại vị trí trục, tạo khoảng hở để bánh xe quay tự do",
+                "Dùng kéo cắt bỏ hoàn toàn các bánh xe đi",
+                "Dùng tay đẩy thật mạnh cho bánh xe gãy ra"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kỹ thuật",
+              "explanation": "Bánh xe cần có khe hở vừa phải với thân xe để giảm ma sát, giúp trục bánh lăn trơn tru."
+            },
+            {
+              "id": "g3-cn-c2-l10-q4",
+              "type": "knowledge",
+              "prompt": "Để xe đồ chơi tự chạy được một khoảng ngắn, em có thể cải tiến thêm vật liệu nào?",
+              "options": [
+                "Gắn thêm vòng dây cao su (dây thun) để tạo lực kéo",
+                "Đổ thêm thật nhiều nước vào bên trong thùng xe",
+                "Dán thêm thật nhiều giấy màu trang trí lên mái xe",
+                "Đặt một cục đá thật nặng lên trên thân xe"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Sáng tạo",
+              "explanation": "Dây thun khi xoắn lại sẽ tích lũy thế năng đàn hồi, khi thả ra sẽ truyền lực đẩy xe phóng về phía trước."
+            },
+            {
+              "id": "g3-cn-c2-l10-q5",
+              "type": "scenario",
+              "prompt": "Bước chuẩn bị thông minh và tiết kiệm nhất trước khi mua vật liệu làm xe đồ chơi là gì?",
+              "options": [
+                "Xin thật nhiều tiền của bố mẹ để mua đồ đắt nhất",
+                "Kiểm tra, tận dụng lại vỏ hộp bìa, nắp chai, ống hút cũ",
+                "Ra cửa hàng mua tất cả các loại đồ dù không dùng đến",
+                "Mua xe đồ chơi làm sẵn ngoài cửa hàng về tháo ra"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Tiết kiệm",
+              "explanation": "Tận dụng đồ phế liệu tái chế trong gia đình vừa bảo vệ môi trường vừa tiết kiệm chi phí."
+            },
+            {
+              "id": "g3-cn-c2-l10-q6",
+              "type": "scenario",
+              "prompt": "Bảng tính toán chi phí nguyên vật liệu giúp em rèn luyện thói quen tốt nào?",
+              "options": [
+                "Biết quản lý chi tiêu hợp lý, chuẩn bị đủ tiền, tránh lãng phí",
+                "Giúp mua được nhiều đồ chơi điện tử hơn hằng ngày",
+                "Để thi đua xem ai là người tiêu hết nhiều tiền nhất",
+                "Không mang lại bất kỳ tác dụng nào trong thực tế"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kỹ năng sống",
+              "explanation": "Lập bảng dự toán chi phí giúp bé rèn luyện tư duy tài chính, biết quý trọng tiền bạc và không lãng phí."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -384,7 +384,7 @@ export function GameFullscreenWrapper({
               }
             >
               {/* Main Game Viewport - Responsive Container */}
-              <div className="w-full min-h-full flex flex-col items-center justify-start p-2 sm:p-3 md:p-4 max-w-4xl mx-auto">
+              <div className="w-full min-h-full flex flex-col items-center justify-start p-2 sm:p-3 md:p-4 max-w-3xl lg:max-w-4xl mx-auto">
                 <div className="w-full flex flex-col items-center">
                   {children}
                 </div>

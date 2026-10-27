@@ -19,7 +19,7 @@ export function GradeSelectScreen({
   onExit,
 }: GradeSelectScreenProps) {
   return (
-    <div className="relative mx-auto w-full max-w-5xl px-3 py-6 sm:px-6">
+    <div className="relative mx-auto w-full max-w-4xl xl:max-w-5xl px-3 py-6 sm:px-6">
       {/* Top Bar: Back Button (Left) | Title & Subtitle (Center) | Sound Toggle (Right) */}
       <div className="mb-8 flex items-center justify-between gap-3 sm:gap-4">
         {/* Left: Back Button */}
@@ -48,7 +48,7 @@ export function GradeSelectScreen({
             Chọn khối lớp
           </motion.h1>
           <p className="mt-0.5 text-[11px] sm:text-xs text-slate-500 dark:text-slate-400 truncate">
-            Lựa chọn khối lớp để học và luyện tập theo từng giai đoạn
+            Chọn khối lớp để bắt đầu luyện tập
           </p>
         </div>
 
@@ -93,9 +93,9 @@ export function GradeSelectScreen({
               </span>
             </div>
 
-            {/* Mascot Image (Growing frog illustration) */}
+            {/* Mascot Image (Growing frog illustration - transparent background) */}
             {item.mascotImage ? (
-              <div className="relative my-2 h-36 w-36 overflow-hidden rounded-2xl bg-white/80 p-2 shadow-inner transition-transform group-hover:scale-105 dark:bg-slate-800/80">
+              <div className="relative my-2 h-36 w-36 transition-transform duration-300 group-hover:scale-110 drop-shadow-md">
                 <Image
                   src={item.mascotImage}
                   alt={item.mascotTitle}
@@ -108,10 +108,7 @@ export function GradeSelectScreen({
               <div className="relative my-2 flex h-36 w-36 flex-col items-center justify-center rounded-2xl border-2 border-dashed border-emerald-400/50 bg-emerald-50/50 p-2 text-center shadow-inner dark:border-emerald-600/40 dark:bg-slate-800/60">
                 <span className="text-3xl">🐸</span>
                 <span className="mt-1 rounded bg-amber-100 px-1.5 py-0.5 text-[10px] font-bold text-amber-800 dark:bg-amber-950 dark:text-amber-300">
-                  Chưa có hình ảnh
-                </span>
-                <span className="mt-1 text-[9px] font-medium text-slate-500 dark:text-slate-400 line-clamp-2">
-                  (Cần: {item.mascotTitle})
+                  Đang cập nhật
                 </span>
               </div>
             )}

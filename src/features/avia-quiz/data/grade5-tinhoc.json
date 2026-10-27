@@ -1,0 +1,1670 @@
+{
+  "id": "g5-tinhoc",
+  "grade": 5,
+  "subjectKey": "tinhoc",
+  "title": "Tin học lớp 5",
+  "color": "#2563EB",
+  "coverImage": "/mascots/bia-sach-mon-hoc.png",
+  "chapters": [
+    {
+      "id": "c1-tinhoc5",
+      "chapterNumber": 1,
+      "title": "Chủ đề 1: Máy tính và em",
+      "lessons": [
+        {
+          "id": "l1-th5",
+          "lessonNumber": 1,
+          "title": "BÀI 1: EM CÓ THỂ LÀM GÌ VỚI MÁY TÍNH?",
+          "questions": [
+            {
+              "id": "g5-th-ll1-th5-q1",
+              "type": "knowledge",
+              "prompt": "Máy tính có thể giúp học sinh thực hiện những nhóm hoạt động nào?",
+              "options": [
+                "Học tập, giải trí, tìm kiếm thông tin, hợp tác và tạo ra các sản phẩm số",
+                "Thay thế hoàn toàn con người thực hiện mọi công việc trong sinh hoạt hằng ngày",
+                "Tự động hoàn thành tất cả các bài kiểm tra trên lớp mà không cần suy nghĩ",
+                "Chỉ dùng duy nhất để chơi các trò chơi điện tử và xem phim giải trí"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Học tập, giải trí, tìm kiếm thông tin, hợp tác và tạo ra các sản phẩm số\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll1-th5-q2",
+              "type": "knowledge",
+              "prompt": "Để hỗ trợ thảo luận hoặc tham gia nhóm học tập trực tuyến, học sinh có thể dùng phần mềm nào?",
+              "options": [
+                "Kids Games Learning Science, Google Translate",
+                "Zoom, Google Meet, Microsoft Teams",
+                "Microsoft Paint, Scratch",
+                "Phần mềm luyện gõ bàn phím nhanh"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Zoom, Google Meet, Microsoft Teams\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll1-th5-q3",
+              "type": "knowledge",
+              "prompt": "Hành động nào dưới đây là ví dụ về việc tạo ra sản phẩm số bằng máy tính hoặc điện thoại?",
+              "options": [
+                "Đọc truyện tranh giải trí trên mạng Internet",
+                "Nghe một bài hát thiếu nhi trên máy tính",
+                "Viết truyện, thiết kế album ảnh hoặc viết chương trình trò chơi bằng Scratch",
+                "Xem video ca nhạc trực tuyến trên YouTube"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Viết truyện, thiết kế album ảnh hoặc viết chương trình trò chơi bằng Scratch\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll1-th5-q4",
+              "type": "scenario",
+              "prompt": "Khi muốn chuẩn bị một bài báo cáo sinh động để trình bày trước lớp, phần mềm nào phù hợp nhất?",
+              "options": [
+                "Phần mềm luyện gõ bàn phím nhanh",
+                "Phần mềm trình chiếu",
+                "Phần mềm dịch thuật Google Translate",
+                "Phần mềm trò chơi giải trí"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Phần mềm trình chiếu\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll1-th5-q5",
+              "type": "scenario",
+              "prompt": "Khi chơi trò chơi Mê cung (lập trình bằng Scratch), em dùng ngón nào của bàn tay phải để bấm phím mũi tên?",
+              "options": [
+                "Ngón cái, ngón trỏ và ngón giữa",
+                "Ngón trỏ, ngón giữa và ngón áp út",
+                "Ngón giữa, ngón áp út và ngón út",
+                "Dùng tất cả 5 ngón của bàn tay phải"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Ngón trỏ, ngón giữa và ngón áp út\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll1-th5-q6",
+              "type": "knowledge",
+              "prompt": "Việc rèn luyện để sử dụng máy tính thành thạo mang lại lợi ích gì cho học sinh?",
+              "options": [
+                "Nâng cao chất lượng công việc, tiết kiệm thời gian và làm được nhiều việc hơn",
+                "Giúp học sinh không cần phải học các môn văn hóa khác ở trên trường nữa",
+                "Giúp máy tính tự động hoạt động mà không cần sự điều khiển của con người",
+                "Giúp tăng thêm thời gian chơi game giải trí trên máy tính mỗi ngày"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Nâng cao chất lượng công việc, tiết kiệm thời gian và làm được nhiều việc hơn\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c2-tinhoc5",
+      "chapterNumber": 2,
+      "title": "Chủ đề 2: Mạng máy tính và Internet",
+      "lessons": [
+        {
+          "id": "l2-th5",
+          "lessonNumber": 2,
+          "title": "BÀI 2: TÌM KIẾM THÔNG TIN TRÊN WEBSITE",
+          "questions": [
+            {
+              "id": "g5-th-ll2-th5-q1",
+              "type": "knowledge",
+              "prompt": "Để tìm kiếm thông tin trên một website, em có thể thực hiện theo những cách nào?",
+              "options": [
+                "Duyệt theo các chủ đề của website hoặc sử dụng công cụ tìm kiếm có sẵn trên đó",
+                "Gửi thư điện tử cho quản trị viên của website để hỏi trực tiếp thông tin cần tìm",
+                "Tắt máy tính rồi khởi động lại trình duyệt web nhiều lần liên tiếp cho đến khi thấy",
+                "Nháy chuột ngẫu nhiên vào tất cả các hình ảnh đang hiển thị có trên trang chủ"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Duyệt theo các chủ đề của website hoặc sử dụng công cụ tìm kiếm có sẵn trên đó\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll2-th5-q2",
+              "type": "scenario",
+              "prompt": "Biểu tượng hình ngôi nhà và hình kính lúp trên giao diện website thường dùng để làm gì?",
+              "options": [
+                "Ngôi nhà để thoát trình duyệt; Kính lúp dùng để phóng to hình ảnh hiển thị",
+                "Ngôi nhà dùng để về trang chủ; Kính lúp là nút dùng để tìm kiếm thông tin",
+                "Ngôi nhà dùng để mở thư mục; Kính lúp dùng để lưu tệp văn bản vào máy",
+                "Cả hai biểu tượng đều dùng chung mục đích để tắt máy tính an toàn"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Ngôi nhà dùng để về trang chủ; Kính lúp là nút dùng để tìm kiếm thông tin\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll2-th5-q3",
+              "type": "knowledge",
+              "prompt": "Để chia sẻ các tệp thông tin đã lưu trữ trên máy tính cho bạn, em không nên chọn cách nào?",
+              "options": [
+                "Gửi tệp qua thư điện tử (Email) cá nhân cho bạn bè trong nhóm",
+                "Sao chép tệp dữ liệu vào thiết bị lưu trữ di động như thẻ nhớ hoặc USB",
+                "Gửi tệp thông qua các ứng dụng nhắn tin, mạng xã hội hỗ trợ học tập",
+                "Gọi điện thoại nói bằng lời để bạn tự gõ lại toàn bộ nội dung từ đầu"
+              ],
+              "correctIndex": 3,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Gọi điện thoại nói bằng lời để bạn tự gõ lại toàn bộ nội dung từ đầu\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll2-th5-q4",
+              "type": "knowledge",
+              "prompt": "Vì sao các thành viên trong nhóm cần hợp tác và chia sẻ thông tin với nhau?",
+              "options": [
+                "Để một bạn học giỏi nhất làm hộ toàn bộ công việc cho cả nhóm lớp",
+                "Để giúp hoàn thành công việc chung một cách hiệu quả và đúng thời hạn",
+                "Để tránh việc phải sử dụng máy tính và các thiết bị lưu trữ dữ liệu",
+                "Để làm tăng số lượng tệp lưu trữ không cần thiết trên máy tính cá nhân"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Để giúp hoàn thành công việc chung một cách hiệu quả và đúng thời hạn\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll2-th5-q5",
+              "type": "scenario",
+              "prompt": "Khi muốn lưu một hình ảnh từ trang web về máy tính, em thực hiện thao tác nào?",
+              "options": [
+                "Nháy nút phải chuột vào ảnh  Chọn Save image as...  Chọn thư mục lưu và Save",
+                "Nháy đúp chuột trái liên tiếp vào hình ảnh để hình ảnh tự động tải xuống",
+                "Nhấn phím Delete trên bàn phím để hệ thống tự động lưu hình ảnh về máy",
+                "Kéo thả hình ảnh ra màn hình nền Desktop mà không cần chọn thư mục lưu"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Nháy nút phải chuột vào ảnh  Chọn Save image as...  Chọn thư mục lưu và Save\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll2-th5-q6",
+              "type": "scenario",
+              "prompt": "Để rút thiết bị lưu trữ USB ra khỏi máy tính an toàn, em cần thực hiện thao tác nào?",
+              "options": [
+                "Dùng tay giật mạnh USB ra khỏi cổng cắm ngay khi đang mở tệp dữ liệu",
+                "Nháy vào biểu tượng USB ở góc dưới màn hình  Chọn Eject  Rút khi có thông báo an toàn",
+                "Tắt màn hình hiển thị của máy tính rồi rút nhanh thiết bị USB ra trực tiếp",
+                "Đóng tất cả các trang web đang mở rồi rút thiết bị USB ra ngay lập tức"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Nháy vào biểu tượng USB ở góc dưới màn hình  Chọn Eject  Rút khi có thông báo an toàn\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c3-tinhoc5",
+      "chapterNumber": 3,
+      "title": "Chủ đề 3: Tổ chức lưu trữ, tìm kiếm và trao đổi thông tin",
+      "lessons": [
+        {
+          "id": "l3-th5",
+          "lessonNumber": 3,
+          "title": "BÀI 3: TÌM KIẾM THÔNG TIN TRONG GIẢI QUYẾT VẤN ĐỀ",
+          "questions": [
+            {
+              "id": "g5-th-ll3-th5-q1",
+              "type": "scenario",
+              "prompt": "Khẳng định nào nêu đúng nhất về vai trò của việc thu thập thông tin khi giải quyết vấn đề?",
+              "options": [
+                "Thông tin không có bất kỳ vai trò gì trong việc ra quyết định của con người",
+                "Thiếu thông tin gây khó khăn, đầy đủ thông tin giúp quyết định đúng và giải quyết tốt",
+                "Chỉ cần thu thập thông tin sau khi đã hoàn thành xong toàn bộ công việc",
+                "Tìm kiếm thông tin chỉ làm lãng phí thời gian và công sức của bản thân"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Thiếu thông tin gây khó khăn, đầy đủ thông tin giúp quyết định đúng và giải quyết tốt\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll3-th5-q2",
+              "type": "scenario",
+              "prompt": "Khi cần thu thập thông tin để chuẩn bị cho một chuyến đi hoặc giải quyết công việc, em có thể tìm kiếm từ những nguồn nào?",
+              "options": [
+                "Chỉ duy nhất từ các cuốn sách cũ được lưu trữ trong thư viện",
+                "Nhiều nguồn khác nhau như tivi, sách, báo, hỏi người xung quanh và mạng Internet",
+                "Chỉ tìm từ các tin nhắn quảng cáo gửi ngẫu nhiên trên điện thoại",
+                "Chỉ qua việc trò chuyện với các bạn bè có cùng lứa tuổi với mình"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Nhiều nguồn khác nhau như tivi, sách, báo, hỏi người xung quanh và mạng Internet\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll3-th5-q3",
+              "type": "knowledge",
+              "prompt": "Để hoàn thành tốt bài trình chiếu nhóm do cô giáo giao, phương án phân công hợp lý là gì?",
+              "options": [
+                "Phân công một bạn giỏi nhất lớp làm hộ toàn bộ công việc cho cả nhóm",
+                "Để mỗi bạn tự làm một bài riêng rồi chọn ra bài có hình thức đẹp nhất",
+                "Thảo luận, chia việc theo thế mạnh từng người, có trách nhiệm và giúp đỡ lẫn nhau",
+                "Không cần phân công ai cả, ai thích làm phần việc gì thì tự làm phần đó"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Thảo luận, chia việc theo thế mạnh từng người, có trách nhiệm và giúp đỡ lẫn nhau\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll3-th5-q4",
+              "type": "knowledge",
+              "prompt": "Trong quá trình làm việc nhóm để giải quyết nhiệm vụ chung, học sinh cần có thái độ thế nào?",
+              "options": [
+                "Chỉ làm phần việc của mình và hoàn toàn không quan tâm đến các bạn khác trong nhóm",
+                "Đẩy toàn bộ các công việc khó khăn cho bạn nhóm trưởng tự giải quyết",
+                "Nêu cao tinh thần trách nhiệm, hoàn thành phần việc và tích cực hỗ trợ bạn bè",
+                "Trông chờ vào sự làm hộ của người khác mà không chịu tự suy nghĩ thực hiện"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Nêu cao tinh thần trách nhiệm, hoàn thành phần việc và tích cực hỗ trợ bạn bè\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll3-th5-q5",
+              "type": "scenario",
+              "prompt": "Khi gia đình đi du lịch Sa Pa có người già và trẻ nhỏ, việc chọn địa điểm cần dựa vào tiêu chí gì?",
+              "options": [
+                "Chọn những nơi phải trèo đèo, lội suối nguy hiểm để thử thách sức khỏe gia đình",
+                "Chọn các điểm gần, thuận tiện, phù hợp với sức khỏe của người già và trẻ nhỏ",
+                "Chỉ chọn những nơi xa nhất và tốn nhiều chi phí di chuyển nhất có thể",
+                "Chọn ngẫu nhiên hoàn toàn không cần xem xét đặc điểm của chuyến đi"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Chọn các điểm gần, thuận tiện, phù hợp với sức khỏe của người già và trẻ nhỏ\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll3-th5-q6",
+              "type": "scenario",
+              "prompt": "Nguồn thông tin trực tuyến chính thức và uy tín khi tìm hiểu địa điểm tham quan Hà Nội là gì?",
+              "options": [
+                "Các trang quảng cáo không rõ nguồn gốc xuất hiện trên mạng xã hội",
+                "Website chính thức của Sở Du lịch Hà Nội (sodulich.hanoi.gov.vn)",
+                "Các diễn đàn giải trí trực tuyến không được kiểm duyệt nội dung",
+                "Các tin nhắn rác hoặc thông tin quảng cáo không rõ nguồn gửi đến điện thoại"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Website chính thức của Sở Du lịch Hà Nội (sodulich.hanoi.gov.vn)\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            }
+          ]
+        },
+        {
+          "id": "l4-th5",
+          "lessonNumber": 4,
+          "title": "BÀI 4: CÂY THƯ MỤC",
+          "questions": [
+            {
+              "id": "g5-th-ll4-th5-q1",
+              "type": "knowledge",
+              "prompt": "Việc sắp xếp các thư mục và tệp trong máy tính theo cấu trúc cây hợp lý mang lại lợi ích gì?",
+              "options": [
+                "Giúp máy tính chạy nhanh hơn và làm tăng thêm dung lượng bộ nhớ",
+                "Giúp người dùng quản lý, tìm kiếm tệp và thư mục dễ dàng, nhanh chóng",
+                "Tự động tìm kiếm và xóa bỏ hoàn toàn các tệp bị lỗi trên máy tính",
+                "Giúp bảo vệ máy tính an toàn tuyệt đối khỏi tất cả các loại vi-rút"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Giúp người dùng quản lý, tìm kiếm tệp và thư mục dễ dàng, nhanh chóng\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll4-th5-q2",
+              "type": "knowledge",
+              "prompt": "Để xây dựng được một cấu trúc cây thư mục lưu trữ hợp lý, cần tuân thủ nguyên tắc gì?",
+              "options": [
+                "Đặt tên gợi nhớ, phân loại tệp theo tiêu chí (loại, thời gian, đối tượng) và dọn dẹp",
+                "Đặt tên tùy ý bằng các ký tự đặc biệt thật dài để tăng độ bảo mật cao",
+                "Lưu tất cả các tệp ảnh, tệp văn bản và bài trình chiếu chung vào một thư mục",
+                "Không cần phân loại mà để tất cả các tệp nằm trực tiếp ngoài màn hình nền"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Đặt tên gợi nhớ, phân loại tệp theo tiêu chí (loại, thời gian, đối tượng) và dọn dẹp\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll4-th5-q3",
+              "type": "scenario",
+              "prompt": "Trong Windows, công cụ tìm kiếm tệp nằm ở vị trí nào khi mở cửa sổ File Explorer?",
+              "options": [
+                "Ở góc dưới cùng bên trái của màn hình máy tính",
+                "Ở góc trên cùng bên phải của cửa sổ File Explorer",
+                "Ở thanh trạng thái hiển thị phía dưới cùng của cửa sổ",
+                "Nằm ở bên trong thẻ View nằm trên thanh công cụ"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Ở góc trên cùng bên phải của cửa sổ File Explorer\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll4-th5-q4",
+              "type": "scenario",
+              "prompt": "Khi nhập tên tệp vào ô tìm kiếm trên cửa sổ File Explorer rồi nhấn Enter, máy sẽ làm gì?",
+              "options": [
+                "Tiến hành tìm kiếm thông tin ngay trên toàn bộ mạng Internet",
+                "Tìm kiếm trong thư mục đang mở (và thư mục con) rồi hiển thị kết quả",
+                "Tự động tạo ra ngay một thư mục mới có tên tương ứng vừa nhập",
+                "Thực hiện đổi tên toàn bộ các tệp dữ liệu có sẵn trong máy tính"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Tìm kiếm trong thư mục đang mở (và thư mục con) rồi hiển thị kết quả\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll4-th5-q5",
+              "type": "knowledge",
+              "prompt": "Cách sắp xếp cấu trúc cây thư mục nào khoa học để lưu bài tập các năm học của bạn An?",
+              "options": [
+                "Thư mục An  Thư mục năm (Lop-3A, Lop-4A, Lop-5A)  Thư mục phân loại tệp",
+                "Thư mục Lop-3A chứa tất cả các thư mục Lop-4A và Lop-5A ở bên trong",
+                "Đưa tất cả các tệp của 3 năm học vào chung một thư mục có tên An duy nhất",
+                "Không tạo thư mục nào mà lưu trực tiếp tất cả vào ổ đĩa hệ thống C"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Thư mục An  Thư mục năm (Lop-3A, Lop-4A, Lop-5A)  Thư mục phân loại tệp\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll4-th5-q6",
+              "type": "scenario",
+              "prompt": "Sau khi tìm thấy tệp Ki-nghi-he bằng công cụ tìm kiếm, muốn mở thư mục chứa tệp, em làm gì?",
+              "options": [
+                "Nháy nút phải chuột vào tên tệp rồi chọn Open file location",
+                "Nháy đúp chuột vào vùng trống bất kỳ nằm ở ngoài màn hình",
+                "Nhấn chọn phím Delete trên bàn phím của máy tính",
+                "Đóng cửa sổ chương trình File Explorer ngay lập tức"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Nháy nút phải chuột vào tên tệp rồi chọn Open file location\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c4-tinhoc5",
+      "chapterNumber": 4,
+      "title": "Chủ đề 4: Đạo đức, pháp luật và văn hoá trong môi trường số",
+      "lessons": [
+        {
+          "id": "l5-th5",
+          "lessonNumber": 5,
+          "title": "BÀI 5: BẢN QUYỀN NỘI DUNG THÔNG TIN",
+          "questions": [
+            {
+              "id": "g5-th-ll5-th5-q1",
+              "type": "knowledge",
+              "prompt": "Bản quyền nội dung thông tin được hiểu như thế nào cho đúng?",
+              "options": [
+                "Là quyền của người đọc được tự do chỉnh sửa tác phẩm của người khác",
+                "Là quyền của tác giả cho phép hoặc không cho phép người khác sử dụng nội dung của mình",
+                "Là quy định tất cả mọi thông tin trên mạng Internet đều được dùng miễn phí hoàn toàn",
+                "Là quyền của người mua sách được in lại sách của tác giả để bán kiếm tiền"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Là quyền của tác giả cho phép hoặc không cho phép người khác sử dụng nội dung của mình\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll5-th5-q2",
+              "type": "knowledge",
+              "prompt": "Nội dung thông tin có thể được thể hiện dưới những dạng nào?",
+              "options": [
+                "Chỉ thể hiện duy nhất dưới dạng các văn bản viết tay truyền thống",
+                "Văn bản, hình ảnh, âm thanh hay dạng đa phương tiện...",
+                "Chỉ bao gồm các hình ảnh chụp từ máy ảnh chuyên nghiệp",
+                "Bắt buộc phải có đầy đủ cả văn bản, hình ảnh và âm thanh trong một sản phẩm"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Văn bản, hình ảnh, âm thanh hay dạng đa phương tiện...\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll5-th5-q3",
+              "type": "scenario",
+              "prompt": "Khi muốn sử dụng bài viết hoặc hình ảnh của tác giả khác cho bài trình chiếu, em cần làm gì?",
+              "options": [
+                "Tự ý lấy sử dụng và ghi tên bản thân mình vào vị trí của tác giả",
+                "Cần được sự cho phép của tác giả và ghi rõ nguồn tin (hoặc tên tác giả)",
+                "Không cần phải xin phép nếu chỉ sử dụng để cho cá nhân xem",
+                "Cắt bỏ toàn bộ tên tác giả gốc để người khác không phát hiện ra"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Cần được sự cho phép của tác giả và ghi rõ nguồn tin (hoặc tên tác giả)\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll5-th5-q4",
+              "type": "scenario",
+              "prompt": "Khi kể lại một câu chuyện dựa theo nội dung truyện cổ tích \"Cây khế\", cách ghi nguồn là gì?",
+              "options": [
+                "Ghi tên tác giả của câu chuyện mới là tên của chính em",
+                "Ghi rõ dòng chữ \"Phỏng theo truyện Cây khế\"",
+                "Tuyệt đối không cần ghi bất kỳ thông tin nguồn nào cả",
+                "Ghi tên nguồn là một câu chuyện hoàn toàn khác"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Ghi rõ dòng chữ \"Phỏng theo truyện Cây khế\"\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll5-th5-q5",
+              "type": "knowledge",
+              "prompt": "Hành vi nào dưới đây thể hiện sự vi phạm tính riêng tư của người khác?",
+              "options": [
+                "Xin phép bạn trước khi sao chép tệp bài trình chiếu của bạn nhóm",
+                "Tự ý mở đọc nhật ký hoặc tin nhắn điện thoại của bạn khi chưa được đồng ý",
+                "Nêu rõ tên tác giả bài thơ khi đọc bài trong buổi sinh hoạt lớp",
+                "Gửi tệp bài tập cho bạn qua thư điện tử theo đúng yêu cầu của cô giáo"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Tự ý mở đọc nhật ký hoặc tin nhắn điện thoại của bạn khi chưa được đồng ý\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll5-th5-q6",
+              "type": "scenario",
+              "prompt": "Khi chứng kiến bạn tự ý lấy bức tranh vẽ trên máy tính của người khác, em nên làm gì?",
+              "options": [
+                "Đồng tình và bắt chước làm theo hành động đó của bạn",
+                "Thể hiện thái độ không đồng tình, góp ý và nhắc nhở bạn dừng lại",
+                "Giữ thái độ mặc kệ vì việc đó hoàn toàn không liên quan đến mình",
+                "Khen ngợi bạn vì đã có ý tưởng tìm được bức tranh đẹp"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Thể hiện thái độ không đồng tình, góp ý và nhắc nhở bạn dừng lại\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c5-tinhoc5",
+      "chapterNumber": 5,
+      "title": "Chủ đề 5: Ứng dụng tin học",
+      "lessons": [
+        {
+          "id": "l6-th5",
+          "lessonNumber": 6,
+          "title": "BÀI 6: ĐỊNH DẠNG KÍ TỰ VÀ BỐ TRÍ HÌNH ẢNH TRONG VĂN BẢN",
+          "questions": [
+            {
+              "id": "g5-th-ll6-th5-q1",
+              "type": "knowledge",
+              "prompt": "Việc thực hiện định dạng kí tự (phông chữ, cỡ chữ, kiểu chữ, màu chữ) mang lại lợi ích gì?",
+              "options": [
+                "Giúp văn bản đẹp hơn, các tiêu đề nổi bật, rõ ràng và dễ đọc, dễ ghi nhớ",
+                "Giúp cho tệp văn bản tự động sửa chữa toàn bộ các lỗi chính tả có sẵn",
+                "Giúp tự động chèn thêm các hình ảnh minh họa phù hợp vào bên trong văn bản",
+                "Giúp làm giảm bớt đáng kể dung lượng lưu trữ của tệp văn bản trên máy"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Giúp văn bản đẹp hơn, các tiêu đề nổi bật, rõ ràng và dễ đọc, dễ ghi nhớ\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll6-th5-q2",
+              "type": "scenario",
+              "prompt": "Để định dạng kí tự cho một phần văn bản trong phần mềm soạn thảo, thao tác đầu tiên là gì?",
+              "options": [
+                "Nháy chuột vào nút lệnh lưu tệp nằm ở trên thanh công cụ nhanh",
+                "Chọn (bôi đen) phần văn bản cần thực hiện định dạng mong muốn",
+                "Chèn một hình ảnh minh họa vào ngay giữa trang văn bản đó",
+                "Nhấn phím Enter trên bàn phím để xuống dòng văn bản mới"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Chọn (bôi đen) phần văn bản cần thực hiện định dạng mong muốn\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll6-th5-q3",
+              "type": "knowledge",
+              "prompt": "Các lệnh thay đổi phông chữ, cỡ chữ, kiểu chữ và màu chữ nằm trong nhóm lệnh nào?",
+              "options": [
+                "Nhóm lệnh Paragraph nằm trên dải lệnh Home",
+                "Nhóm lệnh Font nằm trên dải lệnh Home của phần mềm",
+                "Nhóm lệnh Clipboard nằm trên dải lệnh Home",
+                "Nhóm lệnh Styles nằm trên dải lệnh Home"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Nhóm lệnh Font nằm trên dải lệnh Home của phần mềm\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll6-th5-q4",
+              "type": "scenario",
+              "prompt": "Sau khi chèn ảnh vào văn bản, làm thế nào để mở bảng chọn các cách bố trí hình ảnh so với chữ?",
+              "options": [
+                "Chọn hình ảnh rồi nháy chuột vào nút lệnh Layout Options xuất hiện bên cạnh ảnh",
+                "Nhấn tổ hợp phím tắt Ctrl + C trên bàn phím của máy tính",
+                "Nháy đúp chuột liên tục vào thanh thước đo ngang của văn bản",
+                "Nhấn phím Backspace trên bàn phím để xóa bớt các kí tự xung quanh"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Chọn hình ảnh rồi nháy chuột vào nút lệnh Layout Options xuất hiện bên cạnh ảnh\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll6-th5-q5",
+              "type": "knowledge",
+              "prompt": "Tùy chọn bố trí hình ảnh Square cho phép hình ảnh hiển thị như thế nào trong văn bản?",
+              "options": [
+                "Hình ảnh che khuất hoàn toàn toàn bộ phần chữ có trong đoạn văn bản",
+                "Văn bản dạt và bao quanh xung quanh hình ảnh theo khung hình chữ nhật",
+                "Hình ảnh sẽ tự động biến mất hoàn toàn khi thực hiện lệnh in ra giấy",
+                "Làm cho các kí tự chữ bị vỡ nét và không đọc được nội dung nữa"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Văn bản dạt và bao quanh xung quanh hình ảnh theo khung hình chữ nhật\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll6-th5-q6",
+              "type": "knowledge",
+              "prompt": "Để định dạng tiêu đề phông Tahoma, cỡ 16, đậm, màu xanh (Blue), em chọn thiết lập nào?",
+              "options": [
+                "Phông chữ: Verdana, Cỡ chữ: 12, Kiểu chữ: Nghiêng, Màu chữ: Purple",
+                "Phông chữ: Tahoma, Cỡ chữ: 16, Kiểu chữ: Đậm, Màu chữ: Xanh (Blue)",
+                "Phông chữ: Arial, Cỡ chữ: 14, Kiểu chữ: Gạch chân, Màu chữ: Red",
+                "Phông chữ: Calibri, Cỡ chữ: 10, Kiểu chữ: Thường, Màu chữ: Black"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Phông chữ: Tahoma, Cỡ chữ: 16, Kiểu chữ: Đậm, Màu chữ: Xanh (Blue)\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            }
+          ]
+        },
+        {
+          "id": "l7-th5",
+          "lessonNumber": 7,
+          "title": "BÀI 7: THỰC HÀNH SOẠN THẢO VĂN BẢN",
+          "questions": [
+            {
+              "id": "g5-th-ll7-th5-q1",
+              "type": "scenario",
+              "prompt": "Khi soạn thảo câu, đoạn lặp lại nhiều lần trong bài hát, em nên dùng thao tác nào để làm nhanh?",
+              "options": [
+                "Tiến hành xóa đi gõ lại từ đầu nhiều lần liên tiếp",
+                "Chọn phần văn bản mẫu, sử dụng lệnh Sao chép (Copy) và Dán (Paste)",
+                "Tắt phần mềm soạn thảo văn bản đi rồi mở lại",
+                "Sử dụng tính năng tìm kiếm và thay thế tự động"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Chọn phần văn bản mẫu, sử dụng lệnh Sao chép (Copy) và Dán (Paste)\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll7-th5-q2",
+              "type": "knowledge",
+              "prompt": "Để gõ kí tự chữ hoa và xóa kí tự gõ sai trong phần mềm, em sử dụng các phím nào?",
+              "options": [
+                "Gõ chữ hoa: Nhấn giữ Shift; Xóa kí tự: Dùng phím Delete hoặc Backspace",
+                "Gõ chữ hoa: Nhấn phím Space; Xóa kí tự: Dùng phím Enter",
+                "Gõ chữ hoa: Nhấn phím Ctrl; Xóa kí tự: Dùng phím Tab",
+                "Gõ chữ hoa: Nhấn phím Alt; Xóa kí tự: Dùng phím Esc"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Gõ chữ hoa: Nhấn giữ Shift; Xóa kí tự: Dùng phím Delete hoặc Backspace\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll7-th5-q3",
+              "type": "scenario",
+              "prompt": "Khi chèn hình ảnh minh họa vào văn bản, em cần thực hiện tiếp công việc gì cho cân đối?",
+              "options": [
+                "Giữ nguyên kích thước ban đầu của hình ảnh dù làm tràn trang",
+                "Thay đổi kích thước, vị trí cho phù hợp và ghi rõ nguồn ở cuối bài",
+                "Đổi màu chữ của toàn bộ lời bài hát thành màu xám",
+                "Cắt bỏ toàn bộ phần lời bài hát chỉ giữ lại hình ảnh"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Thay đổi kích thước, vị trí cho phù hợp và ghi rõ nguồn ở cuối bài\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll7-th5-q4",
+              "type": "scenario",
+              "prompt": "Quy trình định dạng kí tự cho một bài hát hoàn chỉnh gồm có các bước nào?",
+              "options": [
+                "Định dạng phông, cỡ chữ chung  Định dạng tiêu đề (chữ đậm) và tác giả (chữ nghiêng)",
+                "Tiến hành định dạng từng chữ một từ đầu đến cuối bài hát",
+                "Chỉ định dạng màu sắc cho hình ảnh minh họa bài hát",
+                "Đổi tất cả chữ trong văn bản thành chữ in hoa gạch chân"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Định dạng phông, cỡ chữ chung  Định dạng tiêu đề (chữ đậm) và tác giả (chữ nghiêng)\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll7-th5-q5",
+              "type": "knowledge",
+              "prompt": "Muốn di chuyển hai dòng thông tin tác giả từ cuối bài lên sau tiêu đề, em kết hợp các lệnh nào?",
+              "options": [
+                "Chọn hai dòng  Nhấn Delete  Gõ lại từ đầu",
+                "Chọn hai dòng  Cắt  Đặt con trỏ tại vị trí mới  Dán",
+                "Chọn hai dòng  Chọn lệnh Sao chép",
+                "Chọn hai dòng  Đổi phông chữ sang loại Tahoma"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Chọn hai dòng  Cắt  Đặt con trỏ tại vị trí mới  Dán\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll7-th5-q6",
+              "type": "scenario",
+              "prompt": "Sau khi chỉnh sửa và kiểm tra lỗi chính tả, em làm gì để lưu kết quả vào máy tính?",
+              "options": [
+                "Nháy vào nút lệnh Save (hoặc nhấn Ctrl + S) và đặt tên tệp rõ ràng",
+                "Nháy nút X ở góc phải trên cùng màn hình để đóng mà không lưu",
+                "Nhấn phím Esc trên bàn phím của máy tính",
+                "Rút phích cắm điện của máy tính ngay lập tức"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Nháy vào nút lệnh Save (hoặc nhấn Ctrl + S) và đặt tên tệp rõ ràng\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            }
+          ]
+        },
+        {
+          "id": "l8a-th5",
+          "lessonNumber": 8,
+          "title": "BÀI 8A: LÀM QUEN VỚI PHẦN MỀM ĐỒ HOẠ",
+          "questions": [
+            {
+              "id": "g5-th-ll8a-th5-q1",
+              "type": "knowledge",
+              "prompt": "Phần mềm đồ họa (Microsoft Paint) cung cấp công cụ giúp học sinh thực hiện công việc gì?",
+              "options": [
+                "Soạn thảo văn bản và tính toán dữ liệu",
+                "Vẽ hình, tô màu, chỉnh sửa hình ảnh, thiết kế thiệp, biểu tượng",
+                "Luyện gõ bàn phím bằng 10 ngón",
+                "Truy cập trang web và gửi thư điện tử"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Vẽ hình, tô màu, chỉnh sửa hình ảnh, thiết kế thiệp, biểu tượng\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll8a-th5-q2",
+              "type": "knowledge",
+              "prompt": "Giao diện làm việc của phần mềm Microsoft Paint bao gồm những thành phần chính nào?",
+              "options": [
+                "Hộp công cụ (Tools/Shapes), Hộp màu (Colors) và Trang vẽ (Canvas)",
+                "Thanh công thức, ô tính và hàng cột",
+                "Dải lệnh Animation và Slide Show",
+                "Khung danh mục tệp thư mục và ổ đĩa"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Hộp công cụ (Tools/Shapes), Hộp màu (Colors) và Trang vẽ (Canvas)\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll8a-th5-q3",
+              "type": "knowledge",
+              "prompt": "Trong phần mềm Paint, vai trò của Color 1 (Màu 1) và Color 2 (Màu 2) quy định thế nào?",
+              "options": [
+                "Color 1 dùng để tẩy xóa; Color 2 dùng để gõ chữ",
+                "Color 1 dùng cho nét vẽ, đường viền; Color 2 dùng cho tẩy và màu nền",
+                "Cả Color 1 và Color 2 đều chỉ dùng để tô màu nền cho trang vẽ",
+                "Color 1 dùng cho máy in; Color 2 dùng hiển thị trên màn hình"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Color 1 dùng cho nét vẽ, đường viền; Color 2 dùng cho tẩy và màu nền\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll8a-th5-q4",
+              "type": "scenario",
+              "prompt": "Để khoanh vùng chọn một hình vẽ trước khi sao chép hoặc di chuyển, em dùng công cụ nào?",
+              "options": [
+                "Công cụ tô màu Fill",
+                "Công cụ chọn Select",
+                "Công cụ vẽ đường thẳng Line",
+                "Công cụ viết chữ Text"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Công cụ chọn Select\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll8a-th5-q5",
+              "type": "scenario",
+              "prompt": "Để phần nền trắng không che khuất hình khác khi di chuyển, em chọn tùy chọn nào trong Select?",
+              "options": [
+                "Rectangular selection",
+                "Free-form selection",
+                "Transparent selection",
+                "Invert selection"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Transparent selection\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll8a-th5-q6",
+              "type": "knowledge",
+              "prompt": "Để vẽ mô hình cột đèn giao thông (khung chữ nhật, đèn tròn), em phối hợp công cụ nào?",
+              "options": [
+                "Công cụ vẽ hình chữ nhật (Rectangle), hình tròn (Oval) và tô màu (Fill)",
+                "Bút vẽ (Brushes), công cụ đường cong (Curve) và tẩy",
+                "Công cụ quay hình (Rotate) và công cụ viết chữ (Text)",
+                "Chỉ cần sử dụng duy nhất công cụ đường thẳng (Line)"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Công cụ vẽ hình chữ nhật (Rectangle), hình tròn (Oval) và tô màu (Fill)\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            }
+          ]
+        },
+        {
+          "id": "l9a-th5",
+          "lessonNumber": 9,
+          "title": "BÀI 9A: SỬ DỤNG PHẦN MỀM ĐỒ HỌA TẠO SẢN PHẨM SỐ",
+          "questions": [
+            {
+              "id": "g5-th-ll9a-th5-q1",
+              "type": "knowledge",
+              "prompt": "Thiệp chúc mừng thường được dùng nhằm mục đích gì và trao tặng vào dịp nào?",
+              "options": [
+                "Dùng để ghi chép bài học hằng ngày trên lớp học",
+                "Dùng để gửi người thân, thầy cô, bạn bè nhân dịp đặc biệt để thể hiện tình cảm",
+                "Dùng để làm hợp đồng mua bán thiết bị điện tử",
+                "Chỉ dùng để thi vẽ tranh tính điểm thi đua lớp"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Dùng để gửi người thân, thầy cô, bạn bè nhân dịp đặc biệt để thể hiện tình cảm\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll9a-th5-q2",
+              "type": "knowledge",
+              "prompt": "Để tạo một tấm thiệp chúc mừng phù hợp và ý nghĩa, em cần xác định yếu tố nào?",
+              "options": [
+                "Chủ đề tấm thiệp, các hình ảnh trang trí phù hợp và nội dung câu chúc mừng",
+                "Địa chỉ nhà sản xuất máy tính và dung lượng bộ nhớ",
+                "Tên hệ điều hành và phiên bản phần mềm đồ họa",
+                "Bắt buộc phải có đoạn video âm thanh chèn vào"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Chủ đề tấm thiệp, các hình ảnh trang trí phù hợp và nội dung câu chúc mừng\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll9a-th5-q3",
+              "type": "scenario",
+              "prompt": "Khi bắt đầu thiết kế thiệp trên phần mềm Paint, công cụ nào dùng để vẽ khung viền?",
+              "options": [
+                "Công cụ vẽ hình chữ nhật (Rectangle)",
+                "Công cụ vẽ đường cong (Curve)",
+                "Công cụ tẩy (Eraser)",
+                "Công cụ phóng to hình ảnh (Magnifier)"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Công cụ vẽ hình chữ nhật (Rectangle)\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll9a-th5-q4",
+              "type": "knowledge",
+              "prompt": "Để nhập dòng chữ lời chúc lên thiệp, em sử dụng công cụ nào và cần lưu ý điều gì?",
+              "options": [
+                "Dùng bút vẽ (Brushes); không thể đổi phông chữ",
+                "Dùng công cụ viết chữ Text (A); chọn phông chữ, cỡ chữ, màu chữ khi nhập",
+                "Dùng công cụ tô màu (Fill); chữ tự động xuất hiện",
+                "Dùng công cụ chọn (Select); gõ chữ trực tiếp từ bàn phím"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Dùng công cụ viết chữ Text (A); chọn phông chữ, cỡ chữ, màu chữ khi nhập\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll9a-th5-q5",
+              "type": "scenario",
+              "prompt": "Khi vẽ các chi tiết trang trí để sao chép vào thiệp, vị trí vẽ ban đầu nên ở đâu?",
+              "options": [
+                "Vẽ đè trực tiếp lên dòng chữ lời chúc mừng",
+                "Vẽ ở vùng trống bên ngoài khung thiệp trên trang vẽ",
+                "Vẽ sát mép viền ngoài cùng của trang vẽ",
+                "Vẽ chèn kín góc trên bên trái của khung thiệp"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Vẽ ở vùng trống bên ngoài khung thiệp trên trang vẽ\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll9a-th5-q6",
+              "type": "knowledge",
+              "prompt": "Để tấm thiệp sinh nhật thêm phong phú, em phối hợp các công cụ nào để trang trí?",
+              "options": [
+                "Công cụ vẽ hình trái tim (Heart), hình ngôi sao và công cụ Text để viết thêm lời chúc",
+                "Chỉ dùng công cụ tẩy để xóa sạch phần nền",
+                "Đổi toàn bộ màu trang vẽ sang màu đen",
+                "Tắt phần mềm Paint mà không cần thực hiện lưu tệp"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Công cụ vẽ hình trái tim (Heart), hình ngôi sao và công cụ Text để viết thêm lời chúc\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            }
+          ]
+        },
+        {
+          "id": "l8b-th5",
+          "lessonNumber": 10,
+          "title": "BÀI 8B: LÀM SẢN PHẨM THỦ CÔNG THEO VIDEO HƯỚNG DẪN",
+          "questions": [
+            {
+              "id": "g5-th-ll8b-th5-q1",
+              "type": "knowledge",
+              "prompt": "Để tìm kiếm và xem các video hướng dẫn làm sản phẩm thủ công, em có thể truy cập trang web nào?",
+              "options": [
+                "Google.com",
+                "Youtube.com",
+                "Thieunien.vn",
+                "Scratch.mit.edu"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Youtube.com\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll8b-th5-q2",
+              "type": "scenario",
+              "prompt": "Khi muốn tìm video hướng dẫn cách gấp một con hạc bằng giấy, em nên gõ từ khóa nào là phù hợp nhất?",
+              "options": [
+                "\"con hạc giấy\"",
+                "\"hướng dẫn gấp hạc giấy\"",
+                "\"hình ảnh con hạc\"",
+                "\"cách vẽ con hạc\""
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"\"hướng dẫn gấp hạc giấy\"\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll8b-th5-q3",
+              "type": "scenario",
+              "prompt": "Nếu thao tác trong video quá nhanh chưa kịp làm theo, em nên dùng nút lệnh nào trên thanh điều khiển?",
+              "options": [
+                "Nút phát (Play)",
+                "Nút tạm dừng (Pause)",
+                "Nút chuyển video tiếp theo (Next)",
+                "Nút bật/tắt toàn màn hình"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Nút tạm dừng (Pause)\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll8b-th5-q4",
+              "type": "scenario",
+              "prompt": "Khi video đang ở trạng thái phát, biểu tượng của nút \"Phát\" trên thanh điều khiển sẽ chuyển thành nút nào?",
+              "options": [
+                "Nút Tạm dừng",
+                "Nút Âm lượng",
+                "Nút Cài đặt",
+                "Nút Xem lại"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Nút Tạm dừng\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll8b-th5-q5",
+              "type": "scenario",
+              "prompt": "Để xem lại một thao tác gấp giấy vừa thực hiện trong video, em thực hiện thao tác nào?",
+              "options": [
+                "Tắt video đi và mở lại từ đầu",
+                "Nhấn nút chuyển sang video tiếp theo",
+                "Kéo thả thanh tiến trình lùi lại thời điểm đó",
+                "Nhấn nút thay đổi âm lượng của video"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Kéo thả thanh tiến trình lùi lại thời điểm đó\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll8b-th5-q6",
+              "type": "knowledge",
+              "prompt": "Nghệ thuật gấp giấy truyền thống Origami nổi tiếng thế giới có nguồn gốc từ quốc gia nào?",
+              "options": ["Việt Nam", "Trung Quốc", "Hàn Quốc", "Nhật Bản"],
+              "correctIndex": 3,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Nhật Bản\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            }
+          ]
+        },
+        {
+          "id": "l9b-th5",
+          "lessonNumber": 11,
+          "title": "BÀI 9B: THỰC HÀNH TẠO ĐỒ DÙNG GIA ĐÌNH THEO VIDEO HƯỚNG DẪN",
+          "questions": [
+            {
+              "id": "g5-th-ll9b-th5-q1",
+              "type": "knowledge",
+              "prompt": "Việc tái chế các vật liệu đã qua sử dụng làm đồ thủ công mang lại lợi ích chủ yếu nào?",
+              "options": [
+                "Giúp tiết kiệm chi phí và góp phần bảo vệ môi trường",
+                "Thay thế hoàn toàn các thiết bị điện tử trong gia đình",
+                "Tăng dung lượng bộ nhớ lưu trữ cho máy tính",
+                "Giúp máy tính kết nối Internet nhanh hơn"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Giúp tiết kiệm chi phí và góp phần bảo vệ môi trường\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll9b-th5-q2",
+              "type": "scenario",
+              "prompt": "Khi tìm video làm hộp đựng bút tái chế trên YouTube, từ khóa nào thích hợp nhất?",
+              "options": [
+                "\"hộp đựng bút\"",
+                "\"cách làm hộp đựng bút từ chai nhựa\"",
+                "\"mua hộp đựng bút đẹp\"",
+                "\"hình ảnh hộp đựng bút\""
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"\"cách làm hộp đựng bút từ chai nhựa\"\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll9b-th5-q3",
+              "type": "knowledge",
+              "prompt": "Điểm hình tròn trên thanh thời gian mà em có thể kéo thả để di chuyển video gọi là gì?",
+              "options": [
+                "Nút dừng video",
+                "Nút âm lượng",
+                "Nút tiến trình",
+                "Nút toàn màn hình"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Nút tiến trình\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll9b-th5-q4",
+              "type": "scenario",
+              "prompt": "Khi thực hành làm đồ dùng theo video, em nên làm gì để đảm bảo an toàn và tiết kiệm?",
+              "options": [
+                "Mua thật nhiều vật liệu mới đắt tiền về thực hành",
+                "Tự ý dùng các dụng cụ sắc nhọn mà không chú ý cẩn thận",
+                "Tận dụng vật liệu cũ và sử dụng dụng cụ cắt gọt an toàn",
+                "Xem video từ đầu đến cuối một lần rồi cất hết vật liệu đi"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Tận dụng vật liệu cũ và sử dụng dụng cụ cắt gọt an toàn\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll9b-th5-q5",
+              "type": "scenario",
+              "prompt": "Hai nút lệnh nào trên thanh điều khiển video thay thế cho nhau khi nháy chuột vào?",
+              "options": [
+                "Nút \"Phát\" (Play) và Nút \"Tạm dừng\" (Pause)",
+                "Nút \"Cài đặt\" và Nút \"Phụ đề\"",
+                "Nút \"Toàn màn hình\" và Nút \"Âm lượng\"",
+                "Nút \"Tiến trình\" và Nút \"Chuyển video tiếp theo\""
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Nút \"Phát\" (Play) và Nút \"Tạm dừng\" (Pause)\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll9b-th5-q6",
+              "type": "knowledge",
+              "prompt": "Để làm khung ảnh kỷ niệm gia đình, em có thể tận dụng những nguyên liệu sẵn có nào?",
+              "options": [
+                "Bìa carton cũ, ống hút nhựa, que kem",
+                "Ti vi, máy tính hỏng",
+                "Chai thủy tinh dày chịu lực lớn",
+                "Kim loại cứng chưa qua xử lý"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Bìa carton cũ, ống hút nhựa, que kem\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c6-tinhoc5",
+      "chapterNumber": 6,
+      "title": "Chủ đề 6: Giải quyết vấn đề với sự trợ giúp của máy tính",
+      "lessons": [
+        {
+          "id": "l10-th5",
+          "lessonNumber": 12,
+          "title": "BÀI 10: CẤU TRÚC TUẦN TỰ",
+          "questions": [
+            {
+              "id": "g5-th-ll10-th5-q1",
+              "type": "knowledge",
+              "prompt": "Thực hiện các công việc theo \"cấu trúc tuần tự\" có nghĩa là gì?",
+              "options": [
+                "Thực hiện các công việc ngẫu nhiên không theo thứ tự",
+                "Thực hiện lần lượt từng việc, xong việc này mới đến việc tiếp theo",
+                "Chỉ thực hiện duy nhất một việc rồi dừng lại",
+                "Thực hiện lặp đi lặp lại một công việc nhiều lần"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Thực hiện lần lượt từng việc, xong việc này mới đến việc tiếp theo\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll10-th5-q2",
+              "type": "knowledge",
+              "prompt": "Hoạt động nào dưới đây mô tả một quy trình thực hiện theo cấu trúc tuần tự?",
+              "options": [
+                "Rửa mặt  Đánh răng  Thay quần áo  Ăn sáng",
+                "Tung xúc xắc cho đến khi nhận được mặt 6 chấm",
+                "Nếu trời mưa thì nghỉ đá bóng, ngược lại thì ra sân tập",
+                "Đọc sách liên tục cho tới khi hết bài học"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Rửa mặt  Đánh răng  Thay quần áo  Ăn sáng\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll10-th5-q3",
+              "type": "scenario",
+              "prompt": "Khi máy tính thực hiện chương trình có cấu trúc tuần tự, thứ tự các lệnh sẽ thế nào?",
+              "options": [
+                "Thực hiện từ lệnh cuối cùng ngược lên lệnh đầu tiên",
+                "Thực hiện nhảy qua một số lệnh bất kỳ",
+                "Thực hiện lần lượt từ trên xuống dưới, hết lệnh này đến lệnh tiếp",
+                "Tùy thuộc vào lựa chọn của người sử dụng lúc chạy"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Thực hiện lần lượt từ trên xuống dưới, hết lệnh này đến lệnh tiếp\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll10-th5-q4",
+              "type": "scenario",
+              "prompt": "Khi thực hiện thuật toán tuần tự, nếu thay đổi thứ tự các bước thì điều gì xảy ra?",
+              "options": [
+                "Kết quả nhận được vẫn luôn đúng và không thay đổi",
+                "Kết quả có thể bị sai lệch hoặc chương trình không thực hiện được",
+                "Chương trình sẽ tự động sửa lại thứ tự cho đúng",
+                "Máy tính sẽ lập tức bị tắt nguồn đột ngột"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Kết quả có thể bị sai lệch hoặc chương trình không thực hiện được\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll10-th5-q5",
+              "type": "knowledge",
+              "prompt": "Trong Scratch, các khối lệnh được xếp chồng lên nhau từ trên xuống dưới thể hiện cấu trúc nào?",
+              "options": [
+                "Cấu trúc lặp",
+                "Cấu trúc rẽ nhánh",
+                "Cấu trúc tuần tự",
+                "Cấu trúc biến số"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Cấu trúc tuần tự\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll10-th5-q6",
+              "type": "knowledge",
+              "prompt": "Quy trình nào dưới đây KHÔNG tuân theo cấu trúc tuần tự đơn thuần?",
+              "options": [
+                "Chuẩn bị nguyên liệu  Sơ chế  Nấu chín  Bày ra đĩa",
+                "Khởi động máy tính  Mở phần mềm  Soạn văn bản  Lưu tệp",
+                "Kiểm tra nếu nhiệt độ lớn hơn 30 độ thì bật quạt, ngược lại thì tắt quạt",
+                "Mở vở  Đọc đề bài  Làm bài tập  Đóng vở"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Kiểm tra nếu nhiệt độ lớn hơn 30 độ thì bật quạt, ngược lại thì tắt quạt\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            }
+          ]
+        },
+        {
+          "id": "l11-th5",
+          "lessonNumber": 13,
+          "title": "BÀI 11: CẤU TRÚC LẶP",
+          "questions": [
+            {
+              "id": "g5-th-ll11-th5-q1",
+              "type": "knowledge",
+              "prompt": "Trong đời sống hằng ngày, \"cấu trúc lặp\" dùng để mô tả những hoạt động như thế nào?",
+              "options": [
+                "Hoạt động chỉ thực hiện đúng một lần duy nhất rồi kết thúc",
+                "Hoạt động được thực hiện lặp đi lặp lại nhiều lần",
+                "Hoạt động được thực hiện ngẫu nhiên không theo quy luật",
+                "Hoạt động bị tạm dừng vĩnh viễn không thực hiện nữa"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Hoạt động được thực hiện lặp đi lặp lại nhiều lần\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll11-th5-q2",
+              "type": "knowledge",
+              "prompt": "Hoạt động nào dưới đây là ví dụ về công việc lặp với số lần biết trước?",
+              "options": [
+                "Nhảy dây đủ 20 lần rồi dừng lại",
+                "Học bài cho đến khi thuộc lòng",
+                "Chờ cho đến khi đèn giao thông chuyển sang màu xanh",
+                "Nhặt rác trên sân trường cho đến khi sạch hết"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Nhảy dây đủ 20 lần rồi dừng lại\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll11-th5-q3",
+              "type": "knowledge",
+              "prompt": "Khối lệnh lặp trong phần mềm Scratch có vai trò/tác dụng chính là gì?",
+              "options": [
+                "Giúp nhân vật di chuyển nhanh hơn trên sân khấu",
+                "Giúp chương trình ngắn gọn hơn vì không phải viết lại nhiều lệnh giống nhau",
+                "Giúp thay đổi màu sắc sân khấu tự động",
+                "Giúp xóa bớt các nhân vật không cần thiết"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Giúp chương trình ngắn gọn hơn vì không phải viết lại nhiều lệnh giống nhau\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll11-th5-q4",
+              "type": "knowledge",
+              "prompt": "Để thực hiện lặp lại một chuỗi lệnh đúng 5 lần, em nên sử dụng khối lệnh lặp nào trong Scratch?",
+              "options": [
+                "Khối lệnh liên tục (forever)",
+                "Khối lệnh lặp lại 5 lần (repeat 5)",
+                "Khối lệnh nếu ... thì (if ... then)",
+                "Khối lệnh đợi 5 giây (wait 5 seconds)"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Khối lệnh lặp lại 5 lần (repeat 5)\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll11-th5-q5",
+              "type": "scenario",
+              "prompt": "Để điều khiển chú cá bơi liên tục trong bể và chạm cạnh thì bật lại, em chọn loại lệnh lặp nào?",
+              "options": [
+                "Lệnh lặp với số lần biết trước (lặp lại 10 lần)",
+                "Lệnh lặp không biết trước số lần (lặp liên tục / lặp có điều kiện)",
+                "Không cần dùng lệnh lặp",
+                "Chỉ dùng lệnh rẽ nhánh"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Lệnh lặp không biết trước số lần (lặp liên tục / lặp có điều kiện)\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll11-th5-q6",
+              "type": "knowledge",
+              "prompt": "Điền từ thích hợp vào chỗ trống: \"Cấu trúc lặp là cấu trúc mô tả các công việc được ...... nhiều lần.\"",
+              "options": ["Thay đổi", "Bỏ qua", "Lặp lại", "Tạm dừng"],
+              "correctIndex": 2,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Lặp lại\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            }
+          ]
+        },
+        {
+          "id": "l12-th5",
+          "lessonNumber": 14,
+          "title": "BÀI 12: THỰC HÀNH SỬ DỤNG LỆNH LẶP",
+          "questions": [
+            {
+              "id": "g5-th-ll12-th5-q1",
+              "type": "knowledge",
+              "prompt": "Trong Scratch, nhóm lệnh nào chứa các khối lệnh lặp như repeat hoặc forever?",
+              "options": [
+                "Nhóm lệnh Chuyển động (Motion)",
+                "Nhóm lệnh Điều khiển (Control)",
+                "Nhóm lệnh Hiển thị (Looks)",
+                "Nhóm lệnh Sự kiện (Events)"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Nhóm lệnh Điều khiển (Control)\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll12-th5-q2",
+              "type": "scenario",
+              "prompt": "Để điều khiển chú vẹt vỗ cánh và bay liên tục trên sân khấu, em lồng các lệnh vào khối lệnh nào?",
+              "options": [
+                "Khối lệnh liên tục (forever)",
+                "Khối lệnh nếu ... thì (if ... then)",
+                "Khối lệnh đợi 1 giây (wait 1 seconds)",
+                "Khối lệnh khi bấm vào nhân vật (when this sprite clicked)"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Khối lệnh liên tục (forever)\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll12-th5-q3",
+              "type": "scenario",
+              "prompt": "Việc thêm lệnh \"đợi 1 giây\" giữa các thao tác trong vòng lặp có tác dụng gì?",
+              "options": [
+                "Giúp nhân vật biến mất khỏi sân khấu",
+                "Giúp chuyển động của nhân vật chậm lại, rõ ràng và tự nhiên hơn",
+                "Làm cho chương trình bị dừng hẳn không chạy nữa",
+                "Giúp nhân vật đổi màu sắc liên tục"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Giúp chuyển động của nhân vật chậm lại, rõ ràng và tự nhiên hơn\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll12-th5-q4",
+              "type": "scenario",
+              "prompt": "Khi ghép chuỗi lệnh vào trong khối lặp 15 lần, chuỗi lệnh đó được thực hiện tổng cộng bao nhiêu lần?",
+              "options": ["1 lần", "5 lần", "15 lần", "Lặp lại mãi mãi"],
+              "correctIndex": 2,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"15 lần\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll12-th5-q5",
+              "type": "knowledge",
+              "prompt": "Muốn vẽ một hình vuông trong Scratch, em có thể lặp lại 4 lần chuỗi hai lệnh nào?",
+              "options": [
+                "Di chuyển a bước  Xoay 90",
+                "Di chuyển a bước  Xoay 60",
+                "Di chuyển a bước  Xoay 180",
+                "Di chuyển a bước  Xoay 45"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Di chuyển a bước  Xoay 90\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll12-th5-q6",
+              "type": "scenario",
+              "prompt": "Để lặp lại một chuỗi hành động cho đến khi người dùng nháy chuột, em chọn khối lệnh lặp nào?",
+              "options": [
+                "Khối lệnh lặp lại 10 lần (repeat 10)",
+                "Khối lệnh liên tục (forever)",
+                "Khối lệnh lặp lại cho đến khi <đã nháy chuột?> (repeat until)",
+                "Khối lệnh đợi cho đến khi <đã nháy chuột?> (wait until)"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Khối lệnh lặp lại cho đến khi <đã nháy chuột?> (repeat until)\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            }
+          ]
+        },
+        {
+          "id": "l13-th5",
+          "lessonNumber": 15,
+          "title": "BÀI 13: CẤU TRÚC RẼ NHÁNH",
+          "questions": [
+            {
+              "id": "g5-th-ll13-th5-q1",
+              "type": "knowledge",
+              "prompt": "Việc thực hiện hay không thực hiện công việc tùy thuộc vào điều kiện tạo thành cấu trúc nào?",
+              "options": [
+                "Cấu trúc tuần tự",
+                "Cấu trúc lặp",
+                "Cấu trúc rẽ nhánh",
+                "Cấu trúc lặp vô hạn"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Cấu trúc rẽ nhánh\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll13-th5-q2",
+              "type": "knowledge",
+              "prompt": "Dạng khuyết (dạng thiếu) của cấu trúc rẽ nhánh được mô tả bằng câu lệnh nào sau đây?",
+              "options": [
+                "Nếu <điều kiện> thì <công việc>",
+                "Nếu <điều kiện> thì <công việc 1> nếu không thì <công việc 2>",
+                "Lặp lại cho đến khi <điều kiện>",
+                "Nếu <công việc> thì <điều kiện>"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Nếu <điều kiện> thì <công việc>\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll13-th5-q3",
+              "type": "knowledge",
+              "prompt": "Dạng đủ (dạng đầy đủ) của cấu trúc rẽ nhánh được mô tả như thế nào?",
+              "options": [
+                "Nếu <điều kiện> thì <công việc 1>",
+                "Nếu <điều kiện> thì <công việc 1> nếu không thì <công việc 2>",
+                "Nếu không <điều kiện> thì <công việc 1>",
+                "Lặp lại <điều kiện> lần"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Nếu <điều kiện> thì <công việc 1> nếu không thì <công việc 2>\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll13-th5-q4",
+              "type": "knowledge",
+              "prompt": "Tình huống nào dưới đây mô tả một công việc có cấu trúc rẽ nhánh?",
+              "options": [
+                "Rửa tay  Lau tay  Ăn cơm",
+                "Nếu trời mưa thì em ở nhà làm bài tập, nếu trời nắng thì em đi đá bóng",
+                "Nhảy dây đủ 20 lần rồi dừng lại",
+                "Đọc sách từ trang 1 đến trang 10"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Nếu trời mưa thì em ở nhà làm bài tập, nếu trời nắng thì em đi đá bóng\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll13-th5-q5",
+              "type": "scenario",
+              "prompt": "Khối lệnh nếu <chạm con trỏ chuột?> thì [đổi hiệu ứng màu 25] thể hiện cấu trúc nào?",
+              "options": [
+                "Cấu trúc rẽ nhánh dạng khuyết",
+                "Cấu trúc rẽ nhánh dạng đủ",
+                "Cấu trúc lặp với số lần biết trước",
+                "Cấu trúc tuần tự"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Cấu trúc rẽ nhánh dạng khuyết\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll13-th5-q6",
+              "type": "scenario",
+              "prompt": "Trong Scratch, nhóm lệnh nào chứa các khối lệnh rẽ nhánh (nếu ... thì / nếu ... thì ... nếu không thì)?",
+              "options": [
+                "Chuyển động (Motion)",
+                "Cảm biến (Sensing)",
+                "Điều khiển (Control)",
+                "Hiển thị (Looks)"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Điều khiển (Control)\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            }
+          ]
+        },
+        {
+          "id": "l14-th5",
+          "lessonNumber": 16,
+          "title": "BÀI 14: THỰC HÀNH SỬ DỤNG LỆNH RẼ NHÁNH",
+          "questions": [
+            {
+              "id": "g5-th-ll14-th5-q1",
+              "type": "knowledge",
+              "prompt": "Trong Scratch, nhóm lệnh nào cung cấp các phép điều kiện (như <đang chạm cạnh?>, <phím space được bấm?>) để lắp vào khối lệnh rẽ nhánh?",
+              "options": [
+                "Điều khiển (Control)",
+                "Cảm biến (Sensing)",
+                "Chuyển động (Motion)",
+                "Sự kiện (Events)"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Cảm biến (Sensing)\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll14-th5-q2",
+              "type": "scenario",
+              "prompt": "Muốn lập trình \"nếu nhân vật chạm vào cạnh màn hình thì bật lại\", em kết hợp khối lệnh rẽ nhánh với khối lệnh cảm biến nào?",
+              "options": [
+                "Khối lệnh đang chạm [edge]? (chạm cạnh)",
+                "Khối lệnh đang chạm [mouse-pointer]? (chạm con trỏ chuột)",
+                "Khối lệnh phím [space] được bấm?",
+                "Khối lệnh kích thước bàn phím"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Khối lệnh đang chạm [edge]? (chạm cạnh)\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll14-th5-q3",
+              "type": "scenario",
+              "prompt": "Với khối lệnh rẽ nhánh dạng đủ (nếu ... thì ... nếu không thì ...), khi nào các lệnh nằm ở nhánh nếu không thì được thực thi?",
+              "options": [
+                "Khi điều kiện kiểm tra nhận giá trị ĐÚNG (True)",
+                "Khi điều kiện kiểm tra nhận giá trị SAI (False)",
+                "Nhánh nếu không thì luôn được chạy bất kể điều kiện đúng hay sai",
+                "Nhánh nếu không thì chỉ được chạy khi người dùng bấm phím Enter"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Khi điều kiện kiểm tra nhận giá trị SAI (False)\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll14-th5-q4",
+              "type": "scenario",
+              "prompt": "Để lập trình: \"Nếu trả lời đúng thì cộng 1 điểm, nếu không thì thông báo Trả lời sai\", em chọn khối lệnh nào phù hợp nhất?",
+              "options": [
+                "Khối lệnh nếu <trả lời = đáp án> thì",
+                "Khối lệnh nếu <trả lời = đáp án> thì ... nếu không thì ...",
+                "Khối lệnh lặp lại 10 lần (repeat 10)",
+                "Khối lệnh liên tục (forever)"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Khối lệnh nếu <trả lời = đáp án> thì ... nếu không thì ...\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll14-th5-q5",
+              "type": "scenario",
+              "prompt": "Khối lệnh rẽ nhánh khi đặt bên trong khối lệnh liên tục (forever) sẽ có tác dụng gì?",
+              "options": [
+                "Làm cho điều kiện chỉ được kiểm tra đúng một lần khi bắt đầu",
+                "Làm cho điều kiện được kiểm tra liên tục trong suốt quá trình chạy",
+                "Làm cho nhân vật dừng chuyển động ngay lập tức",
+                "Tự động sửa đáp án đúng cho người chơi"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Làm cho điều kiện được kiểm tra liên tục trong suốt quá trình chạy\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll14-th5-q6",
+              "type": "scenario",
+              "prompt": "Khi lập trình kịch bản: \"Mèo di chuyển 10 bước; Nếu chạm Táo thì phát âm thanh Chomp, nếu không thì nói Hello\", thứ tự ghép khối lệnh nào đúng?",
+              "options": [
+                "Khối lệnh rẽ nhánh dạng đủ đặt phía sau khối lệnh di chuyển 10 bước",
+                "Khối lệnh di chuyển đặt bên trong ô điều kiện rẽ nhánh",
+                "Chỉ dùng khối lệnh rẽ nhánh dạng thiếu và bỏ qua câu thoại Hello",
+                "Đặt âm thanh Chomp ở ngoài khối lệnh rẽ nhánh"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Khối lệnh rẽ nhánh dạng đủ đặt phía sau khối lệnh di chuyển 10 bước\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            }
+          ]
+        },
+        {
+          "id": "l15-th5",
+          "lessonNumber": 17,
+          "title": "BÀI 15: SỬ DỤNG BIỂU THỨC TRONG CHƯƠNG TRÌNH",
+          "questions": [
+            {
+              "id": "g5-th-ll15-th5-q1",
+              "type": "knowledge",
+              "prompt": "Trong phần mềm Scratch, một biểu thức gồm có những thành phần nào?",
+              "options": [
+                "Các số, biến và các phép toán",
+                "Các số, hình ảnh và âm thanh",
+                "Các từ ngữ, câu thoại và trang phục",
+                "Chỉ gồm các số tự nhiên"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Các số, biến và các phép toán\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll15-th5-q2",
+              "type": "knowledge",
+              "prompt": "Nhóm lệnh nào trong Scratch chứa các khối lệnh tạo biểu thức (cộng, trừ, nhân, chia, so sánh...)?",
+              "options": [
+                "Các biến số (Variables)",
+                "Các phép toán (Operators)",
+                "Cảm biến (Sensing)",
+                "Hiển thị (Looks)"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Các phép toán (Operators)\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll15-th5-q3",
+              "type": "knowledge",
+              "prompt": "Khối lệnh phép toán nào dưới đây dùng để tạo biểu thức điều kiện (trả về giá trị Đúng hoặc Sai)?",
+              "options": [
+                "Khối lệnh phép cộng (+)",
+                "Khối lệnh phép nhân (*)",
+                "Khối lệnh so sánh lớn hơn (>), nhỏ hơn (<) hoặc bằng (=)",
+                "Khối lệnh lấy số ngẫu nhiên (pick random)"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Khối lệnh so sánh lớn hơn (>), nhỏ hơn (<) hoặc bằng (=)\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll15-th5-q4",
+              "type": "knowledge",
+              "prompt": "Để tính chu vi hình chữ nhật có hai cạnh a và b, biểu thức nào biểu diễn đúng (a+b)2?",
+              "options": [
+                "Ghép khối lệnh cộng (a + b) vào bên trong khối lệnh nhân (... * 2)",
+                "Ghép khối lệnh nhân (a * 2) vào bên trong khối lệnh cộng (... + b)",
+                "Chỉ cần dùng một khối lệnh phép cộng (a + b)",
+                "Chỉ cần dùng một khối lệnh phép nhân (a * b)"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Ghép khối lệnh cộng (a + b) vào bên trong khối lệnh nhân (... * 2)\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll15-th5-q5",
+              "type": "scenario",
+              "prompt": "Giả sử hai biến a và b có giá trị lần lượt là 3 và 4. Khi thực hiện lệnh nói (a * b), kết quả là gì?",
+              "options": ["7", "12", "34", "1"],
+              "correctIndex": 1,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"12\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll15-th5-q6",
+              "type": "knowledge",
+              "prompt": "Với các khối lệnh biểu thức lồng nhau trong Scratch, máy tính thực hiện theo thứ tự nào?",
+              "options": [
+                "Thực hiện từ ngoài vào trong",
+                "Thực hiện từ trong ra ngoài",
+                "Thực hiện hoàn toàn ngẫu nhiên",
+                "Do người dùng tự bấm phím chọn"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Thực hiện từ trong ra ngoài\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            }
+          ]
+        },
+        {
+          "id": "l16-th5",
+          "lessonNumber": 18,
+          "title": "BÀI 16: TỪ KỊCH BẢN ĐẾN CHƯƠNG TRÌNH",
+          "questions": [
+            {
+              "id": "g5-th-ll16-th5-q1",
+              "type": "knowledge",
+              "prompt": "Việc mô tả ý tưởng chương trình bằng cách chia nhỏ công việc để dễ hiểu, dễ thực hiện được gọi là gì?",
+              "options": [
+                "Chạy thử chương trình",
+                "Viết kịch bản chương trình",
+                "Tạo biến số",
+                "Lựa chọn phông nền"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Viết kịch bản chương trình\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll16-th5-q2",
+              "type": "knowledge",
+              "prompt": "Kịch bản chương trình thường được viết để trả lời những câu hỏi nào dưới đây?",
+              "options": [
+                "Chương trình gồm những nhân vật nào?",
+                "Bối cảnh (sân khấu) diễn ra chương trình là gì?",
+                "Hành động của các nhân vật trong chương trình như thế nào?",
+                "Cả 3 đều đúng"
+              ],
+              "correctIndex": 3,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Cả 3 đều đúng\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll16-th5-q3",
+              "type": "knowledge",
+              "prompt": "Hành động \"Mỗi lần mèo chạm vào bóng thì điểm số tăng thêm 1\" sử dụng cấu trúc nào?",
+              "options": [
+                "Cấu trúc rẽ nhánh",
+                "Cấu trúc tuần tự",
+                "Cấu trúc lặp không xác định",
+                "Không sử dụng cấu trúc nào"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Cấu trúc rẽ nhánh\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll16-th5-q4",
+              "type": "scenario",
+              "prompt": "Lợi ích chính của việc viết kịch bản trước khi tạo chương trình Scratch là gì?",
+              "options": [
+                "Giúp máy tính tự động chạy chương trình mà không cần lập trình",
+                "Giúp xác định cụ thể các công việc, từ đó dễ dàng tạo chương trình thực hiện ý tưởng",
+                "Giúp tăng tốc độ kết nối Internet của máy tính",
+                "Giúp xóa bớt các nhân vật dư thừa trên sân khấu"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Giúp xác định cụ thể các công việc, từ đó dễ dàng tạo chương trình thực hiện ý tưởng\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll16-th5-q5",
+              "type": "scenario",
+              "prompt": "Sau khi tạo xong chương trình từ kịch bản, bước tiếp theo em cần thực hiện là gì?",
+              "options": [
+                "Tắt phần mềm ngay lập tức",
+                "Chạy thử chương trình, quan sát kết quả và chỉnh sửa nếu có lỗi",
+                "Bỏ qua không cần kiểm tra lại",
+                "Chuyển sang viết kịch bản cho môn học khác"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Chạy thử chương trình, quan sát kết quả và chỉnh sửa nếu có lỗi\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            },
+            {
+              "id": "g5-th-ll16-th5-q6",
+              "type": "knowledge",
+              "prompt": "Để lưu giữ và theo dõi điểm số tăng lên của người chơi, em cần tạo đối tượng nào trong Scratch?",
+              "options": [
+                "Tạo một phông nền mới",
+                "Tạo một nhân vật mới",
+                "Tạo một biến mới",
+                "Tạo một âm thanh mới"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Tạo một biến mới\". Kiến thức Tin học 5 giúp em làm chủ máy tính, lập trình Scratch và ứng dụng thông minh."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

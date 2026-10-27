@@ -1,0 +1,2522 @@
+{
+  "id": "g2-tnxh",
+  "grade": 2,
+  "subjectKey": "tnxh",
+  "title": "Tự nhiên và Xã hội lớp 2",
+  "color": "#2563EB",
+  "coverImage": "/mascots/bia-sach-mon-hoc.png",
+  "chapters": [
+    {
+      "id": "c1-gia-dinh",
+      "chapterNumber": 1,
+      "title": "Chủ đề 1: Gia đình",
+      "lessons": [
+        {
+          "id": "l1-cac-the-he-trong-gia-dinh",
+          "lessonNumber": 1,
+          "title": "Bài 1: Các thế hệ trong gia đình",
+          "description": "Tìm hiểu về các thế hệ và sự gắn kết trong gia đình",
+          "questions": [
+            {
+              "id": "g2-c1-l1-q1",
+              "type": "scenario",
+              "prompt": "Gia đình bạn Hoa gồm có: ông, bà, bố, mẹ, Hoa và em. Gia đình Hoa có mấy thế hệ cùng chung sống?",
+              "options": ["1 thế hệ", "2 thế hệ", "3 thế hệ", "4 thế hệ"],
+              "correctIndex": 2
+            },
+            {
+              "id": "g2-c1-l1-q2",
+              "type": "scenario",
+              "prompt": "Nhà bạn Nam gồm có bố, mẹ và Nam. Gia đình Nam thuộc kiểu gia đình nào?",
+              "options": [
+                "Gia đình một thế hệ",
+                "Gia đình hai thế hệ (gồm bố mẹ và con)",
+                "Gia đình ba thế hệ (gồm ông bà, bố mẹ và con)",
+                "Gia đình bốn thế hệ"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c1-l1-q3",
+              "type": "scenario",
+              "prompt": "Mẹ đi làm về muộn, em gái Nam kêu đói. Nam nên làm gì để chia sẻ với mẹ?",
+              "options": [
+                "Đòi mẹ nấu ăn ngay lập tức và giận dỗi",
+                "Bỏ đi chơi điện tử không quan tâm",
+                "Chào mẹ, đỡ đồ giúp mẹ và phụ mẹ chuẩn bị bữa ăn",
+                "Trách mẹ sao không về sớm hơn"
+              ],
+              "correctIndex": 2
+            },
+            {
+              "id": "g2-c1-l1-q4",
+              "type": "scenario",
+              "prompt": "Ông đang đọc báo thì mắt bị mỏi, bạn lại đến cửa rủ Nam đi chơi. Nam nên làm gì?",
+              "options": [
+                "Chạy ngay đi chơi với bạn, để ông ngồi một mình",
+                "Nhẹ nhàng xin lỗi bạn, ở lại đọc báo cho ông nghe và chăm sóc ông",
+                "Tắt đèn phòng để ông không đọc báo nữa",
+                "Hét to bảo bạn chờ rồi đi luôn"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c1-l1-q5",
+              "type": "scenario",
+              "prompt": "Vì sao các thành viên trong gia đình cần yêu thương và giúp đỡ lẫn nhau?",
+              "options": [
+                "Để gia đình luôn hòa thuận, hạnh phúc và gắn kết",
+                "Để nhận được tiền thưởng từ bố mẹ",
+                "Vì bị bắt buộc làm theo quy định",
+                "Để không phải học bài"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g2-c1-l1-q6",
+              "type": "scenario",
+              "prompt": "Việc làm nào thể hiện sự quan tâm, yêu thương đối với ông bà, bố mẹ?",
+              "options": [
+                "Thường xuyên làm người lớn giận và không nghe lời",
+                "Chăm chỉ học tập, ngoan ngoãn và biết làm việc nhà vừa sức",
+                "Chỉ chơi một mình, không trò chuyện với ông bà",
+                "Đợi lớn lên mới bắt đầu quan tâm mọi người"
+              ],
+              "correctIndex": 1
+            }
+          ]
+        },
+        {
+          "id": "l2-nghe-nghiep-cua-nguoi-lon-trong-gia-dinh",
+          "lessonNumber": 2,
+          "title": "Bài 2: Nghề nghiệp của người lớn trong gia đình",
+          "description": "Tìm hiểu và tôn trọng các nghề nghiệp trong xã hội",
+          "questions": [
+            {
+              "id": "g2-c1-l2-q1",
+              "type": "scenario",
+              "prompt": "Nhóm công việc nào dưới đây giúp người lao động tạo ra thu nhập để nuôi sống gia đình?",
+              "options": [
+                "Ngư dân đánh bắt cá, công nhân may, nông dân làm ruộng, người bán hàng",
+                "Bạn nhỏ quét nhà giúp bố mẹ sau giờ học",
+                "Học sinh tham gia nhặt rác vệ sinh sân trường",
+                "Bạn nhỏ dọn dẹp đồ chơi cá nhân ở nhà"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g2-c1-l2-q2",
+              "type": "scenario",
+              "prompt": "Ý nghĩa quan trọng nhất của các công việc tạo ra thu nhập là gì?",
+              "options": [
+                "Chỉ để mọi người có thời gian đi ra ngoài chơi",
+                "Tạo thu nhập nuôi sống gia đình và đóng góp của cải cho xã hội",
+                "Để khoe khoang với người xung quanh",
+                "Để không phải làm việc nhà"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c1-l2-q3",
+              "type": "scenario",
+              "prompt": "Khám bệnh miễn phí cho người nghèo hay dạy học ở \"Lớp học tình thương\" là loại công việc nào?",
+              "options": [
+                "Công việc kinh doanh buôn bán kiếm lời",
+                "Công việc tình nguyện không nhận lương, giúp đỡ cộng đồng",
+                "Công việc bắt buộc do chính quyền phân công",
+                "Hoạt động vui chơi giải trí lúc rảnh rỗi"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c1-l2-q4",
+              "type": "scenario",
+              "prompt": "Trường phát động quyên góp sách cũ ủng hộ vùng khó khăn, em nên làm gì?",
+              "options": [
+                "Không tham gia vì nghĩ mình còn nhỏ",
+                "Gom xếp những cuốn sách, truyện cũ còn tốt để đóng góp",
+                "Đòi bố mẹ mua thật nhiều sách mới đắt tiền để lấy thành tích",
+                "Lấy sách của bạn khác mang đi đóng góp"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c1-l2-q5",
+              "type": "scenario",
+              "prompt": "Em nên có thái độ như thế nào đối với các nghề nghiệp khác nhau trong xã hội?",
+              "options": [
+                "Chỉ trân trọng những nghề kiếm được thật nhiều tiền",
+                "Tôn trọng và biết ơn mọi người lao động vì nghề nào chính đáng cũng có ích",
+                "Xem nhẹ những công việc chân tay như quét rác, làm nông",
+                "Thờ ơ, không quan tâm đến công việc của người khác"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c1-l2-q6",
+              "type": "scenario",
+              "prompt": "Lớn lên em thích làm nghề gì? Câu trả lời nào dưới đây là đúng đắn nhất?",
+              "options": [
+                "\"Em muốn làm bác sĩ vì muốn chữa bệnh cho mọi người\"",
+                "\"Em chẳng muốn làm nghề gì vì làm việc rất mệt\"",
+                "\"Em chọn nghề làm thật ít việc nhưng lại có nhiều tiền\"",
+                "\"Em chọn theo bạn ngồi bên cạnh chứ không có ý kiến\""
+              ],
+              "correctIndex": 0
+            }
+          ]
+        },
+        {
+          "id": "l3-phong-tranh-ngo-doc-khi-o-nha",
+          "lessonNumber": 3,
+          "title": "Bài 3: Phòng tránh ngộ độc khi ở nhà",
+          "description": "Kỹ năng an toàn vệ sinh thực phẩm và dùng thuốc",
+          "questions": [
+            {
+              "id": "g2-c1-l3-q1",
+              "type": "scenario",
+              "prompt": "Nguyên nhân nào dưới đây có thể gây ngộ độc qua đường ăn uống?",
+              "options": [
+                "Ăn thức ăn tươi sống đã nấu chín kỹ và uống nước đun sôi",
+                "Ăn thức ăn bị ô thiu, mốc hỏng, bị ruồi đậu hoặc uống thuốc sai cách",
+                "Cất giữ thức ăn trong tủ lạnh đúng quy định",
+                "Uống đủ nước lọc sạch mỗi ngày"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c1-l3-q2",
+              "type": "scenario",
+              "prompt": "Thấy quả cam bị mốc xanh, dưa hấu có mùi chua ôi thiu, em nên làm gì?",
+              "options": [
+                "Gọt bỏ phần mốc rồi tiếp tục ăn",
+                "Báo cho người lớn biết và tuyệt đối không ăn đồ bị hỏng",
+                "Cất lại vào tủ lạnh để dành hôm sau",
+                "Ép các bạn cùng ăn vì tiếc đồ ăn"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c1-l3-q3",
+              "type": "scenario",
+              "prompt": "Thấy chai nước rửa bát để ngay cạnh chai dầu ăn, nguy hiểm gì có thể xảy ra?",
+              "options": [
+                "Dễ lấy nhầm hoặc uống nhầm; cần cất nước rửa bát ở nơi riêng biệt",
+                "Không có nguy hiểm gì, cứ để nguyên vị trí",
+                "Đổ chung nước rửa bát vào chai dầu ăn cho gọn",
+                "Đưa chai nước rửa bát cho em nhỏ chơi"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g2-c1-l3-q4",
+              "type": "scenario",
+              "prompt": "Trước khi uống hộp sữa tươi mua ở cửa hàng, em nên làm gì để an toàn?",
+              "options": [
+                "Mở ra uống ngay không cần nhìn bao bì",
+                "Kiểm tra hạn sử dụng và nhãn mác xem hộp sữa còn dùng được không",
+                "Để hộp sữa ngoài nắng thật lâu rồi mới uống",
+                "Uống thử nếu thấy hộp bị rách hoặc phồng rộp"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c1-l3-q5",
+              "type": "scenario",
+              "prompt": "Thấy em nhỏ ôm bụng khóc đau đớn vì lỡ ăn nhầm hoa quả lạ, em nên làm gì?",
+              "options": [
+                "Báo ngay cho bố mẹ, người lớn hoặc nhờ hàng xóm xung quanh giúp đỡ",
+                "Cho em uống thêm nước ngọt rồi bảo em đi ngủ",
+                "Mắng em và bỏ đi chơi tiếp",
+                "Tự ý lấy thuốc trong tủ gia đình cho em uống"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g2-c1-l3-q6",
+              "type": "scenario",
+              "prompt": "Quy tắc quan trọng nhất giúp phòng tránh ngộ độc qua đường ăn uống là gì?",
+              "options": [
+                "\"Ăn chín, uống sôi\", bảo quản thức ăn cẩn thận và dùng thuốc theo chỉ dẫn của bác sĩ",
+                "Ăn rau sống chưa rửa và uống nước mưa trực tiếp",
+                "Để thức ăn thừa trên bàn qua đêm không che đậy",
+                "Tự ý mua và dùng các loại thuốc khi chưa có ý kiến bác sĩ"
+              ],
+              "correctIndex": 0
+            }
+          ]
+        },
+        {
+          "id": "l4-giu-sach-nha-o",
+          "lessonNumber": 4,
+          "title": "Bài 4: Giữ sạch nhà ở",
+          "description": "Thói quen vệ sinh và sắp xếp nhà cửa gọn gàng",
+          "questions": [
+            {
+              "id": "g2-c1-l4-q1",
+              "type": "scenario",
+              "prompt": "Hành động nào dưới đây thể hiện việc làm tích cực giúp giữ sạch nhà ở?",
+              "options": [
+                "Lau bàn ghế, quét sân và phụ mẹ rửa cốc chén",
+                "Bày đồ chơi ra sàn sau khi chơi xong không dọn",
+                "Để nguyên cốc uống nước bẩn trên bàn nhiều ngày",
+                "Vứt vỏ bánh kẹo và hộp sữa ra sàn nhà"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g2-c1-l4-q2",
+              "type": "scenario",
+              "prompt": "Việc giữ vệ sinh nhà ở sạch sẽ mang lại lợi ích gì cho gia đình em?",
+              "options": [
+                "Giúp nhà cửa thoáng mát, bảo vệ sức khỏe (\"Nhà sạch thì mát, bát sạch ngon cơm\")",
+                "Chỉ để nhà cửa trông đẹp hơn khi có khách đến thăm",
+                "Làm tốn sức lực và thời gian của mọi người",
+                "Không mang lại tác dụng gì rõ rệt"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g2-c1-l4-q3",
+              "type": "scenario",
+              "prompt": "Để rửa sạch bộ cốc chén dùng hằng ngày, em nên thực hiện theo trình tự nào?",
+              "options": [
+                "Rửa bằng giẻ lau bàn mà không cần xà phòng",
+                "Tráng nước sạch -> Tráng nước xà phòng -> Úp ngược lên giá",
+                "Rửa bằng nước rửa chén -> Tráng lại nhiều lần bằng nước sạch -> Úp gọn lên giá",
+                "Úp cốc chén bẩn lên giá để tự khô"
+              ],
+              "correctIndex": 2
+            },
+            {
+              "id": "g2-c1-l4-q4",
+              "type": "scenario",
+              "prompt": "Thấy phòng của bạn bát đĩa chất đống, rác xả bừa bãi, em nên khuyên bạn thế nào?",
+              "options": [
+                "\"Phòng bừa quá, chúng mình cùng nhau dọn dẹp cho sạch sẽ nhé!\"",
+                "Thản nhiên bước qua đống rác rồi rủ bạn đi chơi game",
+                "Xả thêm rác ra sàn nhà",
+                "Bỏ về nhà ngay lập tức không nói gì"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g2-c1-l4-q5",
+              "type": "scenario",
+              "prompt": "Tận dụng hộp giấy cũ làm thành \"Hộp đựng đồ dùng\", việc làm này có ý nghĩa gì?",
+              "options": [
+                "Giúp cất đồ gọn gàng và tái chế giảm rác thải",
+                "Làm cho nhà cửa chật chội thêm",
+                "Là trò chơi vô ích tốn thời gian",
+                "Làm tăng lượng rác thải trong nhà"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g2-c1-l4-q6",
+              "type": "scenario",
+              "prompt": "Để giữ nhà cửa luôn sạch đẹp hằng ngày, em nên thực hiện thói quen nào?",
+              "options": [
+                "Chờ đến khi nhà thật bẩn mới dọn một lần",
+                "Đổ toàn bộ việc dọn dẹp cho bố mẹ và người lớn",
+                "Chủ động làm việc nhà vừa sức như quét nhà, lau bàn, xếp đồ gọn gàng",
+                "Ăn uống xong vứt vỏ bánh kẹo xuống gầm giường"
+              ],
+              "correctIndex": 2
+            }
+          ]
+        },
+        {
+          "id": "l5-on-tap-chu-de-gia-dinh",
+          "lessonNumber": 5,
+          "title": "Bài 5: Ôn tập chủ đề Gia đình",
+          "description": "Tổng kết kiến thức và kỹ năng về chủ đề Gia đình",
+          "questions": [
+            {
+              "id": "g2-c1-l5-q1",
+              "type": "scenario",
+              "prompt": "Sơ đồ nhà bạn Hoa gồm: Ông bà -> Bố mẹ -> Hoa và em trai. Nhận xét nào dưới đây đúng?",
+              "options": [
+                "Gia đình Hoa có 2 thế hệ",
+                "Gia đình Hoa có 3 thế hệ: Ông bà (thế hệ 1), Bố mẹ (thế hệ 2), Hoa và em (thế hệ 3)",
+                "Gia đình Hoa có 4 thế hệ cùng chung sống",
+                "Tất cả các thành viên đều thuộc cùng một thế hệ"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c1-l5-q2",
+              "type": "scenario",
+              "prompt": "Bố tặng bà chiếc khăn ấm, Hoa chúc bà mạnh khỏe nhân ngày sinh nhật. Việc làm này thể hiện điều gì?",
+              "options": [
+                "Sự quan tâm, kính trọng và yêu thương giữa các thế hệ trong gia đình",
+                "Việc làm mang tính hình thức cho xong chuyện",
+                "Thói quen đòi hỏi quà từ ông bà",
+                "Sự chia rẽ giữa các thành viên trong nhà"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g2-c1-l5-q3",
+              "type": "scenario",
+              "prompt": "Điểm chung quan trọng nhất của các nghề nghiệp trong xã hội là gì?",
+              "options": [
+                "Đều mang lại lợi ích và tạo ra giá trị tốt đẹp cho xã hội",
+                "Đều là những công việc nhẹ nhàng, không vất vả",
+                "Đều làm việc ở cùng một địa điểm",
+                "Đều không cần phải học tập hay rèn luyện"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g2-c1-l5-q4",
+              "type": "scenario",
+              "prompt": "Hành động nào thể hiện em đã biết vận dụng bài học giữ sạch nhà ở vào cuộc sống?",
+              "options": [
+                "Thường xuyên quét nhà, lau bàn ghế, xếp gọn góc học tập và đồ chơi",
+                "Nhờ người khác dọn dẹp hộ phòng riêng của mình",
+                "Để đồ dùng học tập bừa bãi trên giường ngủ",
+                "Chờ bố mẹ nhắc nhở nhiều lần mới chịu làm"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g2-c1-l5-q5",
+              "type": "scenario",
+              "prompt": "Các chai lọ hóa chất (nước tẩy, thuốc diệt côn trùng, nước lau sàn) phải cất giữ ở đâu?",
+              "options": [
+                "Cất trong tủ hóa chất riêng biệt, để xa tầm tay trẻ em và xa thực phẩm",
+                "Để chung trong tủ đựng bánh kẹo và sữa",
+                "Đặt ngay trên bàn ăn để dễ lấy sử dụng",
+                "Đặt ở gầm bàn uống nước trong phòng khách"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g2-c1-l5-q6",
+              "type": "scenario",
+              "prompt": "Sau khi học xong Chủ đề Gia đình, em tự đánh giá mình đạt chuẩn khi nào?",
+              "options": [
+                "Biết làm việc nhà, kính trọng ông bà bố mẹ, biết các nghề nghiệp và giữ nhà cửa sạch sẽ, an toàn",
+                "Chỉ biết kể tên thành viên trong nhà nhưng không giúp đỡ công việc nhà",
+                "Biết cất đồ ăn nhưng vẫn uống thuốc không hỏi ý kiến bác sĩ",
+                "Không phân biệt được gia đình 2 thế hệ và 3 thế hệ"
+              ],
+              "correctIndex": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c2-truong-hoc",
+      "chapterNumber": 2,
+      "title": "Chủ đề 2: Trường học",
+      "lessons": [
+        {
+          "id": "l6-chao-don-ngay-khai-giang",
+          "lessonNumber": 6,
+          "title": "Bài 6: Chào đón ngày khai giảng",
+          "description": "Ý nghĩa của ngày khai trường và tinh thần năm học mới",
+          "questions": [
+            {
+              "id": "g2-c2-l6-q1",
+              "type": "scenario",
+              "prompt": "Sáng ngày 5 tháng 9, hoạt động nào dưới đây diễn ra trong buổi Lễ khai giảng tại trường?",
+              "options": [
+                "Đón các em học sinh lớp 1, chào cờ, nghe đọc thư và đánh trống khai trường",
+                "Kiểm tra bài cũ và thi học kỳ",
+                "Nghỉ hè tại nhà và đi du lịch",
+                "Tổ chức tổng kết cuối năm học và trao giấy khen"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g2-c2-l6-q2",
+              "type": "scenario",
+              "prompt": "Tiếng trống khai trường vang lên rộn rã. Ý nghĩa quan trọng nhất của Ngày khai giảng là gì?",
+              "options": [
+                "Là ngày đánh dấu sự bắt đầu của một năm học mới đầy hứa hẹn và niềm vui",
+                "Là ngày học sinh chỉ đến trường chơi rồi về ngay",
+                "Là ngày để các bạn mua sắm quần áo mới đi chơi",
+                "Là ngày không có ý nghĩa gì đặc biệt"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g2-c2-l6-q3",
+              "type": "scenario",
+              "prompt": "Để chuẩn bị cho ngày khai giảng thêm ý nghĩa, em và các bạn nên làm gì?",
+              "options": [
+                "Ngồi trong lớp làm việc riêng không quan tâm",
+                "Dọn vệ sinh sân trường, vẽ tranh chào mừng và chuẩn bị quà tặng bạn khó khăn",
+                "Bày rác ra sân trường sau giờ ra chơi",
+                "Đuổi bắt nhau gây mất trật tự trên sân khấu"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c2-l6-q4",
+              "type": "scenario",
+              "prompt": "Khi các bạn trong lớp đang trang trí phòng học và tập văn nghệ, em nên có thái độ như thế nào?",
+              "options": [
+                "Hào hứng, tự giác và tích cực tham gia các công việc vừa sức cùng các bạn",
+                "Đứng ngoài xem và chê bai công việc của các bạn",
+                "Bỏ đi chỗ khác chơi để tránh phải làm việc",
+                "Từ chối tham gia vì sợ bẩn tay chân"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g2-c2-l6-q5",
+              "type": "scenario",
+              "prompt": "Thấy các em học sinh lớp 1 còn bỡ ngỡ trong ngày khai trường, học sinh lớp 2 nên làm gì?",
+              "options": [
+                "Trêu chọc làm các em sợ hãi khóc lóc",
+                "Thờ ơ, ngó lơ coi như không quen biết",
+                "Mỉm cười, vỗ tay hoan hô vẫy chào và sẵn sàng chỉ đường giúp đỡ các em",
+                "Chen lấn xô đẩy các em khi xếp hàng"
+              ],
+              "correctIndex": 2
+            },
+            {
+              "id": "g2-c2-l6-q6",
+              "type": "scenario",
+              "prompt": "Khi chính thức bước vào năm học mới (Lớp 2), cảm xúc và tinh thần đúng đắn nhất của em là gì?",
+              "options": [
+                "Cảm thấy buồn chán vì không được nghỉ hè nữa",
+                "Tự hào vì đã lên lớp 2, vui vẻ gặp lại thầy cô, bạn bè và quyết tâm học tốt",
+                "Ngại ngùng không muốn đến trường",
+                "Muốn bỏ học để ở nhà xem tivi"
+              ],
+              "correctIndex": 1
+            }
+          ]
+        },
+        {
+          "id": "l7-ngay-hoi-doc-sach-cua-chung-em",
+          "lessonNumber": 7,
+          "title": "Bài 7: Ngày hội đọc sách của chúng em",
+          "description": "Phát triển văn hóa đọc và kỹ năng chia sẻ tri thức",
+          "questions": [
+            {
+              "id": "g2-c2-l7-q1",
+              "type": "scenario",
+              "prompt": "Hoạt động nào dưới đây diễn ra trong Ngày hội đọc sách tại trường?",
+              "options": [
+                "Quyên góp sách, trưng bày triển lãm sách, kể chuyện và cùng nhau đọc sách",
+                "Kiểm tra bài cũ và thi viết chữ đẹp",
+                "Tổ chức thi đấu bóng đá giữa các lớp",
+                "Mua bán đồ chơi và đồ ăn vặt"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g2-c2-l7-q2",
+              "type": "scenario",
+              "prompt": "Lợi ích quan trọng nhất của việc đọc sách là gì và Ngày Sách Việt Nam là ngày nào?",
+              "options": [
+                "Đọc sách giúp mở mang tri thức, khám phá thế giới; Ngày Sách Việt Nam là ngày 21 tháng 4",
+                "Đọc sách chỉ để giải trí khi buồn ngủ; Ngày Sách Việt Nam là ngày 1 tháng 1",
+                "Đọc sách làm tốn thời gian; Ngày Sách Việt Nam là ngày 5 tháng 9",
+                "Sách chỉ dùng để trang trí góc học tập"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g2-c2-l7-q3",
+              "type": "scenario",
+              "prompt": "Khi giới thiệu cuốn sách yêu thích trước lớp cho các bạn nghe, em nên nêu những thông tin nào?",
+              "options": [
+                "Chỉ giơ cuốn sách lên rồi đi về chỗ",
+                "Nêu tên sách, tên tác giả, các nhân vật và nội dung/bài học em ấn tượng nhất",
+                "Đọc thuộc lòng toàn bộ cuốn sách từ đầu đến cuối",
+                "Chỉ nói về giá tiền của cuốn sách"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c2-l7-q4",
+              "type": "scenario",
+              "prompt": "Hành động nào dưới đây thể hiện thái độ tích cực và thói quen đọc sách tốt của em?",
+              "options": [
+                "Tranh giành sách với bạn làm xé trang sách",
+                "Tự giác quyên góp sách cũ cho thư viện, giữ gìn sách cẩn thận và chia sẻ sách hay với bạn",
+                "Bỏ sách xuống sàn nhà sau khi đọc xong",
+                "Ngồi trong ngày hội đọc sách nhưng lại bấm điện thoại chơi game"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c2-l7-q5",
+              "type": "scenario",
+              "prompt": "Một kế hoạch đọc sách cá nhân hợp lý và hiệu quả cần có những thông tin nào?",
+              "options": [
+                "Tên cuốn sách dự định đọc, thời gian đọc hằng ngày và mục tiêu hoàn thành",
+                "Tên các loại truyện tranh bạo lực",
+                "Danh sách các trò chơi điện tử yêu thích",
+                "Thời gian đi chơi công viên vào cuối tuần"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g2-c2-l7-q6",
+              "type": "scenario",
+              "prompt": "Khi đến đọc sách tại thư viện trường, em nên có thói quen ứng xử nào?",
+              "options": [
+                "Giữ trật tự, bảo quản sách cẩn thận, trả sách đúng vị trí và đóng góp cho tủ sách chung",
+                "Nói chuyện to làm ảnh hưởng đến mọi người xung quanh",
+                "Vẽ bẩn và gạch xóa lên các trang sách",
+                "Giấu sách của thư viện mang về nhà làm của riêng"
+              ],
+              "correctIndex": 0
+            }
+          ]
+        },
+        {
+          "id": "l8-an-toan-khi-o-truong",
+          "lessonNumber": 8,
+          "title": "Bài 8: An toàn khi ở trường",
+          "description": "Phòng tránh tai nạn và chấn thương tại trường học",
+          "questions": [
+            {
+              "id": "g2-c2-l8-q1",
+              "type": "scenario",
+              "prompt": "Trong giờ ăn trưa và giờ ra chơi, hành động nào dưới đây nguy hiểm, dễ gây chấn thương?",
+              "options": [
+                "Chen lấn xô đẩy nhau khi bê khay thức ăn nóng hoặc chạy nhảy quanh khu vực bể bơi",
+                "Ngồi chơi cờ vua gọn gàng trên ghế đá sân trường",
+                "Xếp hàng trật tự khi nhận phần ăn trưa",
+                "Tập thể dục và nhảy dây nhẹ nhàng dưới bóng cây"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g2-c2-l8-q2",
+              "type": "scenario",
+              "prompt": "Đùa nghịch cầm vật sắc nhọn (kéo, dao nhỏ) khi làm vườn trường có thể dẫn đến nguy cơ nào?",
+              "options": [
+                "Giúp học sinh học tập tốt hơn",
+                "Dễ văng trúng bạn bè, gây chảy máu, tổn thương mắt hoặc ngã đau",
+                "Giúp sân trường luôn sạch đẹp",
+                "Không gây ra nguy hiểm gì"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c2-l8-q3",
+              "type": "scenario",
+              "prompt": "Khi tham gia vệ sinh sân trường, việc nào dưới đây thuộc nhóm NÊN làm để đảm bảo an toàn?",
+              "options": [
+                "Đuổi bắt nhau quanh các gốc cây to",
+                "Đeo khẩu trang, găng tay bảo hộ và làm theo hướng dẫn của thầy cô",
+                "Cầm chổi quét rác đùa giỡn, chọc vào người bạn",
+                "Chạy nhảy trên thảm cỏ ướt trơn trượt"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c2-l8-q4",
+              "type": "scenario",
+              "prompt": "Thấy bạn rủ vào khu vực bể bơi có biển báo \"CẤM TUYỂN Ý VÀO\", em nên ứng xử thế nào?",
+              "options": [
+                "Đồng ý chạy ngay vào bể bơi chơi cùng bạn",
+                "Khuyên bạn: \"Không được đâu, có biển cấm kìa! Tự ý vào nguy hiểm, dễ bị đuối nước lắm!\"",
+                "Bỏ đi giấu đồ đạc của bạn",
+                "Chờ bạn nhảy xuống nước rồi mới chạy đi báo cô giáo"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c2-l8-q5",
+              "type": "scenario",
+              "prompt": "Thấy bạn tò mò dùng que nhỏ định cắm vào ổ điện trong lớp, em nên làm gì?",
+              "options": [
+                "Đứng xem điều gì sẽ xảy ra",
+                "Giật mạnh que từ tay bạn ra không nói gì",
+                "Cản bạn lại ngay: \"Nghịch ổ điện bị điện giật đấy!\" rồi báo thầy cô",
+                "Reo hò cổ vũ bạn cắm tiếp"
+              ],
+              "correctIndex": 2
+            },
+            {
+              "id": "g2-c2-l8-q6",
+              "type": "scenario",
+              "prompt": "Để thực hiện tốt cam kết giữ an toàn ở trường, em nên duy trì thói quen nào?",
+              "options": [
+                "Không nghịch nước trơn trượt, không xô đẩy và tuân thủ các biển cảnh báo nguy hiểm",
+                "Chỉ chấp hành quy định an toàn khi có thầy cô đứng nhìn",
+                "Thoải mái leo trèo lên lan can cầu thang khi vắng người",
+                "Tự ý tháo mở các thiết bị điện trong lớp học"
+              ],
+              "correctIndex": 0
+            }
+          ]
+        },
+        {
+          "id": "l9-giu-ve-sinh-truong-hoc",
+          "lessonNumber": 9,
+          "title": "Bài 9: Giữ vệ sinh trường học",
+          "description": "Chăm sóc cây xanh và giữ gìn cảnh quan lớp học",
+          "questions": [
+            {
+              "id": "g2-c2-l9-q1",
+              "type": "scenario",
+              "prompt": "Sau ngày lễ hội, sân trường có nhiều rác thải, vỏ hộp sữa và giấy vụn vứt bừa bãi. Cảnh tượng đó cho em cảm nhận gì?",
+              "options": [
+                "Cảnh quan rất sạch sẽ và đẹp mắt",
+                "Sân trường mất vệ sinh, gây mất mỹ quan và cần được thu gom dọn dẹp ngay",
+                "Càng nhiều rác sân trường càng thêm nhộn nhịp",
+                "Không ảnh hưởng gì đến không gian học tập"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c2-l9-q2",
+              "type": "scenario",
+              "prompt": "Một bạn chạy nhảy trên hành lang khi sàn nhà vừa mới lau ướt, một bạn ném vỏ hộp nước xuống gốc cây. Em nhận xét thế nào?",
+              "options": [
+                "Đây là những hành vi chưa đúng vì làm mất vệ sinh và dễ gây trượt ngã nguy hiểm",
+                "Bạn ném vỏ hộp nước làm đúng, bạn chạy nhảy làm sai",
+                "Cả hai bạn đều đang giữ gìn vệ sinh trường học tốt",
+                "Đó là những việc làm bình thường không cần nhắc nhở"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g2-c2-l9-q3",
+              "type": "scenario",
+              "prompt": "Sau khi kết thúc buổi lễ 20-11 ở trường, em và các bạn nên làm gì để giữ trường lớp sạch đẹp?",
+              "options": [
+                "Bỏ về lớp ngay để mặc rác trên sân trường",
+                "Cùng nhau quét dọn sân trường, thu gom rác bỏ vào thùng và xếp gọn ghế ngồi",
+                "Đuổi bắt nhau làm xô lệch hàng ghế",
+                "Xé vụn thêm giấy rải ra sân"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c2-l9-q4",
+              "type": "scenario",
+              "prompt": "Để góp phần giữ sạch trường lớp và hưởng ứng phong trào trồng, chăm sóc cây xanh, em nên làm gì?",
+              "options": [
+                "Bẻ cành, ngắt hoa trong bồn hoa của lớp",
+                "Thường xuyên tưới nước, nhặt lá khô, bắt sâu và chăm sóc cây xanh quanh lớp",
+                "Giẫm đạp lên cỏ xanh ở sân trường",
+                "Đổ nước thải bẩn vào bồn hoa"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c2-l9-q5",
+              "type": "scenario",
+              "prompt": "Khi tham gia buổi vệ sinh lao động sân trường cùng cả lớp, em cần làm gì để đảm bảo an toàn, vệ sinh?",
+              "options": [
+                "Đi chân đất, không mang dụng cụ gì",
+                "Đeo khẩu trang, găng tay, dùng chổi, thùng rác và bình tưới nước để làm việc an toàn",
+                "Dùng chổi đùa giỡn, quơ vào người các bạn",
+                "Đứng nhìn các bạn làm còn mình ngồi chơi"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c2-l9-q6",
+              "type": "scenario",
+              "prompt": "Để thực hiện dự án \"Làm xanh trường lớp\" đạt kết quả tốt, các nhóm nên thực hiện theo quy trình nào?",
+              "options": [
+                "Chuẩn bị cây xanh -> Trồng cây ở \"Công trình măng non\" -> Tưới nước, chăm sóc và chia sẻ kết quả",
+                "Hái cây của trường mang về nhà trồng",
+                "Mua cây về để trong cặp sách không tưới nước",
+                "Nhổ cây của lớp khác mang sang lớp mình"
+              ],
+              "correctIndex": 0
+            }
+          ]
+        },
+        {
+          "id": "l10-on-tap-chu-de-truong-hoc",
+          "lessonNumber": 10,
+          "title": "Bài 10: Ôn tập chủ đề Trường học",
+          "description": "Tổng hợp kiến thức và hoạt động trường học",
+          "questions": [
+            {
+              "id": "g2-c2-l10-q1",
+              "type": "scenario",
+              "prompt": "Triển lãm tranh ảnh về các sự kiện trường học giúp em thể hiện điều gì?",
+              "options": [
+                "Giới thiệu các hoạt động nổi bật ở trường và chia sẻ cảm nhận, niềm vui của bản thân",
+                "So sánh xem bức tranh của bạn nào đắt tiền hơn",
+                "Khoe khoang đồ dùng cá nhân với các bạn",
+                "Phê bình bài vẽ của các nhóm khác"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g2-c2-l10-q2",
+              "type": "scenario",
+              "prompt": "Tham gia các sự kiện như Khai giảng, Ngày hội đọc sách, 20-11 mang lại ý nghĩa gì cho em?",
+              "options": [
+                "Cảm thấy mệt mỏi vì phải tập luyện nhiều",
+                "Tăng thêm tình yêu trường lớp, sự gắn kết với thầy cô, bạn bè và động lực học tập",
+                "Chỉ để có cớ nghỉ các tiết học trên lớp",
+                "Không mang lại ý nghĩa gì cho học sinh"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c2-l10-q3",
+              "type": "scenario",
+              "prompt": "Thấy bạn uống xong hộp sữa vứt ngay vỏ xuống sân trường, em nên xử lý thế nào?",
+              "options": [
+                "Mặc kệ vì không phải rác do mình vứt ra",
+                "Nhắc bạn nhặt vỏ hộp sữa bỏ vào thùng rác và cùng bạn thu gom rác xung quanh",
+                "Nhặt vỏ hộp sữa ném sang chỗ khác",
+                "Quăng thêm rác của mình ra bên cạnh vỏ hộp sữa của bạn"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c2-l10-q4",
+              "type": "scenario",
+              "prompt": "Thấy hai bạn nam rướn người qua lan can tầng 2 để phi máy bay giấy, em nên làm gì?",
+              "options": [
+                "Chạy lại reo hò cổ vũ các bạn phi máy bay xa hơn",
+                "Khuyên ngăn bạn ngay: \"Đừng rướn người qua lan can, làm thế rất nguy hiểm, dễ ngã xuống dưới đấy!\"",
+                "Mượn máy bay giấy của bạn để tự mình phi thử",
+                "Bỏ đi giấu cặp sách của bạn"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c2-l10-q5",
+              "type": "scenario",
+              "prompt": "Khi báo cáo kết quả Dự án \"Làm xanh trường lớp\", nội dung nào cần được trình bày đầy đủ?",
+              "options": [
+                "Tên loại cây, số lượng cây, các hoạt động chăm sóc (tưới nước, nhặt lá) và cảm nhận của nhóm",
+                "Giá tiền của chậu cây mua ngoài cửa hàng",
+                "Danh sách các bạn không đi làm dự án",
+                "Kể tên các loại cây không sống được ở trường"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g2-c2-l10-q6",
+              "type": "scenario",
+              "prompt": "Lời khẳng định \"Trường học là ngôi nhà thứ hai của em\" nhắc nhở em đạt được những năng lực nào?",
+              "options": [
+                "Kể được các sự kiện ở trường, phòng tránh nguy hiểm và luôn tự giác giữ trường lớp sạch đẹp",
+                "Biết tên các sự kiện nhưng không tham gia dọn vệ sinh sân trường",
+                "Nhận biết tình huống nguy hiểm nhưng vẫn đùa giỡn trên lan can",
+                "Chỉ chăm sóc cây xanh ở nhà chứ không chăm sóc cây xanh ở trường"
+              ],
+              "correctIndex": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c3-cong-dong-dia-phuong",
+      "chapterNumber": 3,
+      "title": "Chủ đề 3: Cộng đồng địa phương",
+      "lessons": [
+        {
+          "id": "l11-hoat-dong-mua-ban-hang-hoa",
+          "lessonNumber": 11,
+          "title": "Bài 11: Hoạt động mua bán hàng hoá",
+          "description": "Hàng hóa thiết yếu và phương thức mua sắm văn minh",
+          "questions": [
+            {
+              "id": "g2-c3-l11-q1",
+              "type": "scenario",
+              "prompt": "Những mặt hàng nào dưới đây thuộc nhóm thực phẩm và đồ dùng thiết yếu phục vụ cuộc sống hằng ngày?",
+              "options": [
+                "Gạo, dầu ăn, nước mắm, thịt, cá, rau củ và thuốc chữa bệnh",
+                "Đồ chơi điện tử, truyện tranh bạo lực",
+                "Vé xem phim, đồ trang sức đắt tiền",
+                "Hoa quả nhựa trang trí, mô hình xe đồ chơi"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g2-c3-l11-q2",
+              "type": "scenario",
+              "prompt": "Thiếu các hàng hóa thiết yếu như thực phẩm, trang phục, đồ dùng học tập và thuốc men, cuộc sống gia đình sẽ ra sao?",
+              "options": [
+                "Cuộc sống vẫn bình thường không có thay đổi gì",
+                "Gặp nhiều khó khăn, ảnh hưởng trực tiếp đến sức khỏe, sinh hoạt và học tập",
+                "Giúp gia đình tiết kiệm được nhiều tiền hơn",
+                "Làm cho nhà cửa trở nên rộng rãi hơn"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c3-l11-q3",
+              "type": "scenario",
+              "prompt": "Điểm khác biệt chính giữa việc mua hàng ở siêu thị và ở chợ truyền thống là gì?",
+              "options": [
+                "Siêu thị niêm yết giá cố định và xếp theo quầy; chợ truyền thống hỏi giá trực tiếp với người bán",
+                "Ở chợ chỉ bán đồ dùng học tập, ở siêu thị chỉ bán rau củ",
+                "Siêu thị không cho tự chọn hàng, còn chợ thì bắt buộc",
+                "Mua hàng ở chợ không bao giờ dùng tiền"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g2-c3-l11-q4",
+              "type": "scenario",
+              "prompt": "Việc hỏi thông tin và quan sát cẩn thận trước khi mua hàng hóa giúp chúng ta điều gì?",
+              "options": [
+                "Lựa chọn được hàng hóa chất lượng, tươi ngon và an toàn cho sức khỏe",
+                "Làm cho người bán hàng khó chịu và không bán nữa",
+                "Để kéo dài thời gian đi chơi trong cửa hàng",
+                "Không có tác dụng gì vì loại nào cũng như nhau"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g2-c3-l11-q5",
+              "type": "scenario",
+              "prompt": "Cách sắp xếp danh sách mua đồ dùng học tập theo thứ tự ưu tiên hợp lý nhất là gì?",
+              "options": [
+                "Mua đồ chơi đắt tiền trước -> Mua bánh kẹo -> Mua bút viết sau cùng",
+                "Liệt kê các đồ dùng thực sự cần thiết trước (bút, vở, thước) -> Xác định số lượng -> Lựa chọn nơi mua",
+                "Thấy bạn mua đồ gì là mình mua hết đồ đó không cần tính toán",
+                "Mua thật nhiều hộp bút màu đắt tiền dù ở nhà vẫn còn dùng tốt"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c3-l11-q6",
+              "type": "scenario",
+              "prompt": "Thói quen tiêu dùng thông minh và bảo vệ môi trường khi đi mua sắm cùng bố mẹ là gì?",
+              "options": [
+                "Luôn đòi bố mẹ mua tất cả những đồ chơi mình nhìn thấy",
+                "Kiểm tra hạn sử dụng, giá cả, chất lượng và mang theo túi vải để hạn chế túi nilon",
+                "Vứt bao bì rác thải ngay tại lối đi của siêu thị",
+                "Chỉ chọn những sản phẩm có hình dáng lạ mắt không quan tâm chất lượng"
+              ],
+              "correctIndex": 1
+            }
+          ]
+        },
+        {
+          "id": "l12-thuc-hanh-mua-ban-hang-hoa",
+          "lessonNumber": 12,
+          "title": "Bài 12: Thực hành mua bán hàng hoá",
+          "description": "Kỹ năng tính tiền, giao tiếp và tiêu dùng thông minh",
+          "questions": [
+            {
+              "id": "g2-c3-l12-q1",
+              "type": "scenario",
+              "prompt": "Muốn mua một cây bút chì ở gian hàng đồ dùng học tập, em nên thể hiện thái độ và lời nói như thế nào?",
+              "options": [
+                "Cầm ngay cây bút chì chạy đi không nói gì",
+                "Chào bạn bán hàng và hỏi lễ phép: \"Bạn ơi, cây bút chì này giá bao nhiêu tiền vậy?\"",
+                "Đòi bạn bán hàng phải cho không cây bút chì",
+                "Hét to yêu cầu bạn phải bán ngay cho mình"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c3-l12-q2",
+              "type": "scenario",
+              "prompt": "Được phân công làm người bán hàng ở hội chợ của trường, em nên làm gì để thu hút khách hàng?",
+              "options": [
+                "Ngồi bấm điện thoại không thèm trả lời khách mua",
+                "Niềm nở, mỉm cười chào khách, giới thiệu sản phẩm tươi ngon và báo giá rõ ràng",
+                "Quát mắng khi thấy bạn nhỏ đứng xem hàng quá lâu",
+                "Tự ý tăng giá hàng hóa lên gấp đôi đối với người quen"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c3-l12-q3",
+              "type": "scenario",
+              "prompt": "Minh dùng 20.000 đồng để mua quyển sổ giá 15.000 đồng. Minh cần chú ý điều gì khi nhận lại tiền thừa?",
+              "options": [
+                "Cầm tiền thừa nhét ngay vào túi không cần đếm",
+                "Nhẩm tính tiền thừa (20.000-15.000=5.000 đồng) và đếm kỹ lại trước khi rời đi",
+                "Đòi người bán phải trả lại 10.000 đồng",
+                "Bỏ luôn tiền thừa không lấy lại"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c3-l12-q4",
+              "type": "scenario",
+              "prompt": "Khi tham gia mua sắm bánh kẹo, hành vi nào thể hiện em là người tiêu dùng thông minh?",
+              "options": [
+                "Chọn mua gói bánh có vỏ hộp bị móp xé, không rõ hạn sử dụng",
+                "Kiểm tra kỹ nhãn mác, hạn sử dụng, bao bì nguyên vẹn và giá tiền vừa túi tiền",
+                "Mua thật nhiều bánh kẹo đắt tiền dù không dùng đến",
+                "Bóc gói bánh ra ăn thử trước khi trả tiền"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c3-l12-q5",
+              "type": "scenario",
+              "prompt": "Khi đi chợ hoặc tham gia hội chợ mua sắm, thói quen tốt nào giúp bảo vệ môi trường?",
+              "options": [
+                "Xin thật nhiều túi nilon nhỏ đựng riêng từng món đồ",
+                "Mang theo túi vải/túi dùng nhiều lần để hạn chế tối đa việc sử dụng túi nilon",
+                "Vứt túi nilon ngay tại gian hàng sau khi lấy đồ",
+                "Không cần đựng đồ vào đâu, thả rơi trên đường"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c3-l12-q6",
+              "type": "scenario",
+              "prompt": "Lời nhắn nhở về tiêu dùng văn minh khuyên em thực hiện thói quen chi tiêu như thế nào?",
+              "options": [
+                "Chỉ mua những thứ thật sự cần thiết, biết trân trọng tiền bạc và giữ thái độ lịch sự",
+                "Có bao nhiêu tiền mua hết bấy nhiêu đồ chơi",
+                "Luôn đòi mua đồ đắt nhất để khoe với bạn bè",
+                "Không cần quan tâm đến thái độ khi giao tiếp với người bán hàng"
+              ],
+              "correctIndex": 0
+            }
+          ]
+        },
+        {
+          "id": "l13-hoat-dong-giao-thong",
+          "lessonNumber": 13,
+          "title": "Bài 13: Hoạt động giao thông",
+          "description": "Các loại hình và phương tiện giao thông chính",
+          "questions": [
+            {
+              "id": "g2-c3-l13-q1",
+              "type": "scenario",
+              "prompt": "Nước ta có những loại hình giao thông chính nào?",
+              "options": [
+                "Giao thông đường bộ, đường sắt, đường thủy và đường hàng không",
+                "Chỉ có giao thông đường bộ và đường thủy",
+                "Chỉ có giao thông đường hàng không",
+                "Giao thông đường cống và đường đi bộ"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g2-c3-l13-q2",
+              "type": "scenario",
+              "prompt": "Việc sắp xếp phương tiện với loại hình giao thông nào sau đây là chính xác?",
+              "options": [
+                "Xe máy – Đường thủy; Máy bay – Đường bộ; Tàu hỏa – Đường sắt",
+                "Xe máy – Đường bộ; Máy bay – Đường hàng không; Tàu hỏa – Đường sắt",
+                "Xe máy – Đường sắt; Máy bay – Đường bộ; Tàu hỏa – Đường thủy",
+                "Xe máy – Đường hàng không; Máy bay – Đường sắt; Tàu hỏa – Đường bộ"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c3-l13-q3",
+              "type": "scenario",
+              "prompt": "Tiện ích quan trọng nhất của các phương tiện giao thông là gì?",
+              "options": [
+                "Giúp chở người, vận chuyển hàng hóa đến mọi nơi nhanh chóng và thuận tiện",
+                "Chỉ làm cho đường phố thêm đông đúc",
+                "Để mọi người đua xe giải trí khi rảnh rỗi",
+                "Tạo ra tiếng ồn trên đường phố"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g2-c3-l13-q4",
+              "type": "scenario",
+              "prompt": "Ở khu vực vùng sông nước Nam Bộ hoặc hải đảo, người dân thường sử dụng chủ yếu phương tiện nào?",
+              "options": [
+                "Tàu hỏa, xe điện",
+                "Xuồng, thuyền, đò, tàu thủy",
+                "Xe buýt, xe tải lớn",
+                "Máy bay chở khách"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c3-l13-q5",
+              "type": "scenario",
+              "prompt": "Khi đi trên xe buýt hoặc tàu hỏa, em nên thực hiện hành động nào để đảm bảo an toàn và văn minh?",
+              "options": [
+                "Thò đầu, thò tay ra ngoài cửa sổ xe đang chạy",
+                "Hét to, chạy nhảy lung tung giữa các dãy ghế",
+                "Giữ trật tự, ngồi đúng vị trí, nhường ghế cho người già, em nhỏ và không vứt rác bừa bãi",
+                "Tự ý mở cửa ra vào khi xe đang di chuyển"
+              ],
+              "correctIndex": 2
+            },
+            {
+              "id": "g2-c3-l13-q6",
+              "type": "scenario",
+              "prompt": "Lời khuyên về sử dụng phương tiện giao thông an toàn nhắc nhở em điều gì?",
+              "options": [
+                "Tuân thủ Luật Giao thông, chấp hành các quy định an toàn để bảo vệ bản thân và mọi người",
+                "Tự điều khiển xe máy đi học khi chưa đủ tuổi",
+                "Leo trèo lên đường sắt chơi khi không có tàu chạy",
+                "Ném đá lên các phương tiện giao thông đang chạy"
+              ],
+              "correctIndex": 0
+            }
+          ]
+        },
+        {
+          "id": "l14-cung-tham-gia-giao-thong",
+          "lessonNumber": 14,
+          "title": "Bài 14: Cùng tham gia giao thông",
+          "description": "Chấp hành luật lệ và văn hóa giao thông",
+          "questions": [
+            {
+              "id": "g2-c3-l14-q1",
+              "type": "scenario",
+              "prompt": "Hành vi nào dưới đây chấp hành đúng quy định an toàn khi tham gia giao thông?",
+              "options": [
+                "Đội mũ bảo hiểm khi đi xe máy, thắt dây an toàn khi đi ô tô, mặc áo phao khi đi thuyền",
+                "Thả hai tay và hai chân khỏi bàn đạp khi đi xe đạp xuống dốc",
+                "Không đội mũ bảo hiểm và vừa đi xe máy vừa đeo tai nghe",
+                "Đuổi bắt nhau đùa giỡn chạy theo sau xe ô tô đang chạy"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g2-c3-l14-q2",
+              "type": "scenario",
+              "prompt": "Rủ nhau ra khu vực đường sắt chơi và đi bộ trên đường ray tiềm ẩn nguy cơ nguy hiểm nào?",
+              "options": [
+                "Làm bẩn đôi giày đang đi",
+                "Tàu hỏa chạy rất nhanh có thể đến bất ngờ, dễ gây tai nạn nghiêm trọng",
+                "Giúp hai bạn rèn luyện thể thao tốt hơn",
+                "Không có nguy hiểm gì vì đường ray rất rộng"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c3-l14-q3",
+              "type": "scenario",
+              "prompt": "Thấy người thân đã uống rượu, bia nhưng vẫn dắt xe máy định tự lái về, em nên làm gì?",
+              "options": [
+                "Nhảy lên xe để chở về cho nhanh",
+                "Lễ phép ngăn lại, giải thích uống rượu bia lái xe rất nguy hiểm và nhờ gọi xe taxi/xe ôm",
+                "Bỏ đi chơi không quan tâm",
+                "Cổ vũ lái xe nhanh hơn"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c3-l14-q4",
+              "type": "scenario",
+              "prompt": "Rào chắn đường ray đã đóng và chuông báo kêu, thấy bạn định chui qua rào chắn, em sẽ làm gì?",
+              "options": [
+                "Giữ bạn lại ngay: \"Cậu đừng chui qua! Nguy hiểm lắm, tàu sắp đến rồi!\"",
+                "Chui qua rào chắn cùng bạn cho vui",
+                "Đứng xem xem bạn có qua kịp không",
+                "Hét to xúi bạn chạy thật nhanh lên"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g2-c3-l14-q5",
+              "type": "scenario",
+              "prompt": "Việc làm nào dưới đây phù hợp để học sinh lớp 2 tuyên truyền an toàn giao thông?",
+              "options": [
+                "Vẽ tranh tuyên truyền (đội mũ bảo hiểm, mặc áo phao) và chia sẻ với các bạn",
+                "Ra giữa ngã tư đường đứng phân luồng giao thông",
+                "Tự ý thu giữ xe của người vi phạm",
+                "Không cần làm gì vì là việc của người lớn"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g2-c3-l14-q6",
+              "type": "scenario",
+              "prompt": "Chấp hành nghiêm túc các quy định khi tham gia giao thông mang lại ý nghĩa gì?",
+              "options": [
+                "Bảo vệ an toàn tính mạng và sức khỏe cho bản thân, gia đình và mọi người",
+                "Chỉ để không bị cảnh sát giao thông phạt tiền",
+                "Giúp mình đi đến nơi nhanh hơn các xe khác",
+                "Để làm cho đường phố thêm đông đúc"
+              ],
+              "correctIndex": 0
+            }
+          ]
+        },
+        {
+          "id": "l15-on-tap-chu-de-cong-dong-dia-phuong",
+          "lessonNumber": 15,
+          "title": "Bài 15: Ôn tập chủ đề Cộng đồng địa phương",
+          "description": "Tổng hợp kiến thức hàng hóa và an toàn giao thông",
+          "questions": [
+            {
+              "id": "g2-c3-l15-q1",
+              "type": "scenario",
+              "prompt": "Nhóm hàng hóa nào dưới đây được phân loại đúng theo nhu cầu sử dụng thiết yếu hằng ngày?",
+              "options": [
+                "Thực phẩm (cá, thịt, rau củ, sữa); Đồ dùng (tủ lạnh, tivi); Trang phục (quần áo, giày dép, mũ)",
+                "Thực phẩm (đồ chơi nhựa, hoa giả); Đồ dùng (vở vẽ); Trang phục (khuôn bánh)",
+                "Thực phẩm (sách giáo khoa); Đồ dùng (rau muống); Trang phục (nước uống)",
+                "Thực phẩm (áo mưa); Đồ dùng (thịt lợn); Trang phục (máy hút bụi)"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g2-c3-l15-q2",
+              "type": "scenario",
+              "prompt": "Khi cùng mẹ đi chợ mua thực phẩm, em cần chú ý những tiêu chí nào để đảm bảo sức khỏe?",
+              "options": [
+                "Chọn hàng giá rẻ nhất bất kể bị ôi thiu hay dập nát",
+                "Chọn thực phẩm tươi sống, không có mùi lạ, còn hạn sử dụng, rõ nguồn gốc và giá cả phù hợp",
+                "Chọn những loại bánh kẹo có màu sắc thật sặc sỡ mà không có nhãn mác",
+                "Mua thật nhiều đồ ăn đóng hộp sắp hết hạn để tiết kiệm tiền"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c3-l15-q3",
+              "type": "scenario",
+              "prompt": "Biển báo giao thông hình tròn viền đỏ, nền trắng, ở giữa có hình chiếc xe máy mang ý nghĩa gì?",
+              "options": [
+                "Biển báo chỉ dẫn có bệnh viện ở phía trước",
+                "Biển báo cấm xe máy đi vào",
+                "Biển cảnh báo đường phía trước trơn trượt",
+                "Biển báo cho phép xe máy chạy tốc độ cao"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c3-l15-q4",
+              "type": "scenario",
+              "prompt": "Vì sao mọi người khi tham gia giao thông đều phải nghiêm túc chấp hành biển báo giao thông?",
+              "options": [
+                "Để không bị người khác chê cười",
+                "Để đảm bảo an toàn tính mạng, sức khỏe cho bản thân và mọi người xung quanh",
+                "Để di chuyển nhanh hơn các xe khác",
+                "Vì bị người lớn bắt buộc chứ không có lợi ích gì"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c3-l15-q5",
+              "type": "scenario",
+              "prompt": "Để tuyên truyền an toàn giao thông cho mọi người, em có thể làm sản phẩm nào?",
+              "options": [
+                "Vẽ hoặc cắt dán mô hình các biển báo giao thông quen thuộc để giới thiệu với bạn bè và người thân",
+                "Tự làm biển báo giả để cắm ra ngoài đường",
+                "Viết thư phàn nàn về tình trạng tắc đường",
+                "Xé bỏ các biển báo giao thông trên đường"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g2-c3-l15-q6",
+              "type": "scenario",
+              "prompt": "Sau khi học xong Chủ đề Cộng đồng địa phương, em tự đánh giá mình đạt chuẩn khi nào?",
+              "options": [
+                "Biết lựa chọn hàng hóa phù hợp, tham gia giao thông an toàn và tuyên truyền mọi người cùng chấp hành",
+                "Biết tên các phương tiện nhưng không cần tuân theo biển báo giao thông",
+                "Biết đi siêu thị nhưng không biết kiểm tra hạn sử dụng hàng hóa",
+                "Chỉ biết mua đồ chơi đắt tiền khi đi chợ"
+              ],
+              "correctIndex": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c4-thuc-vat-va-dong-vat",
+      "chapterNumber": 4,
+      "title": "Chủ đề 4: Thực vật và Động vật",
+      "lessons": [
+        {
+          "id": "l16-thuc-vat-song-o-dau",
+          "lessonNumber": 16,
+          "title": "Bài 16: Thực vật sống ở đâu?",
+          "description": "Môi trường sống trên cạn và dưới nước của thực vật",
+          "questions": [
+            {
+              "id": "g2-c4-l16-q1",
+              "type": "scenario",
+              "prompt": "Các cây như cây phượng, cây thông, cây bàng và cây hoa hồng có chung môi trường sống nào?",
+              "options": [
+                "Sống bám trên mặt nước",
+                "Sống hoàn toàn dưới đáy hồ",
+                "Sống trên cạn (trên mặt đất hoặc bám vào thân cây khác)",
+                "Chỉ sống được ở nơi băng tuyết phủ quanh năm"
+              ],
+              "correctIndex": 2
+            },
+            {
+              "id": "g2-c4-l16-q2",
+              "type": "scenario",
+              "prompt": "Môi trường sống tự nhiên của cây hoa sen, cây bèo tây và cây rong đuôi chó là ở đâu?",
+              "options": [
+                "Sống trên cạn",
+                "Sống dưới nước (trên mặt nước hoặc trong lòng nước)",
+                "Sống trên tường gạch khô ráo",
+                "Sống trong lòng đất ngầm không có nước"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c4-l16-q3",
+              "type": "scenario",
+              "prompt": "Nhóm nào dưới đây gồm hoàn toàn các cây sống dưới nước?",
+              "options": [
+                "Cây súng, cây bèo tấm, cây lúa nước",
+                "Cây hoa mai, cây xương rồng, cây súng",
+                "Cây bèo tấm, cây xương rồng, cây hoa mai",
+                "Cây lúa nước, cây xương rồng, cây bèo tấm"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g2-c4-l16-q4",
+              "type": "scenario",
+              "prompt": "Cây xương rồng có lá biến thành gai và thân mọng nước giúp cây thích nghi với môi trường sống nào?",
+              "options": [
+                "Môi trường ngập nước quanh năm",
+                "Môi trường khô hạn, thiếu nước như hoang mạc, sa mạc",
+                "Môi trường lòng sông sâu thẳm",
+                "Môi trường đỉnh núi tuyết lạnh giá"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c4-l16-q5",
+              "type": "scenario",
+              "prompt": "Nhổ khóm hoa sen dưới ao mang trồng lên chậu đất khô ráo làm hoa sen bị héo úa. Nguyên nhân là do đâu?",
+              "options": [
+                "Vì hoa sen không thích ánh nắng mặt trời",
+                "Vì hoa sen sống dưới nước, khi chuyển sang đất khô thiếu nước cây không sống được",
+                "Vì tưới quá nhiều nước cho chậu đất",
+                "Vì chậu đất bị sâu bệnh phá hoại"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c4-l16-q6",
+              "type": "scenario",
+              "prompt": "Để cây cối xung quanh luôn phát triển xanh tốt, em nên thực hiện hành động nào?",
+              "options": [
+                "Thường xuyên bẻ cành, ngắt lá và vứt rác thải làm ô nhiễm đất, nước",
+                "Tưới nước, bắt sâu, giữ vệ sinh nguồn nước và không phá hoại nơi sống của thực vật",
+                "Đổ dung dịch xà phòng bẩn vào gốc cây hằng ngày",
+                "Bắt tất cả các loại côn trùng quanh cây"
+              ],
+              "correctIndex": 1
+            }
+          ]
+        },
+        {
+          "id": "l17-dong-vat-song-o-dau",
+          "lessonNumber": 17,
+          "title": "Bài 17: Động vật sống ở đâu?",
+          "description": "Môi trường sống đa dạng của các loài động vật",
+          "questions": [
+            {
+              "id": "g2-c4-l17-q1",
+              "type": "scenario",
+              "prompt": "Con bò, con gà, con chó, con hươu và con chim bồ câu có môi trường sống tự nhiên ở đâu?",
+              "options": [
+                "Sống hoàn toàn dưới đáy biển",
+                "Sống trên cạn (trên mặt đất, trong lòng đất hoặc trên không)",
+                "Sống chìm sâu dưới bùn ao",
+                "Chỉ sống trong môi trường đóng băng quanh năm"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c4-l17-q2",
+              "type": "scenario",
+              "prompt": "Cá, tôm, mực, cua biển và cá heo có môi trường sống ở đâu?",
+              "options": [
+                "Sống dưới nước (ao, hồ, sông hoặc biển)",
+                "Sống trên ngọn cây cao",
+                "Sống trên bãi cát khô ráo",
+                "Sống trong tủ lạnh gia đình"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g2-c4-l17-q3",
+              "type": "scenario",
+              "prompt": "Con ếch, con rùa, con cá sấu có đặc điểm môi trường sống đặc biệt nào?",
+              "options": [
+                "Chỉ sống được trên cạn, gặp nước sẽ bị chết",
+                "Sống vừa trên cạn, vừa dưới nước",
+                "Chỉ sống trên không trung",
+                "Chỉ sống ở môi trường băng tuyết"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c4-l17-q4",
+              "type": "scenario",
+              "prompt": "Đáp án nào dưới đây ghép đúng tên con vật với môi trường sống tương ứng?",
+              "options": [
+                "Con cá cờ - Trên cạn; Con thỏ - Dưới nước; Con ếch - Vừa trên cạn vừa dưới nước",
+                "Con thỏ - Trên cạn; Con cá cờ - Dưới nước; Con ếch - Vừa trên cạn vừa dưới nước",
+                "Con chim sâu - Dưới nước; Con tôm - Trên cạn; Con bò - Vừa trên cạn vừa dưới nước",
+                "Con cua - Trên không; Con ngựa - Dưới nước; Con cá chép - Trên cạn"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c4-l17-q5",
+              "type": "scenario",
+              "prompt": "Thấy em nhỏ định vớt con cá ra khỏi nước mang lên cỏ chơi, em nên giải thích thế nào?",
+              "options": [
+                "\"Cá sẽ chạy nhảy nhanh hơn trên cỏ đấy.\"",
+                "\"Cá sống dưới nước, đưa ra khỏi nước cá sẽ thiếu ô-xy và bị chết đấy!\"",
+                "\"Cá sẽ mọc chân để đi dạo.\"",
+                "\"Cá sẽ hóa thành con chim bay đi.\""
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c4-l17-q6",
+              "type": "scenario",
+              "prompt": "Nếu nguồn nước ở ao, hồ, sông bị xả rác bẩn, hóa chất độc hại, điều gì sẽ xảy ra với các loài động vật sống ở đó?",
+              "options": [
+                "Động vật sẽ phát triển nhanh và đông đúc hơn",
+                "Môi trường sống bị hủy hoại khiến động vật bị nhiễm bệnh và có thể bị chết hàng loạt",
+                "Động vật tự tìm được nhà mới ngay lập tức",
+                "Giúp các loài động vật có thêm đồ chơi"
+              ],
+              "correctIndex": 1
+            }
+          ]
+        },
+        {
+          "id": "l18-can-lam-gi-de-bao-ve-moi-truong-song-cua-thuc-vat-va-dong-vat",
+          "lessonNumber": 18,
+          "title": "Bài 18: Cần làm gì để bảo vệ môi trường sống của thực vật và động vật?",
+          "description": "Các hành động thiết thực bảo vệ sinh vật xung quanh",
+          "questions": [
+            {
+              "id": "g2-c4-l18-q1",
+              "type": "scenario",
+              "prompt": "Các hành vi chặt phá rừng, xả nước thải bẩn, vứt rác nhựa bừa bãi sẽ gây ra tác hại gì?",
+              "options": [
+                "Giúp rừng cây phát triển nhanh hơn",
+                "Ô nhiễm môi trường sống, khiến thực vật bị suy thoái và động vật mất nơi sống",
+                "Làm cho nguồn nước trong sạch hơn",
+                "Không gây ảnh hưởng gì đến tự nhiên"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c4-l18-q2",
+              "type": "scenario",
+              "prompt": "Ném túi nilon, chai nhựa xuống sông hồ gây ra hậu quả gì cho các loài vật sống dưới nước?",
+              "options": [
+                "Giúp các loài sinh vật dưới nước có thêm nơi trú ẩn an toàn",
+                "Làm ô nhiễm nước, các loài vật nuốt phải rác nhựa hoặc mắc kẹt dễ bị thương và chết",
+                "Cung cấp thêm thức ăn bổ dưỡng cho động vật dưới nước",
+                "Giúp cá bơi nhanh hơn"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c4-l18-q3",
+              "type": "scenario",
+              "prompt": "Việc làm nào dưới đây giúp bảo vệ và cải tạo môi trường sống cho thực vật và động vật?",
+              "options": [
+                "Lấp ao, hồ để lấy mặt bằng xây dựng nhà cửa",
+                "Trồng và chăm sóc rừng, nhặt rác dọn vệ sinh bờ biển/sông hồ, xử lý chất thải",
+                "Săn bắt các loài động vật hoang dã trong rừng",
+                "Đốt rác thải nhựa công nghiệp ngoài không khí"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c4-l18-q4",
+              "type": "scenario",
+              "prompt": "Hành động nào dưới đây thuộc nhóm Việc làm có lợi cho môi trường sống của thực vật và động vật?",
+              "options": [
+                "Chặt phá cây rừng làm củi đốt",
+                "Chăm sóc, bảo vệ cây xanh, vớt rác ở sông hồ và để rác đúng nơi quy định",
+                "Phun hóa chất độc hại không đúng liều lượng vào đất",
+                "Xả trực tiếp chất thải chăn nuôi xuống ao nước"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c4-l18-q5",
+              "type": "scenario",
+              "prompt": "Thấy bạn nhỏ định bẻ cành cây non và chọc phá tổ chim trong công viên, em nên làm gì?",
+              "options": [
+                "Đứng xem và cổ vũ bạn chọc phá tiếp",
+                "Khuyên bạn: \"Đừng làm vậy! Làm thế sẽ hỏng cây và phá hoại nơi sống của chim đấy!\"",
+                "Bỏ đi chỗ khác chơi không quan tâm",
+                "Mượn gậy để chọc phá tổ chim cùng bạn"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c4-l18-q6",
+              "type": "scenario",
+              "prompt": "Để thực hiện tốt trách nhiệm bảo vệ môi trường sống xung quanh, em nên duy trì việc làm hằng ngày nào?",
+              "options": [
+                "Phân loại rác, không vứt rác bừa bãi, chăm sóc cây xanh và vận động mọi người cùng làm",
+                "Chỉ bảo vệ cây cối ở nhà mình, còn cây nơi công cộng thì mặc kệ",
+                "Đợi đến khi lớn lên mới cần tham gia bảo vệ môi trường",
+                "Thường xuyên ngắt hoa ở công viên mang về cắm lọ"
+              ],
+              "correctIndex": 0
+            }
+          ]
+        },
+        {
+          "id": "l19-thuc-vat-va-dong-vat-quanh-em",
+          "lessonNumber": 19,
+          "title": "Bài 19: Thực vật và động vật quanh em",
+          "description": "Quan sát thực tế và nâng cao ý thức bảo vệ thiên nhiên",
+          "questions": [
+            {
+              "id": "g2-c4-l19-q1",
+              "type": "scenario",
+              "prompt": "Trước khi đi quan sát thực vật và động vật ngoài thiên nhiên, em cần chuẩn bị những trang phục, đồ dùng nào?",
+              "options": [
+                "Quần áo cầu kỳ, đi guốc cao gót, không mang bút sổ",
+                "Trang phục gọn gàng, đi giày/dép quai hậu, đội mũ, mang phiếu quan sát và bút ghi chép",
+                "Mang theo thật nhiều đồ chơi điện tử và đồ ăn vặt",
+                "Đi chân đất, mặc đồ bơi và không mang dụng cụ học tập"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c4-l19-q2",
+              "type": "scenario",
+              "prompt": "Thấy bạn định đưa tay chạm trực tiếp vào sâu róm và bụi cây lạ có gai, em nên nhắc bạn điều gì?",
+              "options": [
+                "\"Bạn cứ sờ thoải mái đi không sao đâu!\"",
+                "\"Cậu đừng sờ vào! Sờ vào có thể gây ngứa, dị ứng hoặc bị gai đâm đau đấy!\"",
+                "\"Hái bụi cây đó mang về lớp chơi đi.\"",
+                "\"Bắt con sâu đó nhét vào cặp sách bạn khác.\""
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c4-l19-q3",
+              "type": "scenario",
+              "prompt": "Khi quan sát ao trường, phiếu ghi: \"Cây lục bình, cá chép sống ở nước đục có rác thải\". Thông tin \"Nước đục có rác thải\" thể hiện điều gì?",
+              "options": [
+                "Tên gọi chính xác của loài sinh vật",
+                "Đặc điểm môi trường sống và ảnh hưởng từ việc làm của con người tới sinh vật",
+                "Lợi ích kinh tế của cây lục bình",
+                "Số lượng động vật tìm thấy trong ao"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c4-l19-q4",
+              "type": "scenario",
+              "prompt": "Sau buổi đi quan sát thực tế thiên nhiên xung quanh, nhận xét nào dưới đây là đúng?",
+              "options": [
+                "Xung quanh chúng ta không có loài thực vật hay động vật nào sinh sống",
+                "Xung quanh chúng ta có rất nhiều loài thực vật và động vật sinh sống ở các môi trường khác nhau",
+                "Tất cả các loài thực vật và động vật quanh em đều chỉ sống dưới nước",
+                "Tất cả các loài cây quanh em đều sống trên cạn và không cần chăm sóc"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c4-l19-q5",
+              "type": "scenario",
+              "prompt": "Thấy góc vườn trường có nhiều vỏ bánh kẹo và túi nilon, hành động nào dưới đây thuộc nhóm VIỆC NÊN LÀM?",
+              "options": [
+                "Cùng các bạn nhặt rác, phân loại rác và để đúng nơi quy định để giữ sạch môi trường",
+                "Lấp ao hồ để không còn rác thải nữa",
+                "Đổ thêm nước thải sinh hoạt bẩn vào bồn cây",
+                "Bẻ sạch cành cây xung quanh cho bớt rác"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g2-c4-l19-q6",
+              "type": "scenario",
+              "prompt": "Lời khuyên chung tay bảo vệ thiên nhiên nhắc nhở học sinh cần có thái độ thế nào hằng ngày?",
+              "options": [
+                "Thờ ơ, không quan tâm vì việc bảo vệ sinh vật là của người lớn",
+                "Tự giác, yêu quý thiên nhiên, chủ động làm việc vừa sức để bảo vệ cảnh quan và môi trường sống",
+                "Bắt các loài sâu bọ và ngắt hoa ở công viên mang về nhà chơi",
+                "Chỉ bảo vệ các loài cây ở nhà mình, còn ở nơi khác thì bỏ qua"
+              ],
+              "correctIndex": 1
+            }
+          ]
+        },
+        {
+          "id": "l20-on-tap-chu-de-thuc-vat-va-dong-vat",
+          "lessonNumber": 20,
+          "title": "Bài 20: Ôn tập chủ đề Thực vật và Động vật",
+          "description": "Tổng hợp kiến thức môi trường sống của sinh vật",
+          "questions": [
+            {
+              "id": "g2-c4-l20-q1",
+              "type": "scenario",
+              "prompt": "Cách phân loại môi trường sống nào dưới đây là đầy đủ và chính xác nhất?",
+              "options": [
+                "Chỉ gồm môi trường sống ở trong nhà",
+                "Gồm các môi trường sống: Trên cạn, Dưới nước, Vừa trên cạn vừa dưới nước",
+                "Chỉ gồm môi trường sống trong rừng sâu",
+                "Gồm môi trường sống trên không và môi trường trên tường gạch"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c4-l20-q2",
+              "type": "scenario",
+              "prompt": "Ý tưởng tranh vẽ nào dưới đây phù hợp nhất với chủ đề bảo vệ môi trường sống của thực vật và động vật?",
+              "options": [
+                "Vẽ hình ảnh người thợ săn đang bẫy bắt các loài chim hoang dã",
+                "Vẽ hình ảnh các bạn nhỏ cùng nhau trồng cây xanh, nhặt rác dọn vệ sinh bờ biển và tưới cây",
+                "Vẽ hình ảnh máy xúc đang lấp ao hồ để lấy mặt bằng",
+                "Vẽ hình ảnh người dân đang xả rác trực tiếp xuống sông"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c4-l20-q3",
+              "type": "scenario",
+              "prompt": "Việc người dân vứt rác thải bừa bãi xuống dòng sông gây ra ảnh hưởng xấu như thế nào?",
+              "options": [
+                "Làm cho các loài cá dưới sông bơi nhanh hơn",
+                "Gây ô nhiễm nguồn nước, tàn phá môi trường sống và đe dọa sự sống của các loài thủy sinh",
+                "Giúp bờ sông thêm đẹp đẽ",
+                "Không gây ảnh hưởng gì đến sinh vật xung quanh"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c4-l20-q4",
+              "type": "scenario",
+              "prompt": "Em đánh giá thế nào về việc người dân trồng thêm cây xanh ven đường và dọn vệ sinh kênh rạch?",
+              "options": [
+                "Đây là việc làm tốt, giúp cải tạo và bảo vệ môi trường sống cho thực vật, động vật",
+                "Việc làm này gây tốn thời gian và không mang lại ích lợi gì",
+                "Làm cho môi trường bị ô nhiễm thêm",
+                "Chỉ làm cho có hình thức chứ không có tác dụng"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g2-c4-l20-q5",
+              "type": "scenario",
+              "prompt": "Thông điệp \"Cùng bảo vệ môi trường sống của thực vật và động vật\" nhắc nhở em nên duy trì thói quen nào?",
+              "options": [
+                "Tự giác giữ gìn vệ sinh chung, không ngắt hoa bẻ cành, không phá tổ chim và chăm sóc cây xanh",
+                "Bỏ mặc cho cây cối héo khô ngoài sân trường",
+                "Tiện tay ném vỏ bánh kẹo xuống bồn cây khi vắng người",
+                "Bắt các loài côn trùng nhỏ mang về nhốt vào hộp"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g2-c4-l20-q6",
+              "type": "scenario",
+              "prompt": "Sau khi học xong Chủ đề Thực vật và Động vật, em tự đánh giá mình đạt chuẩn khi nào?",
+              "options": [
+                "Phân loại được thực vật, động vật theo môi trường sống và biết thực hiện các việc làm bảo vệ môi trường sống của chúng",
+                "Chỉ biết tên các con vật nhưng không biết chúng sống ở đâu",
+                "Biết phân loại thực vật nhưng vẫn có hành vi bẻ cành ngắt hoa",
+                "Không biết cách tưới nước và chăm sóc cây xanh"
+              ],
+              "correctIndex": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c5-con-nguoi-va-suc-khoe",
+      "chapterNumber": 5,
+      "title": "Chủ đề 5: Con người và Sức khỏe",
+      "lessons": [
+        {
+          "id": "l21-tim-hieu-co-quan-van-dong",
+          "lessonNumber": 21,
+          "title": "Bài 21: Tìm hiểu cơ quan vận động",
+          "description": "Khung xương, khớp xương và các cơ",
+          "questions": [
+            {
+              "id": "g2-c5-l21-q1",
+              "type": "scenario",
+              "prompt": "Khi cử động tay, chân hay vặn mình, em cảm nhận được bên dưới lớp da gồm những bộ phận chính nào cùng phối hợp?",
+              "options": [
+                "Chỉ có lớp da và mỡ",
+                "Khung xương, các khớp xương và các cơ",
+                "Chỉ có mạch máu và thần kinh",
+                "Móng tay và lông mao"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c5-l21-q2",
+              "type": "scenario",
+              "prompt": "Cơ quan vận động của con người được tạo thành bởi sự kết hợp của hai bộ phận chính nào?",
+              "options": [
+                "Bộ xương và hệ cơ",
+                "Tim và phổi",
+                "Dạ dày và ruột",
+                "Não và tủy sống"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g2-c5-l21-q3",
+              "type": "scenario",
+              "prompt": "Khi xoay cổ tay, gập khuỷu tay hay cử động đầu gối, cử động đó thực hiện được nhờ vị trí nối giữa hai đầu xương gọi là gì?",
+              "options": ["Màng xương", "Khớp xương", "Tủy xương", "Mạch máu"],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c5-l21-q4",
+              "type": "scenario",
+              "prompt": "Khi co khuỷu tay lại gần vai, bắp tay phía trước có sự thay đổi như thế nào?",
+              "options": [
+                "Bắp tay duỗi dài ra và mỏng đi",
+                "Bắp tay co ngắn lại, phồng lên và cứng hơn",
+                "Bắp tay hoàn toàn không có sự thay đổi",
+                "Bắp tay biến mất"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c5-l21-q5",
+              "type": "scenario",
+              "prompt": "Giúp chúng ta chạy nhảy, nâng cặp sách, đá bóng hay ngồi học là nhờ vai trò của cơ quan nào?",
+              "options": [
+                "Cơ quan tiêu hóa",
+                "Cơ quan hô hấp",
+                "Cơ quan vận động",
+                "Cơ quan tuần hoàn"
+              ],
+              "correctIndex": 2
+            },
+            {
+              "id": "g2-c5-l21-q6",
+              "type": "scenario",
+              "prompt": "Lời nhắc nhở về sự phối hợp giữa xương, khớp và cơ giúp em hiểu được điều gì?",
+              "options": [
+                "Nhờ có cơ quan vận động, cơ thể mới đứng thẳng, đi lại, vui chơi và làm việc linh hoạt",
+                "Xương và cơ chỉ làm cho cơ thể nặng thêm",
+                "Khớp xương không có tác dụng gì khi cử động",
+                "Chúng ta có thể vận động bình thường mà không cần bộ xương"
+              ],
+              "correctIndex": 0
+            }
+          ]
+        },
+        {
+          "id": "l22-cham-soc-tot-co-quan-van-dong",
+          "lessonNumber": 22,
+          "title": "Bài 22: Chăm sóc tốt cơ quan vận động",
+          "description": "Tư thế đúng, tập thể thao và dinh dưỡng cho xương khớp",
+          "questions": [
+            {
+              "id": "g2-c5-l22-q1",
+              "type": "scenario",
+              "prompt": "Tư thế ngồi học nào dưới đây giúp bảo vệ cột sống và mắt đúng chuẩn y học đường?",
+              "options": [
+                "Cúi sát mặt xuống bàn, nằm bò ra bàn khi viết",
+                "Lưng thẳng, hai chân đặt bằng phẳng trên sàn, mắt cách sách vở từ 25 – 30 cm",
+                "Ngồi vẹo sang một bên và gục đầu lên tay",
+                "Ngả người ngửa ra sau, hai chân khoanh lên ghế"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c5-l22-q2",
+              "type": "scenario",
+              "prompt": "Tập thể dục thể thao vừa sức hằng ngày mang lại lợi ích gì cho cơ quan vận động?",
+              "options": [
+                "Làm cho xương và cơ bắp bị mệt mỏi, suy yếu",
+                "Giúp xương chắc khỏe, cơ bắp dẻo dai, phát triển chiều cao",
+                "Làm cho cột sống bị cong quẹo",
+                "Không có tác dụng gì đối với sức khỏe"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c5-l22-q3",
+              "type": "scenario",
+              "prompt": "Hằng ngày đi học, em nên đeo cặp sách như thế nào để tránh bị lệch vai và cong vẹo cột sống?",
+              "options": [
+                "Đeo cặp lệch hẳn về một bên vai",
+                "Đeo cặp bằng hai dây quai cân đối trên hai vai, chỉnh dây vừa vặn với lưng",
+                "Xách cặp nặng bằng một tay kéo lê trên đường",
+                "Ôm cặp thật nặng ở một bên hông"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c5-l22-q4",
+              "type": "scenario",
+              "prompt": "Thao tác bê/mang vác đồ vật nào dưới đây giúp em tránh bị chấn thương hay bong gân, đau lưng?",
+              "options": [
+                "Đột ngột cúi gập lưng xuống rồi nhấc mạnh vật lên",
+                "Ngồi xổm xuống, giữ lưng thẳng, ôm sát vật vào người rồi từ từ đứng lên",
+                "Dùng sức gồng mình kéo lê vật thật mạnh",
+                "Đứng thẳng, cúi gập người xoay mạnh hông"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c5-l22-q5",
+              "type": "scenario",
+              "prompt": "Khẩu phần ăn hằng ngày cần bổ sung nhóm thực phẩm nào để giúp xương phát triển chắc khỏe?",
+              "options": [
+                "Bánh kẹo ngọt, nước giải khát có ga",
+                "Sữa, trứng, cá, tôm, thịt, rau xanh và ngũ cốc",
+                "Thức ăn nhanh và đồ chiên rán nhiều dầu mỡ",
+                "Nhịn ăn để giữ vóc dáng"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c5-l22-q6",
+              "type": "scenario",
+              "prompt": "Thói quen nào dưới đây giúp cơ quan vận động phát triển khỏe mạnh hằng ngày?",
+              "options": [
+                "Giữ đúng tư thế khi ngồi, đứng, đi, đeo cặp hai vai, tích cực tập thể dục và ăn đủ chất",
+                "Ngồi học tùy thích, nằm xem tivi nhiều giờ liền",
+                "Mang vác vật quá sức mình để chứng tỏ sức mạnh",
+                "Bỏ bữa ăn sáng và không tham gia giờ thể dục ở trường"
+              ],
+              "correctIndex": 0
+            }
+          ]
+        },
+        {
+          "id": "l23-tim-hieu-co-quan-ho-hap",
+          "lessonNumber": 23,
+          "title": "Bài 23: Tìm hiểu cơ quan hô hấp",
+          "description": "Cấu tạo và hoạt động hít thở của cơ quan hô hấp",
+          "questions": [
+            {
+              "id": "g2-c5-l23-q1",
+              "type": "scenario",
+              "prompt": "Đặt tay lên ngực, hít vào thật sâu rồi thở ra từ từ, em cảm nhận thấy lồng ngực thay đổi thế nào?",
+              "options": [
+                "Khi hít vào thật sâu, lồng ngực phồng lên; khi thở ra, lồng ngực xẹp xuống",
+                "Khi hít vào lồng ngực xẹp xuống, khi thở ra lồng ngực phồng lên",
+                "Lồng ngực giữ nguyên không có sự thay đổi nào",
+                "Lồng ngực lệch hẳn sang một bên khi hít thở"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g2-c5-l23-q2",
+              "type": "scenario",
+              "prompt": "Cơ quan hô hấp ở người gồm có những bộ phận chính nào?",
+              "options": [
+                "Tim, mạch máu và máu",
+                "Mũi, khí quản, phế quản và hai lá phổi",
+                "Dạ dày, ruột non và ruột già",
+                "Não, tủy sống và dây thần kinh"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c5-l23-q3",
+              "type": "scenario",
+              "prompt": "Khi hít vào, không khí giàu ô-xy từ bên ngoài đi vào cơ thể theo đường dẫn nào?",
+              "options": [
+                "Phổi -> Phế quản -> Khí quản -> Mũi",
+                "Mũi -> Khí quản -> Phế quản -> Hai lá phổi",
+                "Mũi -> Dạ dày -> Phổi",
+                "Khí quản -> Mũi -> Phế quản -> Phổi"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c5-l23-q4",
+              "type": "scenario",
+              "prompt": "Khi thở ra, không khí chứa nhiều khí các-bô-nức từ trong hai lá phổi đi ra ngoài theo lượt nào?",
+              "options": [
+                "Hai lá phổi -> Phế quản -> Khí quản -> Mũi -> Ra ngoài môi trường",
+                "Mũi -> Khí quản -> Phế quản -> Hai lá phổi",
+                "Phổi -> Mũi -> Khí quản",
+                "Phế quản -> Khí quản -> Phổi -> Mũi"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g2-c5-l23-q5",
+              "type": "scenario",
+              "prompt": "Vì sao chúng ta nên có thói quen hít thở bằng mũi mà không nên hít thở bằng miệng?",
+              "options": [
+                "Vì trong mũi có lông mũi cản bụi, màng nhầy giữ vi khuẩn và mạch máu giúp làm ấm không khí",
+                "Vì hít thở bằng miệng làm cho không khí đi vào phổi nhanh hơn",
+                "Vì hít thở bằng mũi giúp ăn ngon miệng hơn",
+                "Vì hít thở bằng miệng làm răng đẹp hơn"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g2-c5-l23-q6",
+              "type": "scenario",
+              "prompt": "Vai trò quan trọng nhất của cơ quan hô hấp đối với sự sống con người là gì?",
+              "options": [
+                "Hoạt động hô hấp diễn ra liên tục, nếu ngừng thở vài phút con người sẽ bị nguy hiểm tính mạng",
+                "Con người có thể ngừng thở trong nhiều giờ mà vẫn khỏe mạnh",
+                "Cơ quan hô hấp chỉ hoạt động khi chúng ta thức, khi ngủ cơ quan này dừng lại",
+                "Hít thở chỉ có tác dụng giúp cơ thể bớt mệt mỏi sau khi tập thể thao"
+              ],
+              "correctIndex": 0
+            }
+          ]
+        },
+        {
+          "id": "l24-cham-soc-tot-co-quan-ho-hap",
+          "lessonNumber": 24,
+          "title": "Bài 24: Chăm sóc tốt cơ quan hô hấp",
+          "description": "Bảo vệ đường thở và phòng tránh các bệnh hô hấp",
+          "questions": [
+            {
+              "id": "g2-c5-l24-q1",
+              "type": "scenario",
+              "prompt": "Môi trường và thói quen nào dưới đây ảnh hưởng xấu, gây ra các bệnh về đường hô hấp?",
+              "options": [
+                "Hít thở không khí trong lành ở công viên nhiều cây xanh",
+                "Thường xuyên tiếp xúc với khói thuốc lá, khói xe cộ, bụi bẩn và sống nơi ẩm thấp",
+                "Tập các bài tập vươn thở vào buổi sáng",
+                "Súc miệng bằng nước muối sinh lý hằng ngày"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c5-l24-q2",
+              "type": "scenario",
+              "prompt": "Khói thuốc lá do người lớn nhả ra ngoài không khí gây ra tác hại gì cho học sinh hít phải?",
+              "options": [
+                "Giúp phổi phát triển khỏe mạnh hơn",
+                "Chứa nhiều chất độc hại, gây tổn thương phổi và dễ dẫn đến các bệnh hô hấp nguy hiểm",
+                "Giúp làm sạch đường đi của không khí trong mũi",
+                "Không gây bất kỳ ảnh hưởng nào đến sức khỏe"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c5-l24-q3",
+              "type": "scenario",
+              "prompt": "Đi chơi ở công viên nhiều cây xanh giúp ta thấy dễ chịu, sảng khoái hơn nơi nhiều khói bụi là do đâu?",
+              "options": [
+                "Cây xanh giúp lọc bụi và cung cấp không khí trong lành giàu ô-xy tốt cho hô hấp",
+                "Khói bụi xe cộ giúp mũi lọc không khí tốt hơn",
+                "Cây xanh hút hết không khí ô-xy của con người",
+                "Hai môi trường này hoàn toàn giống nhau không có sự khác biệt"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g2-c5-l24-q4",
+              "type": "scenario",
+              "prompt": "Để phòng tránh bụi bẩn và vi khuẩn xâm nhập vào đường hô hấp khi ra đường, em nên làm gì?",
+              "options": [
+                "Đeo khẩu trang đúng quy cách che kín cả mũi và miệng",
+                "Dùng tay dụi mũi và cạy mũi thường xuyên",
+                "Tháo bỏ khẩu trang và thở mạnh bằng miệng",
+                "Dùng khăn bẩn lau qua mũi"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g2-c5-l24-q5",
+              "type": "scenario",
+              "prompt": "Khi thời tiết chuyển lạnh, em nên làm gì để phòng tránh bị sổ mũi, ho và viêm họng?",
+              "options": [
+                "Tắm nước lạnh và mặc quần áo mỏng đi ra ngoài đường",
+                "Mặc quần áo ấm, giữ ấm cổ, ngực, bàn chân, uống nước ấm và súc miệng nước muối",
+                "Mở cửa sổ đón gió lạnh lùa vào phòng ngủ",
+                "Ăn thật nhiều kem lạnh và uống nước đá"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c5-l24-q6",
+              "type": "scenario",
+              "prompt": "Lời khuyên về giữ gìn cơ quan hô hấp nhắc nhở em thực hiện thói quen hằng ngày nào?",
+              "options": [
+                "Tự giác rèn luyện thói quen sinh hoạt khoa học, giữ vệ sinh và bảo vệ môi trường trong lành",
+                "Bỏ mặc nhà cửa bụi bẩn không quét dọn",
+                "Đợi khi bị bệnh ho nặng mới bắt đầu đi mua khẩu trang",
+                "Thường xuyên ngửi mùi khói xe và chất thải bẩn"
+              ],
+              "correctIndex": 0
+            }
+          ]
+        },
+        {
+          "id": "l25-tim-hieu-co-quan-bai-tiet-nuoc-tieu",
+          "lessonNumber": 25,
+          "title": "Bài 25: Tìm hiểu cơ quan bài tiết nước tiểu",
+          "description": "Cấu tạo và hoạt động lọc chất độc của thận",
+          "questions": [
+            {
+              "id": "g2-c5-l25-q1",
+              "type": "scenario",
+              "prompt": "Cơ quan bài tiết nước tiểu ở người gồm có những bộ phận chính nào?",
+              "options": [
+                "Mũi, khí quản, phế quản và hai lá phổi",
+                "Hai quả thận, hai ống dẫn nước tiểu, bóng đái và ống đái",
+                "Dạ dày, ruột non, ruột già và hậu môn",
+                "Tim, động mạch, tĩnh mạch và mao mạch"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c5-l25-q2",
+              "type": "scenario",
+              "prompt": "Hai quả thận có hình dạng giống hạt đậu đảm nhận chức năng quan trọng nào?",
+              "options": [
+                "Lọc máu, loại bỏ các chất thải độc hại ra khỏi máu để tạo thành nước tiểu",
+                "Co bóp đẩy không khí vào hai lá phổi",
+                "Nghiền nát và tiêu hóa thức ăn",
+                "Bơm máu đi nuôi khắp các cơ quan trong cơ thể"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g2-c5-l25-q3",
+              "type": "scenario",
+              "prompt": "Sau khi được thận lọc từ máu, nước tiểu di chuyển ra ngoài theo con đường nào?",
+              "options": [
+                "Từ thận -> Theo ống dẫn nước tiểu xuống chứa ở bóng đái -> Thải ra ngoài qua ống đái",
+                "Từ bóng đái -> Lên thận -> Qua ống đái -> Ra ngoài",
+                "Từ thận -> Chảy trực tiếp ra ngoài qua ống dẫn nước tiểu",
+                "Từ bóng đái -> Theo ống dẫn nước tiểu lên thận"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g2-c5-l25-q4",
+              "type": "scenario",
+              "prompt": "Bộ phận nào có nhiệm vụ làm túi chứa tích trữ nước tiểu tạm thời trước khi thải ra ngoài?",
+              "options": [
+                "Hai quả thận",
+                "Ống dẫn nước tiểu",
+                "Bóng đái",
+                "Ống đái"
+              ],
+              "correctIndex": 2
+            },
+            {
+              "id": "g2-c5-l25-q5",
+              "type": "scenario",
+              "prompt": "Nhịn tiểu trong thời gian dài khiến bóng đái tích trữ quá nhiều nước tiểu sẽ gây nguy hại gì?",
+              "options": [
+                "Làm cho cơ thể khỏe mạnh và tỉnh táo hơn",
+                "Gây căng tức bóng đái, lâu ngày dễ bị viêm đường tiết niệu hoặc tổn thương thận",
+                "Giúp thận lọc máu nhanh hơn",
+                "Không ảnh hưởng gì vì bóng đái có thể giãn ra vô tận"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c5-l25-q6",
+              "type": "scenario",
+              "prompt": "Nếu trong đường dẫn nước tiểu có vật cản (như sỏi thận), hiện tượng nào sẽ xảy ra?",
+              "options": [
+                "Nước tiểu chảy ra ngoài nhanh và dễ dàng hơn",
+                "Nước tiểu bị ứ đọng lại, gây đau tức và ảnh hưởng xấu đến chức năng của thận",
+                "Thận sẽ ngừng lọc máu ngay lập tức",
+                "Vật cản tự biến mất mà không gây đau đớn"
+              ],
+              "correctIndex": 1
+            }
+          ]
+        },
+        {
+          "id": "l26-cham-soc-bao-ve-co-quan-bai-tiet-nuoc-tieu",
+          "lessonNumber": 26,
+          "title": "Bài 26: Chăm sóc, bảo vệ cơ quan bài tiết nước tiểu",
+          "description": "Uống đủ nước, không nhịn tiểu và bảo vệ thận",
+          "questions": [
+            {
+              "id": "g2-c5-l26-q1",
+              "type": "scenario",
+              "prompt": "Hằng ngày sau khi đi học hoặc đi chơi về, hành động nào giúp giữ vệ sinh cơ quan bài tiết nước tiểu sạch sẽ, tránh viêm nhiễm?",
+              "options": [
+                "Tắm rửa sạch sẽ bằng nước sạch, xà phòng và thay đồ lót khô ráo",
+                "Mặc lại đồ lót ẩm ướt đã qua sử dụng nhiều ngày",
+                "Đi tắm bằng nước bẩn ngoài ao hồ ô nhiễm",
+                "Không bao giờ tắm rửa hay thay quần áo"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g2-c5-l26-q2",
+              "type": "scenario",
+              "prompt": "Uống đủ nước mỗi ngày (1,5 – 2 lít) đem lại lợi ích thiết thực nào cho thận và cơ quan bài tiết nước tiểu?",
+              "options": [
+                "Giúp thận lọc máu hiệu quả, dễ dàng đào thải chất độc và phòng tránh sỏi thận",
+                "Làm cho cơ thể bị tích nước và tăng cân nhanh chóng",
+                "Giúp chúng ta không bao giờ cảm thấy buồn đi tiểu nữa",
+                "Làm cho bóng đái bị căng tức thêm"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g2-c5-l26-q3",
+              "type": "scenario",
+              "prompt": "Thường xuyên ăn các món ăn quá mặn trong khẩu phần ăn hằng ngày sẽ gây ra ảnh hưởng xấu nào?",
+              "options": [
+                "Giúp hai quả thận hoạt động nhẹ nhàng hơn",
+                "Bắt thận làm việc quá sức để đào thải lượng muối thừa, lâu ngày dễ bị suy thận và cao huyết áp",
+                "Giúp cơ thể hấp thụ dinh dưỡng tốt hơn",
+                "Làm cho nước tiểu có màu trắng đục"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c5-l26-q4",
+              "type": "scenario",
+              "prompt": "Cố tình nhịn tiểu khi đang học hoặc đang chơi sẽ dẫn đến nguy cơ nào đối với bóng đái và thận?",
+              "options": [
+                "Làm bóng đái bị căng tức, lâu ngày gây viêm đường tiết niệu và tổn thương thận",
+                "Giúp bóng đái dẻo dai và chứa được nhiều nước tiểu hơn",
+                "Giúp cơ thể tập trung học tập tốt hơn",
+                "Không có ảnh hưởng gì vì cơ thể tự điều chỉnh được"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g2-c5-l26-q5",
+              "type": "scenario",
+              "prompt": "Thấy bạn buồn đi tiểu nhưng cố nhịn vì ngại đi xa, em nên khuyên bạn như thế nào?",
+              "options": [
+                "\"Cậu cố nhịn thêm 2 tiếng nữa hết giờ rồi đi luôn thể!\"",
+                "\"Cậu nên xin phép cô giáo đi vệ sinh ngay đi! Nhịn tiểu rất có hại cho bóng đái và thận đấy!\"",
+                "\"Cậu cứ đứng chơi tiếp đi quên ngay cảm giác buồn tiểu thôi.\"",
+                "\"Cậu uống thêm nhiều nước vào cho đỡ buồn tiểu.\""
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c5-l26-q6",
+              "type": "scenario",
+              "prompt": "Để giữ cho cơ quan bài tiết nước tiểu luôn khỏe mạnh, em cần duy trì những thói quen sống khoa học nào?",
+              "options": [
+                "Uống đủ nước, không nhịn tiểu, không ăn quá mặn, thường xuyên tắm rửa và thay đồ lót khô ráo",
+                "Nhịn tiểu thường xuyên và chỉ uống nước khi cực kỳ thấy khát",
+                "Ăn thật mặn và không cần thay đồ lót hằng ngày",
+                "Chỉ đi tắm khi nào cơ thể bị bẩn nặng"
+              ],
+              "correctIndex": 0
+            }
+          ]
+        },
+        {
+          "id": "l27-on-tap-chu-de-con-nguoi-va-suc-khoe",
+          "lessonNumber": 27,
+          "title": "Bài 27: Ôn tập chủ đề Con người và Sức khỏe",
+          "description": "Tổng kết về các cơ quan vận động, hô hấp và bài tiết",
+          "questions": [
+            {
+              "id": "g2-c5-l27-q1",
+              "type": "scenario",
+              "prompt": "Trong buổi ôn tập, nhóm của Nam vẽ sơ đồ nối tên các bộ phận với từng cơ quan. Cách ghép nào dưới đây là hoàn toàn chính xác?",
+              "options": [
+                "Xương, cơ -> Hô hấp; Mũi, phổi -> Bài tiết nước tiểu; Thận, bóng đái -> Vận động",
+                "Xương, khớp xương, cơ -> Vận động; Mũi, khí quản, phế quản, phổi -> Hô hấp; Thận, ống dẫn nước tiểu, bóng đái, ống đái -> Bài tiết nước tiểu",
+                "Xương, khớp xương -> Bài tiết nước tiểu; Thận, bóng đái -> Hô hấp; Mũi, phổi -> Vận động",
+                "Mũi, cơ -> Vận động; Thận, phổi -> Hô hấp; Xương, bóng đái -> Bài tiết nước tiểu"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c5-l27-q2",
+              "type": "scenario",
+              "prompt": "Nhận định nào dưới đây nêu đúng chức năng của các cơ quan trong cơ thể?",
+              "options": [
+                "Cơ quan vận động giúp di chuyển; Cơ quan hô hấp giúp trao đổi khí; Cơ quan bài tiết nước tiểu giúp lọc máu và thải chất độc",
+                "Cơ quan vận động giúp lọc máu; Cơ quan hô hấp giúp di chuyển; Cơ quan bài tiết nước tiểu giúp hít thở",
+                "Cơ quan vận động giúp trao đổi khí; Cơ quan hô hấp giúp di chuyển; Cơ quan bài tiết nước tiểu giúp vận động",
+                "Cả ba cơ quan đều chỉ có chức năng giúp cơ thể ăn uống ngon miệng hơn"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g2-c5-l27-q3",
+              "type": "scenario",
+              "prompt": "Danh sách thói quen hằng ngày nào dưới đây bao gồm các việc làm có lợi cho cả 3 cơ quan đã học?",
+              "options": [
+                "Ngồi học thẳng lưng, tập thể dục vừa sức, đeo khẩu trang khi ra đường, uống đủ nước và không nhịn tiểu",
+                "Ngồi cong lưng khi viết bài, nhịn tiểu khi đang chơi game, uống nước đá lạnh",
+                "Đeo cặp sách lệch một bên vai, thường xuyên hít khói thuốc lá, ăn thức ăn thật mặn",
+                "Nằm gục ra bàn khi học, tắm nước lạnh muộn ban đêm, ít vận động"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g2-c5-l27-q4",
+              "type": "scenario",
+              "prompt": "Duy trì thói quen xấu như ngồi cong lưng, hít khói thuốc/bụi, ăn quá mặn và nhịn tiểu sẽ gây ra hậu quả gì?",
+              "options": [
+                "Tăng chiều cao nhanh hơn và giúp phổi khỏe mạnh hơn",
+                "Nguy cơ bị cong vẹo cột sống, mắc bệnh viêm đường hô hấp và tổn thương thận, viêm đường tiết niệu",
+                "Giúp cơ thể hấp thụ dinh dưỡng tốt hơn",
+                "Không ảnh hưởng gì vì cơ thể tự bình phục được"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c5-l27-q5",
+              "type": "scenario",
+              "prompt": "Thấy bạn vừa đi vừa đeo cặp nặng lệch vai, ăn đồ rất mặn và cố nhịn tiểu, em nên cho bạn lời khuyên nào?",
+              "options": [
+                "\"Cậu nên đeo cặp cân đối hai vai, hạn chế ăn quá mặn và xin phép đi vệ sinh ngay để bảo vệ cột sống và thận nhé!\"",
+                "\"Cậu cứ đeo cặp như thế và nhịn tiểu thêm chút nữa không sao đâu.\"",
+                "\"Cậu nên xách thêm túi nặng ở tay kia cho cân.\"",
+                "\"Cậu nên ăn thêm đồ mặn nữa cho đỡ khát nước.\""
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g2-c5-l27-q6",
+              "type": "scenario",
+              "prompt": "Bảng tự đánh giá ở cuối bài giúp em tự khẳng định được những khả năng nào sau khi học xong Chủ đề Con người và sức khỏe?",
+              "options": [
+                "Nêu tên, vị trí, chức năng các bộ phận của cơ quan vận động, hô hấp, bài tiết nước tiểu và thực hiện việc làm chăm sóc, bảo vệ chúng",
+                "Biết tên các cơ quan nhưng vẫn ngồi học cong lưng và nhịn tiểu",
+                "Biết tác hại của khói bụi nhưng không đeo khẩu trang khi ra đường",
+                "Chỉ thuộc tên các bộ phận chứ không biết cách ăn uống, vận động khoa học"
+              ],
+              "correctIndex": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c6-trai-dat-va-bau-troi",
+      "chapterNumber": 6,
+      "title": "Chủ đề 6: Trái Đất và Bầu trời",
+      "lessons": [
+        {
+          "id": "l28-cac-mua-trong-nam",
+          "lessonNumber": 28,
+          "title": "Bài 28: Các mùa trong năm",
+          "description": "Khí hậu các mùa ở miền Bắc và miền Nam",
+          "questions": [
+            {
+              "id": "g2-c6-l28-q1",
+              "type": "scenario",
+              "prompt": "Dấu hiệu nào dưới đây giúp em nhận biết sự chuyển giao từ mùa xuân sang mùa hạ (mùa hè) ở miền Bắc nước ta?",
+              "options": [
+                "Mùa xuân thời tiết ấm áp, cây cối đâm chồi nảy lộc; sang mùa hạ thời tiết nắng nóng, cây cối xanh tốt và có tiếng ve kêu râm ran",
+                "Mùa xuân trời rét đậm có tuyết rơi; sang mùa hạ thời tiết hanh khô lá cây rụng hết",
+                "Mùa xuân nắng gắt chói chang; sang mùa hạ thời tiết lạnh giá, u buồn",
+                "Mùa xuân cành cây khô hoang, mập mạp; sang mùa hạ mưa tuyết phủ kín mặt đất"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g2-c6-l28-q2",
+              "type": "scenario",
+              "prompt": "Khi thời tiết chuyển sang mùa thu rồi đến mùa đông, cảnh vật thiên nhiên có những thay đổi rõ rệt nào?",
+              "options": [
+                "Mùa thu thời tiết mát mẻ, lá cây ngả vàng và rụng nhiều; mùa đông thời tiết lạnh giá, cây cối khẳng khu",
+                "Mùa thu có tuyết rơi dày đặc; mùa đông nắng nóng oi bức",
+                "Mùa thu cây cối nảy lộc xuân; mùa đông thời tiết ấm áp mây xanh",
+                "Mùa thu và mùa đông thời tiết đều nóng bức giống hệt mùa hạ"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g2-c6-l28-q3",
+              "type": "scenario",
+              "prompt": "Các tỉnh thuộc khu vực miền Bắc Việt Nam một năm thường có mấy mùa rõ rệt, đó là những mùa nào?",
+              "options": [
+                "Có 2 mùa: Mùa mưa và mùa khô",
+                "Có 4 mùa rõ rệt: Mùa xuân, mùa hạ (mùa hè), mùa thu và mùa đông",
+                "Chỉ có 1 mùa nắng nóng quanh năm",
+                "Có 3 mùa: Mùa xuân, mùa hạ và mùa mưa"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c6-l28-q4",
+              "type": "scenario",
+              "prompt": "Khác với miền Bắc có 4 mùa, khí hậu các tỉnh khu vực miền Nam nước ta một năm chủ yếu chia làm mấy mùa rõ rệt?",
+              "options": [
+                "Có 4 mùa: Xuân, hạ, thu, đông",
+                "Có 2 mùa rõ rệt: Mùa mưa (mưa nhiều, hay có bão) và mùa khô (nắng nhiều, ít mưa)",
+                "Chỉ có mùa đông lạnh giá quanh năm",
+                "Có 3 mùa: Mùa tuyết, mùa nắng và mùa thu"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c6-l28-q5",
+              "type": "scenario",
+              "prompt": "Khi thời tiết chuyển sang mùa đông lạnh giá hoặc mùa mưa gió, em nên chọn trang phục nào khi đi ra ngoài?",
+              "options": [
+                "Mặc áo phông ngắn tay, đi dép lê và uống nước đá lạnh",
+                "Mặc áo khoác ấm, đi tất, quàng khăn len, giữ ấm cổ/ngực và mang theo áo mưa/ô che",
+                "Mặc đồ bơi và đi chân đất",
+                "Mặc áo may-ô và quần đùi"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c6-l28-q6",
+              "type": "scenario",
+              "prompt": "Lời khuyên chú ý thời tiết, lựa chọn trang phục và ăn uống phù hợp khuyên em điều gì?",
+              "options": [
+                "Chủ động điều chỉnh trang phục, sinh hoạt, giữ ấm khi trời lạnh, giải nhiệt an toàn khi trời nóng để phòng bệnh theo mùa",
+                "Không cần quan tâm đến thời tiết, mặc trang phục giống nhau cho tất cả các mùa",
+                "Mặc áo khoác thật dày vào giữa trưa hè nắng nóng",
+                "Mặc quần áo mỏng dính đi ngoài trời mưa lạnh"
+              ],
+              "correctIndex": 0
+            }
+          ]
+        },
+        {
+          "id": "l29-mot-so-hien-tuong-thien-nhien",
+          "lessonNumber": 29,
+          "title": "Bài 29: Một số hiện tượng thiên nhiên",
+          "description": "Nhận biết thời tiết, giông bão và các hiện tượng thiên nhiên",
+          "questions": [
+            {
+              "id": "g2-c6-l29-q1",
+              "type": "scenario",
+              "prompt": "Mây trắng gợn sóng, lá cây rung rinh và ánh nắng chiếu rạng rỡ là những hiện tượng gì?",
+              "options": [
+                "Các hiện tượng do con người tự tạo ra",
+                "Các hiện tượng thiên nhiên diễn ra hằng ngày trên Trái Đất",
+                "Các hoạt động giao thông trên đường",
+                "Sự thay đổi của các đồ dùng trong nhà"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c6-l29-q2",
+              "type": "scenario",
+              "prompt": "Bầu trời đột ngột xuất hiện mây đen kịt, gió thổi mạnh và có tiếng sấm rền báo hiệu hiện tượng nào?",
+              "options": [
+                "Trời sắp nắng gắt chói chang",
+                "Trời sắp có mưa rào hoặc giông bão",
+                "Trời sắp xuất hiện tuyết rơi",
+                "Trời sắp chuyển sang mùa khô"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c6-l29-q3",
+              "type": "scenario",
+              "prompt": "Mưa lớn kéo dài kết hợp gió giật mạnh làm nước dâng ngập nhà cửa, cây đổ gãy gọi là gì?",
+              "options": [
+                "Hiện tượng sương mù buổi sáng",
+                "Thiên tai (bão, lũ lụt, ngập lụt)",
+                "Cầu vồng sau mưa",
+                "Gió nhẹ hiền hòa"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c6-l29-q4",
+              "type": "scenario",
+              "prompt": "Nắng gắt kéo dài nhiều tháng không mưa làm sông hồ cạn kiệt, ruộng đồng nứt nẻ là hiện tượng nào?",
+              "options": [
+                "Hiện tượng bão tuyết",
+                "Hiện tượng hạn hán (thiếu nước sinh hoạt và tưới tiêu)",
+                "Hiện tượng sương muối",
+                "Hiện tượng lốc xoáy dưới biển"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c6-l29-q5",
+              "type": "scenario",
+              "prompt": "Đang đi ngoài đường gặp mưa rào lớn kèm sấm sét đùng đùng, em nên làm gì để đảm bảo an toàn?",
+              "options": [
+                "Trú tạm dưới gốc cây to cổ thụ ven đường",
+                "Trú ẩn nơi kiên cố (hiên nhà, cửa hàng), không đứng dưới gốc cây to, không cầm đồ kim loại hay lội nước xiết",
+                "Tiếp tục chạy xe đạp thật nhanh dưới mưa giông",
+                "Đứng giữa cánh đồng trống giơ ô kim loại lên che"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c6-l29-q6",
+              "type": "scenario",
+              "prompt": "Lời khuyên về ứng phó với hiện tượng thiên nhiên nhắc nhở em thực hiện điều gì?",
+              "options": [
+                "Theo dõi thời tiết, chuẩn bị ô, áo mưa hoặc mũ nón phù hợp và chấp hành quy tắc an toàn khi có bão giông",
+                "Ra ngoài đường đùa giỡn khi có giông lốc sấm sét",
+                "Không cần chuẩn bị ô hay áo mưa dù trời sắp mưa lớn",
+                "Đi tắm sông khi đang có bão lũ"
+              ],
+              "correctIndex": 0
+            }
+          ]
+        },
+        {
+          "id": "l30-luyen-tap-ung-pho-voi-thien-tai",
+          "lessonNumber": 30,
+          "title": "Bài 30: Luyện tập ứng phó với thiên tai",
+          "description": "Kỹ năng sinh tồn và phòng tránh rủi ro khi có thiên tai",
+          "questions": [
+            {
+              "id": "g2-c6-l30-q1",
+              "type": "scenario",
+              "prompt": "Khi nhận tin báo bão lớn hoặc lũ lụt dâng cao, gia đình em cần chủ động chuẩn bị những vật dụng thiết yếu nào?",
+              "options": [
+                "Đồ chơi điện tử, truyện tranh và đĩa nhạc",
+                "Đèn pin, radio/điện thoại, nước sạch, thực phẩm khô, thuốc y tế sơ cứu và áo phao",
+                "Xe đạp chơi game ngoài trời và phao bơi đồ chơi",
+                "Bánh kẹo ngọt và nước giải khát có ga"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c6-l30-q2",
+              "type": "scenario",
+              "prompt": "Trước khi bão giật mạnh hoặc nước lũ tràn vào nhà, thao tác an toàn nào đối với hệ thống điện cần thực hiện ngay?",
+              "options": [
+                "Cắm thêm nhiều thiết bị điện để sử dụng cùng lúc",
+                "Ngắt nguồn điện chính (cầu dao, aptomat), kê cao đồ đạc và chằng chống cửa nẻo chắc chắn",
+                "Bật tất cả các bóng đèn và quạt trong nhà",
+                "Mở toang tất cả cửa sổ và cửa chính cho thoáng"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c6-l30-q3",
+              "type": "scenario",
+              "prompt": "Gặp giông lốc, mưa đá hoặc sấm sét bất ngờ, hành động nào dưới đây là an toàn nhất?",
+              "options": [
+                "Trú tạm dưới gốc cây cổ thụ hoặc cột điện ngoài trời",
+                "Nhanh chóng vào nhà kiên cố đóng chặt cửa; không đứng gần cửa kính, không trú dưới cây to, không cầm đồ kim loại",
+                "Chạy ra giữa đồng trống hoặc bãi đất rộng đứng trú",
+                "Lội xuống dòng nước mưa đang chảy xiết ngoài đường để về nhà cho nhanh"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c6-l30-q4",
+              "type": "scenario",
+              "prompt": "Nước lũ dâng cao ngập sân trường và đường phố, việc làm nào dưới đây là rất nguy hiểm học sinh tuyệt đối không được làm?",
+              "options": [
+                "Theo sự hướng dẫn của thầy cô, người lớn di chuyển lên vị trí cao an toàn",
+                "Lội nước, bơi lội, vớt đồ đang trôi hoặc đi lại gần sông, suối, ao hồ, cống rãnh ngập nước",
+                "Mặc áo phao khi phải di chuyển bằng thuyền cứu hộ",
+                "Báo ngay cho người lớn khi thấy người khác gặp rủi ro ngập nước"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c6-l30-q5",
+              "type": "scenario",
+              "prompt": "Khi có lệnh di tản khẩn cấp do nguy cơ sạt lở đất hoặc bão lũ, em và gia đình nên làm gì?",
+              "options": [
+                "Cố tình ở lại nhà để giữ đồ đạc bất chấp nguy hiểm",
+                "Bình tĩnh, chấp hành nghiêm túc hướng dẫn di tản của người lớn/cán bộ cứu hộ, mang theo ba lô đồ dùng khẩn cấp nhẹ gọn",
+                "Khóc lóc và chạy lung tung ra ngoài đường",
+                "Trốn vào tủ quần áo hoặc gầm giường"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c6-l30-q6",
+              "type": "scenario",
+              "prompt": "Lời khuyên về rèn luyện kỹ năng ứng phó thiên tai nhắc nhở em điều gì?",
+              "options": [
+                "Luôn nâng cao cảnh giác, học thuộc các số điện thoại cứu hộ và chấp hành các quy tắc an toàn khi xảy ra thiên tai",
+                "Đợi khi thiên tai xảy ra mới bắt đầu tìm hiểu",
+                "Chủ quan đi ra ngoài xem bão lũ cho biết",
+                "Không cần học kỹ năng vì đã có người lớn lo hết"
+              ],
+              "correctIndex": 0
+            }
+          ]
+        },
+        {
+          "id": "l31-on-tap-chu-de-trai-dat-va-bau-troi",
+          "lessonNumber": 31,
+          "title": "Bài 31: Ôn tập chủ đề Trái Đất và Bầu trời",
+          "description": "Tổng hợp kiến thức các mùa và ứng phó thiên tai",
+          "questions": [
+            {
+              "id": "g2-c6-l31-q1",
+              "type": "scenario",
+              "prompt": "Đặc điểm các mùa ở miền Bắc và miền Nam nước ta như thế nào?",
+              "options": [
+                "Miền Bắc có 4 mùa; Miền Nam chủ yếu có 2 mùa (mùa mưa và mùa khô)",
+                "Miền Bắc chỉ có mùa đông; Miền Nam chỉ có mùa xuân",
+                "Miền Bắc và miền Nam đều có 4 mùa giống hệt nhau",
+                "Miền Bắc có 2 mùa; Miền Nam có 5 mùa"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g2-c6-l31-q2",
+              "type": "scenario",
+              "prompt": "Nắng, mưa, mây, gió, sấm sét và sương mù được gọi chung là gì?",
+              "options": [
+                "Các hiện tượng do con người tự tạo ra",
+                "Các hiện tượng thiên nhiên diễn ra hằng ngày trên Trái Đất",
+                "Các hình ảnh xuất hiện trong phim hoạt hình",
+                "Sự thay đổi của các loại đồ dùng học tập"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c6-l31-q3",
+              "type": "scenario",
+              "prompt": "Hiện tượng nào dưới đây thuộc nhóm thiên tai gây tổn thất lớn?",
+              "options": [
+                "Mưa rào nhẹ mát mẻ vào mùa hạ",
+                "Bão lớn, lũ lụt, hạn hán và sạt lở đất",
+                "Gió nhẹ làm rung rinh cành cây",
+                "Nắng nhẹ vào buổi sớm mai"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c6-l31-q4",
+              "type": "scenario",
+              "prompt": "Khi có giông lốc hoặc nước lũ dâng cao, em nên làm gì để đảm bảo an toàn?",
+              "options": [
+                "Trú trong nhà kiên cố, ngắt điện và nghe lời người lớn",
+                "Ra giữa cánh đồng trống đứng trú bão",
+                "Lội xuống dòng nước lũ xiết để bơi lội",
+                "Chạy ra đường ngắm mưa giông sấm sét"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g2-c6-l31-q5",
+              "type": "scenario",
+              "prompt": "Thời tiết báo có không khí lạnh tràn về kèm mưa, em chuẩn bị trang phục đi học thế nào?",
+              "options": [
+                "Mặc quần đùi, áo phông ngắn tay và đi chân đất",
+                "Mặc áo khoác ấm, đi tất và mang theo ô hoặc áo mưa",
+                "Mặc đồ bơi và mang theo phao bơi",
+                "Mặc áo may-ô mỏng đi ra đường"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g2-c6-l31-q6",
+              "type": "scenario",
+              "prompt": "Học xong môn Tự nhiên và Xã hội 2, em đã có thêm những năng lực nào?",
+              "options": [
+                "Hiểu về thời tiết, chọn trang phục đúng và biết tự bảo vệ khi có thiên tai",
+                "Biết tên các mùa nhưng không biết chọn trang phục phù hợp",
+                "Nhận biết được thiên tai nhưng vẫn chạy ra đường chơi khi có bão",
+                "Không biết đọc các biểu tượng dự báo thời tiết đơn giản"
+              ],
+              "correctIndex": 0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

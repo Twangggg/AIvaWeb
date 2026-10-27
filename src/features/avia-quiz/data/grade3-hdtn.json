@@ -1,0 +1,3293 @@
+{
+  "id": "g3-hdtn",
+  "grade": 3,
+  "subjectKey": "hdtn",
+  "title": "Hoạt động trải nghiệm lớp 3",
+  "color": "#F59E0B",
+  "coverImage": "/mascots/bia-sach-mon-hoc.png",
+  "chapters": [
+    {
+      "id": "c1-chu-de-1",
+      "chapterNumber": 1,
+      "title": "CHỦ ĐỀ 1: TỰ GIỚI THIỆU VỀ MÌNH",
+      "lessons": [
+        {
+          "id": "l1-tuan-1",
+          "lessonNumber": 1,
+          "title": "Tuần 1",
+          "description": "Nhận biết đặc điểm ngoại hình riêng biệt và biết trân trọng nét đáng yêu của bản thân",
+          "questions": [
+            {
+              "id": "g3-hdtn-c1-l1-q1",
+              "type": "knowledge",
+              "prompt": "Quan sát đặc điểm ngoại hình nào giúp dễ dàng nhận ra nét riêng của một người?",
+              "options": [
+                "Gương mặt, đôi mắt, mái tóc, nụ cười, màu da, dáng người",
+                "Bàn ghế, sách vở và cặp sách mà bạn đang sử dụng",
+                "Điểm số các bài kiểm tra học tập của bạn trên lớp",
+                "Tên trường học và tên lớp học của bạn"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Gương mặt, đôi mắt, mái tóc, nụ cười, màu da, dáng người."
+            },
+            {
+              "id": "g3-hdtn-c1-l1-q2",
+              "type": "knowledge",
+              "prompt": "Có má lúm đồng tiền giống mẹ và tóc xoăn giống bố thể hiện điều gì?",
+              "options": [
+                "Những nét riêng do bản thân tự lựa chọn theo sở thích",
+                "Đặc điểm ngoại hình thừa hưởng từ gia đình, người thân",
+                "Những thói quen sinh hoạt cá nhân hằng ngày",
+                "Những khuyết điểm ngoại hình cần phải giấu đi"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Đặc điểm ngoại hình thừa hưởng từ gia đình, người thân."
+            },
+            {
+              "id": "g3-hdtn-c1-l1-q3",
+              "type": "knowledge",
+              "prompt": "Khi tạo hình \"Gương mặt vui nhộn\", em nên làm gì để nổi bật nét riêng của mình?",
+              "options": [
+                "Làm giống hệt sản phẩm tạo hình của các bạn xung quanh",
+                "Nhấn mạnh nét đặc biệt trên mặt (tóc xoăn, nụ cười tươi)",
+                "Che kín toàn bộ gương mặt bằng các loại lá cây",
+                "Không cần thể hiện bất kỳ chi tiết nào trên gương mặt"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Nhấn mạnh nét đặc biệt trên mặt (tóc xoăn, nụ cười tươi)."
+            },
+            {
+              "id": "g3-hdtn-c1-l1-q4",
+              "type": "scenario",
+              "prompt": "Câu nói \"Tớ nhận ra bạn nhờ chiếc má lúm đồng tiền rất tươi\" thể hiện điều gì?",
+              "options": [
+                "Bạn đang có ý định trêu chọc ngoại hình của bạn mình",
+                "Biết trân trọng nét riêng của bạn và gắn kết tình bạn",
+                "Bạn không thể nhớ được tên gọi của bạn mình",
+                "Bạn đang so sánh ngoại hình của bạn mình với người khác"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Biết trân trọng nét riêng của bạn và gắn kết tình bạn."
+            },
+            {
+              "id": "g3-hdtn-c1-l1-q5",
+              "type": "scenario",
+              "prompt": "Lời khuyên phù hợp nhất dành cho bạn nhỏ có nét riêng ngoại hình đặc biệt là gì?",
+              "options": [
+                "Tự tin vào vẻ ngoài vì mỗi người đều có nét riêng đáng yêu",
+                "Nên xin nghỉ học ở nhà để không bị các bạn nhìn thấy",
+                "Nên tỏ ra tức giận và tranh cãi gay gắt với các bạn",
+                "Tự ý yêu cầu bố mẹ đi thay đổi ngoại hình ngay lập tức"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Tự tin vào vẻ ngoài vì mỗi người đều có nét riêng đáng yêu."
+            },
+            {
+              "id": "g3-hdtn-c1-l1-q6",
+              "type": "scenario",
+              "prompt": "Việc làm trải nghiệm nào cùng gia đình giúp tăng thêm tình cảm gắn kết?",
+              "options": [
+                "Soi gương nhận xét nét giống nhau, tạo hình gương mặt nhà",
+                "Xem tivi một mình trong phòng riêng của bản thân",
+                "So sánh ngoại hình nhà mình với gia đình nhà hàng xóm",
+                "Đòi hỏi bố mẹ mua thật nhiều các loại đồ chơi mới"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Soi gương nhận xét nét giống nhau, tạo hình gương mặt nhà."
+            }
+          ]
+        },
+        {
+          "id": "l2-tuan-2",
+          "lessonNumber": 2,
+          "title": "Tuần 2",
+          "description": "Khám phá sở thích, năng khiếu cá nhân và tham gia câu lạc bộ yêu thích ở trường",
+          "questions": [
+            {
+              "id": "g3-hdtn-c1-l2-q1",
+              "type": "knowledge",
+              "prompt": "Mô phỏng động tác tưới cây, hái hoa và bắt sâu thể hiện sở thích nào?",
+              "options": [
+                "Thích tham gia đá bóng",
+                "Thích đọc sách lịch sử",
+                "Thích chăm sóc cây cối",
+                "Thích gấp giấy nghệ thuật"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Thích chăm sóc cây cối."
+            },
+            {
+              "id": "g3-hdtn-c1-l2-q2",
+              "type": "knowledge",
+              "prompt": "Vẽ bông hoa ghi các việc mình thích để giới thiệu sở thích giúp ích gì cho Hoa?",
+              "options": [
+                "Tự tin giới thiệu và chia sẻ rõ ràng sở thích với mọi người",
+                "Giấu kín hoàn toàn những việc mình thích làm hằng ngày",
+                "Bắt buộc các bạn xung quanh phải có sở thích giống hệt mình",
+                "Đạt điểm số tối đa trong bài kiểm tra môn Mĩ thuật"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Tự tin giới thiệu và chia sẻ rõ ràng sở thích với mọi người."
+            },
+            {
+              "id": "g3-hdtn-c1-l2-q3",
+              "type": "knowledge",
+              "prompt": "Khi đăng ký tham gia Câu lạc bộ ở trường, em nên dựa vào yếu tố nào?",
+              "options": [
+                "Dựa vào việc câu lạc bộ đó có nhiều bạn thân tham gia",
+                "Dựa vào sở thích, năng khiếu và mong muốn rèn luyện",
+                "Lựa chọn ngẫu nhiên một câu lạc bộ bất kỳ không cần nghĩ",
+                "Chọn câu lạc bộ nhẹ nhàng nhất để không phải vận động"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Dựa vào sở thích, năng khiếu và mong muốn rèn luyện."
+            },
+            {
+              "id": "g3-hdtn-c1-l2-q4",
+              "type": "scenario",
+              "prompt": "Có sở thích ca hát và muốn tham gia \"Tài năng học trò\", An nên làm gì?",
+              "options": [
+                "Tự tin đăng ký và tích cực luyện tập một tiết mục hát hay",
+                "Ngần ngại, giấu kín năng khiếu không cho mọi người biết",
+                "Đứng ngoài cổ vũ nhưng nhất quyết không tham gia biểu diễn",
+                "Đăng ký tham gia môn bóng đá dù bản thân không biết đá"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Tự tin đăng ký và tích cực luyện tập một tiết mục hát hay."
+            },
+            {
+              "id": "g3-hdtn-c1-l2-q5",
+              "type": "scenario",
+              "prompt": "Thấy sở thích của bạn hoàn toàn khác với sở thích của mình, em nên làm gì?",
+              "options": [
+                "Chê bai sở thích của bạn là không hay và không có ích",
+                "Tôn trọng sở thích riêng và vui vẻ lắng nghe bạn chia sẻ",
+                "Ép buộc bạn phải bỏ sở thích riêng để theo sở thích của mình",
+                "Tỏ thái độ khó chịu và không tiếp tục chơi với bạn nữa"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Tôn trọng sở thích riêng và vui vẻ lắng nghe bạn chia sẻ."
+            },
+            {
+              "id": "g3-hdtn-c1-l2-q6",
+              "type": "scenario",
+              "prompt": "Phát hiện bố cũng có cùng sở thích chơi Rubik với mình, An nên làm gì?",
+              "options": [
+                "Cùng bố chia sẻ kinh nghiệm, thi xoay Rubik lúc rảnh rỗi",
+                "Tuyệt đối không cho bố đụng vào đồ chơi Rubik của mình",
+                "Lập tức bỏ chơi Rubik để chuyển sang một trò chơi khác",
+                "Tỏ ra giữ khoảng cách và không trò chuyện tiếp với bố"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Cùng bố chia sẻ kinh nghiệm, thi xoay Rubik lúc rảnh rỗi."
+            }
+          ]
+        },
+        {
+          "id": "l3-tuan-3",
+          "lessonNumber": 3,
+          "title": "Tuần 3",
+          "description": "Hợp tác làm việc nhóm theo sở thích, xây dựng tinh thần đoàn kết và sẻ chia",
+          "questions": [
+            {
+              "id": "g3-hdtn-c1-l3-q1",
+              "type": "knowledge",
+              "prompt": "Mục đích chính của hoạt động ghi/vẽ sở thích vào ngôi sao là gì?",
+              "options": [
+                "So sánh xem ngôi sao của bạn nào vẽ đẹp nhất",
+                "Tìm ra các bạn có cùng sở thích để kết thành nhóm",
+                "Xếp hạng học lực của tất cả các bạn trong lớp học",
+                "Để giáo viên chấm điểm cho bài thi môn Mĩ thuật"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Tìm ra các bạn có cùng sở thích để kết thành nhóm."
+            },
+            {
+              "id": "g3-hdtn-c1-l3-q2",
+              "type": "knowledge",
+              "prompt": "Đặt tên nhóm và tạo khẩu hiệu thông điệp chung mang lại lợi ích gì?",
+              "options": [
+                "Vui vẻ, thể hiện tinh thần đoàn kết và mục tiêu chung",
+                "Bắt buộc các nhóm khác phải học tập và làm theo",
+                "Làm lãng phí thời gian diễn ra giờ sinh hoạt lớp",
+                "Để tham gia thi đua lấy phần thưởng cho cá nhân"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Vui vẻ, thể hiện tinh thần đoàn kết và mục tiêu chung."
+            },
+            {
+              "id": "g3-hdtn-c1-l3-q3",
+              "type": "knowledge",
+              "prompt": "Việc phân chia người đóng vai, người làm trang phục kịch thể hiện điều gì?",
+              "options": [
+                "Phân công công việc rõ ràng, phù hợp khả năng",
+                "Các thành viên đang có ý đùn đẩy công việc cho nhau",
+                "Một mình bạn nhóm trưởng phải gánh vác mọi việc",
+                "Thực hiện làm việc tùy tiện và không có kế hoạch"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Phân công công việc rõ ràng, phù hợp khả năng."
+            },
+            {
+              "id": "g3-hdtn-c1-l3-q4",
+              "type": "scenario",
+              "prompt": "Để nhóm đạt kết quả tốt nhất, mỗi thành viên cần làm gì?",
+              "options": [
+                "Chỉ ngồi xem các bạn khác trong nhóm làm việc",
+                "Chuẩn bị đủ dụng cụ và hoàn thành đúng nhiệm vụ",
+                "Tự ý thay đổi kế hoạch mà không hỏi ý kiến ai",
+                "Bỏ sang chơi cùng với các thành viên nhóm khác"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Chuẩn bị đủ dụng cụ và hoàn thành đúng nhiệm vụ."
+            },
+            {
+              "id": "g3-hdtn-c1-l3-q5",
+              "type": "scenario",
+              "prompt": "Sau khi xem tiết mục biểu diễn của nhóm bạn, em nên có thái độ nào?",
+              "options": [
+                "Tích cực lắng nghe, vỗ tay cổ vũ và khen ngợi bạn",
+                "Cố tình chê bai và chỉ trích các lỗi nhỏ của bạn",
+                "Nói chuyện riêng và không chú ý theo dõi bạn diễn",
+                "Bỏ về lại chỗ ngồi của mình để làm việc cá nhân"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Tích cực lắng nghe, vỗ tay cổ vũ và khen ngợi bạn."
+            },
+            {
+              "id": "g3-hdtn-c1-l3-q6",
+              "type": "scenario",
+              "prompt": "Khi hai bạn trong nhóm tranh cãi gay gắt về ý tưởng, em nên xử lý thế nào?",
+              "options": [
+                "Mặc kệ để cho hai bạn tự tranh cãi với nhau",
+                "Bình tĩnh lắng nghe và gợi ý kết hợp ý tưởng cả hai",
+                "Bỏ đi ra chỗ khác và không tham gia vẽ tranh nữa",
+                "Quát to yêu cầu cả hai bạn phải lập tức im lặng"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Bình tĩnh lắng nghe và gợi ý kết hợp ý tưởng cả hai."
+            }
+          ]
+        },
+        {
+          "id": "l4-tuan-4",
+          "lessonNumber": 4,
+          "title": "Tuần 4",
+          "description": "Rèn luyện thói quen đọc sách văn minh và giới thiệu những cuốn sách hay với bạn bè",
+          "questions": [
+            {
+              "id": "g3-hdtn-c1-l4-q1",
+              "type": "knowledge",
+              "prompt": "Sắm vai sách \"Vạn câu hỏi vì sao\" để giới thiệu giúp các bạn hiểu điều gì?",
+              "options": [
+                "Đọc sách mang lại kiến thức bổ ích và mở rộng hiểu biết",
+                "Việc đọc sách làm tốn nhiều thời gian vui chơi hằng ngày",
+                "Đọc sách là việc chỉ dành riêng cho những bạn học giỏi",
+                "Chỉ nên đọc sách khi bị thầy cô hoặc bố mẹ bắt buộc"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Đọc sách mang lại kiến thức bổ ích và mở rộng hiểu biết."
+            },
+            {
+              "id": "g3-hdtn-c1-l4-q2",
+              "type": "knowledge",
+              "prompt": "Khi giới thiệu một cuốn sách hay cho các bạn, em cần chia sẻ thông tin nào?",
+              "options": [
+                "Tên cuốn sách, Tên tác giả và Chi tiết thú vị trong sách",
+                "Giá tiền mua cuốn sách và địa chỉ nhà sách có bán",
+                "Độ dày mỏng và tổng số trang giấy của cuốn sách đó",
+                "Màu sắc trang trí trên bìa trước của cuốn sách đó"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Tên cuốn sách, Tên tác giả và Chi tiết thú vị trong sách."
+            },
+            {
+              "id": "g3-hdtn-c1-l4-q3",
+              "type": "knowledge",
+              "prompt": "Nhóm có sở thích yêu quý động vật nên chọn các cuốn sách nào vào danh mục?",
+              "options": [
+                "Chuyện loài vật, Thế giới động vật, Dế Mèn phiêu lưu ký",
+                "Sách dạy phương pháp hướng dẫn nấu các món ăn ngon",
+                "Sách dạy các kỹ năng biểu diễn ảo thuật và làm xiếc",
+                "Sách ghi chép về sự phát triển của các triều đại lịch sử"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Chuyện loài vật, Thế giới động vật, Dế Mèn phiêu lưu ký."
+            },
+            {
+              "id": "g3-hdtn-c1-l4-q4",
+              "type": "knowledge",
+              "prompt": "Danh mục sách nào phù hợp nhất cho nhóm bạn đam mê ảo thuật và khoa học vui?",
+              "options": [
+                "Nhà khoa học trẻ, 10 vạn câu hỏi vì sao, Hướng dẫn ảo thuật",
+                "Cuốn sách hướng dẫn tập viết các vần tiếng Việt Lớp 1",
+                "Tuyển tập các cuốn truyện cổ tích và thần thoại dân gian",
+                "Sách hướng dẫn kỹ năng gấp giấy nghệ thuật thủ công"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Nhà khoa học trẻ, 10 vạn câu hỏi vì sao, Hướng dẫn ảo thuật."
+            },
+            {
+              "id": "g3-hdtn-c1-l4-q5",
+              "type": "knowledge",
+              "prompt": "Hành động nào thể hiện thói quen đọc sách văn minh và đạt hiệu quả cao?",
+              "options": [
+                "Chủ động đổi sách cho bạn, giữ gìn sách và ghi chép hay",
+                "Mua nhiều sách về xếp lên kệ trang trí chứ nhất quyết không đọc",
+                "Viết vẽ bậy và làm xé rách trang sách khi mượn đọc của bạn",
+                "Giữ khư khư sách cá nhân của mình không cho ai mượn đọc cùng"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Chủ động đổi sách cho bạn, giữ gìn sách và ghi chép hay."
+            },
+            {
+              "id": "g3-hdtn-c1-l4-q6",
+              "type": "knowledge",
+              "prompt": "Em đạt mức \"Hoàn thành tốt\" Chủ đề 1 khi thực hiện được nội dung nào?",
+              "options": [
+                "Nêu nét riêng bản thân, chia sẻ sở thích và giới thiệu sản phẩm",
+                "Chưa tự nhận biết nét riêng và không dám nói chuyện trước lớp",
+                "Chỉ làm các sản phẩm học tập theo đúng ý muốn của bố mẹ",
+                "Hoàn toàn không tham gia vào các hoạt động nhóm cùng bạn"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Nêu nét riêng bản thân, chia sẻ sở thích và giới thiệu sản phẩm."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c2-chu-de-2",
+      "chapterNumber": 2,
+      "title": "CHỦ ĐỀ 2: NẾP SỐNG ĐẸP",
+      "lessons": [
+        {
+          "id": "l5-tuan-5",
+          "lessonNumber": 5,
+          "title": "Tuần 5",
+          "description": "Lập và thực hiện theo thời gian biểu khoa học để cân đối học tập, vui chơi và nghỉ ngơi",
+          "questions": [
+            {
+              "id": "g3-hdtn-c2-l5-q1",
+              "type": "knowledge",
+              "prompt": "Các hoạt động hằng ngày được phân chia thành 4 nhóm chính nào dưới đây?",
+              "options": [
+                "Học tập, Giải trí, Chăm sóc bản thân và Làm việc nhà",
+                "Việc vui chơi, Việc ngủ nghỉ, Việc ăn uống và Xem tivi",
+                "Việc ở trường, Việc ở lớp, Việc ở nhà và Việc ngoài đường",
+                "Việc bắt buộc, Việc tự do, Việc thích làm và Không thích"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Học tập, Giải trí, Chăm sóc bản thân và Làm việc nhà."
+            },
+            {
+              "id": "g3-hdtn-c2-l5-q2",
+              "type": "knowledge",
+              "prompt": "Việc lập và dán thời gian biểu ở góc học tập mang lại lợi ích gì cho An?",
+              "options": [
+                "Sắp xếp công việc hợp lý, chủ động và quý trọng thời gian",
+                "Giúp em không cần phải tham gia làm việc nhà cùng bố mẹ",
+                "Có thêm nhiều thời gian xem tivi mà không cần học bài",
+                "Thay thế bố mẹ gánh vác làm hết mọi việc trong gia đình"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Sắp xếp công việc hợp lý, chủ động và quý trọng thời gian."
+            },
+            {
+              "id": "g3-hdtn-c2-l5-q3",
+              "type": "knowledge",
+              "prompt": "Diễn tả động tác đá bóng vào mốc 5 giờ chiều thể hiện điều gì?",
+              "options": [
+                "Hoạt động thể thao phù hợp với khung giờ trong ngày",
+                "Hai bạn đang xảy ra tranh cãi gay gắt trên sân trường",
+                "Các bạn thực hiện không đúng theo khung thời gian biểu",
+                "Thực hiện công việc nhà vào khung giờ dành cho học tập"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Hoạt động thể thao phù hợp với khung giờ trong ngày."
+            },
+            {
+              "id": "g3-hdtn-c2-l5-q4",
+              "type": "scenario",
+              "prompt": "Khi thấy giờ đọc sách lúc 9 giờ tối bị muộn do đi ngủ sớm, Linh nên làm gì?",
+              "options": [
+                "Lập tức bỏ luôn thói quen đọc sách hằng ngày của mình",
+                "Nhờ người thân góp ý và chỉnh khung giờ đọc sách sớm hơn",
+                "Thức thật khuya đến 11 giờ đêm để hoàn thành việc đọc sách",
+                "Giữ nguyên thời gian biểu cũ và không thực hiện theo nữa"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Nhờ người thân góp ý và chỉnh khung giờ đọc sách sớm hơn."
+            },
+            {
+              "id": "g3-hdtn-c2-l5-q5",
+              "type": "scenario",
+              "prompt": "Mải chơi quên mất giờ tưới cây theo thời gian biểu, Tuấn nên làm gì?",
+              "options": [
+                "Nói dối bố mẹ là bản thân đã thực hiện tưới cây xong",
+                "Tự giác tưới cây ngay và rút kinh nghiệm thực hiện đúng giờ",
+                "Tỏ ra giận dỗi rồi xé bỏ hoàn toàn bảng thời gian biểu",
+                "Đổ lỗi cho bạn bè vì đã kéo bản thân mình đi chơi cùng"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Tự giác tưới cây ngay và rút kinh nghiệm thực hiện đúng giờ."
+            },
+            {
+              "id": "g3-hdtn-c2-l5-q6",
+              "type": "scenario",
+              "prompt": "Bài tập trải nghiệm gợi ý em nhờ ai góp ý để hoàn thiện thời gian biểu?",
+              "options": [
+                "Nhờ người thân góp ý để cân đối thời gian sinh hoạt",
+                "Tự bản thân quyết định mà không cần hỏi ý kiến của ai",
+                "Đưa cho bạn nhỏ hàng xóm học Lớp 1 chỉnh sửa giúp",
+                "Cất bảng thời gian biểu vào cặp và không cho ai xem"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Nhờ người thân góp ý để cân đối thời gian sinh hoạt."
+            }
+          ]
+        },
+        {
+          "id": "l6-tuan-6",
+          "lessonNumber": 6,
+          "title": "Tuần 6",
+          "description": "Tự tay làm và sử dụng Sổ nhắc việc để ghi nhớ và hoàn thành công việc đúng hạn",
+          "questions": [
+            {
+              "id": "g3-hdtn-c2-l6-q1",
+              "type": "knowledge",
+              "prompt": "Nguyên nhân chính khiến cho An quên bài tập mĩ thuật và chưa tưới cây là gì?",
+              "options": [
+                "Do bản thân An chưa có đủ sức khỏe để làm việc",
+                "Do hay quên và chưa có sổ tay ghi nhớ công việc",
+                "Do thầy cô giáo không hề giao bài tập về nhà",
+                "Do bị các bạn xung quanh tìm cách ngăn cản"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Do hay quên và chưa có sổ tay ghi nhớ công việc."
+            },
+            {
+              "id": "g3-hdtn-c2-l6-q2",
+              "type": "knowledge",
+              "prompt": "Lời khuyên tốt nhất giúp bạn An khắc phục tình trạng hay quên công việc là gì?",
+              "options": [
+                "Làm và sử dụng Sổ nhắc việc để ghi chép hằng ngày",
+                "Nhờ bố mẹ suốt ngày phải đứng bên cạnh nhắc nhở",
+                "Viết tất cả các công việc cần làm lên mặt bàn học",
+                "Lập tức bỏ qua không tiếp tục làm những việc khó"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Làm và sử dụng Sổ nhắc việc để ghi chép hằng ngày."
+            },
+            {
+              "id": "g3-hdtn-c2-l6-q3",
+              "type": "knowledge",
+              "prompt": "Dụng cụ và vật liệu đơn giản nhất để làm một cuốn Sổ nhắc việc là gì?",
+              "options": [
+                "Giấy, bìa màu, keo dán, kéo, dập ghim và bút màu",
+                "Bộ búa, đinh sắt, các thanh gỗ và sơn tường",
+                "Kim khâu, chỉ khâu, các mảnh vải thô và bông gòn",
+                "Đất nặn nhiều màu sắc và các cuộn dây thép nhỏ"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Giấy, bìa màu, keo dán, kéo, dập ghim và bút màu."
+            },
+            {
+              "id": "g3-hdtn-c2-l6-q4",
+              "type": "scenario",
+              "prompt": "Em nên trao lời khuyên hữu ích nhất nào cho nhân vật \"Chú khỉ đãng trí\"?",
+              "options": [
+                "Hãy ghi việc vào Sổ nhắc việc và kiểm tra hằng ngày",
+                "Cứ đi chơi thỏa thích và không cần hoàn thành việc",
+                "Nhờ các bạn xung quanh làm hộ hết công việc của mình",
+                "Chỉ cần cố gắng ghi nhớ công việc ở trong đầu"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Hãy ghi việc vào Sổ nhắc việc và kiểm tra hằng ngày."
+            },
+            {
+              "id": "g3-hdtn-c2-l6-q5",
+              "type": "scenario",
+              "prompt": "Việc Bình dùng sổ nhắc bạn Nam nhớ lịch làm việc lớp thể hiện điều gì?",
+              "options": [
+                "Bình là người thích can thiệp vào việc của người khác",
+                "Biết quan tâm, giúp bạn làm việc đúng thời hạn",
+                "Bình chỉ muốn khoe cuốn sổ nhắc việc mới làm",
+                "Bình thực sự không muốn cho Nam tham gia cùng lớp"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Biết quan tâm, giúp bạn làm việc đúng thời hạn."
+            },
+            {
+              "id": "g3-hdtn-c2-l6-q6",
+              "type": "scenario",
+              "prompt": "Sử dụng Sổ nhắc việc thế nào là khoa học và mang lại hiệu quả cao nhất?",
+              "options": [
+                "Ghi việc, để nơi dễ thấy và tích chọn khi xong",
+                "Chỉ ghi mỗi tên sổ mà không viết việc gì vào trong",
+                "Viết kín nội dung các trang rồi cất đi không xem",
+                "Dùng sổ để vẽ nháp và xé các trang giấy làm máy bay"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Ghi việc, để nơi dễ thấy và tích chọn khi xong."
+            }
+          ]
+        },
+        {
+          "id": "l7-tuan-7",
+          "lessonNumber": 7,
+          "title": "Tuần 7",
+          "description": "Phân loại, bảo quản đồ dùng cũ và tham gia ngày hội trao đổi đồ dùng ý nghĩa",
+          "questions": [
+            {
+              "id": "g3-hdtn-c2-l7-q1",
+              "type": "knowledge",
+              "prompt": "Thông điệp chính được truyền tải qua câu chuyện \"Nỗi buồn của quần áo cũ\" là gì?",
+              "options": [
+                "Trân trọng đồ dùng, không lãng phí đồ còn dùng được",
+                "Vứt bỏ ngay quần áo cũ để xin tiền mua đồ mới",
+                "Không cần thiết phải dọn dẹp và sắp xếp tủ quần áo",
+                "Quần áo cũ sẽ tự động chuyển sang tủ người khác"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Trân trọng đồ dùng, không lãng phí đồ còn dùng được."
+            },
+            {
+              "id": "g3-hdtn-c2-l7-q2",
+              "type": "knowledge",
+              "prompt": "Em nên phân loại đồ cũ cá nhân thành hai nhóm chính nào để ứng xử phù hợp?",
+              "options": [
+                "Đồ quá cũ không dùng được VÀ Đồ cũ vẫn còn tốt",
+                "Đồ mua ở siêu thị VÀ Đồ mua ở các khu chợ",
+                "Đồ có màu sắc sáng VÀ Đồ có màu sắc tối",
+                "Đồ đắt tiền VÀ Đồ mua với giá rẻ tiền"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Đồ quá cũ không dùng được VÀ Đồ cũ vẫn còn tốt."
+            },
+            {
+              "id": "g3-hdtn-c2-l7-q3",
+              "type": "knowledge",
+              "prompt": "Khi gấu bông bị đứt chỉ hoặc đồ chơi tuột bộ phận nhỏ, em nên xử lý thế nào?",
+              "options": [
+                "Vứt ngay vào thùng rác và đòi mẹ mua cái mới",
+                "Khéo léo sửa chữa hoặc nhờ người thân khâu giúp",
+                "Giấu xuống dưới gầm giường để không ai thấy",
+                "Ném đồ chơi ra ngoài sân nhà"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Khéo léo sửa chữa hoặc nhờ người thân khâu giúp."
+            },
+            {
+              "id": "g3-hdtn-c2-l7-q4",
+              "type": "scenario",
+              "prompt": "Món đồ nào phù hợp nhất để mang đến trao đổi tại \"Hội chợ trao đổi đồ dùng\"?",
+              "options": [
+                "Truyện tranh hoặc đồ chơi còn tốt nhưng đã đọc xong",
+                "Đồ dùng đã bị gãy nát, bẩn thỉu không dùng được",
+                "Sách vở bài tập em đang học hằng ngày trên lớp",
+                "Đồ dùng cá nhân của người thân khi chưa xin phép"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Truyện tranh hoặc đồ chơi còn tốt nhưng đã đọc xong."
+            },
+            {
+              "id": "g3-hdtn-c2-l7-q5",
+              "type": "scenario",
+              "prompt": "Lớp học chuẩn bị hai giỏ đựng \"SÁCH ĐỌC RỒI TẶNG BẠN\" và \"CŨ MÀ VẪN TỐT\" để làm gì?",
+              "options": [
+                "Gom đồ còn tốt tặng các bạn khó khăn, thiện nguyện",
+                "Làm nơi chứa rác thải sinh hoạt hằng ngày của lớp",
+                "Đặt ở góc lớp để trang trí chứ không đựng đồ",
+                "Bắt buộc mỗi bạn phải mua đồ mới nộp vào giỏ"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Gom đồ còn tốt tặng các bạn khó khăn, thiện nguyện."
+            },
+            {
+              "id": "g3-hdtn-c2-l7-q6",
+              "type": "scenario",
+              "prompt": "Đối với những đồ dùng đã quá cũ, rách hỏng nặng không thể sửa chữa, em xử lý ra sao?",
+              "options": [
+                "Thu gom gọn gàng và bỏ vào thùng rác đúng quy định",
+                "Mang tặng lại cho người bạn thân nhất ở trong lớp",
+                "Cất lại vào tủ quần áo để tiếp tục bỏ quên",
+                "Vứt bừa bãi ra khu vực hành lang trường học"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Thu gom gọn gàng và bỏ vào thùng rác đúng quy định."
+            }
+          ]
+        },
+        {
+          "id": "l8-tuan-8",
+          "lessonNumber": 8,
+          "title": "Tuần 8",
+          "description": "Hình thành thói quen tiêu dùng thông minh, mua sắm tiết kiệm và trân trọng đồ dùng",
+          "questions": [
+            {
+              "id": "g3-hdtn-c2-l8-q1",
+              "type": "knowledge",
+              "prompt": "Đòi mua đồ mới dù đồ cũ vẫn dùng tốt phản ánh điều gì?",
+              "options": [
+                "Mua đồ theo sở thích chốc lát chứ chưa thực sự cần",
+                "Mua đồ dùng vô cùng cấp bách và bắt buộc cho bản thân",
+                "Mua đồ nhằm mục đích tiết kiệm tiền bạc cho bố mẹ",
+                "Đã trở thành một người tiêu dùng thông minh thực thụ"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Mua đồ theo sở thích chốc lát chứ chưa thực sự cần."
+            },
+            {
+              "id": "g3-hdtn-c2-l8-q2",
+              "type": "knowledge",
+              "prompt": "Trước khi mua đồ mới, em nên tự đặt câu hỏi nào để tránh lãng phí?",
+              "options": [
+                "Đã có đồ đó chưa, đồ cũ còn tốt không, hỏng có sửa được không?",
+                "Món đồ này có đắt không và có màu sắc đỏ hay màu vàng không?",
+                "Cửa hàng bán món đồ này có gần với vị trí nhà mình không?",
+                "Món đồ này có kiểu dáng giống hệt của bạn ngồi bên cạnh không?"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Đã có đồ đó chưa, đồ cũ còn tốt không, hỏng có sửa được không?."
+            },
+            {
+              "id": "g3-hdtn-c2-l8-q3",
+              "type": "knowledge",
+              "prompt": "Hộp bút bị rách góc nhẹ nhưng khóa kéo vẫn tốt, em nên khuyên Nam làm gì?",
+              "options": [
+                "Khuyên Nam dán lại góc rách vì hộp bút vẫn dùng rất tốt",
+                "Khuyên Nam giận dỗi để mẹ mua bằng được hộp bút mới tinh",
+                "Khuyên Nam vứt hộp bút cũ đi và mượn hộp bút của bạn học",
+                "Khuyên Nam bỏ hết bút vào cặp sách mà không cần dùng hộp bút"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Khuyên Nam dán lại góc rách vì hộp bút vẫn dùng rất tốt."
+            },
+            {
+              "id": "g3-hdtn-c2-l8-q4",
+              "type": "knowledge",
+              "prompt": "Các bạn trong nhóm cùng làm gì để bảo quản và kéo dài tuổi thọ cho sách vở?",
+              "options": [
+                "Dán lại trang sách bị rách và bọc lại bìa vở sạch đẹp",
+                "Xé bỏ đi tất cả những trang sách bị nhăn ở góc",
+                "Đổi những cuốn sách rách lấy sách mới của các bạn khác",
+                "Đề nghị bố mẹ lập tức mua lại toàn bộ bộ sách học mới"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Dán lại trang sách bị rách và bọc lại bìa vở sạch đẹp."
+            },
+            {
+              "id": "g3-hdtn-c2-l8-q5",
+              "type": "knowledge",
+              "prompt": "Thấy dây buộc tóc đẹp nhưng ở nhà đã có nhiều cái tốt, em nên làm gì?",
+              "options": [
+                "Đặt lại chiếc dây buộc tóc vì bản thân chưa thực sự cần",
+                "Khóc nhè đòi mẹ mua thêm chiếc nữa về để sưu tầm",
+                "Mua về rồi cất kín vào tủ và không bao giờ dùng đến",
+                "Mượn tiền của bạn đi cùng để mua bằng được chiếc dây"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Đặt lại chiếc dây buộc tóc vì bản thân chưa thực sự cần."
+            },
+            {
+              "id": "g3-hdtn-c2-l8-q6",
+              "type": "knowledge",
+              "prompt": "Em đạt mức \"Hoàn thành tốt\" Chủ đề 2 khi thực hiện được mục tiêu nào?",
+              "options": [
+                "Thực hiện theo thời gian biểu và mua sắm tiết kiệm đúng cách",
+                "Luôn sinh hoạt hoàn toàn tự do không theo kế hoạch nào",
+                "Mua tất cả những món đồ mình thích mà không cần suy nghĩ",
+                "Vứt bỏ toàn bộ tất cả những đồ dùng cũ ở trong nhà"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Thực hiện theo thời gian biểu và mua sắm tiết kiệm đúng cách."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c3-chu-de-3",
+      "chapterNumber": 3,
+      "title": "CHỦ ĐỀ 3: MÁI TRƯỜNG EM YÊU",
+      "lessons": [
+        {
+          "id": "l9-tuan-9",
+          "lessonNumber": 9,
+          "title": "Tuần 9",
+          "description": "Trang trí lớp học thân thương an toàn, sạch đẹp và xây dựng tủ sách lớp học",
+          "questions": [
+            {
+              "id": "g3-hdtn-c3-l9-q1",
+              "type": "knowledge",
+              "prompt": "Động tác múa hát nào thể hiện tình bạn gắn bó giữa các bạn học sinh trong lớp?",
+              "options": [
+                "Nắm tay, khoác vai và làm động tác giống nhau theo nhạc",
+                "Mỗi bạn quay lưng lại với nhau và tự làm động tác riêng",
+                "Tranh giành vị trí chỗ đứng đẹp trên sân khấu với bạn",
+                "Đứng yên tại chỗ và không tham gia múa hát cùng cả lớp"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Nắm tay, khoác vai và làm động tác giống nhau theo nhạc."
+            },
+            {
+              "id": "g3-hdtn-c3-l9-q2",
+              "type": "knowledge",
+              "prompt": "Trong buổi thảo luận trang trí lớp học, các tổ nên phân công nhiệm vụ ra sao?",
+              "options": [
+                "Tổ 1 nhặt lá làm tranh lá, Tổ 2 nhận lau các cửa sổ",
+                "Tổ 1 bắt buộc Tổ 2 phải làm hết mọi việc trang trí",
+                "Cả lớp thống nhất không thực hiện trang trí hay dọn dẹp",
+                "Mỗi bạn tự mua đồ dùng đắt tiền về treo ở bàn cá nhân"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Tổ 1 nhặt lá làm tranh lá, Tổ 2 nhận lau các cửa sổ."
+            },
+            {
+              "id": "g3-hdtn-c3-l9-q3",
+              "type": "knowledge",
+              "prompt": "Dụng cụ, vật liệu cơ bản nào cần chuẩn bị để trang trí lớp học thân thương?",
+              "options": [
+                "Kéo, hồ dán, băng dính, chì, lá cây và giấy nhiều màu",
+                "Bộ búa sắt, đinh sắt, cưa gỗ và các loại sơn tường",
+                "Đất nặn nhiều màu, cuộn dây thép nhỏ và keo 502",
+                "Kim khâu, chỉ khâu và các mảnh vải thô chưa qua xử lý"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Kéo, hồ dán, băng dính, chì, lá cây và giấy nhiều màu."
+            },
+            {
+              "id": "g3-hdtn-c3-l9-q4",
+              "type": "knowledge",
+              "prompt": "Khi treo dây hoa và tranh ảnh trang trí lớp, hành động nào đảm bảo an toàn?",
+              "options": [
+                "Tuyệt đối không thực hiện chồng hai chiếc ghế trèo cao",
+                "Nhảy đứng lên trên mép bàn học để với treo dây hoa",
+                "Chồng 3-4 chiếc ghế nhựa lên cao để với tới trần nhà",
+                "Cầm kéo nhọn chạy đùa giỡn trong khi đang treo tranh"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Tuyệt đối không thực hiện chồng hai chiếc ghế trèo cao."
+            },
+            {
+              "id": "g3-hdtn-c3-l9-q5",
+              "type": "knowledge",
+              "prompt": "Sau khi hoàn thành trang trí lớp học, cảm xúc và hành động phù hợp là gì?",
+              "options": [
+                "Vui mừng, tự hào và luôn có ý thức giữ vệ sinh chung",
+                "Lập tức bỏ về nhà ngay vì cảm thấy công việc quá mệt",
+                "Viết và vẽ bậy lên các bức tranh vừa được treo tường",
+                "Tỏ thái độ chê bai các sản phẩm trang trí của tổ khác"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Vui mừng, tự hào và luôn có ý thức giữ vệ sinh chung."
+            },
+            {
+              "id": "g3-hdtn-c3-l9-q6",
+              "type": "knowledge",
+              "prompt": "Khuyến khích học sinh tham gia phong trào \"Tủ sách lớp học\" bằng việc làm nào?",
+              "options": [
+                "Tích cực đóng góp sách, truyện hay để xây dựng tủ sách",
+                "Giữ khư khư sách cá nhân ở nhà và không cho ai mượn",
+                "Mua các loại sách cũ rách không đọc được đem nộp cho có",
+                "Đòi hỏi nhà trường phải phát sách miễn phí mang về nhà"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Tích cực đóng góp sách, truyện hay để xây dựng tủ sách."
+            }
+          ]
+        },
+        {
+          "id": "l10-tuan-10",
+          "lessonNumber": 10,
+          "title": "Tuần 10",
+          "description": "Học cách đồng cảm, lắng nghe và hòa giải bất đồng để giữ gìn tình bạn trong sáng",
+          "questions": [
+            {
+              "id": "g3-hdtn-c3-l10-q1",
+              "type": "knowledge",
+              "prompt": "Trong sơ đồ \"Sao tình bạn\", sợi dây hình trái tim và dấu chấm cảm (!) biểu thị điều gì?",
+              "options": [
+                "Trái tim biểu thị sự hòa thuận; Dấu chấm cảm (!) biểu thị sự bất đồng",
+                "Trái tim biểu thị sự giận dỗi; Dấu chấm cảm (!) biểu thị sự yêu thương",
+                "Trái tim biểu thị kết quả học tập; Dấu chấm cảm (!) biểu thị hoạt động",
+                "Cả hai ký hiệu đều biểu thị sự tranh cãi giữa bạn bè với nhau"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Trái tim biểu thị sự hòa thuận; Dấu chấm cảm (!) biểu thị sự bất đồng."
+            },
+            {
+              "id": "g3-hdtn-c3-l10-q2",
+              "type": "knowledge",
+              "prompt": "Tình huống nào dưới đây thể hiện sự bất đồng thường gặp giữa bạn bè?",
+              "options": [
+                "Hiểu lầm, tranh cãi và không hợp tác khi làm việc nhóm",
+                "Cùng nhau học tập, vui chơi và chia sẻ đồ dùng học tập",
+                "Sẵn sàng giúp đỡ bạn bè xung quanh khi gặp khó khăn",
+                "Lắng nghe và tôn trọng ý kiến cá nhân của bạn bè"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Hiểu lầm, tranh cãi và không hợp tác khi làm việc nhóm."
+            },
+            {
+              "id": "g3-hdtn-c3-l10-q3",
+              "type": "knowledge",
+              "prompt": "Khi xảy ra mâu thuẫn với bạn, em nên thực hiện các bước nào để hòa giải?",
+              "options": [
+                "Đặt mình vào vị trí của bạn, thấu hiểu cảm xúc và chủ động trò chuyện",
+                "Im lặng hoàn toàn và quyết định bỏ chơi với bạn suốt đời",
+                "Quát to, tranh cãi gay gắt và bắt bạn phải xin lỗi mình",
+                "Tố cáo và chê bai bạn trước mặt tất cả các bạn trong lớp"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Đặt mình vào vị trí của bạn, thấu hiểu cảm xúc và chủ động trò chuyện."
+            },
+            {
+              "id": "g3-hdtn-c3-l10-q4",
+              "type": "scenario",
+              "prompt": "Thấy bạn An vô ý làm bẩn cuốn sách của mình và đã nhận lỗi, em nên làm gì?",
+              "options": [
+                "Bình tĩnh lắng nghe, chấp nhận lời xin lỗi và cùng lau sạch",
+                "Tỏ ra tức giận, xé nát cuốn sách của bạn để trả đũa",
+                "Hét to vào mặt bạn và không bao giờ trò chuyện với bạn",
+                "Bắt bạn phải đền bù ngay một cuốn sách hoàn toàn mới"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Bình tĩnh lắng nghe, chấp nhận lời xin lỗi và cùng lau sạch."
+            },
+            {
+              "id": "g3-hdtn-c3-l10-q5",
+              "type": "scenario",
+              "prompt": "Lời khuyên hay nhất rút ra sau khi giải quyết thành công bất đồng với bạn là gì?",
+              "options": [
+                "Lắng nghe, nhận lỗi, tha thứ và nhường nhịn để giữ tình bạn",
+                "Không nên kết bạn với ai để tránh xảy ra bất đồng",
+                "Luôn cho rằng bản thân mình đúng trong mọi trường hợp",
+                "Chỉ thực hiện giảng hòa khi có sự yêu cầu của giáo viên"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Lắng nghe, nhận lỗi, tha thứ và nhường nhịn để giữ tình bạn."
+            },
+            {
+              "id": "g3-hdtn-c3-l10-q6",
+              "type": "scenario",
+              "prompt": "Trò chơi kể lại tình huống bất đồng và cảm xúc giúp học sinh rèn luyện kỹ năng gì?",
+              "options": [
+                "Thấu hiểu, đoán biết cảm xúc để dễ đồng cảm và hòa giải",
+                "Kỹ năng tham gia thi đấu thể thao trong giờ thể dục",
+                "Kỹ năng thực hiện tính toán nhanh các bài toán đố",
+                "Kỹ năng thực hiện biểu diễn văn nghệ trên sân khấu"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Thấu hiểu, đoán biết cảm xúc để dễ đồng cảm và hòa giải."
+            }
+          ]
+        },
+        {
+          "id": "l11-tuan-11",
+          "lessonNumber": 11,
+          "title": "Tuần 11",
+          "description": "Tìm hiểu truyền thống Đội Thiếu niên Tiền phong và phấn đấu trở thành đội viên tốt",
+          "questions": [
+            {
+              "id": "g3-hdtn-c3-l11-q1",
+              "type": "knowledge",
+              "prompt": "Khăn quàng đỏ và biểu tượng Búp măng non có ý nghĩa như thế nào?",
+              "options": [
+                "Khăn tượng trưng lý tưởng cách mạng; Búp măng là thế hệ tương lai",
+                "Khăn quàng đỏ chỉ dùng giữ ấm cổ; Búp măng non là món ăn quê hương",
+                "Khăn quàng đỏ là thưởng học giỏi; Búp măng đại diện cho thể thao",
+                "Khăn quàng đỏ và Búp măng non chỉ dùng để trang trí trong lớp học"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Khăn tượng trưng lý tưởng cách mạng; Búp măng là thế hệ tương lai."
+            },
+            {
+              "id": "g3-hdtn-c3-l11-q2",
+              "type": "knowledge",
+              "prompt": "Học sinh được tìm hiểu về tấm gương người anh hùng nhỏ tuổi nào của Đội?",
+              "options": [
+                "Anh Kim Đồng",
+                "Chị Võ Thị Sáu",
+                "Anh Nguyễn Văn Trỗi",
+                "Anh Lê Văn Tám"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Anh Kim Đồng."
+            },
+            {
+              "id": "g3-hdtn-c3-l11-q3",
+              "type": "knowledge",
+              "prompt": "Để phấn đấu trở thành đội viên, em nên rèn luyện thói quen hằng ngày nào?",
+              "options": [
+                "Tập thể dục, ngủ đúng giờ, đi học đúng giờ, giữ vệ sinh sạch sẽ",
+                "Thức thật khuya chơi game, nghỉ học tự do không cần xin phép",
+                "Chỉ làm việc nhà giúp bố mẹ khi nhận được tiền thưởng",
+                "Không cần tham gia vào các hoạt động tập thể của trường lớp"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Tập thể dục, ngủ đúng giờ, đi học đúng giờ, giữ vệ sinh sạch sẽ."
+            },
+            {
+              "id": "g3-hdtn-c3-l11-q4",
+              "type": "knowledge",
+              "prompt": "Để chuẩn bị tốt cho việc kết nạp Đội, em cần rèn luyện theo nội dung nào?",
+              "options": [
+                "Thực hiện tốt 5 điều Bác Hồ dạy thiếu niên và nhi đồng",
+                "Học thuộc Luật giao thông đường bộ dành cho xe ô tô",
+                "Học thuộc các quy định về thi đấu thể thao chuyên nghiệp",
+                "Học thuộc các nội quy mua sắm tại các siêu thị lớn"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Thực hiện tốt 5 điều Bác Hồ dạy thiếu niên và nhi đồng."
+            },
+            {
+              "id": "g3-hdtn-c3-l11-q5",
+              "type": "knowledge",
+              "prompt": "Học sinh lớp 3 được hướng dẫn thực hiện kỹ năng nghi thức Đội nào?",
+              "options": [
+                "Học cách điểm danh và cách chào đúng theo nghi thức Đội",
+                "Học cách thực hiện bắt tay xã giao giống như người lớn",
+                "Học cách vẫy tay chào khán giả trên sân khấu nghệ thuật",
+                "Học cách làm các động tác múa cờ trong lễ hội truyền thống"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Học cách điểm danh và cách chào đúng theo nghi thức Đội."
+            },
+            {
+              "id": "g3-hdtn-c3-l11-q6",
+              "type": "knowledge",
+              "prompt": "Khi tham quan Phòng truyền thống của trường, thái độ phù hợp là gì?",
+              "options": [
+                "Tự hào về truyền thống Đội, quyết tâm rèn luyện để kết nạp",
+                "Nói chuyện riêng, đùa giỡn làm mất trật tự trong phòng",
+                "Tỏ thái độ không quan tâm và muốn lập tức đi về lớp ngay",
+                "Sờ tay vào các hiện vật trưng bày dù đã có biển cấm"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Tự hào về truyền thống Đội, quyết tâm rèn luyện để kết nạp."
+            }
+          ]
+        },
+        {
+          "id": "l12-tuan-12",
+          "lessonNumber": 12,
+          "title": "Tuần 12",
+          "description": "Tri ân thầy cô giáo nhân ngày 20-11 bằng những hành động, món quà tự làm ý nghĩa",
+          "questions": [
+            {
+              "id": "g3-hdtn-c3-l12-q1",
+              "type": "knowledge",
+              "prompt": "Tiết Sinh hoạt dưới cờ chào mừng Ngày 20-11 diễn ra hoạt động giao lưu nào?",
+              "options": [
+                "Giao lưu truyền thống với các thế hệ giáo viên nhà trường",
+                "Thi đấu các môn thể thao dân gian trong sân trường",
+                "Tham gia hội chợ mua bán các loại sách truyện cũ",
+                "Tổ chức chương trình thi cắm trại dã ngoại ngoài trời"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Giao lưu truyền thống với các thế hệ giáo viên nhà trường."
+            },
+            {
+              "id": "g3-hdtn-c3-l12-q2",
+              "type": "knowledge",
+              "prompt": "Việc chia sẻ kỉ niệm đẹp về thầy cô giáo dạy dỗ giúp học sinh điều gì?",
+              "options": [
+                "Thể hiện lòng trân trọng và biết ơn công lao dạy dỗ",
+                "So sánh xem thầy cô giáo nào là người nghiêm khắc nhất",
+                "Khoe khoang các thành tích và điểm số của cá nhân",
+                "Bắt buộc các bạn khác phải kể lại câu chuyện giống mình"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Thể hiện lòng trân trọng và biết ơn công lao dạy dỗ."
+            },
+            {
+              "id": "g3-hdtn-c3-l12-q3",
+              "type": "knowledge",
+              "prompt": "Món quà tri ân ý nghĩa nhất em nên tự tay chuẩn bị tặng thầy cô là gì?",
+              "options": [
+                "Tấm bưu thiếp tự làm kèm lời chúc tốt đẹp gửi tặng thầy cô",
+                "Đòi hỏi bố mẹ phải mua món quà thật đắt tiền đem tặng",
+                "Mua các loại đồ chơi hiện đại về để dành tặng thầy cô",
+                "Hoàn toàn không gửi lời chúc hay món quà tri ân nào"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Tấm bưu thiếp tự làm kèm lời chúc tốt đẹp gửi tặng thầy cô."
+            },
+            {
+              "id": "g3-hdtn-c3-l12-q4",
+              "type": "knowledge",
+              "prompt": "Đóng góp nội dung gì để hoàn thành cuốn sổ \"Kỉ niệm tình thầy trò\"?",
+              "options": [
+                "Viết câu ghi lại kỉ niệm đáng nhớ nhất kèm trang trí đẹp",
+                "Chép toàn bộ các bài toán khó trong sách giáo khoa vào sổ",
+                "Ghi lại danh sách các bạn học sinh hay vi phạm nội quy",
+                "Viết danh sách tên các môn học mà em yêu thích nhất"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Viết câu ghi lại kỉ niệm đáng nhớ nhất kèm trang trí đẹp."
+            },
+            {
+              "id": "g3-hdtn-c3-l12-q5",
+              "type": "knowledge",
+              "prompt": "Bài tập trải nghiệm gợi ý em và gia đình thực hiện việc làm tri ân nào?",
+              "options": [
+                "Thăm hỏi thầy cô cũ của em hoặc thầy cô cũ của người thân",
+                "Lên kế hoạch đi du lịch xa vào đúng ngày tri ân 20 - 11",
+                "Đi mua sắm các đồ dùng cá nhân tại khu vực siêu thị",
+                "Ở lại nhà để theo dõi xem tivi trong suốt cả ngày"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Thăm hỏi thầy cô cũ của em hoặc thầy cô cũ của người thân."
+            },
+            {
+              "id": "g3-hdtn-c3-l12-q6",
+              "type": "knowledge",
+              "prompt": "Em đạt mức \"Hoàn thành tốt\" Chủ đề 3 khi thực hiện được các mục tiêu nào?",
+              "options": [
+                "Tri ân thầy cô, hòa giải bất đồng, trang trí lớp, phấn đấu lên Đội",
+                "Chưa biết trang trí lớp học và luôn tranh cãi với bạn bè",
+                "Không tham gia vào các hoạt động chào mừng ngày 20 - 11",
+                "Chỉ làm bưu thiếp tri ân khi được giáo viên nhắc nhở"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Tri ân thầy cô, hòa giải bất đồng, trang trí lớp, phấn đấu lên Đội."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c4-chu-de-4",
+      "chapterNumber": 4,
+      "title": "CHỦ ĐỀ 4: GIỮ GÌN NHÀ CỬA NGĂN NẮP, SẠCH ĐẸP",
+      "lessons": [
+        {
+          "id": "l13-tuan-13",
+          "lessonNumber": 13,
+          "title": "Tuần 13",
+          "description": "Rèn luyện nếp sống ngăn nắp, tự phục vụ và cất đồ dùng cá nhân gọn gàng",
+          "questions": [
+            {
+              "id": "g3-hdtn-c4-l13-q1",
+              "type": "knowledge",
+              "prompt": "Trong kịch \"Đồ đạc chạy trốn\", nguyên nhân chính khiến đồ đạc bỏ chạy là gì?",
+              "options": [
+                "Do chủ nhân vứt bừa bãi, không xếp gọn gàng đúng nơi",
+                "Do đồ đạc đã bị hư hỏng nên không sử dụng được nữa",
+                "Do đồ đạc muốn rủ nhau đi tham gia hội chợ đồ cũ",
+                "Do căn phòng quá chật hẹp nên không có chỗ để đồ"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Do chủ nhân vứt bừa bãi, không xếp gọn gàng đúng nơi."
+            },
+            {
+              "id": "g3-hdtn-c4-l13-q2",
+              "type": "knowledge",
+              "prompt": "Vật dụng hỗ trợ nào giúp phòng ở ngăn nắp và đồ dùng dễ tìm hơn?",
+              "options": [
+                "Giá, kệ, tủ, móc áo, hộp giấy, giỏ, túi và các loại lọ",
+                "Bao tải lớn và các loại hòm khóa kín không nhìn thấy",
+                "Giấy dán trang trí tường và thảm trải sàn nhà",
+                "Các thùng rác công cộng ngoài khu vực dân cư"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Giá, kệ, tủ, móc áo, hộp giấy, giỏ, túi và các loại lọ."
+            },
+            {
+              "id": "g3-hdtn-c4-l13-q3",
+              "type": "knowledge",
+              "prompt": "Để giữ ngăn nắp tại lớp học, em nên thực hiện công việc tự phục vụ nào?",
+              "options": [
+                "Xếp sách vở gọn trong ngăn bàn, treo cặp và mũ đúng nơi",
+                "Nhét tất cả các loại áo khoác và sách vở vào gầm bàn",
+                "Để cặp sách ngay giữa lối đi lại chung của cả lớp học",
+                "Để sách vở bừa bãi trên mặt bàn sau khi học xong"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Xếp sách vở gọn trong ngăn bàn, treo cặp và mũ đúng nơi."
+            },
+            {
+              "id": "g3-hdtn-c4-l13-q4",
+              "type": "knowledge",
+              "prompt": "Để vật dụng của tổ không bị thất lạc, việc dán nhãn được thực hiện ra sao?",
+              "options": [
+                "Dán nhãn chỗ giày dép, tên tủ đồ, vị trí treo ô và kệ cốc",
+                "Xếp tất cả các loại giày dép, mũ và cốc chung một giỏ",
+                "Viết tên trực tiếp bằng bút mực lên đồ dùng của bạn",
+                "Không cần đánh dấu vì ai cũng tự nhớ đồ dùng của mình"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Dán nhãn chỗ giày dép, tên tủ đồ, vị trí treo ô và kệ cốc."
+            },
+            {
+              "id": "g3-hdtn-c4-l13-q5",
+              "type": "knowledge",
+              "prompt": "Việc làm tự phục vụ nào giúp góc học tập và chỗ chơi ở nhà luôn gọn gàng?",
+              "options": [
+                "Treo áo lên mắc, xếp sách lên giá, xếp giày và cất đồ chơi",
+                "Dồn toàn bộ tất cả quần áo và đồ chơi vào gầm giường",
+                "Nhờ hoàn toàn vào bố mẹ dọn dẹp giúp sau khi chơi xong",
+                "Chỉ thực hiện dọn dẹp nhà cửa khi có khách đến chơi"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Treo áo lên mắc, xếp sách lên giá, xếp giày và cất đồ chơi."
+            },
+            {
+              "id": "g3-hdtn-c4-l13-q6",
+              "type": "knowledge",
+              "prompt": "Việc tự làm hộp giấy để cất gọn đồ chơi của bạn Nam thể hiện điều gì?",
+              "options": [
+                "Có thói quen tự phục vụ, chủ động sắp xếp và sáng tạo",
+                "Nam làm hộp giấy với mục đích mang đi bán kiếm tiền",
+                "Nam không muốn cất giữ các đồ chơi vào trong tủ đồ",
+                "Nam chỉ làm theo yêu cầu bắt buộc của giáo viên dạy"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Có thói quen tự phục vụ, chủ động sắp xếp và sáng tạo."
+            }
+          ]
+        },
+        {
+          "id": "l14-tuan-14",
+          "lessonNumber": 14,
+          "title": "Tuần 14",
+          "description": "Tự tay làm đồ trang trí góc học tập và giữ gìn các góc yêu thích trong nhà",
+          "questions": [
+            {
+              "id": "g3-hdtn-c4-l14-q1",
+              "type": "knowledge",
+              "prompt": "Nghe giới thiệu về thư viện, em học tập được điều gì về cách sắp xếp đồ dùng?",
+              "options": [
+                "Sắp xếp sách ngăn nắp, khoa học và đảm bảo an toàn PCCC",
+                "Cách tham gia mua bán các loại sách cũ giá rẻ tại thư viện",
+                "Cách tranh thủ đọc thật nhiều truyện tranh trong giờ học",
+                "Cách tự ý mượn sách mang về nhà mà không cần ghi sổ"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Sắp xếp sách ngăn nắp, khoa học và đảm bảo an toàn PCCC."
+            },
+            {
+              "id": "g3-hdtn-c4-l14-q2",
+              "type": "knowledge",
+              "prompt": "Yếu tố nào giúp góc học tập của em ở nhà luôn ngăn nắp và xinh xắn?",
+              "options": [
+                "Bàn học sạch, sách vở xếp ngăn nắp, có đồ trang trí tự làm",
+                "Để tất cả bánh kẹo, đồ chơi lẫn lộn với sách vở trên bàn",
+                "Thường xuyên chất thật nhiều quần áo cũ lên trên bàn học",
+                "Bày sách vở bừa bãi sau khi học xong và không dọn dẹp"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Bàn học sạch, sách vở xếp ngăn nắp, có đồ trang trí tự làm."
+            },
+            {
+              "id": "g3-hdtn-c4-l14-q3",
+              "type": "knowledge",
+              "prompt": "Em có thể tự tay làm sản phẩm đơn giản nào để trang trí góc học tập?",
+              "options": [
+                "Cắt các hình hoa tuyết bằng giấy để đón mừng Giáng sinh",
+                "Dùng đinh sắt và búa để tự đóng một kệ gỗ lớn treo tường",
+                "Dùng đất nặn để nặn các con vật thật to trên bàn học",
+                "Tự lấy sơn để sơn lại toàn bộ bức tường của phòng học"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Cắt các hình hoa tuyết bằng giấy để đón mừng Giáng sinh."
+            },
+            {
+              "id": "g3-hdtn-c4-l14-q4",
+              "type": "scenario",
+              "prompt": "Khi bạn cho em xem sản phẩm hoa tuyết tự làm, thái độ phù hợp là gì?",
+              "options": [
+                "Lắng nghe bạn, khen ngợi sự khéo léo và góp ý chân thành",
+                "Chê bai sản phẩm của bạn xấu rồi vứt đi không giữ lại",
+                "Bắt buộc bạn phải làm giúp mình một sản phẩm giống hệt",
+                "Tỏ thái độ không quan tâm và không đưa ra nhận xét gì"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Lắng nghe bạn, khen ngợi sự khéo léo và góp ý chân thành."
+            },
+            {
+              "id": "g3-hdtn-c4-l14-q5",
+              "type": "scenario",
+              "prompt": "Học sinh có thể giới thiệu về các góc yêu thích nào trong ngôi nhà?",
+              "options": [
+                "Góc học tập, góc đọc sách, góc chơi, phòng riêng, góc vườn",
+                "Các khu vực góc gầm tủ bụi bẩn chứa đầy đồ dùng cũ",
+                "Khu vực chứa tất cả rác thải sinh hoạt của cả gia đình",
+                "Khu vực nhà kho u tối không bao giờ thực hiện dọn dẹp"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Góc học tập, góc đọc sách, góc chơi, phòng riêng, góc vườn."
+            },
+            {
+              "id": "g3-hdtn-c4-l14-q6",
+              "type": "scenario",
+              "prompt": "Cần làm gì để giữ góc học tập và góc nhà luôn sạch đẹp lâu dài?",
+              "options": [
+                "Thường xuyên lau chùi, sắp xếp đồ gọn gàng sau khi dùng",
+                "Chỉ dọn dẹp duy nhất một lần rồi bỏ mặc cho bụi bám vào",
+                "Bày thêm nhiều đồ chơi ra khắp sàn nhà sau khi học xong",
+                "Đợi cho đến khi bố mẹ nhắc nhở nhiều lần mới chịu dọn"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Thường xuyên lau chùi, sắp xếp đồ gọn gàng sau khi dùng."
+            }
+          ]
+        },
+        {
+          "id": "l15-tuan-15",
+          "lessonNumber": 15,
+          "title": "Tuần 15",
+          "description": "Học tập tác phong chú bộ đội, kiên nhẫn gấp chăn màn và dọn dẹp nhà cửa gọn gàng",
+          "questions": [
+            {
+              "id": "g3-hdtn-c4-l15-q1",
+              "type": "knowledge",
+              "prompt": "Học tập chú bộ đội, em áp dụng được tác phong nào vào giữ gìn nhà cửa?",
+              "options": [
+                "Tác phong gọn gàng, ngăn nắp và kỉ luật trong dọn dẹp",
+                "Thói quen thường xuyên thức khuya để chơi điện tử",
+                "Để đồ đạc vứt bừa bãi sau khi đã sử dụng xong",
+                "Chỉ thực hiện dọn dẹp phòng khi có người yêu cầu"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Tác phong gọn gàng, ngăn nắp và kỉ luật trong dọn dẹp."
+            },
+            {
+              "id": "g3-hdtn-c4-l15-q2",
+              "type": "knowledge",
+              "prompt": "Việc làm nhỏ bé nào trong bài thơ \"Tổ ấm\" giúp căn nhà sạch đẹp hơn?",
+              "options": [
+                "Quét sạch lá khô, lau dọn nhà, xếp giá sách, cắm hoa",
+                "Mua thêm thật nhiều các đồ dùng đắt tiền về trang trí",
+                "Xem tivi trong suốt cả ngày mà không làm việc nhà",
+                "Đòi hỏi bố mẹ phải mua thêm các món đồ chơi mới"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Quét sạch lá khô, lau dọn nhà, xếp giá sách, cắm hoa."
+            },
+            {
+              "id": "g3-hdtn-c4-l15-q3",
+              "type": "knowledge",
+              "prompt": "Động tác nào dưới đây thể hiện việc làm giúp nhà cửa luôn sạch đẹp?",
+              "options": [
+                "Động tác cầm chổi quét nhà, lau bàn ghế và gấp chăn",
+                "Động tác tiện tay vứt rác thải bừa bãi ra sàn nhà",
+                "Động tác nằm xem điện thoại thông minh trên sofa",
+                "Động tác dùng bút màu vẽ bậy lên tường phòng khách"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Động tác cầm chổi quét nhà, lau bàn ghế và gấp chăn."
+            },
+            {
+              "id": "g3-hdtn-c4-l15-q4",
+              "type": "knowledge",
+              "prompt": "Kĩ năng quan trọng nhất giúp chiếc chăn được gấp phẳng phiu, vuông vắn là gì?",
+              "options": [
+                "Kiên nhẫn, vuốt phẳng mép vải và gấp góc vuông vắn",
+                "Cuộn tròn chiếc chăn thật nhanh rồi nhét vào góc tủ",
+                "Đứng nhìn và nhờ các bạn khác gấp hộ chăn cho mình",
+                "Thực hiện gấp vội vàng để chiếc chăn bị nhăn nhúm"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Kiên nhẫn, vuốt phẳng mép vải và gấp góc vuông vắn."
+            },
+            {
+              "id": "g3-hdtn-c4-l15-q5",
+              "type": "knowledge",
+              "prompt": "Cảm xúc tích cực em nhận được khi tham gia dọn dẹp, chăm sóc nhà cửa là gì?",
+              "options": [
+                "Thấy vui vẻ, tự hào vì góp sức giúp nhà sạch đẹp",
+                "Cảm thấy ấm ức vì bản thân phải tham gia làm việc nhà",
+                "Cảm thấy mệt mỏi và quyết định không làm thêm lần nào",
+                "Chỉ tham gia làm việc để được bố mẹ thưởng tiền"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Thấy vui vẻ, tự hào vì góp sức giúp nhà sạch đẹp."
+            },
+            {
+              "id": "g3-hdtn-c4-l15-q6",
+              "type": "knowledge",
+              "prompt": "Việc làm nào cùng người thân giúp làm đẹp nhà và thắt chặt tình cảm gia đình?",
+              "options": [
+                "Cùng làm dây hoa trang trí, dán tranh lá, cắm hoa tươi",
+                "Thuê hoàn toàn người bên ngoài về nhà để dọn dẹp",
+                "Mỗi người ở riêng một phòng tự làm các việc cá nhân",
+                "Bỏ trống các góc nhà không dọn dẹp hay trang trí gì"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Cùng làm dây hoa trang trí, dán tranh lá, cắm hoa tươi."
+            }
+          ]
+        },
+        {
+          "id": "l16-tuan-16",
+          "lessonNumber": 16,
+          "title": "Tuần 16",
+          "description": "Thực hành vệ sinh nhà cửa đúng cách với bộ dụng cụ an toàn và phù hợp",
+          "questions": [
+            {
+              "id": "g3-hdtn-c4-l16-q1",
+              "type": "knowledge",
+              "prompt": "Trong kịch \"Ngôi nhà Lọ Lem\", vai \"cô tiên\" nên làm gì để nhà cửa sạch sẽ?",
+              "options": [
+                "Quét bụi sàn nhà, lau vết bẩn tường và quét sạch mạng nhện",
+                "Bỏ đi nơi khác và hoàn toàn không tham gia dọn dẹp",
+                "Dùng sơn đè lên vết bẩn mà không thực hiện lau chùi",
+                "Đóng kín cửa nhà lại để không ai có thể nhìn thấy"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Quét bụi sàn nhà, lau vết bẩn tường và quét sạch mạng nhện."
+            },
+            {
+              "id": "g3-hdtn-c4-l16-q2",
+              "type": "knowledge",
+              "prompt": "Lựa chọn đúng bộ dụng cụ cho từng công việc vệ sinh nhà cửa là gì?",
+              "options": [
+                "Chổi quét rác, hót rác, khăn lau, cây lau nhà và chổi cọ",
+                "Dùng chiếc bàn chải cọ bồn cầu để lau chùi bàn ăn",
+                "Dùng chiếc khăn khô bám đầy bụi để lau sạch cửa kính",
+                "Dùng chiếc chổi lông gà để cọ rửa sàn nhà tắm"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Chổi quét rác, hót rác, khăn lau, cây lau nhà và chổi cọ."
+            },
+            {
+              "id": "g3-hdtn-c4-l16-q3",
+              "type": "knowledge",
+              "prompt": "Kinh nghiệm quét sân nhà bằng chổi tre và bảo quản dụng cụ đúng cách là gì?",
+              "options": [
+                "Vẩy nước trước khi quét, quét xong cất chổi gọn gàng",
+                "Thực hiện quét sân khi trời đang có gió rất to",
+                "Dùng xong tiện tay vứt chổi tre ra ngay giữa sân nhà",
+                "Dùng chiếc chổi lông gà để quét toàn bộ sân gạch"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Vẩy nước trước khi quét, quét xong cất chổi gọn gàng."
+            },
+            {
+              "id": "g3-hdtn-c4-l16-q4",
+              "type": "knowledge",
+              "prompt": "Điệu nhảy \"Việc nhà\" đã mô phỏng lại những thao tác làm việc nhà nào?",
+              "options": [
+                "Thao tác gấp chăn màn, lau nhà, quét sân và cọ rửa",
+                "Thao tác ngồi chơi game điện tử và xem tivi giải trí",
+                "Thao tác đá bóng và chạy nhảy đùa giỡn ngoài đường",
+                "Thao tác nằm ngủ nghỉ ngơi trên giường cá nhân"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Thao tác gấp chăn màn, lau nhà, quét sân và cọ rửa."
+            },
+            {
+              "id": "g3-hdtn-c4-l16-q5",
+              "type": "knowledge",
+              "prompt": "Việc làm hằng ngày phù hợp nhất để giữ gìn nhà cửa luôn sạch đẹp là gì?",
+              "options": [
+                "Thường xuyên dọn dẹp, làm việc nhà vừa sức và cất đồ đúng nơi",
+                "Đợi khi nào nhà cửa cực kỳ bẩn mới bắt đầu dọn dẹp",
+                "Ỷ lại toàn bộ công việc dọn dẹp cho bố mẹ và ông bà",
+                "Chỉ dọn dẹp phòng riêng, các khu vực khác bỏ mặc"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Thường xuyên dọn dẹp, làm việc nhà vừa sức và cất đồ đúng nơi."
+            },
+            {
+              "id": "g3-hdtn-c4-l16-q6",
+              "type": "knowledge",
+              "prompt": "Em đạt mức \"Hoàn thành tốt\" Chủ đề 4 khi thực hiện được các mục tiêu nào?",
+              "options": [
+                "Sắp xếp góc học tập ngăn nắp, tham gia dọn dẹp và trang trí nhà",
+                "Luôn để đồ đạc bừa bãi và không bao giờ giúp bố mẹ dọn nhà",
+                "Chỉ chịu làm việc nhà khi bị bố mẹ quát mắng gay gắt",
+                "Hoàn toàn không biết sử dụng bất kỳ dụng cụ vệ sinh nào"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Sắp xếp góc học tập ngăn nắp, tham gia dọn dẹp và trang trí nhà."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c5-chu-de-5",
+      "chapterNumber": 5,
+      "title": "CHỦ ĐỀ 5: GIA ĐÌNH YÊU THƯƠNG",
+      "lessons": [
+        {
+          "id": "l17-tuan-17",
+          "lessonNumber": 17,
+          "title": "Tuần 17",
+          "description": "Bày tỏ lòng yêu thương, quan tâm đến thói quen và sở thích của người thân trong gia đình",
+          "questions": [
+            {
+              "id": "g3-hdtn-c5-l17-q1",
+              "type": "knowledge",
+              "prompt": "Những kỉ niệm đẹp về mái trường và gia đình được xem là gì đối với mỗi người?",
+              "options": [
+                "Hành trang quý giá theo mỗi người trong suốt cuộc đời",
+                "Những điều không cần thiết và nên nhanh chóng quên đi",
+                "Những bài học chỉ có giá trị cho học sinh tiểu học",
+                "Những câu chuyện hoàn toàn không có ý nghĩa tương lai"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Hành trang quý giá theo mỗi người trong suốt cuộc đời."
+            },
+            {
+              "id": "g3-hdtn-c5-l17-q2",
+              "type": "knowledge",
+              "prompt": "Tìm hiểu món đồ yêu thích giúp em hiểu điều gì về người thân trong gia đình?",
+              "options": [
+                "Kỉ niệm, thói quen, sở thích và tình cảm của người thân",
+                "Mức giá tiền của món đồ đó khi mua tại cửa hàng",
+                "Tên địa chỉ nhà máy sản xuất ra món đồ dùng đó",
+                "Trọng lượng trọng lượng chính xác của món đồ dùng đó"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Kỉ niệm, thói quen, sở thích và tình cảm của người thân."
+            },
+            {
+              "id": "g3-hdtn-c5-l17-q3",
+              "type": "knowledge",
+              "prompt": "Việc làm nào thể hiện sự quan tâm đến sở thích và thói quen của người thân?",
+              "options": [
+                "Lau kính giúp ông, xếp khuôn bánh giúp mẹ, tặng hộp chỉ",
+                "Giấu món đồ dùng yêu thích của ông bà đi để trêu chọc",
+                "Tự ý lấy mượn đồ dùng của anh trai mà không xin phép",
+                "Thờ ơ, không quan tâm thói quen hằng ngày của người thân"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Lau kính giúp ông, xếp khuôn bánh giúp mẹ, tặng hộp chỉ."
+            },
+            {
+              "id": "g3-hdtn-c5-l17-q4",
+              "type": "scenario",
+              "prompt": "Thấy mẹ đi làm về có vẻ mệt mỏi, cách ứng xử ngoan ngoãn nhất của em là gì?",
+              "options": [
+                "Rót nước mời mẹ, hỏi thăm nhẹ nhàng và đỡ mẹ cất đồ",
+                "Tỏ thái độ đòi mẹ phải bật tivi cho xem ngay lập tức",
+                "Khóc nhè và đòi mẹ phải mua các món đồ chơi mới",
+                "Lập tức bỏ đi chơi ngoài sân không quan tâm đến mẹ"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Rót nước mời mẹ, hỏi thăm nhẹ nhàng và đỡ mẹ cất đồ."
+            },
+            {
+              "id": "g3-hdtn-c5-l17-q5",
+              "type": "scenario",
+              "prompt": "Thấy ông mắt kém gặp khó khăn khi dò sóng radio, em nên làm gì giúp ông?",
+              "options": [
+                "Vui vẻ giúp ông dò đúng kênh radio và lễ phép bật nghe",
+                "Giật lấy chiếc radio và chuyển sang kênh thiếu nhi thích",
+                "Khuyên ông không nên nghe radio vì làm phiền người khác",
+                "Bỏ mặc ông tự loay hoay xoay xở với chiếc radio đó"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Vui vẻ giúp ông dò đúng kênh radio và lễ phép bật nghe."
+            },
+            {
+              "id": "g3-hdtn-c5-l17-q6",
+              "type": "scenario",
+              "prompt": "Sau khi thực hiện xong việc làm chăm sóc người thân, em nên làm gì để lưu giữ?",
+              "options": [
+                "Ghi lại vào vở thu hoạch hoặc cuốn sổ nhật kí yêu thương",
+                "Khoe khoang khắp xung quanh hàng xóm để đòi tiền thưởng",
+                "Bắt buộc người thân phải viết giấy khen tặng cho bản thân",
+                "Hoàn toàn không cần ghi chép hay nhớ lại làm gì cả"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Ghi lại vào vở thu hoạch hoặc cuốn sổ nhật kí yêu thương."
+            }
+          ]
+        },
+        {
+          "id": "l18-tuan-18",
+          "lessonNumber": 18,
+          "title": "Tuần 18",
+          "description": "Làm thư, bưu thiếp tri ân và thể hiện sự gắn kết ấm áp với các thành viên gia đình",
+          "questions": [
+            {
+              "id": "g3-hdtn-c5-l18-q1",
+              "type": "knowledge",
+              "prompt": "Nghe đọc những bức thư tri ân gửi người thân, em cảm nhận được điều gì?",
+              "options": [
+                "Tình yêu thương và lòng biết ơn sâu sắc với công ơn người thân",
+                "Cách trình bày một bài văn thật dài để đạt được điểm cao",
+                "Kĩ năng thực hiện trình bày tài liệu một cách chuyên nghiệp",
+                "Những yêu cầu đòi hỏi bố mẹ mua sắm các đồ dùng cá nhân"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Tình yêu thương và lòng biết ơn sâu sắc với công ơn người thân."
+            },
+            {
+              "id": "g3-hdtn-c5-l18-q2",
+              "type": "knowledge",
+              "prompt": "Biểu diễn văn nghệ chủ đề gia đình nối tiếp giữa các tổ thể hiện điều gì?",
+              "options": [
+                "Sự gắn kết, hòa đồng và bộc lộ tình cảm ấm áp với người thân",
+                "Sự tranh giành vị trí nhất nhì gay gắt giữa các nhóm học sinh",
+                "Thói quen duy trì làm việc cá nhân và hoàn toàn không phối hợp",
+                "Sự ép buộc bắt làm từ phía giáo viên chủ nhiệm lớp học"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Sự gắn kết, hòa đồng và bộc lộ tình cảm ấm áp với người thân."
+            },
+            {
+              "id": "g3-hdtn-c5-l18-q3",
+              "type": "knowledge",
+              "prompt": "Làm thư hoặc bưu thiếp 3D tri ân người thân cần chú ý điều gì?",
+              "options": [
+                "Viết lời biết ơn chân thành, trang trí đẹp, ghi đúng tên người gửi",
+                "Nhờ hoàn toàn người khác viết hộ để có được nét chữ đẹp hơn",
+                "Chỉ thực hiện vẽ hình ảnh mà không viết bất kỳ lời chúc nào",
+                "Gửi một chiếc phong bì hoàn toàn rỗng không có nội dung"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Viết lời biết ơn chân thành, trang trí đẹp, ghi đúng tên người gửi."
+            },
+            {
+              "id": "g3-hdtn-c5-l18-q4",
+              "type": "knowledge",
+              "prompt": "Sáng tác truyện tranh gia đình theo nhóm cần sự phối hợp ra sao?",
+              "options": [
+                "Thảo luận ý tưởng, phân công minh họa rồi ghép thành truyện",
+                "Mỗi bạn tự lựa chọn làm một chủ đề riêng không liên quan",
+                "Đùn đẩy toàn bộ công việc vẽ tranh cho bạn làm nhóm trưởng",
+                "Mua sẵn bộ truyện tranh ngoài cửa hàng sách mang về nộp"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Thảo luận ý tưởng, phân công minh họa rồi ghép thành truyện."
+            },
+            {
+              "id": "g3-hdtn-c5-l18-q5",
+              "type": "knowledge",
+              "prompt": "Cách trao thư tri ân nào dưới đây tạo được sự xúc động và bất ngờ nhất?",
+              "options": [
+                "Đặt thư ở góc học tập hoặc tự tay ôm trao kèm lời chúc",
+                "Ném bức thư lên mặt bàn làm việc rồi lập tức bỏ đi chơi",
+                "Nhờ một bạn nhỏ hàng xóm mang sang nhà đưa hộ giúp mình",
+                "Đặt bức thư ở nơi góc tủ u tối không ai có thể nhìn thấy"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Đặt thư ở góc học tập hoặc tự tay ôm trao kèm lời chúc."
+            },
+            {
+              "id": "g3-hdtn-c5-l18-q6",
+              "type": "knowledge",
+              "prompt": "Thói quen văn minh nào giúp duy trì tình cảm gia đình luôn ấm áp?",
+              "options": [
+                "Thường xuyên nói lời yêu thương, hỏi thăm vào dịp đặc biệt",
+                "Chỉ trò chuyện với người thân mỗi khi cần xin tiền mua đồ",
+                "Tỏ thái độ giận dỗi mỗi khi bản thân không được đáp ứng ý",
+                "Giữ im lặng hoàn toàn và không bao giờ chia sẻ cảm xúc"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Thường xuyên nói lời yêu thương, hỏi thăm vào dịp đặc biệt."
+            }
+          ]
+        },
+        {
+          "id": "l19-tuan-19",
+          "lessonNumber": 19,
+          "title": "Tuần 19",
+          "description": "Tìm hiểu nguồn thu nhập của gia đình và thực hành lối sống tiết kiệm, phụ giúp cha mẹ",
+          "questions": [
+            {
+              "id": "g3-hdtn-c5-l19-q1",
+              "type": "knowledge",
+              "prompt": "Công việc nào dưới đây giúp tạo ra nguồn thu nhập chính cho gia đình?",
+              "options": [
+                "Trồng cam, dạy học, nuôi cá, trồng rau và làm thêm giờ",
+                "Xem tivi, đi du lịch nghỉ dưỡng và chơi game giải trí",
+                "Mua sắm đồ đạc xa xỉ và đi dạo công viên hằng ngày",
+                "Chỉ ở nhà nghỉ ngơi thư giãn và không tham gia làm việc"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Trồng cam, dạy học, nuôi cá, trồng rau và làm thêm giờ."
+            },
+            {
+              "id": "g3-hdtn-c5-l19-q2",
+              "type": "knowledge",
+              "prompt": "Niềm vui của bố mẹ khi công việc mang lại thu nhập tốt thể hiện điều gì?",
+              "options": [
+                "Hạnh phúc vì thành quả lao động giúp chăm lo gia đình",
+                "Muốn dùng toàn bộ tiền thu nhập mua đồ chơi đắt tiền",
+                "Cảm thấy vô cùng buồn bực và khó chịu khi thu nhập tăng",
+                "Cho rằng việc lao động không mang lại bất kỳ giá trị nào"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Hạnh phúc vì thành quả lao động giúp chăm lo gia đình."
+            },
+            {
+              "id": "g3-hdtn-c5-l19-q3",
+              "type": "knowledge",
+              "prompt": "Sơ đồ tư duy về thu nhập gia đình gồm những nhánh nội dung chính nào?",
+              "options": [
+                "Lương của bố, Lương của mẹ và Các khoản thu nhập khác",
+                "Danh sách chi tiết các món đồ chơi em mong thích mua",
+                "Tổng hợp kết quả điểm số các môn học em đạt ở trường",
+                "Danh sách họ tên đầy đủ các bạn học thân trong lớp"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Lương của bố, Lương của mẹ và Các khoản thu nhập khác."
+            },
+            {
+              "id": "g3-hdtn-c5-l19-q4",
+              "type": "knowledge",
+              "prompt": "Khi cùng bố mẹ chuẩn bị sắm Tết, em nên đưa ra ý kiến tiết kiệm nào?",
+              "options": [
+                "\"Mẹ ơi, hoa quả quê mình vừa rẻ, ngon lại đảm bảo tươi!\"",
+                "Đòi hỏi mẹ mua thêm nhiều loại hoa quả đắt nhất siêu thị",
+                "Khóc nhè và đòi mẹ lập tức bỏ đi về không mua sắm gì",
+                "Mặc kệ mẹ thích mua những gì cũng được, không quan tâm"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: \"Mẹ ơi, hoa quả quê mình vừa rẻ, ngon lại đảm bảo tươi!\"."
+            },
+            {
+              "id": "g3-hdtn-c5-l19-q5",
+              "type": "knowledge",
+              "prompt": "Cách xử lý thông minh và tiết kiệm phù hợp với thu nhập gia đình là gì?",
+              "options": [
+                "Tự làm bao lì xì cho bà, dùng lại giày cũ chưa hỏng",
+                "Đòi bố mua liền 2-3 đôi giày đắt tiền để thay đổi",
+                "Bắt bà phải mua loại phong bao lì xì đắt nhất ngoài hàng",
+                "Vứt đôi giày cũ đi để ép bố lập tức phải mua giày mới"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Tự làm bao lì xì cho bà, dùng lại giày cũ chưa hỏng."
+            },
+            {
+              "id": "g3-hdtn-c5-l19-q6",
+              "type": "knowledge",
+              "prompt": "Việc làm vừa sức nào giúp giảm bớt chi tiêu và phụ giúp gia đình?",
+              "options": [
+                "Phụ dọn dẹp, chăm cây cối, giữ đồ tốt và tiết kiệm điện",
+                "Bắt bố mẹ phải cho tiền thưởng mỗi khi giúp làm việc",
+                "Tự ý đi nhận những công việc nặng nhọc ngoài xã hội",
+                "Đòi hỏi bố mẹ mua thật nhiều các bộ quần áo mới hằng tháng"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Phụ dọn dẹp, chăm cây cối, giữ đồ tốt và tiết kiệm điện."
+            }
+          ]
+        },
+        {
+          "id": "l20-tuan-20",
+          "lessonNumber": 20,
+          "title": "Tuần 20",
+          "description": "Thực hành thói quen sử dụng điện, nước tiết kiệm và hiệu quả trong sinh hoạt",
+          "questions": [
+            {
+              "id": "g3-hdtn-c5-l20-q1",
+              "type": "knowledge",
+              "prompt": "Thiết bị và hoạt động sử dụng điện, nước được phân loại ra sao?",
+              "options": [
+                "Điện: nấu ăn, giải trí, thắp sáng; Nước: vệ sinh, nấu ăn, dọn dẹp",
+                "Điện: tưới cây, rửa rau, tắm; Nước: xem tivi, bật quạt, thắp sáng",
+                "Tất cả các thiết bị trong nhà đều dùng điện, không cần dùng nước",
+                "Chỉ phân loại theo mức giá tiền đắt hay rẻ của từng thiết bị"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Điện: nấu ăn, giải trí, thắp sáng; Nước: vệ sinh, nấu ăn, dọn dẹp."
+            },
+            {
+              "id": "g3-hdtn-c5-l20-q2",
+              "type": "knowledge",
+              "prompt": "Vì sao mỗi gia đình cần giữ thói quen tiết kiệm điện, nước hằng ngày?",
+              "options": [
+                "Giảm chi phí sinh hoạt, bảo vệ tài nguyên và môi trường",
+                "Để không phải tiếp tục sử dụng các thiết bị điện ở trong nhà",
+                "Để lấy lý do yêu cầu cắt toàn bộ nguồn điện và nước gia đình",
+                "Nhằm mục đích tích trữ nguồn tiền riêng để mua các đồ chơi mới"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Giảm chi phí sinh hoạt, bảo vệ tài nguyên và môi trường."
+            },
+            {
+              "id": "g3-hdtn-c5-l20-q3",
+              "type": "knowledge",
+              "prompt": "Hành động nào dưới đây thể hiện việc sử dụng điện đúng cách, tiết kiệm?",
+              "options": [
+                "Tắt điện khi ra ngoài, dùng ánh sáng tự nhiên, bật quạt vừa đủ",
+                "Bật tất cả hệ thống bóng đèn trong nhà từ sáng sớm cho đến đêm",
+                "Để điều hòa ở mức lạnh nhất 16 °C và mở tung tất cả cửa phòng",
+                "Mở tivi và quạt máy chạy liên tục dù không có ai ở nhà xem"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Tắt điện khi ra ngoài, dùng ánh sáng tự nhiên, bật quạt vừa đủ."
+            },
+            {
+              "id": "g3-hdtn-c5-l20-q4",
+              "type": "knowledge",
+              "prompt": "Việc làm nào thể hiện thói quen sử dụng nước tiết kiệm và hợp lý?",
+              "options": [
+                "Tắt vòi khi xoa xà phòng, mở vừa đủ và dùng nước rửa rau tưới cây",
+                "Mở vòi nước chảy tràn ra ngoài chậu trong lúc đang đánh răng",
+                "Vặn vòi nước mở hết mức tối đa để cho nước bắn tung xóe",
+                "Dùng nguồn nước sạch xịt rửa sân liên tục trong nhiều giờ liền"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Tắt vòi khi xoa xà phòng, mở vừa đủ và dùng nước rửa rau tưới cây."
+            },
+            {
+              "id": "g3-hdtn-c5-l20-q5",
+              "type": "knowledge",
+              "prompt": "Việc làm nào giúp em và gia đình thấy rõ hiệu quả tiết kiệm điện, nước?",
+              "options": [
+                "Thực hiện tiết kiệm và so sánh hóa đơn tiền điện, nước các tháng",
+                "Quyết định không thực hiện trả tiền điện, nước cho nhà nước",
+                "Giấu kín các tờ hóa đơn tiền điện, nước không cho ai xem",
+                "Sử dụng điện, nước thoải mái mà không cần kiểm tra hóa đơn"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Thực hiện tiết kiệm và so sánh hóa đơn tiền điện, nước các tháng."
+            },
+            {
+              "id": "g3-hdtn-c5-l20-q6",
+              "type": "knowledge",
+              "prompt": "Em đạt mức \"Hoàn thành tốt\" Chủ đề 5 khi thực hiện được các mục tiêu nào?",
+              "options": [
+                "Quan tâm người thân, biết ơn bằng hành động, tiết kiệm điện nước",
+                "Không bao giờ nói lời quan tâm, yêu thương với ông bà, bố mẹ",
+                "Luôn lãng phí điện, nước và đòi hỏi bố mẹ mua sắm đồ đắt tiền",
+                "Hoàn toàn không quan tâm đến công việc và thu nhập người thân"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Quan tâm người thân, biết ơn bằng hành động, tiết kiệm điện nước."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c6-chu-de-6",
+      "chapterNumber": 6,
+      "title": "CHỦ ĐỀ 6: ĂN UỐNG AN TOÀN, HỢP VỆ SINH",
+      "lessons": [
+        {
+          "id": "l21-tuan-21",
+          "lessonNumber": 21,
+          "title": "Tuần 21",
+          "description": "Nhận biết các nguy cơ ngộ độc thực phẩm và giữ căn bếp gia đình sạch sẽ, vệ sinh",
+          "questions": [
+            {
+              "id": "g3-hdtn-c6-l21-q1",
+              "type": "knowledge",
+              "prompt": "Trong trò chơi \"Nếu... thì...\", cặp dự đoán nguy cơ nào dưới đây là đúng?",
+              "options": [
+                "Đồ ăn thiu dễ gây ngộ độc, thực phẩm quá hạn dễ gây đau bụng",
+                "Bát đũa bị ẩm mốc giúp cho thức ăn trở nên thơm ngon hơn",
+                "Đồ ăn thiu giúp cho cơ thể học sinh tăng cường sức đề kháng",
+                "Dùng thực phẩm đã quá hạn sử dụng hoàn toàn không ảnh hưởng"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Đồ ăn thiu dễ gây ngộ độc, thực phẩm quá hạn dễ gây đau bụng."
+            },
+            {
+              "id": "g3-hdtn-c6-l21-q2",
+              "type": "knowledge",
+              "prompt": "Việc làm nào cần thiết khi chuẩn bị và bảo quản thực phẩm trong bếp?",
+              "options": [
+                "Phân loại đồ sống và chín, kiểm tra hạn dùng, rửa sạch dụng cụ",
+                "Để thực phẩm tươi sống và thực phẩm đã nấu chín lẫn lộn",
+                "Không cần thực hiện rửa sạch bát đũa trước khi gắp thức ăn",
+                "Tiếp tục sử dụng thực phẩm đã xuất hiện mùi lạ hoặc hết hạn"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Phân loại đồ sống và chín, kiểm tra hạn dùng, rửa sạch dụng cụ."
+            },
+            {
+              "id": "g3-hdtn-c6-l21-q3",
+              "type": "knowledge",
+              "prompt": "Dấu hiệu nào cho thấy căn bếp đạt chuẩn gọn gàng và an toàn thực phẩm?",
+              "options": [
+                "Bếp gọn gàng, đồ sống/chín để riêng, dụng cụ sạch, không đồ hỏng",
+                "Căn bếp bám nhiều bụi bẩn, thức ăn thừa vãi ra đầy sàn nhà",
+                "Các chai gia vị không dán nhãn, để lung tung không nắp đậy",
+                "Tủ lạnh chứa đầy các loại thức ăn đã bị ẩm mốc và mọc mầm"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Bếp gọn gàng, đồ sống/chín để riêng, dụng cụ sạch, không đồ hỏng."
+            },
+            {
+              "id": "g3-hdtn-c6-l21-q4",
+              "type": "scenario",
+              "prompt": "Công việc kiểm tra căn bếp nào giúp phòng tránh nguy cơ ngộ độc?",
+              "options": [
+                "Kiểm tra nhãn gia vị, xem hạn sử dụng và loại bỏ đồ đã hỏng",
+                "Giữ lại tất cả các loại thực phẩm đã hết hạn để dùng dần",
+                "Để chai nước rửa bát bên cạnh chai dầu ăn mà không dán nhãn",
+                "Chất tủ lạnh quá tải đồ ăn và không bao giờ thực hiện dọn"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Kiểm tra nhãn gia vị, xem hạn sử dụng và loại bỏ đồ đã hỏng."
+            },
+            {
+              "id": "g3-hdtn-c6-l21-q5",
+              "type": "scenario",
+              "prompt": "Phát hiện hộp sữa tươi đã mở nắp có mùi chua hỏng, em xử lý ra sao?",
+              "options": [
+                "Báo với mẹ hộp sữa hỏng, không nên dùng để tránh đau bụng",
+                "Nhắm mắt cố uống hết hộp sữa hỏng để tránh gây lãng phí",
+                "Bật bếp đun thật sôi hộp sữa đã hỏng lên rồi mới uống",
+                "Cất giấu hộp sữa hỏng vào góc tủ để không ai nhìn thấy"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Báo với mẹ hộp sữa hỏng, không nên dùng để tránh đau bụng."
+            },
+            {
+              "id": "g3-hdtn-c6-l21-q6",
+              "type": "scenario",
+              "prompt": "Hành động nhỏ vừa sức em nên làm hằng ngày để giữ bếp sạch là gì?",
+              "options": [
+                "Rửa tay sạch trước khi ăn, lau bàn ăn và xếp bát đũa gọn",
+                "Bày vương vãi các loại thức ăn thừa ra bàn sau khi ăn xong",
+                "Để nguyên tất cả bát đũa bẩn trên bàn ăn mà không dọn dẹp",
+                "Tự do ăn bốc thức ăn bằng bàn tay chưa được rửa sạch sẽ"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Rửa tay sạch trước khi ăn, lau bàn ăn và xếp bát đũa gọn."
+            }
+          ]
+        },
+        {
+          "id": "l22-tuan-22",
+          "lessonNumber": 22,
+          "title": "Tuần 22",
+          "description": "Lựa chọn thực phẩm an toàn, rõ nguồn gốc và hạn chế các món ăn nhanh có hại",
+          "questions": [
+            {
+              "id": "g3-hdtn-c6-l22-q1",
+              "type": "knowledge",
+              "prompt": "Lý lẽ đúng đắn nhất để thuyết phục bạn hạn chế ăn đồ ăn nhanh là gì?",
+              "options": [
+                "Nhiều dầu mỡ, ít xơ, ăn nhiều dễ béo phì và hại sức khỏe",
+                "Đồ ăn nhanh có mức giá đắt tiền nên không nên mua ăn",
+                "Đồ ăn nhanh thường có màu sắc không được đẹp mắt",
+                "Học sinh chỉ nên ăn các loại đồ ăn nhanh vào buổi tối"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Nhiều dầu mỡ, ít xơ, ăn nhiều dễ béo phì và hại sức khỏe."
+            },
+            {
+              "id": "g3-hdtn-c6-l22-q2",
+              "type": "knowledge",
+              "prompt": "Yếu tố nào giúp em nhận diện thực phẩm an toàn khi mua sắm?",
+              "options": [
+                "Bao bì nguyên vẹn, còn hạn dùng, rõ nguồn gốc và không mùi",
+                "Bao bì sản phẩm bị rách nát và mờ nhòe các nhãn mác",
+                "Thực phẩm hoàn toàn không ghi ngày sản xuất và hạn dùng",
+                "Thức ăn đã xuất hiện mùi thiu và bị đổi màu bất thường"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Bao bì nguyên vẹn, còn hạn dùng, rõ nguồn gốc và không mùi."
+            },
+            {
+              "id": "g3-hdtn-c6-l22-q3",
+              "type": "knowledge",
+              "prompt": "Cần kết hợp các giác quan nào để đánh giá thực phẩm có an toàn hay không?",
+              "options": [
+                "Quan sát bằng mắt về màu sắc và Ngửi bằng mũi để tìm mùi lạ",
+                "Chỉ tập trung quan sát mức giá tiền ghi trên sản phẩm",
+                "Nếm thử thật nhiều loại thực phẩm nghi ngờ đã bị hỏng",
+                "Chỉ nhìn vào kiểu dáng bên ngoài của chiếc bao bì đựng"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Quan sát bằng mắt về màu sắc và Ngửi bằng mũi để tìm mùi lạ."
+            },
+            {
+              "id": "g3-hdtn-c6-l22-q4",
+              "type": "knowledge",
+              "prompt": "Thấy củ khoai tây trong góc bếp đã mọc mầm, em xử lý ra sao?",
+              "options": [
+                "Nhắc người thân bỏ đi vì khoai mọc mầm chứa chất độc nguy hiểm",
+                "Thực hiện bẻ các mầm đi rồi đem luộc ăn như bình thường",
+                "Mang củ khoai tây mọc mầm đi rửa sạch rồi chế biến ngay",
+                "Cất củ khoai tây vào tủ lạnh để dành cho tuần sau ăn"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Nhắc người thân bỏ đi vì khoai mọc mầm chứa chất độc nguy hiểm."
+            },
+            {
+              "id": "g3-hdtn-c6-l22-q5",
+              "type": "knowledge",
+              "prompt": "Kiến thức nào dưới đây là chính xác về cách bảo quản thực phẩm?",
+              "options": [
+                "Sữa mở nắp cần cất tủ lạnh và dùng sớm theo hướng dẫn",
+                "Để sữa tươi đã mở nắp ở ngoài trời nắng trong cả ngày",
+                "Đồ ăn chín thừa không cần đậy nắp, cứ để bàn qua đêm",
+                "Mua thật nhiều hoa quả tươi về vứt dưới sàn nhà ẩm ướt"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Sữa mở nắp cần cất tủ lạnh và dùng sớm theo hướng dẫn."
+            },
+            {
+              "id": "g3-hdtn-c6-l22-q6",
+              "type": "knowledge",
+              "prompt": "Người tiêu dùng thông minh nên ưu tiên lựa chọn loại đồ uống nào?",
+              "options": [
+                "Nước lọc, nước hoa quả tươi và hạn chế các loại nước gas",
+                "Uống các loại nước ngọt đóng lon thay thế cho nước lọc",
+                "Uống các loại nước phẩm màu không rõ nguồn gốc ở ngoài",
+                "Uống nước đá lạnh có chứa nhiều màu sắc lạ mắt"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Nước lọc, nước hoa quả tươi và hạn chế các loại nước gas."
+            }
+          ]
+        },
+        {
+          "id": "l23-tuan-23",
+          "lessonNumber": 23,
+          "title": "Tuần 23",
+          "description": "Rèn luyện quy tắc văn minh trên bàn ăn, phòng tránh hóc nghẹn và giữ vệ sinh",
+          "questions": [
+            {
+              "id": "g3-hdtn-c6-l23-q1",
+              "type": "knowledge",
+              "prompt": "Lời dặn dò nào của bác sĩ giúp phòng tránh nguy cơ bị hóc, nghẹn khi ăn?",
+              "options": [
+                "Tập trung, nhai kĩ, không cười đùa hay chạy nhảy khi ăn",
+                "Vừa ăn vừa tích cực chạy nhảy để tập luyện thể dục",
+                "Cười đùa thật to và nói chuyện liên tục khi nuốt đồ ăn",
+                "Thực hiện ăn thật nhanh, nuốt chửng các miếng thức ăn lớn"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Tập trung, nhai kĩ, không cười đùa hay chạy nhảy khi ăn."
+            },
+            {
+              "id": "g3-hdtn-c6-l23-q2",
+              "type": "knowledge",
+              "prompt": "Việc làm quan trọng hàng đầu trước khi ăn để đảm bảo vệ sinh là gì?",
+              "options": [
+                "Rửa tay thật sạch sẽ bằng xà phòng và nguồn nước sạch",
+                "Lau sơ qua bàn tay vào bộ quần áo đang mặc trên người",
+                "Dùng bàn tay đang bẩn để trực tiếp bốc thức ăn ngay",
+                "Chỉ tráng qua tay bằng nước lạnh mà không dùng xà phòng"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Rửa tay thật sạch sẽ bằng xà phòng và nguồn nước sạch."
+            },
+            {
+              "id": "g3-hdtn-c6-l23-q3",
+              "type": "knowledge",
+              "prompt": "Thói quen ăn uống nào thể hiện sự văn minh và hợp vệ sinh trong bữa ăn?",
+              "options": [
+                "Ngồi tại chỗ, nhai kĩ, không đùa giỡn, dùng thìa đũa riêng",
+                "Vừa ăn vừa tập trung đọc sách hoặc xem điện thoại",
+                "Dùng đũa cá nhân đã ngậm vào miệng xới tung đĩa thức ăn",
+                "Đứng dậy chạy nhảy quanh bàn ăn trong lúc đang nhai"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Ngồi tại chỗ, nhai kĩ, không đùa giỡn, dùng thìa đũa riêng."
+            },
+            {
+              "id": "g3-hdtn-c6-l23-q4",
+              "type": "scenario",
+              "prompt": "Khẩu hiệu vần điệu nào phù hợp để nhắc nhở an toàn khi ăn uống ở trường?",
+              "options": [
+                "\"Rửa tay trước ăn / Nhai kĩ ngồi yên / Chớ có cười đùa\"",
+                "\"Vừa ăn vừa chạy / Ăn thật nhanh tay / Nói cười huyên náo\"",
+                "\"Ăn bốc bằng tay / Không cần rửa sạch / Đổi đũa liên tục\"",
+                "\"Vừa ăn xem phim / Để thức ăn rơi / Không cần nhai kĩ\""
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: \"Rửa tay trước ăn / Nhai kĩ ngồi yên / Chớ có cười đùa\"."
+            },
+            {
+              "id": "g3-hdtn-c6-l23-q5",
+              "type": "scenario",
+              "prompt": "Thấy anh trai vừa ăn vừa mở sách đọc, em nên nhắc nhở như thế nào?",
+              "options": [
+                "Lễ phép nhắc anh ăn xong rồi hãy đọc để tránh đau dạ dày",
+                "Bật cười vui vẻ và hùa theo ngồi đọc sách cùng với anh",
+                "Giật lấy cuốn sách và quát thật to vào mặt của anh trai",
+                "Mặc kệ không quan tâm vì đó là việc cá nhân của anh"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Lễ phép nhắc anh ăn xong rồi hãy đọc để tránh đau dạ dày."
+            },
+            {
+              "id": "g3-hdtn-c6-l23-q6",
+              "type": "scenario",
+              "prompt": "Hành động đúng đắn em cần tự giác thực hiện hằng ngày là gì?",
+              "options": [
+                "Rửa tay trước ăn, chấp hành quy tắc văn minh trên bàn ăn",
+                "Chỉ rửa tay khi có thầy cô hoặc bố mẹ đứng bên giám sát",
+                "Bỏ qua và quên hết tất cả các quy tắc khi trở về nhà",
+                "Nhai nhồm nhàm và nói to tiếng trong lúc miệng đầy thức ăn"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Rửa tay trước ăn, chấp hành quy tắc văn minh trên bàn ăn."
+            }
+          ]
+        },
+        {
+          "id": "l24-tuan-24",
+          "lessonNumber": 24,
+          "title": "Tuần 24",
+          "description": "Xây dựng cẩm nang ăn uống an toàn và nhận biết các nguy cơ mất vệ sinh ở hàng quán",
+          "questions": [
+            {
+              "id": "g3-hdtn-c6-l24-q1",
+              "type": "knowledge",
+              "prompt": "Những câu hỏi phỏng vấn nào giúp thu thập đúng thông tin thói quen ăn ngoài?",
+              "options": [
+                "Bạn có hay ăn ngoài không, ăn sáng ở đâu, đồ mua về là gì?",
+                "Gia đình bạn hiện tại đang có bao nhiêu chiếc tivi",
+                "Bố mẹ bạn hiện đang làm ngành nghề công việc gì",
+                "Bạn thường thích đi chơi ở đâu vào các ngày cuối tuần"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Bạn có hay ăn ngoài không, ăn sáng ở đâu, đồ mua về là gì?."
+            },
+            {
+              "id": "g3-hdtn-c6-l24-q2",
+              "type": "knowledge",
+              "prompt": "Lý do chính đáng nhất để hạn chế việc thường xuyên ăn uống ngoài đường là gì?",
+              "options": [
+                "Lề đường nhiều bụi bẩn, đồ hở, nguy cơ mất vệ sinh cao",
+                "Món ăn ở nhà hàng lúc nào cũng thơm ngon hơn ở nhà",
+                "Cả gia đình đi ăn hàng quán vừa nhanh lại vừa tiết kiệm",
+                "Hàng quán ngoài đường hoàn toàn không có ruồi nhặng hay bụi"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Lề đường nhiều bụi bẩn, đồ hở, nguy cơ mất vệ sinh cao."
+            },
+            {
+              "id": "g3-hdtn-c6-l24-q3",
+              "type": "knowledge",
+              "prompt": "Nhóm em nên chọn các chủ đề nào để xây dựng cẩm nang ăn uống an toàn?",
+              "options": [
+                "Mẹo vệ sinh khi ăn quán, uống nước và cách chọn quán sạch",
+                "Cẩm nang tìm kiếm và mua sắm các loại đồ chơi giá rẻ",
+                "Bảng hướng dẫn chi tiết cách gấp các hình giấy origami",
+                "Danh mục tổng hợp các trò chơi điện tử hay nhất hiện nay"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Mẹo vệ sinh khi ăn quán, uống nước và cách chọn quán sạch."
+            },
+            {
+              "id": "g3-hdtn-c6-l24-q4",
+              "type": "scenario",
+              "prompt": "Dấu hiệu nào cảnh báo một quán ăn lề đường KHÔNG đảm bảo vệ sinh?",
+              "options": [
+                "Đồ ăn để hở, bám bụi, không đeo găng tay, rác xả dưới chân",
+                "Thức ăn được che đậy vô cùng cẩn thận ở trong tủ kính",
+                "Bàn ghế luôn được lau chùi khô ráo và có thùng rác riêng",
+                "Nhân viên luôn đeo găng tay và dùng kẹp gắp thức ăn riêng"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Đồ ăn để hở, bám bụi, không đeo găng tay, rác xả dưới chân."
+            },
+            {
+              "id": "g3-hdtn-c6-l24-q5",
+              "type": "scenario",
+              "prompt": "Thấy bố định ghé vào quán lề đường đầy bụi và đồ ăn không đậy, em nói gì?",
+              "options": [
+                "\"Bố ơi, chỗ này bụi và đồ hở, mình tìm quán sạch hơn nhé!\"",
+                "Hào hứng đi vào ăn ngay mà không cần quan sát xung quanh",
+                "Khóc nhè đòi bố phải mua cho các món đồ chơi đắt tiền",
+                "Mặc kệ và hoàn toàn không quan tâm đến vấn đề vệ sinh"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: \"Bố ơi, chỗ này bụi và đồ hở, mình tìm quán sạch hơn nhé!\"."
+            },
+            {
+              "id": "g3-hdtn-c6-l24-q6",
+              "type": "scenario",
+              "prompt": "Em đạt mức \"Hoàn thành tốt\" Chủ đề 6 khi thực hiện được các mục tiêu nào?",
+              "options": [
+                "Nêu nguy cơ mất an toàn thực phẩm, nhắc nhở và chấp hành quy tắc",
+                "Thường xuyên ăn các món đồ không rõ nguồn gốc ngoài cổng",
+                "Hoàn toàn không bao giờ thực hiện rửa tay trước khi ăn",
+                "Vừa ăn vừa vui vẻ cười đùa và chạy nhảy xung quanh bàn"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Nêu nguy cơ mất an toàn thực phẩm, nhắc nhở và chấp hành quy tắc."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c7-chu-de-7",
+      "chapterNumber": 7,
+      "title": "CHỦ ĐỀ 7: HOẠT ĐỘNG VÌ CỘNG ĐỒNG",
+      "lessons": [
+        {
+          "id": "l25-tuan-25",
+          "lessonNumber": 25,
+          "title": "Tuần 25",
+          "description": "Tìm hiểu làng nghề, lễ hội truyền thống quê hương và tham gia các hoạt động cộng đồng",
+          "questions": [
+            {
+              "id": "g3-hdtn-c7-l25-q1",
+              "type": "knowledge",
+              "prompt": "Câu hỏi giao lưu nào thể hiện ý thức trách nhiệm với làng nghề và môi trường?",
+              "options": [
+                "\"Bác ơi, làm sao vừa phát triển làng nghề vừa bảo vệ môi trường ạ?\"",
+                "\"Bác ơi, trung bình mỗi ngày làm nghề bác kiếm được bao nhiêu tiền?\"",
+                "\"Làng nghề truyền thống này có bao nhiêu bí mật kinh doanh ạ?\"",
+                "\"Tại sao bác lại không bỏ làm nghề này để chuyển đi làm việc khác?\""
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: \"Bác ơi, làm sao vừa phát triển làng nghề vừa bảo vệ môi trường ạ?\"."
+            },
+            {
+              "id": "g3-hdtn-c7-l25-q2",
+              "type": "knowledge",
+              "prompt": "Học sinh có thể lựa chọn những chủ đề phong phú nào để tìm hiểu quê hương?",
+              "options": [
+                "Yêu nước, làng nghề, lễ hội, món ăn và nghệ thuật truyền thống",
+                "Danh sách tên các trung tâm thương mại lớn mới xây dựng ở địa phương",
+                "Danh sách tổng hợp các trò chơi điện tử đang vô cùng phổ biến",
+                "Danh sách các bộ phim hoạt hình nước ngoài được chiếu trên tivi"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Yêu nước, làng nghề, lễ hội, món ăn và nghệ thuật truyền thống."
+            },
+            {
+              "id": "g3-hdtn-c7-l25-q3",
+              "type": "knowledge",
+              "prompt": "Hình thức trình bày bài thu hoạch nào giúp buổi thuyết trình sinh động?",
+              "options": [
+                "Kể chuyện tiếp sức, vẽ tranh thuyết trình, hát múa hoặc diễn kịch",
+                "Chỉ thực hiện chép lại bài trong sách giáo khoa rồi đứng đọc",
+                "Thuê người ngoài làm hoàn toàn toàn bộ nội dung bài thuyết trình",
+                "Mua sẵn các món quà tặng đắt tiền để chia đều cho tất cả các bạn"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Kể chuyện tiếp sức, vẽ tranh thuyết trình, hát múa hoặc diễn kịch."
+            },
+            {
+              "id": "g3-hdtn-c7-l25-q4",
+              "type": "knowledge",
+              "prompt": "Cách phân công nhiệm vụ nào thể hiện tinh thần hợp tác tốt trong nhóm?",
+              "options": [
+                "Phân rõ công việc: người tìm nội dung, người vẽ, người thuyết trình",
+                "Một mình bạn nhóm trưởng đứng ra tự làm hết tất cả các khâu",
+                "Các thành viên đùn đẩy công việc cho nhau và tranh cãi gay gắt",
+                "Mặc kệ công việc và không hoàn thành các nhiệm vụ đúng thời hạn"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Phân rõ công việc: người tìm nội dung, người vẽ, người thuyết trình."
+            },
+            {
+              "id": "g3-hdtn-c7-l25-q5",
+              "type": "knowledge",
+              "prompt": "Em và người thân nên làm gì để tìm hiểu chính xác về lễ hội quê hương?",
+              "options": [
+                "Cùng đọc tài liệu lễ hội truyền thống và hỏi thăm người lớn tuổi",
+                "Tự bịa ra các thông tin hoàn toàn không có thực về truyền thống",
+                "Chỉ tập trung xem các đoạn video quảng cáo giải trí ngắn trên mạng",
+                "Hoàn toàn không cần tìm hiểu thông tin gì trước khi làm bài học"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Cùng đọc tài liệu lễ hội truyền thống và hỏi thăm người lớn tuổi."
+            },
+            {
+              "id": "g3-hdtn-c7-l25-q6",
+              "type": "knowledge",
+              "prompt": "Hoạt động vì cộng đồng nào học sinh tiểu học có thể tích cực tham gia?",
+              "options": [
+                "Tham gia \"Giờ Trái Đất\" bằng cách tắt bớt các thiết bị điện thừa",
+                "Bật mở tất cả các hệ thống bóng đèn trong nhà cùng một lúc",
+                "Tiện tay vứt rác thải bừa bãi ra khu vực di tích truyền thống",
+                "Không quan tâm đến các sự kiện môi trường tại địa phương."
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Tham gia \"Giờ Trái Đất\" bằng cách tắt bớt các thiết bị điện thừa."
+            }
+          ]
+        },
+        {
+          "id": "l26-tuan-26",
+          "lessonNumber": 26,
+          "title": "Tuần 26",
+          "description": "Lan tỏa tinh thần tương thân tương ái, quyên góp ủng hộ các bạn vùng khó khăn",
+          "questions": [
+            {
+              "id": "g3-hdtn-c7-l26-q1",
+              "type": "knowledge",
+              "prompt": "Học sinh vùng thiên tai, dịch bệnh thường gặp phải những khó khăn gì?",
+              "options": [
+                "Thiếu thốn quần áo, sách vở, đồ dùng học tập và điều kiện sống",
+                "Có quá nhiều đồ chơi và các loại quần áo mới để sử dụng",
+                "Không cần đi học và hoàn toàn không cần đồ dùng học tập",
+                "Cuộc sống hoàn toàn đầy đủ và không gặp bất kỳ khó khăn nào"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Thiếu thốn quần áo, sách vở, đồ dùng học tập và điều kiện sống."
+            },
+            {
+              "id": "g3-hdtn-c7-l26-q2",
+              "type": "knowledge",
+              "prompt": "Mục đích chính của phong trào quyên góp \"Mùa đông ấm, mùa hè vui\" là gì?",
+              "options": [
+                "Tặng bạn học sinh vùng thiên tai hoặc người gặp khó khăn",
+                "Gom đồ cũ mang đi bán lấy tiền mua đồ dùng cho cá nhân",
+                "Cất giữ đồ gom được vào trong kho nhà trường để trang trí",
+                "Bắt buộc mỗi học sinh phải mua đồ mới đắt tiền đem nộp"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Tặng bạn học sinh vùng thiên tai hoặc người gặp khó khăn."
+            },
+            {
+              "id": "g3-hdtn-c7-l26-q3",
+              "type": "knowledge",
+              "prompt": "Học sinh thực hiện những công việc gì để chuẩn bị \"Món quà tặng bạn\"?",
+              "options": [
+                "Phân loại, đóng gói đồ còn tốt và viết lời nhắn gửi bạn",
+                "Bỏ chung các loại đồ rách hỏng lẫn với đồ sạch vào một túi",
+                "Gửi những món đồ dùng đã quá cũ rách, hư hỏng không dùng được",
+                "Đóng gói quà thật nhanh mà không cần kiểm tra hay phân loại"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Phân loại, đóng gói đồ còn tốt và viết lời nhắn gửi bạn."
+            },
+            {
+              "id": "g3-hdtn-c7-l26-q4",
+              "type": "knowledge",
+              "prompt": "Lời nhắn nào thể hiện sự chân thành khi gửi tặng quà cho bạn khó khăn?",
+              "options": [
+                "\"Chúc bạn một mùa đông ấm! Chúc bạn một mùa hè vui!\"",
+                "\"Tớ tặng bạn món đồ này vì tớ không thích sử dụng nữa\"",
+                "\"Cậu phải giữ gìn món quà này và đền lại cho tớ nhé\"",
+                "\"Món quà tớ gửi tặng này có giá trị rất đắt tiền đấy\""
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: \"Chúc bạn một mùa đông ấm! Chúc bạn một mùa hè vui!\"."
+            },
+            {
+              "id": "g3-hdtn-c7-l26-q5",
+              "type": "knowledge",
+              "prompt": "Thông điệp chính về sự sẻ chia qua câu chuyện \"Quà tặng cho mọi người\" là gì?",
+              "options": [
+                "Ai cũng có thể sẻ chia món quà phù hợp giúp đời tốt đẹp hơn",
+                "Chỉ những người thực sự giàu có mới có thể tặng quà cho người khác",
+                "Quà tặng bắt buộc phải là món đồ mua được bằng rất nhiều tiền",
+                "Hoàn toàn không nên tặng quà hay giúp đỡ bất kỳ ai xung quanh"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Ai cũng có thể sẻ chia món quà phù hợp giúp đời tốt đẹp hơn."
+            },
+            {
+              "id": "g3-hdtn-c7-l26-q6",
+              "type": "knowledge",
+              "prompt": "Hành động nào ở nhà giúp lan tỏa tinh thần \"lá lành đốm lá rách\"?",
+              "options": [
+                "Soạn đồ dùng, quần áo còn tốt cùng gia đình để quyên góp",
+                "Giữ lại tất cả quần áo cũ dù không mặc vừa và không cho ai",
+                "Đòi hỏi bố mẹ phải mua thêm nhiều đồ dùng đắt tiền cho mình",
+                "Tỏ thái độ không quan tâm phong trào quyên góp của nhà trường"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Soạn đồ dùng, quần áo còn tốt cùng gia đình để quyên góp."
+            }
+          ]
+        },
+        {
+          "id": "l27-tuan-27",
+          "lessonNumber": 27,
+          "title": "Tuần 27",
+          "description": "Thấu hiểu, đồng cảm và giúp đỡ người khuyết tật bằng những hành động thiết thực",
+          "questions": [
+            {
+              "id": "g3-hdtn-c7-l27-q1",
+              "type": "knowledge",
+              "prompt": "Người khuyết tật có điểm gì đặc biệt trong cuộc sống hằng ngày?",
+              "options": [
+                "Gặp nhiều khó khăn nhưng vẫn làm việc có ích cho xã hội",
+                "Họ hoàn toàn không thể làm được bất kỳ công việc nào",
+                "Họ không gặp bất kỳ khó khăn hay trở ngại nào khi vận động",
+                "Họ hoàn toàn không muốn tham gia vào các hoạt động cộng đồng"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Gặp nhiều khó khăn nhưng vẫn làm việc có ích cho xã hội."
+            },
+            {
+              "id": "g3-hdtn-c7-l27-q2",
+              "type": "knowledge",
+              "prompt": "Thái độ nào thể hiện sự thấu hiểu và lòng nhân ái với người khuyết tật?",
+              "options": [
+                "Đồng cảm, trân trọng nỗ lực và sẵn sàng giúp đỡ họ",
+                "Trêu chọc, giễu cợt hoặc kỳ thị những khó khăn của họ",
+                "Thờ ơ, ngó lơ và không quan tâm khi thấy họ gặp khó khăn",
+                "Bắt họ phải tự làm mọi việc mà không có sự hỗ trợ"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Đồng cảm, trân trọng nỗ lực và sẵn sàng giúp đỡ họ."
+            },
+            {
+              "id": "g3-hdtn-c7-l27-q3",
+              "type": "knowledge",
+              "prompt": "Học sinh lớp 3 có thể làm việc ý nghĩa nào để giúp đỡ người khuyết tật?",
+              "options": [
+                "Đọc truyện thu âm, học ngôn ngữ ký hiệu, viết thư động viên",
+                "Tự ý thay người thân đi làm công việc nặng nhọc ngoài xã hội",
+                "Đòi hỏi nhà trường phải cho tiền để tặng người khuyết tật",
+                "Chỉ tập trung quan tâm và giúp đỡ những bạn học giỏi trong lớp"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Đọc truyện thu âm, học ngôn ngữ ký hiệu, viết thư động viên."
+            },
+            {
+              "id": "g3-hdtn-c7-l27-q4",
+              "type": "scenario",
+              "prompt": "Hành vi nào thể hiện sự lịch sự và tôn trọng khi giao tiếp với người khuyết tật?",
+              "options": [
+                "Trò chuyện chân thành, hỏi trước khi giúp, không nhìn chằm chằm",
+                "Tự ý kéo xe lăn hay giật đồ dùng của họ mà không hỏi trước",
+                "Nói to, quát mắng khi họ chưa nghe hay chưa hiểu kịp ý",
+                "Tỏ thái độ tránh xa và không chịu trò chuyện với họ"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Trò chuyện chân thành, hỏi trước khi giúp, không nhìn chằm chằm."
+            },
+            {
+              "id": "g3-hdtn-c7-l27-q5",
+              "type": "scenario",
+              "prompt": "Trải nghiệm đứng một chân cảm nhận khó khăn giúp em điều gì?",
+              "options": [
+                "Thấu hiểu vất vả của họ, từ đó thương yêu và giúp đỡ",
+                "Thấy việc vận động của người khuyết tật rất đơn giản",
+                "Thi đấu xem ai đứng một chân lâu hơn để lấy phần thưởng",
+                "Cảm thấy mệt mỏi và không muốn tìm hiểu thêm về họ"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Thấu hiểu vất vả của họ, từ đó thương yêu và giúp đỡ."
+            },
+            {
+              "id": "g3-hdtn-c7-l27-q6",
+              "type": "scenario",
+              "prompt": "Em đạt mức \"Hoàn thành tốt\" Chủ đề 7 khi thực hiện được các mục tiêu nào?",
+              "options": [
+                "Tham gia truyền thống, thiện nguyện và giúp đỡ người khó khăn",
+                "Chưa bao giờ tham gia các hoạt động quyên góp của nhà trường",
+                "Thờ ơ, không giúp đỡ người khuyết tật khi gặp nơi công cộng",
+                "Chỉ thực hiện công việc khi thầy cô hoặc bố mẹ bắt buộc"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Tham gia truyền thống, thiện nguyện và giúp đỡ người khó khăn."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c8-chu-de-8",
+      "chapterNumber": 8,
+      "title": "CHỦ ĐỀ 8: LÀM BẠN VỚI THIÊN NHIÊN",
+      "lessons": [
+        {
+          "id": "l28-tuan-28",
+          "lessonNumber": 28,
+          "title": "Tuần 28",
+          "description": "Khám phá cảnh quan thiên nhiên quê hương và tự hào giới thiệu vẻ đẹp đất nước",
+          "questions": [
+            {
+              "id": "g3-hdtn-c8-l28-q1",
+              "type": "knowledge",
+              "prompt": "Đặc điểm chính của cảnh quan thiên nhiên quê hương là gì?",
+              "options": [
+                "Do thiên nhiên tạo ra và không bị tác động bởi con người",
+                "Do con người hoàn toàn xây dựng nên bằng bê tông cốt thép",
+                "Là các trung tâm thương mại và khu vui chơi giải trí hiện đại",
+                "Là các nhà máy, xí nghiệp sản xuất trong khu công nghiệp"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Do thiên nhiên tạo ra và không bị tác động bởi con người."
+            },
+            {
+              "id": "g3-hdtn-c8-l28-q2",
+              "type": "knowledge",
+              "prompt": "Nội dung chính cần nêu khi giới thiệu về cảnh quan thiên nhiên là gì?",
+              "options": [
+                "Tên cảnh quan, địa điểm và vẻ đẹp đặc trưng của nơi đó",
+                "Giá tiền vé vào cổng và danh sách cửa hàng bán đồ ăn",
+                "Tên các loại xe cộ đi lại trên đường đến cảnh quan đó",
+                "Số lượng rác thải xả ra mỗi ngày tại khu vực địa điểm đó"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Tên cảnh quan, địa điểm và vẻ đẹp đặc trưng của nơi đó."
+            },
+            {
+              "id": "g3-hdtn-c8-l28-q3",
+              "type": "knowledge",
+              "prompt": "Học sinh có thể làm sản phẩm gì để ca ngợi vẻ đẹp quê hương?",
+              "options": [
+                "Làm tranh từ lá, màu vẽ, giấy vụn hoặc sáng tác thơ văn",
+                "Chép lại nguyên văn bài học trong sách không vẽ trang trí",
+                "Mua sẵn tranh ảnh ngoài cửa hàng về nộp không tự tay làm",
+                "Cắt phá cây xanh trong trường để lấy hoa tươi dán vào bài"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Làm tranh từ lá, màu vẽ, giấy vụn hoặc sáng tác thơ văn."
+            },
+            {
+              "id": "g3-hdtn-c8-l28-q4",
+              "type": "knowledge",
+              "prompt": "Khi thuyết trình về sản phẩm cảnh đẹp quê hương, thái độ phù hợp là gì?",
+              "options": [
+                "Tự tin giới thiệu tên cảnh đẹp, chất liệu và sự tự hào",
+                "Ngập ngừng, nói quá nhỏ và quay lưng lại phía các bạn",
+                "Chê bai sản phẩm tổ khác để tôn sản phẩm nhóm mình lên",
+                "Đọc lướt thật nhanh cho xong để lập tức đi về chỗ ngồi"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Tự tin giới thiệu tên cảnh đẹp, chất liệu và sự tự hào."
+            },
+            {
+              "id": "g3-hdtn-c8-l28-q5",
+              "type": "knowledge",
+              "prompt": "Kế hoạch nào cùng người thân giúp tìm hiểu thêm về thiên nhiên địa phương?",
+              "options": [
+                "Trò chuyện, tìm hiểu và lên kế hoạch tham quan cảnh đẹp",
+                "Ở nhà xem điện thoại suốt ngày không quan tâm xung quanh",
+                "Bắt bố mẹ phải đưa đi du lịch ở nước ngoài đắt đỏ",
+                "Chỉ tìm hiểu công trình kiến trúc hiện đại thành phố khác"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Trò chuyện, tìm hiểu và lên kế hoạch tham quan cảnh đẹp."
+            },
+            {
+              "id": "g3-hdtn-c8-l28-q6",
+              "type": "knowledge",
+              "prompt": "Hoạt động nào cùng gia đình giúp bồi đắp thêm tình yêu cảnh đẹp quê hương?",
+              "options": [
+                "Nghe bài hát và sưu tầm câu ca dao ca ngợi quê hương",
+                "Học thuộc các bài hát quảng cáo sản phẩm thương mại",
+                "Xem các đoạn video trò chơi điện tử bạo lực trên mạng",
+                "Tìm kiếm các bài viết chê bai danh lam thắng cảnh đất nước"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Nghe bài hát và sưu tầm câu ca dao ca ngợi quê hương."
+            }
+          ]
+        },
+        {
+          "id": "l29-tuan-29",
+          "lessonNumber": 29,
+          "title": "Tuần 29",
+          "description": "Xây dựng và tuân thủ bản quy tắc ứng xử văn minh, bảo vệ cây xanh và môi trường",
+          "questions": [
+            {
+              "id": "g3-hdtn-c8-l29-q1",
+              "type": "knowledge",
+              "prompt": "Lời khuyên ngăn đúng đắn nhất khi thấy ai đó định khắc tên lên cây là gì?",
+              "options": [
+                "\"Các bạn ơi, đừng khắc tên lên cây. Cây cũng biết đau đấy!\"",
+                "\"Khắc chữ to hơn nữa lên cho mọi người xung quanh dễ đọc nhé!\"",
+                "\"Hãy bẻ gãy hẳn cành cây để mang về làm kỷ niệm chuyến đi\"",
+                "\"Cứ khắc thoải mái vì cây xanh không cảm nhận được gì đâu\""
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: \"Các bạn ơi, đừng khắc tên lên cây. Cây cũng biết đau đấy!\"."
+            },
+            {
+              "id": "g3-hdtn-c8-l29-q2",
+              "type": "knowledge",
+              "prompt": "Hành vi nào dưới đây KHÔNG NÊN thực hiện khi đi tham quan thiên nhiên?",
+              "options": [
+                "Vứt rác bừa bãi, giẫm cỏ, bẻ cành, khắc cây và vẽ lên đá",
+                "Nhặt các loại rác thải bỏ vào thùng đúng theo nơi quy định",
+                "Thực hiện xếp hàng ngay ngắn và kiên nhẫn đợi đến lượt",
+                "Nhắc nhở tất cả mọi người cùng có ý thức giữ gìn vệ sinh"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Vứt rác bừa bãi, giẫm cỏ, bẻ cành, khắc cây và vẽ lên đá."
+            },
+            {
+              "id": "g3-hdtn-c8-l29-q3",
+              "type": "knowledge",
+              "prompt": "Quy tắc ứng xử văn minh nào em cần tuân thủ khi đi tham quan?",
+              "options": [
+                "Bỏ rác đúng nơi, không giẫm cỏ, xếp hàng, không vẽ/khắc",
+                "Tự do hái những bông hoa đẹp mắt nhất mang về nhà cắm",
+                "Chạy nhảy đùa giỡn, chen lấn xô đẩy người khác khi vào cổng",
+                "Tiện tay vứt vỏ bánh kẹo xuống hồ nước hoặc lối đi chung"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Bỏ rác đúng nơi, không giẫm cỏ, xếp hàng, không vẽ/khắc."
+            },
+            {
+              "id": "g3-hdtn-c8-l29-q4",
+              "type": "scenario",
+              "prompt": "Nên làm gì để hoàn thiện bản Quy tắc ứng xử bảo vệ thiên nhiên?",
+              "options": [
+                "Nhờ người thân góp ý để quy tắc sinh động, dễ thực hiện",
+                "Tự cất bản quy tắc đi và hoàn toàn không cho ai biết đến",
+                "Bắt buộc người thân trong nhà phải làm theo mọi ý thích",
+                "Bỏ qua hoàn toàn, không cần xây dựng hay nhờ ai góp ý"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Nhờ người thân góp ý để quy tắc sinh động, dễ thực hiện."
+            },
+            {
+              "id": "g3-hdtn-c8-l29-q5",
+              "type": "scenario",
+              "prompt": "Hình thức tuyên truyền sáng tạo nào phù hợp với nhóm \"Tuyên truyền viên nhí\"?",
+              "options": [
+                "Viết thẻ thông điệp, nhảy múa, đọc thơ hoặc đóng kịch câm",
+                "Quát mắng và xô xát gay gắt với các bạn chưa có ý thức",
+                "Đòi hỏi nhà trường phải cho tiền thưởng mới tham gia",
+                "Chỉ thực hiện làm bài tuyên truyền khi bị thầy cô xử phạt"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Viết thẻ thông điệp, nhảy múa, đọc thơ hoặc đóng kịch câm."
+            },
+            {
+              "id": "g3-hdtn-c8-l29-q6",
+              "type": "scenario",
+              "prompt": "Hành động phù hợp nhất em nên làm cùng gia đình hằng ngày là gì?",
+              "options": [
+                "Mời người thân làm tuyên truyền viên, nhắc nhở giữ thiên nhiên",
+                "Mặc kệ khi phát hiện thấy người thân xả rác bừa bãi ngoài",
+                "Tự ý bẻ hoa cảnh ở ngoài công viên mang về tặng người thân",
+                "Chỉ tập trung quan tâm đến việc dọn dẹp phòng riêng ở nhà"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Mời người thân làm tuyên truyền viên, nhắc nhở giữ thiên nhiên."
+            }
+          ]
+        },
+        {
+          "id": "l30-tuan-30",
+          "lessonNumber": 30,
+          "title": "Tuần 30",
+          "description": "Khảo sát thực trạng môi trường xung quanh và làm phóng viên môi trường nhí",
+          "questions": [
+            {
+              "id": "g3-hdtn-c8-l30-q1",
+              "type": "knowledge",
+              "prompt": "Biểu hiện nào dưới đây báo hiệu môi trường xung quanh đang bị ô nhiễm?",
+              "options": [
+                "Rác vứt bừa bãi, nước thải hôi đen, khói bụi và tiếng ồn lớn",
+                "Cây xanh phát triển xanh tốt, không khí trong lành, đường sạch",
+                "Tiếng chim hót líu lo và dòng sông nước trong xanh mát lành",
+                "Đường phố luôn được quét dọn sạch sẽ và không có khói bụi"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Rác vứt bừa bãi, nước thải hôi đen, khói bụi và tiếng ồn lớn."
+            },
+            {
+              "id": "g3-hdtn-c8-l30-q2",
+              "type": "knowledge",
+              "prompt": "Ô nhiễm môi trường (khói bụi, tràn dầu) gây ra những hậu quả gì?",
+              "options": [
+                "Tổn hại sức khỏe con người, tàn phá cảnh quan và sinh vật",
+                "Giúp cho không khí trở nên trong lành và tăng cường sức khỏe",
+                "Hoàn toàn không gây ra bất kỳ ảnh hưởng nào tới sinh vật",
+                "Giúp cho các loài sinh vật biển phát triển nhanh chóng hơn"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Tổn hại sức khỏe con người, tàn phá cảnh quan và sinh vật."
+            },
+            {
+              "id": "g3-hdtn-c8-l30-q3",
+              "type": "knowledge",
+              "prompt": "\"Phóng viên môi trường nhí\" dùng phương pháp nào để thu thập thông tin?",
+              "options": [
+                "Quan sát thực tế, Ghi chép phiếu khảo sát và Phỏng vấn",
+                "Bắt buộc tất cả mọi người xung quanh phải viết bản kiểm điểm",
+                "Chỉ đọc các bộ truyện tranh và xem phim hoạt hình giải trí",
+                "Tự bịa ra số liệu mà hoàn toàn không cần đến quan sát thực tế"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Quan sát thực tế, Ghi chép phiếu khảo sát và Phỏng vấn."
+            },
+            {
+              "id": "g3-hdtn-c8-l30-q4",
+              "type": "knowledge",
+              "prompt": "Cách đặt câu hỏi phỏng vấn nào lịch sự và phù hợp nhất khi khảo sát sân trường?",
+              "options": [
+                "\"Bác ơi, bác thấy sân trường giờ ra chơi có bị rác hay khói bụi không ạ?\"",
+                "\"Sao bác không đi dọn dẹp sạch tất cả rác ở sân trường ngay đi ạ?\"",
+                "\"Bác có biết chính xác ai xả rác để cháu đến phạt tiền không ạ?\"",
+                "\"Bác ơi, tại sao trường mình lại không có ai chịu nhặt rác thế ạ?\""
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: \"Bác ơi, bác thấy sân trường giờ ra chơi có bị rác hay khói bụi không ạ?\"."
+            },
+            {
+              "id": "g3-hdtn-c8-l30-q5",
+              "type": "knowledge",
+              "prompt": "Việc hoàn thành \"Bảng thông tin môi trường\" nhằm mục đích chính gì?",
+              "options": [
+                "Thông báo thực trạng ô nhiễm và đưa lời cảnh báo môi trường",
+                "Trang trí lớp học cho vui mà không mang ý nghĩa tuyên truyền",
+                "Tổ chức mua bán các loại sản phẩm làm từ nhựa tái chế",
+                "Đăng danh sách tuyên dương khen thưởng các bạn học sinh giỏi"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Thông báo thực trạng ô nhiễm và đưa lời cảnh báo môi trường."
+            },
+            {
+              "id": "g3-hdtn-c8-l30-q6",
+              "type": "knowledge",
+              "prompt": "Nhiệm vụ vận dụng nào em nên cùng người thân thực hiện ở nơi ở?",
+              "options": [
+                "Quan sát môi trường sống xung quanh và ghi chép dấu hiệu ô nhiễm",
+                "Xả thêm rác thải ra ngoài ngõ xóm để kiểm tra xem có ai dọn",
+                "Tỏ thái độ bỏ qua, không quan tâm môi trường ở khu dân cư",
+                "Đợi cho đến khi môi trường ô nhiễm quá nặng mới tìm hiểu"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Quan sát môi trường sống xung quanh và ghi chép dấu hiệu ô nhiễm."
+            }
+          ]
+        },
+        {
+          "id": "l31-tuan-31",
+          "lessonNumber": 31,
+          "title": "Tuần 31",
+          "description": "Thực hành phân loại pin cũ, xử lý mỡ thừa và hạn chế rác thải nhựa bảo vệ đất nước",
+          "questions": [
+            {
+              "id": "g3-hdtn-c8-l31-q1",
+              "type": "knowledge",
+              "prompt": "Bỏ pin đã qua sử dụng ở đâu để tránh gây độc hại cho đất và nước?",
+              "options": [
+                "Để riêng và mang đến các điểm thu gom rác thải độc hại",
+                "Đem chôn trực tiếp nguồn pin cũ xuống đất trong vườn nhà",
+                "Tiện tay vứt pin cũ xuống sông, hồ hoặc các kênh rạch",
+                "Bỏ chung vào cùng sọt rác sinh hoạt gia đình hằng ngày"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Để riêng và mang đến các điểm thu gom rác thải độc hại."
+            },
+            {
+              "id": "g3-hdtn-c8-l31-q2",
+              "type": "knowledge",
+              "prompt": "Cách xử lý mỡ thừa đúng cách, không làm tắc cống và ô nhiễm nước là gì?",
+              "options": [
+                "Thấm giấy hoặc đổ chai đậy kín rồi bỏ thùng rác/tái chế",
+                "Đổ trực tiếp toàn bộ lượng dầu mỡ thừa xuống bồn rửa",
+                "Đổ thẳng lượng dầu mỡ thừa ra đường cống thải công cộng",
+                "Xịt nước hoa vào dầu mỡ thừa rồi đổ ra ngoài sân nhà"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Thấm giấy hoặc đổ chai đậy kín rồi bỏ thùng rác/tái chế."
+            },
+            {
+              "id": "g3-hdtn-c8-l31-q3",
+              "type": "knowledge",
+              "prompt": "Hành vi ứng xử hằng ngày nào dưới đây NÊN LÀM để bảo vệ môi trường?",
+              "options": [
+                "Nhặt rác bỏ thùng đúng quy định và làm biển nhắc nhở",
+                "Gom rác trên đường làng rồi đem vứt xuống sông trôi đi",
+                "Đốt tất cả các loại rác ni-lông và nhựa ngay trước nhà",
+                "Vứt rác bừa bãi ra ngõ xóm khi không có ai nhìn thấy"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Nhặt rác bỏ thùng đúng quy định và làm biển nhắc nhở."
+            },
+            {
+              "id": "g3-hdtn-c8-l31-q4",
+              "type": "knowledge",
+              "prompt": "Thói quen nào giúp giảm thiểu ô nhiễm không khí và tiếng ồn xung quanh?",
+              "options": [
+                "Hạn chế bấm còi, mở loa vừa phải, không đốt rác bừa bãi",
+                "Thường xuyên bấm còi xe inh ỏi khi đi vào trong ngõ nhỏ",
+                "Bật tivi và loa đài ở mức công suất tối đa vào đêm khuya",
+                "Đốt lá cây và nhựa thải tạo ra khói mù mạt khắp ngõ xóm"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Hạn chế bấm còi, mở loa vừa phải, không đốt rác bừa bãi."
+            },
+            {
+              "id": "g3-hdtn-c8-l31-q5",
+              "type": "knowledge",
+              "prompt": "Công việc vừa sức em và các bạn có thể tham gia để vệ sinh môi trường là gì?",
+              "options": [
+                "Nhặt rác sân trường và tái chế chai nhựa làm chậu cây",
+                "Sử dụng thật nhiều túi ni-lông một lần rồi lập tức vứt",
+                "Tự ý bẻ các cành cây trong vườn trường để làm đồ chơi",
+                "Xả nước chảy tràn chậu khi thực hiện rửa tay ở trường"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Nhặt rác sân trường và tái chế chai nhựa làm chậu cây."
+            },
+            {
+              "id": "g3-hdtn-c8-l31-q6",
+              "type": "knowledge",
+              "prompt": "Em đạt mức \"Hoàn thành tốt\" Chủ đề 8 khi thực hiện được các mục tiêu nào?",
+              "options": [
+                "Nêu cảnh quan, tuyên truyền bảo vệ và chống ô nhiễm môi trường",
+                "Thường xuyên xả rác bừa bãi và không biết cảnh đẹp nào",
+                "Hoàn toàn không bao giờ tham gia nhặt rác hay trồng cây",
+                "Chỉ thực hiện làm vệ sinh môi trường khi bị thầy cô phạt"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Nêu cảnh quan, tuyên truyền bảo vệ và chống ô nhiễm môi trường."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c9-chu-de-9",
+      "chapterNumber": 9,
+      "title": "CHỦ ĐỀ 9: TÌM HIỂU THẾ GIỚI NGHỀ NGHIỆP",
+      "lessons": [
+        {
+          "id": "l32-tuan-32",
+          "lessonNumber": 32,
+          "title": "Tuần 32",
+          "description": "Tìm hiểu các đức tính đáng quý của người lao động trong các ngành nghề khác nhau",
+          "questions": [
+            {
+              "id": "g3-hdtn-c9-l32-q1",
+              "type": "knowledge",
+              "prompt": "Đức tính tốt đẹp của người lao động trong \"Xưởng may áo ấm\" là gì?",
+              "options": [
+                "Cẩn thận, chăm chỉ, tỉ mỉ, kiên nhẫn và có trách nhiệm",
+                "Cẩu thả, vội vàng và làm qua loa cho nhanh xong việc",
+                "Thường xuyên đùn đẩy trách nhiệm công việc cho người khác",
+                "Làm việc tự do không tuân theo quy định hay kế hoạch"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Cẩn thận, chăm chỉ, tỉ mỉ, kiên nhẫn và có trách nhiệm."
+            },
+            {
+              "id": "g3-hdtn-c9-l32-q2",
+              "type": "knowledge",
+              "prompt": "Đức tính quan trọng hàng đầu cần có ở Bác sĩ và Cảnh sát là gì?",
+              "options": [
+                "Bác sĩ: Nhân ái, cẩn thận; Cảnh sát: Dũng cảm, kỉ luật",
+                "Bác sĩ: Thích chơi game; Cảnh sát: Thường xuyên đi muộn",
+                "Tất cả các nghề nghiệp đều chỉ cần tính cách nhanh nhẹn",
+                "Người làm nghề chỉ cần nhiều tiền không cần rèn luyện"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Bác sĩ: Nhân ái, cẩn thận; Cảnh sát: Dũng cảm, kỉ luật."
+            },
+            {
+              "id": "g3-hdtn-c9-l32-q3",
+              "type": "knowledge",
+              "prompt": "Đức tính quan trọng nhất cần có đối với người làm nghề Kế toán là gì?",
+              "options": [
+                "Rất cần đức tính cẩn thận và trung thực khi làm sổ sách",
+                "Chỉ cần đức tính dũng cảm và chăm tập thể thao hằng ngày",
+                "Hoàn toàn không cần phải chính xác hay cẩn thận tỉ mỉ",
+                "Chỉ cần có năng khiếu biết vẽ các bức tranh thật đẹp"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Rất cần đức tính cẩn thận và trung thực khi làm sổ sách."
+            },
+            {
+              "id": "g3-hdtn-c9-l32-q4",
+              "type": "knowledge",
+              "prompt": "Cách thức đưa ra gợi ý phù hợp nhất trong trò chơi \"Đoán nghề\" là gì?",
+              "options": [
+                "Nêu ba đức tính cần có và mô tả công việc của nghề đó",
+                "Đọc trực tiếp đáp án tên nghề nghiệp ra ngay từ đầu",
+                "Chỉ đứng yên không đưa ra bất kỳ thông tin hay gợi ý nào",
+                "Đưa ra các thông tin hoàn toàn sai lệch để làm khó bạn"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Nêu ba đức tính cần có và mô tả công việc của nghề đó."
+            },
+            {
+              "id": "g3-hdtn-c9-l32-q5",
+              "type": "knowledge",
+              "prompt": "Em nên làm gì cùng người thân để nhận ra sự phù hợp với nghề yêu thích?",
+              "options": [
+                "Đề nghị người thân đánh giá những đức tính hiện có của em",
+                "Tự cho mình đã hoàn hảo và không cần rèn luyện thêm nữa",
+                "Bỏ qua không trao đổi hay lắng nghe nhận xét từ người thân",
+                "Giấu kín người thân về những ước mơ nghề nghiệp của mình"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Đề nghị người thân đánh giá những đức tính hiện có của em."
+            },
+            {
+              "id": "g3-hdtn-c9-l32-q6",
+              "type": "knowledge",
+              "prompt": "Việc làm phù hợp em cần tự giác thực hiện hằng ngày từ bây giờ là gì?",
+              "options": [
+                "Học tập, rèn luyện tính chăm chỉ, cẩn thận và kỉ luật",
+                "Thường xuyên thức khuya chơi game và bỏ bê việc học hành",
+                "Chỉ rèn luyện khi được người lớn hứa cho các khoản thưởng",
+                "Bày đồ chơi bừa bãi ra nhà và không chịu tự tay dọn dẹp"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Học tập, rèn luyện tính chăm chỉ, cẩn thận và kỉ luật."
+            }
+          ]
+        },
+        {
+          "id": "l33-tuan-33",
+          "lessonNumber": 33,
+          "title": "Tuần 33",
+          "description": "Xây dựng kế hoạch rèn luyện đức tính chăm chỉ, kiên trì để chuẩn bị cho tương lai",
+          "questions": [
+            {
+              "id": "g3-hdtn-c9-l33-q1",
+              "type": "knowledge",
+              "prompt": "Em nên gấp sản phẩm gì và ghi nội dung gì để chia sẻ đức tính nghề nghiệp?",
+              "options": [
+                "Gấp thuyền giấy, ghi nghề yêu thích và đức tính rồi dán góc chung",
+                "Cắt hình hoa tuyết bằng giấy màu dán lên khu vực cửa sổ lớp",
+                "Vẽ một bức tranh miêu tả về cảnh đẹp thiên nhiên ở địa phương",
+                "Tự tay làm một cuốn sổ nhắc việc cá nhân bằng giấy màu"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Gấp thuyền giấy, ghi nghề yêu thích và đức tính rồi dán góc chung."
+            },
+            {
+              "id": "g3-hdtn-c9-l33-q2",
+              "type": "knowledge",
+              "prompt": "Biện pháp rèn luyện thiết thực nào giúp chuẩn bị cho công việc tương lai?",
+              "options": [
+                "Tập thể thao rèn tính kiên trì, chơi với em nhỏ rèn sự yêu trẻ",
+                "Thức thật khuya xem tivi giải trí để rèn luyện sức chịu đựng",
+                "Tự ý nghỉ học tự do ở nhà mà hoàn toàn không xin phép thầy cô",
+                "Nhờ các bạn khác làm hộ toàn bộ các bài tập về nhà của mình"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Tập thể thao rèn tính kiên trì, chơi với em nhỏ rèn sự yêu trẻ."
+            },
+            {
+              "id": "g3-hdtn-c9-l33-q3",
+              "type": "knowledge",
+              "prompt": "Sơ đồ tư duy về một người giỏi nghề cần có những nhánh thông tin chính nào?",
+              "options": [
+                "Thông tin công việc, đức tính nghề nghiệp và thành tích đạt được",
+                "Mức giá tiền của các món đồ chơi đắt đỏ người đó đang sở hữu",
+                "Danh sách tổng hợp tất cả các món ăn mà người đó không thích",
+                "Số lượng các loại xe cộ người đó di chuyển đi lại hằng ngày"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Thông tin công việc, đức tính nghề nghiệp và thành tích đạt được."
+            },
+            {
+              "id": "g3-hdtn-c9-l33-q4",
+              "type": "knowledge",
+              "prompt": "Khi gặp khó khăn trong quá trình rèn luyện đức tính, em nên ứng xử thế nào?",
+              "options": [
+                "Nhờ hỗ trợ, kiên nhẫn điều chỉnh kế hoạch và quyết tâm rèn luyện",
+                "Quyết định bỏ cuộc ngay lập tức và hoàn toàn không rèn luyện",
+                "Tỏ thái độ đổ lỗi cho các bạn xung quanh làm ảnh hưởng mình",
+                "Cất giấu không cho bất kỳ ai biết về các khó khăn của mình"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Nhờ hỗ trợ, kiên nhẫn điều chỉnh kế hoạch và quyết tâm rèn luyện."
+            },
+            {
+              "id": "g3-hdtn-c9-l33-q5",
+              "type": "knowledge",
+              "prompt": "Em nên trao đổi việc gì với gia đình để rèn luyện bản thân tốt hơn?",
+              "options": [
+                "Nhờ người thân hỗ trợ, nhắc nhở thực hiện kế hoạch rèn luyện",
+                "Bắt buộc bố mẹ phải mua cho bản thân thật nhiều món quà đắt",
+                "Nhờ bố mẹ đứng ra làm hết tất cả các công việc nhà thay mình",
+                "Hoàn toàn không trao đổi hay chia sẻ kế hoạch với gia đình"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Nhờ người thân hỗ trợ, nhắc nhở thực hiện kế hoạch rèn luyện."
+            },
+            {
+              "id": "g3-hdtn-c9-l33-q6",
+              "type": "knowledge",
+              "prompt": "Việc làm ý nghĩa nhất của học sinh lớp 3 để nuôi dưỡng ước mơ tương lai là gì?",
+              "options": [
+                "Tiếp tục rèn luyện đức tính, chăm ngoan học tập, nghe lời thầy cô",
+                "Chỉ tập trung chăm chú vào việc chơi game giải trí suốt ngày",
+                "Đợi đến khi bản thân lớn lên mới bắt đầu học tập rèn luyện",
+                "Bỏ qua hoàn toàn việc học tập rèn luyện các môn ở trên trường"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Tiếp tục rèn luyện đức tính, chăm ngoan học tập, nghe lời thầy cô."
+            }
+          ]
+        },
+        {
+          "id": "l34-tuan-34",
+          "lessonNumber": 34,
+          "title": "Tuần 34",
+          "description": "Tuân thủ nghiêm ngặt các quy tắc an toàn khi sử dụng dụng cụ lao động và thiết bị điện",
+          "questions": [
+            {
+              "id": "g3-hdtn-c9-l34-q1",
+              "type": "knowledge",
+              "prompt": "Tình huống nào dưới đây nguy cơ cao gây mất an toàn và chấn thương?",
+              "options": [
+                "Cầm dao kéo đùa giỡn, trèo ghế chông chênh, tay ướt chạm điện",
+                "Cất dao, kéo cẩn thận và gọn gàng vào hộp sau khi sử dụng",
+                "Đi dép có độ bám tốt khi thực hiện lau dọn sàn nhà tắm",
+                "Mang găng tay cao su khi tiếp xúc trực tiếp với hóa chất"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Cầm dao kéo đùa giỡn, trèo ghế chông chênh, tay ướt chạm điện."
+            },
+            {
+              "id": "g3-hdtn-c9-l34-q2",
+              "type": "knowledge",
+              "prompt": "Lợi ích của việc tuân thủ các quy tắc an toàn khi tham gia lao động là gì?",
+              "options": [
+                "Bảo vệ sức khỏe, tính mạng bản thân và tránh gây thương tích",
+                "Giúp hoàn thành công việc thật nhanh mà không cần cẩn thận",
+                "Nhằm mục đích nhận được tiền thưởng từ thầy cô và bố mẹ",
+                "Để không phải tham gia vào bất kỳ công việc lao động nào nữa"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Bảo vệ sức khỏe, tính mạng bản thân và tránh gây thương tích."
+            },
+            {
+              "id": "g3-hdtn-c9-l34-q3",
+              "type": "knowledge",
+              "prompt": "Quy tắc an toàn cần nhớ khi dùng dụng cụ sắc nhọn (dao, kéo, xẻng) là gì?",
+              "options": [
+                "Tập trung quan sát, không đùa giỡn, quay đầu nhọn hướng xuống",
+                "Giơ cao đầu nhọn của kéo lên không trung khi trò chuyện",
+                "Vừa dùng kéo cắt giấy vừa quay sang trêu chọc bạn bên cạnh",
+                "Thả vứt dụng cụ sắc nhọn dưới sàn nhà sau khi dùng xong"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Tập trung quan sát, không đùa giỡn, quay đầu nhọn hướng xuống."
+            },
+            {
+              "id": "g3-hdtn-c9-l34-q4",
+              "type": "scenario",
+              "prompt": "Hành vi nào dưới đây đảm bảo AN TOÀN khi lau chùi thiết bị điện?",
+              "options": [
+                "Rút phích cắm trước khi lau và giữ tay thật khô khi chạm điện",
+                "Dùng chiếc khăn ướt sũng để lau chùi ổ cắm đang có điện",
+                "Đi chân đất đứng trên sàn nhà ướt để bật công tắc điện",
+                "Đổ trực tiếp nguồn nước cọ sàn lên các dây dẫn điện dưới sàn"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Rút phích cắm trước khi lau và giữ tay thật khô khi chạm điện."
+            },
+            {
+              "id": "g3-hdtn-c9-l34-q5",
+              "type": "scenario",
+              "prompt": "Thấy bạn chồng ghế trèo lên lau bảng cao nguy hiểm, em xử lý ra sao?",
+              "options": [
+                "Nhắc bạn xuống ngay và nhờ thầy cô hoặc dùng cây lau cán dài",
+                "Đứng ngoài reo hò cổ vũ xem bạn có trèo lên được hay không",
+                "Vào giữ chân ghế cho bạn tiếp tục trèo lên vị trí cao hơn",
+                "Lập tức bỏ đi chỗ khác và hoàn toàn không quan tâm đến bạn"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Nhắc bạn xuống ngay và nhờ thầy cô hoặc dùng cây lau cán dài."
+            },
+            {
+              "id": "g3-hdtn-c9-l34-q6",
+              "type": "scenario",
+              "prompt": "Việc làm vận dụng nào cùng người thân giúp gia đình luôn an toàn?",
+              "options": [
+                "Sắp xếp dụng cụ lao động gọn gàng, nhắc nhau quy tắc an toàn",
+                "Để dao, kéo lênh đênh trên mặt bàn thấp nơi em nhỏ dễ với",
+                "Mua thêm thật nhiều dụng cụ sắc nhọn về để bừa bãi trong nhà",
+                "Bỏ qua hoàn toàn các quy định an toàn khi dùng thiết bị điện"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Sắp xếp dụng cụ lao động gọn gàng, nhắc nhau quy tắc an toàn."
+            }
+          ]
+        },
+        {
+          "id": "l35-tuan-35",
+          "lessonNumber": 35,
+          "title": "Tuần 35",
+          "description": "Tổng kết hành trình rèn luyện lớp 3 và chuẩn bị tâm thế tự tin sẵn sàng lên lớp 4",
+          "questions": [
+            {
+              "id": "g3-hdtn-c9-l35-q1",
+              "type": "knowledge",
+              "prompt": "Học sinh được nhìn lại những hành trình ý nghĩa nào trong buổi tổng kết?",
+              "options": [
+                "Tự giới thiệu, gia đình, ăn uống an toàn, môi trường, nghề nghiệp",
+                "Chỉ tổng kết các bài kiểm tra điểm số của môn Toán và Tiếng Việt",
+                "Ôn tập lại danh sách các môn học thi đấu thể thao ngoài trường",
+                "Đánh giá các chương trình truyền hình và trò chơi điện tử giải trí"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Tự giới thiệu, gia đình, ăn uống an toàn, môi trường, nghề nghiệp."
+            },
+            {
+              "id": "g3-hdtn-c9-l35-q2",
+              "type": "knowledge",
+              "prompt": "Những thay đổi tích cực rõ rệt nhất em nhận thấy ở bản thân sau một năm là gì?",
+              "options": [
+                "Tự tin, tự phục vụ, ngăn nắp, yêu gia đình và ứng xử văn minh",
+                "Hay giận dỗi và đòi bố mẹ mua thật nhiều đồ chơi đắt tiền",
+                "Thường xuyên vứt đồ đạc bừa bãi và lười biếng làm việc nhà",
+                "Không quan tâm đến sự giúp đỡ người khác và hay tranh cãi với bạn"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Tự tin, tự phục vụ, ngăn nắp, yêu gia đình và ứng xử văn minh."
+            },
+            {
+              "id": "g3-hdtn-c9-l35-q3",
+              "type": "knowledge",
+              "prompt": "Học sinh làm việc gì để lưu giữ kỉ niệm trong tiết Hoạt động giáo dục?",
+              "options": [
+                "Trưng bày sản phẩm, cẩm nang và viết lời chúc gửi bạn bè, thầy cô",
+                "Mang tất cả sách vở và bài vẽ cũ của mình đi vứt bỏ",
+                "Đòi thầy cô phải trao giải thưởng bằng tiền mặt cho cả lớp",
+                "Thu dọn đồ đạc và đi về nhà ngay không tham gia hoạt động chung"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Trưng bày sản phẩm, cẩm nang và viết lời chúc gửi bạn bè, thầy cô."
+            },
+            {
+              "id": "g3-hdtn-c9-l35-q4",
+              "type": "knowledge",
+              "prompt": "Em đạt mức \"Hoàn thành tốt\" Chủ đề 9 khi thực hiện được các mục tiêu nào?",
+              "options": [
+                "Nêu đức tính nghề yêu thích, nhận ra đức tính bản thân, giữ an toàn",
+                "Không biết ngành nghề mình yêu thích cần có những đức tính gì",
+                "Thường xuyên đùa giỡn gây mất an toàn khi dùng dụng cụ sắc nhọn",
+                "Chỉ thực hiện kế hoạch rèn luyện khi bị bố mẹ/thầy cô bắt buộc"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Nêu đức tính nghề yêu thích, nhận ra đức tính bản thân, giữ an toàn."
+            },
+            {
+              "id": "g3-hdtn-c9-l35-q5",
+              "type": "knowledge",
+              "prompt": "Em nên làm gì để kỳ nghỉ hè trôi qua an toàn và ý nghĩa?",
+              "options": [
+                "Ôn kiến thức, phụ việc nhà, tập thể thao, học bơi và đọc sách",
+                "Dành toàn bộ thời gian nghỉ hè để xem tivi và chơi game",
+                "Tự ý rủ bạn bè đi tắm sông, tắm hồ mà không có người lớn",
+                "Thức thật khuya và ngủ dậy thật muộn vào ngày hôm sau"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Ôn kiến thức, phụ việc nhà, tập thể thao, học bơi và đọc sách."
+            },
+            {
+              "id": "g3-hdtn-c9-l35-q6",
+              "type": "knowledge",
+              "prompt": "Tinh thần cần chuẩn bị để bước vào kỳ nghỉ hè và sẵn sàng lên Lớp 4 là gì?",
+              "options": [
+                "Tự hào về thành quả Lớp 3, quyết tâm rèn luyện cho chặng đường mới",
+                "Tỏ ra vô cùng lo lắng, sợ hãi và không muốn đi học trở lại",
+                "Bỏ qua và quên hết tất cả các quy tắc ứng xử văn minh đã học",
+                "Hoàn toàn không quan tâm việc rèn luyện bản thân trong mùa hè"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Tự hào về thành quả Lớp 3, quyết tâm rèn luyện cho chặng đường mới."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

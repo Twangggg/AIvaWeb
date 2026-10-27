@@ -912,7 +912,7 @@ export function AivaGardenGame({ onUpdate, round, level = 1 }: AivaGardenGamePro
         ref={hostRef}
         tabIndex={0}
         aria-label="Bản đồ Giải cứu khu vườn AIVA."
-        className="w-full flex items-center justify-center touch-none select-none overflow-hidden rounded-2xl border border-white/15 bg-[#133e35] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-yellow-200 [&_canvas]:mx-auto [&_canvas]:block [&_canvas]:h-auto [&_canvas]:max-h-[calc(100svh-11rem)] sm:[&_canvas]:max-h-[64svh] [&_canvas]:max-w-full [&_canvas]:object-contain shadow-2xl"
+        className="w-full flex items-center justify-center touch-none select-none overflow-hidden rounded-2xl border border-white/15 bg-[#133e35] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-yellow-200 [&_canvas]:mx-auto [&_canvas]:block [&_canvas]:h-auto [&_canvas]:w-full [&_canvas]:max-w-full [&_canvas]:max-h-[calc(100svh-11rem)] sm:[&_canvas]:max-h-[48svh] md:[&_canvas]:max-h-[50svh] lg:[&_canvas]:max-h-[52svh] [&_canvas]:object-contain shadow-2xl"
       />
 
       {/* Virtual Tactile D-Pad Controller for Mobile & Touch Action */}

@@ -1,0 +1,1116 @@
+{
+  "id": "g4-congnghe",
+  "grade": 4,
+  "subjectKey": "congnghe",
+  "title": "Công nghệ lớp 4",
+  "color": "#0284C7",
+  "coverImage": "/mascots/bia-sach-mon-hoc.png",
+  "chapters": [
+    {
+      "id": "c1-congnghe4",
+      "chapterNumber": 1,
+      "title": "Phần 1: Công nghệ và đời sống",
+      "lessons": [
+        {
+          "id": "l1-cn4",
+          "lessonNumber": 1,
+          "title": "BÀI 1: LỢI ÍCH CỦA HOA, CÂY CẢNH ĐỐI VỚI ĐỜI SỐNG",
+          "questions": [
+            {
+              "id": "g4-cn-l1-q1",
+              "type": "knowledge",
+              "prompt": "Hoa và cây cảnh thường được dùng để trang trí ở những không gian nào?",
+              "options": [
+                "Nhà ở, trường học, văn phòng, công viên và đường phố",
+                "Chỉ được trồng dưới lòng đường nơi xe cộ đi lại",
+                "Trong các kho chứa hàng đóng kín cửa hằng ngày",
+                "Chỉ được trồng trong các khu rừng sâu xôi xa xóm làng"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Nhà ở, trường học, văn phòng, công viên và đường phố\". Kiến thức trọng tâm bài học Công nghệ 4 giúp em hiểu rõ và vận dụng đúng vào thực tế."
+            },
+            {
+              "id": "g4-cn-l1-q2",
+              "type": "knowledge",
+              "prompt": "Những loại cây cảnh trồng trong nhà mang lại lợi ích nổi bật nào?",
+              "options": [
+                "Hấp thụ khí độc, mùi hôi và mang lại không khí trong lành",
+                "Tạo ra nhiều khói bụi và làm ô nhiễm bầu không khí",
+                "Hút hết nước không khí làm môi trường bị khô hạn",
+                "Làm tăng thêm mùi hôi khó chịu ở trong căn phòng"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Hấp thụ khí độc, mùi hôi và mang lại không khí trong lành\". Kiến thức trọng tâm bài học Công nghệ 4 giúp em hiểu rõ và vận dụng đúng vào thực tế."
+            },
+            {
+              "id": "g4-cn-l1-q3",
+              "type": "knowledge",
+              "prompt": "Vào ban ngày, hoa và cây cảnh quang hợp trao đổi khí như thế nào?",
+              "options": [
+                "Hấp thụ khí carbon dioxide và tạo ra khí oxygen",
+                "Hấp thụ khí oxygen và thải ra các loại khí độc hại",
+                "Hoàn toàn không thực hiện trao đổi bất kỳ khí nào",
+                "Chỉ hút nước dưới đất mà không tương tác không khí"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Hấp thụ khí carbon dioxide và tạo ra khí oxygen\". Kiến thức trọng tâm bài học Công nghệ 4 giúp em hiểu rõ và vận dụng đúng vào thực tế."
+            },
+            {
+              "id": "g4-cn-l1-q4",
+              "type": "knowledge",
+              "prompt": "Vào ban đêm, chúng ta KHÔNG NÊN thực hiện hành động nào dưới đây?",
+              "options": [
+                "Mở cửa sổ thoáng mát khi trồng cây ngoài ban công",
+                "Đặt quá nhiều hoa, cây cảnh trong phòng ngủ kín",
+                "Trồng cây xanh ở công viên và khuôn viên trường học",
+                "Đưa cây ra ngoài hứng ánh nắng mặt trời ban ngày"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Vào ban đêm cây nhả khí CO2 và hút khí oxy trong quá trình hô hấp, do đó không nên đặt quá nhiều hoa, cây cảnh trong phòng ngủ kín để đảm bảo an toàn hô hấp."
+            },
+            {
+              "id": "g4-cn-l1-q5",
+              "type": "knowledge",
+              "prompt": "Việc tặng hoa trong các dịp lễ, tết, sinh nhật mang ý nghĩa gì?",
+              "options": [
+                "Thể hiện sự chúc mừng và bày tỏ tình cảm chân thành",
+                "Ép buộc người nhận phải mua lại món quà đắt tiền",
+                "Chỉ nhằm mục đích duy nhất là làm sạch phòng ở",
+                "Hoàn toàn không mang bất kỳ ý nghĩa tình cảm nào"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Thể hiện sự chúc mừng và bày tỏ tình cảm chân thành\". Kiến thức trọng tâm bài học Công nghệ 4 giúp em hiểu rõ và vận dụng đúng vào thực tế."
+            },
+            {
+              "id": "g4-cn-l1-q6",
+              "type": "knowledge",
+              "prompt": "Bên cạnh việc trang trí, hoa và cây cảnh còn có lợi ích nào khác?",
+              "options": [
+                "Làm thuốc, làm nước hoa, đem lại niềm vui và kinh tế",
+                "Gây lãng phí thời gian và không mang lại lợi ích gì",
+                "Chỉ dùng làm thức ăn hằng ngày thay thế lương thực",
+                "Làm cho con người mệt mỏi và tốn kém chi phí vô ích"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Làm thuốc, làm nước hoa, đem lại niềm vui và kinh tế\". Kiến thức trọng tâm bài học Công nghệ 4 giúp em hiểu rõ và vận dụng đúng vào thực tế."
+            }
+          ]
+        },
+        {
+          "id": "l2-cn4",
+          "lessonNumber": 2,
+          "title": "BÀI 2: MỘT SỐ LOẠI HOA, CÂY CẢNH PHỔ BIẾN",
+          "questions": [
+            {
+              "id": "g4-cn-l2-q1",
+              "type": "knowledge",
+              "prompt": "Những đặc điểm nổi bật giúp em nhận biết cây hoa hồng là gì?",
+              "options": [
+                "Lá có mép răng cưa, thân có gai, hoa nhiều màu mọc đơn hoặc chùm",
+                "Lá hình kim, không có mép răng cưa và thân cây không bao giờ có gai",
+                "Cây sống hoàn toàn dưới nước, hoa chỉ nở duy nhất vào mùa đông",
+                "Hoa chỉ có duy nhất màu xanh lá cây và mọc dưới dạng củ tròn"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Lá có mép răng cưa, thân có gai, hoa nhiều màu mọc đơn hoặc chùm\". Kiến thức trọng tâm bài học Công nghệ 4 giúp em hiểu rõ và vận dụng đúng vào thực tế."
+            },
+            {
+              "id": "g4-cn-l2-q2",
+              "type": "knowledge",
+              "prompt": "Cây hoa đào có những đặc điểm nhận biết và vùng trồng phổ biến nào?",
+              "options": [
+                "Trồng phổ biến ở miền Bắc, hoa màu hồng hoặc trắng, nở mùa xuân",
+                "Trồng phổ biến ở miền Nam, hoa chỉ nở vào mùa hè và có màu xanh",
+                "Cây chỉ sống ở dưới ao hồ và ra hoa đều đặn quanh năm",
+                "Cây không có lá, chỉ có gai nhọn và nở hoa màu tím"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Trồng phổ biến ở miền Bắc, hoa màu hồng hoặc trắng, nở mùa xuân\". Kiến thức trọng tâm bài học Công nghệ 4 giúp em hiểu rõ và vận dụng đúng vào thực tế."
+            },
+            {
+              "id": "g4-cn-l2-q3",
+              "type": "knowledge",
+              "prompt": "Cây hoa mai thường trồng phổ biến ở đâu và mang màu sắc đặc trưng gì?",
+              "options": [
+                "Trồng phổ biến ở miền Nam, hoa có màu vàng tươi, nở mùa xuân",
+                "Trồng phổ biến ở miền Bắc, hoa có màu đỏ đậm, nở vào mùa thu",
+                "Cây sống chìm dưới nước và chỉ ra hoa vào mùa đông lạnh giá",
+                "Hoa mai hoàn toàn không bao giờ có màu sắc vàng"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Trồng phổ biến ở miền Nam, hoa có màu vàng tươi, nở mùa xuân\". Kiến thức trọng tâm bài học Công nghệ 4 giúp em hiểu rõ và vận dụng đúng vào thực tế."
+            },
+            {
+              "id": "g4-cn-l2-q4",
+              "type": "knowledge",
+              "prompt": "Cây hoa sen có môi trường sống và giá trị sử dụng ra sao?",
+              "options": [
+                "Sống dưới ao hồ, hạt/ngó làm thức ăn, lá/tâm sen dùng làm thuốc",
+                "Sống trên đất khô mạc, không chịu được nước, nở vào mùa đông",
+                "Là loại cây thân gỗ to lớn thường được trồng trên đỉnh núi cao",
+                "Tất cả các bộ phận của cây hoa sen đều có độc và không dùng được"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Sống dưới ao hồ, hạt/ngó làm thức ăn, lá/tâm sen dùng làm thuốc\". Kiến thức trọng tâm bài học Công nghệ 4 giúp em hiểu rõ và vận dụng đúng vào thực tế."
+            },
+            {
+              "id": "g4-cn-l2-q5",
+              "type": "knowledge",
+              "prompt": "Nhờ yếu tố đặc trưng nào mà ta phân biệt được các loại cây cảnh?",
+              "options": [
+                "Nhờ vào các đặc điểm đặc trưng về thân, lá hoặc hoa của chúng",
+                "Nhờ vào chiều cao của chiếc chậu nhựa dùng để trồng cây",
+                "Nhờ vào mức giá tiền bán cây ở các cửa hàng cây cảnh",
+                "Tất cả các loại cây cảnh đều có thân và lá hoàn toàn giống nhau"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Nhờ vào các đặc điểm đặc trưng về thân, lá hoặc hoa của chúng\". Kiến thức trọng tâm bài học Công nghệ 4 giúp em hiểu rõ và vận dụng đúng vào thực tế."
+            },
+            {
+              "id": "g4-cn-l2-q6",
+              "type": "knowledge",
+              "prompt": "Việc trang trí hoa đào, hoa mai dịp Tết mang ý nghĩa văn hóa gì?",
+              "options": [
+                "Tô điểm không gian ấm cúng và tượng trưng cho may mắn, hạnh phúc",
+                "Ép buộc các gia đình phải tốn kém nhiều chi phí mua sắm",
+                "Chỉ nhằm mục đích duy nhất là làm mát bầu không khí trong nhà",
+                "Không có ý nghĩa gì đặc biệt đối với đời sống tinh thần"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Tô điểm không gian ấm cúng và tượng trưng cho may mắn, hạnh phúc\". Kiến thức trọng tâm bài học Công nghệ 4 giúp em hiểu rõ và vận dụng đúng vào thực tế."
+            }
+          ]
+        },
+        {
+          "id": "l3-cn4",
+          "lessonNumber": 3,
+          "title": "BÀI 3: VẬT LIỆU VÀ DỤNG CỤ TRỒNG HOA, CÂY CẢNH TRONG CHẬU",
+          "questions": [
+            {
+              "id": "g4-cn-l3-q1",
+              "type": "knowledge",
+              "prompt": "Đặc điểm cấu tạo quan trọng nhất ở đáy chậu giúp cây không bị úng là gì?",
+              "options": [
+                "Dưới đáy chậu luôn được thiết kế có lỗ thoát nước",
+                "Chậu hoàn toàn kín khít và không có bất kỳ lỗ nào",
+                "Tất cả các loại chậu đều làm bằng thủy tinh trong suốt",
+                "Đáy chậu mỏng và cực kỳ dễ thủng khi đổ đất vào"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Dưới đáy chậu luôn được thiết kế có lỗ thoát nước\". Kiến thức trọng tâm bài học Công nghệ 4 giúp em hiểu rõ và vận dụng đúng vào thực tế."
+            },
+            {
+              "id": "g4-cn-l3-q2",
+              "type": "knowledge",
+              "prompt": "Loại chậu nào phù hợp nhất để đặt trang trí an toàn ở khu vực lan can?",
+              "options": [
+                "Chậu có móc treo dài",
+                "Chậu thiết kế dáng kẹp ở lan can",
+                "Chậu xi măng siêu nặng và to lớn",
+                "Chậu thủy tinh tròn không có chỗ gá"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Chậu thiết kế dáng kẹp ở lan can giúp bám chắc chắn vào thành lan can, tránh nguy cơ bị rơi xuống gây nguy hiểm."
+            },
+            {
+              "id": "g4-cn-l3-q3",
+              "type": "knowledge",
+              "prompt": "Giá thể trồng hoa, cây cảnh thường phối trộn từ những nguyên liệu nào?",
+              "options": [
+                "Xơ dừa, trấu hun, mùn cưa, than bùn hoặc phối trộn nhiều loại",
+                "Cát biển xát muối kết hợp cùng đá vôi nguyên khối",
+                "Rác thải nhựa công nghiệp đã được cắt thành vụn nhỏ",
+                "Bột xi măng trộn lẫn với các loại cát khô mịn"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Xơ dừa, trấu hun, mùn cưa, than bùn hoặc phối trộn nhiều loại\". Kiến thức trọng tâm bài học Công nghệ 4 giúp em hiểu rõ và vận dụng đúng vào thực tế."
+            },
+            {
+              "id": "g4-cn-l3-q4",
+              "type": "knowledge",
+              "prompt": "Nhóm các loại giá thể phổ biến được sử dụng trong trồng trọt là gì?",
+              "options": [
+                "Giá thể xơ dừa, giá thể trấu hun, mùn cưa và giá thể hỗn hợp",
+                "Giá thể chất liệu bằng sắt, giá thể bằng đồng, giá thể bằng nhôm",
+                "Giá thể chất liệu bằng đất sét nung nguyên cục không xốp",
+                "Giá thể chất liệu bằng các loại đá hoa cương nghiền mịn"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Giá thể xơ dừa, giá thể trấu hun, mùn cưa và giá thể hỗn hợp\". Kiến thức trọng tâm bài học Công nghệ 4 giúp em hiểu rõ và vận dụng đúng vào thực tế."
+            },
+            {
+              "id": "g4-cn-l3-q5",
+              "type": "scenario",
+              "prompt": "Bộ dụng cụ phổ biến nhất dùng khi trồng và chăm sóc cây cảnh gồm gì?",
+              "options": [
+                "Xẻng nhỏ, găng tay làm vườn và chiếc bình tưới cây",
+                "Các loại búa, đinh, tua-vít, cờ-lê dùng sửa chữa",
+                "Các loại dao lam, kéo cắt vải và chiếc kim khâu",
+                "Các loại kéo cắt giấy, thước kẻ và chiếc compa"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án chính xác là: \"Xẻng nhỏ, găng tay làm vườn và chiếc bình tưới cây\". Kiến thức trọng tâm bài học Công nghệ 4 giúp em hiểu rõ và vận dụng đúng vào thực tế."
+            },
+            {
+              "id": "g4-cn-l3-q6",
+              "type": "scenario",
+              "prompt": "Cần làm gì sau khi dùng xong các dụng cụ trồng cây để đảm bảo an toàn?",
+              "options": [
+                "Rửa sạch sẽ dụng cụ và cất gọn gàng vào đúng nơi quy định",
+                "Vứt nguyên các dụng cụ dính đầy đất cát trên sàn nhà",
+                "Ngâm các dụng cụ cơ khí chìm hoàn toàn trong chậu nước",
+                "Để xẻng nhỏ ngoài trời mưa nắng mà hoàn toàn không thu dọn"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án chính xác là: \"Rửa sạch sẽ dụng cụ và cất gọn gàng vào đúng nơi quy định\". Kiến thức trọng tâm bài học Công nghệ 4 giúp em hiểu rõ và vận dụng đúng vào thực tế."
+            }
+          ]
+        },
+        {
+          "id": "l4-cn4",
+          "lessonNumber": 4,
+          "title": "BÀI 4: GIEO HẠT HOA, CÂY CẢNH TRONG CHẬU",
+          "questions": [
+            {
+              "id": "g4-cn-l4-q1",
+              "type": "knowledge",
+              "prompt": "Quy trình gieo hạt hoa, cây cảnh trong chậu được thực hiện theo đúng thứ tự nào?",
+              "options": [
+                "Chuẩn bị vật liệu  Cho giá thể vào chậu  Gieo hạt  Tưới nước",
+                "Tưới nước  Gieo hạt  Cho giá thể vào chậu  Chuẩn bị vật liệu",
+                "Gieo hạt  Chuẩn bị vật liệu  Tưới nước  Cho giá thể vào chậu",
+                "Cho giá thể vào chậu  Tưới nước  Gieo hạt  Chuẩn bị vật liệu"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Chuẩn bị vật liệu  Cho giá thể vào chậu  Gieo hạt  Tưới nước\". Kiến thức trọng tâm bài học Công nghệ 4 giúp em hiểu rõ và vận dụng đúng vào thực tế."
+            },
+            {
+              "id": "g4-cn-l4-q2",
+              "type": "scenario",
+              "prompt": "Để hạt giống nhanh nảy mầm, ta xử lý hạt giống như thế nào trước khi gieo?",
+              "options": [
+                "Ngâm hạt giống trong nước ấm từ 2 giờ đến 5 giờ",
+                "Luộc hạt giống trong nước sôi 100°C trong 10 phút",
+                "Ngâm hạt giống trong nước đá lạnh đóng băng qua đêm",
+                "Đem rang chín hạt giống trên bếp lửa trước khi gieo"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án chính xác là: \"Ngâm hạt giống trong nước ấm từ 2 giờ đến 5 giờ\". Kiến thức trọng tâm bài học Công nghệ 4 giúp em hiểu rõ và vận dụng đúng vào thực tế."
+            },
+            {
+              "id": "g4-cn-l4-q3",
+              "type": "scenario",
+              "prompt": "Những vật liệu và dụng cụ cơ bản nào cần chuẩn bị đầy đủ khi gieo hạt?",
+              "options": [
+                "Hạt giống, chậu, giá thể, xẻng nhỏ, bình tưới và găng tay",
+                "Cây giống lớn, kéo cắt cành, phân hóa học và chậu siêu lớn",
+                "Các loại búa, đinh, cờ-lê, tua-vít và hộp đựng ốc vít",
+                "Các loại giấy màu thủ công, hồ dán, kéo và thước kẻ"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án chính xác là: \"Hạt giống, chậu, giá thể, xẻng nhỏ, bình tưới và găng tay\". Kiến thức trọng tâm bài học Công nghệ 4 giúp em hiểu rõ và vận dụng đúng vào thực tế."
+            },
+            {
+              "id": "g4-cn-l4-q4",
+              "type": "scenario",
+              "prompt": "Thao tác lấp giá thể và tưới nước sau khi gieo hạt cần thực hiện ra sao?",
+              "options": [
+                "Lấp giá thể mỏng kín hạt và tưới nhẹ dạng phun sương",
+                "Lấp giá thể thật dày 15 cm và dội nước thật mạnh",
+                "Không cần lấp giá thể và tưới đẫm nước ngập hạt giống",
+                "Dùng chân nén thật chặt giá thể rồi không tưới nước"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án chính xác là: \"Lấp giá thể mỏng kín hạt và tưới nhẹ dạng phun sương\". Kiến thức trọng tâm bài học Công nghệ 4 giúp em hiểu rõ và vận dụng đúng vào thực tế."
+            },
+            {
+              "id": "g4-cn-l4-q5",
+              "type": "scenario",
+              "prompt": "Sau khi gieo hạt, chậu cây cần tưới nước chăm sóc vào thời điểm nào?",
+              "options": [
+                "Tưới nhẹ từ 1 đến 2 lần mỗi ngày vào sáng sớm và chiều mát",
+                "Tưới 5 lần mỗi ngày vào khoảng thời gian giữa trưa nắng gắt",
+                "Cả tuần chỉ cần thực hiện tưới 1 lần duy nhất vào nửa đêm",
+                "Hoàn toàn không cần tưới nước cho đến khi hạt phát triển"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án chính xác là: \"Tưới nhẹ từ 1 đến 2 lần mỗi ngày vào sáng sớm và chiều mát\". Kiến thức trọng tâm bài học Công nghệ 4 giúp em hiểu rõ và vận dụng đúng vào thực tế."
+            },
+            {
+              "id": "g4-cn-l4-q6",
+              "type": "scenario",
+              "prompt": "Sau khi hoàn thành việc gieo hạt, em cần làm gì để đảm bảo vệ sinh?",
+              "options": [
+                "Thu dọn dụng cụ, vệ sinh chỗ trồng cây và rửa sạch tay",
+                "Bỏ lại xẻng và giá thể vương vãi trên bàn rồi đi về ngay",
+                "Đổ tất cả các loại giá thể thừa xuống cống thoát nước",
+                "Vứt găng tay và các vỏ gói hạt giống ra khu vực sân trường"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án chính xác là: \"Thu dọn dụng cụ, vệ sinh chỗ trồng cây và rửa sạch tay\". Kiến thức trọng tâm bài học Công nghệ 4 giúp em hiểu rõ và vận dụng đúng vào thực tế."
+            }
+          ]
+        },
+        {
+          "id": "l5-cn4",
+          "lessonNumber": 5,
+          "title": "BÀI 5: TRỒNG HOA, CÂY CẢNH TRONG CHẬU",
+          "questions": [
+            {
+              "id": "g4-cn-l5-q1",
+              "type": "knowledge",
+              "prompt": "Trình tự các bước trồng hoa, cây cảnh trong chậu thực hiện theo đúng thứ tự nào?",
+              "options": [
+                "Chuẩn bị vật liệu  Đậy bớt lỗ thoát nước  Cho giá thể vào chậu  Trồng cây  Tưới nước",
+                "Tưới nước  Trồng cây  Cho giá thể vào chậu  Đậy bớt lỗ thoát nước  Chuẩn bị vật liệu",
+                "Trồng cây  Cho giá thể vào chậu  Tưới nước  Chuẩn bị vật liệu  Đậy bớt lỗ thoát nước",
+                "Cho giá thể vào chậu  Đậy bớt lỗ thoát nước  Trồng cây  Tưới nước  Chuẩn bị vật liệu"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Chuẩn bị vật liệu  Đậy bớt lỗ thoát nước  Cho giá thể vào chậu  Trồng cây  Tưới nước\". Kiến thức trọng tâm bài học Công nghệ 4 giúp em hiểu rõ và vận dụng đúng vào thực tế."
+            },
+            {
+              "id": "g4-cn-l5-q2",
+              "type": "knowledge",
+              "prompt": "Vật liệu nào được đặt lên lỗ thoát nước ở đáy chậu để giá thể không trôi ra ngoài?",
+              "options": [
+                "Sử dụng tấm lưới nhỏ hoặc viên sỏi lớn hơn lỗ thoát nước",
+                "Dùng băng dính bịt kín hoàn toàn lỗ thoát nước ở đáy",
+                "Đổ xi măng trám phẳng toàn bộ phần đáy chậu trồng cây",
+                "Nhét chặt một miếng nilon không thấm nước xuống đáy chậu"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Sử dụng tấm lưới nhỏ hoặc viên sỏi lớn hơn lỗ thoát nước\". Kiến thức trọng tâm bài học Công nghệ 4 giúp em hiểu rõ và vận dụng đúng vào thực tế."
+            },
+            {
+              "id": "g4-cn-l5-q3",
+              "type": "scenario",
+              "prompt": "Thao tác kĩ thuật đúng khi tiến hành đặt cây và cho giá thể vào chậu là gì?",
+              "options": [
+                "Đặt cây đứng thẳng giữa chậu, bổ sung giá thể và ấn nhẹ quanh gốc",
+                "Đặt cây nằm nghiêng sát mép chậu và không cần cho giá thể lấp rễ",
+                "Dùng chân dẫm thật mạnh quanh gốc cây cho chặt phần đất",
+                "Để hở toàn bộ bộ rễ của cây ra ngoài không khí xung quanh"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án chính xác là: \"Đặt cây đứng thẳng giữa chậu, bổ sung giá thể và ấn nhẹ quanh gốc\". Kiến thức trọng tâm bài học Công nghệ 4 giúp em hiểu rõ và vận dụng đúng vào thực tế."
+            },
+            {
+              "id": "g4-cn-l5-q4",
+              "type": "knowledge",
+              "prompt": "Tại sao cần dùng tay ấn nhẹ quanh gốc cây mà không dẫm nén quá mạnh?",
+              "options": [
+                "Giúp cây đứng vững mà không làm dập rễ hay nén chặt đất gây bí",
+                "Để làm cho giá thể cứng như đá giúp chậu cây nặng hơn",
+                "Để ép toàn bộ lượng nước trong giá thể chảy hết ra ngoài",
+                "Để làm gãy bớt các phần cành lá thừa phía dưới gốc cây"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Giúp cây đứng vững mà không làm dập rễ hay nén chặt đất gây bí\". Kiến thức trọng tâm bài học Công nghệ 4 giúp em hiểu rõ và vận dụng đúng vào thực tế."
+            },
+            {
+              "id": "g4-cn-l5-q5",
+              "type": "scenario",
+              "prompt": "Ngay sau khi trồng cây xong, em cần tưới nước cho chậu cây như thế nào?",
+              "options": [
+                "Tưới nhẹ nước quanh gốc cây cho đến khi giá thể đủ độ ẩm",
+                "Dùng gầu dội nước thật mạnh trực tiếp vào ngọn làm xói gốc",
+                "Đổ nước ngập lênh đênh tràn ra ngoài khu vực cống xả",
+                "Hoàn toàn không tưới nước và đem cây ra phơi nắng gắt ngay"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án chính xác là: \"Tưới nhẹ nước quanh gốc cây cho đến khi giá thể đủ độ ẩm\". Kiến thức trọng tâm bài học Công nghệ 4 giúp em hiểu rõ và vận dụng đúng vào thực tế."
+            },
+            {
+              "id": "g4-cn-l5-q6",
+              "type": "scenario",
+              "prompt": "Học sinh cần làm gì sau khi hoàn thành buổi thực hành trồng hoa, cây cảnh?",
+              "options": [
+                "Thu dọn dụng cụ, vệ sinh sạch chỗ trồng và chăm sóc cây",
+                "Để nguyên xẻng, găng tay và giá thể vương vãi trên bàn",
+                "Vứt bỏ chậu cùng cây giống ra ngoài khu vực sân trường",
+                "Đổ toàn bộ giá thể thừa vào bồn rửa tay của lớp học"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án chính xác là: \"Thu dọn dụng cụ, vệ sinh sạch chỗ trồng và chăm sóc cây\". Kiến thức trọng tâm bài học Công nghệ 4 giúp em hiểu rõ và vận dụng đúng vào thực tế."
+            }
+          ]
+        },
+        {
+          "id": "l6-cn4",
+          "lessonNumber": 6,
+          "title": "BÀI 6: CHĂM SÓC HOA, CÂY CẢNH TRONG CHẬU",
+          "questions": [
+            {
+              "id": "g4-cn-l6-q1",
+              "type": "knowledge",
+              "prompt": "Cây hoa và cây cảnh trồng trong chậu bị thiếu ánh sáng kéo dài sẽ có biểu hiện gì?",
+              "options": [
+                "Cây yếu, vươn dài, dễ đổ, thân và lá nhạt màu hoặc vàng úa",
+                "Cây nhanh chóng mọc thêm nhiều nụ hoa rực rỡ sắc màu hơn",
+                "Cây sẽ phát triển bộ rễ to lớn và chắc khỏe hơn bình thường",
+                "Lá cây sẽ tự động chuyển sang màu đỏ đậm và cứng cáp hơn"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Cây yếu, vươn dài, dễ đổ, thân và lá nhạt màu hoặc vàng úa\". Kiến thức trọng tâm bài học Công nghệ 4 giúp em hiểu rõ và vận dụng đúng vào thực tế."
+            },
+            {
+              "id": "g4-cn-l6-q2",
+              "type": "scenario",
+              "prompt": "Thao tác tưới nước nào dưới đây là ĐÚNG KĨ THUẬT khi chăm sóc cây trong chậu?",
+              "options": [
+                "Dùng bình tưới nhẹ, đều và đủ ẩm toàn bộ phần giá thể trong chậu",
+                "Dội mạnh từng gầu nước đẫm vào gốc làm tràn giá thể ra ngoài",
+                "Cả tháng chỉ tưới 1 lần thật nhiều nước cho đến khi úng gốc",
+                "Chỉ xịt một vài giọt nước lên ngọn mà không cần tưới giá thể"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án chính xác là: \"Dùng bình tưới nhẹ, đều và đủ ẩm toàn bộ phần giá thể trong chậu\". Kiến thức trọng tâm bài học Công nghệ 4 giúp em hiểu rõ và vận dụng đúng vào thực tế."
+            },
+            {
+              "id": "g4-cn-l6-q3",
+              "type": "knowledge",
+              "prompt": "Tùy từng loại phân bón và cây trồng, người ta thực hiện các cách bón phân nào?",
+              "options": [
+                "Bón đều quanh gốc, pha nước tưới quanh gốc hoặc phun lên lá",
+                "Đổ toàn bộ lượng phân bón trực tiếp lên các chồi non của cây",
+                "Đào bới hết bộ rễ cây lên rồi trộn phân bón trực tiếp vào rễ",
+                "Chỉ rắc duy nhất phân bón xuống bên dưới đáy chậu nhựa"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Bón đều quanh gốc, pha nước tưới quanh gốc hoặc phun lên lá\". Kiến thức trọng tâm bài học Công nghệ 4 giúp em hiểu rõ và vận dụng đúng vào thực tế."
+            },
+            {
+              "id": "g4-cn-l6-q4",
+              "type": "knowledge",
+              "prompt": "Việc cắt tỉa hoa tàn, lau vệ sinh lá và bắt sâu mang lại lợi ích gì cho chậu cây?",
+              "options": [
+                "Giúp cây tươi đẹp, phát triển tốt và tránh sâu bệnh phá hoại",
+                "Giúp cho cây mau khô héo để nhanh chóng thay chậu mới",
+                "Làm cho cây bị kiệt sức và không thể tiếp tục ra hoa được nữa",
+                "Chỉ có tác dụng làm đẹp chậu cây chứ không giúp ích cho cây"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Giúp cây tươi đẹp, phát triển tốt và tránh sâu bệnh phá hoại\". Kiến thức trọng tâm bài học Công nghệ 4 giúp em hiểu rõ và vận dụng đúng vào thực tế."
+            },
+            {
+              "id": "g4-cn-l6-q5",
+              "type": "knowledge",
+              "prompt": "Cách nào giúp cung cấp đủ ánh sáng cho cây cảnh đặt trang trí trong nhà?",
+              "options": [
+                "Mở rèm cửa, di chuyển cây ra ban công đón nắng hoặc dùng đèn",
+                "Bịt kín toàn bộ cửa sổ và tắt hết tất cả các bóng điện trong phòng",
+                "Đặt chậu cây sâu trong gầm giường hoặc dưới gầm tủ kín hằng ngày",
+                "Trùm phủ bạt đen kín lên toàn bộ chậu cây trong suốt cả ngày"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Mở rèm cửa, di chuyển cây ra ban công đón nắng hoặc dùng đèn\". Kiến thức trọng tâm bài học Công nghệ 4 giúp em hiểu rõ và vận dụng đúng vào thực tế."
+            },
+            {
+              "id": "g4-cn-l6-q6",
+              "type": "knowledge",
+              "prompt": "Để chậu hoa, cây cảnh phát triển xanh tốt, ta cần thực hiện các công việc nào?",
+              "options": [
+                "Đảm bảo đủ sáng, tưới vừa đủ, bón đúng cách, cắt tỉa và bắt sâu",
+                "Chỉ tưới nước hằng ngày mà không cần cho cây ra sáng hay bón phân",
+                "Để cây ngoài nắng gắt quanh năm mà hoàn toàn không tưới nước",
+                "Bón thật nhiều phân hóa học mỗi ngày và ngắt sạch lá trên cây"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Đảm bảo đủ sáng, tưới vừa đủ, bón đúng cách, cắt tỉa và bắt sâu\". Kiến thức trọng tâm bài học Công nghệ 4 giúp em hiểu rõ và vận dụng đúng vào thực tế."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c2-congnghe4",
+      "chapterNumber": 2,
+      "title": "Phần 2: Thủ công kĩ thuật",
+      "lessons": [
+        {
+          "id": "l7-cn4",
+          "lessonNumber": 7,
+          "title": "BÀI 7: GIỚI THIỆU BỘ LẮP GHÉP MÔ HÌNH KĨ THUẬT",
+          "questions": [
+            {
+              "id": "g4-cn-l7-q1",
+              "type": "knowledge",
+              "prompt": "Bộ lắp ghép mô hình kỹ thuật Lớp 4 gồm bao nhiêu chi tiết và nhóm chính?",
+              "options": [
+                "Gồm 35 chi tiết, chia thành 4 nhóm chính cùng với 2 dụng cụ",
+                "Gồm 10 chi tiết, chia thành 2 nhóm duy nhất để lắp ghép",
+                "Gồm 100 chi tiết, chia thành 10 nhóm khác nhau khi sử dụng",
+                "Chỉ bao gồm các chi tiết làm bằng chất liệu giấy màu thủ công"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Gồm 35 chi tiết, chia thành 4 nhóm chính cùng với 2 dụng cụ\". Kiến thức trọng tâm bài học Công nghệ 4 giúp em hiểu rõ và vận dụng đúng vào thực tế."
+            },
+            {
+              "id": "g4-cn-l7-q2",
+              "type": "knowledge",
+              "prompt": "Tấm lớn, tấm nhỏ, tấm chữ L, tấm cabin thuộc nhóm chi tiết nào?",
+              "options": [
+                "Nhóm chi tiết hình tấm",
+                "Nhóm chi tiết hình thanh",
+                "Nhóm chi tiết chuyển động",
+                "Nhóm chi tiết kết nối"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Nhóm chi tiết hình tấm\". Kiến thức trọng tâm bài học Công nghệ 4 giúp em hiểu rõ và vận dụng đúng vào thực tế."
+            },
+            {
+              "id": "g4-cn-l7-q3",
+              "type": "knowledge",
+              "prompt": "Nhóm chi tiết chuyển động trong bộ lắp ghép gồm những gì?",
+              "options": [
+                "Các loại bánh xe, bánh đai (ròng rọc), đai truyền và dây sợi",
+                "Các thanh thẳng 11 lỗ, thanh thẳng 9 lỗ và thanh chữ U",
+                "Các loại vít ngắn, vít dài, đai ốc và các vòng hãm chi tiết",
+                "Dụng cụ tua-vít, cờ-lê và hộp nhựa đựng các loại ốc vít"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Các loại bánh xe, bánh đai (ròng rọc), đai truyền và dây sợi\". Kiến thức trọng tâm bài học Công nghệ 4 giúp em hiểu rõ và vận dụng đúng vào thực tế."
+            },
+            {
+              "id": "g4-cn-l7-q4",
+              "type": "knowledge",
+              "prompt": "Người ta dùng các chi tiết nào thuộc nhóm kết nối để gắn chặt mô hình?",
+              "options": [
+                "Trục quay, các loại trục, các loại vít, đai ốc và vòng hãm",
+                "Các loại bánh xe, dây đai truyền và dây sợi chất liệu vải",
+                "Các tấm lớn, tấm nhỏ và các tấm hình tam giác nhựa",
+                "Các loại hồ dán giấy và băng dính hai mặt dùng thủ công"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Trục quay, các loại trục, các loại vít, đai ốc và vòng hãm\". Kiến thức trọng tâm bài học Công nghệ 4 giúp em hiểu rõ và vận dụng đúng vào thực tế."
+            },
+            {
+              "id": "g4-cn-l7-q5",
+              "type": "scenario",
+              "prompt": "Thao tác kết hợp đúng giữa cờ-lê và tua-vít khi vặn ghép đai ốc là gì?",
+              "options": [
+                "Cờ-lê dùng để giữ đai ốc, tua-vít dùng để vặn xoay vít",
+                "Tua-vít dùng để giữ đai ốc, cờ-lê dùng để vặn xoay vít",
+                "Dùng cả hai tay giữ cờ-lê để xoay vặn các chi tiết cùng lúc",
+                "Chỉ dùng tay vặn trực tiếp không cần cờ-lê hay tua-vít"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án chính xác là: \"Cờ-lê dùng để giữ đai ốc, tua-vít dùng để vặn xoay vít\". Kiến thức trọng tâm bài học Công nghệ 4 giúp em hiểu rõ và vận dụng đúng vào thực tế."
+            },
+            {
+              "id": "g4-cn-l7-q6",
+              "type": "knowledge",
+              "prompt": "Quy trình thực hành lắp ghép mô hình kỹ thuật gồm các bước nào?",
+              "options": [
+                "Chọn chi tiết, dụng cụ  Lắp theo mẫu  Giới thiệu  Tháo, cất dọn",
+                "Tháo, cất dọn  Lắp theo mẫu  Lựa chọn chi tiết và dụng cụ",
+                "Lắp theo mẫu  Tháo cất đồ dùng  Lựa chọn chi tiết, dụng cụ",
+                "Không cần chọn chi tiết mà thực hiện lắp ghép tự do ngay từ đầu"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Chọn chi tiết, dụng cụ  Lắp theo mẫu  Giới thiệu  Tháo, cất dọn\". Kiến thức trọng tâm bài học Công nghệ 4 giúp em hiểu rõ và vận dụng đúng vào thực tế."
+            }
+          ]
+        },
+        {
+          "id": "l8-cn4",
+          "lessonNumber": 8,
+          "title": "BÀI 8: LẮP GHÉP MÔ HÌNH BẬP BÊNH",
+          "questions": [
+            {
+              "id": "g4-cn-l8-q1",
+              "type": "knowledge",
+              "prompt": "Mô hình bập bênh được cấu tạo từ những bộ phận chính nào?",
+              "options": [
+                "Chân đế, trục quay, thanh đòn và ghế ngồi",
+                "Đầu robot, thân robot và chân robot",
+                "Lồng đèn trang trí và quai xách",
+                "Cánh chuồn chuồn và thân chuồn chuồn"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Chân đế, trục quay, thanh đòn và ghế ngồi\". Kiến thức trọng tâm bài học Công nghệ 4 giúp em hiểu rõ và vận dụng đúng vào thực tế."
+            },
+            {
+              "id": "g4-cn-l8-q2",
+              "type": "knowledge",
+              "prompt": "Tiêu chuẩn kỹ thuật đánh giá một mô hình bập bênh hoàn thiện là gì?",
+              "options": [
+                "Đủ bộ phận, mối ghép chắc chắn, thanh đòn quay được quanh trục",
+                "Ghế ngồi gắn cố định cứng nhắc không chuyển động quanh trục",
+                "Các mối ghép lỏng lẻo, dễ rơi đai ốc khi di chuyển",
+                "Chỉ có chân đế mà không có thanh đòn và ghế ngồi"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Đủ bộ phận, mối ghép chắc chắn, thanh đòn quay được quanh trục\". Kiến thức trọng tâm bài học Công nghệ 4 giúp em hiểu rõ và vận dụng đúng vào thực tế."
+            },
+            {
+              "id": "g4-cn-l8-q3",
+              "type": "knowledge",
+              "prompt": "Chi tiết nào làm tâm xoay giúp thanh đòn bập bênh chuyển động lên xuống?",
+              "options": [
+                "Trục thẳng ngắn 1",
+                "Bánh xe nhựa",
+                "Tấm cabin trái",
+                "Dây sợi vải"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Trục thẳng ngắn 1\". Kiến thức trọng tâm bài học Công nghệ 4 giúp em hiểu rõ và vận dụng đúng vào thực tế."
+            },
+            {
+              "id": "g4-cn-l8-q4",
+              "type": "knowledge",
+              "prompt": "Mục đích chính của việc lắp các vòng hãm ở hai đầu trục quay là gì?",
+              "options": [
+                "Cố định vị trí, giữ cho trục quay không bị tuột hoặc xê dịch",
+                "Làm cho mô hình nặng hơn để đứng vững chắc hơn",
+                "Trang trí cho mô hình bập bênh có thêm nhiều màu sắc",
+                "Thay thế hoàn toàn cho vai trò của đai ốc và vít"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Cố định vị trí, giữ cho trục quay không bị tuột hoặc xê dịch\". Kiến thức trọng tâm bài học Công nghệ 4 giúp em hiểu rõ và vận dụng đúng vào thực tế."
+            },
+            {
+              "id": "g4-cn-l8-q5",
+              "type": "knowledge",
+              "prompt": "Dùng hai dụng cụ nào để siết chặt mối ghép đai ốc và vít không bị lỏng?",
+              "options": [
+                "Cờ-lê và tua-vít",
+                "Kéo và thước kẻ",
+                "Kìm và búa sắt",
+                "Hồ dán và ghim dập"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Cờ-lê và tua-vít\". Kiến thức trọng tâm bài học Công nghệ 4 giúp em hiểu rõ và vận dụng đúng vào thực tế."
+            },
+            {
+              "id": "g4-cn-l8-q6",
+              "type": "scenario",
+              "prompt": "Cần làm gì sau khi hoàn thành trưng bày và đánh giá sản phẩm bập bênh?",
+              "options": [
+                "Tháo rời chi tiết, xếp dụng cụ gọn gàng vào đúng hộp đựng",
+                "Để nguyên mô hình trên bàn học mà không tháo ra",
+                "Cất nguyên mô hình đã lắp vào cặp sách mang về",
+                "Vứt đai ốc và vít vương vãi trên sàn lớp học"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án chính xác là: \"Tháo rời chi tiết, xếp dụng cụ gọn gàng vào đúng hộp đựng\". Kiến thức trọng tâm bài học Công nghệ 4 giúp em hiểu rõ và vận dụng đúng vào thực tế."
+            }
+          ]
+        },
+        {
+          "id": "l9-cn4",
+          "lessonNumber": 9,
+          "title": "BÀI 9: LẮP GHÉP MÔ HÌNH ROBOT",
+          "questions": [
+            {
+              "id": "g4-cn-l9-q1",
+              "type": "knowledge",
+              "prompt": "Mô hình robot mẫu được tạo thành từ những bộ phận chính nào?",
+              "options": [
+                "Đầu robot, thân robot và chân robot",
+                "Chân đế, trục quay, thanh đòn và ghế ngồi",
+                "Lồng đèn trang trí, quai xách và dây treo",
+                "Cánh chuồn chuồn, thân chuồn chuồn và đất nặn"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Đầu robot, thân robot và chân robot\". Kiến thức trọng tâm bài học Công nghệ 4 giúp em hiểu rõ và vận dụng đúng vào thực tế."
+            },
+            {
+              "id": "g4-cn-l9-q2",
+              "type": "knowledge",
+              "prompt": "Tiêu chuẩn kỹ thuật của mô hình robot hoàn thiện đạt yêu cầu là gì?",
+              "options": [
+                "Đủ bộ phận, mối ghép chắc chắn, chân và tay chuyển động được",
+                "Đủ bộ phận nhưng chân và tay robot bị gắn cố định không xoay",
+                "Các mối ghép lỏng lẻo, dễ bị tuột đai ốc và rơi bánh xe",
+                "Chỉ cần có phần thân mà không cần bộ phận đầu và chân"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Đủ bộ phận, mối ghép chắc chắn, chân và tay chuyển động được\". Kiến thức trọng tâm bài học Công nghệ 4 giúp em hiểu rõ và vận dụng đúng vào thực tế."
+            },
+            {
+              "id": "g4-cn-l9-q3",
+              "type": "knowledge",
+              "prompt": "Kết hợp chi tiết nào để làm phần chân robot di chuyển trơn tru?",
+              "options": [
+                "Bánh xe, trục thẳng dài, tấm nhỏ và vòng hãm",
+                "Bánh đai, dây sợi vải và tấm tam giác nhựa",
+                "Thanh chữ L ngắn, tấm 2 lỗ và vít nhỡ",
+                "Tua-vít, cờ-lê và hộp nhựa đựng ốc vít"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Bánh xe, trục thẳng dài, tấm nhỏ và vòng hãm\". Kiến thức trọng tâm bài học Công nghệ 4 giúp em hiểu rõ và vận dụng đúng vào thực tế."
+            },
+            {
+              "id": "g4-cn-l9-q4",
+              "type": "knowledge",
+              "prompt": "Dùng chi tiết nào ở khớp vai để tay robot xoay lên xuống được?",
+              "options": [
+                "Vít ngắn kết hợp với đai ốc siết vừa phải",
+                "Dán keo dính thật chặt tay robot vào thân",
+                "Dùng ghim dập cố định hai thanh chữ U lại",
+                "Dùng dây đai truyền buộc chặt tay vào thân"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Vít ngắn kết hợp với đai ốc siết vừa phải\". Kiến thức trọng tâm bài học Công nghệ 4 giúp em hiểu rõ và vận dụng đúng vào thực tế."
+            },
+            {
+              "id": "g4-cn-l9-q5",
+              "type": "knowledge",
+              "prompt": "Sử dụng bộ chi tiết nào để kết nối chắc chắn đầu robot vào thân?",
+              "options": [
+                "Sử dụng các bộ vít ngắn và đai ốc",
+                "Dùng đai truyền và dây sợi buộc chặt",
+                "Dùng đất nặn dán đè lên khớp nối",
+                "Chỉ dùng ghim dập để cố định lại"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Sử dụng các bộ vít ngắn và đai ốc\". Kiến thức trọng tâm bài học Công nghệ 4 giúp em hiểu rõ và vận dụng đúng vào thực tế."
+            },
+            {
+              "id": "g4-cn-l9-q6",
+              "type": "knowledge",
+              "prompt": "Tiêu chí nào chứng tỏ bộ phận chân robot lắp đúng kỹ thuật?",
+              "options": [
+                "Bốn bánh xe quay đều linh hoạt, không kẹt hay đè vào khung chân",
+                "Các bánh xe bị bó cứng hoàn toàn không thể xoay được",
+                "Trục bánh xe bị tuột rời ra ngoài ngay khi vừa di chuyển",
+                "Chân robot bị gãy rời khỏi phần thân khi vừa đẩy nhẹ"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Bốn bánh xe quay đều linh hoạt, không kẹt hay đè vào khung chân\". Kiến thức trọng tâm bài học Công nghệ 4 giúp em hiểu rõ và vận dụng đúng vào thực tế."
+            }
+          ]
+        },
+        {
+          "id": "l10-cn4",
+          "lessonNumber": 10,
+          "title": "BÀI 10: ĐỒ CHƠI DÂN GIAN",
+          "questions": [
+            {
+              "id": "g4-cn-l10-q1",
+              "type": "knowledge",
+              "prompt": "Nhóm nào dưới đây gồm toàn các món đồ chơi dân gian truyền thống?",
+              "options": [
+                "Tò he, quả còn, con cù quay, đèn ông sao, chuồn chuồn tre",
+                "Ô tô điều khiển từ xa, robot thông minh, máy chơi game",
+                "Xe trượt scooter, bóng đá nhựa, kính thực tế ảo hiện đại",
+                "Bộ lắp ghép mô hình cơ khí làm bằng chất liệu kim loại"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Tò he, quả còn, con cù quay, đèn ông sao, chuồn chuồn tre\". Kiến thức trọng tâm bài học Công nghệ 4 giúp em hiểu rõ và vận dụng đúng vào thực tế."
+            },
+            {
+              "id": "g4-cn-l10-q2",
+              "type": "knowledge",
+              "prompt": "Đồ chơi dân gian Việt Nam thường được làm từ nguồn chất liệu nào?",
+              "options": [
+                "Tự nhiên và đời sống như mây, tre, nứa, giấy, bột gạo",
+                "Các loại hợp kim nguyên khối đắt tiền nhập khẩu từ nước ngoài",
+                "Thủy tinh cao cấp kết hợp với linh kiện điện tử phức tạp",
+                "Nhựa tổng hợp công nghiệp sản xuất hàng loạt bằng máy móc"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Tự nhiên và đời sống như mây, tre, nứa, giấy, bột gạo\". Kiến thức trọng tâm bài học Công nghệ 4 giúp em hiểu rõ và vận dụng đúng vào thực tế."
+            },
+            {
+              "id": "g4-cn-l10-q3",
+              "type": "knowledge",
+              "prompt": "Chiếc đèn ông sao năm cánh Trung thu tượng trưng cho điều gì?",
+              "options": [
+                "Tượng trưng cho ngũ hành, cầu mong bình an và may mắn",
+                "Tượng trưng cho sức mạnh chiến thắng trong thi đấu thể thao",
+                "Chỉ có tính chất chiếu sáng đường đi mà không có ý nghĩa",
+                "Tượng trưng cho sự giàu có về tiền bạc của các gia đình"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Tượng trưng cho ngũ hành, cầu mong bình an và may mắn\". Kiến thức trọng tâm bài học Công nghệ 4 giúp em hiểu rõ và vận dụng đúng vào thực tế."
+            },
+            {
+              "id": "g4-cn-l10-q4",
+              "type": "knowledge",
+              "prompt": "Hình ảnh ông tiến sĩ giấy trên mâm ngũ quả thể hiện mong ước gì?",
+              "options": [
+                "Mong muốn con cháu chăm ngoan, học giỏi và thành đạt",
+                "Cầu mong con cháu sau này trở thành thương nhân giàu có",
+                "Mong muốn con cháu mua thật nhiều đồ chơi hiện đại đắt tiền",
+                "Chỉ trang trí cho đẹp mắt chứ không mang ý nghĩa giáo dục"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Mong muốn con cháu chăm ngoan, học giỏi và thành đạt\". Kiến thức trọng tâm bài học Công nghệ 4 giúp em hiểu rõ và vận dụng đúng vào thực tế."
+            },
+            {
+              "id": "g4-cn-l10-q5",
+              "type": "scenario",
+              "prompt": "Hành vi nào dưới đây KHÔNG AN TOÀN khi chơi đồ chơi dân gian?",
+              "options": [
+                "Dùng súng cao su ngắm bắn vào bạn bè hoặc động vật",
+                "Thả diều ở những khoảng sân rộng không có dây điện",
+                "Chơi quay con cù trên mặt đất bằng phẳng xa người",
+                "Cất dọn đồ chơi ngăn nắp, gọn gàng sau khi chơi xong"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án chính xác là: \"Dùng súng cao su ngắm bắn vào bạn bè hoặc động vật\". Kiến thức trọng tâm bài học Công nghệ 4 giúp em hiểu rõ và vận dụng đúng vào thực tế."
+            },
+            {
+              "id": "g4-cn-l10-q6",
+              "type": "scenario",
+              "prompt": "Học sinh cần có nếp sống văn minh nào khi tham gia các trò chơi?",
+              "options": [
+                "Chơi an toàn, chọn đồ chơi phù hợp và cất giữ ngăn nắp",
+                "Giành giật đồ chơi của bạn và vứt bỏ bừa bãi sau khi chơi",
+                "Chỉ chơi đồ điện tử đắt tiền và coi thường đồ chơi dân gian",
+                "Bắt bố mẹ phải mua thật nhiều đồ chơi nguy hiểm ngoài đường"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án chính xác là: \"Chơi an toàn, chọn đồ chơi phù hợp và cất giữ ngăn nắp\". Kiến thức trọng tâm bài học Công nghệ 4 giúp em hiểu rõ và vận dụng đúng vào thực tế."
+            }
+          ]
+        },
+        {
+          "id": "l11-cn4",
+          "lessonNumber": 11,
+          "title": "BÀI 11: LÀM ĐÈN LỒNG",
+          "questions": [
+            {
+              "id": "g4-cn-l11-q1",
+              "type": "knowledge",
+              "prompt": "Quan sát mẫu chiếc đèn lồng bằng giấy bìa, đèn gồm những bộ phận chính nào?",
+              "options": [
+                "Lồng đèn và quai xách",
+                "Cánh đèn và thân đèn",
+                "Khung chân và bánh xe",
+                "Cờ-lê và tua-vít"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Lồng đèn và quai xách\". Kiến thức trọng tâm bài học Công nghệ 4 giúp em hiểu rõ và vận dụng đúng vào thực tế."
+            },
+            {
+              "id": "g4-cn-l11-q2",
+              "type": "knowledge",
+              "prompt": "Tiêu chuẩn đánh giá một chiếc đèn lồng tự làm đạt yêu cầu kỹ thuật là gì?",
+              "options": [
+                "Lồng đèn tròn đều, quai xách cân đối, màu sắc hài hòa, trang trí đẹp",
+                "Lồng đèn bị móp méo, quai xách lệch một bên làm đèn bị nghiêng",
+                "Các nếp dán bị bung rách và màu sắc tổng thể u tối",
+                "Chỉ cần có lồng đèn mà không cần làm bộ phận quai xách"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Lồng đèn tròn đều, quai xách cân đối, màu sắc hài hòa, trang trí đẹp\". Kiến thức trọng tâm bài học Công nghệ 4 giúp em hiểu rõ và vận dụng đúng vào thực tế."
+            },
+            {
+              "id": "g4-cn-l11-q3",
+              "type": "knowledge",
+              "prompt": "Vật liệu và dụng cụ chính cần chuẩn bị để làm chiếc đèn lồng bằng giấy là gì?",
+              "options": [
+                "Giấy bìa màu, giấy màu, thước, kéo, băng dính hai mặt và bút màu",
+                "Đất nặn, dập ghim, compa, thước dây",
+                "Xẻng nhỏ, bình tưới cây, găng tay làm vườn",
+                "Các thanh nhựa, bu-lông và đai ốc kim loại"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Giấy bìa màu, giấy màu, thước, kéo, băng dính hai mặt và bút màu\". Kiến thức trọng tâm bài học Công nghệ 4 giúp em hiểu rõ và vận dụng đúng vào thực tế."
+            },
+            {
+              "id": "g4-cn-l11-q4",
+              "type": "scenario",
+              "prompt": "Khi làm quai xách cho đèn lồng, em cần lưu ý thao tác dán như thế nào?",
+              "options": [
+                "Cắt dải giấy bìa, dán hai đầu quai vào phần trên lồng đèn đối xứng",
+                "Cắt dải giấy dài 1 mét và buộc nhúm vào một bên mép lồng đèn",
+                "Dán quai xách xuống tận đáy lồng đèn để đèn treo ngược xuống",
+                "Không cần đo đạc mà dán lệch về một phía bất kỳ"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án chính xác là: \"Cắt dải giấy bìa, dán hai đầu quai vào phần trên lồng đèn đối xứng\". Kiến thức trọng tâm bài học Công nghệ 4 giúp em hiểu rõ và vận dụng đúng vào thực tế."
+            },
+            {
+              "id": "g4-cn-l11-q5",
+              "type": "knowledge",
+              "prompt": "Việc lập bảng tính toán chi phí vật liệu làm đèn lồng giúp rèn luyện kỹ năng gì?",
+              "options": [
+                "Biết tính tiết kiệm, quản lý tài chính và hiểu giá trị lao động",
+                "Để so sánh xem ai mua được vật liệu đắt tiền nhất",
+                "Để đòi tiền thưởng từ thầy cô giáo và bố mẹ",
+                "Không có tác dụng gì đối với việc học tập"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Biết tính tiết kiệm, quản lý tài chính và hiểu giá trị lao động\". Kiến thức trọng tâm bài học Công nghệ 4 giúp em hiểu rõ và vận dụng đúng vào thực tế."
+            },
+            {
+              "id": "g4-cn-l11-q6",
+              "type": "scenario",
+              "prompt": "Loại đèn lồng truyền thống khi thắp nến thì hình ảnh bên trong tự xoay là đèn gì?",
+              "options": [
+                "Đèn kéo quân",
+                "Đèn ông sao",
+                "Đèn hoa đăng",
+                "Đèn pin cầm tay"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án chính xác là: \"Đèn kéo quân\". Kiến thức trọng tâm bài học Công nghệ 4 giúp em hiểu rõ và vận dụng đúng vào thực tế."
+            }
+          ]
+        },
+        {
+          "id": "l12-cn4",
+          "lessonNumber": 12,
+          "title": "BÀI 12: LÀM CHUỒN CHUỒN THĂNG BẰNG",
+          "questions": [
+            {
+              "id": "g4-cn-l12-q1",
+              "type": "knowledge",
+              "prompt": "Sản phẩm chuồn chuồn thăng bằng gồm những bộ phận chính nào?",
+              "options": [
+                "Cánh chuồn chuồn và thân chuồn chuồn",
+                "Đầu robot, thân robot và chân robot",
+                "Lồng đèn trang trí và quai xách",
+                "Thanh đòn bập bênh và ghế ngồi"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Cánh chuồn chuồn và thân chuồn chuồn\". Kiến thức trọng tâm bài học Công nghệ 4 giúp em hiểu rõ và vận dụng đúng vào thực tế."
+            },
+            {
+              "id": "g4-cn-l12-q2",
+              "type": "knowledge",
+              "prompt": "Tiêu chí đánh giá sản phẩm chuồn chuồn thăng bằng đạt yêu cầu là gì?",
+              "options": [
+                "Đủ bộ phận, gắn kết chắc chắn, trang trí đẹp, tự thăng bằng được",
+                "Chuồn chuồn bị nghiêng lệch và rơi gãy khi đặt lên ngón tay",
+                "Cánh chuồn chuồn bị bong rời hoàn toàn ra khỏi phần thân",
+                "Chỉ làm phần cánh mà không làm bộ phận thân chuồn chuồn"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Đủ bộ phận, gắn kết chắc chắn, trang trí đẹp, tự thăng bằng được\". Kiến thức trọng tâm bài học Công nghệ 4 giúp em hiểu rõ và vận dụng đúng vào thực tế."
+            },
+            {
+              "id": "g4-cn-l12-q3",
+              "type": "knowledge",
+              "prompt": "Bộ phận nào của chuồn chuồn đóng vai trò là điểm tựa chính để giữ thăng bằng?",
+              "options": [
+                "Đầu mỏ của chuồn chuồn",
+                "Đầu phần đuôi của chuồn chuồn",
+                "Điểm cuối cùng ở hai bên cánh",
+                "Đôi mắt của chuồn chuồn"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Đầu mỏ của chuồn chuồn\". Kiến thức trọng tâm bài học Công nghệ 4 giúp em hiểu rõ và vận dụng đúng vào thực tế."
+            },
+            {
+              "id": "g4-cn-l12-q4",
+              "type": "scenario",
+              "prompt": "Thao tác nào giúp kiểm tra chiếc chuồn chuồn giấy đã đạt độ thăng bằng?",
+              "options": [
+                "Đặt đầu mỏ lên ngón tay xem chuồn chuồn có tự đứng yên hay không",
+                "Thả chuồn chuồn từ trên cao xuống xem có bay được như thật không",
+                "Cầm hai cánh quay tròn liên tục nhiều vòng trên không trung",
+                "Đặt nằm bệt toàn bộ thân chuồn chuồn xuống mặt bàn phẳng"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án chính xác là: \"Đặt đầu mỏ lên ngón tay xem chuồn chuồn có tự đứng yên hay không\". Kiến thức trọng tâm bài học Công nghệ 4 giúp em hiểu rõ và vận dụng đúng vào thực tế."
+            },
+            {
+              "id": "g4-cn-l12-q5",
+              "type": "knowledge",
+              "prompt": "Chuồn chuồn tre có thể tự đứng thăng bằng nhờ nguyên lý nào?",
+              "options": [
+                "Nguyên lý cân bằng trọng lực giữa hai cánh và phần mỏ/đuôi",
+                "Dùng nam châm hút sắt giấu bên trong mỏ chuồn chuồn",
+                "Nhờ quạt gió thổi liên tục từ phía bên ngoài vào",
+                "Dùng dây cước trong suốt treo ngược chuồn chuồn lên"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Nguyên lý cân bằng trọng lực giữa hai cánh và phần mỏ/đuôi\". Kiến thức trọng tâm bài học Công nghệ 4 giúp em hiểu rõ và vận dụng đúng vào thực tế."
+            },
+            {
+              "id": "g4-cn-l12-q6",
+              "type": "knowledge",
+              "prompt": "Làng nghề nào tại Hà Nội nổi tiếng với sản phẩm chuồn chuồn tre thủ công?",
+              "options": [
+                "Xã Thạch Xá, huyện Thạch Thất (Hà Nội)",
+                "Làng gốm Bát Tràng (Hà Nội)",
+                "Làng lụa Vạn Phúc (Hà Nội)",
+                "Làng đúc đồng Ngũ Xá (Hà Nội)"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Xã Thạch Xá, huyện Thạch Thất (Hà Nội)\". Kiến thức trọng tâm bài học Công nghệ 4 giúp em hiểu rõ và vận dụng đúng vào thực tế."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

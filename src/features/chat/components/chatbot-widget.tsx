@@ -1,9 +1,12 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import { usePathname } from "next/navigation";
 import { useI18n } from "@/lib/i18n/provider";
 import { ChatMascotButton } from "./chat-mascot-button";
 import { useHomeIntroBlocking } from "@/components/home/site-intro";
+import { useGardenStore } from "@/features/landing-garden/store/useGardenStore";
+import { usePlayModeStore } from "@/features/public-play/store/usePlayModeStore";
 import {
   FloatingPortal,
   useDismiss,
@@ -35,6 +38,14 @@ function uid() {
 }
 
 export function ChatbotWidget() {
+  const pathname = usePathname();
+  const gardenMode = useGardenStore((s) => s.mode);
+  const playMode = usePlayModeStore((s) => s.mode);
+
+  const is3DActive =
+    (pathname === "/" && gardenMode === "garden") ||
+    (pathname === "/play" && playMode === "3d");
+
   const { locale, t } = useI18n();
   const introBlocking = useHomeIntroBlocking();
   const [open, setOpen] = useState(false);
@@ -121,7 +132,7 @@ export function ChatbotWidget() {
 
   const suggestions = SUGGESTIONS[locale];
 
-  if (introBlocking) return null;
+  if (introBlocking || is3DActive) return null;
 
   return (
     <>

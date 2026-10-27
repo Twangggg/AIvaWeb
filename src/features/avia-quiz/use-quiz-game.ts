@@ -10,8 +10,10 @@ import {
   GameScreen,
   FrogState,
   QuizScoreSummary,
+  NextLessonInfo,
 } from "./types";
 import { MOCK_QUIZ_BOOKS } from "./mock-data";
+import { loadQuizBook, preloadQuizBooksForGrade } from "./book-loader";
 import { quizSound } from "./sound";
 import confetti from "canvas-confetti";
 
@@ -31,6 +33,12 @@ export function useQuizGame() {
   const [selectedLesson, setSelectedLesson] = useState<QuizLesson | null>(null);
   const [selectedChapter, setSelectedChapter] = useState<QuizChapter | null>(null);
   const [isChapterReview, setIsChapterReview] = useState(false);
+  const [isLoadingBook, setIsLoadingBook] = useState(false);
+
+  // Background preload books for the currently active grade
+  useEffect(() => {
+    preloadQuizBooksForGrade(selectedGrade);
+  }, [selectedGrade]);
 
   // Playing state
   const [questions, setQuestions] = useState<QuizQuestion[]>([]);
@@ -50,6 +58,11 @@ export function useQuizGame() {
 
   // Summary
   const [summary, setSummary] = useState<QuizScoreSummary | null>(null);
+  const [lastReward, setLastReward] = useState<{
+    points: number;
+    bonus: number;
+    combo: number;
+  } | null>(null);
 
   const timerRef = useRef<NodeJS.Timeout | null>(null);
 
@@ -61,12 +74,19 @@ export function useQuizGame() {
   // Navigation actions
   const selectGrade = (grade: GradeLevel) => {
     setSelectedGrade(grade);
+    preloadQuizBooksForGrade(grade);
     setScreen("book-select");
   };
 
-  const selectBook = (book: QuizBook) => {
-    setSelectedBook(book);
-    setScreen("lesson-select");
+  const selectBook = async (book: QuizBook) => {
+    setIsLoadingBook(true);
+    try {
+      const fullBook = await loadQuizBook(book.id);
+      setSelectedBook(fullBook ?? book);
+      setScreen("lesson-select");
+    } finally {
+      setIsLoadingBook(false);
+    }
   };
 
   const backToGradeSelect = () => {
@@ -78,6 +98,97 @@ export function useQuizGame() {
   const backToBookSelect = () => {
     setScreen("book-select");
     setSelectedLesson(null);
+  };
+
+  const backToLessonSelect = () => {
+    setScreen("lesson-select");
+    setSelectedLesson(null);
+    setIsChapterReview(false);
+  };
+
+  // Find information about the next lesson or chapter review in progression
+  const getNextLessonInfo = useCallback((): NextLessonInfo | null => {
+    if (!selectedBook) return null;
+
+    if (!isChapterReview && selectedChapter && selectedLesson) {
+      const curChapterIndex = selectedBook.chapters.findIndex(
+        (c) => c.id === selectedChapter.id
+      );
+      if (curChapterIndex === -1) return null;
+
+      const currentChapter = selectedBook.chapters[curChapterIndex];
+      const curLessonIndex = currentChapter.lessons.findIndex(
+        (l) => l.id === selectedLesson.id
+      );
+
+      // 1. Next lesson within the same chapter
+      if (curLessonIndex >= 0 && curLessonIndex < currentChapter.lessons.length - 1) {
+        const nextLesson = currentChapter.lessons[curLessonIndex + 1];
+        return {
+          type: "lesson",
+          chapter: currentChapter,
+          lesson: nextLesson,
+          title: nextLesson.title,
+        };
+      }
+
+      // 2. Last lesson of chapter -> Offer chapter review if chapter has multiple lessons
+      if (currentChapter.lessons.length > 1) {
+        return {
+          type: "chapter-review",
+          chapter: currentChapter,
+          title: `Ôn tập ${currentChapter.title}`,
+        };
+      }
+
+      // 3. Move to lesson 1 of next chapter
+      if (curChapterIndex < selectedBook.chapters.length - 1) {
+        const nextChapter = selectedBook.chapters[curChapterIndex + 1];
+        if (nextChapter.lessons.length > 0) {
+          const nextLesson = nextChapter.lessons[0];
+          return {
+            type: "lesson",
+            chapter: nextChapter,
+            lesson: nextLesson,
+            title: nextLesson.title,
+          };
+        }
+      }
+
+      return null;
+    }
+
+    if (isChapterReview && selectedChapter) {
+      const curChapterIndex = selectedBook.chapters.findIndex(
+        (c) => c.id === selectedChapter.id
+      );
+      if (curChapterIndex >= 0 && curChapterIndex < selectedBook.chapters.length - 1) {
+        const nextChapter = selectedBook.chapters[curChapterIndex + 1];
+        if (nextChapter.lessons.length > 0) {
+          const nextLesson = nextChapter.lessons[0];
+          return {
+            type: "lesson",
+            chapter: nextChapter,
+            lesson: nextLesson,
+            title: nextLesson.title,
+          };
+        }
+      }
+      return null;
+    }
+
+    return null;
+  }, [selectedBook, selectedChapter, selectedLesson, isChapterReview]);
+
+  const startNextLesson = () => {
+    const next = getNextLessonInfo();
+    if (!next) return;
+
+    if (next.type === "lesson" && next.lesson) {
+      startLesson(next.chapter, next.lesson);
+    } else if (next.type === "chapter-review") {
+      startChapterReview(next.chapter);
+    }
   };
 
   // Start regular lesson quiz: Random 4 out of 6 questions
@@ -149,6 +260,8 @@ export function useQuizGame() {
     const currentQ = questions[currentIndex];
     const isCorrect = answerIndex === currentQ.correctIndex;
 
+    let transitionDelay = 1300;
+
     if (isCorrect) {
       setFrogState("correct");
       const nextCombo = currentCombo + 1;
@@ -158,38 +271,48 @@ export function useQuizGame() {
 
       // Điểm cơ bản
       let pointsEarned = 10;
+      let bonus = 0;
 
       // Thưởng combo theo GDD:
       // x3: +10, x5: +20, x10: +30, sau x10 mỗi 5 chuỗi: +30
       if (nextCombo === 3) {
-        pointsEarned += 10;
-        quizSound.playCombo(3);
+        bonus = 10;
       } else if (nextCombo === 5) {
-        pointsEarned += 20;
-        quizSound.playCombo(5);
+        bonus = 20;
       } else if (nextCombo === 10) {
-        pointsEarned += 30;
-        quizSound.playCombo(10);
+        bonus = 30;
       } else if (nextCombo > 10 && (nextCombo - 10) % 5 === 0) {
-        pointsEarned += 30;
+        bonus = 30;
+      }
+
+      pointsEarned += bonus;
+      setLastReward({ points: pointsEarned, bonus, combo: nextCombo });
+
+      if (nextCombo >= 2) {
         quizSound.playCombo(nextCombo);
       } else {
         quizSound.playCorrect();
       }
 
       setScore((prev) => prev + pointsEarned);
+
+      // Cho thêm thời gian chiêm ngưỡng hiệu ứng combo đặc sắc
+      if (nextCombo >= 2) {
+        transitionDelay = 1600;
+      }
     } else {
       setFrogState("wrong");
       // Mất chuỗi khi sai
       setCurrentCombo(0);
       setWrongCount((prev) => prev + 1);
+      setLastReward(null);
       quizSound.playWrong();
     }
 
-    // Chuyển câu hỏi sau 1.2s
+    // Chuyển câu hỏi sau transitionDelay
     setTimeout(() => {
       proceedToNext(isCorrect);
-    }, 1300);
+    }, transitionDelay);
   };
 
   const finishGame = useCallback(
@@ -250,6 +373,7 @@ export function useQuizGame() {
       setSelectedAnswer(null);
       setIsAnswered(false);
       setFrogState("idle");
+      setLastReward(null);
     } else {
       const finalCorrect = correctCount + (wasCorrect ? 1 : 0);
       const finalWrong = wrongCount + (wasCorrect ? 0 : 1);
@@ -274,6 +398,7 @@ export function useQuizGame() {
     selectedLesson,
     selectedChapter,
     isChapterReview,
+    isLoadingBook,
     availableBooks,
     questions,
     currentQuestion: questions[currentIndex] || null,
@@ -288,13 +413,17 @@ export function useQuizGame() {
     wrongCount,
     elapsedSeconds,
     summary,
+    lastReward,
     selectGrade,
     selectBook,
     backToGradeSelect,
     backToBookSelect,
+    backToLessonSelect,
     startLesson,
     startChapterReview,
     answerQuestion,
     restartCurrent,
+    nextLessonInfo: getNextLessonInfo(),
+    startNextLesson,
   };
 }

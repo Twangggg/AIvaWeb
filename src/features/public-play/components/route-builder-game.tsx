@@ -86,6 +86,60 @@ const COMMANDS: { id: Command; label: string; icon: string; step: Point }[] = [
 
 const key = (point: Point) => `${point.x}:${point.y}`;
 
+function RockObstacle() {
+  return (
+    <svg
+      viewBox="0 0 36 36"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className="h-full w-full p-0.5 drop-shadow-md select-none pointer-events-none"
+    >
+      {/* Base shadow */}
+      <ellipse cx="18" cy="30" rx="13" ry="3.5" fill="rgba(0, 0, 0, 0.25)" />
+      {/* Main stone body */}
+      <path
+        d="M7 24L9 12L19 5L28 8L30 21L25 28L11 28L7 24Z"
+        fill="#64748B"
+      />
+      {/* Facet Top Light */}
+      <path
+        d="M9 12L19 5L22 14L12 16L9 12Z"
+        fill="#94A3B8"
+      />
+      {/* Facet Upper Right */}
+      <path
+        d="M19 5L28 8L25 16L22 14L19 5Z"
+        fill="#78889B"
+      />
+      {/* Facet Right Dark Shade */}
+      <path
+        d="M28 8L30 21L25 28L22 19L25 16L28 8Z"
+        fill="#475569"
+      />
+      {/* Facet Front Center */}
+      <path
+        d="M12 16L22 14L22 19L25 28L11 28L7 24L9 12L12 16Z"
+        fill="#64748B"
+      />
+      {/* Crack line detail */}
+      <path
+        d="M15 17L17 22L16 25"
+        stroke="#334155"
+        strokeWidth="1.2"
+        strokeLinecap="round"
+      />
+      {/* Top rim highlight */}
+      <path
+        d="M9 12L19 5L28 8"
+        stroke="#E2E8F0"
+        strokeWidth="1"
+        strokeLinecap="round"
+        opacity="0.85"
+      />
+    </svg>
+  );
+}
+
 export function RouteBuilderGame() {
   const [missionIndex, setMissionIndex] = useState(0);
   const [commands, setCommands] = useState<Command[]>([]);
@@ -230,7 +284,7 @@ export function RouteBuilderGame() {
   const totalStars = Object.values(starsMap).reduce((a, b) => a + b, 0);
 
   return (
-    <div className="w-full max-w-4xl mx-auto space-y-3 sm:space-y-4">
+    <div className="w-full max-w-3xl lg:max-w-4xl mx-auto space-y-3 sm:space-y-4">
       <GameHeaderBar
         title="Kỹ Sư Đường Đi"
         subtitle={message}
@@ -280,7 +334,7 @@ export function RouteBuilderGame() {
 
         <div className="grid gap-4 sm:gap-6 md:grid-cols-[minmax(0,1fr)_260px] lg:grid-cols-[minmax(0,1fr)_300px] items-start">
           {/* 6x6 Grid Interactive Map */}
-          <div className="ui-surface-soft grid aspect-square w-full max-w-[280px] sm:max-w-[320px] md:max-w-[360px] mx-auto grid-cols-6 gap-1 rounded-2xl p-1.5 sm:p-2 border border-slate-200/80 dark:border-slate-800/80 shadow-inner">
+          <div className="grid aspect-square w-full max-w-[280px] sm:max-w-[310px] md:max-w-[340px] mx-auto grid-cols-6 gap-1.5 rounded-2xl p-2 sm:p-2.5 bg-slate-200/90 dark:bg-slate-950/90 border-2 border-slate-300 dark:border-slate-800 shadow-inner">
             {Array.from({ length: 36 }, (_, index) => {
               const point = { x: index % 6, y: Math.floor(index / 6) };
               const isBlock = mission.blocks.includes(key(point));
@@ -292,20 +346,34 @@ export function RouteBuilderGame() {
               const isPortalA = mission.portalA && key(point) === key(mission.portalA);
               const isPortalB = mission.portalB && key(point) === key(mission.portalB);
 
+              // Distinct cell styling to ensure clear grid contrast
+              let cellStyle =
+                "bg-white dark:bg-slate-900 border border-slate-300/80 dark:border-slate-700/80 shadow-xs";
+
+              if (isBlock) {
+                cellStyle =
+                  "bg-slate-100 dark:bg-slate-900/90 border-2 border-slate-400/40 dark:border-slate-700 shadow-inner";
+              } else if (isBot) {
+                cellStyle =
+                  "bg-sky-50 dark:bg-sky-950/40 border-2 border-sky-500 shadow-md ring-2 ring-sky-400/30 z-10";
+              } else if (isGoal) {
+                cellStyle =
+                  "bg-emerald-50 dark:bg-emerald-950/40 border-2 border-emerald-500 shadow-sm shadow-emerald-500/30";
+              } else if (isPortalA || isPortalB) {
+                cellStyle =
+                  "bg-fuchsia-50 dark:bg-fuchsia-950/40 border-2 border-fuchsia-500 shadow-sm shadow-fuchsia-500/30 animate-pulse";
+              } else if (isGem && !isGemCollected) {
+                cellStyle =
+                  "bg-amber-50 dark:bg-amber-950/40 border-2 border-amber-400 shadow-sm shadow-amber-400/20";
+              } else if (isStart) {
+                cellStyle =
+                  "bg-sky-50/70 dark:bg-sky-950/30 border-2 border-dashed border-sky-400/70";
+              }
+
               return (
                 <div
                   key={key(point)}
-                  className={`relative flex min-h-8 sm:min-h-10 items-center justify-center overflow-hidden rounded-lg text-[10px] font-black transition-colors ${
-                    isBlock
-                      ? "bg-slate-800/80 dark:bg-slate-950 border border-slate-700/50"
-                      : isGoal
-                      ? "bg-emerald-500/20 border border-emerald-500/40"
-                      : isPortalA || isPortalB
-                      ? "bg-fuchsia-500/20 border border-fuchsia-400/50 animate-pulse"
-                      : isBot
-                      ? "bg-[var(--ocean-alpha)] border border-[var(--ocean)]"
-                      : "bg-slate-100/70 dark:bg-slate-900/60"
-                  }`}
+                  className={`relative flex min-h-8 sm:min-h-10 items-center justify-center overflow-hidden rounded-xl text-[10px] font-black transition-all ${cellStyle}`}
                   aria-label={
                     isGoal
                       ? "Cổng không gian"
@@ -315,13 +383,15 @@ export function RouteBuilderGame() {
                       ? "Chướng ngại vật"
                       : isGem
                       ? "Tinh thể năng lượng"
+                      : isStart
+                      ? "Điểm xuất phát"
                       : undefined
                   }
                 >
                   {isGoal ? (
-                    <Image src="/games/portal-sprite.webp" alt="" fill unoptimized sizes="72px" className="object-contain p-0.5" />
+                    <Image src="/games/portal-sprite.webp" alt="Cổng không gian" fill unoptimized sizes="72px" className="object-contain p-0.5" />
                   ) : isBot ? (
-                    <Image src="/games/robot-sprite.webp" alt="" fill unoptimized sizes="72px" className="object-contain p-0.5 z-20" />
+                    <Image src="/games/robot-sprite.webp" alt="AIVA Robot" fill unoptimized sizes="72px" className="object-contain p-0.5 z-20" />
                   ) : isPortalA ? (
                     <span className="text-xs font-black text-fuchsia-600 dark:text-fuchsia-300 font-mono">🌀 A</span>
                   ) : isPortalB ? (
@@ -329,9 +399,9 @@ export function RouteBuilderGame() {
                   ) : isGem && !isGemCollected ? (
                     <span className="text-base animate-bounce">⚡</span>
                   ) : isStart ? (
-                    <span className="text-[9px] font-mono text-slate-400">START</span>
+                    <span className="text-[9px] font-black font-mono text-sky-600 dark:text-sky-400">START</span>
                   ) : isBlock ? (
-                    <span className="material-symbols-outlined text-sm text-slate-400">landscape</span>
+                    <RockObstacle />
                   ) : null}
                 </div>
               );

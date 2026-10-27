@@ -1,0 +1,2272 @@
+{
+  "id": "g1-tnxh",
+  "grade": 1,
+  "subjectKey": "tnxh",
+  "title": "Tự nhiên và Xã hội lớp 1",
+  "color": "#2563EB",
+  "coverImage": "/mascots/bia-sach-mon-hoc.png",
+  "chapters": [
+    {
+      "id": "c1-gia-dinh",
+      "chapterNumber": 1,
+      "title": "Chủ đề 1: Gia đình",
+      "lessons": [
+        {
+          "id": "l1-ke-ve-gia-dinh",
+          "lessonNumber": 1,
+          "title": "Bài 1: Kể về gia đình",
+          "description": "Tìm hiểu và yêu thương gia đình",
+          "questions": [
+            {
+              "id": "g1-c1-l1-q1",
+              "type": "scenario",
+              "prompt": "Thấy bố mẹ đi làm về mệt, bé nên làm gì?",
+              "options": [
+                "Đòi bật tivi xem hoạt hình",
+                "Bóp vai và rót nước ấm mời bố mẹ",
+                "Bày đồ chơi đòi bố mẹ chơi cùng",
+                "Khóc đòi đi mua đồ chơi"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c1-l1-q2",
+              "type": "scenario",
+              "prompt": "Khi ăn cơm cùng gia đình, bé nên làm gì?",
+              "options": [
+                "Xúc ăn ngay món mình thích",
+                "Xem điện thoại trong lúc ăn",
+                "Mời ông bà, bố mẹ rồi mới ăn",
+                "Bỏ bát cơm chạy đi chơi"
+              ],
+              "correctIndex": 2
+            },
+            {
+              "id": "g1-c1-l1-q3",
+              "type": "fill-blank",
+              "prompt": "\"Khi mọi người biết giúp đỡ việc nhà, ngôi nhà sẽ tràn ngập...\"",
+              "options": [
+                "tiếng cãi nhau",
+                "niềm vui và tình yêu thương",
+                "sự mệt mỏi",
+                "rác bẩn"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c1-l1-q4",
+              "type": "scenario",
+              "prompt": "Đến sinh nhật mẹ, bé nên làm quà gì tặng mẹ?",
+              "options": [
+                "Vẽ tranh gia đình và viết \"Con yêu mẹ\"",
+                "Đòi tiền mua đồ chơi cho mình",
+                "Giận dỗi vì không có bánh kem to",
+                "Không làm gì cả"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g1-c1-l1-q5",
+              "type": "knowledge",
+              "prompt": "Cất dép gọn gàng sau khi đi học về giúp gì cho gia đình?",
+              "options": [
+                "Nhà cửa gọn gàng, bố mẹ không phải dọn hộ",
+                "Làm dép bị cũ đi",
+                "Không có lợi ích gì",
+                "Làm bố mẹ lo lắng"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g1-c1-l1-q6",
+              "type": "scenario",
+              "prompt": "Em trai lỡ tay làm vỡ đồ chơi, bé nên làm gì?",
+              "options": [
+                "Lao vào đánh mắng em",
+                "Nhắc em cẩn thận và cùng em dọn dẹp",
+                "Khóc đòi bố mẹ đền đồ chơi mới",
+                "Mang vứt hết đồ chơi của em"
+              ],
+              "correctIndex": 1
+            }
+          ]
+        },
+        {
+          "id": "l2-ngoi-nha-cua-em",
+          "lessonNumber": 2,
+          "title": "Bài 2: Ngôi nhà của em",
+          "description": "Ngôi nhà ngăn nắp và an toàn",
+          "questions": [
+            {
+              "id": "g1-c1-l2-q1",
+              "type": "knowledge",
+              "prompt": "Khi bị lạc bố mẹ, thông tin nào quan trọng nhất bé cần nhớ?",
+              "options": [
+                "Tên con gấu bông ở nhà",
+                "Địa chỉ nhà và số điện thoại của bố mẹ",
+                "Màu sơn của căn nhà",
+                "Số lượng đồ chơi bé có"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c1-l2-q2",
+              "type": "knowledge",
+              "prompt": "Mẹ nhờ cất gọn chăn gối sau khi ngủ dậy, bé mang vào phòng nào?",
+              "options": ["Phòng khách", "Phòng ngủ", "Phòng bếp", "Phòng tắm"],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c1-l2-q3",
+              "type": "scenario",
+              "prompt": "Bác bưu tá hỏi địa chỉ nhà, bé nên trả lời thế nào?",
+              "options": [
+                "\"Cháu không biết!\" rồi đóng sầm cửa",
+                "\"Dạ, đây là nhà số... Bác đợi cháu gọi bố mẹ ạ!\"",
+                "\"Bác để đại ngoài sân đi!\"",
+                "Chỉ tay lung tung rồi chạy mất"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c1-l2-q4",
+              "type": "scenario",
+              "prompt": "Khi ở nhà chung cư cao tầng, việc nào RẤT NGUY HIỂM cấm làm?",
+              "options": [
+                "Tưới cây dưới sàn ban công",
+                "Leo trèo ban công hoặc nhô người ra cửa sổ",
+                "Đi lại nhẹ nhàng không làm ồn",
+                "Đóng cửa cẩn thận khi ra vào"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c1-l2-q5",
+              "type": "scenario",
+              "prompt": "Sân nhà có nhiều lá khô và rác, bé nên làm gì?",
+              "options": [
+                "Quét dọn rác bỏ vào thùng rác",
+                "Vứt thêm vỏ kẹo ra sân",
+                "Đổ nước ra sân cho trơn",
+                "Bỏ lơ vì là việc của người lớn"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g1-c1-l2-q6",
+              "type": "knowledge",
+              "prompt": "Vì sao chúng ta cần giữ nhà cửa sạch sẽ, ngăn nắp?",
+              "options": [
+                "Cho nhà thoáng mát, không có muỗi và bảo vệ sức khỏe",
+                "Để có chỗ bày thêm đồ chơi",
+                "Để bố mẹ cho tiền",
+                "Không có tác dụng gì"
+              ],
+              "correctIndex": 0
+            }
+          ]
+        },
+        {
+          "id": "l3-do-dung-trong-nha",
+          "lessonNumber": 3,
+          "title": "Bài 3: Đồ dùng trong nhà",
+          "description": "Sử dụng và bảo quản đồ dùng",
+          "questions": [
+            {
+              "id": "g1-c1-l3-q1",
+              "type": "scenario",
+              "prompt": "Học xong, bàn học đầy sách vở và bút màu, bé nên làm gì?",
+              "options": [
+                "Để nguyên trên bàn",
+                "Xếp gọn sách vở, cất bút vào hộp rồi đi ngủ",
+                "Gạt hết đồ xuống đất",
+                "Gọi mẹ dọn hộ"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c1-l3-q2",
+              "type": "knowledge",
+              "prompt": "Lấy nước trong tủ lạnh xong, hành động nào đúng và tiết kiệm điện?",
+              "options": [
+                "Mở cửa tủ cho mát phòng",
+                "Đóng kín cửa tủ ngay sau khi lấy đồ",
+                "Đứng mở tủ ngắm nghía thật lâu",
+                "Chỉnh độ lạnh lên tối đa"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c1-l3-q3",
+              "type": "scenario",
+              "prompt": "Bạn Nam đi học về hay vứt cặp sách, giày dép bừa bãi. Em khuyên bạn thế nào?",
+              "options": [
+                "\"Cứ vứt thế cho tiện!\"",
+                "\"Bạn nên cất giày lên kệ và treo cặp gọn gàng nhé!\"",
+                "\"Bạn giấu cặp đi cho mẹ không thấy!\"",
+                "\"Nhờ người dọn hộ đi!\""
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c1-l3-q4",
+              "type": "knowledge",
+              "prompt": "Để quạt máy, tivi dùng được bền lâu, bé nên làm gì?",
+              "options": [
+                "Dùng khăn ướt sũng lau quạt đang quay",
+                "Không bật tắt liên tục và nhờ bố mẹ lau bụi định kỳ",
+                "Chèn gậy gỗ vào cánh quạt đang chạy",
+                "Bật tivi suốt ngày đêm"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c1-l3-q5",
+              "type": "scenario",
+              "prompt": "Sau khi ăn cơm xong, bát đĩa nên được xử lý thế nào?",
+              "options": [
+                "Để nguyên trên bàn rồi đi xem tivi",
+                "Thu dọn bát đĩa xếp gọn vào bồn rửa",
+                "Bỏ bát đĩa vào thùng rác",
+                "Mang bát đĩa ra gầm giường cất"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c1-l3-q6",
+              "type": "scenario",
+              "prompt": "Bạn sang nhà chơi bày đồ chơi ra sàn, lúc bạn về bé nên làm gì?",
+              "options": [
+                "Bắt bạn dọn một mình rồi mới cho về",
+                "Cùng bạn cất đồ chơi vào thùng rồi chào bạn",
+                "Để đồ chơi ở sàn cho mẹ dọn",
+                "Vứt đồ chơi ra hành lang"
+              ],
+              "correctIndex": 1
+            }
+          ]
+        },
+        {
+          "id": "l4-an-toan-do-dung",
+          "lessonNumber": 4,
+          "title": "Bài 4: An toàn khi sử dụng đồ dùng trong nhà",
+          "description": "Phòng tránh tai nạn và bỏng, giật điện",
+          "questions": [
+            {
+              "id": "g1-c1-l4-q1",
+              "type": "scenario",
+              "prompt": "Vừa tắm xong tay còn ướt, muốn bật quạt điện bé nên làm gì?",
+              "options": [
+                "Bấm nút bật quạt ngay",
+                "Lau khô tay hoàn toàn hoặc nhờ người lớn bật giúp",
+                "Dùng chân ướt bấm công tắc",
+                "Dùng thìa kim loại bấm nút quạt"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c1-l4-q2",
+              "type": "scenario",
+              "prompt": "Mẹ đang dùng bàn là (bàn ủi), bóng lăn lại gần bàn là nóng, bé nên làm gì?",
+              "options": [
+                "Lao vào thò tay lấy bóng",
+                "Nhờ mẹ lấy giúp, không chạm tay vào bàn là nóng",
+                "Dùng tay ôm bàn là",
+                "Dội nước lạnh vào bàn là"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c1-l4-q3",
+              "type": "scenario",
+              "prompt": "Em nhỏ gọt hoa quả bị đứt tay chảy máu nhẹ, xử lý thế nào là đúng?",
+              "options": [
+                "Khóc ầm lên rồi chạy trốn",
+                "Rửa sạch vết thương, dán băng cá nhân và gọi người lớn",
+                "Lấy đất bẩn đắp vào vết thương",
+                "Dùng kéo cắt rộng vết thương"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c1-l4-q4",
+              "type": "scenario",
+              "prompt": "Em bé 2 tuổi cầm kéo sắc chạy trong nhà, bé xử lý thế nào?",
+              "options": [
+                "Chạy lại giật mạnh chiếc kéo",
+                "Khuyên em đưa kéo cho mình rồi cất lên cao, hoặc báo người lớn",
+                "Mặc kệ cho em chơi",
+                "Lấy thêm dao đưa cho em chơi"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c1-l4-q5",
+              "type": "scenario",
+              "prompt": "Nghe tiếng \"xèo xèo\" và mùi khét từ ổ điện, bé làm gì ngay?",
+              "options": [
+                "Dội nước vào ổ điện",
+                "Tránh xa ổ điện, chạy ra ngoài nhờ người lớn giúp",
+                "Lấy tay rút phích điện",
+                "Lại gần ngửi xem mùi gì"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c1-l4-q6",
+              "type": "knowledge",
+              "prompt": "Đồ dùng nào trong bếp KHÔNG nên tự dùng vì dễ gây bỏng?",
+              "options": [
+                "Bát nhựa, thìa inox",
+                "Ấm nước sôi, nồi canh nóng, bếp gas đang cháy",
+                "Khăn lau bàn, đĩa nhựa",
+                "Đũa ăn cơm, đĩa sứ"
+              ],
+              "correctIndex": 1
+            }
+          ]
+        },
+        {
+          "id": "l5-on-tap-gia-dinh",
+          "lessonNumber": 5,
+          "title": "Bài 5: Ôn tập chủ đề Gia đình",
+          "description": "Tổng hợp kiến thức chủ đề gia đình",
+          "questions": [
+            {
+              "id": "g1-c1-l5-q1",
+              "type": "knowledge",
+              "prompt": "Bạn nhỏ tự thay quần áo, gấp chăn gối và hỏi thăm khi bố mẹ mệt là người thế nào?",
+              "options": [
+                "Lười biếng",
+                "Ngoan ngoãn, tự lập và yêu thương gia đình",
+                "Hay làm nũng",
+                "Không biết làm gì"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c1-l5-q2",
+              "type": "scenario",
+              "prompt": "Khi nhận quà hoặc tiền lì xì từ người lớn, bé nên nhận thế nào?",
+              "options": [
+                "Dùng một tay giật lấy rồi chạy đi",
+                "Nhận bằng hai tay và nói \"Con cảm ơn ạ!\"",
+                "Bóc ra xem tiền ngay trước mặt mọi người",
+                "Chê quà ít không lấy"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c1-l5-q3",
+              "type": "knowledge",
+              "prompt": "Hành động nào giúp gia đình an toàn và hạnh phúc?",
+              "options": [
+                "Để ổ điện ngang tầm tay em bé",
+                "Yêu thương, nhường nhịn nhau và để đồ gọn gàng",
+                "Vứt dao kéo bừa bãi",
+                "Thường xuyên cãi nhau"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c1-l5-q4",
+              "type": "scenario",
+              "prompt": "Mẹ khen phòng sạch đẹp, bé nên trả lời thế nào?",
+              "options": [
+                "\"Thưởng tiền cho con đi!\"",
+                "\"Con cảm ơn mẹ! Con sẽ tiếp tục giữ phòng gọn gàng ạ!\"",
+                "Im lặng không nói gì",
+                "\"Con làm cho xong chuyện thôi!\""
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c1-l5-q5",
+              "type": "knowledge",
+              "prompt": "Việc nào bé lớp 1 CÓ THỂ tự làm để giúp gia đình?",
+              "options": [
+                "Trèo lên mái nhà sửa điện",
+                "Dùng dao lớn chặt thịt",
+                "Gấp quần áo, tưới cây nhỏ và xếp giày dép",
+                "Nấu cơm bằng bếp gas"
+              ],
+              "correctIndex": 2
+            },
+            {
+              "id": "g1-c1-l5-q6",
+              "type": "scenario",
+              "prompt": "Khi nhà có khách đến chơi, bé nên làm gì?",
+              "options": [
+                "Lễ phép chào hỏi, rót nước mời khách",
+                "Đứng hóng chuyện, ngắt lời người lớn",
+                "Hét to đòi khách cho quà",
+                "Mở tivi thật to để xem"
+              ],
+              "correctIndex": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c2-truong-hoc",
+      "chapterNumber": 2,
+      "title": "Chủ đề 2: Trường học",
+      "lessons": [
+        {
+          "id": "l6-lop-hoc-cua-em",
+          "lessonNumber": 6,
+          "title": "Bài 6: Lớp học của em",
+          "description": "Nề nếp và đoàn kết trong lớp học",
+          "questions": [
+            {
+              "id": "g1-c2-l6-q1",
+              "type": "scenario",
+              "prompt": "Buổi sáng vào lớp gặp cô giáo, bé nên làm gì?",
+              "options": [
+                "Khoanh tay chào: \"Chúng em chào cô ạ!\"",
+                "Chạy ngay về chỗ không nói gì",
+                "Cười to rồi hét tên bạn",
+                "Quay lưng đi ra sân chơi"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g1-c2-l6-q2",
+              "type": "scenario",
+              "prompt": "Bạn ngồi cạnh quên mang bút màu và lo lắng, bé nên làm gì?",
+              "options": [
+                "Cất hộp màu đi vì sợ hỏng",
+                "Vui vẻ cho bạn dùng chung bút màu",
+                "Chê bạn rồi mách cô",
+                "Bảo bạn tự đi xin lớp khác"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c2-l6-q3",
+              "type": "scenario",
+              "prompt": "Học xong môn thủ công, trên bàn và sàn có nhiều giấy vụn, bé nên làm gì?",
+              "options": [
+                "Để nguyên cho bác bảo vệ dọn",
+                "Nhặt giấy vụn bỏ vào thùng rác",
+                "Thổi giấy sang chỗ bạn",
+                "Gom giấy vứt ra hành lang"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c2-l6-q4",
+              "type": "scenario",
+              "prompt": "Thấy bạn dán băng keo làm hỏng sơn bảng, bé nhắc bạn thế nào?",
+              "options": [
+                "Mặc kệ bạn",
+                "Nhắc nhẹ: \"Bạn đừng dán keo làm hỏng bảng đấy!\"",
+                "Lao vào đánh bạn",
+                "Lấy keo dán giống bạn"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c2-l6-q5",
+              "type": "knowledge",
+              "prompt": "Khi cô giáo đang giảng bài, bé nên làm gì?",
+              "options": [
+                "Nói chuyện riêng với bạn",
+                "Lắng nghe cô giảng, muốn phát biểu thì giơ tay",
+                "Chơi đồ chơi dưới gầm bàn",
+                "Ngủ gật trên bàn"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c2-l6-q6",
+              "type": "scenario",
+              "prompt": "Trong lớp có bạn học sinh mới còn bỡ ngỡ, bé nên làm gì?",
+              "options": [
+                "Mỉm cười giới thiệu bản thân và rủ bạn cùng chơi",
+                "Trêu chọc bạn mới",
+                "Xa lánh không nói chuyện",
+                "Lườm bạn, không cho ngồi chung"
+              ],
+              "correctIndex": 0
+            }
+          ]
+        },
+        {
+          "id": "l7-kham-pha-truong-hoc",
+          "lessonNumber": 7,
+          "title": "Bài 7: Cùng khám phá trường học",
+          "description": "Tìm hiểu các khu vực trong trường",
+          "questions": [
+            {
+              "id": "g1-c2-l7-q1",
+              "type": "knowledge",
+              "prompt": "Giờ ra chơi bé bị trầy xước chân, bé nên đến phòng nào?",
+              "options": [
+                "Phòng Bưu điện",
+                "Phòng Y tế trường học",
+                "Phòng Bếp ăn",
+                "Phòng Bảo vệ"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c2-l7-q2",
+              "type": "knowledge",
+              "prompt": "Khi vào Thư viện đọc sách, bé nên chú ý điều gì?",
+              "options": [
+                "Vừa đọc vừa nói chuyện, cười đùa to",
+                "Giữ trật tự, đi nhẹ nói khẽ, lật sách cẩn thận",
+                "Mang bánh kẹo vào ăn rồi vứt rác ra sàn",
+                "Xé tranh trong sách mang về"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c2-l7-q3",
+              "type": "scenario",
+              "prompt": "Thấy nhiều bạn đang xếp hàng ở vòi nước rửa tay, bé nên làm gì?",
+              "options": [
+                "Chen lấn lên đầu hàng",
+                "Vui vẻ xếp hàng theo thứ tự",
+                "Đẩy các bạn để vào trước",
+                "Khóc đòi các bạn nhường"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c2-l7-q4",
+              "type": "scenario",
+              "prompt": "Gặp bác bảo vệ hoặc cô lao công trong trường, bé nên làm gì?",
+              "options": [
+                "Khoanh tay mỉm cười chào lễ phép",
+                "Giả vờ không thấy",
+                "Trêu chọc, làm phiền các bác",
+                "Chỉ tay bàn tán với bạn"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g1-c2-l7-q5",
+              "type": "scenario",
+              "prompt": "Hưởng ứng phong trào quyên góp ủng hộ các bạn vùng lũ, bé nên làm gì?",
+              "options": [
+                "Giấu sách vở đi",
+                "Tặng những cuốn sách, đồ dùng học tập còn tốt",
+                "Nộp sách vở cũ nát, rách rưới",
+                "Đòi bố mẹ mua đồ chơi đắt tiền để nộp"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c2-l7-q6",
+              "type": "knowledge",
+              "prompt": "Khi đi vệ sinh ở trường, hành động nào là đúng?",
+              "options": [
+                "Xả nước sạch sẽ, rửa tay xà phòng",
+                "Xịt nước lung tung ra sàn",
+                "Không dội nước sau khi đi",
+                "Vẽ bẩn lên tường"
+              ],
+              "correctIndex": 0
+            }
+          ]
+        },
+        {
+          "id": "l8-cung-vui-o-truong",
+          "lessonNumber": 8,
+          "title": "Bài 8: Cùng vui ở trường",
+          "description": "Vui chơi an toàn và giữ gìn trường lớp",
+          "questions": [
+            {
+              "id": "g1-c2-l8-q1",
+              "type": "scenario",
+              "prompt": "Thấy bạn trèo cây cao hoặc xô đẩy trên cầu thang, bé nên làm gì?",
+              "options": [
+                "Cùng trèo cây và xô đẩy với bạn",
+                "Khuyên bạn không nên trèo vì nguy hiểm và rủ chơi trò khác",
+                "Đứng dưới cổ vũ bạn",
+                "Mặc kệ không quan tâm"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c2-l8-q2",
+              "type": "scenario",
+              "prompt": "Bạn đang chơi đuổi bắt bị ngã đau và khóc, bé nên làm gì?",
+              "options": [
+                "Cười nhạo bạn",
+                "Đỡ bạn dậy, hỏi thăm và dìu bạn đến phòng Y tế",
+                "Bỏ chạy đi chỗ khác",
+                "Đổ lỗi cho bạn khác"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c2-l8-q3",
+              "type": "knowledge",
+              "prompt": "Sau khi dùng cốc uống nước chung ở trường, bé nên làm gì?",
+              "options": [
+                "Úp cốc gọn gàng vào giá",
+                "Vứt cốc ngửa trên bàn",
+                "Đổ nước thừa ra sàn",
+                "Vứt cốc vào thùng rác"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g1-c2-l8-q4",
+              "type": "scenario",
+              "prompt": "Thấy bạn dùng bút màu vẽ lên tường hành lang, bé khuyên bạn thế nào?",
+              "options": [
+                "\"Bạn đừng vẽ lên tường làm bẩn trường lớp nhé!\"",
+                "\"Vẽ đẹp đấy, cho mình vẽ với!\"",
+                "Lấy thêm sơn cho bạn vẽ",
+                "Đứng nhìn bạn vẽ"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g1-c2-l8-q5",
+              "type": "knowledge",
+              "prompt": "Trò chơi nào AN TOÀN khi chơi ở sân trường?",
+              "options": [
+                "Nhảy dây, đá cầu, chơi ô ăn quan",
+                "Dùng gạch đá ném nhau",
+                "Đu bám lên cổng trường",
+                "Trèo lên lan can tầng cao"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g1-c2-l8-q6",
+              "type": "scenario",
+              "prompt": "Để trường học sạch đẹp, bé và các bạn nên làm gì?",
+              "options": [
+                "Ngắt hoa, bẻ cành cây",
+                "Nhặt rác, nhổ cỏ, nhặt lá khô trên sân",
+                "Bày đồ ăn ra thảm cỏ",
+                "Giậm chân lên luống hoa"
+              ],
+              "correctIndex": 1
+            }
+          ]
+        },
+        {
+          "id": "l9-on-tap-truong-hoc",
+          "lessonNumber": 9,
+          "title": "Bài 9: Ôn tập chủ đề Trường học",
+          "description": "Tổng kết kiến thức về trường học",
+          "questions": [
+            {
+              "id": "g1-c2-l9-q1",
+              "type": "scenario",
+              "prompt": "Bạn chạy nhanh bị vấp ngã chảy máu gối, bé nên làm gì?",
+              "options": [
+                "Cười nhạo bạn rồi chạy đi",
+                "Đỡ bạn dậy, dìu vào phòng Y tế và báo thầy cô",
+                "Coi như không nhìn thấy",
+                "Đổ lỗi cho bạn khác"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c2-l9-q2",
+              "type": "scenario",
+              "prompt": "Thấy bạn vứt vỏ hộp sữa xuống lối đi, bé nên làm gì?",
+              "options": [
+                "Nhắc bạn nhặt lên bỏ vào thùng rác và bản thân cũng làm vậy",
+                "Vứt vỏ hộp sữa của mình xuống sàn theo bạn",
+                "Đá vỏ hộp sữa sang chỗ khác",
+                "Mặc kệ vỏ hộp sữa trên đường"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g1-c2-l9-q3",
+              "type": "scenario",
+              "prompt": "Vòi nước nhà vệ sinh đang chảy tràn không ai dùng, bé nên làm gì?",
+              "options": [
+                "Bịt vòi cho nước bắn tung tóe",
+                "Khóa chặt vòi nước lại",
+                "Bỏ đi chơi",
+                "Mở thêm các vòi nước khác"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c2-l9-q4",
+              "type": "knowledge",
+              "prompt": "Gặp thầy cô hoặc bác lao công trong trường, bé nên có thái độ thế nào?",
+              "options": [
+                "Chỉ chào cô giáo lớp mình",
+                "Lễ phép chào hỏi tất cả thầy cô và nhân viên trong trường",
+                "Trêu chọc, chế giễu",
+                "Quay đi chỗ khác để không phải chào"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c2-l9-q5",
+              "type": "knowledge",
+              "prompt": "Để giữ bàn học ngăn nắp, bé có thể tự làm sản phẩm gì?",
+              "options": [
+                "Làm ống đựng bút bằng chai nhựa hoặc hộp giấy",
+                "Xé sách vở gấp máy bay",
+                "Mua nhiều túi nilon bọc đồ",
+                "Để bút thước lung tung dưới gầm bàn"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g1-c2-l9-q6",
+              "type": "knowledge",
+              "prompt": "Vì sao trường học được coi là \"ngôi nhà thứ hai\" của bé?",
+              "options": [
+                "Là nơi bé chỉ đến ăn và ngủ",
+                "Là nơi bé được thầy cô dạy dỗ, có bạn bè cùng học tập và yêu thương nhau",
+                "Là nơi chỉ đến xem tivi, chơi game",
+                "Là nơi bé đến khi bố mẹ bận"
+              ],
+              "correctIndex": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c3-cong-dong-dia-phuong",
+      "chapterNumber": 3,
+      "title": "Chủ đề 3: Cộng đồng địa phương",
+      "lessons": [
+        {
+          "id": "l10-quang-canh-xung-quanh",
+          "lessonNumber": 10,
+          "title": "Bài 10: Cùng khám phá quang cảnh xung quanh",
+          "description": "Tìm hiểu cảnh vật quê hương và thành phố",
+          "questions": [
+            {
+              "id": "g1-c3-l10-q1",
+              "type": "knowledge",
+              "prompt": "Khi về quê thăm ông bà, bé dễ quan sát thấy hình ảnh nào?",
+              "options": [
+                "Nhà cao tầng chọc trời, ô tô đông đúc",
+                "Cánh đồng lúa, con đường làng, trạm y tế",
+                "Trung tâm thương mại, rạp chiếu phim",
+                "Sân bay lớn, đường cao tốc"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c3-l10-q2",
+              "type": "knowledge",
+              "prompt": "Quang cảnh đường phố ở thành phố khác gì so với làng quê?",
+              "options": [
+                "Có nhiều cây chuối và đàn gà",
+                "Nhà cửa san sát, nhiều nhà cao tầng, xe cộ đông đúc",
+                "Nhiều sông nhỏ và thuyền ghe",
+                "Vắng vẻ, không có người"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c3-l10-q3",
+              "type": "scenario",
+              "prompt": "Ăn bánh kẹo xong ở công viên, bé nên làm gì?",
+              "options": [
+                "Vứt vỏ bánh kẹo xuống bãi cỏ",
+                "Vứt vỏ vào thùng rác",
+                "Thả vỏ bánh kẹo xuống hồ",
+                "Nhét vỏ kẹo vào kẽ cây"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c3-l10-q4",
+              "type": "scenario",
+              "prompt": "Thấy bạn dùng gạch vẽ lên tường nhà dân, bé nên làm gì?",
+              "options": [
+                "Khuyên bạn không nên vẽ làm bẩn tường",
+                "Cùng lấy gạch ra vẽ tiếp",
+                "Đứng reo hò cổ vũ",
+                "Mặc kệ không quan tâm"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g1-c3-l10-q5",
+              "type": "knowledge",
+              "prompt": "Thái độ đúng đắn của học sinh đối với nơi mình sống là gì?",
+              "options": [
+                "Thờ ơ, không quan tâm",
+                "Yêu quý và giữ gìn môi trường sạch đẹp",
+                "Luôn chê bai nơi mình ở",
+                "Thường xuyên xả rác ra đường"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c3-l10-q6",
+              "type": "scenario",
+              "prompt": "Để giới thiệu quang cảnh nơi mình ở với các bạn, bé nên làm gì?",
+              "options": [
+                "Vẽ tranh về nơi mình sống và kể cho các bạn nghe",
+                "Giấu kín không cho ai biết",
+                "Nói dối về nơi mình sống",
+                "Khóc không muốn chia sẻ"
+              ],
+              "correctIndex": 0
+            }
+          ]
+        },
+        {
+          "id": "l11-con-nguoi-noi-em-song",
+          "lessonNumber": 11,
+          "title": "Bài 11: Con người nơi em sống",
+          "description": "Biết ơn và trân trọng các nghề nghiệp",
+          "questions": [
+            {
+              "id": "g1-c3-l11-q1",
+              "type": "knowledge",
+              "prompt": "Khi bé bị sốt, ai là người trực tiếp khám bệnh và kê đơn thuốc cho bé?",
+              "options": [
+                "Bác kỹ sư",
+                "Bác sĩ / Y sĩ",
+                "Bác nông dân",
+                "Cô thợ may"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c3-l11-q2",
+              "type": "knowledge",
+              "prompt": "Bác công nhân quét dọn rác trên đường phố mang lại lợi ích gì?",
+              "options": [
+                "Giữ đường phố sạch đẹp, bảo vệ môi trường",
+                "Làm đường phố đông đúc hơn",
+                "Không có lợi ích gì",
+                "Làm rác thải nhiều hơn"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g1-c3-l11-q3",
+              "type": "scenario",
+              "prompt": "Bác bưu tá mang thư đến nhà giữa trời nắng, bé nên làm gì?",
+              "options": [
+                "Lấy quà rồi đóng sầm cửa",
+                "Nhận đồ bằng 2 tay, cảm ơn và lấy nước mát mời bác",
+                "Trêu chọc, giật đồ",
+                "Giả vờ không thấy"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c3-l11-q4",
+              "type": "scenario",
+              "prompt": "Để thể hiện sự trân trọng công sức của bác nông dân, bé nên làm gì?",
+              "options": [
+                "Bỏ mứa, làm rơi vãi cơm",
+                "Ăn hết suất cơm, không làm rơi vãi",
+                "Khóc đòi bỏ bữa",
+                "Trộn vãi thức ăn ra sàn"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c3-l11-q5",
+              "type": "knowledge",
+              "prompt": "Tham gia làm sạch đường làng ngõ xóm, bé làm việc gì vừa sức?",
+              "options": [
+                "Vác thùng phuy nặng",
+                "Nhặt rác nhựa, lá khô và nhổ cỏ",
+                "Leo lên xe cẩu rác chơi",
+                "Đốt rác giữa đường"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c3-l11-q6",
+              "type": "knowledge",
+              "prompt": "Thái độ đúng đắn đối với mọi nghề nghiệp trong xã hội là gì?",
+              "options": [
+                "Nghề nào chân chính mang lại lợi ích cho xã hội cũng đáng trân trọng",
+                "Chỉ tôn trọng nghề kiếm nhiều tiền",
+                "Cười chê nghề vất vả, chân tay",
+                "Không cần quan tâm"
+              ],
+              "correctIndex": 0
+            }
+          ]
+        },
+        {
+          "id": "l12-vui-don-tet",
+          "lessonNumber": 12,
+          "title": "Bài 12: Vui đón Tết",
+          "description": "Phong tục ngày Tết cổ truyền",
+          "questions": [
+            {
+              "id": "g1-c3-l12-q1",
+              "type": "scenario",
+              "prompt": "Chuẩn bị đón Tết, bé làm việc gì vừa sức để giúp bố mẹ?",
+              "options": [
+                "Bày đồ chơi ra nhà",
+                "Lau chùi bàn ghế, dọn dẹp nhà cửa cùng bố mẹ",
+                "Đi ngủ cả ngày",
+                "Xem tivi suốt ngày"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c3-l12-q2",
+              "type": "scenario",
+              "prompt": "Được ông bà mừng tuổi (lì xì) ngày Tết, bé nên nhận thế nào?",
+              "options": [
+                "Nhận bằng 2 tay, cảm ơn và chúc Tết ông bà",
+                "Dùng một tay giật lấy rồi chạy đi",
+                "Mở bao lì xì đếm tiền ngay",
+                "Chê tiền ít không nhận"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g1-c3-l12-q3",
+              "type": "scenario",
+              "prompt": "Thấy bà và mẹ gói bánh chưng, bé có thể giúp việc gì?",
+              "options": [
+                "Hỏi ý nghĩa bánh chưng và phụ rửa lá dong",
+                "Nghịch xé rách lá dong",
+                "Ném gạo nếp ra sàn",
+                "Khóc đòi luộc bánh ngay"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g1-c3-l12-q4",
+              "type": "knowledge",
+              "prompt": "Dùng tiền mừng tuổi thế nào cho có ý nghĩa?",
+              "options": [
+                "Đòi mua hết đồ chơi, bánh kẹo",
+                "Nhờ bố mẹ giữ hộ, nuôi heo đất hoặc mua sách vở",
+                "Làm rơi mất hoặc vứt đi",
+                "Cho bạn khác lấy mất"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c3-l12-q5",
+              "type": "scenario",
+              "prompt": "Đến nhà họ hàng chúc Tết, bé nên chào hỏi thế nào?",
+              "options": [
+                "Đứng ngoài cửa không vào",
+                "Khoanh tay chào hỏi lễ phép và chúc Tết mọi người",
+                "Lao vào nhà nhảy lên sofa",
+                "Chỉ tập trung ăn bánh kẹo"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c3-l12-q6",
+              "type": "knowledge",
+              "prompt": "Vì sao Tết Nguyên đán là lễ hội quan trọng và vui nhất?",
+              "options": [
+                "Là dịp sum họp gia đình, thể hiện tình yêu thương",
+                "Vì được chơi game cả ngày",
+                "Vì được ăn thỏa thích không phải rửa bát",
+                "Vì được đi chơi đêm"
+              ],
+              "correctIndex": 0
+            }
+          ]
+        },
+        {
+          "id": "l13-an-toan-tren-duong",
+          "lessonNumber": 13,
+          "title": "Bài 13: An toàn trên đường",
+          "description": "Luật an toàn giao thông cơ bản",
+          "questions": [
+            {
+              "id": "g1-c3-l13-q1",
+              "type": "knowledge",
+              "prompt": "Khi được bố mẹ chở bằng xe máy, bé cần làm gì để an toàn?",
+              "options": [
+                "Ngồi quay lưng, không đội mũ bảo hiểm",
+                "Đội mũ bảo hiểm, ngồi ngay ngắn và bám chắc vào bố mẹ",
+                "Đứng lên yên xe",
+                "Dang hai tay làm máy bay"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c3-l13-q2",
+              "type": "knowledge",
+              "prompt": "Muốn sang đường tại ngã tư, bé nên sang đường khi nào?",
+              "options": [
+                "Khi đèn cho người đi bộ màu xanh và quan sát kỹ",
+                "Chạy thật nhanh khi đèn đỏ",
+                "Vừa đi vừa cúi mặt",
+                "Sang đường chỗ không có vạch kẻ"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g1-c3-l13-q3",
+              "type": "knowledge",
+              "prompt": "Đi bộ trên đường không có vỉa hè, bé nên đi như thế nào?",
+              "options": [
+                "Đi hàng ba, hàng bốn giữa đường",
+                "Đi sát mép đường bên phải và chú ý quan sát",
+                "Vừa đi vừa đá bóng",
+                "Đi sát mép đường bên trái"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c3-l13-q4",
+              "type": "knowledge",
+              "prompt": "Biển báo hình tròn màu đỏ, có vạch ngang màu trắng là biển báo gì?",
+              "options": [
+                "Cho phép xe đi vào",
+                "Biển báo cấm đi ngược chiều",
+                "Đường cho người đi bộ",
+                "Nơi được quay đầu xe"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c3-l13-q5",
+              "type": "scenario",
+              "prompt": "Thấy hố ga mất nắp hoặc khu vực thi công nguy hiểm, bé nên làm gì?",
+              "options": [
+                "Nhảy xuống hố xem",
+                "Đi tránh ra xa, không trèo rào chắn",
+                "Ném gạch đá xuống hố",
+                "Nhắm mắt chạy qua"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c3-l13-q6",
+              "type": "scenario",
+              "prompt": "Bố quên cài dây mũ bảo hiểm cho bé, bé nên nói gì?",
+              "options": [
+                "Im lặng không nói",
+                "Nhắc nhẹ: \"Bố ơi, bố cài dây mũ cho con nhé!\"",
+                "Hét to làm bố giật mình",
+                "Mặc kệ vì sắp muộn học"
+              ],
+              "correctIndex": 1
+            }
+          ]
+        },
+        {
+          "id": "l14-on-tap-cong-dong",
+          "lessonNumber": 14,
+          "title": "Bài 14: Ôn tập chủ đề Cộng đồng địa phương",
+          "description": "Tổng hợp kiến thức cộng đồng và an toàn",
+          "questions": [
+            {
+              "id": "g1-c3-l14-q1",
+              "type": "scenario",
+              "prompt": "Bạn nhỏ chạy bị ngã đổ hộp màu vẽ, bé nên làm gì?",
+              "options": [
+                "Cười nhạo rồi chạy đi",
+                "Chạy lại đỡ bạn và giúp nhặt đồ màu",
+                "Đi qua coi như không biết",
+                "Đổ lỗi cho bạn khác"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c3-l14-q2",
+              "type": "scenario",
+              "prompt": "Sau buổi văn nghệ, dưới sàn nhà văn hóa có rác, bé nên làm gì?",
+              "options": [
+                "Vứt thêm vỏ bánh kẹo ra sàn",
+                "Nhặt rác bỏ vào thùng rác công cộng",
+                "Đá rác sang góc nhà",
+                "Mặc kệ vì là rác người khác"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c3-l14-q3",
+              "type": "scenario",
+              "prompt": "Thấy cành cây gai chặn ngang lối đi, bé làm gì để an toàn?",
+              "options": [
+                "Nhảy qua cành cây gai",
+                "Đi vòng tránh và báo người lớn thu dọn",
+                "Kéo cành cây ra giữa đường",
+                "Cởi dép đi chân đất qua"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c3-l14-q4",
+              "type": "knowledge",
+              "prompt": "Tham gia lễ hội truyền thống, hành vi nào là văn minh?",
+              "options": [
+                "Chen lấn, xô đẩy",
+                "Lễ phép, xếp hàng và giữ vệ sinh chung",
+                "Tự ý hái hoa, bẻ cành",
+                "Nói tục, chửi thề"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c3-l14-q5",
+              "type": "scenario",
+              "prompt": "Để giới thiệu cộng đồng nơi mình sống với bạn bè, bé nên làm gì?",
+              "options": [
+                "Vẽ tranh hoặc sưu tầm tranh ảnh về nơi mình sống",
+                "Trốn trong phòng không tiếp xúc ai",
+                "Chê bai nơi mình sống",
+                "Vứt bỏ hết tranh vẽ"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g1-c3-l14-q6",
+              "type": "knowledge",
+              "prompt": "Mọi người cần làm gì để nơi mình sống an toàn, hạnh phúc?",
+              "options": [
+                "Chỉ sống cho riêng mình",
+                "Yêu quý, giúp đỡ nhau và giữ gìn vệ sinh chung",
+                "Thường xuyên gây mâu thuẫn",
+                "Xả rác bừa bãi"
+              ],
+              "correctIndex": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c4-thuc-vat-dong-vat",
+      "chapterNumber": 4,
+      "title": "Chủ đề 4: Thực vật và động vật",
+      "lessons": [
+        {
+          "id": "l15-cay-xung-quanh-em",
+          "lessonNumber": 15,
+          "title": "Bài 15: Cây xung quanh em",
+          "description": "Nhận biết các loài cây và các bộ phận của cây",
+          "questions": [
+            {
+              "id": "g1-c4-l15-q1",
+              "type": "knowledge",
+              "prompt": "Bộ phận nào của cây nằm sâu dưới đất giúp cây hút chất dinh dưỡng?",
+              "options": ["Hoa", "Rễ cây", "Lá cây", "Quả"],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c4-l15-q2",
+              "type": "knowledge",
+              "prompt": "Tán cây to ở sân trường cho chúng ta lợi ích gì vào ngày hè?",
+              "options": [
+                "Cho bóng mát",
+                "Cho ăn quả",
+                "Cung cấp gỗ",
+                "Làm thuốc nam"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g1-c4-l15-q3",
+              "type": "knowledge",
+              "prompt": "Cây rau cải và cây cà chua thuộc nhóm cây nào?",
+              "options": [
+                "Cây lấy gỗ",
+                "Cây làm cảnh",
+                "Cây cho rau và cây ăn quả",
+                "Cây bóng mát"
+              ],
+              "correctIndex": 2
+            },
+            {
+              "id": "g1-c4-l15-q4",
+              "type": "scenario",
+              "prompt": "Thấy bạn cố tình bẻ cành, vặt lá, bé khuyên bạn thế nào?",
+              "options": [
+                "\"Bạn đừng bẻ cành, hãy để cây lớn cho bóng mát nhé!\"",
+                "\"Bẻ cho mình một cành với!\"",
+                "Đứng reo hò cổ vũ",
+                "Mặc kệ không quan tâm"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g1-c4-l15-q5",
+              "type": "knowledge",
+              "prompt": "Ăn nhiều rau xanh và hoa quả mang lại lợi ích gì?",
+              "options": [
+                "Cung cấp vitamin giúp cơ thể khỏe mạnh, tiêu hóa tốt",
+                "Làm cơ thể bị béo phì",
+                "Không có lợi ích gì",
+                "Làm bé buồn ngủ"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g1-c4-l15-q6",
+              "type": "knowledge",
+              "prompt": "Hầu hết các loại cây gồm những bộ phận chính nào?",
+              "options": [
+                "Rễ, thân, lá, hoa và quả",
+                "Chỉ có thân và lá",
+                "Chỉ có hoa và quả",
+                "Chỉ có rễ và cành"
+              ],
+              "correctIndex": 0
+            }
+          ]
+        },
+        {
+          "id": "l16-cham-soc-bao-ve-cay",
+          "lessonNumber": 16,
+          "title": "Bài 16: Chăm sóc và bảo vệ cây trồng",
+          "description": "Kỹ năng tưới cây và bảo vệ cây xanh",
+          "questions": [
+            {
+              "id": "g1-c4-l16-q1",
+              "type": "scenario",
+              "prompt": "Cây cảnh bị héo, đất khô nứt, bé nên làm gì?",
+              "options": [
+                "Đổ thêm rác vào chậu",
+                "Tưới nước nhẹ nhàng và để cây ra chỗ có ánh sáng",
+                "Bẻ hết lá héo rồi cất vào tủ",
+                "Đổ nước xà phòng vào gốc"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c4-l16-q2",
+              "type": "scenario",
+              "prompt": "Thấy trên lá rau có sâu ăn lá, bé nên làm gì?",
+              "options": [
+                "Dùng nhíp hoặc nhờ bố mẹ bắt sâu và nhổ cỏ",
+                "Bẻ gãy cây rau vứt đi",
+                "Đốt lửa dưới gốc rau",
+                "Giậm chân lên luống rau"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g1-c4-l16-q3",
+              "type": "knowledge",
+              "prompt": "Việc làm nào giúp tiết kiệm giấy vở, bảo vệ rừng?",
+              "options": [
+                "Xé giấy làm máy bay",
+                "Giữ gìn sách vở cẩn thận, viết cẩn thận từng trang",
+                "Vẽ vung vãi rồi bỏ dở trang",
+                "Mua nhiều vở không dùng"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c4-l16-q4",
+              "type": "scenario",
+              "prompt": "Để không bị thương khi ngắm cây hoa hồng có gai, bé lưu ý gì?",
+              "options": [
+                "Lao vào ôm cây hoa",
+                "Ngắm nhìn từ xa, không tự ý sờ hoặc ngắt cành",
+                "Dùng tay vò nát lá",
+                "Hít thật sát vào bông hoa"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c4-l16-q5",
+              "type": "scenario",
+              "prompt": "Thấy bạn lấy dao khắc lên thân cây, bé nên làm gì?",
+              "options": [
+                "Khuyên bạn không nên khắc làm hỏng cây",
+                "Mượn dao khắc cùng bạn",
+                "Đứng reo hò cổ vũ",
+                "Trèo lên cành cây cùng bạn"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g1-c4-l16-q6",
+              "type": "knowledge",
+              "prompt": "Hạt giống cần những gì để nảy mầm thành cây khỏe mạnh?",
+              "options": [
+                "Nước, không khí, ánh sáng và chất dinh dưỡng",
+                "Chỉ cần bóng tối",
+                "Chỉ cần nước ngọt có gas",
+                "Chỉ cần dầu ăn"
+              ],
+              "correctIndex": 0
+            }
+          ]
+        },
+        {
+          "id": "l17-con-vat-quanh-em",
+          "lessonNumber": 17,
+          "title": "Bài 17: Con vật quanh em",
+          "description": "Tìm hiểu các loài động vật thân quen",
+          "questions": [
+            {
+              "id": "g1-c4-l17-q1",
+              "type": "knowledge",
+              "prompt": "Phần lớn cơ thể của các con vật gồm những bộ phận nào?",
+              "options": [
+                "Đầu, thân và cơ quan di chuyển (chân, cánh hoặc vây)",
+                "Chỉ có đầu và cành",
+                "Chỉ có thân và đuôi",
+                "Chỉ có bộ lông"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g1-c4-l17-q2",
+              "type": "knowledge",
+              "prompt": "Lợi ích chính của những chú gà mái nuôi trong nhà là gì?",
+              "options": [
+                "Cung cấp trứng và thịt",
+                "Giúp kéo xe",
+                "Giúp trông nhà",
+                "Cung cấp gỗ"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g1-c4-l17-q3",
+              "type": "knowledge",
+              "prompt": "Buông màn (mùng) khi ngủ giúp phòng tránh con vật nào gây hại?",
+              "options": ["Con muỗi", "Con mèo", "Con chim sâu", "Con thỏ"],
+              "correctIndex": 0
+            },
+            {
+              "id": "g1-c4-l17-q4",
+              "type": "scenario",
+              "prompt": "Đi vườn thú thấy biển cảnh báo \"KHÔNG LẠI GẦN\", bé nên làm gì?",
+              "options": [
+                "Đứng ngoài hàng rào an toàn, ngắm từ xa",
+                "Trèo qua hàng rào lại gần",
+                "Lấy gậy chọc con vật",
+                "Thò tay trêu chọc con vật"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g1-c4-l17-q5",
+              "type": "knowledge",
+              "prompt": "Cơ quan di chuyển của cá và chim lần lượt là gì?",
+              "options": [
+                "Cá di chuyển bằng vây/đuôi, chim di chuyển bằng cánh",
+                "Cá di chuyển bằng chân, chim di chuyển bằng vây",
+                "Cả hai đều di chuyển bằng 4 chân",
+                "Cả hai đều bò bằng bụng"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g1-c4-l17-q6",
+              "type": "scenario",
+              "prompt": "Nhà có nhiều ruồi, muỗi, gián, bé khuyên bạn làm gì để xua đuổi?",
+              "options": [
+                "Đậy kín thức ăn, giữ nhà cửa và bồn rửa sạch sẽ",
+                "Bày thêm thức ăn thừa ra sàn",
+                "Đổ nước ra sàn bếp",
+                "Mặc kệ không dọn dẹp"
+              ],
+              "correctIndex": 0
+            }
+          ]
+        },
+        {
+          "id": "l18-cham-soc-bao-ve-vat-nuoi",
+          "lessonNumber": 18,
+          "title": "Bài 18: Chăm sóc và bảo vệ vật nuôi",
+          "description": "Yêu thương và chăm sóc thú cưng",
+          "questions": [
+            {
+              "id": "g1-c4-l18-q1",
+              "type": "scenario",
+              "prompt": "Thấy chú cún cưng buồn rầu, bỏ ăn và nằm co ro, bé nên làm gì?",
+              "options": [
+                "Quát mắng và đánh chú cún",
+                "Báo ngay với bố mẹ để đưa cún đi khám bác sĩ thú y",
+                "Bỏ mặc cún không quan tâm",
+                "Mắng cún lười biếng"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c4-l18-q2",
+              "type": "scenario",
+              "prompt": "Gặp chú chó lạ đang đứng một mình và gầm gừ, bé nên làm gì để an toàn?",
+              "options": [
+                "Chạy lại vuốt ve chú chó",
+                "Không trêu chọc, bình tĩnh lùi lại xa và báo người lớn",
+                "Lấy gạch đá ném chú chó",
+                "Chạy thật nhanh và hét to"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c4-l18-q3",
+              "type": "scenario",
+              "prompt": "Bị mèo cào xước tay chảy máu, việc quan trọng đầu tiên bé cần làm là gì?",
+              "options": [
+                "Giấu bố mẹ vì sợ bị mắng",
+                "Rửa sạch vết thương bằng xà phòng dưới nước chảy và báo bố mẹ ngay",
+                "Bôi bùn đất vào vết thương",
+                "Dán băng đè lên mà không rửa"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c4-l18-q4",
+              "type": "scenario",
+              "prompt": "Bố rủ đi ăn thịt thú rừng, bé nên nói gì với bố?",
+              "options": [
+                "\"Đồng ý ngay vì thịt thú rừng rất ngon\"",
+                "\"Bố ơi, chúng ta không nên ăn thịt thú rừng để bảo vệ động vật nhé!\"",
+                "Rủ thêm nhiều bạn cùng đi ăn",
+                "Mặc kệ bố muốn làm gì thì làm"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c4-l18-q5",
+              "type": "knowledge",
+              "prompt": "Để vật nuôi luôn khỏe mạnh, không hôi hám, gia đình bé nên làm gì?",
+              "options": [
+                "Cho vật nuôi ăn thức ăn ôi thiu",
+                "Quét dọn chuồng trại sạch sẽ, tắm rửa và tiêm phòng cho vật nuôi",
+                "Đóng kín cửa chuồng không dọn dẹp",
+                "Thả phân vật nuôi ra đường chung"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c4-l18-q6",
+              "type": "scenario",
+              "prompt": "Đi học về thấy chú mèo nhỏ quấn quýt dưới chân, bé nên làm gì?",
+              "options": [
+                "Lấy chân đá chú mèo ra xa",
+                "Mỉm cười, vuốt ve nhẹ nhàng và cho mèo ăn thức ăn sạch",
+                "Xách tai chú mèo lên cao",
+                "Tắm cho mèo bằng nước sôi"
+              ],
+              "correctIndex": 1
+            }
+          ]
+        },
+        {
+          "id": "l19-on-tap-thuc-vat-dong-vat",
+          "lessonNumber": 19,
+          "title": "Bài 19: Ôn tập chủ đề Thực vật và động vật",
+          "description": "Tổng hợp kiến thức cây cối và loài vật",
+          "questions": [
+            {
+              "id": "g1-c4-l19-q1",
+              "type": "scenario",
+              "prompt": "Để cây đậu bé gieo mầm phát triển tốt và ra nhiều quả, bé nên làm gì hàng ngày?",
+              "options": [
+                "Đặt cây nơi có ánh sáng, tưới nước vừa đủ, nhổ cỏ và bắt sâu",
+                "Cất chậu cây vào tủ kín tối om và không tưới nước",
+                "Đổ nước xà phòng nóng vào gốc cây",
+                "Ngắt hết lá khi cây vừa mới mọc"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g1-c4-l19-q2",
+              "type": "scenario",
+              "prompt": "Thấy quả dại màu sắc sặc sỡ và chú cún lạ ở nông trại, bé nên làm gì để an toàn?",
+              "options": [
+                "Tự ý hái quả dại ăn thử và trêu chọc chú cún",
+                "Không tự ý hái ăn quả lạ và không trêu chọc chú cún",
+                "Lấy gạch đá ném chú cún",
+                "Bẻ cành cây dại quật chú cún"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c4-l19-q3",
+              "type": "knowledge",
+              "prompt": "Cây cối cho bóng mát, rau làm thức ăn, mèo bắt chuột, bò lấy sức kéo. Ý kiến nào đúng nhất?",
+              "options": [
+                "Cây cối và con vật mang lại nhiều lợi ích cho con người",
+                "Cây cối và con vật chỉ gây hại chứ không có lợi ích",
+                "Chỉ có con vật mới có ích, còn cây cối thì không",
+                "Chỉ có cây cối mới có ích, còn con vật thì không"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g1-c4-l19-q4",
+              "type": "scenario",
+              "prompt": "Thấy bạn giẫm lên cỏ hoa và dùng gậy xua đuổi làm đau chim bồ câu, bé nên khuyên bạn thế nào?",
+              "options": [
+                "\"Bạn ơi, hãy bảo vệ cây xanh và yêu quý các con vật nhé!\"",
+                "\"Cho mình mượn gậy xua chim cùng với!\"",
+                "Đứng hò reo cổ vũ bạn",
+                "Mặc kệ không quan tâm"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g1-c4-l19-q5",
+              "type": "scenario",
+              "prompt": "Bị nhựa cây dại dính vào tay gây ngứa hoặc bị mèo cào xước nhẹ, bé nên làm gì ngay?",
+              "options": [
+                "Rửa sạch bằng xà phòng dưới nước sạch và báo ngay với người lớn",
+                "Giấu bố mẹ vì sợ bị mắng",
+                "Lấy đất bẩn đắp lên chỗ ngứa hay vết xước",
+                "Lấy bàn chải chà thật mạnh làm chảy máu"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g1-c4-l19-q6",
+              "type": "knowledge",
+              "prompt": "Để trở thành \"Hiệp sĩ bảo vệ thiên nhiên\", hành động nào bé KHÔNG NÊN làm?",
+              "options": [
+                "Nhổ cỏ, tưới nước cho cây và cho vật nuôi ăn uống sạch sẽ",
+                "Ngắt hoa bẻ cành bừa bãi và săn bắt động vật hoang dã",
+                "Tiết kiệm giấy vở để góp phần bảo vệ rừng xanh",
+                "Khuyên mọi người không nên ăn thịt thú rừng"
+              ],
+              "correctIndex": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c5-con-nguoi-suc-khoe",
+      "chapterNumber": 5,
+      "title": "Chủ đề 5: Con người và sức khỏe",
+      "lessons": [
+        {
+          "id": "l20-co-the-em",
+          "lessonNumber": 20,
+          "title": "Bài 20: Cơ thể em",
+          "description": "Tìm hiểu các bộ phận cơ thể và giữ gìn vệ sinh",
+          "questions": [
+            {
+              "id": "g1-c5-l20-q1",
+              "type": "scenario",
+              "prompt": "Lớp có bạn mới chuyển đến có da ngăm và tóc xoăn khác các bạn, bé nên làm gì?",
+              "options": [
+                "Tụ tập cùng bạn khác trêu chọc bạn",
+                "Vui vẻ, tôn trọng sự khác biệt và rủ bạn cùng chơi",
+                "Xa lánh, không chịu ngồi chung bàn",
+                "Đặt biệt danh xấu cho bạn"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c5-l20-q2",
+              "type": "knowledge",
+              "prompt": "Khi chơi nhảy dây và chuyền bóng, những bộ phận chính nào giúp bé vận động?",
+              "options": [
+                "Đầu, tay, chân và thân mình",
+                "Chỉ có tai và mắt",
+                "Chỉ có mái tóc và móng tay",
+                "Chỉ có cái lưng"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g1-c5-l20-q3",
+              "type": "scenario",
+              "prompt": "Thấy bạn bị khuyết tật chân đi lại khó khăn lên cầu thang, bé nên làm gì?",
+              "options": [
+                "Chạy vượt qua mặt bạn và cười nhạo",
+                "Mỉm cười, lại gần hỏi dìu hoặc xách cặp giúp bạn",
+                "Đứng nhìn và chỉ trỏ",
+                "Đẩy bạn sang một bên cho rộng chỗ"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c5-l20-q4",
+              "type": "scenario",
+              "prompt": "Đi chơi về mồ hôi đầm đìa, tay chân bẩn, trước khi ăn cơm bé cần làm gì?",
+              "options": [
+                "Dùng tay bẩn xúc ăn ngay",
+                "Tắm rửa sạch sẽ, thay quần áo và rửa tay xà phòng",
+                "Chỉ dùng khăn khô lau qua tay",
+                "Bôi mồ hôi vào áo rồi ăn cơm"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c5-l20-q5",
+              "type": "knowledge",
+              "prompt": "Bé nên rửa tay bằng xà phòng vào những thời điểm quan trọng nào?",
+              "options": [
+                "Trước khi ăn, sau khi đi vệ sinh và sau khi chơi bẩn",
+                "Chỉ rửa tay khi bị mẹ mắng",
+                "Chỉ rửa tay vào buổi sáng sau khi ngủ dậy",
+                "Không cần rửa tay bao giờ"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g1-c5-l20-q6",
+              "type": "knowledge",
+              "prompt": "Để răng chắc khỏe, không bị sâu, bé nên chải răng đúng cách khi nào?",
+              "options": [
+                "Ăn bánh kẹo xong đi ngủ ngay",
+                "Chải răng 2 lần mỗi ngày (sau ăn sáng và trước khi đi ngủ)",
+                "Một tuần chỉ chải răng 1 lần",
+                "Dùng gậy nhọn chọc vào kẽ răng"
+              ],
+              "correctIndex": 1
+            }
+          ]
+        },
+        {
+          "id": "l21-cac-giac-quan",
+          "lessonNumber": 21,
+          "title": "Bài 21: Các giác quan của cơ thể",
+          "description": "Nhận biết và chăm sóc 5 giác quan",
+          "questions": [
+            {
+              "id": "g1-c5-l21-q1",
+              "type": "knowledge",
+              "prompt": "Thấy súp gà màu vàng, ngửi thơm và nếm vị ngọt, bé đã dùng những giác quan nào?",
+              "options": [
+                "Thị giác (mắt), Khứu giác (mũi) và Vị giác (lưỡi)",
+                "Thính giác (tai) và Tẩy giác",
+                "Chỉ dùng Thị giác (mắt)",
+                "Chỉ dùng Xúc giác (da)"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g1-c5-l21-q2",
+              "type": "scenario",
+              "prompt": "Khi học bài hoặc xem tivi, hành động nào giúp bảo vệ mắt, tránh cận thị?",
+              "options": [
+                "Ngồi học trong phòng tối không bật đèn",
+                "Giữ khoảng cách, ngồi thẳng lưng, đủ ánh sáng và không xem tivi quá gần",
+                "Nằm ngửa vừa học vừa xem điện thoại",
+                "Dúi sát mắt vào trang sách"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c5-l21-q3",
+              "type": "scenario",
+              "prompt": "Gặp tiếng ồn to hoặc khi nghe nhạc, bé nên làm gì để bảo vệ tai?",
+              "options": [
+                "Bịt tai khi gặp tiếng ồn quá to và mở âm thanh vừa đủ nghe",
+                "Bật tai nghe hết cỡ (max volume)",
+                "Dùng que nhọn ngoáy sâu vào tai",
+                "Ghé sát tai vào máy khoan đang chạy"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g1-c5-l21-q4",
+              "type": "scenario",
+              "prompt": "Thấy bát mì nóng bốc khói, bé nên làm gì để không bị bỏng lưỡi?",
+              "options": [
+                "Vội vàng ăn ngay khi đang sôi",
+                "Chờ mì nguội bớt hoặc thổi nhẹ rồi mới ăn",
+                "Cho thêm thật nhiều ớt cay xè",
+                "Dùng đá lạnh buốt chèn vào lưỡi"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c5-l21-q5",
+              "type": "scenario",
+              "prompt": "Khi đi đường nhiều khói bụi, bé nên làm gì để bảo vệ mũi?",
+              "options": [
+                "Đeo khẩu trang che kín mũi miệng và vệ sinh mũi bằng nước muối",
+                "Dùng tay hỉ mũi thật mạnh",
+                "Dùng hạt cườm nhét vào mũi chơi",
+                "Ngửi trực tiếp các chai hóa chất tẩy rửa"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g1-c5-l21-q6",
+              "type": "scenario",
+              "prompt": "Giữa trưa hè nắng gắt đi ra ngoài, bé cần chuẩn bị gì để bảo vệ da?",
+              "options": [
+                "Mặc áo ngắn đứng tắm nắng giữa trưa",
+                "Đội mũ rộng vành, mặc áo khoác che nắng và thoa kem chống nắng",
+                "Dùng gạch cọ xát mạnh lên da",
+                "Sờ tay vào sâu róm, cây có gai độc"
+              ],
+              "correctIndex": 1
+            }
+          ]
+        },
+        {
+          "id": "l22-an-uong-hang-ngay",
+          "lessonNumber": 22,
+          "title": "Bài 22: Ăn, uống hằng ngày",
+          "description": "Dinh dưỡng và an toàn thực phẩm",
+          "questions": [
+            {
+              "id": "g1-c5-l22-q1",
+              "type": "scenario",
+              "prompt": "Thấy món rau không thích trong bữa ăn, bé nên làm gì để cơ thể đủ chất?",
+              "options": [
+                "Gạt đĩa rau ra xa và không chịu ăn",
+                "Vẫn ăn đầy đủ cả rau, thịt, cá và cơm",
+                "Chỉ ăn mỗi thịt rồi đòi uống nước ngọt",
+                "Bỏ bữa cơm đi ăn bánh kẹo"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c5-l22-q2",
+              "type": "scenario",
+              "prompt": "Thấy đĩa hoa quả bị ruồi đậu và bánh kẹo không đậy nắp, bé nên làm gì?",
+              "options": [
+                "Bốc ăn ngay vì đang rất đói",
+                "Không ăn đồ bị ruồi đậu, báo bố mẹ gọt quả mới rửa sạch",
+                "Cầm bánh kẹo đi chia cho các bạn",
+                "Lấy tay phủi ruồi đi rồi ăn tiếp"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c5-l22-q3",
+              "type": "knowledge",
+              "prompt": "Đi đá bóng về mệt và khát, hành động nào ĐÚNG VÀ AN TOÀN cho sức khỏe?",
+              "options": [
+                "Uống nước lọc sạch hoặc nước đun sôi để nguội",
+                "Uống nước mưa hứng trực tiếp ngoài trời",
+                "Mua nước ngọt có gas uống liên tục 3-4 chai",
+                "Uống nước ở ao hồ gần nhà"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g1-c5-l22-q4",
+              "type": "scenario",
+              "prompt": "Bị đau bụng sau khi ăn đồ ăn ở cổng trường, bé nên làm gì ngay?",
+              "options": [
+                "Giấu bố mẹ và chịu đau một mình",
+                "Báo ngay với bố mẹ hoặc người lớn trong nhà",
+                "Tiếp tục ăn thêm bánh kẹo cho đỡ đau",
+                "Nằm gục xuống sàn nhà khóc thầm"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c5-l22-q5",
+              "type": "knowledge",
+              "prompt": "Mẹ nhờ đi mua hộp sữa tươi, bé cần chú ý điều gì trên vỏ hộp?",
+              "options": [
+                "Chỉ chọn hộp có màu sắc sặc sỡ nhất",
+                "Kiểm tra xem vỏ hộp có móp méo không và xem hạn sử dụng",
+                "Chọn hộp to nhất không cần xem ngày",
+                "Lấy đại một hộp bất kỳ"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c5-l22-q6",
+              "type": "knowledge",
+              "prompt": "Để cơ thể đủ năng lượng lớn lên khỏe mạnh, bé cần ăn đầy đủ mấy bữa chính mỗi ngày?",
+              "options": [
+                "1 bữa (bữa tối)",
+                "3 bữa chính (bữa sáng, bữa trưa và bữa tối)",
+                "Không cần ăn bữa nào, chỉ cần uống nước",
+                "10 bữa rải rác cả ngày"
+              ],
+              "correctIndex": 1
+            }
+          ]
+        },
+        {
+          "id": "l23-van-dong-va-nghi-ngoi",
+          "lessonNumber": 23,
+          "title": "Bài 23: Vận động và nghỉ ngơi",
+          "description": "Rèn luyện thể chất và giấc ngủ lành mạnh",
+          "questions": [
+            {
+              "id": "g1-c5-l23-q1",
+              "type": "scenario",
+              "prompt": "Buổi sáng trước khi đi học hoặc cuối tuần, bé nên làm gì để cơ thể dẻo dai?",
+              "options": [
+                "Nằm bấm điện thoại cả buổi sáng",
+                "Tập thể dục, chạy bộ cùng bố mẹ hoặc đi xe đạp nhỏ",
+                "Ngồi xem tivi liên tục 4 tiếng",
+                "Ngủ trùm chăn kín đầu"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c5-l23-q2",
+              "type": "knowledge",
+              "prompt": "Nếu đi học về chỉ ngồi một chỗ chơi game, cơ thể sẽ thế nào?",
+              "options": [
+                "Khỏe mạnh, nhanh nhẹn hơn",
+                "Dễ mệt mỏi, béo phì, yếu ớt và dễ bị cận thị",
+                "Cao lớn nhanh chóng",
+                "Không ảnh hưởng gì"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c5-l23-q3",
+              "type": "knowledge",
+              "prompt": "Để ngày mai thức dậy tỉnh táo và đi học đúng giờ, bé nên đi ngủ lúc mấy giờ?",
+              "options": [
+                "Thức khuya đến 1–2 giờ sáng",
+                "Đi ngủ sớm trước 10 giờ tối và ngủ đủ 8–10 tiếng",
+                "Thức trắng đêm chơi đồ chơi",
+                "Đi ngủ lúc 12 giờ đêm"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c5-l23-q4",
+              "type": "scenario",
+              "prompt": "Học bài khoảng 45 phút thấy mỏi mắt và lưng, bé nên nghỉ ngơi thế nào?",
+              "options": [
+                "Đứng dậy vươn hông, tập thể dục nhẹ và nhìn ra cây xanh",
+                "Bật điện thoại chơi game",
+                "Tiếp tục gục mặt xuống bàn học",
+                "Dúi mắt vào tivi"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g1-c5-l23-q5",
+              "type": "scenario",
+              "prompt": "Vừa ăn cơm xong rất no, anh rủ ra sân chạy nhảy đá bóng, bé nên nói gì?",
+              "options": [
+                "\"Đồng ý ngay, ra đá bóng liền thôi!\"",
+                "\"Anh ơi, vừa ăn no xong chạy nhảy ngay sẽ bị đau bụng, nghỉ ngơi chút đã nhé!\"",
+                "Lấy bóng ra sân chạy thật nhanh",
+                "Khóc đòi đi ăn tiếp"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c5-l23-q6",
+              "type": "knowledge",
+              "prompt": "Lợi ích của việc kết hợp vận động hợp lý và nghỉ ngơi điều độ là gì?",
+              "options": [
+                "Tinh thần thoải mái, cơ thể phát triển cân đối và tăng sức đề kháng",
+                "Làm cho bé lười biếng hơn",
+                "Làm cho bé không học được bài",
+                "Không có lợi ích nào"
+              ],
+              "correctIndex": 0
+            }
+          ]
+        },
+        {
+          "id": "l24-tu-bao-ve-minh",
+          "lessonNumber": 24,
+          "title": "Bài 24: Tự bảo vệ mình",
+          "description": "Quy tắc 5 ngón tay và phòng tránh nguy hiểm",
+          "questions": [
+            {
+              "id": "g1-c5-l24-q1",
+              "type": "scenario",
+              "prompt": "Người lạ đưa bánh kẹo và bảo đi theo lấy đồ chơi, bé nên làm gì để an toàn?",
+              "options": [
+                "Vội vàng nhận bánh kẹo và đi theo người đó",
+                "Kiên quyết nói \"Không!\", lùi lại, chạy về nơi đông người và hét to nhờ giúp đỡ",
+                "Đứng yên trò chuyện vui vẻ với người lạ",
+                "Nhận quà rồi rủ thêm bạn đi cùng"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c5-l24-q2",
+              "type": "knowledge",
+              "prompt": "Theo Quy tắc 5 ngón tay, ngoại trừ bác sĩ khám bệnh (có bố mẹ đồng ý) hoặc bố mẹ hỗ trợ lúc nhỏ, không ai được phép làm gì?",
+              "options": [
+                "Bắt tay bé",
+                "Tự ý chạm, nhìn hoặc bắt bé chạm vào vùng riêng tư của họ",
+                "Khen bé ngoan",
+                "Chơi nhảy dây cùng bé"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c5-l24-q3",
+              "type": "scenario",
+              "prompt": "Thấy phích nước sôi hoặc chảo dầu nóng bốc khói trên bếp, bé nên làm gì?",
+              "options": [
+                "Tránh xa khu vực bếp nóng, không đụng vào để tránh bị bỏng",
+                "Bê phích nước sôi đi lại trong nhà",
+                "Lấy tay chạm thử xem có nóng không",
+                "Dùng chân đá vào bếp gas"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g1-c5-l24-q4",
+              "type": "scenario",
+              "prompt": "Giờ ra chơi bị nhóm bạn dọa nạt và cố tình giật cặp sách, bé nên làm gì?",
+              "options": [
+                "Giấu kín không dám nói với ai",
+                "Bình tĩnh thoát khỏi chỗ đó và báo ngay với thầy cô",
+                "Lao vào đánh nhau với nhóm bạn đó",
+                "Bỏ học đi về nhà"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c5-l24-q5",
+              "type": "knowledge",
+              "prompt": "Khi gặp nguy hiểm khẩn cấp như đi lạc hay hỏa hoạn, điều quan trọng bé cần ghi nhớ là gì?",
+              "options": [
+                "Nhớ số điện thoại của bố mẹ và các số khẩn cấp (113, 114, 115, 111)",
+                "Khóc ăn vạ ngồi một chỗ",
+                "Đi theo một người lạ mặt khác",
+                "Tắt nguồn điện thoại"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g1-c5-l24-q6",
+              "type": "scenario",
+              "prompt": "Khi có người cố tình ôm ghì, lôi đi làm bé sợ hãi, bí kíp tự bảo vệ hiệu quả nhất là gì?",
+              "options": [
+                "Im lặng chịu đựng",
+                "Hét thật to: \"Cứu cháu với! Cháu không quen người này!\"",
+                "Cười xòa cho qua",
+                "Xin lỗi người đó"
+              ],
+              "correctIndex": 1
+            }
+          ]
+        },
+        {
+          "id": "l25-on-tap-suc-khoe",
+          "lessonNumber": 25,
+          "title": "Bài 25: Ôn tập chủ đề Con người và sức khỏe",
+          "description": "Tổng hợp chăm sóc cơ thể và tự bảo vệ bản thân",
+          "questions": [
+            {
+              "id": "g1-c5-l25-q1",
+              "type": "knowledge",
+              "prompt": "Để bảo vệ cơ thể, thói quen chăm sóc bản thân nào bé cần duy trì hàng ngày?",
+              "options": [
+                "Ăn đủ chất, rửa tay xà phòng, chải răng 2 lần/ngày và ngủ đúng giờ",
+                "Xem tivi và chơi điện tử đến muộn mới đi ngủ",
+                "Chỉ ăn món mình thích và từ chối ăn rau xanh",
+                "Lười tắm rửa và để tay chân lem luốc khi đi ngủ"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g1-c5-l25-q2",
+              "type": "scenario",
+              "prompt": "Để giữ cho mắt và tai luôn khỏe mạnh, bé nên làm gì?",
+              "options": [
+                "Đeo kính râm khi ra trời nắng và không nghe âm thanh quá to",
+                "Dúi mắt thật sát vào bông hoa để nhìn",
+                "Ghé sát tai vào loa phát nhạc âm lượng lớn",
+                "Dùng tay bẩn dụi mạnh vào mắt"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g1-c5-l25-q3",
+              "type": "scenario",
+              "prompt": "Trong buổi liên hoan, bé nên chọn đồ ăn, thức uống nào tốt cho tiêu hóa?",
+              "options": [
+                "Uống nhiều lon nước ngọt và ăn hết bánh kẹo",
+                "Ưu tiên ăn hoa quả tươi sạch, ăn vừa đủ và uống nước lọc",
+                "Ăn đồ ăn đã để lâu bị ruồi đậu vào",
+                "Bỏ bữa không ăn gì"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c5-l25-q4",
+              "type": "scenario",
+              "prompt": "Sau khi tập thể dục hoặc đá bóng ra nhiều mồ hôi, bé nên nghỉ ngơi thế nào?",
+              "options": [
+                "Ngồi quạt hoặc vào phòng điều hòa lạnh ngay",
+                "Mua nước đá uống thật nhanh",
+                "Lau khô mồ hôi, ngồi nghỉ nơi thoáng mát và uống từng ngụm nước nhỏ",
+                "Chạy ngay vào bể bơi tắm"
+              ],
+              "correctIndex": 2
+            },
+            {
+              "id": "g1-c5-l25-q5",
+              "type": "scenario",
+              "prompt": "Tình huống nào dưới đây đòi hỏi bé phải xử lý để bảo vệ an toàn cho bản thân?",
+              "options": [
+                "Khi người lạ cho quà rủ đi theo, có ai chạm vào vùng riêng tư hoặc bị bắt nạt",
+                "Khi được cô giáo khen ngoan trước lớp",
+                "Khi cùng bố mẹ đi dạo trong công viên",
+                "Khi bác sĩ khám bệnh cho bé dưới sự giám sát của bố mẹ"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g1-c5-l25-q6",
+              "type": "knowledge",
+              "prompt": "Mục đích lớn nhất của việc tự giác giữ vệ sinh, ăn uống đủ chất và tự bảo vệ mình là gì?",
+              "options": [
+                "Để được bố mẹ thưởng nhiều tiền tiêu xài",
+                "Để cơ thể luôn khỏe mạnh, phòng tránh bệnh tật và lớn lên vui vẻ",
+                "Để thi đấu xem ai giỏi hơn các bạn",
+                "Để không phải đến trường học"
+              ],
+              "correctIndex": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c6-trai-dat-bau-troi",
+      "chapterNumber": 6,
+      "title": "Chủ đề 6: Trái Đất và bầu trời",
+      "lessons": [
+        {
+          "id": "l26-kham-pha-bau-troi",
+          "lessonNumber": 26,
+          "title": "Bài 26: Cùng khám phá bầu trời",
+          "description": "Mặt Trời, Mặt Trăng và các vì sao",
+          "questions": [
+            {
+              "id": "g1-c6-l26-q1",
+              "type": "knowledge",
+              "prompt": "Vật thể nào chiếu sáng rực rỡ và mang lại ánh sáng, hơi ấm cho Trái Đất vào ban ngày?",
+              "options": ["Mặt Trăng", "Mặt Trời", "Các vì sao", "Đèn đường"],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c6-l26-q2",
+              "type": "knowledge",
+              "prompt": "Vì sao cô giáo nhắc bé không được nhìn trực tiếp bằng mắt thường vào Mặt Trời?",
+              "options": [
+                "Ánh sáng gay gắt của Mặt Trời có thể làm hại mắt",
+                "Vì Mặt Trời sẽ biến mất",
+                "Vì làm cho Mặt Trời tức giận",
+                "Không có lý do gì"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g1-c6-l26-q3",
+              "type": "knowledge",
+              "prompt": "Buổi tối khi bầu trời trở nên tối thẫm, bé có thể nhìn thấy những gì trên bầu trời?",
+              "options": [
+                "Mặt Trời chói chang và mây xanh",
+                "Cầu vồng rực rỡ 7 màu",
+                "Mặt Trăng và vô số các vì sao lấp lánh",
+                "Máy bay chiến đấu"
+              ],
+              "correctIndex": 2
+            },
+            {
+              "id": "g1-c6-l26-q4",
+              "type": "knowledge",
+              "prompt": "Mây đen kịt kéo đến và gió thổi mạnh là dấu hiệu của hiện tượng thời tiết nào?",
+              "options": [
+                "Bầu trời sắp có nắng gắt",
+                "Trời sắp có mưa rào",
+                "Trời sắp có tuyết rơi",
+                "Trời sắp có cầu vồng ngay"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c6-l26-q5",
+              "type": "knowledge",
+              "prompt": "Có đêm Mặt Trăng tròn xoe, có đêm lại khuyết như chiếc thuyền nhỏ, điều này thể hiện gì?",
+              "options": [
+                "Hình dáng Mặt Trăng nhìn từ Trái Đất thay đổi theo các ngày trong tháng",
+                "Mặt Trăng bị ai đó ăn mất một nửa",
+                "Đêm nào Mặt Trăng cũng tròn xoe giống nhau",
+                "Mặt Trăng bị hỏng"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g1-c6-l26-q6",
+              "type": "scenario",
+              "prompt": "Bầu trời trong xanh, nắng nhẹ và dịu mát, bé nên chọn trang phục nào đi học?",
+              "options": [
+                "Mặc áo mưa trùm kín người",
+                "Mặc đồng phục gọn gàng, mang theo mũ che nắng nhẹ",
+                "Mặc áo bông dày",
+                "Đi ủng đi tuyết"
+              ],
+              "correctIndex": 1
+            }
+          ]
+        },
+        {
+          "id": "l27-thoi-tiet-luon-thay-doi",
+          "lessonNumber": 27,
+          "title": "Bài 27: Thời tiết luôn thay đổi",
+          "description": "Nhận biết thời tiết và trang phục phù hợp",
+          "questions": [
+            {
+              "id": "g1-c6-l27-q1",
+              "type": "knowledge",
+              "prompt": "Đường phố ướt sũng, mọi người ai cũng trùm áo mưa hoặc che ô. Thời tiết đang như thế nào?",
+              "options": [
+                "Trời đang nắng gắt",
+                "Trời đang mưa",
+                "Trời đang có tuyết rơi",
+                "Trời đang có dông lốc lớn"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c6-l27-q2",
+              "type": "scenario",
+              "prompt": "Thời tiết mùa hè nắng nóng, bé nên chọn trang phục nào khi đi ra ngoài để không bị cảm nắng?",
+              "options": [
+                "Mặc áo len dày và đeo khăn quàng",
+                "Mặc quần áo mỏng thoáng mát, đội mũ rộng vành và đeo kính râm",
+                "Trùm áo mưa đi dưới trời nắng",
+                "Đi chân đất ra ngoài sân"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c6-l27-q3",
+              "type": "scenario",
+              "prompt": "Mùa đông trời lạnh rét run, việc làm nào giúp bé giữ ấm cơ thể, không bị ho và cảm lạnh?",
+              "options": [
+                "Mặc quần áo cộc tay đi chơi ngoài sân",
+                "Mặc áo ấm, đeo khăn quàng, đi tất và giữ ấm vùng ngực, cổ",
+                "Uống nhiều nước đá lạnh",
+                "Mở hết cửa sổ cho gió lùa vào phòng"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c6-l27-q4",
+              "type": "scenario",
+              "prompt": "Thấy bầu trời tối sầm, gió thổi mạnh và có tiếng sấm chớp đùng đùng, bé nên làm gì để an toàn?",
+              "options": [
+                "Chạy ngay vào trong lớp hoặc nhà kiên cố, không đứng dưới gốc cây to",
+                "Tiếp tục đứng ngoài sân trèo lên cây",
+                "Cầm thanh kim loại chạy nhảy ngoài sân",
+                "Mở ô sắt đứng giữa sân trống"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g1-c6-l27-q5",
+              "type": "knowledge",
+              "prompt": "Trước khi đi du lịch, bố mẹ thường xem chương trình gì trên tivi để chuẩn bị trang phục, kế hoạch?",
+              "options": [
+                "Chương trình phim hoạt hình",
+                "Chương trình Dự báo thời tiết",
+                "Chương trình ca nhạc",
+                "Chương trình trò chơi truyền hình"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c6-l27-q6",
+              "type": "knowledge",
+              "prompt": "Hiện tượng thời tiết có đặc điểm nào dưới đây?",
+              "options": [
+                "Thời tiết luôn giống nhau tất cả các ngày",
+                "Thời tiết có thể thay đổi giữa các ngày hoặc ngay trong một ngày",
+                "Thời tiết không bao giờ có mưa hay nắng",
+                "Thời tiết do con người tự bấm nút điều khiển"
+              ],
+              "correctIndex": 1
+            }
+          ]
+        },
+        {
+          "id": "l28-on-tap-trai-dat-bau-troi",
+          "lessonNumber": 28,
+          "title": "Bài 28: Ôn tập chủ đề Trái Đất và bầu trời",
+          "description": "Tổng kết kiến thức thời tiết và bầu trời",
+          "questions": [
+            {
+              "id": "g1-c6-l28-q1",
+              "type": "knowledge",
+              "prompt": "Để đá bóng, thả diều và ngắm cảnh rõ nhất, bé nên chọn thời gian nào?",
+              "options": [
+                "Ban đêm khi bầu trời tối và có Mặt Trăng",
+                "Ban ngày khi Mặt Trời chiếu sáng và bầu trời trong xanh",
+                "Lúc nửa đêm khi mọi người đang ngủ",
+                "Khi trời đang mưa rào sấm chớp"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c6-l28-q2",
+              "type": "scenario",
+              "prompt": "Bầu trời nhiều mây đen, dự báo có mưa rào, bé nên chuẩn bị gì trong cặp sách?",
+              "options": [
+                "Áo mưa hoặc ô (dù), đi giày dép chống trơn trượt",
+                "Kính râm và kem chống nắng",
+                "Áo phao bơi",
+                "Không cần mang theo gì"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g1-c6-l28-q3",
+              "type": "scenario",
+              "prompt": "Sáng sớm trời se lạnh, trưa nắng gắt, hành động nào giúp bé không bị ốm?",
+              "options": [
+                "Mặc áo khoác mỏng buổi sáng, trưa nắng cởi ra và lau mồ hôi",
+                "Mặc áo cộc tay từ sáng sớm mặc kệ trời lạnh",
+                "Uống nhiều nước đá lạnh giữa trưa",
+                "Chạy nhảy ngoài nắng trưa không đội mũ"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g1-c6-l28-q4",
+              "type": "scenario",
+              "prompt": "Đang đi đường gặp mưa to, gió mạnh và sấm chớp, việc nào AN TOÀN NHẤT?",
+              "options": [
+                "Trú mưa dưới gốc cây to ven đường",
+                "Tìm nhà kiên cố hoặc mái hiên trú, tránh xa cột điện và cây to",
+                "Rủ bạn chạy ra đồng trống tắm mưa",
+                "Cầm ô kim loại đứng dưới đường"
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "g1-c6-l28-q5",
+              "type": "scenario",
+              "prompt": "Để làm \"Bảng theo dõi thời tiết\" trong một tuần, bé có thể làm bằng cách nào?",
+              "options": [
+                "Vẽ các biểu tượng (Mặt Trời, đám mây mưa) vào sổ tay mỗi ngày",
+                "Xé sách vở làm máy bay",
+                "Tự tưởng tượng vẽ bừa không cần nhìn bầu trời",
+                "Bỏ qua không làm"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "g1-c6-l28-q6",
+              "type": "knowledge",
+              "prompt": "Quan sát bầu trời và biết thay đổi thời tiết hàng ngày giúp ích gì cho gia đình?",
+              "options": [
+                "Chọn trang phục, sắp xếp sinh hoạt phù hợp và bảo vệ sức khỏe",
+                "Chỉ để cho vui chứ không có tác dụng gì",
+                "Để làm cho trời ngừng mưa",
+                "Để làm cho Mặt Trời không lặn"
+              ],
+              "correctIndex": 0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

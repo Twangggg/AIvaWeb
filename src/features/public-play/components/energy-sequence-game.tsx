@@ -195,7 +195,7 @@ export function EnergySequenceGame() {
       : "Chuỗi tín hiệu bị ngắt!";
 
   return (
-    <div className="w-full max-w-2xl mx-auto space-y-3 sm:space-y-4">
+    <div className="w-full max-w-xl lg:max-w-2xl mx-auto space-y-3 sm:space-y-4">
       <GameHeaderBar
         title="Mật Mã Năng Lượng"
         subtitle="Ghi nhớ & phản xạ chuỗi ánh sáng tăng tốc"
@@ -276,7 +276,7 @@ export function EnergySequenceGame() {
 
         {/* Dynamic Pads Grid: 2 columns for 4 pads, 3 columns for 6 pads */}
         <div
-          className={`mx-auto mt-3 sm:mt-4 grid gap-2.5 sm:gap-3.5 max-w-lg ${
+          className={`mx-auto mt-3 sm:mt-4 grid gap-2.5 sm:gap-3.5 max-w-md md:max-w-lg ${
             activePads.length === 6 ? "grid-cols-3" : "grid-cols-2"
           }`}
         >
@@ -291,8 +291,8 @@ export function EnergySequenceGame() {
                 aria-label={`Chọn ${pad.label}`}
                 className={`rounded-2xl sm:rounded-3xl border border-white/50 transition duration-150 active:scale-95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-slate-900 dark:border-white/20 dark:focus-visible:outline-white disabled:cursor-default ${
                   activePads.length === 6
-                    ? "h-16 sm:h-24 md:h-28 max-h-[16vh]"
-                    : "h-20 sm:h-28 md:h-32 max-h-[22vh]"
+                    ? "h-16 sm:h-20 md:h-24 max-h-[16vh]"
+                    : "h-20 sm:h-24 md:h-28 max-h-[20vh]"
                 }`}
                 style={{
                   background: `radial-gradient(circle at 50% 35%, ${pad.color}, ${pad.shade})`,

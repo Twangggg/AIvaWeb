@@ -61,3 +61,11 @@ export interface QuizScoreSummary {
   praise: string;
   isPerfect: boolean;
 }
+
+export interface NextLessonInfo {
+  type: "lesson" | "chapter-review";
+  chapter: QuizChapter;
+  lesson?: QuizLesson;
+  title: string;
+}
+

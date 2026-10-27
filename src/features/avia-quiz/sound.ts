@@ -56,24 +56,33 @@ class QuizSoundEngine {
     if (!ctx) return;
 
     const now = ctx.currentTime;
-    // Tần số cơ bản tăng dần theo combo
-    const baseFreq = combo >= 10 ? 880 : combo >= 5 ? 740 : 587.33; // D5, F#5, A5
+    // Hợp âm arpeggio thăng hoa theo cấp độ combo
+    const notes =
+      combo >= 10
+        ? [523.25, 659.25, 783.99, 1046.5] // C5, E5, G5, C6 (Chiến thắng vang dội!)
+        : combo >= 5
+        ? [587.33, 739.99, 880.0] // D5, F#5, A5 (Sôi nổi)
+        : combo >= 3
+        ? [523.25, 659.25, 783.99] // C5, E5, G5 (Hào hứng)
+        : [587.33, 880.0]; // D5, A5 (Combo x2)
 
-    [0, 0.1].forEach((delay, idx) => {
+    notes.forEach((freq, idx) => {
+      const delay = idx * 0.08;
       const osc = ctx.createOscillator();
       const gain = ctx.createGain();
 
-      osc.type = "triangle";
-      osc.frequency.setValueAtTime(baseFreq * (idx === 1 ? 1.25 : 1), now + delay);
+      osc.type = combo >= 5 ? "triangle" : "sine";
+      osc.frequency.setValueAtTime(freq, now + delay);
 
-      gain.gain.setValueAtTime(0.25, now + delay);
-      gain.gain.exponentialRampToValueAtTime(0.001, now + delay + 0.3);
+      gain.gain.setValueAtTime(0, now + delay);
+      gain.gain.linearRampToValueAtTime(0.25, now + delay + 0.02);
+      gain.gain.exponentialRampToValueAtTime(0.001, now + delay + 0.35);
 
       osc.connect(gain);
       gain.connect(ctx.destination);
 
       osc.start(now + delay);
-      osc.stop(now + delay + 0.35);
+      osc.stop(now + delay + 0.4);
     });
   }
 

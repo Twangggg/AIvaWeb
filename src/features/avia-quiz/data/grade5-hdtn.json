@@ -1,0 +1,2980 @@
+{
+  "id": "g5-hdtn",
+  "grade": 5,
+  "subjectKey": "hdtn",
+  "title": "Hoạt động trải nghiệm lớp 5",
+  "color": "#F59E0B",
+  "coverImage": "/mascots/bia-sach-mon-hoc.png",
+  "chapters": [
+    {
+      "id": "c1-hdtn5",
+      "chapterNumber": 1,
+      "title": "CHỦ ĐỀ 1: EM LỚN LÊN MỖI NGÀY",
+      "lessons": [
+        {
+          "id": "l1-hdtn5",
+          "lessonNumber": 1,
+          "title": "Tuần 1",
+          "questions": [
+            {
+              "id": "g5-hdtn-w1-q1",
+              "type": "knowledge",
+              "prompt": "Trong tiết Sinh hoạt dưới cờ Tuần 1, học sinh tham gia hoạt động nào để khởi động năm học mới?",
+              "options": [
+                "Ngày hội Câu lạc bộ",
+                "Chào mừng năm học mới",
+                "Triển lãm \"Từng bước trưởng thành\"",
+                "Hội chợ Xuân gây Quỹ Nhân ái"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Chào mừng năm học mới\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w1-q2",
+              "type": "knowledge",
+              "prompt": "Để tìm hiểu về sự lớn lên về thể chất của bản thân ở lớp 5, em thực hiện việc làm nào?",
+              "options": [
+                "Đo chiều cao, cân nặng và so sánh với số đo của các năm học trước",
+                "Viết nhật ký trải nghiệm mùa hè",
+                "Kiểm tra danh sách điểm số môn Tin học",
+                "Lập sổ theo dõi chi tiêu của gia đình"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Đo chiều cao, cân nặng và so sánh với số đo của các năm học trước\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w1-q3",
+              "type": "knowledge",
+              "prompt": "Sáng tạo điệu nhảy dân vũ \"Lớn lên mỗi ngày\" giúp học sinh rèn luyện điều gì?",
+              "options": [
+                "Khả năng viết kịch bản",
+                "Rèn luyện thể chất, sự năng động, tinh thần hợp tác và sự khỏe mạnh",
+                "Khả năng tính toán số học",
+                "Kỹ năng thuyết phục người thân"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Rèn luyện thể chất, sự năng động, tinh thần hợp tác và sự khỏe mạnh\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w1-q4",
+              "type": "knowledge",
+              "prompt": "Quan sát ảnh tập thể từ lớp 1 đến lớp 4, nhận xét nào thể hiện sự thay đổi tích cực về dáng vẻ bề ngoài?",
+              "options": [
+                "Rụt rè hơn và trầm lặng hơn",
+                "Cao hơn và chững chạc hơn",
+                "Nhỏ bé hơn và rút ngắn chiều cao",
+                "Giữ nguyên không có gì thay đổi"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Cao hơn và chững chạc hơn\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w1-q5",
+              "type": "knowledge",
+              "prompt": "Ở hoạt động \"Bậc thang trưởng thành\", các tấm bìa ghi sự thay đổi tích cực được dán thành hình gì?",
+              "options": [
+                "Hình tròn",
+                "Hình ngôi sao",
+                "Hình bậc thang",
+                "Hình trái tim"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Hình bậc thang\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w1-q6",
+              "type": "knowledge",
+              "prompt": "Khi về nhà sau tiết học Tuần 1, em được hướng dẫn thực hiện công việc gì cùng người thân?",
+              "options": [
+                "Đi mua sắm quần áo mới",
+                "Tìm lại tư liệu, sản phẩm (vở viết, hình ảnh, kỷ vật...) thể hiện sự trưởng thành",
+                "Lập kế hoạch kinh doanh đồ dùng cũ",
+                "Diễn tập phòng cháy chữa cháy"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Tìm lại tư liệu, sản phẩm (vở viết, hình ảnh, kỷ vật...) thể hiện sự trưởng thành\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            }
+          ]
+        },
+        {
+          "id": "l2-hdtn5",
+          "lessonNumber": 2,
+          "title": "Tuần 2",
+          "questions": [
+            {
+              "id": "g5-hdtn-w2-q1",
+              "type": "knowledge",
+              "prompt": "Trong tiết Sinh hoạt dưới cờ của Tuần 2, học sinh tham gia hoạt động nổi bật nào?",
+              "options": [
+                "Lễ kỷ niệm ngày Nhà giáo Việt Nam 20-11",
+                "Trình diễn giới thiệu các câu lạc bộ học sinh và chia sẻ thành tích đạt được",
+                "Diễn tập phòng chống hỏa hoạn",
+                "Phát động quyên góp Quỹ Nhân ái"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Trình diễn giới thiệu các câu lạc bộ học sinh và chia sẻ thành tích đạt được\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w2-q2",
+              "type": "knowledge",
+              "prompt": "Ở Hoạt động giáo dục theo chủ đề, học sinh tham gia trò chơi nào để chia sẻ sự thay đổi tích cực?",
+              "options": [
+                "Trò chơi \"Ba sự thật\"",
+                "Trò chơi \"Tiếng rao\"",
+                "Trò chơi \"Ngày trước – Bây giờ\"",
+                "Trò chơi \"Sứ giả tình bạn\""
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Trò chơi \"Ngày trước – Bây giờ\"\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w2-q3",
+              "type": "knowledge",
+              "prompt": "Khi tham gia trò chơi \"Ngày trước – Bây giờ\", học sinh sử dụng mẫu câu nào để tự nhận xét?",
+              "options": [
+                "\"Trước đây mình là... Bây giờ mình sẽ...\"",
+                "\"Ngày trước, mình... Bây giờ, mình đã...\"",
+                "\"Mình hy vọng sau này sẽ...\"",
+                "\"Nếu là mình thì mình sẽ...\""
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"\"Ngày trước, mình... Bây giờ, mình đã...\"\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w2-q4",
+              "type": "knowledge",
+              "prompt": "Để tổ chức triển lãm \"Từng bước trưởng thành\", tư liệu, sản phẩm được sắp xếp theo trình tự nào?",
+              "options": [
+                "Theo bảng chữ cái tên học sinh",
+                "Theo thứ tự môn học từ Toán đến Tiếng Việt",
+                "Theo trình tự từ Lớp 1 đến Lớp 4",
+                "Sắp xếp ngẫu nhiên không cần phân loại"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Theo trình tự từ Lớp 1 đến Lớp 4\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w2-q5",
+              "type": "knowledge",
+              "prompt": "Những loại tư liệu, sản phẩm nào dưới đây có thể dùng để trưng bày tại triển lãm?",
+              "options": [
+                "Vở viết, sản phẩm thủ công, bài vẽ, hình ảnh qua các năm học từ lớp 1 đến lớp 4",
+                "Quần áo đồng phục mới mua cho lớp 5",
+                "Sách giáo khoa chưa qua sử dụng",
+                "Bảng điểm học kỳ mới nhất"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Vở viết, sản phẩm thủ công, bài vẽ, hình ảnh qua các năm học từ lớp 1 đến lớp 4\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w2-q6",
+              "type": "knowledge",
+              "prompt": "Trong hoạt động sau giờ học của Tuần 2, học sinh về nhà trao đổi với người thân nội dung gì?",
+              "options": [
+                "Vay tiền mua đồ chơi mới",
+                "Trò chuyện về sự trưởng thành của em qua các công việc nhà nhận làm hằng ngày",
+                "Nhờ bố mẹ làm hộ bài tập về nhà",
+                "Xin phép bố mẹ đi du lịch xa cùng bạn bè"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Trò chuyện về sự trưởng thành của em qua các công việc nhà nhận làm hằng ngày\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            }
+          ]
+        },
+        {
+          "id": "l3-hdtn5",
+          "lessonNumber": 3,
+          "title": "Tuần 3",
+          "questions": [
+            {
+              "id": "g5-hdtn-w3-q1",
+              "type": "knowledge",
+              "prompt": "Vừa đi học về rất mệt, điểm kém, em nhỏ đòi đồ chơi và khóCách xử lý nào chứng tỏ em đã biết cân bằng cảm xúc?",
+              "options": [
+                "Quát mắng em thật to để em sợ và đi chỗ khác",
+                "Dừng lại vài giây, hít một hơi thật sâu để bình tĩnh rồi nhẹ nhàng bảo em chờ mình cất cặp sách xong sẽ ra chơi cùng",
+                "Giật lấy đồ chơi, ném xuống đất rồi đóng chặt cửa phòng lại",
+                "Khóc theo em và bỏ ăn cơm tối"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Dừng lại vài giây, hít một hơi thật sâu để bình tĩnh rồi nhẹ nhàng bảo em chờ mình cất cặp sách xong sẽ ra chơi cùng\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w3-q2",
+              "type": "knowledge",
+              "prompt": "Bạn cùng bàn vô tình làm rách trang vở sạch, em thấy rất tức giận. Em nên làm gì ngay lúc đó?",
+              "options": [
+                "Lập tức xé lại vở của bạn cho bằng được",
+                "Im lặng, nhắm mắt hít thở sâu vài nhịp để nén cơn giận, sau đó lắng nghe lời giải thích và xin lỗi của bạn",
+                "Đứng dậy đập bàn và nói những lời tức giận trước mặt cả lớp",
+                "Bỏ ra sân trường và không bao giờ chơi với bạn đó nữa"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Im lặng, nhắm mắt hít thở sâu vài nhịp để nén cơn giận, sau đó lắng nghe lời giải thích và xin lỗi của bạn\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w3-q3",
+              "type": "knowledge",
+              "prompt": "Nam không được chọn vào đội bóng lớp và cảm thấy rất thất vọng. Suy nghĩ tích cực nào giúp Nam mau chóng cân bằng lại cảm xúc?",
+              "options": [
+                "\"Mình thật kém cỏi, từ nay mình sẽ không bao giờ chơi bóng đá nữa.\"",
+                "\"Chắc chắn thầy giáo đã thiên vị các bạn khác nên mới không chọn mình.\"",
+                "\"Lần này mình chưa đạt, nhưng đây là cơ hội để biết điểm yếu và tiếp tục tập luyện chăm chỉ hơn.\"",
+                "\"Sẽ chẳng có ai chơi tốt bằng mình đâu, các bạn được chọn chỉ là may mắn.\""
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"\"Lần này mình chưa đạt, nhưng đây là cơ hội để biết điểm yếu và tiếp tục tập luyện chăm chỉ hơn.\"\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w3-q4",
+              "type": "knowledge",
+              "prompt": "Khi gặp chuyện bức xúc ở trường mà không tự giải quyết được, phương án giải tỏa nào an toàn và hiệu quả nhất?",
+              "options": [
+                "Giữ kín trong lòng, không nói với ai để tự chịu đựng",
+                "Tìm gặp thầy cô, bố mẹ hoặc người đáng tin cậy để tâm sự, chia sẻ tìm sự trợ giúp",
+                "Đăng những lời nói xấu, trút tức giận lên mạng xã hội",
+                "Tìm cách trả đũa những người làm mình tức giận"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Tìm gặp thầy cô, bố mẹ hoặc người đáng tin cậy để tâm sự, chia sẻ tìm sự trợ giúp\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w3-q5",
+              "type": "knowledge",
+              "prompt": "Có nhiều bài tập nhưng lại muốn xem hoạt hình, em cảm thấy bức bối. Cách làm nào giúp điều chỉnh cảm xúc và giải quyết hợp lý?",
+              "options": [
+                "Vừa ngồi học vừa bật tivi xem để đỡ tiếc",
+                "Bỏ học bài, ngồi xem hết chương trình rồi đi ngủ",
+                "Tự nhắc nhở bản thân: \"Hoàn thành bài tập xong mình sẽ xem lại sau, học xong tâm trạng sẽ thoải mái hơn\"",
+                "Đóng sách vở lại, giận dỗi bố mẹ vì bị bắt học bài"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Tự nhắc nhở bản thân: \"Hoàn thành bài tập xong mình sẽ xem lại sau, học xong tâm trạng sẽ thoải mái hơn\"\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w3-q6",
+              "type": "knowledge",
+              "prompt": "Việc học cách nhận diện và cân bằng cảm xúc mang lại giá trị thực tế lớn nhất gì cho em?",
+              "options": [
+                "Giúp em luôn luôn giành chiến thắng trong mọi cuộc tranh luận",
+                "Giúp em giữ được bình tĩnh, tránh hành động bộc phát làm tổn thương người khác và giữ gìn mối quan hệ tốt đẹp",
+                "Giúp em không bao giờ phải chịu cảm giác buồn bã hay thất bại",
+                "Giúp em khiến mọi người xung quanh luôn phải sợ hãi và nghe theo mình"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Giúp em giữ được bình tĩnh, tránh hành động bộc phát làm tổn thương người khác và giữ gìn mối quan hệ tốt đẹp\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            }
+          ]
+        },
+        {
+          "id": "l4-hdtn5",
+          "lessonNumber": 4,
+          "title": "Tuần 4",
+          "questions": [
+            {
+              "id": "g5-hdtn-w4-q1",
+              "type": "knowledge",
+              "prompt": "Đạt điểm 10 kiểm tra và cảm thấy rất sung sướng, Minh nên thể hiện niềm vui thế nào cho phù hợp?",
+              "options": [
+                "Reo hò thật to, đập bàn và nhảy chồm lên khiến cả lớp giật mình",
+                "Mỉm cười tươi vui vẻ, giữ sự bình tĩnh để không ảnh hưởng đến lớp và chờ ra chơi chia sẻ",
+                "Quay sang cười giễu cợt những bạn đạt điểm thấp hơn mình",
+                "Giấu giếm bài kiểm tra, tỏ vẻ buồn rầu để các bạn không chú ý"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Mỉm cười tươi vui vẻ, giữ sự bình tĩnh để không ảnh hưởng đến lớp và chờ ra chơi chia sẻ\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w4-q2",
+              "type": "knowledge",
+              "prompt": "An trúng tuyển đội tuyển học sinh giỏi khi đang cùng mẹ chăm sóc bà ốm, An nên thể hiện niềm vui thế nào?",
+              "options": [
+                "Bật dậy nhảy múa và reo hò ầm ĩ ngay trong phòng ngủ của bà",
+                "Ghé sát tai mẹ và bà, nở nụ cười và nói thì thầm để không làm bà giật mình, mệt mỏi",
+                "Nhăn nhó, khó chịu vì không được thoải mái ăn mừng chiến thắng",
+                "Bỏ đi ra ngoài đường lớn để chạy nhảy thật nhanh cho thỏa thích"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Ghé sát tai mẹ và bà, nở nụ cười và nói thì thầm để không làm bà giật mình, mệt mỏi\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w4-q3",
+              "type": "knowledge",
+              "prompt": "Bất đồng ý kiến với bạn trong tiệc sinh nhật và cảm thấy bực bội, Nam nên làm gì để không mất vui?",
+              "options": [
+                "Quát to: \"Tớ không muốn nghe cậu nói nữa!\" rồi hầm hầm bỏ về nhà ngay",
+                "Đứng dậy đập phá đồ đạc đang bày trên bàn tiệc sinh nhật",
+                "Bình tĩnh nói: \"Mỗi người một ý, chúng mình hỏi chủ nhân tiệc thích chơi trò nào nhé\"",
+                "Tỏ thái độ vùng vằng, ngồi bĩu môi và nói xấu bạn với xung quanh"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Bình tĩnh nói: \"Mỗi người một ý, chúng mình hỏi chủ nhân tiệc thích chơi trò nào nhé\"\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w4-q4",
+              "type": "knowledge",
+              "prompt": "Nghe thấy bạn nói không đúng sự thật về mình, Hiếu nên kiểm soát và thể hiện cảm xúc thế nào?",
+              "options": [
+                "Lao vào xô xát và chửi mắng hai bạn đó ngay tại chỗ",
+                "Hít thở sâu để bình tĩnh, tìm gặp riêng hai bạn để hỏi rõ lý do và nhẹ nhàng giải thích",
+                "Đăng bài lên mạng xã hội để lôi kéo các bạn khác cùng tẩy chay",
+                "Bỏ học đi về nhà và khóc một mình trong phòng kín"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Hít thở sâu để bình tĩnh, tìm gặp riêng hai bạn để hỏi rõ lý do và nhẹ nhàng giải thích\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w4-q5",
+              "type": "knowledge",
+              "prompt": "Vô tình bị hàng xóm làm hỏng món quà quý giá, An cảm thấy tức giận, An nên xử lý ra sao?",
+              "options": [
+                "Lao vào đánh người hàng xóm và bắt phải đền ngay chiếc mới",
+                "Kiềm chế nóng giận, bày tỏ sự tiếc nuối và cùng kiểm tra xem có sửa được không",
+                "Giận dỗi bố mẹ vì đã để người khác sang chơi nhà",
+                "Đem chiếc máy hỏng vứt ra đường lớn và gào khóc thật to"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Kiềm chế nóng giận, bày tỏ sự tiếc nuối và cùng kiểm tra xem có sửa được không\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w4-q6",
+              "type": "knowledge",
+              "prompt": "Học sinh được đánh giá là có khả năng kiểm soát cảm xúc tốt khi đạt tiêu chí nào?",
+              "options": [
+                "Không bao giờ cảm thấy buồn bã hay tức giận trong bất kỳ hoàn cảnh nào",
+                "Nhận diện được cảm xúc, biết cân bằng tâm lý và thể hiện phù hợp với hoàn cảnh",
+                "Luôn bộc lộ ngay lập tức mọi cảm xúc cá nhân ra bên ngoài mà không cần suy nghĩ",
+                "Giấu kín mọi cảm xúc thật, lúc nào cũng tỏ ra vui vẻ dù bên trong bực bội"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Nhận diện được cảm xúc, biết cân bằng tâm lý và thể hiện phù hợp với hoàn cảnh\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c2-hdtn5",
+      "chapterNumber": 2,
+      "title": "CHỦ ĐỀ 2: GIỮ GÌN TÌNH BẠN",
+      "lessons": [
+        {
+          "id": "l5-hdtn5",
+          "lessonNumber": 5,
+          "title": "Tuần 5",
+          "questions": [
+            {
+              "id": "g5-hdtn-w5-q1",
+              "type": "knowledge",
+              "prompt": "Để xây dựng tình bạn gắn kết và hạn chế hiểu lầm, điều quan trọng nhất em và bạn cần làm là gì?",
+              "options": [
+                "Chỉ chơi với nhau khi bạn có đồ ăn ngon hoặc đồ chơi đẹp",
+                "Chủ động lắng nghe, tìm hiểu về sở thích, tính cách và hoàn cảnh của nhau",
+                "Yêu cầu bạn phải luôn nghe theo mọi ý kiến cá nhân của mình",
+                "Giấu kín suy nghĩ và không bao giờ chia sẻ chuyện riêng tư"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Chủ động lắng nghe, tìm hiểu về sở thích, tính cách và hoàn cảnh của nhau\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w5-q2",
+              "type": "knowledge",
+              "prompt": "Đâu là nguyên nhân phổ biến nhất dẫn đến mâu thuẫn, tranh cãi giữa bạn bè trong lớp?",
+              "options": [
+                "Luôn biết nhường nhịn và giúp đỡ lẫn nhau trong học tập",
+                "Sự nóng nảy, tự ái, thiếu lắng nghe và không để ý đến cảm xúc của bạn",
+                "Cùng nhau tham gia các hoạt động tập thể sôi nổi của trường",
+                "Thường xuyên tâm sự và chia sẻ những chuyện vui buồn cùng nhau"
+              ],
+              "correctIndex": 3,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Thường xuyên tâm sự và chia sẻ những chuyện vui buồn cùng nhau\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w5-q3",
+              "type": "knowledge",
+              "prompt": "Long giận vì Nam không cho chép bài kiểm tra, Nam nên xử lý tình huống này thế nào?",
+              "options": [
+                "Đến xin lỗi Long và hứa lần sau sẽ cho Long chép bài thoải mái",
+                "Nhờ các bạn khác trong lớp cùng tham gia tẩy chay Long",
+                "Nhẹ nhàng giải thích cho Long hiểu việc chép bài là không đúng và đề nghị giảng lại bài cho bạn sau giờ học",
+                "Giận lại Long và nói xấu bạn với giáo viên chủ nhiệm ngay lập tức"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Nhẹ nhàng giải thích cho Long hiểu việc chép bài là không đúng và đề nghị giảng lại bài cho bạn sau giờ học\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w5-q4",
+              "type": "knowledge",
+              "prompt": "My cảm thấy tủi thân vì Trang có bạn mới ở đội văn nghệ, My nên làm gì để giải quyết?",
+              "options": [
+                "Bắt Trang phải lựa chọn dứt khoát chỉ được chơi với một mình My",
+                "Bỏ chơi với Trang và đi nói xấu bạn mới với các bạn khác trong lớp",
+                "Cởi mở chia sẻ cảm xúc của mình với Trang, đồng thời chủ động làm quen và chơi cùng nhóm bạn mới",
+                "Im lặng chịu đựng một mình và tự thu mình lại với tất cả mọi người"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Cởi mở chia sẻ cảm xúc của mình với Trang, đồng thời chủ động làm quen và chơi cùng nhóm bạn mới\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w5-q5",
+              "type": "knowledge",
+              "prompt": "Khi thấy hai bạn trong tổ xảy ra mâu thuẫn gay gắt, vai trò của \"Sứ giả tình bạn\" là gì?",
+              "options": [
+                "Đứng về phía bạn thân hơn để ép bạn kia phải nhận lỗi",
+                "Bỏ mặc vì nghĩ đó không phải là chuyện liên quan đến mình",
+                "Lắng nghe từ hai phía, phân tích khách quan và kết nối để hai bạn giảng hòa",
+                "Mách ngay với thầy cô giáo để phạt nặng cả hai bạn"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Lắng nghe từ hai phía, phân tích khách quan và kết nối để hai bạn giảng hòa\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w5-q6",
+              "type": "knowledge",
+              "prompt": "Lỡ lời nói câu làm tổn thương bạn thân, hành động nào thể hiện sự trưởng thành muốn giữ tình bạn?",
+              "options": [
+                "Coi như không có chuyện gì và chờ bạn tự đến nói chuyện trước với mình",
+                "Bình tĩnh lại, chủ động gặp bạn để chân thành xin lỗi và giải thích rõ lúc đó bị mất kiểm soát",
+                "Tìm lý do đổ lỗi cho hoàn cảnh hoặc do bạn đã trêu chọc mình trước",
+                "Cảm thấy tự ti, ngại ngùng rồi từ đó luôn tìm cách tránh mặt bạn"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Bình tĩnh lại, chủ động gặp bạn để chân thành xin lỗi và giải thích rõ lúc đó bị mất kiểm soát\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            }
+          ]
+        },
+        {
+          "id": "l6-hdtn5",
+          "lessonNumber": 6,
+          "title": "Tuần 6",
+          "questions": [
+            {
+              "id": "g5-hdtn-w6-q1",
+              "type": "knowledge",
+              "prompt": "Khi làm việc nhóm để hoàn thành sản phẩm chung, cách ứng xử nào thể hiện sự hợp tác hiệu quả?",
+              "options": [
+                "Lắng nghe, tôn trọng ý kiến của bạn và chủ động nhận phần việc phù hợp với khả năng",
+                "Để một mình nhóm trưởng làm hết vì bạn đó học giỏi nhất lớp",
+                "Áp đặt ý kiến cá nhân và bắt tất cả các thành viên khác phải nghe theo",
+                "Chỉ ngồi chơi và chờ các bạn làm xong thì ghi tên mình vào sản phẩm"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Lắng nghe, tôn trọng ý kiến của bạn và chủ động nhận phần việc phù hợp với khả năng\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w6-q2",
+              "type": "knowledge",
+              "prompt": "Trái ngược ý kiến về cách trang trí sản phẩm với bạn trong nhóm, em nên xử lý thế nào?",
+              "options": [
+                "Tức giận, bỏ nhóm và tự ý sang làm việc một mình với nhóm khác",
+                "Bình tĩnh trình bày lý do, lắng nghe bạn và cùng nhóm phân tích chọn phương án tối ưu",
+                "Đố kị, quay sang chê bai ý tưởng của bạn là kém cỏi không đáng nghe",
+                "Quyết định bốc thăm hoặc đập bàn để tranh giành quyền quyết định bằng được"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Bình tĩnh trình bày lý do, lắng nghe bạn và cùng nhóm phân tích chọn phương án tối ưu\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w6-q3",
+              "type": "knowledge",
+              "prompt": "Thấy bạn hay quên đồ dùng hoặc không hiểu bài, việc làm nào thể hiện tinh thần tương thân tương ái?",
+              "options": [
+                "Giấu kín đồ dùng của mình vì sợ bạn dùng sẽ làm hỏng",
+                "Sẵn sàng cho mượn đồ dùng khi cần và kiên nhẫn hướng dẫn lại bài cho bạn",
+                "Chê bai bạn chậm hiểu trước mặt các bạn khác trong lớp",
+                "Mách cô giáo để phạt cho bạn nhớ và không dám quên nữa"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Sẵn sàng cho mượn đồ dùng khi cần và kiên nhẫn hướng dẫn lại bài cho bạn\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w6-q4",
+              "type": "knowledge",
+              "prompt": "Hành vi nào giữa bạn bè gây ảnh hưởng tiêu cực nhất đến kết quả và tinh thần đoàn kết của nhóm?",
+              "options": [
+                "Tích cực trao đổi, thảo luận và phản biện ôn hòa để tìm giải pháp tốt",
+                "Thường xuyên giấu thông tin học tập, không chia sẻ kiến thức và từ chối hỗ trợ",
+                "Phân công công việc rõ ràng, công bằng cho từng thành viên trong nhóm",
+                "Cùng nhau chuẩn bị đầy đủ nguyên vật liệu trước mỗi giờ học thực hành"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Thường xuyên giấu thông tin học tập, không chia sẻ kiến thức và từ chối hỗ trợ\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w6-q5",
+              "type": "knowledge",
+              "prompt": "Để nhóm làm việc trôi chảy và tránh cãi vã, nguyên tắc quan trọng nhất cần thống nhất từ đầu là gì?",
+              "options": [
+                "Ai làm xong việc của mình trước thì được nghỉ, không cần quan tâm người khác",
+                "Tôn trọng tập thể, phân công rõ ràng, chia sẻ thông tin và hỗ trợ lẫn nhau",
+                "Nhóm trưởng tự quyết định mọi việc mà không cần thông qua thành viên",
+                "Chỉ phân công cho những bạn học giỏi, các bạn khác không cần tham gia"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Tôn trọng tập thể, phân công rõ ràng, chia sẻ thông tin và hỗ trợ lẫn nhau\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w6-q6",
+              "type": "knowledge",
+              "prompt": "Khi kết thúc buổi thực hành làm sản phẩm chung, bước nào giúp cả nhóm tiến bộ hơn?",
+              "options": [
+                "Giải tán ngay lập tức mà không cần trao đổi thêm bất cứ điều gì",
+                "Đổ lỗi hoàn toàn cho nhóm trưởng vì sản phẩm chung chưa thật sự hoàn hảo",
+                "Cùng nhau nhận xét mức độ hợp tác, chỉ ra vấn đề nảy sinh và rút kinh nghiệm",
+                "Chỉ khen ngợi cá nhân bản thân và chê bai kết quả làm việc của các bạn khác"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Cùng nhau nhận xét mức độ hợp tác, chỉ ra vấn đề nảy sinh và rút kinh nghiệm\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            }
+          ]
+        },
+        {
+          "id": "l7-hdtn5",
+          "lessonNumber": 7,
+          "title": "Tuần 7",
+          "questions": [
+            {
+              "id": "g5-hdtn-w7-q1",
+              "type": "knowledge",
+              "prompt": "Khi được mời nhận xét về bạn cùng bàn, hành động nào giúp động viên tinh thần và tôn trọng bạn?",
+              "options": [
+                "Chỉ tập trung nêu ra những điểm xấu để bạn tự cảm thấy xấu hổ trước lớp",
+                "Chân thành nói về những ưu điểm, thế mạnh của bạn như cẩn thận hay hay giúp đỡ bạn bè",
+                "So sánh bạn với một bạn học giỏi nhất trường để ép bạn phải cố gắng nhiều hơn nữa",
+                "Im lặng không nói gì vì cho rằng khen ngợi sẽ làm bạn sinh chủ quan"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Chân thành nói về những ưu điểm, thế mạnh của bạn như cẩn thận hay hay giúp đỡ bạn bè\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w7-q2",
+              "type": "knowledge",
+              "prompt": "Biết bạn thân đang buồn và thu mình lại dù rất thích vẽ, em nên làm gì để thể hiện sự quan tâm?",
+              "options": [
+                "Bỏ mặc bạn vì nghĩ rằng tốt nhất không nên làm phiền bạn trong lúc đang buồn",
+                "Ép buộc bạn phải đi chơi công viên cùng mình ngay lập tức để khuây khỏa",
+                "Tặng bộ cọ vẽ nhỏ, lắng nghe và rủ bạn cùng vẽ tranh để giải tỏa tâm trạng",
+                "Đi kể với tất cả các bạn trong lớp về chuyện buồn gia đình của bạn"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Tặng bộ cọ vẽ nhỏ, lắng nghe và rủ bạn cùng vẽ tranh để giải tỏa tâm trạng\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w7-q3",
+              "type": "knowledge",
+              "prompt": "Để chọn ra \"Sứ giả tình bạn\" giúp hòa giải mâu thuẫn, nên dựa vào tiêu chí quan trọng nào?",
+              "options": [
+                "Bạn có gia cảnh giàu có và là người chạy nhanh nhất lớp",
+                "Bạn có uy tín, biết lắng nghe khách quan, bình tĩnh và có khả năng thuyết phục",
+                "Bạn hay bênh vực bạn thân của mình bất chấp đúng sai phải trái",
+                "Bạn nói nhiều và thích can thiệp vào chuyện riêng tư của người khác"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Bạn có uy tín, biết lắng nghe khách quan, bình tĩnh và có khả năng thuyết phục\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w7-q4",
+              "type": "knowledge",
+              "prompt": "Khi trong tổ xảy ra tranh cãi nảy lửa, \"Sứ giả tình bạn\" có trách nhiệm nên hành động thế nào?",
+              "options": [
+                "Đứng về phía bạn chơi thân hơn để ép bạn còn lại phải chịu thua cuộc",
+                "Lắng nghe từ cả hai bên, phân tích nhẹ nhàng và làm cầu nối giúp hai bạn giảng hòa",
+                "Hùa theo các bạn khác đứng xung quanh reo hò cổ vũ cho thêm náo nhiệt",
+                "Báo ngay với giáo viên để phạt nặng cả hai bạn mà không cần nghe lý do"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Lắng nghe từ cả hai bên, phân tích nhẹ nhàng và làm cầu nối giúp hai bạn giảng hòa\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w7-q5",
+              "type": "knowledge",
+              "prompt": "Để thắt chặt tình cảm tập thể ở năm học cuối cấp tiểu học, hoạt động nào mang nhiều ý nghĩa?",
+              "options": [
+                "Cùng lập sổ nhật ký lớp, thăm nhà bạn hoặc trồng một cây lưu niệm ở sân trường",
+                "Mùa hè rủ nhau tự ý đi bơi ở sông hồ mà không có người lớn đi kèm",
+                "Cùng nhau trốn học để ra quán Internet chơi điện tử suốt buổi",
+                "Thi đua xem bạn nào mua được nhiều đồ chơi đắt tiền khoe với lớp"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Cùng lập sổ nhật ký lớp, thăm nhà bạn hoặc trồng một cây lưu niệm ở sân trường\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w7-q6",
+              "type": "knowledge",
+              "prompt": "Việc em chủ động khen ngợi, hỗ trợ bạn và tạo những kỷ niệm đẹp mang lại giá trị gì lớn nhất?",
+              "options": [
+                "Giúp em trở thành người nổi tiếng được nhiều người biết đến nhất trường",
+                "Giúp duy trì tình bạn bền chặt, tạo môi trường học tập vui vẻ, thân thiện, giàu tình yêu thương",
+                "Đảm bảo bạn sẽ luôn luôn làm bài tập hộ mọi môn học cho em",
+                "Giúp em không bao giờ bị thầy cô giáo nhắc nhở hay phê bình"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Giúp duy trì tình bạn bền chặt, tạo môi trường học tập vui vẻ, thân thiện, giàu tình yêu thương\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            }
+          ]
+        },
+        {
+          "id": "l8-hdtn5",
+          "lessonNumber": 8,
+          "title": "Tuần 8",
+          "questions": [
+            {
+              "id": "g5-hdtn-w8-q1",
+              "type": "knowledge",
+              "prompt": "Khi lập kế hoạch trồng cây lưu niệm, việc phân công nhiệm vụ nên dựa trên nguyên tắc nào?",
+              "options": [
+                "Nhóm trưởng tự làm hết tất cả các khâu từ mua cây đến đào đất",
+                "Dựa vào sức khỏe, sở trường và sự tự nguyện của từng thành viên trong tổ",
+                "Bắt các bạn học chưa tốt phải làm hết toàn bộ các công việc nặng nhọc",
+                "Phân công ngẫu nhiên bằng cách bốc thăm mà không cần quan tâm khả năng"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Dựa vào sức khỏe, sở trường và sự tự nguyện của từng thành viên trong tổ\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w8-q2",
+              "type": "knowledge",
+              "prompt": "Một bạn trong tổ đột nhiên bị ốm không thể đi thăm nhà bạn theo kế hoạch, cả tổ nên xử lý thế nào?",
+              "options": [
+                "Hủy bỏ luôn buổi thăm nhà và trách mắng bạn bị ốm vì làm lỡ việc chung",
+                "Vẫn đến thăm theo kế hoạch, đồng thời phân công đại diện gọi điện hỏi thăm và chúc bạn mau khỏe",
+                "Bỏ mặc bạn đang ốm ở nhà và rủ nhau đi chơi điện tử",
+                "Ép buộc bạn đang ốm vẫn phải ráng đi cùng cho đủ sĩ số của tổ"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Vẫn đến thăm theo kế hoạch, đồng thời phân công đại diện gọi điện hỏi thăm và chúc bạn mau khỏe\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w8-q3",
+              "type": "knowledge",
+              "prompt": "Thấy mốc thời gian trong kế hoạch của tổ bạn chưa hợp lý, em nên góp ý thế nào để thể hiện sự tôn trọng?",
+              "options": [
+                "Chê bai bài thuyết trình của các bạn là dở tệ và cười nhạo trước cả lớp",
+                "Lắng nghe cẩn thận, chờ bạn trình bày xong rồi nhẹ nhàng giơ tay góp ý bổ sung mốc thời gian phù hợp hơn",
+                "Ngắt lời bạn ngay lập tức khi bạn đang nói để chỉ ra lỗi sai cho hả giận",
+                "Im lặng không nói gì và quay sang nói xấu kế hoạch đó với các bạn bên cạnh"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Lắng nghe cẩn thận, chờ bạn trình bày xong rồi nhẹ nhàng giơ tay góp ý bổ sung mốc thời gian phù hợp hơn\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w8-q4",
+              "type": "knowledge",
+              "prompt": "Ban truyền thông được giao chụp ảnh và ghi chép lại các sự kiện của lớp mang lại ý nghĩa lớn nhất gì?",
+              "options": [
+                "Để đăng tải lên mạng xã hội khoe khoang với các trường học khác",
+                "Để lưu giữ những khoảnh khắc đẹp, tư liệu kỷ niệm đáng nhớ của tập thể lớp ở năm học cuối cấp",
+                "Để tìm ra những lỗi sai của các bạn trong lớp rồi báo cáo cô giáo phạt",
+                "Để so sánh xem bạn nào trong lớp ăn mặc đẹp hơn trong các bức ảnh"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Để lưu giữ những khoảnh khắc đẹp, tư liệu kỷ niệm đáng nhớ của tập thể lớp ở năm học cuối cấp\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w8-q5",
+              "type": "knowledge",
+              "prompt": "Được phân công chuẩn bị dụng cụ cho buổi trồng cây, hành động nào thể hiện sự có trách nhiệm?",
+              "options": [
+                "Đến giờ thực hiện mới báo với các bạn là mình quên mang dụng cụ ở nhà",
+                "Tự giác chuẩn bị đầy đủ, kiểm tra độ an toàn từ tối hôm trước và mang đến đúng giờ",
+                "Nhờ bạn khác mang hộ dụng cụ còn mình thì đi tay không ra sân trường",
+                "Lấy đại một dụng cụ đã bị hỏng nặng mang đến cho có lệ"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Tự giác chuẩn bị đầy đủ, kiểm tra độ an toàn từ tối hôm trước và mang đến đúng giờ\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w8-q6",
+              "type": "knowledge",
+              "prompt": "Hẹn \"10 năm nữa trở lại xem cây lớn thế nào\" sau khi trồng cây lưu niệm thể hiện điều gì?",
+              "options": [
+                "Sự gắn kết tình cảm chân thành, niềm tự hào và mong muốn giữ gìn tình bạn lâu dài",
+                "Sự bắt buộc do cô giáo yêu cầu học sinh phải nói theo",
+                "Sự đùa vui nhất thời không mang lại ý nghĩa thực tế nào",
+                "Mong muốn cây mau lớn để hái quả đem bán lấy tiền chia nhau"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Sự gắn kết tình cảm chân thành, niềm tự hào và mong muốn giữ gìn tình bạn lâu dài\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c3-hdtn5",
+      "chapterNumber": 3,
+      "title": "CHỦ ĐỀ 3: TÔN SƯ TRỌNG ĐẠO",
+      "lessons": [
+        {
+          "id": "l9-hdtn5",
+          "lessonNumber": 9,
+          "title": "Tuần 9",
+          "questions": [
+            {
+              "id": "g5-hdtn-w9-q1",
+              "type": "knowledge",
+              "prompt": "Khi thảo luận lập kế hoạch làm sản phẩm tri ân thầy cô 20-11, hành động nào thể hiện sự chủ động và có trách nhiệm?",
+              "options": [
+                "Đợi đến sát ngày mới bắt đầu hỏi xem lớp dự định làm gì",
+                "Tích cực đóng góp ý tưởng, nhận phần việc phù hợp với khả năng và hoàn thành đúng hạn",
+                "Đổ hết việc viết báo tường cho bạn học giỏi môn Tiếng Việt làm một mình",
+                "Từ chối tham gia vì cho rằng việc này chỉ dành riêng cho Ban cán sự lớp"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Tích cực đóng góp ý tưởng, nhận phần việc phù hợp với khả năng và hoàn thành đúng hạn\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w9-q2",
+              "type": "knowledge",
+              "prompt": "Được phân công hỗ trợ học sinh lớp 1, 2 làm sản phẩm tri ân, em nên thực hiện thế nào để đúng tinh thần gương mẫu?",
+              "options": [
+                "Làm hộ toàn bộ sản phẩm từ đầu đến cuối cho các em để lấy thành tích nhanh",
+                "Kiên nhẫn chia sẻ ý tưởng, hướng dẫn các kỹ năng đơn giản và cổ vũ các em tự tay hoàn thành",
+                "Quát mắng khi các em cắt dán chưa được đẹp hoặc làm chậm",
+                "Bỏ mặc các em tự làm vì cho rằng đó không phải nhiệm vụ của mình"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Kiên nhẫn chia sẻ ý tưởng, hướng dẫn các kỹ năng đơn giản và cổ vũ các em tự tay hoàn thành\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w9-q3",
+              "type": "knowledge",
+              "prompt": "Khi cả lớp vào tham quan phòng truyền thống của nhà trường để thu thập tư liệu, thái độ nào thể hiện sự tôn trọng?",
+              "options": [
+                "Chạy nhảy, đùa giỡn và sờ vào các hiện vật trưng bày mà không xin phép",
+                "Trật tự quan sát, lắng nghe hướng dẫn và cẩn thận ghi chép lại các mốc lịch sử, thành tích",
+                "Lấy đồ dùng cá nhân ra chơi điện tử ngay trong phòng truyền thống",
+                "Đứng nói chuyện riêng lớn tiếng gây ảnh hưởng đến các bạn khác"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Trật tự quan sát, lắng nghe hướng dẫn và cẩn thận ghi chép lại các mốc lịch sử, thành tích\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w9-q4",
+              "type": "knowledge",
+              "prompt": "Để bài viết giới thiệu về truyền thống \"Tôn sư trọng đạo\" của trường hấp dẫn và giàu cảm xúc, nhóm em nên làm thế nào?",
+              "options": [
+                "Sao chép lại toàn bộ văn bản trên mạng Internet mà không nêu cảm nghĩ cá nhân",
+                "Nêu tên truyền thống, mô tả câu chuyện, thành tích tiêu biểu và bày tỏ lòng biết ơn, niềm tự hào",
+                "Chỉ liệt kê danh sách tên các thầy cô giáo đang công tác trong trường",
+                "Viết ngắn gọn vài dòng bằng lòng cho xong nhiệm vụ được giao"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Nêu tên truyền thống, mô tả câu chuyện, thành tích tiêu biểu và bày tỏ lòng biết ơn, niềm tự hào\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w9-q5",
+              "type": "knowledge",
+              "prompt": "Khi nhóm em trình bày kế hoạch làm báo ảnh trước lớp và được góp ý thời gian trưng bày quá gấp, nhóm nên xử lý sao?",
+              "options": [
+                "Tỏ thái độ giận dỗi và không muốn tiếp tục thực hiện công việc nữa",
+                "Lắng nghe với thái độ cầu thị, cùng thảo luận để điều chỉnh tiến độ hợp lý hơn",
+                "Bảo thủ giữ nguyên ý kiến vì cho rằng nhóm mình luôn đúng đắn",
+                "Đổi sang làm sản phẩm khác mà không thông báo lại với cô giáo"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Lắng nghe với thái độ cầu thị, cùng thảo luận để điều chỉnh tiến độ hợp lý hơn\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w9-q6",
+              "type": "knowledge",
+              "prompt": "Việc tự tay chuẩn bị các sản phẩm và tham gia tổ chức sự kiện chào mừng 20-11 mang lại giá trị lớn nhất nào?",
+              "options": [
+                "Để được nhà trường khen thưởng và chấm điểm thi đua cao nhất khối",
+                "Thể hiện lòng biết ơn, sự kính trọng sâu sắc đối với thầy cô và gắn kết tình cảm thầy trò, bạn bè",
+                "Để có cơ hội được xin phép nghỉ các giờ học văn hóa trên lớp",
+                "Để so sánh xem lớp nào mua được nhiều món quà đắt tiền hơn"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Thể hiện lòng biết ơn, sự kính trọng sâu sắc đối với thầy cô và gắn kết tình cảm thầy trò, bạn bè\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            }
+          ]
+        },
+        {
+          "id": "l10-hdtn5",
+          "lessonNumber": 10,
+          "title": "Tuần 10",
+          "questions": [
+            {
+              "id": "g5-hdtn-w10-q1",
+              "type": "knowledge",
+              "prompt": "Bị hiểu lầm cẩu thả vì vở bị vẽ bẩn, cách xử lý nào giúp An giải quyết vấn đề văn minh nhất?",
+              "options": [
+                "Đứng dậy cãi lại cô ngay tại chỗ với thái độ bực bội",
+                "Ấm ức khóc lóc, gục mặt xuống bàn và không làm bài nữa",
+                "Đặt mình vào vị trí của cô, ra chơi gặp riêng lễ phép giải thích",
+                "Về nhà nói xấu cô giáo với bố mẹ ngay lập tức"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Đặt mình vào vị trí của cô, ra chơi gặp riêng lễ phép giải thích\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w10-q2",
+              "type": "knowledge",
+              "prompt": "Bị khiển trách vì mệt nhưng thầy không biết, Tuấn nên làm gì?",
+              "options": [
+                "Xin gặp riêng thầy sau giờ học, trung thực trình bày sức khỏe",
+                "Bỏ về nhà giữa chừng và không tham gia hoạt động nữa",
+                "Tỏ thái độ vùng vằng, bĩu môi khi thầy đang nói chuyện",
+                "Im lặng chịu đựng rồi đăng bài trách thầy lên mạng xã hội"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Xin gặp riêng thầy sau giờ học, trung thực trình bày sức khỏe\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w10-q3",
+              "type": "knowledge",
+              "prompt": "Giơ tay lâu không được gọi phát biểu, suy nghĩ nào thể hiện sự trưởng thành của Nam?",
+              "options": [
+                "Thử suy đoán lý do tích cực, sau đó gặp riêng cô để tâm sự",
+                "Từ nay không bao giờ giơ tay phát biểu trong giờ của cô nữa",
+                "Hò hét gây mất trật tự lớn để thu hút sự chú ý của cô",
+                "Thu thún, giận dỗi và quay sang nói chuyện riêng trong giờ"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Thử suy đoán lý do tích cực, sau đó gặp riêng cô để tâm sự\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w10-q4",
+              "type": "knowledge",
+              "prompt": "Vô tình nói câu vô tâm làm thầy buồn, Minh nên làm gì để hàn gắn tình cảm?",
+              "options": [
+                "Giả vờ như không có chuyện gì để sự việc tự qua đi",
+                "Dũng cảm tìm gặp thầy, chân thành xin lỗi và hứa chú ý hơn",
+                "Đổ lỗi cho bạn khác đã xúi giục mình nói câu đó",
+                "Tránh mặt thầy và xin chuyển sang học lớp khác"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Dũng cảm tìm gặp thầy, chân thành xin lỗi và hứa chú ý hơn\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w10-q5",
+              "type": "knowledge",
+              "prompt": "Quá nhút nhát không dám nói trực tiếp với thầy cô, em nên chọn giải pháp nào?",
+              "options": [
+                "Giữ kín sự ấm ức trong lòng cho đến hết năm học",
+                "Viết bức thư ngắn lễ phép gửi tới thầy cô",
+                "Nhờ bạn thân đến nói chuyện hộ mình",
+                "Bỏ học để gây sự chú ý"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Viết bức thư ngắn lễ phép gửi tới thầy cô\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w10-q6",
+              "type": "knowledge",
+              "prompt": "Việc chủ động lắng nghe và giải quyết mâu thuẫn với thầy cô mang lại giá trị gì?",
+              "options": [
+                "Giúp giải tỏa hiểu lầm, vun đắp tình thầy trò và tạo môi trường học hạnh phúc",
+                "Giúp em luôn luôn được cô giáo cho điểm tối đa",
+                "Đảm bảo em không bao giờ phải làm bài tập về nhà nữa",
+                "Giúp em trở thành người có quyền lực trong lớp"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Giúp giải tỏa hiểu lầm, vun đắp tình thầy trò và tạo môi trường học hạnh phúc\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            }
+          ]
+        },
+        {
+          "id": "l11-hdtn5",
+          "lessonNumber": 11,
+          "title": "Tuần 11",
+          "questions": [
+            {
+              "id": "g5-hdtn-w11-q1",
+              "type": "knowledge",
+              "prompt": "Để bày tỏ sự quan tâm và làm cô giáo vui vẻ, ấm áp khi bước vào lớp, hành động nào thiết thực nhất?",
+              "options": [
+                "Rủ nhau góp tiền mua những món quà đắt tiền tặng cô",
+                "Tự giác dọn dẹp bàn giáo viên gọn gàng, cắm một lọ hoa tươi và giữ lớp sạch đẹp",
+                "Bật nhạc sôi động thật to trong giờ học để khuấy động không khí",
+                "Đứng vây quanh cô và xin cô cho nghỉ giờ làm bài tập về nhà"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Tự giác dọn dẹp bàn giáo viên gọn gàng, cắm một lọ hoa tươi và giữ lớp sạch đẹp\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w11-q2",
+              "type": "knowledge",
+              "prompt": "Lớp em lập hòm thư \"Tâm sự thầy trò\" đặt ở góc lớp nhằm mục đích thiết thực nào?",
+              "options": [
+                "Để các bạn bỏ rác thải nhựa vào trong lớp cho tiện",
+                "Tạo không gian riêng tư để học sinh gửi thư chia sẻ điều khó nói, băn khoăn hay lời tri ân tới thầy cô",
+                "Để cô giáo chấm bài kiểm tra nhanh chóng hơn",
+                "Để so sánh xem bạn nào viết chữ đẹp hơn"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Tạo không gian riêng tư để học sinh gửi thư chia sẻ điều khó nói, băn khoăn hay lời tri ân tới thầy cô\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w11-q3",
+              "type": "knowledge",
+              "prompt": "Khi cùng nhóm làm cuốn album ảnh/báo tường tặng thầy cô, cách phân công nào hiệu quả?",
+              "options": [
+                "Phụ thuộc hoàn toàn vào nhóm trưởng, các thành viên khác chỉ ngồi xem",
+                "Dựa vào thế mạnh từng bạn: người vẽ, người viết chữ, người dán ảnh và tổng hợp",
+                "Tranh cãi xem ai phải mang nguyên liệu rồi không ai chịu làm việc gì",
+                "Mua sẵn một sản phẩm làm sẵn ở cửa hàng về nộp cho nhanh"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Dựa vào thế mạnh từng bạn: người vẽ, người viết chữ, người dán ảnh và tổng hợp\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w11-q4",
+              "type": "knowledge",
+              "prompt": "Để thực hiện mục \"Những phát hiện mới mẻ về thầy cô\", cách làm nào lịch sự và tự nhiên nhất?",
+              "options": [
+                "Tự ý lục lòi sổ sách cá nhân trên bàn giáo viên",
+                "Lễ phép xin phép cô vài phút giờ ra chơi để phỏng vấn ngắn về sở thích, kỉ niệm",
+                "Đi hỏi thăm những người không quen biết ở ngoài trường học",
+                "Tự bịa ra các thông tin không có thực để viết vào bài báo"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Lễ phép xin phép cô vài phút giờ ra chơi để phỏng vấn ngắn về sở thích, kỉ niệm\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w11-q5",
+              "type": "knowledge",
+              "prompt": "Duy trì cuốn \"Nhật ký chung của lớp\" mang lại tác dụng gì trong việc vun đắp tình thầy trò?",
+              "options": [
+                "Giúp thầy trò cùng ghi lại kỉ niệm, lời động viên và sự thấu hiểu nhau qua mỗi tuần học",
+                "Để cô giáo ghi tên những bạn vi phạm nội quy và phạt trực nhật",
+                "Để làm bài tập Toán thay thế cho vở ghi cá nhân",
+                "Để các bạn chuyền tay nhau vẽ nháp trong giờ học văn hóa"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Giúp thầy trò cùng ghi lại kỉ niệm, lời động viên và sự thấu hiểu nhau qua mỗi tuần học\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w11-q6",
+              "type": "knowledge",
+              "prompt": "Điều gì tạo nên giá trị lớn nhất cho một sản phẩm tri ân gửi tới thầy cô?",
+              "options": [
+                "Giá trị tiền bạc đắt đỏ của các nguyên vật liệu mua ngoài chợ",
+                "Tấm lòng chân thành, sự nỗ lực hợp tác và tình cảm thấu hiểu gửi gắm vào sản phẩm",
+                "Sự hoàn hảo tuyệt đối không có bất kỳ nét vẽ chệch tay nào",
+                "Mức độ hoành tráng và kích thước thật lớn của sản phẩm"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Tấm lòng chân thành, sự nỗ lực hợp tác và tình cảm thấu hiểu gửi gắm vào sản phẩm\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            }
+          ]
+        },
+        {
+          "id": "l12-hdtn5",
+          "lessonNumber": 12,
+          "title": "Tuần 12",
+          "questions": [
+            {
+              "id": "g5-hdtn-w12-q1",
+              "type": "knowledge",
+              "prompt": "Để trang trí lớp học tạo sự bất ngờ và ấm áp cho thầy cô ngày 20-11, sự phân công nào hiệu quả nhất?",
+              "options": [
+                "Giao hết mọi việc chuẩn bị bóng bay, hoa và bảng tin cho Ban cán sự lớp làm",
+                "Rủ nhau mua thật nhiều đồ đắt tiền mà không cần thảo luận trước với cả lớp",
+                "Phân công rõ ràng: nhóm làm sạch bảng và kê bàn ghế, nhóm trang trí, nhóm chuẩn bị hoa",
+                "Chỉ làm qua loa cho xong việc rồi bỏ ra ngoài sân trường chơi đùa"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Phân công rõ ràng: nhóm làm sạch bảng và kê bàn ghế, nhóm trang trí, nhóm chuẩn bị hoa\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w12-q2",
+              "type": "knowledge",
+              "prompt": "Khi báo cáo kết quả tổ chức hoạt động tri ân có công việc bị chậm tiến độ, thái độ nào thể hiện trách nhiệm?",
+              "options": [
+                "Đổ lỗi hoàn toàn cho các bạn học yếu trong lớp đã không chịu hợp tác",
+                "Giấu giếm các thiếu sót và chỉ báo cáo những việc lớp đã làm tốt",
+                "Thẳng thắn nhìn nhận khó khăn, nhận trách nhiệm về khâu chậm tiến độ và rút kinh nghiệm",
+                "Tỏ thái độ bất cần, không quan tâm vì sự kiện đã kết thúc rồi"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Thẳng thắn nhìn nhận khó khăn, nhận trách nhiệm về khâu chậm tiến độ và rút kinh nghiệm\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w12-q3",
+              "type": "knowledge",
+              "prompt": "Khi bạn đại diện phát biểu lời tri ân thầy cô trong buổi lễ kỷ niệm, hành động nào là văn minh và lịch sự?",
+              "options": [
+                "Trật tự lắng nghe, thể hiện sự xúc động và vỗ tay chúc mừng chân thành",
+                "Quay sang nói chuyện riêng và chuyền tay nhau ăn vặt",
+                "Lấy điện thoại ra chơi game hoặc xem video",
+                "Hò hét ngắt lời bạn đang phát biểu"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Trật tự lắng nghe, thể hiện sự xúc động và vỗ tay chúc mừng chân thành\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w12-q4",
+              "type": "knowledge",
+              "prompt": "Khi nghe cô giáo chia sẻ về những mong muốn đối với học sinh trong thời gian tới, em nên tiếp nhận ra sao?",
+              "options": [
+                "Cho rằng cô giáo đang đòi hỏi quá cao và cảm thấy khó chịu trong lòng",
+                "Lắng nghe với sự ghi nhận chân thành, tự hứa sẽ cố gắng rèn luyện và sửa đổi điểm chưa tốt",
+                "Nghe xong rồi quên ngay lập tức, không quan tâm đến lời cô dặn dò",
+                "So sánh cô giáo lớp mình với cô giáo của lớp khác"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Lắng nghe với sự ghi nhận chân thành, tự hứa sẽ cố gắng rèn luyện và sửa đổi điểm chưa tốt\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w12-q5",
+              "type": "knowledge",
+              "prompt": "Khi hướng dẫn phụ huynh và thầy cô tham quan gian trưng bày sản phẩm tri ân, thái độ nào thể hiện sự tự hào?",
+              "options": [
+                "Đứng ngại ngùng không chịu nói năng gì và bỏ đi chỗ khác",
+                "Tự tin, lễ phép giới thiệu ý tưởng sáng tạo và công sức đóng góp của cả lớp",
+                "Bày tỏ sự chê bai thẳng thừng đối với các sản phẩm do chính lớp mình làm",
+                "Tranh giành lượt nói và ngắt lời khi người khác đang đặt câu hỏi"
+              ],
+              "correctIndex": 3,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Tranh giành lượt nói và ngắt lời khi người khác đang đặt câu hỏi\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w12-q6",
+              "type": "knowledge",
+              "prompt": "Sau chuỗi hoạt động 20-11, việc làm nào có ý nghĩa nhất để duy trì tình cảm thầy trò trong năm học lớp 5?",
+              "options": [
+                "Chỉ giữ thái độ ngoan ngoãn trong ngày lễ, các ngày thường lại vi phạm nội quy",
+                "Tiếp tục rèn luyện ý thức học tập, tôn trọng thầy cô và chủ động lắng nghe, chia sẻ hằng ngày",
+                "Nhờ bố mẹ mua thật nhiều quà cáp đắt tiền tặng thầy cô vào các dịp lễ tiếp theo",
+                "Cảm thấy nhẹ nhõm vì từ nay không phải tham gia các phong trào tri ân nữa"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Tiếp tục rèn luyện ý thức học tập, tôn trọng thầy cô và chủ động lắng nghe, chia sẻ hằng ngày\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c4-hdtn5",
+      "chapterNumber": 4,
+      "title": "CHỦ ĐỀ 4: QUẢN LÝ CHI TIÊU VÀ LẬP KẾ HOẠCH KINH DOANH",
+      "lessons": [
+        {
+          "id": "l13-hdtn5",
+          "lessonNumber": 13,
+          "title": "Tuần 13",
+          "questions": [
+            {
+              "id": "g5-hdtn-w13-q1",
+              "type": "knowledge",
+              "prompt": "Khi được giao ghi chép chi tiêu hằng ngày vào sổ tay, thông tin nào là đầy đủ và chính xác nhất?",
+              "options": [
+                "Chỉ ghi lại ngày tháng và tên người mua hàng",
+                "Ghi lại ngày tháng, tên khoản chi, số tiền đã chi và phân loại mục chi (học tập, sinh hoạt, giải trí...)",
+                "Chỉ ghi tổng số tiền còn lại trong ví của bố mẹ",
+                "Ghi lại tên món đồ mình thích mua trong tương lai"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Ghi lại ngày tháng, tên khoản chi, số tiền đã chi và phân loại mục chi (học tập, sinh hoạt, giải trí...)\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w13-q2",
+              "type": "knowledge",
+              "prompt": "Đi chợ thừa 15.000 đồng, Nam nên làm gì để duy trì thói quen quản lý chi tiêu hiệu quả?",
+              "options": [
+                "Cất ngay 15.000 đồng vào lợn đất cá nhân mà không báo lại với mẹ",
+                "Đưa lại tiền thừa cho mẹ và ngay lập tức ghi chép chính xác khoản mua vào sổ chi tiêu",
+                "Dùng 15.000 đồng mua bánh kẹo ăn cùng bạn mà không cần ghi chép gì",
+                "Đợi đến cuối tháng mới nhớ lại xem mình đã mua những gì để ghi vào sổ"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Đưa lại tiền thừa cho mẹ và ngay lập tức ghi chép chính xác khoản mua vào sổ chi tiêu\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w13-q3",
+              "type": "knowledge",
+              "prompt": "Trong các khoản chi của gia đình, khoản nào thuộc mục Học tập?",
+              "options": [
+                "Mua 10 kg gạo",
+                "Đóng tiền điện",
+                "Mua sách vở cho con",
+                "Ủng hộ quỹ khuyến học"
+              ],
+              "correctIndex": 3,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Ủng hộ quỹ khuyến học\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w13-q4",
+              "type": "knowledge",
+              "prompt": "Sau một tháng cùng bố mẹ ghi chép chi tiêu, giá trị thực tế lớn nhất gia đình nhận được là gì?",
+              "options": [
+                "Giúp gia đình trở nên giàu có ngay lập tức",
+                "Theo dõi số tiền đã chi so với thu nhập, nhận diện khoản chưa hợp lý để điều chỉnh tiết kiệm",
+                "Đảm bảo em không bao giờ phải đi chợ mua đồ giúp bố mẹ nữa",
+                "Giúp em được cộng điểm tối đa môn Toán ở trường"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Theo dõi số tiền đã chi so với thu nhập, nhận diện khoản chưa hợp lý để điều chỉnh tiết kiệm\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w13-q5",
+              "type": "knowledge",
+              "prompt": "Khi thực hành ghi chép sổ tay chi tiêu, nguyên tắc quan trọng nhất để số liệu không bị sai lệch là gì?",
+              "options": [
+                "Ghi đúng số tiền đã chi, ghi đủ các khoản chi và duy trì việc ghi chép thường xuyên",
+                "Chỉ ghi những khoản chi lớn, các khoản chi nhỏ lẻ dưới 10.000 đồng thì bỏ qua",
+                "Nhớ lúc nào ghi lúc đó, không cần ghi theo ngày tháng cụ thể",
+                "Làm tròn số tiền chi tiêu lên gấp đôi cho dễ tính toán"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Nhớ lúc nào ghi lúc đó, không cần ghi theo ngày tháng cụ thể\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w13-q6",
+              "type": "knowledge",
+              "prompt": "Biết gia đình đang gặp khó khăn, hành động nào của em thể hiện sự chủ động cùng gia đình tiết kiệm?",
+              "options": [
+                "Đòi hỏi bố mẹ phải mua cho mình chiếc xe đạp đắt tiền mới chịu đi học",
+                "Chủ động tắt thiết bị điện khi không dùng, giữ gìn đồ dùng học tập và hạn chế đòi mua đồ chơi",
+                "Giận dỗi bố mẹ vì không cho tiền ăn quà vặt mỗi ngày như trước",
+                "Bỏ học để đi kiếm tiền giúp bố mẹ trang trải cuộc sống"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Chủ động tắt thiết bị điện khi không dùng, giữ gìn đồ dùng học tập và hạn chế đòi mua đồ chơi\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            }
+          ]
+        },
+        {
+          "id": "l14-hdtn5",
+          "lessonNumber": 14,
+          "title": "Tuần 14",
+          "questions": [
+            {
+              "id": "g5-hdtn-w14-q1",
+              "type": "knowledge",
+              "prompt": "Khi thảo luận tìm ý tưởng kinh doanh sản phẩm tham gia hội chợ, yếu tố nào cần kết hợp hài hòa nhất?",
+              "options": [
+                "Chỉ chọn bán những món đồ đắt tiền nhất để có doanh thu cao",
+                "Kết hợp giữa sở thích, khả năng của nhóm với nhu cầu thực tế của khách hàng",
+                "Chọn làm sản phẩm khó nhất mà chưa ai từng làm để gây ấn tượng",
+                "Chọn ngẫu nhiên một sản phẩm bất kỳ không cần tính toán gì"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Kết hợp giữa sở thích, khả năng của nhóm với nhu cầu thực tế của khách hàng\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w14-q2",
+              "type": "knowledge",
+              "prompt": "Việc nhóm em xây dựng và phát Phiếu khảo sát nhu cầu khách hàng trước hội chợ nhằm mục đích gì?",
+              "options": [
+                "Thu thập thông tin về số tiền khách sẵn sàng chi và món hàng họ muốn mua để chọn sản phẩm phù hợp",
+                "Ép buộc khách hàng phải cam kết mua đồ do nhóm mình sản xuất",
+                "Khoe với các lớp khác về sự chuẩn bị chu đáo của nhóm",
+                "Hoàn thành bài tập về nhà môn Tiếng Việt do giáo viên giao"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Thu thập thông tin về số tiền khách sẵn sàng chi và món hàng họ muốn mua để chọn sản phẩm phù hợp\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w14-q3",
+              "type": "knowledge",
+              "prompt": "Câu hỏi nào trong phiếu khảo sát giúp nhóm em dự trù được mức giá bán sản phẩm phù hợp?",
+              "options": [
+                "\"Bạn thích mặc quần áo màu gì khi đi hội chợ trường?\"",
+                "\"Số tiền bạn có thể chi khi tham gia hội chợ là bao nhiêu: Dưới 10.000đ, Từ 10.000đ - 30.000đ, hay Trên 30.000đ?\"",
+                "\"Bạn thường đi học bằng phương tiện gì hằng ngày?\"",
+                "\"Bạn thích xem chương trình tivi nào nhất vào buổi tối?\""
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"\"Số tiền bạn có thể chi khi tham gia hội chợ là bao nhiêu: Dưới 10.000đ, Từ 10.000đ - 30.000đ, hay Trên 30.000đ?\"\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w14-q4",
+              "type": "knowledge",
+              "prompt": "Kết quả khảo sát cho thấy 80% muốn mua đồ ăn nhẹ, 5% muốn mua đồ lưu niệm, nhóm nên điều chỉnh kế hoạch ra sao?",
+              "options": [
+                "Vẫn quyết định làm đồ lưu niệm bằng vỏ chai vì nhóm đã chuẩn bị sẵn nguyên liệu",
+                "Hủy bỏ hoàn toàn kế hoạch tham gia hội chợ của nhóm",
+                "Linh hoạt điều chỉnh sản phẩm kinh doanh sang đồ ăn nhẹ để đáp ứng đúng nhu cầu đa số khách hàng",
+                "Tăng giá bán đồ lưu niệm lên gấp đôi để bù đắp số lượng ít người mua"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Hủy bỏ hoàn toàn kế hoạch tham gia hội chợ của nhóm\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w14-q5",
+              "type": "knowledge",
+              "prompt": "Khi cầm phiếu khảo sát đi hỏi ý kiến các bạn lớp khác trong giờ ra chơi, thái độ nào thể hiện sự lịch sự?",
+              "options": [
+                "Nhét phiếu vào tay bạn và bắt bạn phải điền ngay lập tức không chần chừ",
+                "Lễ phép chào hỏi, giải thích ngắn gọn mục đích, xin phép vài phút và cảm ơn sau khi hoàn thành",
+                "Bắt các bạn phải tích vào ô đáp án mà nhóm mình mong muốn từ trước",
+                "Bỏ đi không nói câu nào khi thấy bạn từ chối tham gia khảo sát"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Lễ phép chào hỏi, giải thích ngắn gọn mục đích, xin phép vài phút và cảm ơn sau khi hoàn thành\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w14-q6",
+              "type": "knowledge",
+              "prompt": "Việc tập tìm ý tưởng kinh doanh và khảo sát nhu cầu khách hàng mang lại bài học thực tế lớn nhất gì?",
+              "options": [
+                "Rèn luyện tư duy tài chính, kỹ năng giao tiếp, tinh thần hợp tác và biết tôn trọng nhu cầu người tiêu dùng",
+                "Giúp học sinh kiếm thật nhiều tiền để chuẩn bị nghỉ học đi làm kinh doanh",
+                "Đảm bảo nhóm sẽ đạt giải nhất toàn trường trong mọi cuộc thi hội chợ",
+                "Thay thế hoàn toàn các môn học văn hóa chính khóa ở trường tiểu học"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Rèn luyện tư duy tài chính, kỹ năng giao tiếp, tinh thần hợp tác và biết tôn trọng nhu cầu người tiêu dùng\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            }
+          ]
+        },
+        {
+          "id": "l15-hdtn5",
+          "lessonNumber": 15,
+          "title": "Tuần 15",
+          "questions": [
+            {
+              "id": "g5-hdtn-w15-q1",
+              "type": "knowledge",
+              "prompt": "Trong trò chơi \"Tiếng rao\" quảng bá bánh quy tại hội chợ, lời rao nào hấp dẫn và văn minh nhất?",
+              "options": [
+                "\"Bánh quy ngon nhất trường đây, không mua là hối hận đấy!\"",
+                "\"Bánh quy bơ thơm ngon, giòn rụm vừa mới xuất lò, mua ngay kẻo hết mọi người ơi!\"",
+                "\"Ép buộc mọi người phải mua bánh ủng hộ lớp 5A!\"",
+                "\"Bánh quy bán giá cực đắt, ai có nhiều tiền mới mua được!\""
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"\"Bánh quy bơ thơm ngon, giòn rụm vừa mới xuất lò, mua ngay kẻo hết mọi người ơi!\"\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w15-q2",
+              "type": "knowledge",
+              "prompt": "Các khâu chuẩn bị sản xuất mặt hàng bánh quy cho gian hàng kinh doanh theo thứ tự nào hợp lý nhất?",
+              "options": [
+                "Bán hàng trước  Mua nguyên liệu  Trang trí bao bì",
+                "Tính toán nguyên liệu  Mượn lò nướng  Thiết kế bao bì  Tiến hành làm bánh",
+                "Thiết kế bao bì  Đi bán hàng  Mới bắt đầu làm bánh",
+                "Chỉ cần mua bánh sẵn ngoài chợ về đóng gói lại mang đi bán"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Tính toán nguyên liệu  Mượn lò nướng  Thiết kế bao bì  Tiến hành làm bánh\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w15-q3",
+              "type": "knowledge",
+              "prompt": "Cách giới thiệu sản phẩm nào dưới đây là chiến lược thu hút khách hàng hiệu quả và lịch sự?",
+              "options": [
+                "Làm tờ rơi đẹp mắt, trang trí gian hàng thu hút và chuẩn bị quà tặng nhỏ khi mua hàng",
+                "Chèo kéo, chèn ép và kéo tay khách hàng vào gian hàng của mình",
+                "Đi sang các gian hàng khác để nói xấu và chê bai sản phẩm của họ",
+                "Núp trong lớp không ra chào hàng và chờ khách tự tìm đến mua"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Làm tờ rơi đẹp mắt, trang trí gian hàng thu hút và chuẩn bị quà tặng nhỏ khi mua hàng\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w15-q4",
+              "type": "knowledge",
+              "prompt": "Việc dự trù chi phí mua nguyên liệu làm bánh chính xác có tác dụng quan trọng nhất là gì?",
+              "options": [
+                "Giúp nhóm kiểm soát số vốn bỏ ra, tính toán giá bán phù hợp để không bị thua lỗ",
+                "Để xin bố mẹ thật nhiều tiền tiêu xài cá nhân",
+                "Để khoe với các nhóm khác là nhóm mình giàu có",
+                "Giúp nhóm không cần phải làm sản phẩm nữa"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Giúp nhóm kiểm soát số vốn bỏ ra, tính toán giá bán phù hợp để không bị thua lỗ\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w15-q5",
+              "type": "knowledge",
+              "prompt": "Trong quá trình chế biến và đóng gói bánh quy bán cho học sinh, nhóm em cần tuân thủ quy định gì?",
+              "options": [
+                "Rửa tay sạch sẽ, đeo khẩu trang, găng tay và đảm bảo nguyên liệu tươi ngon, sạch sẽ",
+                "Dùng tay trực tiếp bốc bánh cho nhanh",
+                "Để bánh ngoài trời không che đậy cho đỡ tốn túi bao bì",
+                "Dùng nguyên liệu đã hết hạn sử dụng cho tiết kiệm chi phí"
+              ],
+              "correctIndex": 3,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Dùng nguyên liệu đã hết hạn sử dụng cho tiết kiệm chi phí\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w15-q6",
+              "type": "knowledge",
+              "prompt": "Việc liệt kê chi tiết các công việc từ sản xuất đến giới thiệu giúp mang lại kết quả gì tại hội chợ?",
+              "options": [
+                "Giúp công việc chủ động, trôi chảy, phân công đúng việc và đạt hiệu quả kinh doanh cao",
+                "Giúp nhóm tự động có thưởng mà không cần ra gian hàng",
+                "Làm cho các thành viên cảm thấy mệt mỏi và tranh cãi nhau",
+                "Khiến khách hàng sợ hãi không dám lại gần"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Giúp công việc chủ động, trôi chảy, phân công đúng việc và đạt hiệu quả kinh doanh cao\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            }
+          ]
+        },
+        {
+          "id": "l16-hdtn5",
+          "lessonNumber": 16,
+          "title": "Tuần 16",
+          "questions": [
+            {
+              "id": "g5-hdtn-w16-q1",
+              "type": "knowledge",
+              "prompt": "Mục tiêu chính và có ý nghĩa nhân văn nhất khi lập kế hoạch kinh doanh tham gia Hội chợ Xuân là gì?",
+              "options": [
+                "Bán hàng lấy tiền chia đều cho các thành viên trong lớp tiêu xài cá nhân",
+                "Bán hàng gây Quỹ Nhân ái để giúp đỡ các bạn học sinh có hoàn cảnh khó khăn",
+                "Thi đua xem lớp nào thu được nhiều lợi nhuận nhất để lấy giải thưởng",
+                "Giới thiệu sản phẩm để sau này bỏ học đi làm kinh doanh"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Bán hàng gây Quỹ Nhân ái để giúp đỡ các bạn học sinh có hoàn cảnh khó khăn\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w16-q2",
+              "type": "knowledge",
+              "prompt": "Một bản kế hoạch kinh doanh hoàn chỉnh của nhóm/lớp cần bao gồm đầy đủ những nội dung nào?",
+              "options": [
+                "Mục tiêu, sản phẩm, đối tượng khách hàng, dự trù chi phí, phân công nhiệm vụ và thời gian/địa điểm",
+                "Chỉ cần ghi tên các thành viên trong nhóm và tổng số tiền thu được",
+                "Danh sách những món đồ chơi yêu thích của từng thành viên trong lớp",
+                "Bảng điểm tổng kết học tập của các thành viên trong tổ"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Mục tiêu, sản phẩm, đối tượng khách hàng, dự trù chi phí, phân công nhiệm vụ và thời gian/địa điểm\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w16-q3",
+              "type": "knowledge",
+              "prompt": "Trong kế hoạch kinh doanh bán bánh quy gây Quỹ Nhân ái, cách phân công nhiệm vụ nào hợp lý và công bằng?",
+              "options": [
+                "Giao toàn bộ việc làm bánh, làm poster và bán hàng cho nhóm trưởng gánh vác",
+                "Phân công dựa trên sở trường: bạn khéo tay làm bánh, bạn viết chữ đẹp làm biển, bạn tự tin bán hàng",
+                "Bắt các bạn học chưa tốt phải gánh toàn bộ chi phí mua nguyên liệu ban đầu",
+                "Để các bạn tự do làm theo ý thích, không cần phân công nhiệm vụ cụ thể"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Giao toàn bộ việc làm bánh, làm poster và bán hàng cho nhóm trưởng gánh vác\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w16-q4",
+              "type": "knowledge",
+              "prompt": "Khi đại diện nhóm trình bày bản kế hoạch kinh doanh trước lớp để bình chọn, kỹ năng nào giúp bài thuyết phục hơn?",
+              "options": [
+                "Nói thật nhanh cho xong lượt để được về chỗ ngồi",
+                "Nêu rõ mục tiêu, tính khả thi, dự trù chi phí hợp lý và lắng nghe góp ý với thái độ cầu thị",
+                "Ép buộc cả lớp phải bình chọn cho bản kế hoạch của nhóm mình bằng được",
+                "Đọc nguyên văn bản kế hoạch đã viết sẵn mà không giải thích gì thêm"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Nêu rõ mục tiêu, tính khả thi, dự trù chi phí hợp lý và lắng nghe góp ý với thái độ cầu thị\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w16-q5",
+              "type": "knowledge",
+              "prompt": "Góp ý chi phí mua nguyên liệu quá cao so với giá bán dự kiến, nhóm em nên xử lý thế nào?",
+              "options": [
+                "Tỏ thái độ giận dỗi và rút khỏi hoạt động Hội chợ Xuân của trường",
+                "Cùng nhau tính toán, điều chỉnh lại lượng nguyên liệu hoặc tìm nguồn cung cấp hợp lý hơn để cân bằng thu chi",
+                "Giữ nguyên mức chi phí cũ và tăng giá bán sản phẩm lên gấp ba lần",
+                "Mua nguyên liệu kém chất lượng không rõ nguồn gốc cho rẻ để tiết kiệm"
+              ],
+              "correctIndex": 3,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Mua nguyên liệu kém chất lượng không rõ nguồn gốc cho rẻ để tiết kiệm\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w16-q6",
+              "type": "knowledge",
+              "prompt": "Việc biết ghi chép chi tiêu, khảo sát nhu cầu và lập kế hoạch kinh doanh mang lại giá trị thực tế lớn nhất gì?",
+              "options": [
+                "Giúp em trở thành người buôn bán giỏi nhất trường tiểu học",
+                "Hình thành thói quen quản lý tài chính thông minh, biết sẻ chia với cộng đồng và phát triển kỹ năng làm việc nhóm",
+                "Giúp em không cần phải làm bài tập các môn học văn hóa khác",
+                "Đảm bảo gia đình em luôn có sẵn tiền tiêu xài mà không cần tiết kiệm"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Hình thành thói quen quản lý tài chính thông minh, biết sẻ chia với cộng đồng và phát triển kỹ năng làm việc nhóm\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c5-hdtn5",
+      "chapterNumber": 5,
+      "title": "CHỦ ĐỀ 5: GIA ĐÌNH ĐẦM ẤM",
+      "lessons": [
+        {
+          "id": "l17-hdtn5",
+          "lessonNumber": 17,
+          "title": "Tuần 17",
+          "questions": [
+            {
+              "id": "g5-hdtn-w17-q1",
+              "type": "knowledge",
+              "prompt": "Thấy bà nội ngồi nghỉ mệt trên ghế sofa, hành động nào thể hiện sự lễ phép và trách nhiệm?",
+              "options": [
+                "Chạy ngay vào phòng riêng đóng cửa lại để chơi điện tử",
+                "Lại gần chào hỏi lễ phép, rót cốc nước ấm mời bà và hỏi thăm sức khỏe",
+                "Bật tivi thật to để xem chương trình hoạt hình yêu thích",
+                "Đòi bà phải đứng dậy đi nấu cơm ngay cho mình ăn"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Lại gần chào hỏi lễ phép, rót cốc nước ấm mời bà và hỏi thăm sức khỏe\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w17-q2",
+              "type": "knowledge",
+              "prompt": "Thấy nhà cửa chưa dọn dẹp và bố mẹ chưa về, thái độ nào thể hiện em là người con có trách nhiệm?",
+              "options": [
+                "Tự giác lấy chổi quét dọn nhà cửa sạch sẽ mà không đợi bố mẹ nhắc nhở",
+                "Bỏ mặc nhà bẩn vì cho rằng đó là công việc của người lớn",
+                "Nhắn tin trách móc bố mẹ sao về muộn mà không chịu dọn nhà",
+                "Chờ bố mẹ về rồi mới vừa làm vừa tỏ thái độ giận dỗi"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Tự giác lấy chổi quét dọn nhà cửa sạch sẽ mà không đợi bố mẹ nhắc nhở\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w17-q3",
+              "type": "knowledge",
+              "prompt": "Bố mẹ bận việc và giao trông em nhỏ, em nhỏ đòi ra đường chơi khi nắng gắt, em nên xử lý thế nào?",
+              "options": [
+                "Mặc kệ em muốn đi đâu thì đi để bản thân được tự do chơi điện thoại",
+                "Nhẹ nhàng giải thích trời nắng dễ ốm, dỗ dành em bằng trò chơi trong nhà và trông em ngoan",
+                "Mắng mỏ và dọa đánh để em sợ không dám đòi hỏi nữa",
+                "Khóa cửa nhốt em trong phòng một mình rồi tự ý đi chơi với bạn"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Nhẹ nhàng giải thích trời nắng dễ ốm, dỗ dành em bằng trò chơi trong nhà và trông em ngoan\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w17-q4",
+              "type": "knowledge",
+              "prompt": "Trong dịp sinh nhật bố, cách tham gia nào thể hiện trách nhiệm và tình cảm của em?",
+              "options": [
+                "Hào hứng cùng mẹ trang trí, gửi lời chúc mừng sinh nhật bố và cùng hát vui vẻ",
+                "Tỏ thái độ khó chịu vì bữa tiệc làm gián đoạn thời gian chơi game của mình",
+                "Ngồi vào bàn ăn xong là đứng dậy đi ngay không phụ giúp dọn dẹp",
+                "Đòi hỏi bố trong ngày sinh nhật của mình phải mua quà ngược lại cho mình"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Hào hứng cùng mẹ trang trí, gửi lời chúc mừng sinh nhật bố và cùng hát vui vẻ\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w17-q5",
+              "type": "knowledge",
+              "prompt": "Việc tự giác hoàn thành bài tập, tự gấp quần áo và dọn góc học tập mang lại lợi ích gì?",
+              "options": [
+                "Giúp em được bố mẹ cho thật nhiều tiền tiêu vặt cá nhân",
+                "Thể hiện sự tự lập, giúp bố mẹ giảm bớt vất vả và giữ không gian sống luôn ngăn nắp",
+                "Đảm bảo em không bao giờ phải làm bất kỳ việc nhà nào nữa",
+                "Để so sánh xem mình có ngoan hơn các bạn khác trong lớp không"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Thể hiện sự tự lập, giúp bố mẹ giảm bớt vất vả và giữ không gian sống luôn ngăn nắp\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w17-q6",
+              "type": "knowledge",
+              "prompt": "Việc mỗi thành viên chủ động thực hiện trách nhiệm từ những việc nhỏ nhất mang lại giá trị gì?",
+              "options": [
+                "Giúp gia đình trở nên nổi tiếng nhất khu phố",
+                "Tạo nên bầu không khí gia đình luôn vui vẻ, đầm ấm, gắn kết và tràn ngập tình yêu thương",
+                "Giúp em nhận được phần thưởng lớn từ phía nhà trường",
+                "Đảm bảo em không bao giờ bị bố mẹ phê bình hay nhắc nhở"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Tạo nên bầu không khí gia đình luôn vui vẻ, đầm ấm, gắn kết và tràn ngập tình yêu thương\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            }
+          ]
+        },
+        {
+          "id": "l18-hdtn5",
+          "lessonNumber": 18,
+          "title": "Tuần 18",
+          "questions": [
+            {
+              "id": "g5-hdtn-w18-q1",
+              "type": "knowledge",
+              "prompt": "Nhớ công ơn chăm sóc của bà, cách thể hiện lòng biết ơn nào phù hợp và thiết thực nhất ở tuổi lớp 5?",
+              "options": [
+                "Dành thời gian về thăm bà, cùng bà nấu ăn, trò chuyện và làm tặng bà món quà nhỏ",
+                "Mua những món quà thật đắt tiền vượt quá khả năng tài chính của bản thân",
+                "Giấu kín tình cảm trong lòng và không bao giờ thể hiện ra lời nói hay hành động",
+                "Đòi hỏi bà phải tiếp tục làm hộ mọi việc nhà cho mình như khi còn nhỏ"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Dành thời gian về thăm bà, cùng bà nấu ăn, trò chuyện và làm tặng bà món quà nhỏ\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w18-q2",
+              "type": "knowledge",
+              "prompt": "Bố bận rộn làm việc muộn vào buổi tối tại nhà, em nên làm gì để thể hiện sự quan tâm?",
+              "options": [
+                "Bật tivi thật to và nô đùa gây mất trật tự gần ngay bàn làm việc của bố",
+                "Chủ động vặn nhỏ tivi, nhắc nhở em nhỏ đi nhẹ nói khẽ để bố làm việc và rót nước mời bố",
+                "Đòi bố phải nghỉ làm ngay lập tức để ngồi chơi điện tử cùng mình",
+                "Tỏ thái độ giận dỗi vì bố dạo này không có thời gian nói chuyện cùng"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Chủ động vặn nhỏ tivi, nhắc nhở em nhỏ đi nhẹ nói khẽ để bố làm việc và rót nước mời bố\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w18-q3",
+              "type": "knowledge",
+              "prompt": "Nhân dịp kỷ niệm ngày cưới của bố mẹ, món quà tự làm nào thể hiện sự chân thành biết ơn?",
+              "options": [
+                "Tự tay vẽ và viết một tấm thiệp chúc mừng ghi những lời cảm ơn sâu sắc gửi tới bố mẹ",
+                "Lấy trộm tiền tiết kiệm của bố mẹ cất trong tủ để ra cửa hàng mua đồ chơi mình thích",
+                "Yêu cầu bố mẹ phải tổ chức một bữa tiệc hoành tráng tại nhà hàng sang trọng",
+                "Không làm gì vì nghĩ rằng người lớn tuổi thì không cần nhận quà chúc mừng"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Tự tay vẽ và viết một tấm thiệp chúc mừng ghi những lời cảm ơn sâu sắc gửi tới bố mẹ\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w18-q4",
+              "type": "knowledge",
+              "prompt": "Khi bố đang đi công tác xa nhà nhiều ngày, hành động nào gửi gắm tình yêu thương phù hợp nhất?",
+              "options": [
+                "Viết thư tay hoặc gọi điện hỏi thăm, chúc bố công tác tốt và dặn bố giữ gìn sức khỏe",
+                "Tức giận, khóc lóc và đòi bố phải lập tức bỏ việc về nhà ngay với mình",
+                "Bỏ bê việc học tập để làm bố phải lo lắng và gọi điện về mắng",
+                "Hoàn toàn không gọi điện hỏi thăm vì cho rằng bố lớn rồi tự lo được"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Viết thư tay hoặc gọi điện hỏi thăm, chúc bố công tác tốt và dặn bố giữ gìn sức khỏe\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w18-q5",
+              "type": "knowledge",
+              "prompt": "Lòng biết ơn đối với người thân nên được rèn luyện hằng ngày qua những cử chỉ nào?",
+              "options": [
+                "Nói lời cảm ơn khi nhận sự giúp đỡ, chào hỏi lễ phép và quan tâm khi người thân mệt mỏi",
+                "Chỉ tỏ ra ngoan ngoãn khi có việc muốn xin tiền mua quà vặt",
+                "Xem việc người thân lo lắng, chăm sóc cho mình là điều đương nhiên phải làm",
+                "Thường xuyên so sánh người thân của mình với gia đình của người khác"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Nói lời cảm ơn khi nhận sự giúp đỡ, chào hỏi lễ phép và quan tâm khi người thân mệt mỏi\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w18-q6",
+              "type": "knowledge",
+              "prompt": "Việc chủ động thể hiện lòng biết ơn với người thân bằng thái độ và việc làm cụ thể mang lại giá trị gì?",
+              "options": [
+                "Giúp gia đình gắn kết, ngập tràn niềm vui và làm người thân cảm thấy hạnh phúc, bớt mệt mỏi",
+                "Giúp em được bố mẹ thưởng cho thật nhiều tiền tiêu vặt cá nhân",
+                "Giúp em được cô giáo miễn giảm tất cả các bài tập về nhà ở trường",
+                "Để có cơ hội mang đi khoe khoang với các bạn bè trong lớp"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Giúp gia đình gắn kết, ngập tràn niềm vui và làm người thân cảm thấy hạnh phúc, bớt mệt mỏi\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            }
+          ]
+        },
+        {
+          "id": "l19-hdtn5",
+          "lessonNumber": 19,
+          "title": "Tuần 19",
+          "questions": [
+            {
+              "id": "g5-hdtn-w19-q1",
+              "type": "knowledge",
+              "prompt": "Khoảng thời gian nào thể hiện đúng nhất bầu không khí đầm ấm, vui vẻ của một \"tổ ấm gia đình\"?",
+              "options": [
+                "Cả nhà cùng ngồi quây quần chuẩn bị mâm ngũ quả, chia sẻ câu chuyện hài hước và trao lời yêu thương",
+                "Mỗi người ngồi một góc trong phòng riêng và dán mắt vào màn hình điện thoại cả ngày",
+                "Bố mẹ cãi nhau về chuyện chi tiêu còn con cái giận dỗi bỏ bữa cơm tối",
+                "Mọi người im lặng ăn cơm thật nhanh để ai nấy lại đi chơi cá nhân"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Cả nhà cùng ngồi quây quần chuẩn bị mâm ngũ quả, chia sẻ câu chuyện hài hước và trao lời yêu thương\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w19-q2",
+              "type": "knowledge",
+              "prompt": "Để chuẩn bị đón Tết cùng gia đình, công việc nào thực tế và vừa sức nhất mà em nên chủ động nhận làm?",
+              "options": [
+                "Tự một mình trèo lên mái nhà cao để sơn lại toàn bộ ngôi nhà",
+                "Bỏ mặc nhà cửa bẩn thỉu cho bố mẹ tự vất vả dọn dẹp một mình",
+                "Cùng dọn dẹp, lau chùi bàn ghế, trang trí nhà cửa và phụ mẹ bày mâm ngũ quả, cắm hoa tươi",
+                "Đòi bố mẹ phải thuê thợ về dọn dẹp để bản thân được đi chơi suốt ngày"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Cùng dọn dẹp, lau chùi bàn ghế, trang trí nhà cửa và phụ mẹ bày mâm ngũ quả, cắm hoa tươi\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w19-q3",
+              "type": "knowledge",
+              "prompt": "Khi cả nhà gói bánh chưng đón Tết, dù gói chưa đẹp bằng bố mẹ, em nên có thái độ thế nào?",
+              "options": [
+                "Tỏ thái độ chán nản, ném lá dong xuống đất và bỏ đi chỗ khác",
+                "Hào hứng học hỏi, kiên nhẫn làm theo hướng dẫn của người lớn và vui vẻ tận hưởng không khí ấm áp",
+                "Chê bai việc gói bánh chưng truyền thống là lỗi thời và tốn thời gian",
+                "Ép buộc bố mẹ phải mua bánh chưng sẵn ngoài chợ cho nhanh gọn"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Hào hứng học hỏi, kiên nhẫn làm theo hướng dẫn của người lớn và vui vẻ tận hưởng không khí ấm áp\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w19-q4",
+              "type": "knowledge",
+              "prompt": "Khi lập kế hoạch \"Đón Tết cùng gia đình\", việc phân công công việc từ 27 đến 30 Tết nên đảm bảo nguyên tắc gì?",
+              "options": [
+                "Phân công cụ thể theo từng ngày, phù hợp với thời gian và khả năng để công việc trôi chảy",
+                "Dồn tất cả mọi việc dọn dẹp, mua sắm vào đúng chiều 30 Tết mới làm",
+                "Để bố mẹ tự làm hết, bản thân chỉ ghi tên vào kế hoạch cho có lệ",
+                "Chỉ lên kế hoạch cho các hoạt động đi chơi và ăn uống cá nhân"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Để bố mẹ tự làm hết, bản thân chỉ ghi tên vào kế hoạch cho có lệ\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w19-q5",
+              "type": "knowledge",
+              "prompt": "Để buổi tối Tất niên thêm gắn kết và tràn ngập tiếng cười, em có thể chủ động đề xuất hoạt động nào?",
+              "options": [
+                "Chuẩn bị bộ cờ cá ngựa hoặc các trò chơi dân gian phù hợp để cả nhà cùng chơi sau bữa cơm",
+                "Đòi bố mẹ cho tiền đi chơi điện tử xuyên đêm ngoài quán với bạn bè",
+                "Mở tivi âm lượng thật lớn và không cho bất kỳ ai nói chuyện",
+                "Tự nhốt mình trong phòng và gieo sự khó chịu cho mọi người xung quanh"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Chuẩn bị bộ cờ cá ngựa hoặc các trò chơi dân gian phù hợp để cả nhà cùng chơi sau bữa cơm\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w19-q6",
+              "type": "knowledge",
+              "prompt": "Dịp Tết đoàn viên mang lại giá trị tinh thần lớn nhất nào cho mỗi thành viên trong gia đình?",
+              "options": [
+                "Giúp mỗi người nhận được thật nhiều tiền lì xì để mua đồ chơi đắt tiền",
+                "Là cơ hội để các thành viên xích lại gần nhau, gắn kết tình cảm, chia sẻ yêu thương và cảm nhận trọn vẹn sự ấm áp",
+                "Đảm bảo em không phải làm bất kỳ bài tập nào trong suốt kỳ nghỉ cả năm",
+                "Giúp gia đình so sánh xem nhà mình có nhiều đồ đẹp hơn nhà người khác không"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Là cơ hội để các thành viên xích lại gần nhau, gắn kết tình cảm, chia sẻ yêu thương và cảm nhận trọn vẹn sự ấm áp\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            }
+          ]
+        },
+        {
+          "id": "l20-hdtn5",
+          "lessonNumber": 20,
+          "title": "Tuần 20",
+          "questions": [
+            {
+              "id": "g5-hdtn-w20-q1",
+              "type": "knowledge",
+              "prompt": "Mời gia đình tham gia \"Hội chợ Xuân gây Quỹ Nhân ái\", hành động nào thể hiện sự gắn kết tình cảm?",
+              "options": [
+                "Giấu không cho bố mẹ biết vì sợ bố mẹ làm mình xấu hổ với bạn bè ở trường",
+                "Trân trọng gửi lời mời và hào hứng giới thiệu gian hàng, sản phẩm do chính tay em chuẩn bị cho bố mẹ, ông bà",
+                "Ép buộc bố mẹ phải mua hết toàn bộ hàng hóa còn lại của lớp mình bằng được",
+                "Chỉ mời bạn bè tham gia cùng còn bỏ mặc người thân khi họ đến trường"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Trân trọng gửi lời mời và hào hứng giới thiệu gian hàng, sản phẩm do chính tay em chuẩn bị cho bố mẹ, ông bà\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w20-q2",
+              "type": "knowledge",
+              "prompt": "Bố bận rộn và từ chối tham gia hoạt động gia đình, em nên thuyết phục thế nào cho tinh tế và tình cảm?",
+              "options": [
+                "\"Bố lúc nào cũng chỉ biết công việc, chẳng quan tâm gì đến gia đình con cả!\"",
+                "\"Chuyến đi này chỉ mất nửa ngày thôi nhưng cả nhà mình sẽ rất vui vẻ và thư giãn, bố đi cùng chúng con nhé!\"",
+                "\"Nếu bố không đi thì con sẽ bỏ ăn cơm tối và không đi học nữa!\"",
+                "Khóc lóc ầm ĩ và giận dỗi bố suốt cả tuần lễ không thèm nói chuyện"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"\"Chuyến đi này chỉ mất nửa ngày thôi nhưng cả nhà mình sẽ rất vui vẻ và thư giãn, bố đi cùng chúng con nhé!\"\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w20-q3",
+              "type": "knowledge",
+              "prompt": "Sau bữa ăn tối, hành động nào của em giúp mang lại tiếng cười và sự ấm áp cho gia đình?",
+              "options": [
+                "Mang điện thoại ra góc riêng ngồi chơi game một mình suốt cả buổi tối",
+                "Chủ động kể chuyện vui ở trường, hỏi thăm một ngày làm việc của bố mẹ hoặc cùng chơi trò chơi",
+                "Mở tivi với âm lượng thật lớn rồi bỏ đi vào phòng ngủ đóng cửa lại",
+                "Nhắc lại những chuyện cãi nhau cũ để làm mọi người khó chịu thêm"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Chủ động kể chuyện vui ở trường, hỏi thăm một ngày làm việc của bố mẹ hoặc cùng chơi trò chơi\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w20-q4",
+              "type": "knowledge",
+              "prompt": "Khi bất đồng ý kiến về địa điểm đi chơi ngày cuối tuần với anh/chị em, em nên xử lý thế nào để giữ hòa thuận?",
+              "options": [
+                "Lắng nghe ý kiến mọi người, bình tĩnh nêu lý do và cùng nhường nhịn để chọn phương án thoải mái nhất",
+                "Đập phá đồ đạc và hét lớn để bắt mọi người phải nghe theo ý kiến của mình",
+                "Bỏ đi ra ngoài đường chơi và tuyên bố không tham gia chuyến đi nữa",
+                "Tỏ thái độ vùng vằng, bĩu môi và nói xấu anh/chị với bố mẹ"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Lắng nghe ý kiến mọi người, bình tĩnh nêu lý do và cùng nhường nhịn để chọn phương án thoải mái nhất\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w20-q5",
+              "type": "knowledge",
+              "prompt": "Thấy mẹ đi làm về với vẻ mặt rất mệt mỏi, cách ứng xử nào thể hiện em là đứa con ngoan, biết vun đắp gia đình?",
+              "options": [
+                "Đòi mẹ phải nấu ngay món ăn mình thích và trách mẹ về nhà quá muộn",
+                "Nhanh nhẹn lấy nước ấm mời mẹ, đấm lưng và phụ giúp việc nhà còn lại để mẹ nghỉ ngơi",
+                "Bật nhạc thật to và nô đùa nhảy múa gây mất trật tự ngay trong nhà",
+                "Giận dỗi vì hôm nay mẹ đi làm về muộn và không mua quà về cho mình"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Nhanh nhẹn lấy nước ấm mời mẹ, đấm lưng và phụ giúp việc nhà còn lại để mẹ nghỉ ngơi\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w20-q6",
+              "type": "knowledge",
+              "prompt": "Việc chủ động thể hiện trách nhiệm, lòng biết ơn và tạo bầu không khí đầm ấm mang lại giá trị lớn nhất gì?",
+              "options": [
+                "Giúp gia đình trở thành tổ ấm thực sự - nơi ngập tràn tình yêu thương, sự thấu hiểu và điểm tựa vững chắc",
+                "Giúp em luôn nhận được tiền thưởng lớn mỗi khi làm việc nhà giúp bố mẹ",
+                "Giúp em có quyền đòi hỏi bố mẹ mua bất kỳ món đồ chơi đắt tiền nào mình thích",
+                "Giúp em được thầy cô giáo miễn hoàn toàn bài tập về nhà ở trường"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Giúp gia đình trở thành tổ ấm thực sự - nơi ngập tràn tình yêu thương, sự thấu hiểu và điểm tựa vững chắc\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c6-hdtn5",
+      "chapterNumber": 6,
+      "title": "CHỦ ĐỀ 6: SỐNG AN TOÀN VÀ TỰ CHỦ",
+      "lessons": [
+        {
+          "id": "l21-hdtn5",
+          "lessonNumber": 21,
+          "title": "Tuần 21",
+          "questions": [
+            {
+              "id": "g5-hdtn-w21-q1",
+              "type": "knowledge",
+              "prompt": "Trong buổi đồng diễn thể dục chào tuần mới, thấy các bạn tập qua loa và nói chuyện, em nên ứng xử thế nào?",
+              "options": [
+                "Tập theo các bạn xung quanh cho đỡ mệt",
+                "Nghiêm túc, tự giác thực hiện đúng và đầy đủ các động tác thể dục để rèn luyện sức khỏe bản thân",
+                "Giận dỗi bỏ ra ngoài sân trường ngồi",
+                "Nhắc nhở các bạn bằng cách quát mắng thật to làm gián đoạn buổi đồng diễn"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Nghiêm túc, tự giác thực hiện đúng và đầy đủ các động tác thể dục để rèn luyện sức khỏe bản thân\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w21-q2",
+              "type": "knowledge",
+              "prompt": "Điểm khác biệt lớn nhất về hệ thống môn học và giáo viên ở cấp THCS so với Tiểu học là gì?",
+              "options": [
+                "Lớp học chỉ có duy nhất một giáo viên dạy tất cả các môn như ở Tiểu học",
+                "Mỗi môn học sẽ do một giáo viên bộ môn chuyên trách riêng phụ trách giảng dạy",
+                "Học sinh hoàn toàn không cần phải làm bài tập về nhà nữa",
+                "Không còn bất kỳ giờ kiểm tra hay đánh giá kết quả học tập nào"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Mỗi môn học sẽ do một giáo viên bộ môn chuyên trách riêng phụ trách giảng dạy\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w21-q3",
+              "type": "knowledge",
+              "prompt": "Thấy Nam nhút nhát và lo lắng không dám làm quen với bạn mới ở môi trường THCS, em nên khuyên bạn thế nào?",
+              "options": [
+                "Thu mình lại, chỉ ngồi một chỗ và đợi người khác chủ động đến nói chuyện trước",
+                "Cởi mở, hòa đồng, chủ động nở nụ cười và chào hỏi để tự tin kết bạn mới",
+                "Xin phép bố mẹ cho chuyển trường về lại trường Tiểu học cũ",
+                "Tỏ thái độ kiêu ngạo để không ai dám trêu chọc mình"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Thu mình lại, chỉ ngồi một chỗ và đợi người khác chủ động đến nói chuyện trước\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w21-q4",
+              "type": "knowledge",
+              "prompt": "Khi tham quan trường THCS để tìm hiểu về các hoạt động, cách thu thập thông tin nào chủ động và lịch sự?",
+              "options": [
+                "Chuẩn bị trước câu hỏi, mang theo sổ bút và lễ phép phỏng vấn thầy cô hoặc anh chị học sinh",
+                "Tự ý chạy vào các phòng học đang trong giờ giảng để làm phiền thầy cô",
+                "Tự bịa ra các thông tin theo suy đoán cá nhân mà không cần đi hỏi ai cả",
+                "Chỉ đi dạo quanh sân trường ăn quà vặt rồi về mà không làm nhiệm vụ"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Chuẩn bị trước câu hỏi, mang theo sổ bút và lễ phép phỏng vấn thầy cô hoặc anh chị học sinh\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w21-q5",
+              "type": "knowledge",
+              "prompt": "Khi một bạn trong nhóm đưa ra các phỏng đoán tiêu cực về THCS khiến nhóm lo sợ, em nên xử lý thế nào?",
+              "options": [
+                "Hùa theo bạn để cùng lo lắng và quyết định bỏ không làm sơ đồ tư duy nữa",
+                "Bình tĩnh cùng các bạn phân tích từng thách thức và đề xuất giải pháp chủ động thích ứng",
+                "Loại bạn đó ra khỏi nhóm và không cho tham gia thảo luận cùng mọi người",
+                "Đẩy toàn bộ công việc vẽ sơ đồ tư duy cho một mình nhóm trưởng gánh vác"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Bình tĩnh cùng các bạn phân tích từng thách thức và đề xuất giải pháp chủ động thích ứng\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w21-q6",
+              "type": "knowledge",
+              "prompt": "Việc chủ động tìm hiểu về môi trường THCS và rèn luyện các đức tính cần thiết mang lại giá trị lớn nhất gì?",
+              "options": [
+                "Giúp em luôn đạt điểm 10 tuyệt đối trong tất cả các môn học ở trường mới",
+                "Giúp em nhanh chóng thích ứng môi trường mới, tự tin vượt qua khó khăn và chủ động trong học tập",
+                "Giúp em trở thành người có quyền lực nhất trong trường học mới",
+                "Đảm bảo em không bao giờ phải gặp phải bất kỳ áp lực hay thử thách nào trong cuộc sống"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Giúp em luôn đạt điểm 10 tuyệt đối trong tất cả các môn học ở trường mới\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            }
+          ]
+        },
+        {
+          "id": "l22-hdtn5",
+          "lessonNumber": 22,
+          "title": "Tuần 22",
+          "questions": [
+            {
+              "id": "g5-hdtn-w22-q1",
+              "type": "knowledge",
+              "prompt": "Khi chuẩn bị sang môi trường THCS với lượng kiến thức nhiều hơn, đức tính nào quan trọng nhất giúp em chủ động học tập?",
+              "options": [
+                "Tính thụ động, chờ đợi thầy cô chỉ bảo tận tay từng việc một",
+                "Tính tự chủ trong học tập",
+                "Tính ỷ lại vào sự giúp đỡ của bạn bè xung quanh",
+                "Tính nóng nảy, tự do làm theo mọi ý thích cá nhân"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Tính ỷ lại vào sự giúp đỡ của bạn bè xung quanh\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w22-q2",
+              "type": "knowledge",
+              "prompt": "Để rèn luyện tính tự chủ trong học tập theo kế hoạch tuần, hành động cụ thể và có thói quen nào em nên áp dụng hằng ngày?",
+              "options": [
+                "Đợi đến sát giờ kiểm tra mới hối hả mở sách vở ra học",
+                "Mỗi ngày tự giác đọc ít nhất 5 trang sách và ghi chép việc cần làm vào sổ tự nhắc việc",
+                "Nhờ bố mẹ làm bài tập về nhà hộ để được điểm cao trên lớp",
+                "Bỏ học bài ở nhà để đi chơi game điện tử với bạn bè"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Mỗi ngày tự giác đọc ít nhất 5 trang sách và ghi chép việc cần làm vào sổ tự nhắc việc\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w22-q3",
+              "type": "knowledge",
+              "prompt": "Gặp bài tập khó và loay hoay mãi chưa giải được khi học cấp THCS, Nam nên ứng xử thế nào để thể hiện tính kiên trì?",
+              "options": [
+                "Đóng ngay sách vở lại, cảm thấy chán nản và bỏ không làm nữa",
+                "Bình tĩnh đọc lại lý thuyết, tìm cách giải khác hoặc chủ động nhờ thầy cô, bạn bè hướng dẫn",
+                "Chép luôn bài giải mẫu của bạn khác cho nhanh mà không cần hiểu bản chất",
+                "Giận dỗi và trách mắng thầy cô ra bài tập quá khó cho học sinh"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Bình tĩnh đọc lại lý thuyết, tìm cách giải khác hoặc chủ động nhờ thầy cô, bạn bè hướng dẫn\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w22-q4",
+              "type": "knowledge",
+              "prompt": "Thấy Dũng nhút nhát và ngại ngùng khi làm quen với các bạn mới, em nên khuyên bạn thực hiện điều gì để cởi mở hơn?",
+              "options": [
+                "Tiếp tục thu mình lại và không trò chuyện với bất kỳ ai trong lớp mới",
+                "Chủ động mỉm cười chào hỏi, giới thiệu bản thân và tích cực tham gia hoạt động nhóm chung",
+                "Tỏ thái độ xa cách để thử thách sự kiên nhẫn của các bạn khác",
+                "Chỉ chơi với những bạn cũ từ thời tiểu học và từ chối kết bạn mới"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Chủ động mỉm cười chào hỏi, giới thiệu bản thân và tích cực tham gia hoạt động nhóm chung\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w22-q5",
+              "type": "knowledge",
+              "prompt": "Khi xây dựng \"Kế hoạch rèn luyện tính tự chủ trong học tập\", yếu tố nào giúp em dễ theo dõi và đánh giá sự tiến bộ?",
+              "options": [
+                "Chỉ viết chung chung \"tôi sẽ học giỏi\" mà không có hành động thực tế nào",
+                "Xác định rõ ràng các nội dung: Số thứ tự, hành động cụ thể, mục tiêu và thời gian thực hiện",
+                "Để người khác tự lập kế hoạch giúp mình mà không cần quan tâm chi tiết",
+                "Lập kế hoạch xong rồi cất góc bàn và không bao giờ mở ra xem lại"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Xác định rõ ràng các nội dung: Số thứ tự, hành động cụ thể, mục tiêu và thời gian thực hiện\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w22-q6",
+              "type": "knowledge",
+              "prompt": "Khi nhóm trình diễn tiểu phẩm về rèn luyện đức tính thích ứng với THCS trước lớp, ý nghĩa thực tế lớn nhất là gì?",
+              "options": [
+                "Để so sánh xem bạn nào diễn xuất giỏi hơn nhằm giành giải thưởng",
+                "Giúp các bạn cùng soi chiếu, học hỏi cách xử lý tình huống thực tế và tạo động lực rèn luyện",
+                "Để có cơ hội xin phép trốn các giờ học văn hóa chính khóa",
+                "Để làm cho các bạn trong lớp cảm thấy sợ hãi và nể phục"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Giúp các bạn cùng soi chiếu, học hỏi cách xử lý tình huống thực tế và tạo động lực rèn luyện\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            }
+          ]
+        },
+        {
+          "id": "l23-hdtn5",
+          "lessonNumber": 23,
+          "title": "Tuần 23",
+          "questions": [
+            {
+              "id": "g5-hdtn-w23-q1",
+              "type": "knowledge",
+              "prompt": "Khi sử dụng Internet, hành vi nào thể hiện việc thiếu tự chủ về thời gian, gây ảnh hưởng tiêu cực?",
+              "options": [
+                "Lập thời gian biểu rõ ràng và tuân thủ thời gian vào mạng để tìm kiếm tài liệu học tập",
+                "Mải mê chơi game và xem video nhiều giờ liên tục dẫn đến mất tập trung, mệt mỏi và bỏ quên bài tập",
+                "Giới hạn thời gian sử dụng mạng xã hội dưới 30 phút mỗi ngày để bảo vệ mắt",
+                "Tắt máy tính và điện thoại đúng giờ quy định vào buổi tối để đi ngủ sớm"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Lập thời gian biểu rõ ràng và tuân thủ thời gian vào mạng để tìm kiếm tài liệu học tập\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w23-q2",
+              "type": "knowledge",
+              "prompt": "Nhận được tin nhắn kết bạn từ tài khoản không quen biết trên mạng xã hội, cách ứng xử an toàn nhất là gì?",
+              "options": [
+                "Đồng ý kết bạn ngay và thoải mái chia sẻ địa chỉ nhà riêng, trường học của mình",
+                "Không chấp nhận kết bạn, tuyệt đối không gửi thông tin cá nhân và báo cho bố mẹ hoặc thầy cô",
+                "Hẹn gặp mặt trực tiếp người lạ đó ở một nơi vắng vẻ để trò chuyện cho rõ",
+                "Gửi mật khẩu tài khoản cá nhân cho người đó để thể hiện sự tin tưởng"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Đồng ý kết bạn ngay và thoải mái chia sẻ địa chỉ nhà riêng, trường học của mình\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w23-q3",
+              "type": "knowledge",
+              "prompt": "Loại thông tin nào em tuyệt đối không được đăng tải công khai hay chia sẻ cho người lạ trên mạng?",
+              "options": [
+                "Tên môn học yêu thích nhất của em ở trường tiểu học",
+                "Mật khẩu tài khoản, số điện thoại, địa chỉ nhà riêng và hình ảnh giấy tờ cá nhân",
+                "Bức ảnh chụp phong cảnh thiên nhiên ở công viên gần nhà",
+                "Tên cuốn sách hay mà em vừa đọc xong gần đây"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Mật khẩu tài khoản, số điện thoại, địa chỉ nhà riêng và hình ảnh giấy tờ cá nhân\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w23-q4",
+              "type": "knowledge",
+              "prompt": "Nếu phát hiện có người đăng bài nói sai sự thật hoặc xúc phạm mình trên mạng xã hội, em nên ứng phó thế nào?",
+              "options": [
+                "Đăng bài chửi mắng và đe dọa trả đũa lại người đó thật nặng nề trên mạng",
+                "Giữ bình tĩnh, không đáp trả tiêu cực, chụp lại bằng chứng và nhờ sự hỗ trợ của bố mẹ, thầy cô",
+                "Giấu kín sự việc trong lòng, cảm thấy ấm ức khóc lóc và bỏ ăn uống",
+                "Rủ nhóm bạn thân đến tìm người đã đăng bài để đánh nhau giải quyết"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Giấu kín sự việc trong lòng, cảm thấy ấm ức khóc lóc và bỏ ăn uống\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w23-q5",
+              "type": "knowledge",
+              "prompt": "Khi thiết kế bản \"Quy tắc tự chủ và đảm bảo an toàn khi giao tiếp trên mạng\", nội dung quản lý thời gian nào hợp lý?",
+              "options": [
+                "Sử dụng mạng bất cứ lúc nào cảm thấy rảnh rỗi mà không cần giới hạn thời gian",
+                "Vừa ngồi ăn cơm cùng gia đình vừa mở điện thoại lướt mạng xã hội",
+                "Đặt khung giờ cố định, sử dụng công cụ nhắc giờ và cân bằng giữa dùng mạng với học tập, thể chất",
+                "Thức đêm chơi game trực tuyến trên mạng đến tận sáng hôm sau"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Đặt khung giờ cố định, sử dụng công cụ nhắc giờ và cân bằng giữa dùng mạng với học tập, thể chất\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w23-q6",
+              "type": "knowledge",
+              "prompt": "Việc học sinh biết tự chủ và tuân thủ quy tắc an toàn khi giao tiếp trên mạng mang lại giá trị lớn nhất gì?",
+              "options": [
+                "Giúp em trở thành người nổi tiếng nhất trên các trang mạng xã hội",
+                "Giúp khai thác kiến thức hiệu quả, tránh rủi ro, bẫy lừa đảo và bảo vệ an toàn cho bản thân, gia đình",
+                "Đảm bảo em hoàn toàn không bao giờ phải làm bài tập môn Tin học ở trường",
+                "Giúp em có quyền truy cập và đọc tin nhắn riêng tư của người khác"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Giúp khai thác kiến thức hiệu quả, tránh rủi ro, bẫy lừa đảo và bảo vệ an toàn cho bản thân, gia đình\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            }
+          ]
+        },
+        {
+          "id": "l24-hdtn5",
+          "lessonNumber": 24,
+          "title": "Tuần 24",
+          "questions": [
+            {
+              "id": "g5-hdtn-w24-q1",
+              "type": "knowledge",
+              "prompt": "Để phòng tránh nguy cơ hỏa hoạn xảy ra trong gia đình, việc làm nào dưới đây là đúng quy định an toàn?",
+              "options": [
+                "Cắm chung quá nhiều thiết bị có công suất lớn vào cùng một ổ điện",
+                "Để các chất dễ cháy (xăng, dầu, giấy, vải) ngay bên cạnh bếp gas đang đun nấu",
+                "Sắp xếp các chất dễ cháy xa nguồn nhiệt và kiểm tra an toàn thiết bị điện trước khi ra khỏi nhà",
+                "Đốt rác bừa bãi ngay gần đường dây điện vào những ngày có gió lớn"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Sắp xếp các chất dễ cháy xa nguồn nhiệt và kiểm tra an toàn thiết bị điện trước khi ra khỏi nhà\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w24-q2",
+              "type": "knowledge",
+              "prompt": "Khi phát hiện đám cháy bùng phát mà người lớn chưa kịp xử lý, số điện thoại khẩn cấp cần gọi cho lực lượng PCCC là số nào?",
+              "options": ["113", "114", "115", "111"],
+              "correctIndex": 0,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"113\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w24-q3",
+              "type": "knowledge",
+              "prompt": "Khi nghe chuông báo cháy và thấy khói độc bốc lên ngập hành lang, kỹ năng di chuyển an toàn để tránh bị ngạt khói là gì?",
+              "options": [
+                "Đứng thẳng người, chạy thật nhanh và thở mạnh lấy không khí",
+                "Dùng khăn ướt che kín mũi miệng, cúi lom khom hoặc bò sát mặt đất men theo tường để thoát hiểm",
+                "Nhảy qua cửa sổ từ tầng cao xuống đất để chạy trốn thật nhanh",
+                "Chạy lung tung, hò hét và chen lấn, xô đẩy các bạn xung quanh mình"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Dùng khăn ướt che kín mũi miệng, cúi lom khom hoặc bò sát mặt đất men theo tường để thoát hiểm\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w24-q4",
+              "type": "knowledge",
+              "prompt": "Khi xảy ra hỏa hoạn tại chung cư hoặc tòa nhà cao tầng, hành vi nào là tuyệt đối KHÔNG NÊN làm vì cực kỳ nguy hiểm?",
+              "options": [
+                "Di chuyển theo biển chỉ dẫn lối thoát hiểm (Exit) bằng cầu thang bộ",
+                "Sử dụng thang máy để di chuyển nhanh chóng xuống mặt đất",
+                "Giữ bình tĩnh, tuyệt đối không chen lấn xô đẩy nhau",
+                "Dùng khăn ướt che kín mũi và miệng khi di chuyển qua vùng khói"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Di chuyển theo biển chỉ dẫn lối thoát hiểm (Exit) bằng cầu thang bộ\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w24-q5",
+              "type": "knowledge",
+              "prompt": "Đang ngồi học nghe tiếng chuông báo cháy và hô hoán sơ tán, thái độ ứng xử đúng đắn đầu tiên của em là gì?",
+              "options": [
+                "Hoảng loạn, khóc lóc và chạy quay lại phòng đang có lửa để lấy đồ chơi, điện thoại",
+                "Bình tĩnh, không sợ hãi, làm theo hướng dẫn sơ tán và áp dụng thao tác thoát hiểm an toàn",
+                "Đóng chặt cửa phòng lại và nằm trùm chăn kín đầu trên giường",
+                "Chen lấn, xô ngã người khác để bản thân được chạy ra ngoài trước tiên"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Bình tĩnh, không sợ hãi, làm theo hướng dẫn sơ tán và áp dụng thao tác thoát hiểm an toàn\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w24-q6",
+              "type": "knowledge",
+              "prompt": "Việc học sinh rèn luyện tính tự chủ, an toàn trên mạng và thành thạo kỹ năng thoát hiểm hỏa hoạn mang lại giá trị cốt lõi nào?",
+              "options": [
+                "Đảm bảo bản thân luôn đạt danh hiệu học sinh xuất sắc nhất trường",
+                "Nâng cao ý thức tự lập, có kiến thức tự bảo vệ bản thân và ứng phó linh hoạt với tình huống nguy hiểm",
+                "Đảm bảo bản thân không bao giờ gặp phải bất kỳ tai nạn rủi ro nào trong cuộc sống",
+                "Giúp em được cộng điểm trực tiếp trong tất cả các bài kiểm tra văn hóa"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Nâng cao ý thức tự lập, có kiến thức tự bảo vệ bản thân và ứng phó linh hoạt với tình huống nguy hiểm\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c7-hdtn5",
+      "chapterNumber": 7,
+      "title": "CHỦ ĐỀ 7: THAM GIA HOẠT ĐỘNG XÃ HỘI",
+      "lessons": [
+        {
+          "id": "l25-hdtn5",
+          "lessonNumber": 25,
+          "title": "Tuần 25",
+          "questions": [
+            {
+              "id": "g5-hdtn-w25-q1",
+              "type": "knowledge",
+              "prompt": "Khi tham gia hoặc nghe giới thiệu về các lễ hội truyền thống ở địa phương, ý nghĩa lớn nhất mang lại cho học sinh là gì?",
+              "options": [
+                "Để được ăn uống vui vẻ và xin nghỉ các buổi học văn hóa ở trường",
+                "Hiểu rõ giá trị lịch sử, tôn vinh truyền thống văn hóa dân tộc và thể hiện sự gắn kết với cộng đồng",
+                "Để thi đua xem ai mua được nhiều đồ lưu niệm đắt tiền hơn",
+                "Để làm quen với những trò chơi mạo hiểm nguy hiểm"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Hiểu rõ giá trị lịch sử, tôn vinh truyền thống văn hóa dân tộc và thể hiện sự gắn kết với cộng đồng\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w25-q2",
+              "type": "knowledge",
+              "prompt": "Khi nhóm em lập kế hoạch tham gia một hoạt động trong lễ hội truyền thống của địa phương, yếu tố nào cần được xác định rõ ràng?",
+              "options": [
+                "Mục tiêu, nội dung công việc, địa điểm, thời gian thực hiện và trang phục/phương tiện",
+                "Danh sách những món đồ chơi yêu thích của từng bạn trong nhóm",
+                "Số tiền đóng góp cá nhân để mua quà đắt tiền tặng nhau",
+                "Chỉ cần ghi tên nhóm trưởng, không cần phân công việc cụ thể cho ai"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Mục tiêu, nội dung công việc, địa điểm, thời gian thực hiện và trang phục/phương tiện\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w25-q3",
+              "type": "knowledge",
+              "prompt": "Đến tham gia lễ hội truyền thống của địa phương vào ngày hội chính đông đúc, cách ứng xử nào thể hiện nét đẹp văn hóa?",
+              "options": [
+                "Xô đẩy, chen lấn để chen lên phía trước chụp ảnh quay phim",
+                "Trang phục lịch sự, tôn trọng các nghi lễ, không giẫm lên hoa cỏ và vứt rác đúng nơi quy định",
+                "Hái hoa, bẻ cành trang trí tại khu vực di tích để làm kỷ niệm cá nhân",
+                "Bật nhạc sôi động từ loa cầm tay làm mất không khí trang nghiêm của buổi lễ"
+              ],
+              "correctIndex": 3,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Bật nhạc sôi động từ loa cầm tay làm mất không khí trang nghiêm của buổi lễ\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w25-q4",
+              "type": "knowledge",
+              "prompt": "Trong buổi sinh hoạt lớp, nhóm em sắm vai tái hiện một trò chơi dân gian hoặc nghi lễ lễ hội, nhóm nên chú trọng điều gì?",
+              "options": [
+                "Sửa đổi toàn bộ kịch bản thành trò chơi điện tử hiện đại cho mới lạ",
+                "Bỏ qua các yếu tố lịch sử và chỉ làm qua loa cho nhanh chóng xong lượt",
+                "Phân công vai diễn hợp lý, thể hiện đúng các thao tác truyền thống và biểu cảm hào hứng, đoàn kết",
+                "Bắt các bạn nhút nhát đóng vai trò khó nhất để trêu chọc"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Phân công vai diễn hợp lý, thể hiện đúng các thao tác truyền thống và biểu cảm hào hứng, đoàn kết\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w25-q5",
+              "type": "knowledge",
+              "prompt": "Thấy nhiều người bỏ lại vỏ chai, túi ni-lông trên sân đình sau hội xuân, em nên xử lý thế nào cho đúng trách nhiệm?",
+              "options": [
+                "Bỏ về nhà ngay lập tức vì cho rằng việc dọn dẹp thuộc về ban quản lý di tích",
+                "Tiện tay vứt thêm rác của mình vào đống rác đó luôn cho nhanh",
+                "Rủ các bạn trong nhóm cùng tay nhặt rác thu gom bỏ vào thùng rác công cộng để giữ gìn cảnh quan",
+                "Đứng chỉ trích người khác nhưng bản thân không làm gì cả"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Rủ các bạn trong nhóm cùng tay nhặt rác thu gom bỏ vào thùng rác công cộng để giữ gìn cảnh quan\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w25-q6",
+              "type": "knowledge",
+              "prompt": "Việc chủ động lập kế hoạch, chuẩn bị trang phục và tham gia các hoạt động lễ hội truyền thống giúp phát triển năng lực gì?",
+              "options": [
+                "Năng lực làm việc nhóm, sự tự tin giao tiếp và tinh thần trách nhiệm với hoạt động xã hội ở địa phương",
+                "Giúp em trở thành người buôn bán giỏi nhất khu phố",
+                "Đảm bảo em luôn nhận được tiền thưởng từ ủy ban nhân dân xã/phường",
+                "Giúp em không bao giờ phải tham gia các hoạt động lao động ở trường nữa"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Đảm bảo em luôn nhận được tiền thưởng từ ủy ban nhân dân xã/phường\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            }
+          ]
+        },
+        {
+          "id": "l26-hdtn5",
+          "lessonNumber": 26,
+          "title": "Tuần 26",
+          "questions": [
+            {
+              "id": "g5-hdtn-w26-q1",
+              "type": "knowledge",
+              "prompt": "Hoạt động nào thuộc nhóm hoạt động xã hội ở địa phương mang ý nghĩa nhân văn và bảo vệ môi trường?",
+              "options": [
+                "Rủ nhau tập trung chơi game trực tuyến suốt ngày tại quán Internet",
+                "Tham gia chương trình \"Đổi pin cũ lấy cây xanh\", thăm hỏi gia đình neo đơn hoặc CLB hát dân ca",
+                "Tự ý đi bơi lội ở khu vực ao hồ sâu vắng người qua lại",
+                "Tụ tập cãi nhau và gây mất trật tự với các bạn lớp khác ngoài khu phố"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Tham gia chương trình \"Đổi pin cũ lấy cây xanh\", thăm hỏi gia đình neo đơn hoặc CLB hát dân ca\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w26-q2",
+              "type": "knowledge",
+              "prompt": "Khi nhóm em lập kế hoạch tham gia hoạt động xã hội ở địa phương, cấu trúc bản kế hoạch cần đảm bảo mục nào?",
+              "options": [
+                "Tên nhóm, mục tiêu, nội dung hoạt động, địa điểm, danh sách công việc (thời gian, người thực hiện, kết quả)",
+                "Bảng điểm tổng kết học tập của tất cả các thành viên trong nhóm",
+                "Số tiền đóng góp cá nhân để tổ chức đi ăn uống sau khi xong việc",
+                "Chỉ cần ghi tên của nhóm trưởng, không cần phân công người thực hiện chi tiết"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Tên nhóm, mục tiêu, nội dung hoạt động, địa điểm, danh sách công việc (thời gian, người thực hiện, kết quả)\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w26-q3",
+              "type": "knowledge",
+              "prompt": "Tham gia buổi lao động công ích dọn dẹp vệ sinh tại Khu tưởng niệm liệt sĩ, thái độ nào thể hiện tinh thần trách nhiệm?",
+              "options": [
+                "Đứng dưới bóng râm né tránh công việc và đẩy phần dọn rác nặng nhọc cho các bạn khác",
+                "Chủ động mang găng tay, dụng cụ, tích cực nhặt rác, tưới cây và hợp tác vui vẻ cùng các bạn",
+                "Vừa dọn dẹp vừa tiện tay bẻ cành cây xanh, giẫm đạp lên thảm cỏ của khu tưởng niệm",
+                "Bỏ về giữa chừng vì chê bai công việc làm bẩn quần áo mới của mình"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Chủ động mang găng tay, dụng cụ, tích cực nhặt rác, tưới cây và hợp tác vui vẻ cùng các bạn\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w26-q4",
+              "type": "knowledge",
+              "prompt": "Thấy bạn vứt pin cũ vào thùng rác sinh hoạt, em nên khuyên bạn thế nào để đúng tinh thần bảo vệ môi trường?",
+              "options": [
+                "Quát mắng các bạn thật to và dọa sẽ báo công an đến bắt phạt",
+                "Nhẹ nhàng giải thích pin cũ chứa kim loại độc hại, hướng dẫn gom lại mang đi đổi cây xanh tại địa phương",
+                "Bỏ mặc vì cho rằng việc đó không liên quan đến trách nhiệm của mình",
+                "Tiện tay vứt luôn pin của mình cùng rác với các bạn cho nhanh gọn"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Nhẹ nhàng giải thích pin cũ chứa kim loại độc hại, hướng dẫn gom lại mang đi đổi cây xanh tại địa phương\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w26-q5",
+              "type": "knowledge",
+              "prompt": "Sau buổi lao động công ích dọn sạch khu tưởng niệm, cảm xúc nào phản ánh giá trị tinh thần đúng đắn nhất?",
+              "options": [
+                "Cảm thấy mệt mỏi, chán nản và hối hận vì đã tham gia buổi lao động",
+                "Cảm thấy tự hào, hạnh phúc vì đã góp phần làm sạch đẹp không gian chung và tri ân các anh hùng liệt sĩ",
+                "Tức giận vì không được nhà trường trả tiền công lao động sau khi làm xong",
+                "Khoe khoang khắp nơi để chứng tỏ bản thân giỏi giang hơn người khác"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Cảm thấy tự hào, hạnh phúc vì đã góp phần làm sạch đẹp không gian chung và tri ân các anh hùng liệt sĩ\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w26-q6",
+              "type": "knowledge",
+              "prompt": "Việc học sinh lớp 5 tích cực tham gia các hoạt động xã hội và lao động công ích mang lại lợi ích lớn nhất nào?",
+              "options": [
+                "Rèn luyện ý thức trách nhiệm cộng đồng, sự tự tin, kỹ năng hợp tác làm việc nhóm và mở rộng mối quan hệ thân thiện",
+                "Giúp em được phép nghỉ toàn bộ tất cả các giờ học văn hóa ở trường",
+                "Đảm bảo em không bao giờ phải làm bất kỳ việc nhà nào nữa",
+                "Giúp em nhận được một khoản tiền thưởng lớn từ chính quyền địa phương"
+              ],
+              "correctIndex": 3,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Giúp em nhận được một khoản tiền thưởng lớn từ chính quyền địa phương\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            }
+          ]
+        },
+        {
+          "id": "l27-hdtn5",
+          "lessonNumber": 27,
+          "title": "Tuần 27",
+          "questions": [
+            {
+              "id": "g5-hdtn-w27-q1",
+              "type": "knowledge",
+              "prompt": "Để xây dựng môi trường sống văn minh, ấm áp, những đối tượng nào em cần thiết lập mối quan hệ thân thiện, gắn kết hằng ngày?",
+              "options": [
+                "Chỉ thân thiện với những người giàu có hoặc bạn bè chơi game cùng",
+                "Bác hàng xóm, người dân xung quanh, thầy cô, bạn bè và các cô chú nhân viên trong trường",
+                "Những người xa lạ trên mạng xã hội không rõ lai lịch xuất thân",
+                "Chỉ quan tâm tới người thân ruột thịt trong gia đình, bỏ mặc tất cả mọi người xung quanh"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Bác hàng xóm, người dân xung quanh, thầy cô, bạn bè và các cô chú nhân viên trong trường\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w27-q2",
+              "type": "knowledge",
+              "prompt": "Cô Lan hàng xóm ốm nặng khi chồng đi công tác vắng, em và gia đình nên ứng xử thế nào để thể hiện sự chia sẻ?",
+              "options": [
+                "Bỏ mặc vì cho rằng đó là chuyện riêng của gia đình nhà cô Lan",
+                "Bật nhạc thật to ở nhà mình để nghe cho vui và ăn mừng",
+                "Chủ động sang hỏi thăm, phụ giúp việc nhỏ như trông em, mua thuốc/đồ ăn hoặc báo người lớn hỗ trợ",
+                "Tỏ thái độ khó chịu vì mấy đứa trẻ bên nhà cô khóc lóc làm phiền mình"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Chủ động sang hỏi thăm, phụ giúp việc nhỏ như trông em, mua thuốc/đồ ăn hoặc báo người lớn hỗ trợ\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w27-q3",
+              "type": "knowledge",
+              "prompt": "Thấy ông Hòa (người khiếm thị) đang lúng túng đi qua đoạn đường đông đúc, em nên làm gì để hỗ trợ?",
+              "options": [
+                "Lại gần lễ phép chào ông và chủ động ngỏ lời dắt ông sang đường an toàn",
+                "Đứng từ xa trêu chọc và cười nhạo khiếm khuyết của ông",
+                "Chạy thật nhanh qua mặt ông làm ông bị giật mình hoảng hốt",
+                "Bỏ đi thẳng vì sợ bị muộn giờ chơi điện tử của mình"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Lại gần lễ phép chào ông và chủ động ngỏ lời dắt ông sang đường an toàn\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w27-q4",
+              "type": "knowledge",
+              "prompt": "Có bạn học sinh mới chuyển trường đến còn nhiều bỡ ngỡ, thái độ nào thể hiện sự thân thiện và cởi mở của em?",
+              "options": [
+                "Tụ tập bạn bè chỉ trỏ và thì thầm chê bai trang phục của bạn mới",
+                "Bỏ mặc bạn ngồi một mình lủi thủi không ai thèm nói chuyện cùng",
+                "Chủ động mỉm cười chào hỏi, giới thiệu trường lớp và rủ bạn cùng tham gia trò chơi giờ ra chơi",
+                "Ép buộc bạn học sinh mới phải làm toàn bộ trực nhật tuần này thay cho cả lớp"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Chủ động mỉm cười chào hỏi, giới thiệu trường lớp và rủ bạn cùng tham gia trò chơi giờ ra chơi\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w27-q5",
+              "type": "knowledge",
+              "prompt": "Sau khi hoàn thành giải chạy vì cộng đồng, bước đánh giá sự đóng góp của bản thân và nhóm có ý nghĩa gì?",
+              "options": [
+                "Giúp nhận diện những việc đã làm được, kết quả đạt được và lan tỏa thông điệp tích cực tới cộng đồng",
+                "Để so sánh xem bạn nào chạy nhanh nhất nhằm giành lấy phần thưởng tiền mặt",
+                "Để tìm ra lỗi sai của các thành viên trong nhóm rồi đem ra chê bai trước lớp",
+                "Để xin nhà trường miễn cho các buổi học môn thể dục ở trường"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Giúp nhận diện những việc đã làm được, kết quả đạt được và lan tỏa thông điệp tích cực tới cộng đồng\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w27-q6",
+              "type": "knowledge",
+              "prompt": "Sự thay đổi từ rụt rè sang tự tin, biết hợp tác và sống có trách nhiệm qua các hoạt động xã hội thể hiện điều gì?",
+              "options": [
+                "Sự tiến bộ rõ rệt về nhận thức, kỹ năng giao tiếp và sự trưởng thành của bản thân qua thực tế",
+                "Việc tham gia các hoạt động xã hội chỉ làm tốn thời gian mà không mang lại tác dụng gì",
+                "Bạn An đang cố gắng làm màu, thể hiện bản thân để được thầy cô khen ngợi",
+                "Bạn An từ nay không còn cần phải cố gắng học tập các môn văn hóa ở trường nữa"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Bạn An đang cố gắng làm màu, thể hiện bản thân để được thầy cô khen ngợi\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c8-hdtn5",
+      "chapterNumber": 8,
+      "title": "CHỦ ĐỀ 8: TỰ HÀO QUÊ HƯƠNG EM",
+      "lessons": [
+        {
+          "id": "l28-hdtn5",
+          "lessonNumber": 28,
+          "title": "Tuần 28",
+          "questions": [
+            {
+              "id": "g5-hdtn-w28-q1",
+              "type": "knowledge",
+              "prompt": "Khi tham quan các danh lam thắng cảnh nổi tiếng của Việt Nam, thái độ nào thể hiện niềm tự hào đúng đắn?",
+              "options": [
+                "Thấy bình thường vì cho rằng cảnh đẹp ở đâu cũng hoàn toàn giống nhau",
+                "Xúc động, trân trọng và tự hào về vẻ đẹp hùng vĩ, độc đáo mà thiên nhiên ban tặng cho đất nước",
+                "Chê bai cảnh quan thiên nhiên trong nước không đẹp bằng các nước khác trên thế giới",
+                "Chỉ quan tâm đến việc ăn uống và chụp ảnh sống ảo mà không tìm hiểu cảnh quan"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Xúc động, trân trọng và tự hào về vẻ đẹp hùng vĩ, độc đáo mà thiên nhiên ban tặng cho đất nước\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w28-q2",
+              "type": "knowledge",
+              "prompt": "Khi có bạn từ xa đến thăm danh lam thắng cảnh ở địa phương, việc làm nào giúp giới thiệu vẻ đẹp quê hương?",
+              "options": [
+                "Tránh mặt vì sợ bạn đặt nhiều câu hỏi về lịch sử của địa phương",
+                "Hào hứng, lễ phép giới thiệu cho bạn những nét đặc sắc, lịch sử và nhắc nhở giữ gìn vệ sinh",
+                "Khuyên bạn không nên đi tham quan làm gì vì vừa tốn thời gian vừa mệt mỏi",
+                "Thu tiền hướng dẫn tham quan thật cao từ người bạn của mình"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Hào hứng, lễ phép giới thiệu cho bạn những nét đặc sắc, lịch sử và nhắc nhở giữ gìn vệ sinh\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w28-q3",
+              "type": "knowledge",
+              "prompt": "Đặc điểm nổi bật nào của Hang Sơn Đoòng thuộc Vườn quốc gia Phong Nha - Kẻ Bàng khiến chúng ta tự hào?",
+              "options": [
+                "Là hòn đảo nhân tạo rộng lớn nhất khu vực châu Á",
+                "Là hang động tự nhiên lớn nhất thế giới nằm trong quần thể di sản thiên nhiên thế giới",
+                "Là ngọn núi cao có tuyết trắng bao phủ quanh năm suốt tháng",
+                "Là công trình kiến trúc cổ kính vĩ đại do con người tự xây dựng nên"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Là hang động tự nhiên lớn nhất thế giới nằm trong quần thể di sản thiên nhiên thế giới\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w28-q4",
+              "type": "knowledge",
+              "prompt": "Khi thực hành làm sản phẩm tạo hình \"Việt Nam trong mắt em\" mô tả Vịnh Hạ Long, phân công nào hiệu quả?",
+              "options": [
+                "Nhóm trưởng tự làm tất cả mọi việc để đảm bảo sản phẩm đạt kết quả đẹp nhất",
+                "Đóng góp ý tưởng chung, phân công bạn nặn đảo đá, bạn tô màu nước, bạn chuẩn bị vật liệu",
+                "Đẩy hết toàn bộ việc khó khăn cho các bạn học yếu trong nhóm làm một mình",
+                "Mua sẵn một mô hình bằng nhựa ở cửa hàng đồ chơi mang về nộp cho xong chuyện"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Đóng góp ý tưởng chung, phân công bạn nặn đảo đá, bạn tô màu nước, bạn chuẩn bị vật liệu\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w28-q5",
+              "type": "knowledge",
+              "prompt": "Thấy nhóm du khách dùng bút xóa viết tên lên vách đá để \"làm kỷ niệm\", em nên ứng xử thế nào?",
+              "options": [
+                "Lao vào tranh cãi gay gắt và dùng lời lẽ xúc phạm nhóm du khách đó ngay lập tức",
+                "Nhẹ nhàng nhắc nhở việc làm đó gây hư hại cảnh quan, hoặc báo ngay cho ban quản lý xử lý",
+                "Mượn bút xóa của họ để vẽ thêm tên của chính mình vào bên cạnh cho vui",
+                "Bỏ đi thẳng và coi như không nhìn thấy gì xảy ra xung quanh cả"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Nhẹ nhàng nhắc nhở việc làm đó gây hư hại cảnh quan, hoặc báo ngay cho ban quản lý xử lý\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w28-q6",
+              "type": "knowledge",
+              "prompt": "Việc học sinh chủ động tìm hiểu, trân trọng và tuyên truyền quảng bá cảnh quan thiên nhiên mang lại giá trị gì?",
+              "options": [
+                "Giúp bồi đắp tình yêu quê hương, ý thức bảo vệ môi trường và niềm tự hào dân tộc từ hành động nhỏ",
+                "Giúp học sinh được nhà trường miễn hoàn toàn tất cả các bài kiểm tra văn hóa",
+                "Đảm bảo tất cả học sinh sau này lớn lên đều trở thành họa sĩ nổi tiếng toàn quốc",
+                "Giúp em nhận được một khoản tiền thưởng lớn từ các công ty kinh doanh du lịch"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Giúp bồi đắp tình yêu quê hương, ý thức bảo vệ môi trường và niềm tự hào dân tộc từ hành động nhỏ\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            }
+          ]
+        },
+        {
+          "id": "l29-hdtn5",
+          "lessonNumber": 29,
+          "title": "Tuần 29",
+          "questions": [
+            {
+              "id": "g5-hdtn-w29-q1",
+              "type": "knowledge",
+              "prompt": "Trong các hành động của con người đối với cảnh quan thiên nhiên, hành động nào là không nên làm vì gây tổn hại đến môi trường và vẻ đẹp tự nhiên?",
+              "options": [
+                "Bố trí thêm thùng rác phân loại hợp lý ở các lối đi trong khu bảo tồn",
+                "Bẻ cành, hái hoa dại và khắc tên mình lên thân cây cổ thụ để làm kỷ niệm",
+                "Tuyên truyền nâng cao ý thức giữ gìn vệ sinh chung cho du khách",
+                "Tuân thủ nghiêm túc các nội quy khi đến thăm các danh lam thắng cảnh"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Bố trí thêm thùng rác phân loại hợp lý ở các lối đi trong khu bảo tồn\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w29-q2",
+              "type": "knowledge",
+              "prompt": "Khi đi dã ngoại phát hiện các bạn nhỏ gom lá khô nhóm lửa nướng đồ ăn dưới gốc cây trên đồi thông, em nên xử lý thế nào?",
+              "options": [
+                "Bỏ đi không nói gì vì cho rằng đó không phải việc của mình",
+                "Lại gần cùng tham gia nhóm lửa cho vui",
+                "Nhẹ nhàng nhắc nhở việc nhóm lửa trên thảm lá khô rất dễ gây ra hỏa hoạn cháy rừng, khuyên dập lửa và báo người lớn",
+                "Đứng xa chụp ảnh đăng lên mạng xã hội để chỉ trích các bạn (Đáp án đúng: C)"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Nhẹ nhàng nhắc nhở việc nhóm lửa trên thảm lá khô rất dễ gây ra hỏa hoạn cháy rừng, khuyên dập lửa và báo người lớn\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w29-q3",
+              "type": "knowledge",
+              "prompt": "Sau khi ăn trưa trong chuyến tham quan khu bảo tồn, thấy các bạn có ý định bỏ lại vỏ hộp cơm và túi ni-lông tại chỗ, em nên làm gì?",
+              "options": [
+                "Đồng ý với các bạn và để rác lại cho nhẹ balo",
+                "Nhắc nhở các bạn thu gom toàn bộ rác thải cá nhân cho vào túi mang ra ngoài bỏ vào thùng rác công cộng, giữ sạch môi trường rừng",
+                "Tiện tay vứt thêm rác của mình vào đống rác đó",
+                "Nhét rác vào các kẽ đá hoặc gốc cây để che mắt người khác"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Nhắc nhở các bạn thu gom toàn bộ rác thải cá nhân cho vào túi mang ra ngoài bỏ vào thùng rác công cộng, giữ sạch môi trường rừng\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w29-q4",
+              "type": "knowledge",
+              "prompt": "Để hạn chế tình trạng du khách vứt rác bừa bãi làm ô nhiễm môi trường tại các khu danh lam thắng cảnh, giải pháp nào thực tế và hiệu quả?",
+              "options": [
+                "Bố trí các thùng rác hợp lý ở nhiều vị trí, kết hợp đặt các biển nhắc nhở giữ gìn vệ sinh chung",
+                "Cấm toàn bộ du khách không được mang theo bất kỳ đồ ăn, thức uống nào",
+                "Đóng cửa khu danh lam thắng cảnh không cho ai vào tham quan nữa",
+                "Phạt tiền thật nặng tất cả học sinh đi tham quan"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Bố trí các thùng rác hợp lý ở nhiều vị trí, kết hợp đặt các biển nhắc nhở giữ gìn vệ sinh chung\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w29-q5",
+              "type": "knowledge",
+              "prompt": "Khi lớp làm sản phẩm tuyên truyền (Thư ngỏ hay Poster) gửi tới các bạn trong trường về bảo vệ cảnh quan, nội dung cốt lõi cần đưa vào là gì?",
+              "options": [
+                "Sự cần thiết của việc bảo tồn cảnh quan, các biện pháp bảo vệ và những hành động cụ thể học sinh có thể làm",
+                "Danh sách những món ăn ngon nhất ở các khu du lịch",
+                "Hướng dẫn cách mua vé tham quan giá rẻ",
+                "Yêu cầu nhà trường phải cho học sinh nghỉ học đi chơi nhiều hơn"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Sự cần thiết của việc bảo tồn cảnh quan, các biện pháp bảo vệ và những hành động cụ thể học sinh có thể làm\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w29-q6",
+              "type": "knowledge",
+              "prompt": "Việc học sinh tự tay thực hiện các bài viết, thư ngỏ và tuyên truyền về bảo tồn cảnh quan thiên nhiên mang lại giá trị thực tế lớn nhất gì?",
+              "options": [
+                "Giúp học sinh kiếm được nhiều tiền từ việc bán sản phẩm tuyên truyền",
+                "Lan tỏa ý thức trách nhiệm bảo vệ môi trường đến bạn bè, gia đình và cộng đồng, cùng chung tay giữ gìn vẻ đẹp thiên nhiên quê hương",
+                "Đảm bảo nhóm làm sản phẩm không bao giờ phải làm bài tập về nhà môn Tiếng Việt",
+                "Giúp em trở thành người quyền lực nhất trong trường"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Lan tỏa ý thức trách nhiệm bảo vệ môi trường đến bạn bè, gia đình và cộng đồng, cùng chung tay giữ gìn vẻ đẹp thiên nhiên quê hương\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            }
+          ]
+        },
+        {
+          "id": "l30-hdtn5",
+          "lessonNumber": 30,
+          "title": "Tuần 30",
+          "questions": [
+            {
+              "id": "g5-hdtn-w30-q1",
+              "type": "knowledge",
+              "prompt": "Trong giờ trưng bày sản phẩm tuyên truyền bảo tồn cảnh quan, thái độ nào thể hiện sự tôn trọng và trách nhiệm?",
+              "options": [
+                "Tự tin giới thiệu sản phẩm của lớp, hào hứng lắng nghe và trân trọng thông điệp từ các lớp khác",
+                "Bày tỏ sự chê bai đối với sản phẩm do các nhóm bạn xung quanh tự tay thiết kế",
+                "Xé rách hoặc làm bẩn các bức tranh tuyên truyền đang được trưng bày tại khu vực triển lãm",
+                "Bỏ đi chỗ khác chơi và không thèm quan tâm đến nội dung của buổi trưng bày"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Xé rách hoặc làm bẩn các bức tranh tuyên truyền đang được trưng bày tại khu vực triển lãm\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w30-q2",
+              "type": "knowledge",
+              "prompt": "Nguyên nhân xuất phát từ ý thức chủ quan của người dân gây ô nhiễm cảnh quan là gì?",
+              "options": [
+                "Hiện tượng thời tiết nắng nóng kéo dài làm khô cằn đất đai",
+                "Thói quen tiện tay vứt rác thải sinh hoạt bừa bãi ra lòng đường, bồn hoa và kênh rạch",
+                "Mưa lớn kéo dài gây ngập lụt cục bộ tại các tuyến phố chính",
+                "Cây xanh rụng lá theo mùa tự nhiên tại các khu vực công cộng"
+              ],
+              "correctIndex": 3,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Cây xanh rụng lá theo mùa tự nhiên tại các khu vực công cộng\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w30-q3",
+              "type": "knowledge",
+              "prompt": "Khi nhóm \"Hành tinh xanh\" lập phiếu khảo sát thực trạng môi trường, cách phân công nào khoa học và an toàn?",
+              "options": [
+                "Phân công một nhóm quan sát/chụp ảnh hiện trường và một nhóm lễ phép phỏng vấn người dân",
+                "Để các thành viên tự do đi lại khảo sát ở những nơi sông sâu nguy hiểm mà không cần báo trước",
+                "Đẩy hết toàn bộ công việc chụp ảnh và ghi chép hiện trường cho một bạn duy nhất gánh vác",
+                "Tự ngồi ở trong lớp bịa ra số liệu kết quả khảo sát mà không cần đi thực tế"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Phân công một nhóm quan sát/chụp ảnh hiện trường và một nhóm lễ phép phỏng vấn người dân\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w30-q4",
+              "type": "knowledge",
+              "prompt": "Để báo cáo kết quả khảo sát môi trường một cách sinh động, lôi cuốn và dễ tiếp thu, nhóm em nên chọn hình thức gì?",
+              "options": [
+                "Đọc một bản báo cáo dài nhiều trang với giọng điệu đều đều, tẻ nhạt trước lớp",
+                "Thiết kế Bảng tin Môi trường với hình ảnh thực tế hoặc lập Radio Môi trường để phát thanh",
+                "Giấu kín kết quả khảo sát không cho bất kỳ ai trong trường biết",
+                "Đọc lướt qua trong vòng vài giây cho xong chuyện để được về chỗ ngồi"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Thiết kế Bảng tin Môi trường với hình ảnh thực tế hoặc lập Radio Môi trường để phát thanh\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w30-q5",
+              "type": "knowledge",
+              "prompt": "Trong tiểu phẩm \"Dòng sông đang khóc\" nói về tổn thương của Trái Đất, thông điệp chính cần gửi gắm là gì?",
+              "options": [
+                "Kêu gọi mọi người cùng chung tay giữ cho dòng sông không bị ô nhiễm và bỏ thói quen xả rác bừa bãi",
+                "Đổ lỗi toàn bộ trách nhiệm bảo vệ dòng sông cho các cô chú công nhân vệ sinh môi trường",
+                "Khuyên các bạn học sinh tuyệt đối không được lại gần bất kỳ nguồn nước nào trong cuộc sống",
+                "Đề xuất lấp bỏ tất cả các dòng sông tự nhiên để quy hoạch làm đường đi bộ"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Kêu gọi mọi người cùng chung tay giữ cho dòng sông không bị ô nhiễm và bỏ thói quen xả rác bừa bãi\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w30-q6",
+              "type": "knowledge",
+              "prompt": "Việc học sinh lớp 5 trực tiếp khảo sát, làm Bảng tin Môi trường và đóng tiểu phẩm bảo vệ Trái Đất mang lại bài học gì?",
+              "options": [
+                "Rèn luyện tư duy quan sát thực tế, nâng cao năng lực truyền thông và bồi đắp ý thức trách nhiệm bảo vệ môi trường",
+                "Giúp học sinh được nhà trường miễn hoàn toàn tất cả các bài kiểm tra văn hóa",
+                "Đảm bảo nhóm đóng tiểu phẩm sau này sẽ trở thành các diễn viên điện ảnh nổi tiếng",
+                "Giúp em có quyền bắt những người xung quanh phải dọn dẹp nhà cửa cho mình"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Rèn luyện tư duy quan sát thực tế, nâng cao năng lực truyền thông và bồi đắp ý thức trách nhiệm bảo vệ môi trường\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            }
+          ]
+        },
+        {
+          "id": "l31-hdtn5",
+          "lessonNumber": 31,
+          "title": "Tuần 31",
+          "questions": [
+            {
+              "id": "g5-hdtn-w31-q1",
+              "type": "knowledge",
+              "prompt": "Trong ngày hội \"Chữa lành vết thương Trái Đất\", hành động nào thể hiện sự nghiêm túc và trách nhiệm?",
+              "options": [
+                "Đứng đùa giỡn, nói chuyện riêng và không chú ý lắng nghe lời cam kết của nhà trường",
+                "Đồng lòng hô to lời cam kết và chủ động thực hiện ngay các hành động bảo vệ môi trường từ việc nhỏ nhất",
+                "Bỏ về lớp học trước khi buổi lễ cam kết của toàn trường kết thúc",
+                "Tiện tay vứt ngay vỏ hộp sữa xuống sân trường trong khi tham dự ngày hội"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Đồng lòng hô to lời cam kết và chủ động thực hiện ngay các hành động bảo vệ môi trường từ việc nhỏ nhất\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w31-q2",
+              "type": "knowledge",
+              "prompt": "Khi lập kế hoạch lao động công ích ở khu dân cư dựa trên kết quả khảo sát môi trường, hoạt động thiết thực là gì?",
+              "options": [
+                "Đốt toàn bộ rác thải sinh hoạt ở góc sân chung gây ra khói độc ô nhiễm",
+                "Tổng vệ sinh khu dân cư, phân loại rác thải tại nguồn và tưới cây xanh khu vực sinh sống",
+                "Lấp các bồn cây công cộng chung để làm chỗ đỗ xe cá nhân",
+                "Quét rác hất từ nhà mình sang ngõ nhà hàng xóm xung quanh"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Tổng vệ sinh khu dân cư, phân loại rác thải tại nguồn và tưới cây xanh khu vực sinh sống\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w31-q3",
+              "type": "knowledge",
+              "prompt": "Để vận động các cô bác hàng xóm cùng tham gia buổi tổng vệ sinh khu dân cư vào sáng Chủ nhật, cách thức nào lịch sự và hiệu quả?",
+              "options": [
+                "Quát mắng và đe dọa sẽ báo công an nếu các hộ gia đình không tham gia",
+                "Lễ phép gõ cửa từng nhà hoặc phát biểu trong họp tổ dân phố nêu rõ lợi ích môi trường và mời tham gia",
+                "Bắt buộc mọi người phải ký vào bản cam kết đóng tiền phạt nếu vắng mặt",
+                "Tỏ thái độ giận dỗi khi thấy cô bác chưa đồng ý ngay lập tức"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Lễ phép gõ cửa từng nhà hoặc phát biểu trong họp tổ dân phố nêu rõ lợi ích môi trường và mời tham gia\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w31-q4",
+              "type": "knowledge",
+              "prompt": "Khi bác hàng xóm phân vân lo lắng việc lao động công ích bẩn thỉu và tốn thời gian, em nên ứng xử thế nào?",
+              "options": [
+                "Cãi nhau gay gắt và chê bai bác là người thiếu ý thức bảo vệ môi trường",
+                "Bình tĩnh, lễ phép giải thích đã chuẩn bị đầy đủ găng tay, dụng cụ và chỉ mất khoảng 1 tiếng đồng hồ",
+                "Bỏ đi thẳng và đi nói xấu bác với những người khác trong khu phố",
+                "Ép buộc bác phải đi làm thay toàn bộ phần việc nặng nhọc của mình"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Bình tĩnh, lễ phép giải thích đã chuẩn bị đầy đủ găng tay, dụng cụ và chỉ mất khoảng 1 tiếng đồng hồ\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w31-q5",
+              "type": "knowledge",
+              "prompt": "Việc làm nào dưới đây thể hiện \"hành động xanh\" thực tế để gắn lên cây thông điệp của lớp?",
+              "options": [
+                "Tăng cường sử dụng túi ni-lông dùng một lần cho tiện lợi và nhanh chóng",
+                "Hạn chế dùng chất tẩy rửa hóa học, tự giác nhặt rác và vận động người thân phân loại rác",
+                "Tiện tay vứt pin đã qua sử dụng vào thùng rác sinh hoạt chung của gia đình",
+                "Mở vòi nước chảy tự do thật lớn khi rửa tay hằng ngày"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Hạn chế dùng chất tẩy rửa hóa học, tự giác nhặt rác và vận động người thân phân loại rác\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w31-q6",
+              "type": "knowledge",
+              "prompt": "Sau khi hoàn thành xong Chủ đề \"Tự hào quê hương em\", giá trị cốt lõi lớn nhất học sinh lớp 5 cần đạt được là gì?",
+              "options": [
+                "Đảm bảo bản thân luôn nhận được khen thưởng tiền mặt từ phía địa phương",
+                "Biết tự hào về cảnh quan đất nước, đề xuất biện pháp bảo tồn, khảo sát môi trường và tự giác chung tay giữ gìn vệ sinh",
+                "Giúp em được nhà trường miễn tất cả các bài kiểm tra văn hóa",
+                "Giúp em có quyền bắt các bạn khác phải dọn dẹp vệ sinh thay mình"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Biết tự hào về cảnh quan đất nước, đề xuất biện pháp bảo tồn, khảo sát môi trường và tự giác chung tay giữ gìn vệ sinh\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c9-hdtn5",
+      "chapterNumber": 9,
+      "title": "CHỦ ĐỀ 9: ƯỚC MƠ NGHỀ NGHIỆP",
+      "lessons": [
+        {
+          "id": "l32-hdtn5",
+          "lessonNumber": 32,
+          "title": "Tuần 32",
+          "questions": [
+            {
+              "id": "g5-hdtn-w32-q1",
+              "type": "knowledge",
+              "prompt": "Khi tham gia diễn đàn \"Nghề nghiệp tương lai\", thái độ nào thể hiện sự tự tin và tôn trọng sự đa dạng nghề nghiệp?",
+              "options": [
+                "Ngượng ngùng không dám nói vì sợ các bạn bè xung quanh chê cười ước mơ của mình",
+                "Tự hào viết tên nghề mơ ước lên tấm thẻ và tôn trọng ước mơ khác nhau của các bạn trong lớp",
+                "Chê bai ước mơ nghề nghiệp của bạn khác là tầm thường, không có giá trị",
+                "Bắt chước chọn theo nghề của bạn thân dù bản thân không thực sự yêu thích"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Tự hào viết tên nghề mơ ước lên tấm thẻ và tôn trọng ước mơ khác nhau của các bạn trong lớp\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w32-q2",
+              "type": "knowledge",
+              "prompt": "Khi cùng nhóm xây dựng kế hoạch tìm hiểu về một nghề nghiệp, những thông tin cơ bản nào cần được đưa vào?",
+              "options": [
+                "Công việc đặc trưng hằng ngày, yêu cầu của nghề và những đóng góp của nghề đó cho xã hội",
+                "Mức lương cụ thể chính xác tới từng đồng của người làm nghề trong xã hội",
+                "Danh sách địa chỉ nhà riêng của tất cả những người đang làm nghề đó trên địa bàn",
+                "Những bộ quần áo thời trang đắt tiền nhất mà người làm nghề thường mặc hằng ngày"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Công việc đặc trưng hằng ngày, yêu cầu của nghề và những đóng góp của nghề đó cho xã hội\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w32-q3",
+              "type": "knowledge",
+              "prompt": "Để tìm hiểu thông tin chân thực, chính xác về nghề Hướng dẫn viên du lịch, phương pháp nào phù hợp và khả thi?",
+              "options": [
+                "Đọc sách, báo, tra cứu thông tin trên Internet và phỏng vấn người giỏi nghề/chuyên gia",
+                "Tự suy đoán thông tin theo ý mình mà không cần đọc sách báo hay hỏi ai cả",
+                "Bỏ học để đi theo một đoàn khách du lịch thực tế trong suốt nhiều tháng liền",
+                "Bịa ra các câu chuyện không có thật để viết vào bài báo cáo nộp cho cô giáo"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Đọc sách, báo, tra cứu thông tin trên Internet và phỏng vấn người giỏi nghề/chuyên gia\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w32-q4",
+              "type": "knowledge",
+              "prompt": "Khi chuẩn bị cho buổi gặp gỡ và phỏng vấn một người giỏi nghề (chuyên gia), nhóm em cần có sự chuẩn bị chu đáo nào?",
+              "options": [
+                "Đến tay không và hỏi những câu hỏi cộc lốc, thiếu lễ độ",
+                "Chuẩn bị trước danh sách câu hỏi lịch sự, sổ bút/ghi âm và món quà nhỏ do tự tay nhóm làm để tặng chuyên gia",
+                "Đòi hỏi chuyên gia phải cho mình thật nhiều tiền thưởng sau khi phỏng vấn xong",
+                "Ép buộc chuyên gia phải trả lời những câu hỏi riêng tư về gia đình họ"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Chuẩn bị trước danh sách câu hỏi lịch sự, sổ bút/ghi âm và món quà nhỏ do tự tay nhóm làm để tặng chuyên gia\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w32-q5",
+              "type": "knowledge",
+              "prompt": "Khi lập bảng Kế hoạch tìm hiểu nghề mơ ước, việc phân công công việc dựa trên nguyên tắc nào giúp hiệu quả nhất?",
+              "options": [
+                "Phân công rõ ràng: Nhiệm vụ, người phụ trách, thời gian thực hiện và việc cần chuẩn bị",
+                "Đẩy toàn bộ việc đọc sách và phỏng vấn cho một bạn duy nhất gánh vác",
+                "Để các thành viên tự do làm theo ý thích, không cần có thời hạn hoàn thành",
+                "Nhờ bố mẹ làm hộ hết toàn bộ kế hoạch để mang đến lớp nộp"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Phân công rõ ràng: Nhiệm vụ, người phụ trách, thời gian thực hiện và việc cần chuẩn bị\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            },
+            {
+              "id": "g5-hdtn-w32-q6",
+              "type": "knowledge",
+              "prompt": "Việc học sinh lớp 5 chủ động tìm hiểu thông tin về nghề em mơ ước mang lại giá trị thực tế lớn nhất gì?",
+              "options": [
+                "Giúp học sinh có thể đi làm kiếm tiền ngay lập tức mà không cần đi học nữa",
+                "Giúp em hiểu rõ công việc, yêu cầu nghề nghiệp, từ đó chủ động định hướng học tập và rèn luyện kỹ năng ngay từ bây giờ",
+                "Đảm bảo em không bao giờ phải làm bài tập môn Hoạt động trải nghiệm ở trường",
+                "Giúp em trở thành người quyền lực nhất trong lớp học của mình"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Trải nghiệm",
+              "explanation": "Đáp án chính xác: \"Giúp em hiểu rõ công việc, yêu cầu nghề nghiệp, từ đó chủ động định hướng học tập và rèn luyện kỹ năng ngay từ bây giờ\". Hoạt động trải nghiệm lớp 5 giúp em tự tin, trưởng thành và rèn luyện kỹ năng sống tích cực."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

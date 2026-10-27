@@ -1,0 +1,838 @@
+{
+  "id": "g5-congnghe",
+  "grade": 5,
+  "subjectKey": "congnghe",
+  "title": "Công nghệ lớp 5",
+  "color": "#0284C7",
+  "coverImage": "/mascots/bia-sach-mon-hoc.png",
+  "chapters": [
+    {
+      "id": "c1-congnghe5",
+      "chapterNumber": 1,
+      "title": "Phần 1: Công nghệ và đời sống",
+      "lessons": [
+        {
+          "id": "l1-cn5",
+          "lessonNumber": 1,
+          "title": "BÀI 1: VAI TRÒ CỦA CÔNG NGHỆ",
+          "questions": [
+            {
+              "id": "g5-cn-l1-q1",
+              "type": "knowledge",
+              "prompt": "Theo bài học, sản phẩm công nghệ mang lại vai trò chính nào đối với đời sống con người?",
+              "options": [
+                "Đáp ứng nhu cầu sinh hoạt, tăng năng suất lao động và cải thiện môi trường sống",
+                "Thay thế hoàn toàn con người trong mọi công việc và sinh hoạt hằng ngày",
+                "Bắt buộc con người phải phụ thuộc tuyệt đối vào máy móc trong mọi việc",
+                "Chỉ dùng để trang trí nhà cửa và phục vụ cho nhu cầu giải trí cá nhân"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Đáp ứng nhu cầu sinh hoạt, tăng năng suất lao động và cải thiện môi trường sống\". Bài học Công nghệ 5 giúp em hiểu rõ nguyên lý, quy trình sáng chế và sử dụng công nghệ an toàn."
+            },
+            {
+              "id": "g5-cn-l1-q2",
+              "type": "knowledge",
+              "prompt": "Sản phẩm công nghệ nào giúp con người di chuyển đến những nơi xa một cách nhanh chóng?",
+              "options": ["Máy cày", "Máy bay", "Tủ lạnh", "Máy đóng nút chai"],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Máy bay\". Bài học Công nghệ 5 giúp em hiểu rõ nguyên lý, quy trình sáng chế và sử dụng công nghệ an toàn."
+            },
+            {
+              "id": "g5-cn-l1-q3",
+              "type": "scenario",
+              "prompt": "Trong quy trình sản xuất giấy, công đoạn nào nếu không xử lý đúng quy trình sẽ gây ô nhiễm môi trường?",
+              "options": [
+                "Cắt nhỏ và làm sạch gỗ, tre hoặc nứa ban đầu",
+                "Sấy khô và cắt giấy thành phẩm theo khuôn",
+                "Xả nước thải chưa qua xử lý ra ngoài môi trường",
+                "Thực hiện công đoạn nghiền và xeo giấy"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án chính xác là: \"Xả nước thải chưa qua xử lý ra ngoài môi trường\". Bài học Công nghệ 5 giúp em hiểu rõ nguyên lý, quy trình sáng chế và sử dụng công nghệ an toàn."
+            },
+            {
+              "id": "g5-cn-l1-q4",
+              "type": "scenario",
+              "prompt": "Nếu sử dụng các sản phẩm công nghệ không hợp lý, con người sẽ gặp hậu quả gì?",
+              "options": [
+                "Lệ thuộc công nghệ, giảm tư duy sáng tạo, hạn chế giao tiếp và hại sức khỏe",
+                "Nâng cao sức khỏe thể chất và mở rộng tối đa mối quan hệ giao tiếp trực tiếp",
+                "Giúp bộ não tự động ghi nhớ và tính toán nhanh hơn mà hoàn toàn không cần nghĩ",
+                "Bảo vệ tuyệt đối an toàn mọi thông tin cá nhân trên môi trường mạng xã hội"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án chính xác là: \"Lệ thuộc công nghệ, giảm tư duy sáng tạo, hạn chế giao tiếp và hại sức khỏe\". Bài học Công nghệ 5 giúp em hiểu rõ nguyên lý, quy trình sáng chế và sử dụng công nghệ an toàn."
+            },
+            {
+              "id": "g5-cn-l1-q5",
+              "type": "knowledge",
+              "prompt": "Hành động dùng máy tính cầm tay để tính các phép tính đơn giản thể hiện mặt trái nào?",
+              "options": [
+                "Hạn chế giao tiếp trực tiếp với mọi người xung quanh",
+                "Lệ thuộc vào công nghệ và làm giảm tư duy tính toán của bản thân",
+                "Gây ra tình trạng mất an toàn về thông tin cá nhân trên mạng",
+                "Gây ảnh hưởng xấu trực tiếp đến thị lực và sức khỏe thể chất"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Lệ thuộc vào công nghệ và làm giảm tư duy tính toán của bản thân\". Bài học Công nghệ 5 giúp em hiểu rõ nguyên lý, quy trình sáng chế và sử dụng công nghệ an toàn."
+            },
+            {
+              "id": "g5-cn-l1-q6",
+              "type": "scenario",
+              "prompt": "Để hạn chế mặt trái và phát huy lợi ích của công nghệ, học sinh cần làm gì?",
+              "options": [
+                "Ngừng sử dụng toàn bộ tất cả các thiết bị công nghệ hiện đại hiện nay",
+                "Sử dụng hợp lý, đúng mục đích, cân đối thời gian và không để bị lệ thuộc",
+                "Dành trọn toàn bộ thời gian rảnh rỗi để sử dụng điện thoại, máy tính",
+                "Chỉ sử dụng các thiết bị công nghệ khi có sự bắt buộc nghiêm ngặt từ thầy cô"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án chính xác là: \"Sử dụng hợp lý, đúng mục đích, cân đối thời gian và không để bị lệ thuộc\". Bài học Công nghệ 5 giúp em hiểu rõ nguyên lý, quy trình sáng chế và sử dụng công nghệ an toàn."
+            }
+          ]
+        },
+        {
+          "id": "l2-cn5",
+          "lessonNumber": 2,
+          "title": "BÀI 2: NHÀ SÁNG CHẾ",
+          "questions": [
+            {
+              "id": "g5-cn-l2-q1",
+              "type": "knowledge",
+              "prompt": "Sáng chế đóng vai trò như thế nào đối với sự phát triển của công nghệ và đời sống?",
+              "options": [
+                "Tạo sản phẩm mới, thúc đẩy công nghệ phát triển, giúp đời sống tiện nghi hơn",
+                "Làm ngưng trệ quá trình sản xuất và gia tăng chi phí sinh hoạt của con người",
+                "Giúp con người hoàn toàn không cần phải lao động hay suy nghĩ thêm điều gì",
+                "Chỉ nhằm mục đích trang trí và trưng bày trong các hội chợ, triển lãm nghệ thuật"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Tạo sản phẩm mới, thúc đẩy công nghệ phát triển, giúp đời sống tiện nghi hơn\". Bài học Công nghệ 5 giúp em hiểu rõ nguyên lý, quy trình sáng chế và sử dụng công nghệ an toàn."
+            },
+            {
+              "id": "g5-cn-l2-q2",
+              "type": "knowledge",
+              "prompt": "Sự chuyển biến từ việc \"vẽ bằng than củi\" sang \"vẽ bằng bút chì\" thể hiện điều gì?",
+              "options": [
+                "Sáng chế làm cạn kiệt nhanh chóng các tài nguyên thiên nhiên của Trái Đất",
+                "Sáng chế góp phần tạo ra sản phẩm mới, cải tiến công cụ làm việc của con người",
+                "Sáng chế làm giảm sút năng suất và kết quả công việc của con người hằng ngày",
+                "Sáng chế gây ra nhiều khó khăn phức tạp cho việc học tập của học sinh"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Sáng chế góp phần tạo ra sản phẩm mới, cải tiến công cụ làm việc của con người\". Bài học Công nghệ 5 giúp em hiểu rõ nguyên lý, quy trình sáng chế và sử dụng công nghệ an toàn."
+            },
+            {
+              "id": "g5-cn-l2-q3",
+              "type": "knowledge",
+              "prompt": "Nhà sáng chế nào được cấp bằng sáng chế cho chiếc bóng đèn sợi đốt vào năm 1879?",
+              "options": [
+                "Giêm Oát (James Watt)",
+                "A-lếch-xan-đơ Gra-ham Beo (Alexander Graham Bell)",
+                "Tô-mát Ê-đi-xơn (Thomas Edison)",
+                "Các Ben (Karl Benz)"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Tô-mát Ê-đi-xơn (Thomas Edison)\". Bài học Công nghệ 5 giúp em hiểu rõ nguyên lý, quy trình sáng chế và sử dụng công nghệ an toàn."
+            },
+            {
+              "id": "g5-cn-l2-q4",
+              "type": "knowledge",
+              "prompt": "Phát minh chiếc điện thoại năm 1876 giúp cải tiến liên lạc từ xa là của ai?",
+              "options": [
+                "A-lếch-xan-đơ Gra-ham Beo",
+                "Giêm Oát",
+                "Các Ben",
+                "Giôn Mau-li"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"A-lếch-xan-đơ Gra-ham Beo\". Bài học Công nghệ 5 giúp em hiểu rõ nguyên lý, quy trình sáng chế và sử dụng công nghệ an toàn."
+            },
+            {
+              "id": "g5-cn-l2-q5",
+              "type": "knowledge",
+              "prompt": "Nhóm thẻ từ nào mô tả đúng các đức tính cần có để trở thành một nhà sáng chế?",
+              "options": [
+                "Kiên trì, tò mò khoa học, ham học hỏi, chịu khó quan sát, không ngại thất bại",
+                "Nóng vội, kiên trì, lười biếng, thông minh xuất chúng",
+                "Thụ động, ham học hỏi, hay chán nản, sáng tạo",
+                "Tự cao, chịu khó quan sát, giấu nghề, chăm chỉ"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Kiên trì, tò mò khoa học, ham học hỏi, chịu khó quan sát, không ngại thất bại\". Bài học Công nghệ 5 giúp em hiểu rõ nguyên lý, quy trình sáng chế và sử dụng công nghệ an toàn."
+            },
+            {
+              "id": "g5-cn-l2-q6",
+              "type": "knowledge",
+              "prompt": "Chiếc máy tính điện tử đầu tiên trên thế giới ENIAC (hoàn thành năm 1946) có đặc điểm gì?",
+              "options": [
+                "Kích thước rất nhỏ gọn và có thể bỏ vừa vào túi áo",
+                "Được sản xuất hàng loạt để bán cho học sinh tiểu học sử dụng",
+                "Kích thước rất lớn và thực hiện được 5000 phép cộng trong mỗi giây",
+                "Chạy bằng năng lượng mặt trời và hoàn toàn không cần dây cắm"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Kích thước rất lớn và thực hiện được 5000 phép cộng trong mỗi giây\". Bài học Công nghệ 5 giúp em hiểu rõ nguyên lý, quy trình sáng chế và sử dụng công nghệ an toàn."
+            }
+          ]
+        },
+        {
+          "id": "l3-cn5",
+          "lessonNumber": 3,
+          "title": "BÀI 3: TÌM HIỂU THIẾT KẾ",
+          "questions": [
+            {
+              "id": "g5-cn-l3-q1",
+              "type": "scenario",
+              "prompt": "Thiết kế là gì và vì sao cần phải thực hiện trước khi tạo ra sản phẩm công nghệ?",
+              "options": [
+                "Là quá trình sao chép lại các sản phẩm đã có sẵn để tiết kiệm chi phí làm ra",
+                "Là quá trình sáng tạo nhằm tạo ra sản phẩm đáp ứng tốt nhu cầu con người",
+                "Là việc đi mua sắm toàn bộ nguyên vật liệu về để tiến hành lắp ráp sản phẩm",
+                "Là việc đem sản phẩm đi thử nghiệm ngay sau khi đã sản xuất hàng loạt lớn"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án chính xác là: \"Là quá trình sáng tạo nhằm tạo ra sản phẩm đáp ứng tốt nhu cầu con người\". Bài học Công nghệ 5 giúp em hiểu rõ nguyên lý, quy trình sáng chế và sử dụng công nghệ an toàn."
+            },
+            {
+              "id": "g5-cn-l3-q2",
+              "type": "knowledge",
+              "prompt": "Trong các hoạt động công nghệ sau, hoạt động nào bắt buộc phải thực hiện đầu tiên?",
+              "options": [
+                "Sản xuất đại trà",
+                "Vận hành, sử dụng",
+                "Thiết kế sản phẩm",
+                "Bảo dưỡng, sửa chữa"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Thiết kế sản phẩm\". Bài học Công nghệ 5 giúp em hiểu rõ nguyên lý, quy trình sáng chế và sử dụng công nghệ an toàn."
+            },
+            {
+              "id": "g5-cn-l3-q3",
+              "type": "scenario",
+              "prompt": "Việc lựa chọn dụng cụ (thước, kéo, bìa) và vẽ hình dáng dự kiến thuộc bước nào?",
+              "options": [
+                "Hình thành ý tưởng về sản phẩm",
+                "Vẽ phác thảo sản phẩm và lựa chọn vật liệu, dụng cụ",
+                "Tiến hành làm sản phẩm mẫu",
+                "Đánh giá và hoàn thiện sản phẩm"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án chính xác là: \"Vẽ phác thảo sản phẩm và lựa chọn vật liệu, dụng cụ\". Bài học Công nghệ 5 giúp em hiểu rõ nguyên lý, quy trình sáng chế và sử dụng công nghệ an toàn."
+            },
+            {
+              "id": "g5-cn-l3-q4",
+              "type": "scenario",
+              "prompt": "Kiểm tra độ chắc chắn của sản phẩm mẫu (như lọ hoa) và trang trí thêm thuộc bước nào?",
+              "options": [
+                "Hình thành ý tưởng về sản phẩm",
+                "Vẽ phác thảo sản phẩm",
+                "Đánh giá và hoàn thiện sản phẩm",
+                "Sản xuất sản phẩm hàng loạt"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án chính xác là: \"Đánh giá và hoàn thiện sản phẩm\". Bài học Công nghệ 5 giúp em hiểu rõ nguyên lý, quy trình sáng chế và sử dụng công nghệ an toàn."
+            },
+            {
+              "id": "g5-cn-l3-q5",
+              "type": "scenario",
+              "prompt": "Khi vẽ phác thảo ý tưởng thiết kế một sản phẩm đơn giản, thông tin đi kèm gồm những gì?",
+              "options": [
+                "Tên sản phẩm, chức năng và các vật liệu cần sử dụng để làm",
+                "Giá tiền bán ra trên thị trường và danh sách người mua sản phẩm",
+                "Địa chỉ các cửa hàng bán nguyên liệu và quy trình đóng gói sản phẩm",
+                "Điểm số thi đua thực hiện bài tập của các thành viên trong nhóm"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án chính xác là: \"Tên sản phẩm, chức năng và các vật liệu cần sử dụng để làm\". Bài học Công nghệ 5 giúp em hiểu rõ nguyên lý, quy trình sáng chế và sử dụng công nghệ an toàn."
+            },
+            {
+              "id": "g5-cn-l3-q6",
+              "type": "knowledge",
+              "prompt": "Yếu tố nào quyết định sự khác nhau về kiểu dáng và tính năng giữa các loại đồng hồ?",
+              "options": [
+                "Do hoạt động thiết kế sáng tạo của con người tạo nên sự đa dạng",
+                "Do người mua tự sơn lại màu sắc mới sau một thời gian sử dụng",
+                "Do các nguyên liệu tự nhiên tự thay đổi hình dáng bên ngoài",
+                "Do sự ngẫu nhiên xảy ra trong suốt quá trình vận chuyển hàng hóa"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Do hoạt động thiết kế sáng tạo của con người tạo nên sự đa dạng\". Bài học Công nghệ 5 giúp em hiểu rõ nguyên lý, quy trình sáng chế và sử dụng công nghệ an toàn."
+            }
+          ]
+        },
+        {
+          "id": "l4-cn5",
+          "lessonNumber": 4,
+          "title": "BÀI 4: THIẾT KẾ SẢN PHẨM",
+          "questions": [
+            {
+              "id": "g5-cn-l4-q1",
+              "type": "scenario",
+              "prompt": "Công việc đầu tiên học sinh cần làm ở bước hình thành ý tưởng thiết kế là gì?",
+              "options": [
+                "Cắt ngay bìa giấy ra thành các bộ phận tùy ý",
+                "Lựa chọn loại đồng hồ yêu thích và nêu ý tưởng thiết kế mô hình",
+                "Mua một chiếc đồng hồ thật ngoài cửa hàng về dán lên bìa",
+                "Chờ giáo viên làm sẵn sản phẩm mẫu rồi chép lại theo"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án chính xác là: \"Lựa chọn loại đồng hồ yêu thích và nêu ý tưởng thiết kế mô hình\". Bài học Công nghệ 5 giúp em hiểu rõ nguyên lý, quy trình sáng chế và sử dụng công nghệ an toàn."
+            },
+            {
+              "id": "g5-cn-l4-q2",
+              "type": "knowledge",
+              "prompt": "Sản phẩm mô hình đồng hồ đeo tay bằng giấy bìa gồm những bộ phận chính nào?",
+              "options": [
+                "Mặt số, bộ kim đồng hồ, quai đeo và núm vặn",
+                "Pin tiểu, dây điện và động cơ chạy bằng xăng",
+                "Thước kẻ, kéo, hồ dán và hộp đựng màu vẽ",
+                "Khung gỗ, mặt kính cường lực và xích sắt"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Mặt số, bộ kim đồng hồ, quai đeo và núm vặn\". Bài học Công nghệ 5 giúp em hiểu rõ nguyên lý, quy trình sáng chế và sử dụng công nghệ an toàn."
+            },
+            {
+              "id": "g5-cn-l4-q3",
+              "type": "scenario",
+              "prompt": "Khi lập bản vẽ phác thảo mô hình đồng hồ đồ chơi, học sinh cần trình bày thông tin gì?",
+              "options": [
+                "Tên sản phẩm, yêu cầu (hình dạng, chắc chắn, thẩm mỹ), vật liệu và dụng cụ",
+                "Giá tiền của các loại đồng hồ đắt tiền nhất có mặt trên thị trường",
+                "Địa chỉ nơi bán nguyên liệu giấy bìa cứng nằm trong thành phố",
+                "Danh sách tên các bạn học sinh có ý định mua mô hình đồng hồ"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án chính xác là: \"Tên sản phẩm, yêu cầu (hình dạng, chắc chắn, thẩm mỹ), vật liệu và dụng cụ\". Bài học Công nghệ 5 giúp em hiểu rõ nguyên lý, quy trình sáng chế và sử dụng công nghệ an toàn."
+            },
+            {
+              "id": "g5-cn-l4-q4",
+              "type": "knowledge",
+              "prompt": "Dụng cụ và vật liệu nào an toàn và phù hợp nhất để học sinh lớp 5 làm mô hình đồng hồ?",
+              "options": [
+                "Vật liệu: giấy bìa; Dụng cụ: kéo, hồ dán, màu vẽ",
+                "Vật liệu: tấm nhôm cứng; Dụng cụ: máy cưa, máy hàn",
+                "Vật liệu: thủy tinh; Dụng cụ: dũa thép, búa đập",
+                "Vật liệu: đất đá; Dụng cụ: xi măng, xẻng xúc"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Vật liệu: giấy bìa; Dụng cụ: kéo, hồ dán, màu vẽ\". Bài học Công nghệ 5 giúp em hiểu rõ nguyên lý, quy trình sáng chế và sử dụng công nghệ an toàn."
+            },
+            {
+              "id": "g5-cn-l4-q5",
+              "type": "scenario",
+              "prompt": "Khi kim đồng hồ bằng giấy bị dán quá chặt không xoay được, em nên xử lý thế nào?",
+              "options": [
+                "Dùng chốt xoay hoặc nẹp nhỏ xuyên qua tâm để kim quay linh hoạt",
+                "Đổ thêm thật nhiều keo dán vào tâm bộ kim để cố định chặt hơn nữa",
+                "Cắt bỏ hoàn toàn bộ kim và không cần làm kim cho đồng hồ nữa",
+                "Bỏ toàn bộ sản phẩm và dừng lại không tiếp tục thực hành nữa"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án chính xác là: \"Dùng chốt xoay hoặc nẹp nhỏ xuyên qua tâm để kim quay linh hoạt\". Bài học Công nghệ 5 giúp em hiểu rõ nguyên lý, quy trình sáng chế và sử dụng công nghệ an toàn."
+            },
+            {
+              "id": "g5-cn-l4-q6",
+              "type": "scenario",
+              "prompt": "Khi đánh giá sản phẩm mẫu mô hình đồng hồ, học sinh dựa vào các tiêu chí nào?",
+              "options": [
+                "Đúng hình dạng, chắc chắn và đảm bảo tính thẩm mỹ",
+                "Sản phẩm phải nặng nhất, to nhất và tốn nhiều bìa giấy nhất",
+                "Mua hết nhiều tiền nhất và thời gian làm lâu nhất",
+                "Phải giống hệt 100% bằng kim loại thật như ngoài đời"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án chính xác là: \"Đúng hình dạng, chắc chắn và đảm bảo tính thẩm mỹ\". Bài học Công nghệ 5 giúp em hiểu rõ nguyên lý, quy trình sáng chế và sử dụng công nghệ an toàn."
+            }
+          ]
+        },
+        {
+          "id": "l5-cn5",
+          "lessonNumber": 5,
+          "title": "BÀI 5: SỬ DỤNG ĐIỆN THOẠI",
+          "questions": [
+            {
+              "id": "g5-cn-l5-q1",
+              "type": "knowledge",
+              "prompt": "Ngoài chức năng liên lạc, điện thoại di động hiện đại còn hỗ trợ tiện ích gì?",
+              "options": [
+                "Nghe nhạc, xem phim, định vị, truy cập internet",
+                "Nấu ăn tự động và làm mát phòng thay điều hòa",
+                "Giặt quần áo và dọn dẹp nhà cửa tự động",
+                "Thay thế hoàn toàn các phương tiện giao thông"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Nghe nhạc, xem phim, định vị, truy cập internet\". Bài học Công nghệ 5 giúp em hiểu rõ nguyên lý, quy trình sáng chế và sử dụng công nghệ an toàn."
+            },
+            {
+              "id": "g5-cn-l5-q2",
+              "type": "knowledge",
+              "prompt": "Cấu tạo cơ bản của một chiếc điện thoại cố định (để bàn) thường gồm bộ phận nào?",
+              "options": [
+                "Loa, micro, màn hình cảm ứng, camera, đèn pin",
+                "Ống nghe, ống nói và bàn phím bấm số",
+                "Thẻ nhớ, giá đỡ và củ sạc pin dự phòng",
+                "Trạm thu sóng di động và dây đeo cá nhân"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Ống nghe, ống nói và bàn phím bấm số\". Bài học Công nghệ 5 giúp em hiểu rõ nguyên lý, quy trình sáng chế và sử dụng công nghệ an toàn."
+            },
+            {
+              "id": "g5-cn-l5-q3",
+              "type": "scenario",
+              "prompt": "Biểu tượng hình chiếc điện thoại màu xanh lá cây hoặc bàn phím số dùng để làm gì?",
+              "options": [
+                "Kết thúc cuộc gọi đang diễn ra",
+                "Mở nhanh chế độ máy bay của thiết bị",
+                "Mở danh bạ hoặc bàn phím để gọi điện",
+                "Bật kết nối mạng Internet hoặc Wifi"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án chính xác là: \"Mở danh bạ hoặc bàn phím để gọi điện\". Bài học Công nghệ 5 giúp em hiểu rõ nguyên lý, quy trình sáng chế và sử dụng công nghệ an toàn."
+            },
+            {
+              "id": "g5-cn-l5-q4",
+              "type": "scenario",
+              "prompt": "Khi xảy ra sự cố cháy nổ hỏa hoạn, số điện thoại dịch vụ khẩn cấp cần gọi là gì?",
+              "options": [
+                "111 (Tổng đài Quốc gia bảo vệ trẻ em)",
+                "113 (Công an)",
+                "114 (Cứu hỏa)",
+                "115 (Cấp cứu y tế)"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án chính xác là: \"114 (Cứu hỏa)\". Bài học Công nghệ 5 giúp em hiểu rõ nguyên lý, quy trình sáng chế và sử dụng công nghệ an toàn."
+            },
+            {
+              "id": "g5-cn-l5-q5",
+              "type": "scenario",
+              "prompt": "Hành vi nào dưới đây là không an toàn khi sử dụng điện thoại di động?",
+              "options": [
+                "Vừa sạc pin vừa chơi game hoặc nghe điện thoại",
+                "Rút dây sạc ra khỏi ổ điện sau khi pin đã đầy",
+                "Sử dụng điện thoại với thời gian vừa phải, hợp lý",
+                "Tắt bớt các ứng dụng không cần thiết để tiết kiệm pin"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án chính xác là: \"Vừa sạc pin vừa chơi game hoặc nghe điện thoại\". Bài học Công nghệ 5 giúp em hiểu rõ nguyên lý, quy trình sáng chế và sử dụng công nghệ an toàn."
+            },
+            {
+              "id": "g5-cn-l5-q6",
+              "type": "scenario",
+              "prompt": "Khi bắt đầu cuộc gọi điện thoại cho người khác, quy tắc ứng xử lịch sự là gì?",
+              "options": [
+                "Hỏi ngay người nghe có tiền hay không để vay",
+                "Chào hỏi, xưng danh và nêu rõ mục đích gọi",
+                "Nói thật nhanh và đột ngột tắt máy không chào",
+                "Quát thật to vào điện thoại để người nghe chú ý"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án chính xác là: \"Chào hỏi, xưng danh và nêu rõ mục đích gọi\". Bài học Công nghệ 5 giúp em hiểu rõ nguyên lý, quy trình sáng chế và sử dụng công nghệ an toàn."
+            }
+          ]
+        },
+        {
+          "id": "l6-cn5",
+          "lessonNumber": 6,
+          "title": "BÀI 6: SỬ DỤNG TỦ LẠNH",
+          "questions": [
+            {
+              "id": "g5-cn-l6-q1",
+              "type": "knowledge",
+              "prompt": "Tủ lạnh là thiết bị điện phổ biến trong gia đình có chức năng chính là gì?",
+              "options": [
+                "Nấu chín thực phẩm và giữ ấm đồ ăn trong thời gian dài",
+                "Bảo quản thực phẩm ở nhiệt độ thấp, giúp kéo dài thời gian sử dụng",
+                "Khử trùng tuyệt đối mọi vi khuẩn mà không cần rửa sạch thực phẩm",
+                "Sấy khô các loại rau củ quả để tích trữ dùng dần trong nhà"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Bảo quản thực phẩm ở nhiệt độ thấp, giúp kéo dài thời gian sử dụng\". Bài học Công nghệ 5 giúp em hiểu rõ nguyên lý, quy trình sáng chế và sử dụng công nghệ an toàn."
+            },
+            {
+              "id": "g5-cn-l6-q2",
+              "type": "knowledge",
+              "prompt": "Vai trò chính của khoang cấp đông và khoang làm lạnh trong tủ lạnh là gì?",
+              "options": [
+                "Khoang cấp đông để làm đá, bảo quản đông lạnh; Khoang làm lạnh để bảo quản lạnh thực phẩm",
+                "Khoang làm lạnh để làm đá; Khoang cấp đông để cất giữ rau củ quả tươi",
+                "Cả hai khoang đều có cùng mức nhiệt độ và chức năng như nhau",
+                "Khoang cấp đông chỉ dùng để chứa chén dĩa sạch sau khi rửa"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Khoang cấp đông để làm đá, bảo quản đông lạnh; Khoang làm lạnh để bảo quản lạnh thực phẩm\". Bài học Công nghệ 5 giúp em hiểu rõ nguyên lý, quy trình sáng chế và sử dụng công nghệ an toàn."
+            },
+            {
+              "id": "g5-cn-l6-q3",
+              "type": "scenario",
+              "prompt": "Khi bảo quản thực phẩm trong tủ lạnh, lưu ý nào dưới đây là đúng cách và an toàn?",
+              "options": [
+                "Cho ngay thức ăn vừa nấu xong còn đang rất nóng vào tủ lạnh để làm nguội nhanh",
+                "Chất thật đầy thực phẩm kín tất cả các ngăn để tủ lạnh hoạt động tốt hơn",
+                "Sử dụng màng bọc hoặc hộp đậy kín trước khi cất thực phẩm vào trong tủ",
+                "Để lẫn lộn thịt sống tươi chưa rửa với các loại rau củ ăn sống hằng ngày"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án chính xác là: \"Sử dụng màng bọc hoặc hộp đậy kín trước khi cất thực phẩm vào trong tủ\". Bài học Công nghệ 5 giúp em hiểu rõ nguyên lý, quy trình sáng chế và sử dụng công nghệ an toàn."
+            },
+            {
+              "id": "g5-cn-l6-q4",
+              "type": "knowledge",
+              "prompt": "Việc xếp quá nhiều thực phẩm chèn kín các đường thông gió trong tủ lạnh sẽ dẫn đến hậu quả gì?",
+              "options": [
+                "Giúp thực phẩm lạnh nhanh hơn và tiết kiệm điện năng cho gia đình",
+                "Cản trở không khí lạnh lưu thông, khiến thực phẩm dễ hỏng và tốn điện",
+                "Giúp tủ lạnh hoạt động êm hơn và không phát ra tiếng ồn khi chạy",
+                "Hoàn toàn không ảnh hưởng gì đến quá trình bảo quản thực phẩm"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Cản trở không khí lạnh lưu thông, khiến thực phẩm dễ hỏng và tốn điện\". Bài học Công nghệ 5 giúp em hiểu rõ nguyên lý, quy trình sáng chế và sử dụng công nghệ an toàn."
+            },
+            {
+              "id": "g5-cn-l6-q5",
+              "type": "scenario",
+              "prompt": "Khi thấy tủ lạnh có các biểu hiện bất thường như đóng tuyết dày, không lạnh, em nên làm gì?",
+              "options": [
+                "Tự ý dùng dao nhọn để cạo sạch lớp tuyết đóng trên giàn lạnh",
+                "Tháo dỡ các dây điện phía sau tủ để tự tìm cách sửa chữa",
+                "Thông báo ngay cho người lớn trong gia đình để kiểm tra và xử lý",
+                "Mặc kệ sự cố và tiếp tục sử dụng tủ lạnh bình thường"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án chính xác là: \"Thông báo ngay cho người lớn trong gia đình để kiểm tra và xử lý\". Bài học Công nghệ 5 giúp em hiểu rõ nguyên lý, quy trình sáng chế và sử dụng công nghệ an toàn."
+            },
+            {
+              "id": "g5-cn-l6-q6",
+              "type": "knowledge",
+              "prompt": "Để khử mùi hôi tự nhiên và giữ cho tủ lạnh luôn sạch sẽ, em có thể đặt vật liệu nào vào tủ?",
+              "options": [
+                "Quả chanh tươi, vỏ cam quýt hoặc bã cà phê",
+                "Hóa chất tẩy rửa xà phòng nồng độ cao",
+                "Nước hoa xịt phòng thơm tổng hợp",
+                "Giấy báo cũ chưa qua xử lý sạch sẽ"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Quả chanh tươi, vỏ cam quýt hoặc bã cà phê\". Bài học Công nghệ 5 giúp em hiểu rõ nguyên lý, quy trình sáng chế và sử dụng công nghệ an toàn."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c2-congnghe5",
+      "chapterNumber": 2,
+      "title": "Phần 2: Thủ công kĩ thuật",
+      "lessons": [
+        {
+          "id": "l7-cn5",
+          "lessonNumber": 7,
+          "title": "BÀI 7: LẮP RÁP MÔ HÌNH XE ĐIỆN CHẠY BẰNG PIN",
+          "questions": [
+            {
+              "id": "g5-cn-l7-q1",
+              "type": "knowledge",
+              "prompt": "Mô hình xe điện chạy bằng pin hoàn chỉnh gồm những bộ phận cấu thành cơ bản nào?",
+              "options": [
+                "Khung xe, trục và bánh xe, động cơ và hệ truyền động, nguồn điện (giá pin)",
+                "Bánh răng, tay lái, xích xe đạp, xi-lanh thủy lực",
+                "Cánh quạt, tấm pin mặt trời, bóng đèn LED, chân đế",
+                "Màn hình cảm ứng, loa đài, cổng cắm sạc USB"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Khung xe, trục và bánh xe, động cơ và hệ truyền động, nguồn điện (giá pin)\". Bài học Công nghệ 5 giúp em hiểu rõ nguyên lý, quy trình sáng chế và sử dụng công nghệ an toàn."
+            },
+            {
+              "id": "g5-cn-l7-q2",
+              "type": "knowledge",
+              "prompt": "Để lắp đặt nguồn điện và động cơ cho mô hình xe điện, em cần chọn vật liệu nào?",
+              "options": [
+                "Động cơ, giá 2 pin tiểu, 2 pin tiểu 1.5V (AA), băng dính 2 mặt",
+                "Tấm pin mặt trời, củ sạc điện thoại, ổ cắm điện",
+                "Đèn LED, dây cước nhựa, thanh chữ L ngắn",
+                "Bánh đai, van cao su, tay quay cơ học"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Động cơ, giá 2 pin tiểu, 2 pin tiểu 1.5V (AA), băng dính 2 mặt\". Bài học Công nghệ 5 giúp em hiểu rõ nguyên lý, quy trình sáng chế và sử dụng công nghệ an toàn."
+            },
+            {
+              "id": "g5-cn-l7-q3",
+              "type": "scenario",
+              "prompt": "Khi đấu nối dây điện từ giá pin vào động cơ, quy tắc nối dây đúng chuẩn là gì?",
+              "options": [
+                "Nối dây đỏ vào cực dương, nối dây đen vào cực âm của động cơ",
+                "Nối dây đỏ vào cực âm, dây đen vào cực dương của động cơ",
+                "Cắt bỏ cả hai dây điện và dùng keo dán cố định vào khung xe",
+                "Chập hai dây đỏ và đen lại với nhau rồi mới gắn vào một cực"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án chính xác là: \"Nối dây đỏ vào cực dương, nối dây đen vào cực âm của động cơ\". Bài học Công nghệ 5 giúp em hiểu rõ nguyên lý, quy trình sáng chế và sử dụng công nghệ an toàn."
+            },
+            {
+              "id": "g5-cn-l7-q4",
+              "type": "scenario",
+              "prompt": "Thứ tự 4 bước thực hành lắp ráp mô hình xe điện chạy bằng pin là gì?",
+              "options": [
+                "Lắp khung xe  Lắp động cơ và giá pin  Lắp hệ truyền động và bánh xe  Kiểm tra hoạt động",
+                "Lắp bánh xe  Lắp khung xe  Lắp pin  Lắp động cơ",
+                "Lắp động cơ  Lắp hệ truyền động  Lắp khung xe  Chạy thử",
+                "Lắp pin  Lắp bánh xe  Lắp khung xe  Hoàn thiện"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án chính xác là: \"Lắp khung xe  Lắp động cơ và giá pin  Lắp hệ truyền động và bánh xe  Kiểm tra hoạt động\". Bài học Công nghệ 5 giúp em hiểu rõ nguyên lý, quy trình sáng chế và sử dụng công nghệ an toàn."
+            },
+            {
+              "id": "g5-cn-l7-q5",
+              "type": "scenario",
+              "prompt": "Khi tiến hành lắp pin chạy thử mô hình xe điện, học sinh cần lưu ý điều gì?",
+              "options": [
+                "Lắp pin vào giá phải đúng chiều các cực (cực dương +, cực âm -)",
+                "Đóng sẵn công tắc điện rồi mới cắm pin vào để khởi động",
+                "Dùng tay ướt để tháo lắp pin cho nhanh và tiện lợi",
+                "Lắp đảo ngược hai đầu pin để xe chạy nhanh hơn bình thường"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án chính xác là: \"Lắp pin vào giá phải đúng chiều các cực (cực dương +, cực âm -)\". Bài học Công nghệ 5 giúp em hiểu rõ nguyên lý, quy trình sáng chế và sử dụng công nghệ an toàn."
+            },
+            {
+              "id": "g5-cn-l7-q6",
+              "type": "knowledge",
+              "prompt": "Tiêu chí cốt lõi để đánh giá sản phẩm mô hình xe điện chạy bằng pin là gì?",
+              "options": [
+                "Đủ chi tiết, đúng hình dạng, mối ghép chắc chắn và xe chạy được khi đóng công tắc",
+                "Xe nặng nhất, dán nhiều băng dính nhất và có giá thành đắt tiền nhất",
+                "Xe phải chạy bằng động cơ xăng thực tế và phát ra tiếng nổ to",
+                "Xe có kích thước to nhất lớp và chở được đồ đạc nặng"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Đủ chi tiết, đúng hình dạng, mối ghép chắc chắn và xe chạy được khi đóng công tắc\". Bài học Công nghệ 5 giúp em hiểu rõ nguyên lý, quy trình sáng chế và sử dụng công nghệ an toàn."
+            }
+          ]
+        },
+        {
+          "id": "l8-cn5",
+          "lessonNumber": 8,
+          "title": "BÀI 8: MÔ HÌNH MÁY PHÁT ĐIỆN GIÓ",
+          "questions": [
+            {
+              "id": "g5-cn-l8-q1",
+              "type": "knowledge",
+              "prompt": "Nguyên lý cơ bản để tạo ra điện năng từ gió trong máy phát điện gió là gì?",
+              "options": [
+                "Gió làm quay cánh quạt  Khi cánh quạt chuyển động, máy phát điện sẽ tạo ra điện",
+                "Máy phát điện dùng pin tích điện bên trong để làm cho cánh quạt quay tạo ra gió",
+                "Gió thổi trực tiếp vào bóng đèn LED làm đèn tự phát sáng mà không cần dây dẫn",
+                "Máy phát điện biến đổi trực tiếp nhiệt độ của gió trời thành dòng điện sử dụng"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Gió làm quay cánh quạt  Khi cánh quạt chuyển động, máy phát điện sẽ tạo ra điện\". Bài học Công nghệ 5 giúp em hiểu rõ nguyên lý, quy trình sáng chế và sử dụng công nghệ an toàn."
+            },
+            {
+              "id": "g5-cn-l8-q2",
+              "type": "knowledge",
+              "prompt": "Sự khác nhau cơ bản về chức năng giữa máy phát điện gió và quạt điện là gì?",
+              "options": [
+                "Máy phát điện gió biến đổi năng lượng gió thành điện; quạt điện dùng điện để tạo ra gió",
+                "Cả hai thiết bị này đều tiêu thụ điện năng trong gia đình để làm mát căn phòng",
+                "Quạt điện tạo ra điện năng, còn máy phát điện gió chỉ dùng để trang trí nhà cửa",
+                "Máy phát điện gió chỉ có thể hoạt động khi cắm trực tiếp vào ổ điện trong nhà"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Máy phát điện gió biến đổi năng lượng gió thành điện; quạt điện dùng điện để tạo ra gió\". Bài học Công nghệ 5 giúp em hiểu rõ nguyên lý, quy trình sáng chế và sử dụng công nghệ an toàn."
+            },
+            {
+              "id": "g5-cn-l8-q3",
+              "type": "knowledge",
+              "prompt": "Mô hình máy phát điện gió hoàn chỉnh gồm có những bộ phận chính nào?",
+              "options": [
+                "Máy phát điện cánh quạt, dây dẫn điện, đèn LED và khung giá đỡ",
+                "Tấm pin mặt trời, tay quay cơ học, động cơ chạy pin tiểu",
+                "Bánh xe chuyển động, công tắc điện, giá đỡ pin tiểu",
+                "Bàn phím máy tính, loa đài phát thanh và cổng cắm USB"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Máy phát điện cánh quạt, dây dẫn điện, đèn LED và khung giá đỡ\". Bài học Công nghệ 5 giúp em hiểu rõ nguyên lý, quy trình sáng chế và sử dụng công nghệ an toàn."
+            },
+            {
+              "id": "g5-cn-l8-q4",
+              "type": "scenario",
+              "prompt": "Khi nối dây dẫn từ máy phát điện với đèn LED, quy tắc đấu nối đúng cực là gì?",
+              "options": [
+                "Dây đỏ nối với chân dài, dây đen nối với chân ngắn của đèn LED",
+                "Dây đỏ nối với chân ngắn, dây đen nối với chân dài của đèn LED",
+                "Nối cả hai dây màu đỏ và đen vào chung một chân của đèn LED",
+                "Cắt bỏ cả hai chân của đèn LED rồi dùng băng dính dán đè lên"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án chính xác là: \"Dây đỏ nối với chân dài, dây đen nối với chân ngắn của đèn LED\". Bài học Công nghệ 5 giúp em hiểu rõ nguyên lý, quy trình sáng chế và sử dụng công nghệ an toàn."
+            },
+            {
+              "id": "g5-cn-l8-q5",
+              "type": "scenario",
+              "prompt": "Khi cho cánh quạt của mô hình máy phát điện quay, trạng thái của đèn LED thay đổi thế nào?",
+              "options": [
+                "Không có gió đèn tắt; Ít gió đèn sáng yếu; Gió mạnh đèn sáng rõ",
+                "Gió thổi càng mạnh thì bóng đèn LED lại càng bị tối đi",
+                "Đèn LED luôn sáng với một độ sáng cố định bất kể tốc độ gió",
+                "Khi có gió mạnh thổi qua, đèn LED sẽ tự động đổi màu sắc liên tục"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án chính xác là: \"Không có gió đèn tắt; Ít gió đèn sáng yếu; Gió mạnh đèn sáng rõ\". Bài học Công nghệ 5 giúp em hiểu rõ nguyên lý, quy trình sáng chế và sử dụng công nghệ an toàn."
+            },
+            {
+              "id": "g5-cn-l8-q6",
+              "type": "knowledge",
+              "prompt": "Tiêu chí cốt lõi để đánh giá sản phẩm mô hình máy phát điện gió hoàn chỉnh là gì?",
+              "options": [
+                "Đủ bộ phận, đúng hình dạng, mối ghép chắc chắn, dây gọn và đèn LED sáng theo tốc độ gió",
+                "Mô hình có kích thước to nhất lớp và sử dụng nhiều chất liệu đắt tiền",
+                "Cánh quạt quay bằng động cơ chạy pin giấu kín chứ không cần gió thổi",
+                "Đèn LED sáng liên tục ngay cả khi cánh quạt đang đứng yên không quay"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Đủ bộ phận, đúng hình dạng, mối ghép chắc chắn, dây gọn và đèn LED sáng theo tốc độ gió\". Bài học Công nghệ 5 giúp em hiểu rõ nguyên lý, quy trình sáng chế và sử dụng công nghệ an toàn."
+            }
+          ]
+        },
+        {
+          "id": "l9-cn5",
+          "lessonNumber": 9,
+          "title": "BÀI 9: MÔ HÌNH ĐIỆN MẶT TRỜI",
+          "questions": [
+            {
+              "id": "g5-cn-l9-q1",
+              "type": "knowledge",
+              "prompt": "Nguyên lý hoạt động cơ bản để tạo ra điện năng từ tấm pin mặt trời là gì?",
+              "options": [
+                "Hấp thụ ánh sáng mặt trời và chuyển đổi thành năng lượng điện",
+                "Hấp thụ sức gió thổi từ ngoài trời để quay động cơ tạo ra điện",
+                "Biến đổi trực tiếp nhiệt độ của môi trường thành năng lượng cơ học",
+                "Sử dụng hóa chất có sẵn bên trong để tự tích điện mà không cần ánh sáng"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Hấp thụ ánh sáng mặt trời và chuyển đổi thành năng lượng điện\". Bài học Công nghệ 5 giúp em hiểu rõ nguyên lý, quy trình sáng chế và sử dụng công nghệ an toàn."
+            },
+            {
+              "id": "g5-cn-l9-q2",
+              "type": "scenario",
+              "prompt": "Điểm nổi bật và lưu ý quan trọng khi sử dụng nguồn điện mặt trời là gì?",
+              "options": [
+                "Là năng lượng sạch, tái tạo; tấm pin hỏng cần được xử lý đúng cách tránh độc hại",
+                "Gây ô nhiễm không khí rất nặng nề ngay trong lúc đang hoạt động phát điện",
+                "Tuyệt đối không thể lưu trữ được điện năng dưới bất kỳ hình thức nào",
+                "Tấm pin mặt trời chỉ có thể hoạt động hiệu quả nhất khi có trời mưa lớn"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án chính xác là: \"Là năng lượng sạch, tái tạo; tấm pin hỏng cần được xử lý đúng cách tránh độc hại\". Bài học Công nghệ 5 giúp em hiểu rõ nguyên lý, quy trình sáng chế và sử dụng công nghệ an toàn."
+            },
+            {
+              "id": "g5-cn-l9-q3",
+              "type": "knowledge",
+              "prompt": "Mô hình điện dùng năng lượng mặt trời hoàn chỉnh gồm những bộ phận chính nào?",
+              "options": [
+                "Tấm pin mặt trời, dây dẫn điện, đèn LED và khung giá đỡ",
+                "Cánh quạt, máy phát điện gió và công tắc điều khiển điện",
+                "Động cơ chạy bằng xăng, bình ắc quy lưu trữ và tay quay cơ học",
+                "Màn hình cảm ứng hiển thị, ống nghe và bàn phím bấm số"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Tấm pin mặt trời, dây dẫn điện, đèn LED và khung giá đỡ\". Bài học Công nghệ 5 giúp em hiểu rõ nguyên lý, quy trình sáng chế và sử dụng công nghệ an toàn."
+            },
+            {
+              "id": "g5-cn-l9-q4",
+              "type": "scenario",
+              "prompt": "Khi nối hai đầu dây dẫn của tấm pin mặt trời với đèn LED, quy tắc đấu nối là gì?",
+              "options": [
+                "Dây đỏ nối với chân dài, dây đen nối với chân ngắn của đèn LED",
+                "Dây đỏ nối với chân ngắn, dây đen nối với chân dài của đèn LED",
+                "Nối cả hai dây điện vào chung một chân dài của đèn LED",
+                "Không cần nối dây mà chỉ dán cố định bóng đèn lên bề mặt tấm pin"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án chính xác là: \"Dây đỏ nối với chân dài, dây đen nối với chân ngắn của đèn LED\". Bài học Công nghệ 5 giúp em hiểu rõ nguyên lý, quy trình sáng chế và sử dụng công nghệ an toàn."
+            },
+            {
+              "id": "g5-cn-l9-q5",
+              "type": "scenario",
+              "prompt": "Khi chiếu các mức độ ánh sáng khác nhau vào tấm pin, đèn LED thay đổi thế nào?",
+              "options": [
+                "Không có ánh sáng: đèn tắt; Ít ánh sáng: sáng yếu; Nhiều ánh sáng: sáng rõ",
+                "Ánh sáng chiếu vào càng mạnh thì bóng đèn LED lại càng bị tối đi",
+                "Đèn LED chỉ phát sáng khi để trong phòng tối hoàn toàn không có ánh sáng",
+                "Đèn LED luôn giữ nguyên một độ sáng không thay đổi trong mọi điều kiện"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án chính xác là: \"Không có ánh sáng: đèn tắt; Ít ánh sáng: sáng yếu; Nhiều ánh sáng: sáng rõ\". Bài học Công nghệ 5 giúp em hiểu rõ nguyên lý, quy trình sáng chế và sử dụng công nghệ an toàn."
+            },
+            {
+              "id": "g5-cn-l9-q6",
+              "type": "knowledge",
+              "prompt": "Tiêu chí đánh giá chất lượng sản phẩm mô hình điện mặt trời hoàn thiện là gì?",
+              "options": [
+                "Đủ bộ phận, đúng hình dạng, mối ghép chắc chắn, dây gọn và đèn LED sáng theo ánh sáng",
+                "Mô hình sử dụng nhiều keo dán nhất và tốn nhiều chi phí nhất",
+                "Đèn LED tự sáng liên tục mà hoàn toàn không cần tấm pin mặt trời chiếu sáng",
+                "Khung giá đỡ sản phẩm phải làm bằng sắt nặng nhất so với các bạn trong lớp"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Đủ bộ phận, đúng hình dạng, mối ghép chắc chắn, dây gọn và đèn LED sáng theo ánh sáng\". Bài học Công nghệ 5 giúp em hiểu rõ nguyên lý, quy trình sáng chế và sử dụng công nghệ an toàn."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

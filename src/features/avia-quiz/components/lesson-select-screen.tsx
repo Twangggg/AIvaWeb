@@ -5,6 +5,7 @@ import { QuizBook, QuizChapter, QuizLesson } from "../types";
 
 interface LessonSelectScreenProps {
   book: QuizBook;
+  initialChapterId?: string;
   soundEnabled?: boolean;
   onToggleSound?: () => void;
   onSelectLesson: (chapter: QuizChapter, lesson: QuizLesson) => void;
@@ -14,15 +15,19 @@ interface LessonSelectScreenProps {
 
 export function LessonSelectScreen({
   book,
+  initialChapterId,
   soundEnabled,
   onToggleSound,
   onSelectLesson,
   onSelectChapterReview,
   onBack,
 }: LessonSelectScreenProps) {
-  const [activeChapterId, setActiveChapterId] = useState<string>(
-    book.chapters[0]?.id || ""
-  );
+  const [activeChapterId, setActiveChapterId] = useState<string>(() => {
+    if (initialChapterId && book.chapters.some((c) => c.id === initialChapterId)) {
+      return initialChapterId;
+    }
+    return book.chapters[0]?.id || "";
+  });
 
   const activeChapter =
     book.chapters.find((c) => c.id === activeChapterId) || book.chapters[0];
@@ -32,7 +37,7 @@ export function LessonSelectScreen({
   const reviewCount = Math.max(1, Math.round((totalQuestionsInChapter * 2) / 3));
 
   return (
-    <div className="relative mx-auto w-full max-w-3xl px-3 py-6 sm:px-6">
+    <div className="relative mx-auto w-full max-w-2xl xl:max-w-3xl px-3 py-6 sm:px-6">
       {/* Top Bar: Back Button (Left) | Title & Subtitle (Center) | Sound Toggle (Right) */}
       <div className="mb-6 flex items-center justify-between gap-3 sm:gap-4">
         {/* Left: Back Button */}

@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import { motion } from "motion/react";
 import { QuizBook, GradeLevel } from "../types";
@@ -8,6 +9,7 @@ import { GRADE_METAS } from "../mock-data";
 interface BookSelectScreenProps {
   grade: GradeLevel;
   books: QuizBook[];
+  isLoadingBook?: boolean;
   soundEnabled?: boolean;
   onToggleSound?: () => void;
   onSelectBook: (book: QuizBook) => void;
@@ -17,15 +19,17 @@ interface BookSelectScreenProps {
 export function BookSelectScreen({
   grade,
   books,
+  isLoadingBook,
   soundEnabled,
   onToggleSound,
   onSelectBook,
   onBack,
 }: BookSelectScreenProps) {
+  const [loadingId, setLoadingId] = useState<string | null>(null);
   const gradeMeta = GRADE_METAS.find((g) => g.grade === grade);
 
   return (
-    <div className="relative mx-auto w-full max-w-4xl px-3 py-6 sm:px-6">
+    <div className="relative mx-auto w-full max-w-3xl xl:max-w-4xl px-3 py-6 sm:px-6">
       {/* Top Bar: Back Button (Left) | Title & Subtitle (Center) | Sound Toggle (Right) */}
       <div className="mb-8 flex items-center justify-between gap-3 sm:gap-4">
         {/* Left: Back Button */}
@@ -46,7 +50,7 @@ export function BookSelectScreen({
             Chọn môn học
           </h2>
           <p className="mt-0.5 text-[11px] sm:text-xs text-slate-500 dark:text-slate-400 truncate">
-            Lựa chọn môn học để bắt đầu luyện tập câu hỏi trắc nghiệm
+            Chọn môn học để bắt đầu luyện tập
           </p>
         </div>
 
@@ -72,10 +76,10 @@ export function BookSelectScreen({
         <div className="rounded-3xl border-2 border-dashed border-slate-300 bg-white/70 p-8 text-center dark:border-slate-700 dark:bg-slate-900/70">
           <span className="text-4xl">📖</span>
           <p className="mt-3 text-base font-bold text-slate-800 dark:text-slate-200">
-            Chưa có danh sách sách/môn học cho {gradeMeta?.title}
+            Chưa có danh sách môn học cho {gradeMeta?.title}
           </p>
           <p className="mt-1 text-xs text-slate-500 dark:text-slate-400">
-            (GDD hiện tại chỉ có ví dụ minh họa môn học cho Lớp 2: Âm nhạc lớp 2, Đạo đức lớp 2. Các khối lớp khác đang bỏ trống để chờ dữ liệu chính thức).
+            Dữ liệu môn học đang được cập nhật.
           </p>
         </div>
       ) : (
@@ -89,7 +93,10 @@ export function BookSelectScreen({
               transition={{ delay: idx * 0.1 }}
               whileHover={{ y: -8, scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
-              onClick={() => onSelectBook(book)}
+              onClick={() => {
+                setLoadingId(book.id);
+                onSelectBook(book);
+              }}
               className="group relative flex flex-col overflow-hidden rounded-3xl border-2 border-emerald-600/30 bg-gradient-to-br from-emerald-50 via-white to-[#B5EAD7]/30 p-6 text-left shadow-lg transition-all hover:border-emerald-500 hover:shadow-2xl dark:from-slate-900 dark:via-slate-900 dark:to-emerald-950/60"
             >
               {/* Lotus & Water Lily decorative SVG watermark */}
@@ -138,8 +145,15 @@ export function BookSelectScreen({
               {/* Chapters & Lessons count */}
               <div className="mt-auto flex items-center justify-between text-xs font-bold text-slate-600 dark:text-slate-300">
                 <span>{book.chapters.length} Chương học</span>
-                <span className="text-emerald-700 dark:text-emerald-400 group-hover:underline">
-                  Xem bài học ➔
+                <span className="text-emerald-700 dark:text-emerald-400 group-hover:underline flex items-center gap-1">
+                  {loadingId === book.id && isLoadingBook ? (
+                    <>
+                      <span className="inline-block h-3 w-3 animate-spin rounded-full border-2 border-emerald-600 border-t-transparent" />
+                      <span>Đang tải...</span>
+                    </>
+                  ) : (
+                    <span>Xem bài học ➔</span>
+                  )}
                 </span>
               </div>
             </motion.button>

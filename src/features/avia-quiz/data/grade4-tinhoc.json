@@ -1,0 +1,1599 @@
+{
+  "id": "g4-tinhoc",
+  "grade": 4,
+  "subjectKey": "tinhoc",
+  "title": "Tin học lớp 4",
+  "color": "#2563EB",
+  "coverImage": "/mascots/bia-sach-mon-hoc.png",
+  "chapters": [
+    {
+      "id": "c1-tinhoc4",
+      "chapterNumber": 1,
+      "title": "Chủ đề 1: Máy tính và em",
+      "lessons": [
+        {
+          "id": "l1-th4",
+          "lessonNumber": 1,
+          "title": "BÀI 1: PHẦN CỨNG VÀ PHẦN MỀM MÁY TÍNH",
+          "questions": [
+            {
+              "id": "g4-th-ll1-th4-q1",
+              "type": "knowledge",
+              "prompt": "Thiết bị nào dưới đây là ví dụ về phần cứng của máy tính?",
+              "options": [
+                "Màn hình, bàn phím, chuột và thân máy",
+                "Các trò chơi điện tử trên máy tính",
+                "Phần mềm dùng để trình chiếu bài học",
+                "Chương trình luyện tập gõ bàn phím"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Màn hình, bàn phím, chuột và thân máy\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll1-th4-q2",
+              "type": "scenario",
+              "prompt": "Phát biểu nào sau đây là SAI khi nói về phần cứng và phần mềm?",
+              "options": [
+                "Các trò chơi trên máy tính là phần mềm",
+                "Thân máy của máy tính là phần cứng",
+                "Chương trình luyện tập gõ bàn phím là phần cứng",
+                "Ứng dụng xem video trên máy tính là phần mềm"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Thao tác",
+              "explanation": "Chương trình luyện tập gõ bàn phím là một phần mềm (software), không phải phần cứng (hardware). Vì vậy phát biểu này là SAI."
+            },
+            {
+              "id": "g4-th-ll1-th4-q3",
+              "type": "knowledge",
+              "prompt": "Để máy tính hoặc điện thoại hoạt động được, cần đáp ứng điều kiện gì?",
+              "options": [
+                "Chỉ cần bộ phận phần cứng hoạt động",
+                "Chỉ cần bộ phận phần mềm tự làm việc",
+                "Cần phải có cả phần cứng và phần mềm",
+                "Hoàn toàn không cần phần cứng lẫn phần mềm"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Chỉ cần bộ phận phần cứng hoạt động\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll1-th4-q4",
+              "type": "knowledge",
+              "prompt": "Phần mềm máy tính được lưu trữ ở đâu và có vai trò gì?",
+              "options": [
+                "Lưu trữ trong phần cứng để điều khiển phần cứng",
+                "Lưu trữ bên ngoài máy tính chỉ để trang trí",
+                "Không lưu trữ ở đâu và biến mất khi tắt máy",
+                "Lưu trữ trong phần cứng để làm máy nặng hơn"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Lưu trữ trong phần cứng để điều khiển phần cứng\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll1-th4-q5",
+              "type": "scenario",
+              "prompt": "Thao tác tắt máy tính nào dưới đây là ĐÚNG CÁCH và an toàn?",
+              "options": [
+                "Rút trực tiếp phích cắm điện ra khỏi ổ cắm",
+                "Nhấn giữ nút công tắc nguồn trên thân máy",
+                "Nháy chuột vào Start, chọn Power rồi Shut down",
+                "Dùng khăn ướt lau lên bàn phím rồi rút dây điện"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Rút trực tiếp phích cắm điện ra khỏi ổ cắm\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll1-th4-q6",
+              "type": "knowledge",
+              "prompt": "Hành vi nào giúp bảo vệ phần cứng và phần mềm máy tính an toàn?",
+              "options": [
+                "Đặt máy tính ở nơi thoáng mát, khô ráo, sạch sẽ",
+                "Vừa sử dụng máy tính vừa uống nước cạnh bàn phím",
+                "Để cặp sách và đồ vật nặng đè lên bàn phím",
+                "Tự ý cài đặt tất cả các phần mềm không rõ nguồn gốc"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Đặt máy tính ở nơi thoáng mát, khô ráo, sạch sẽ\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            }
+          ]
+        },
+        {
+          "id": "l2-th4",
+          "lessonNumber": 2,
+          "title": "BÀI 2: GÕ BÀN PHÍM ĐÚNG CÁCH",
+          "questions": [
+            {
+              "id": "g4-th-ll2-th4-q1",
+              "type": "knowledge",
+              "prompt": "Gõ bàn phím bằng 10 ngón tay đúng kỹ thuật mang lại lợi ích gì?",
+              "options": [
+                "Gõ nhanh, chính xác, tiết kiệm sức và tránh mỏi mắt, mỏi cổ",
+                "Giúp cho chiếc bàn phím luôn mới và không bị bám bụi bẩn",
+                "Làm cho máy tính chạy nhanh hơn và tăng dung lượng bộ nhớ",
+                "Giúp màn hình máy tính hiển thị màu sắc đẹp và rõ nét hơn"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Gõ nhanh, chính xác, tiết kiệm sức và tránh mỏi mắt, mỏi cổ\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll2-th4-q2",
+              "type": "scenario",
+              "prompt": "Nếu chỉ sử dụng hai ngón tay trỏ để gõ bàn phím, em sẽ gặp hạn chế gì?",
+              "options": [
+                "Tốc độ gõ chậm, mau mỏi tay và mỏi mắt vì phải nhìn bàn phím",
+                "Bàn phím dễ bị hư hỏng và liệt phím ngay lập tức",
+                "Máy tính sẽ tự động tắt nguồn hoàn toàn không hoạt động",
+                "Không thể gõ được bất kỳ chữ cái tiếng Việt nào"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Tốc độ gõ chậm, mau mỏi tay và mỏi mắt vì phải nhìn bàn phím\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll2-th4-q3",
+              "type": "scenario",
+              "prompt": "Sau khi gõ xong một phím bất kỳ, ngón tay cần di chuyển về đâu?",
+              "options": [
+                "Hàng phím cơ sở (vị trí xuất phát)",
+                "Hàng phím số trên cùng",
+                "Hàng phím phía dưới",
+                "Phím cách (Spacebar)"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Hàng phím cơ sở (vị trí xuất phát)\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll2-th4-q4",
+              "type": "scenario",
+              "prompt": "Thao tác đúng kỹ thuật khi cần gõ các phím trên hàng phím số là gì?",
+              "options": [
+                "Vươn ngón tay phụ trách lên gõ phím số rồi đưa về vị trí xuất phát",
+                "Chuyển toàn bộ hai bàn tay lên đặt cố định trên hàng phím số",
+                "Dùng duy nhất ngón cái tay phải để vươn lên gõ tất cả các phím",
+                "Giữ nguyên ngón tay trên hàng phím số sau khi thực hiện gõ xong"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Vươn ngón tay phụ trách lên gõ phím số rồi đưa về vị trí xuất phát\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll2-th4-q5",
+              "type": "knowledge",
+              "prompt": "Các phím số 4, 5 và 6, 7 trên hàng phím số do ngón tay nào phụ trách?",
+              "options": [
+                "Ngón trỏ tay trái (gõ 4, 5) và ngón trỏ tay phải (gõ 6, 7)",
+                "Ngón giữa tay trái (gõ 4, 5) và ngón giữa tay phải (gõ 6, 7)",
+                "Ngón áp út tay trái (gõ 4, 5) và ngón áp út tay phải (gõ 6, 7)",
+                "Ngón út tay trái (gõ 4, 5) và ngón út tay phải (gõ 6, 7)"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Ngón trỏ tay trái (gõ 4, 5) và ngón trỏ tay phải (gõ 6, 7)\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll2-th4-q6",
+              "type": "scenario",
+              "prompt": "Quy trình đúng theo thứ tự các bước khi gõ phím trên hàng phím số là gì?",
+              "options": [
+                "Đặt tay vị trí xuất phát  Vươn ngón gõ phím  Đưa ngón về vị trí xuất phát",
+                "Vươn ngón tay gõ phím  Đặt ngón tay ở hàng phím số  Đưa ngón về hàng phím dưới",
+                "Đặt các ngón tay ở hàng phím số  Thực hiện gõ phím  Giữ nguyên vị trí tay",
+                "Đưa ngón tay về vị trí xuất phát  Vươn ngón gõ phím  Thực hiện tắt máy tính"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Đặt tay vị trí xuất phát  Vươn ngón gõ phím  Đưa ngón về vị trí xuất phát\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c2-tinhoc4",
+      "chapterNumber": 2,
+      "title": "Chủ đề 2: Mạng máy tính và Internet",
+      "lessons": [
+        {
+          "id": "l3-th4",
+          "lessonNumber": 3,
+          "title": "BÀI 3: THÔNG TIN TRÊN TRANG WEB",
+          "questions": [
+            {
+              "id": "g4-th-ll3-th4-q1",
+              "type": "knowledge",
+              "prompt": "Thông tin trên một trang web thường được thể hiện ở những dạng nào?",
+              "options": [
+                "Văn bản, hình ảnh, âm thanh, video và siêu liên kết",
+                "Chỉ có duy nhất thông tin dạng văn bản và hình ảnh tĩnh",
+                "Chỉ bao gồm các đoạn phim video ngắn phát trên mạng",
+                "Chỉ chứa các âm thanh phát ra trực tiếp từ máy tính"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Văn bản, hình ảnh, âm thanh, video và siêu liên kết\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll3-th4-q2",
+              "type": "scenario",
+              "prompt": "Khi con trỏ chuột chuyển thành hình bàn tay, vị trí đó chứa thành phần gì?",
+              "options": [
+                "Chứa siêu liên kết; trang web khi đó gọi là siêu văn bản",
+                "Chứa tệp tin virus độc hại gây hư hỏng cho máy tính",
+                "Chứa phần mềm dùng để luyện tập gõ bàn phím 10 ngón",
+                "Chứa nút công tắc điều khiển tắt nguồn của máy tính"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Chứa siêu liên kết; trang web khi đó gọi là siêu văn bản\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll3-th4-q3",
+              "type": "knowledge",
+              "prompt": "Trẻ em cố tình xem các trang web không phù hợp sẽ gặp phải tác hại gì?",
+              "options": [
+                "Suy nghĩ tiêu cực, dễ bị lừa đảo, dụ dỗ và lãng phí thời gian",
+                "Làm cho màn hình của máy tính bị hư hỏng ngay lập tức",
+                "Giúp học giỏi môn Tin học và tăng tốc độ gõ bàn phím",
+                "Làm tăng thêm dung lượng lưu trữ của ổ đĩa cứng máy tính"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Suy nghĩ tiêu cực, dễ bị lừa đảo, dụ dỗ và lãng phí thời gian\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll3-th4-q4",
+              "type": "scenario",
+              "prompt": "Khi vô tình nhìn thấy trang web có nội dung xấu, em nên xử lý thế nào?",
+              "options": [
+                "Tắt ngay trang web đó và báo cho người lớn biết để hỗ trợ",
+                "Cố tình bấm vào xem tiếp và làm theo hướng dẫn trên web",
+                "Chia sẻ trang web đó cho tất cả các bạn trong lớp cùng xem",
+                "Nhắn tin trò chuyện trực tiếp với những người lạ trên web"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Tắt ngay trang web đó và báo cho người lớn biết để hỗ trợ\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll3-th4-q5",
+              "type": "knowledge",
+              "prompt": "Biểu tượng nào của con trỏ chuột giúp em nhận biết vị trí có siêu liên kết?",
+              "options": [
+                "Biểu tượng con trỏ chuột chuyển thành hình bàn tay",
+                "Biểu tượng hình dấu cộng lớn xuất hiện trên màn hình",
+                "Biểu tượng con trỏ dùng để soạn thảo hình chữ I",
+                "Biểu tượng hình chiếc đồng hồ cát đang xoay vòng"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Biểu tượng con trỏ chuột chuyển thành hình bàn tay\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll3-th4-q6",
+              "type": "scenario",
+              "prompt": "Tại sao học sinh cần có sự hướng dẫn của người lớn khi dùng Internet?",
+              "options": [
+                "Để tránh thông tin độc hại, bị lừa đảo và chọn trang web phù hợp",
+                "Vì học sinh hoàn toàn không biết bật công tắc màn hình",
+                "Để người lớn ngồi gõ bàn phím thay cho toàn bộ bài tập",
+                "Để máy tính không bị gián đoạn hay mất kết nối Wifi"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Để tránh thông tin độc hại, bị lừa đảo và chọn trang web phù hợp\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c3-tinhoc4",
+      "chapterNumber": 3,
+      "title": "Chủ đề 3: Tổ chức lưu trữ, tìm kiếm và trao đổi thông tin",
+      "lessons": [
+        {
+          "id": "l4-th4",
+          "lessonNumber": 4,
+          "title": "BÀI 4: TÌM KIẾM THÔNG TIN TRÊN INTERNET",
+          "questions": [
+            {
+              "id": "g4-th-ll4-th4-q1",
+              "type": "knowledge",
+              "prompt": "Trong quá trình tìm kiếm thông tin trên Internet, từ khóa được hiểu là gì?",
+              "options": [
+                "Là từ hoặc cụm từ thể hiện nội dung thông tin muốn tìm kiếm",
+                "Là mật khẩu dùng đăng nhập vào máy tính hoặc tài khoản",
+                "Là dãy số địa chỉ IP của trang web cần truy cập mở ra",
+                "Là tên gọi của phần mềm hỗ trợ gõ tiếng Việt Unikey"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Là từ hoặc cụm từ thể hiện nội dung thông tin muốn tìm kiếm\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll4-th4-q2",
+              "type": "knowledge",
+              "prompt": "Nhóm nào dưới đây gồm toàn địa chỉ của các máy tìm kiếm phổ biến?",
+              "options": [
+                "Các địa chỉ trang web google.com, bing.com, ask.com",
+                "Các địa chỉ trang web powerpoint.com, word.com, excel.com",
+                "Các địa chỉ ứng dụng youtube.com, facebook.com, zalo.me",
+                "Các địa chỉ tải phần mềm unikey.vn, vietkey.com, evkey.org"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Các địa chỉ trang web google.com, bing.com, ask.com\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll4-th4-q3",
+              "type": "scenario",
+              "prompt": "Trình tự các bước tìm kiếm thông tin trên Internet theo từ khóa là gì?",
+              "options": [
+                "Xác định từ khóa  Mở máy tìm kiếm  Gõ từ khóa  Chọn siêu liên kết",
+                "Gõ địa chỉ trang web  Chọn siêu liên kết  Xác định từ khóa  Tắt máy",
+                "Chọn siêu liên kết  Xác định từ khóa  Gõ địa chỉ máy tìm kiếm",
+                "Xác định từ khóa  Chọn siêu liên kết  Gõ từ khóa vào ô tìm kiếm"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Xác định từ khóa  Mở máy tìm kiếm  Gõ từ khóa  Chọn siêu liên kết\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll4-th4-q4",
+              "type": "knowledge",
+              "prompt": "Để tìm thông tin về \"Bảo tàng Dân tộc học Việt Nam\", từ khóa nào chính xác nhất?",
+              "options": [
+                "Bảo tàng Dân tộc học Việt Nam",
+                "Bảo tàng",
+                "Bảo tàng Việt Nam",
+                "Các dân tộc ở Việt Nam"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Bảo tàng Dân tộc học Việt Nam\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll4-th4-q5",
+              "type": "knowledge",
+              "prompt": "Từ khóa nào ngắn gọn và thể hiện đủ nội dung chủ đề \"Vai trò của không khí\"?",
+              "options": [
+                "Vai trò của không khí đối với con người",
+                "Con người có cần thở không khí hằng ngày hay không?",
+                "Không khí",
+                "Con người"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Vai trò của không khí đối với con người\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll4-th4-q6",
+              "type": "scenario",
+              "prompt": "Sau khi nhập từ khóa và nhấn Enter, trang web hiển thị kết quả trả về là gì?",
+              "options": [
+                "Danh sách siêu liên kết dẫn đến các trang web chứa từ khóa",
+                "Một tệp văn bản Word tự động tải về máy tính cá nhân",
+                "Màn hình tự động chuyển sang giao diện trình chiếu",
+                "Máy tính bị ngắt kết nối mạng Internet ngay lập tức"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Danh sách siêu liên kết dẫn đến các trang web chứa từ khóa\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            }
+          ]
+        },
+        {
+          "id": "l5-th4",
+          "lessonNumber": 5,
+          "title": "BÀI 5: THAO TÁC VỚI TỆP VÀ THƯ MỤC",
+          "questions": [
+            {
+              "id": "g4-th-ll5-th4-q1",
+              "type": "scenario",
+              "prompt": "Điểm khác biệt cơ bản giữa thao tác Di chuyển (Move) và Sao chép (Copy) là gì?",
+              "options": [
+                "Di chuyển: tệp chỉ có ở vị trí mới; Sao chép: tệp có ở cả hai vị trí",
+                "Di chuyển: làm nhân đôi tệp; Sao chép: làm xóa vĩnh viễn tệp ở vị trí cũ",
+                "Cả hai thao tác đều làm xóa hoàn toàn dữ liệu tệp khỏi máy tính",
+                "Cả hai thao tác đều hoàn toàn không làm thay đổi vị trí của tệp tin"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Di chuyển: tệp chỉ có ở vị trí mới; Sao chép: tệp có ở cả hai vị trí\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll5-th4-q2",
+              "type": "scenario",
+              "prompt": "Khi di chuyển một thư mục mẹ sang vị trí mới, các tệp bên trong sẽ ra sao?",
+              "options": [
+                "Tất cả các tệp và thư mục con bên trong cũng sẽ di chuyển theo",
+                "Tất cả các tệp và thư mục con bên trong sẽ bị xóa mất hoàn toàn",
+                "Các tệp con vẫn ở lại thư mục cũ còn phần thư mục mẹ di chuyển đi",
+                "Máy tính sẽ lập tức báo lỗi và không cho phép thực hiện di chuyển"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Tất cả các tệp và thư mục con bên trong cũng sẽ di chuyển theo\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll5-th4-q3",
+              "type": "scenario",
+              "prompt": "Khi thực hành trên máy tính dùng chung, em nên tuân thủ nguyên tắc nào?",
+              "options": [
+                "Chỉ thao tác đối với các tệp và thư mục do chính mình tạo ra",
+                "Tự ý thực hiện xóa hoặc đổi tên các tệp hệ thống trong ổ đĩa C",
+                "Thay đổi vị trí các thư mục bài tập cá nhân của các bạn khác",
+                "Sao chép một tệp thành hàng trăm bản ra tất cả các thư mục"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Chỉ thao tác đối với các tệp và thư mục do chính mình tạo ra\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll5-th4-q4",
+              "type": "knowledge",
+              "prompt": "Tác hại của việc xóa, đổi tên hoặc di chuyển nhầm các tệp hệ thống là gì?",
+              "options": [
+                "Mất dữ liệu, gây lỗi chương trình và làm đảo lộn việc lưu trữ",
+                "Làm cho nguồn điện và phích cắm máy tính bị chập cháy ngay lập tức",
+                "Giúp tăng tốc độ xử lý dữ liệu của máy tính lên gấp hai lần",
+                "Giúp bộ nhớ của máy tính rộng hơn mà không gây ảnh hưởng gì"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Mất dữ liệu, gây lỗi chương trình và làm đảo lộn việc lưu trữ\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll5-th4-q5",
+              "type": "scenario",
+              "prompt": "Bộ lệnh nào được sử dụng để thực hiện thao tác sao chép một tệp tin?",
+              "options": [
+                "Chọn lệnh Copy tại tệp cũ, chọn thư mục mới rồi chọn lệnh Paste",
+                "Chọn lệnh Delete tại tệp cũ rồi chọn lệnh Rename ở vị trí mới",
+                "Chọn lệnh Move to tại tệp cũ rồi chọn lệnh Delete ở vị trí mới",
+                "Chọn lệnh Cut tại tệp cũ rồi chọn lệnh Delete ở vị trí mới"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Chọn lệnh Copy tại tệp cũ, chọn thư mục mới rồi chọn lệnh Paste\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll5-th4-q6",
+              "type": "knowledge",
+              "prompt": "Để đổi tên một tệp tin, em chọn tệp đó rồi sử dụng lệnh nào?",
+              "options": [
+                "Chọn lệnh Rename, gõ tên mới rồi nhấn phím Enter trên bàn phím",
+                "Chọn lệnh Copy trên thanh công cụ",
+                "Chọn lệnh Delete trên thanh công cụ",
+                "Chọn lệnh Move to trên thanh công cụ"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Chọn lệnh Rename, gõ tên mới rồi nhấn phím Enter trên bàn phím\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c4-tinhoc4",
+      "chapterNumber": 4,
+      "title": "Chủ đề 4: Đạo đức, pháp luật và văn hoá trong môi trường số",
+      "lessons": [
+        {
+          "id": "l6-th4",
+          "lessonNumber": 6,
+          "title": "BÀI 6: SỬ DỤNG PHẦN MỀM KHI ĐƯỢC PHÉP",
+          "questions": [
+            {
+              "id": "g4-th-ll6-th4-q1",
+              "type": "knowledge",
+              "prompt": "Nhóm nào dưới đây gồm toàn các ví dụ về phần mềm miễn phí sử dụng?",
+              "options": [
+                "Unikey, Kiran's Typing Tutor, Scratch 3, Microsoft Edge",
+                "Các ứng dụng PowerPoint, Word, Excel trong bộ Microsoft Office",
+                "Phần mềm từ điển mtd Lạc Việt và ứng dụng Fast Math for Kids",
+                "Các trò chơi điện tử phải tính phí mua trên cửa hàng ứng dụng"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Unikey, Kiran's Typing Tutor, Scratch 3, Microsoft Edge\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll6-th4-q2",
+              "type": "scenario",
+              "prompt": "Muốn sử dụng hợp pháp các phần mềm không miễn phí, ta cần làm gì?",
+              "options": [
+                "Trả phí mua bản quyền cho tác giả hoặc nhà sản xuất phần mềm",
+                "Tự ý tìm và tải các bản bẻ khóa trôi nổi trên mạng về sử dụng",
+                "Tự ý cài đặt trực tiếp vào máy tính mà không cần hỏi ý kiến",
+                "Chỉ cần chia sẻ rộng rãi cho nhiều người cùng dùng là miễn phí"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Trả phí mua bản quyền cho tác giả hoặc nhà sản xuất phần mềm\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll6-th4-q3",
+              "type": "knowledge",
+              "prompt": "Khái niệm \"Phần mềm có bản quyền\" được hiểu chính xác là gì?",
+              "options": [
+                "Phần mềm được tác giả cho phép người khác dùng hợp pháp",
+                "Tất cả các loại phần mềm có sẵn trên mạng internet",
+                "Những phần mềm do người sử dụng tự nghĩ ra trong đầu",
+                "Những ứng dụng bị lỗi hệ thống không thể kích hoạt được"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Phần mềm được tác giả cho phép người khác dùng hợp pháp\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll6-th4-q4",
+              "type": "knowledge",
+              "prompt": "Hành vi cố tình dùng trái phép phần mềm có bản quyền gây ra tác hại gì?",
+              "options": [
+                "Vi phạm pháp luật và nguy cơ làm máy tính bị nhiễm virus, mất dữ liệu",
+                "Làm cho bộ phận bàn phím của máy tính bị hư hỏng ngay lập tức",
+                "Tăng tốc độ đường truyền kết nối mạng internet lên nhanh hơn",
+                "Giúp cho máy tính tự động cập nhật thêm các tính năng mới"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Vi phạm pháp luật và nguy cơ làm máy tính bị nhiễm virus, mất dữ liệu\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll6-th4-q5",
+              "type": "knowledge",
+              "prompt": "Việc sử dụng phần mềm có bản quyền mang lại những lợi ích quan trọng nào?",
+              "options": [
+                "Giữ an toàn dữ liệu, tránh vi phạm luật và tôn trọng công sức tác giả",
+                "Giúp cho máy tính không bao giờ bị mất nguồn điện khi làm việc",
+                "Được xem nhiều đoạn video quảng cáo xuất hiện tự động trên màn hình",
+                "Giúp người dùng hoàn toàn không cần phải cài phần mềm diệt virus"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Giữ an toàn dữ liệu, tránh vi phạm luật và tôn trọng công sức tác giả\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll6-th4-q6",
+              "type": "scenario",
+              "prompt": "Em nên có khuyên bảo nào khi thấy người khác dùng phần mềm bẻ khóa?",
+              "options": [
+                "Khuyên mua bản quyền hoặc tìm phần mềm miễn phí tương đương",
+                "Ủng hộ việc dùng phần mềm bẻ khóa và nhờ cài đặt giúp mình",
+                "Tải các tệp phần mềm bẻ khóa đó để chia sẻ lên mạng xã hội",
+                "Hoàn toàn không quan tâm vì cho rằng việc đó không gây tác hại"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Khuyên mua bản quyền hoặc tìm phần mềm miễn phí tương đương\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c5-tinhoc4",
+      "chapterNumber": 5,
+      "title": "Chủ đề 5: Ứng dụng tin học",
+      "lessons": [
+        {
+          "id": "l7-th4",
+          "lessonNumber": 7,
+          "title": "BÀI 7: TẠO BÀI TRÌNH CHIẾU",
+          "questions": [
+            {
+              "id": "g4-th-ll7-th4-q1",
+              "type": "knowledge",
+              "prompt": "Để gõ được văn bản tiếng Việt có dấu, máy tính cần cài đặt phần mềm nào?",
+              "options": [
+                "Phần mềm hỗ trợ gõ Unikey, Vietkey hoặc EVkey",
+                "Các ứng dụng trình chiếu PowerPoint, Word, Excel",
+                "Phần mềm Windows Media Player hoặc phần mềm Scratch",
+                "Trình duyệt web Google Chrome hoặc Microsoft Edge"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Phần mềm hỗ trợ gõ Unikey, Vietkey hoặc EVkey\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll7-th4-q2",
+              "type": "knowledge",
+              "prompt": "Theo kiểu gõ Telex, để gõ từ \"quê hương\", em gõ theo thứ tự nào?",
+              "options": [
+                "Gõ các phím theo thứ tự: quee huwowng",
+                "Gõ các phím theo thứ tự: quee huong",
+                "Gõ các phím theo thứ tự: que huwowng",
+                "Gõ các phím theo thứ tự: que6 hu7o7ng"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Gõ các phím theo thứ tự: quee huwowng\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll7-th4-q3",
+              "type": "scenario",
+              "prompt": "Để gõ chữ hoa khi soạn thảo văn bản, em dùng phím kết hợp nào?",
+              "options": [
+                "Nhấn giữ phím Shift đồng thời nhấn phím chữ",
+                "Nhấn phím Enter đồng thời nhấn phím chữ",
+                "Nhấn giữ phím phím cách (Spacebar)",
+                "Nhấn giữ phím Ctrl hoặc phím Alt"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Nhấn giữ phím Shift đồng thời nhấn phím chữ\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll7-th4-q4",
+              "type": "knowledge",
+              "prompt": "Trang đầu tiên của một bài trình chiếu thường trình bày thông tin gì?",
+              "options": [
+                "Tiêu đề bài trình chiếu, họ tên người thực hiện và tên lớp",
+                "Danh sách các địa danh và toàn bộ nội dung chi tiết",
+                "Chỉ gồm một hình ảnh lớn dùng để minh họa phong cảnh",
+                "Lời cảm ơn và lời mời mọi người đến tham quan"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Tiêu đề bài trình chiếu, họ tên người thực hiện và tên lớp\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll7-th4-q5",
+              "type": "scenario",
+              "prompt": "Trình tự các bước lưu tệp trình chiếu vào thư mục máy tính là gì?",
+              "options": [
+                "Chọn thư mục lưu trữ  Gõ tên tệp  Chọn nút Save",
+                "Gõ tên tệp  Tắt màn hình máy tính  Rút phích cắm",
+                "Chọn nút Cancel  Chọn lệnh Delete  Nhấn phím Enter",
+                "Mở trình duyệt web  Gõ từ khóa tìm kiếm  Tắt máy"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Chọn thư mục lưu trữ  Gõ tên tệp  Chọn nút Save\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll7-th4-q6",
+              "type": "knowledge",
+              "prompt": "Để thoát khỏi phần mềm trình chiếu PowerPoint, em nháy chuột vào nút nào?",
+              "options": [
+                "Biểu tượng nút X ở góc trên bên phải màn hình",
+                "Biểu tượng hình chiếc đĩa mềm (lệnh Save)",
+                "Biểu tượng hình chiếc ly (lệnh Slide Show)",
+                "Biểu tượng hình quả địa cầu kết nối mạng"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Biểu tượng nút X ở góc trên bên phải màn hình\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            }
+          ]
+        },
+        {
+          "id": "l8-th4",
+          "lessonNumber": 8,
+          "title": "BÀI 8: ĐỊNH DẠNG VĂN BẢN TRÊN TRANG CHIẾU",
+          "questions": [
+            {
+              "id": "g4-th-ll8-th4-q1",
+              "type": "knowledge",
+              "prompt": "Nhóm lệnh nào trên dải lệnh Home dùng để định dạng phông chữ, cỡ chữ, kiểu chữ và màu chữ?",
+              "options": [
+                "Nhóm lệnh Font",
+                "Nhóm lệnh Paragraph",
+                "Nhóm lệnh Slides",
+                "Nhóm lệnh Clipboard"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Nhóm lệnh Font\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll8-th4-q2",
+              "type": "scenario",
+              "prompt": "Trước khi chọn các nút lệnh định dạng văn bản, thao tác bắt buộc em cần làm là gì?",
+              "options": [
+                "Chọn (bôi đen) phần văn bản cần định dạng",
+                "Nhấn nút Shut down để khởi động lại máy tính",
+                "Nháy chuột vào nút công tắc nguồn trên thân máy",
+                "Thoát hoàn toàn khỏi phần mềm PowerPoint"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Chọn (bôi đen) phần văn bản cần định dạng\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll8-th4-q3",
+              "type": "knowledge",
+              "prompt": "Muốn tạo danh sách gạch đầu dòng, em dùng nút lệnh nào trong nhóm lệnh Paragraph?",
+              "options": [
+                "Nút lệnh Bullets (tạo danh sách gạch đầu dòng)",
+                "Nút lệnh B (định dạng kiểu chữ in đậm)",
+                "Nút lệnh I (định dạng kiểu chữ in nghiêng)",
+                "Nút lệnh U (định dạng kiểu chữ gạch chân)"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Nút lệnh Bullets (tạo danh sách gạch đầu dòng)\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll8-th4-q4",
+              "type": "knowledge",
+              "prompt": "Để chữ vừa đậm vừa nghiêng, em chọn kết hợp hai nút lệnh nào trên dải lệnh Home?",
+              "options": [
+                "Nút lệnh B (Bold) và nút lệnh I (Italic)",
+                "Nút lệnh B (Bold) và nút lệnh U (Underline)",
+                "Nút lệnh I (Italic) và nút lệnh U (Underline)",
+                "Nút lệnh Font Color và nút lệnh Bullets"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Nút lệnh B (Bold) và nút lệnh I (Italic)\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll8-th4-q5",
+              "type": "knowledge",
+              "prompt": "Muốn mở một tệp trình chiếu đã lưu trước đó, em dùng lệnh nào trong bảng chọn File?",
+              "options": [
+                "Chọn lệnh Open, tìm đến thư mục và chọn tệp cần mở",
+                "Chọn lệnh Save trực tiếp trên màn hình",
+                "Chọn lệnh Save As trên dải lệnh",
+                "Chọn lệnh New để tạo trang chiếu mới"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Chọn lệnh Open, tìm đến thư mục và chọn tệp cần mở\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll8-th4-q6",
+              "type": "scenario",
+              "prompt": "Để lưu lại các thay đổi sau khi định dạng, em nháy chuột vào biểu tượng nào?",
+              "options": [
+                "Biểu tượng hình chiếc đĩa mềm (lệnh Save)",
+                "Biểu tượng nút X ở góc trên màn hình",
+                "Biểu tượng hình chiếc ly (lệnh Slide Show)",
+                "Biểu tượng của phần mềm gõ tiếng Việt Unikey"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Biểu tượng hình chiếc đĩa mềm (lệnh Save)\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            }
+          ]
+        },
+        {
+          "id": "l9-th4",
+          "lessonNumber": 9,
+          "title": "BÀI 9: HIỆU ỨNG CHUYỂN TRANG",
+          "questions": [
+            {
+              "id": "g4-th-ll9-th4-q1",
+              "type": "knowledge",
+              "prompt": "Trong phần mềm PowerPoint, hiệu ứng chuyển trang được hiểu là gì?",
+              "options": [
+                "Là cách thức trang chiếu xuất hiện khi bắt đầu trình chiếu",
+                "Là cách thay đổi phông chữ và màu sắc của các dòng văn bản",
+                "Là thao tác xóa bỏ các trang chiếu dư thừa không cần thiết",
+                "Là tên gọi phần mềm dùng để hỗ trợ gõ tiếng Việt có dấu"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Là cách thức trang chiếu xuất hiện khi bắt đầu trình chiếu\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll9-th4-q2",
+              "type": "scenario",
+              "prompt": "Phát biểu nào dưới đây là ĐÚNG khi nói về hiệu ứng chuyển trang?",
+              "options": [
+                "Đặt cho từng trang chiếu và mỗi trang chọn một hiệu ứng duy nhất",
+                "Một trang chiếu cài đặt cùng lúc nhiều hiệu ứng chuyển trang",
+                "Tất cả trang chiếu bắt buộc dùng chung một kiểu hiệu ứng",
+                "Hiệu ứng chuyển trang làm cho bài thuyết trình nhàm chán"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Đặt cho từng trang chiếu và mỗi trang chọn một hiệu ứng duy nhất\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll9-th4-q3",
+              "type": "knowledge",
+              "prompt": "Các nút lệnh tạo hiệu ứng chuyển trang nằm trên dải lệnh nào?",
+              "options": [
+                "Dải lệnh Transitions",
+                "Dải lệnh Design",
+                "Dải lệnh Animations",
+                "Dải lệnh Home"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Dải lệnh Transitions\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll9-th4-q4",
+              "type": "scenario",
+              "prompt": "Thứ tự đúng các bước để tạo hiệu ứng chuyển trang chiếu là gì?",
+              "options": [
+                "Chọn trang chiếu  Chọn dải lệnh Transitions  Chọn một kiểu hiệu ứng",
+                "Chọn dải lệnh Design  Gõ tên hiệu ứng  Thực hiện tắt phần mềm",
+                "Chọn phần văn bản  Chọn nút lệnh Bold  Thực hiện lưu tệp",
+                "Mở trình duyệt web  Nhấn phím F5  Thực hiện tắt máy tính"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Chọn trang chiếu  Chọn dải lệnh Transitions  Chọn một kiểu hiệu ứng\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll9-th4-q5",
+              "type": "scenario",
+              "prompt": "Để chạy trình chiếu toàn màn hình quan sát hiệu ứng, em nhấn phím nào?",
+              "options": [
+                "Phím F5 trên bàn phím",
+                "Phím Enter trên bàn phím",
+                "Phím Delete trên bàn phím",
+                "Phím Shift trên bàn phím"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Phím F5 trên bàn phím\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll9-th4-q6",
+              "type": "knowledge",
+              "prompt": "Để xem toàn bộ danh sách các hiệu ứng chuyển trang, em chọn biểu tượng nào?",
+              "options": [
+                "Nháy nút mũi tên xuống ở góc phải nhóm Transition to This Slide",
+                "Nháy chuột chọn biểu tượng hình chiếc đĩa mềm (lệnh Save)",
+                "Nháy chuột chọn biểu tượng nút lệnh thay đổi màu chữ Font Color",
+                "Nháy chuột chọn biểu tượng của phần mềm gõ tiếng Việt Unikey"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Nháy nút mũi tên xuống ở góc phải nhóm Transition to This Slide\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            }
+          ]
+        },
+        {
+          "id": "l10-th4",
+          "lessonNumber": 10,
+          "title": "BÀI 10: PHẦN MỀM SOẠN THẢO VĂN BẢN",
+          "questions": [
+            {
+              "id": "g4-th-ll10-th4-q1",
+              "type": "knowledge",
+              "prompt": "Phần mềm soạn thảo văn bản giúp em thực hiện những công việc chính nào?",
+              "options": [
+                "Gõ, chỉnh sửa, trình bày và lưu trữ văn bản",
+                "Luyện tập điều khiển con trỏ chuột và chơi game",
+                "Tìm kiếm và truy cập các trang web trên mạng",
+                "Xem các video ca nhạc và các bộ phim hoạt hình"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Gõ, chỉnh sửa, trình bày và lưu trữ văn bản\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll10-th4-q2",
+              "type": "knowledge",
+              "prompt": "Biểu tượng của Word có đặc điểm gì và vị trí gõ chữ xuất hiện ở đâu?",
+              "options": [
+                "Biểu tượng chữ W màu xanh; chữ xuất hiện tại con trỏ nhấp nháy",
+                "Biểu tượng chữ P màu cam; chữ xuất hiện ở góc dưới màn hình",
+                "Biểu tượng quả địa cầu; chữ xuất hiện ở trên thanh địa chỉ",
+                "Biểu tượng chú mèo Scratch; chữ xuất hiện trực tiếp trên sân khấu"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Biểu tượng chữ W màu xanh; chữ xuất hiện tại con trỏ nhấp nháy\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll10-th4-q3",
+              "type": "knowledge",
+              "prompt": "Quy tắc sử dụng phím Delete và Backspace để xóa ký tự là gì?",
+              "options": [
+                "Delete xóa ký tự bên phải con trỏ; Backspace xóa ký tự bên trái",
+                "Delete xóa ký tự bên trái con trỏ; Backspace xóa ký tự bên phải",
+                "Cả hai phím đều chỉ xóa được ký tự nằm bên phải con trỏ",
+                "Cả hai phím đều chỉ xóa được ký tự nằm bên trái con trỏ"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Delete xóa ký tự bên phải con trỏ; Backspace xóa ký tự bên trái\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll10-th4-q4",
+              "type": "scenario",
+              "prompt": "Thao tác nào giúp xóa nhanh một đoạn văn bản dài trong phần mềm?",
+              "options": [
+                "Chọn (bôi đen) đoạn văn bản đó rồi nhấn phím Delete hoặc Backspace",
+                "Nháy đúp chuột vào nút công tắc tắt nguồn của máy tính",
+                "Nhấn giữ phím Shift đồng thời nhấn tiếp phím Enter",
+                "Nháy chuột chọn biểu tượng Unikey trên màn hình làm việc"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Chọn (bôi đen) đoạn văn bản đó rồi nhấn phím Delete hoặc Backspace\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll10-th4-q5",
+              "type": "knowledge",
+              "prompt": "Phím nào dùng để xuống dòng và phím nào dùng để gõ chữ hoa?",
+              "options": [
+                "Nhấn phím Enter để xuống dòng; nhấn giữ phím Shift để gõ chữ hoa",
+                "Nhấn phím Spacebar để xuống dòng; nhấn phím Delete để gõ chữ hoa",
+                "Nhấn phím Backspace để xuống dòng; nhấn phím Ctrl để gõ chữ hoa",
+                "Nhấn phím F5 để xuống dòng; nhấn phím Alt để gõ chữ hoa"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Nhấn phím Enter để xuống dòng; nhấn giữ phím Shift để gõ chữ hoa\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll10-th4-q6",
+              "type": "knowledge",
+              "prompt": "Để lưu tệp văn bản vào thư mục cá nhân, em chọn lệnh nào trong File?",
+              "options": [
+                "Chọn lệnh Save, chọn thư mục lưu trữ, gõ tên tệp rồi chọn Save",
+                "Chọn lệnh Open rồi thực hiện tắt màn hình của máy tính",
+                "Chọn lệnh Delete rồi nhấn tiếp phím Enter trên bàn phím",
+                "Nháy chuột chọn nút Close mà hoàn toàn không cần gõ tên tệp"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Chọn lệnh Save, chọn thư mục lưu trữ, gõ tên tệp rồi chọn Save\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            }
+          ]
+        },
+        {
+          "id": "l11-th4",
+          "lessonNumber": 11,
+          "title": "BÀI 11: CHỈNH SỬA VĂN BẢN",
+          "questions": [
+            {
+              "id": "g4-th-ll11-th4-q1",
+              "type": "scenario",
+              "prompt": "Muốn gõ nhanh đoạn văn bản lặp lại mà không cần gõ lại, em dùng thao tác nào?",
+              "options": [
+                "Chọn văn bản mẫu rồi dùng thao tác Sao chép (Copy) và Dán (Paste)",
+                "Nhấn phím Delete trên bàn phím để xóa toàn bộ bài",
+                "Thực hiện tắt phần mềm Word rồi mở lại từ đầu",
+                "Sử dụng nút công tắc nguồn để tắt máy tính ngay lập tức"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Chọn văn bản mẫu rồi dùng thao tác Sao chép (Copy) và Dán (Paste)\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll11-th4-q2",
+              "type": "knowledge",
+              "prompt": "Điểm khác biệt giữa Sao chép (Copy) và Di chuyển (Cut) văn bản là gì?",
+              "options": [
+                "Sao chép: tạo thêm bản mới; Di chuyển: chuyển văn bản sang vị trí mới",
+                "Sao chép: làm mất văn bản cũ; Di chuyển: làm nhân đôi văn bản",
+                "Cả hai thao tác đều làm xóa vĩnh viễn tệp văn bản khỏi máy tính",
+                "Cả hai thao tác đều chỉ dùng để chèn thêm hình ảnh minh họa"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Sao chép: tạo thêm bản mới; Di chuyển: chuyển văn bản sang vị trí mới\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll11-th4-q3",
+              "type": "knowledge",
+              "prompt": "Việc chèn thêm hình ảnh minh họa vào bài viết mang lại lợi ích gì?",
+              "options": [
+                "Giúp bài viết thêm sinh động, hấp dẫn và trực quan hơn",
+                "Giúp máy tính tự động sửa lỗi chính tả tiếng Việt",
+                "Giúp tăng tốc độ gõ bàn phím lên gấp hai lần",
+                "Giúp tệp văn bản tự động gửi lên mạng Internet"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Giúp bài viết thêm sinh động, hấp dẫn và trực quan hơn\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll11-th4-q4",
+              "type": "knowledge",
+              "prompt": "Nút lệnh nào trên dải lệnh Insert dùng để chèn hình ảnh từ máy tính?",
+              "options": [
+                "Nút lệnh Picture",
+                "Nút lệnh Copy",
+                "Nút lệnh Paste",
+                "Nút lệnh Cut"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Nút lệnh Picture\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll11-th4-q5",
+              "type": "scenario",
+              "prompt": "Trình tự các bước mở một tệp văn bản có sẵn trên máy tính là gì?",
+              "options": [
+                "Chọn File  Open  Chọn thư mục  Chọn tệp  Chọn Open",
+                "Chọn File  Save  Gõ tên tệp  Chọn nút Save",
+                "Nhấn phím F5  Chọn nút Close ở góc màn hình",
+                "Nháy đúp chuột vào biểu tượng Unikey trên màn hình"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Chọn File  Open  Chọn thư mục  Chọn tệp  Chọn Open\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll11-th4-q6",
+              "type": "knowledge",
+              "prompt": "Muốn lưu bài thơ thành tệp mới mà vẫn giữ tệp cũ, em dùng lệnh nào?",
+              "options": [
+                "Chọn lệnh Save As, gõ tên tệp mới rồi chọn Save",
+                "Chọn lệnh Delete trên thanh công cụ",
+                "Chọn lệnh Rename trên thanh công cụ",
+                "Chọn lệnh Open trong bảng chọn File"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Chọn lệnh Save As, gõ tên tệp mới rồi chọn Save\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            }
+          ]
+        },
+        {
+          "id": "l12a-th4",
+          "lessonNumber": 12,
+          "title": "BÀI 12A: THỰC HÀNH ĐA PHƯƠNG TIỆN",
+          "questions": [
+            {
+              "id": "g4-th-ll12a-th4-q1",
+              "type": "knowledge",
+              "prompt": "Trong tin học, thuật ngữ đa phương tiện (Multimedia) dùng để chỉ điều gì?",
+              "options": [
+                "Các video, bài trình chiếu... kết hợp chữ viết, âm thanh và hình ảnh",
+                "Các tệp văn bản đơn thuần chỉ chứa toàn bộ chữ cái trắng đen",
+                "Các chương trình chỉ phát ra âm thanh mà không có màn hình hiển thị",
+                "Các bảng tính điện tử chỉ dùng để tính toán các con số toán học"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Các video, bài trình chiếu... kết hợp chữ viết, âm thanh và hình ảnh\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll12a-th4-q2",
+              "type": "knowledge",
+              "prompt": "Phần mềm nào được sử dụng để mở và xem các tệp video trong bài học?",
+              "options": [
+                "Phần mềm Windows Media Player",
+                "Phần mềm soạn thảo văn bản Microsoft Word",
+                "Phần mềm lập trình trực quan Scratch",
+                "Phần mềm gõ tiếng Việt Unikey"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Phần mềm Windows Media Player\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll12a-th4-q3",
+              "type": "scenario",
+              "prompt": "Nút lệnh có hình tam giác hoặc hai thanh dọc trên phần mềm video dùng để làm gì?",
+              "options": [
+                "Chạy video hoặc tạm dừng video đang phát",
+                "Tắt hẳn máy tính và ngắt hoàn toàn nguồn điện",
+                "Xóa vĩnh viễn tệp video khỏi ổ đĩa máy tính",
+                "Đổi tên tệp video cũ thành một tên mới"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Chạy video hoặc tạm dừng video đang phát\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll12a-th4-q4",
+              "type": "knowledge",
+              "prompt": "Để thiết lập video tự động phát lặp lại liên tục, em dùng nút lệnh nào?",
+              "options": [
+                "Nút lệnh có hình mũi tên vòng lặp (chạy lặp lại)",
+                "Nút lệnh có hình chiếc loa điều chỉnh âm thanh",
+                "Nút lệnh có hình ô vuông màu đen (Stop)",
+                "Nút lệnh có dấu nhân (X) để thoát chương trình"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Nút lệnh có hình mũi tên vòng lặp (chạy lặp lại)\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll12a-th4-q5",
+              "type": "knowledge",
+              "prompt": "Việc xem các video đa phương tiện về lịch sử, văn hóa mang lại lợi ích gì?",
+              "options": [
+                "Giúp học sinh nắm thông tin sinh động, trực quan về lịch sử, văn hóa",
+                "Giúp học sinh gõ được 10 ngón tay nhanh hơn mà không cần tập luyện",
+                "Giúp máy tính tăng thêm dung lượng lưu trữ bộ nhớ trống",
+                "Giúp tự động tạo ra các trò chơi lập trình trong Scratch"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Giúp học sinh nắm thông tin sinh động, trực quan về lịch sử, văn hóa\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll12a-th4-q6",
+              "type": "scenario",
+              "prompt": "Sau khi xem xong video về phong tục hoặc lịch sử, học sinh cần làm gì?",
+              "options": [
+                "Kể lại điều quan sát được và nêu các chi tiết mới mẻ, thú vị học hỏi được",
+                "Ghi nhớ các câu lệnh lập trình trong phần mềm Scratch",
+                "Định dạng lại phông chữ và màu sắc cho tệp văn bản Word",
+                "Dùng phím Delete để xóa toàn bộ các tệp có trong máy tính"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Kể lại điều quan sát được và nêu các chi tiết mới mẻ, thú vị học hỏi được\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            }
+          ]
+        },
+        {
+          "id": "l12b-th4",
+          "lessonNumber": 13,
+          "title": "BÀI 12B: PHẦN MỀM LUYỆN GÕ BÀN PHÍM",
+          "questions": [
+            {
+              "id": "g4-th-ll12b-th4-q1",
+              "type": "scenario",
+              "prompt": "Mục đích chính khi luyện tập với phần mềm luyện gõ bàn phím là gì?",
+              "options": [
+                "Hình thành phản xạ gõ đúng 10 ngón, tăng tốc độ và độ chính xác",
+                "Chỉnh sửa và làm cho tệp văn bản Word có hình ảnh đẹp mắt hơn",
+                "Thay đổi phông chữ, cỡ chữ và màu sắc cho các trang chiếu",
+                "Tạo ra các trò chơi chuyển động trực quan bằng ngôn ngữ Scratch"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Hình thành phản xạ gõ đúng 10 ngón, tăng tốc độ và độ chính xác\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll12b-th4-q2",
+              "type": "scenario",
+              "prompt": "Việc luyện tập thuần thục thao tác kết hợp phím Shift giúp ích gì cho em?",
+              "options": [
+                "Gõ đúng các dấu câu đặc biệt và các chữ cái viết hoa đầu dòng, tên riêng",
+                "Giúp máy tính tự động bật chế độ phát nhạc giải trí cho học sinh",
+                "Giúp lưu trữ tệp tin tự động vào ổ đĩa D mà không cần bấm lệnh Save",
+                "Giúp xóa nhanh toàn bộ các tệp hệ thống quan trọng có sẵn trong máy"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Gõ đúng các dấu câu đặc biệt và các chữ cái viết hoa đầu dòng, tên riêng\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll12b-th4-q3",
+              "type": "knowledge",
+              "prompt": "Để luyện gõ các từ tiếng Anh hoặc màu sắc, em chọn mục nào trong phần mềm?",
+              "options": [
+                "Mục Words (hoặc mục Colours)",
+                "Mục Capitals chuyên viết hoa",
+                "Mục Numbers để luyện gõ số",
+                "Mục Small Letters chữ thường"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Mục Words (hoặc mục Colours)\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll12b-th4-q4",
+              "type": "scenario",
+              "prompt": "Khi phần mềm thông báo gõ sai nhiều, thao tác tiếp theo em cần làm là gì?",
+              "options": [
+                "Nháy vào nút lệnh OK hoặc nhấn phím Enter để tiếp tục gõ",
+                "Tắt hẳn máy tính ngay lập tức bằng nút công tắc nguồn",
+                "Gỡ bỏ hoàn toàn phần mềm luyện gõ ra khỏi máy tính",
+                "Rút dây cắm bàn phím ra khỏi thân máy tính"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Nháy vào nút lệnh OK hoặc nhấn phím Enter để tiếp tục gõ\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll12b-th4-q5",
+              "type": "scenario",
+              "prompt": "Muốn gõ được các kí tự trên của hàng phím số, em phải làm gì?",
+              "options": [
+                "Nhấn giữ phím Shift trong khi nhấn gõ phím số đó",
+                "Chỉ cần gõ phím số đó bình thường mà không cần phím khác",
+                "Nhấn phím Caps Lock một lần rồi mới gõ phím số",
+                "Nhấn giữ đồng thời cả hai phím Ctrl và Alt cùng lúc"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Nhấn giữ phím Shift trong khi nhấn gõ phím số đó\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll12b-th4-q6",
+              "type": "scenario",
+              "prompt": "Khi gõ kí tự trên do tay phải phụ trách, tay trái của em làm nhiệm vụ gì?",
+              "options": [
+                "Ngón út tay trái sẽ nhấn giữ phím Shift bên trái bàn phím",
+                "Dùng ngón cái tay trái giữ phím cách (Spacebar)",
+                "Hoàn toàn không cần sử dụng đến tay trái nữa",
+                "Dùng ngón trỏ tay trái gõ đè trực tiếp lên phím số"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Ngón út tay trái sẽ nhấn giữ phím Shift bên trái bàn phím\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c6-tinhoc4",
+      "chapterNumber": 6,
+      "title": "Chủ đề 6: Giải quyết vấn đề với sự trợ giúp của máy tính",
+      "lessons": [
+        {
+          "id": "l13-th4",
+          "lessonNumber": 14,
+          "title": "BÀI 13: CHƠI VỚI MÁY TÍNH",
+          "questions": [
+            {
+              "id": "g4-th-ll13-th4-q1",
+              "type": "scenario",
+              "prompt": "Mỗi chỉ dẫn riêng biệt để điều khiển nhân vật hoặc máy tính thực hiện hành động là gì?",
+              "options": [
+                "Một câu lệnh",
+                "Một tệp văn bản Word",
+                "Một hình ảnh đồ họa",
+                "Một phần mềm gõ bàn phím"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Một câu lệnh\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll13-th4-q2",
+              "type": "scenario",
+              "prompt": "Chương trình máy tính điều khiển các trò chơi được tổ chức như thế nào?",
+              "options": [
+                "Gồm các câu lệnh được sắp xếp theo một thứ tự xác định",
+                "Gồm các tệp hình ảnh và âm thanh lưu ngẫu nhiên",
+                "Là các nút công tắc bật hoặc tắt nguồn điện máy tính",
+                "Là các phím số và chữ cái trên bàn phím máy tính"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Gồm các câu lệnh được sắp xếp theo một thứ tự xác định\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll13-th4-q3",
+              "type": "knowledge",
+              "prompt": "Nhân vật lặp lại hành động di chuyển kết hợp quay 90 độ bốn lần sẽ đi theo hình gì?",
+              "options": [
+                "Đi theo một hình vuông",
+                "Đi theo một đường thẳng dài",
+                "Đi theo một hình tròn khép kín",
+                "Đứng yên tại chỗ không di chuyển"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Đi theo một hình vuông\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll13-th4-q4",
+              "type": "knowledge",
+              "prompt": "Các khối lệnh dạng hình khối màu sắc trong Scratch nhằm mục đích gì?",
+              "options": [
+                "Giúp dễ quan sát, ghép nối câu lệnh theo logic mà không phải gõ mã phức tạp",
+                "Giúp tự động dịch các đoạn văn bản tiếng Anh sang tiếng Việt trong Word",
+                "Giúp tăng độ phân giải và làm cho hình ảnh đồ họa trên màn hình sắc nét hơn",
+                "Giúp tự động kết nối máy tính với mạng Internet mà hoàn toàn không cần dây"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Giúp dễ quan sát, ghép nối câu lệnh theo logic mà không phải gõ mã phức tạp\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll13-th4-q5",
+              "type": "scenario",
+              "prompt": "Trước khi kéo thả khối lệnh điều khiển nhân vật, học sinh cần làm gì?",
+              "options": [
+                "Xây dựng ý tưởng và xác định trình tự các bước thực hiện công việc (thuật toán)",
+                "Nháy đúp chuột vào biểu tượng phần mềm Unikey để tắt chế độ gõ tiếng Việt",
+                "Dùng phím Delete để tiến hành xóa toàn bộ các thư mục có trong ổ đĩa",
+                "Rút dây nguồn máy tính rồi cắm lại từ đầu để làm mới bộ nhớ tạm thời"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Xây dựng ý tưởng và xác định trình tự các bước thực hiện công việc (thuật toán)\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll13-th4-q6",
+              "type": "knowledge",
+              "prompt": "Các chương trình câu lệnh tuần tự trong thực tế được ứng dụng vào đâu?",
+              "options": [
+                "Điều khiển thiết bị tự động như robot hút bụi, máy giặt, đèn giao thông thông minh",
+                "Chỉ dùng để viết thư điện tử và soạn thảo các bài văn trong môn Ngữ văn",
+                "Chỉ dùng để nghe nhạc giải trí qua phần mềm Windows Media Player",
+                "Dùng để xem giờ và thay đổi hình nền hiển thị của màn hình máy tính"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Điều khiển thiết bị tự động như robot hút bụi, máy giặt, đèn giao thông thông minh\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            }
+          ]
+        },
+        {
+          "id": "l14-th4",
+          "lessonNumber": 15,
+          "title": "BÀI 14: KHÁM PHÁ MÔI TRƯỜNG LẬP TRÌNH TRỰC QUAN",
+          "questions": [
+            {
+              "id": "g4-th-ll14-th4-q1",
+              "type": "knowledge",
+              "prompt": "Tại sao các nhóm lệnh trong Scratch lại được phân chia theo màu sắc khác nhau?",
+              "options": [
+                "Giúp dễ nhận diện, phân loại và tìm kiếm lệnh nhanh chóng theo chức năng",
+                "Giúp tăng độ phân giải đồ họa của màn hình máy tính lên mức cao nhất",
+                "Giúp tự động dịch các câu lệnh lập trình sang ngôn ngữ tiếng Anh",
+                "Giúp tệp chương trình tự động sao chép ra nhiều bản trên ổ cứng máy tính"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Giúp dễ nhận diện, phân loại và tìm kiếm lệnh nhanh chóng theo chức năng\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll14-th4-q2",
+              "type": "knowledge",
+              "prompt": "Muốn lập trình cho nhân vật hiện câu chào \"Xin chào\" trên sân khấu, em dùng nhóm lệnh nào?",
+              "options": [
+                "Nhóm lệnh Hiển thị (Looks)",
+                "Nhóm lệnh Chuyển động (Motion)",
+                "Nhóm lệnh Bút vẽ (Pen)",
+                "Nhóm lệnh Sự kiện (Events)"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Nhóm lệnh Hiển thị (Looks)\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll14-th4-q3",
+              "type": "scenario",
+              "prompt": "Khi các câu lệnh ghép nối thành một khối dọc trong Scratch, máy tính thực hiện ra sao?",
+              "options": [
+                "Thực hiện lần lượt từng lệnh theo đúng thứ tự từ trên xuống dưới",
+                "Thực hiện ngẫu nhiên từ dưới lên trên hoặc từ giữa ra ngoài",
+                "Chỉ thực hiện lệnh cuối cùng và bỏ qua tất cả các lệnh phía trên",
+                "Thực hiện tất cả các lệnh cùng một lúc trong đúng một tích tắc"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Thực hiện lần lượt từng lệnh theo đúng thứ tự từ trên xuống dưới\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll14-th4-q4",
+              "type": "knowledge",
+              "prompt": "Nhóm lệnh Sự kiện (Events) trong chương trình trò chơi đóng vai trò gì?",
+              "options": [
+                "Xác định thời điểm hoặc hành động kích hoạt để chương trình bắt đầu chạy",
+                "Quyết định màu sắc phông nền của sân khấu trò chơi máy tính",
+                "Lưu trữ tệp chương trình vào thư mục cá nhân trên máy tính",
+                "Xóa bỏ vĩnh viễn các tệp bị lỗi ra khỏi ổ đĩa lưu trữ"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Xác định thời điểm hoặc hành động kích hoạt để chương trình bắt đầu chạy\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll14-th4-q5",
+              "type": "knowledge",
+              "prompt": "Muốn lập trình nhân vật vẽ lại đường đi trên màn hình, em dùng nhóm lệnh nào?",
+              "options": [
+                "Nhóm lệnh mở rộng Bút vẽ (Pen)",
+                "Nhóm lệnh Âm thanh (Sound)",
+                "Nhóm lệnh Cảm biến (Sensing)",
+                "Nhóm lệnh Biến số (Variables)"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Nhóm lệnh mở rộng Bút vẽ (Pen)\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll14-th4-q6",
+              "type": "scenario",
+              "prompt": "Khi muốn hủy bỏ một khối lệnh không dùng đến trong Scratch, em làm thế nào?",
+              "options": [
+                "Kéo thả phần lệnh không cần thiết trả ngược lại về khu vực chứa nhóm lệnh",
+                "Phải tiến hành cài đặt lại toàn bộ hệ điều hành Windows của máy tính",
+                "Rút phích cắm nguồn điện của màn hình ngay lập tức để ngắt kết nối",
+                "Dùng các công cụ xóa cứng để làm sạch màn hình hiển thị"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Kéo thả phần lệnh không cần thiết trả ngược lại về khu vực chứa nhóm lệnh\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            }
+          ]
+        },
+        {
+          "id": "l15-th4",
+          "lessonNumber": 16,
+          "title": "BÀI 15: TẠO CHƯƠNG TRÌNH MÁY TÍNH ĐỂ DIỄN TẢ Ý TƯỞNG",
+          "questions": [
+            {
+              "id": "g4-th-ll15-th4-q1",
+              "type": "scenario",
+              "prompt": "Trước khi bắt đầu kéo thả câu lệnh tạo trò chơi, việc đầu tiên cần làm là gì?",
+              "options": [
+                "Xác định rõ ý tưởng câu chuyện, nhân vật, bối cảnh và công việc cần làm",
+                "Nháy đúp chuột vào biểu tượng phần mềm Unikey để tắt bộ gõ tiếng Việt",
+                "Dùng phím Delete trên bàn phím để xóa toàn bộ các tệp trong ổ đĩa",
+                "Rút dây nguồn máy tính rồi khởi động lại thiết bị từ đầu"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Xác định rõ ý tưởng câu chuyện, nhân vật, bối cảnh và công việc cần làm\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll15-th4-q2",
+              "type": "scenario",
+              "prompt": "Nhân vật và phông nền mặc định khi khởi động phần mềm Scratch là gì?",
+              "options": [
+                "Nhân vật mặc định là chú mèo, phông nền trắng; có thể thay đổi tùy ý",
+                "Nhân vật mặc định là chú chó và phông nền khu vườn; không thể đổi",
+                "Nhân vật mặc định là chú bướm và phông nền màu đen; chỉ được vẽ tay",
+                "Phần mềm hoàn toàn không cho phép thay đổi nhân vật và sân khấu"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Nhân vật mặc định là chú mèo, phông nền trắng; có thể thay đổi tùy ý\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll15-th4-q3",
+              "type": "knowledge",
+              "prompt": "Lệnh đi tới vị trí ngẫu nhiên trên sân khấu thuộc nhóm lệnh nào và có tác dụng gì?",
+              "options": [
+                "Thuộc nhóm Chuyển động; giúp nhân vật di chuyển đến một vị trí bất kì",
+                "Thuộc nhóm Âm thanh; giúp cho nhân vật phát ra âm thanh tiếng kêu",
+                "Thuộc nhóm Hiển thị; giúp thay đổi màu sắc trang phục của nhân vật",
+                "Thuộc nhóm Sự kiện; giúp dừng chương trình trò chơi ngay lập tức"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Thuộc nhóm Chuyển động; giúp nhân vật di chuyển đến một vị trí bất kì\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll15-th4-q4",
+              "type": "scenario",
+              "prompt": "Để nhân vật không chạy ra khỏi khung hình khi di chuyển, ta dùng lệnh gì?",
+              "options": [
+                "Lệnh bật lại nếu chạm cạnh (thuộc nhóm Chuyển động)",
+                "Lệnh xóa tất cả các nét vẽ (thuộc nhóm Bút vẽ)",
+                "Lệnh dừng lại 1 giây (thuộc nhóm Điều khiển)",
+                "Lệnh phát âm thanh đến hết (thuộc nhóm Âm thanh)"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Lệnh bật lại nếu chạm cạnh (thuộc nhóm Chuyển động)\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll15-th4-q5",
+              "type": "scenario",
+              "prompt": "Khi muốn lập trình cho nhân vật phát ra tiếng sủa, em dùng nhóm lệnh nào?",
+              "options": [
+                "Nhóm lệnh Âm thanh (Sound)",
+                "Nhóm lệnh Chuyển động (Motion)",
+                "Nhóm lệnh Sự kiện (Events)",
+                "Nhóm lệnh Bút vẽ (Pen)"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Nhóm lệnh Âm thanh (Sound)\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll15-th4-q6",
+              "type": "knowledge",
+              "prompt": "Để lưu tệp chương trình Scratch vào máy tính với tên ChuCho, em chọn lệnh nào?",
+              "options": [
+                "Chọn lệnh Lưu về máy tính (Save to your computer), chọn thư mục rồi gõ tên",
+                "Chọn lệnh Mở từ máy tính (Open from your computer) trong bảng chọn",
+                "Chọn lệnh Rename rồi thực hiện gõ tên tệp mới cho chương trình",
+                "Chọn lệnh Close để thoát khỏi phần mềm ngay lập tức"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Chọn lệnh Lưu về máy tính (Save to your computer), chọn thư mục rồi gõ tên\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            }
+          ]
+        },
+        {
+          "id": "l16-th4",
+          "lessonNumber": 17,
+          "title": "BÀI 16: CHƯƠNG TRÌNH CỦA EM",
+          "questions": [
+            {
+              "id": "g4-th-ll16-th4-q1",
+              "type": "scenario",
+              "prompt": "Khi muốn biến trò chơi đơn giản thành trò chơi tương tác, bước tư duy tiếp theo là gì?",
+              "options": [
+                "Thêm nhân vật mới, thiết lập kịch bản tương tác và bổ sung phông nền phù hợp",
+                "Tắt hẳn phần mềm Scratch và xóa bỏ hoàn toàn toàn bộ mã lệnh cũ đã viết",
+                "Chuyển đổi định dạng tệp tin lập trình thành tệp văn bản Word thông thường",
+                "Thay đổi hoàn toàn phông chữ và màu sắc giao diện của hệ điều hành Windows"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Thêm nhân vật mới, thiết lập kịch bản tương tác và bổ sung phông nền phù hợp\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll16-th4-q2",
+              "type": "knowledge",
+              "prompt": "Mối quan hệ logic chuyển động giữa hai nhân vật săn và trốn chạy là gì?",
+              "options": [
+                "Nhân vật trốn chạy di chuyển ngẫu nhiên, nhân vật đi săn có lệnh hướng về phía đó",
+                "Cả hai nhân vật đều đứng yên bất động từ đầu cho đến khi kết thúc trò chơi",
+                "Cả hai nhân vật đều di chuyển ngược chiều nhau ra khỏi màn hình rồi dừng hẳn",
+                "Nhân vật đi săn phải chạy trốn còn nhân vật yếu hơn lại đi tìm bắt ngược lại"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án chính xác là: \"Nhân vật trốn chạy di chuyển ngẫu nhiên, nhân vật đi săn có lệnh hướng về phía đó\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll16-th4-q3",
+              "type": "scenario",
+              "prompt": "Để nhân vật tự động xoay mặt hướng về phía mục tiêu khi đuổi bắt, ta dùng lệnh gì?",
+              "options": [
+                "Lệnh hướng về phía đối tượng (point towards) kết hợp với bước di chuyển",
+                "Lệnh đổi màu sắc phông nền liên tục theo thời gian trên sân khấu",
+                "Lệnh phát ra âm thanh thông báo kết thúc trò chơi cho người chơi",
+                "Lệnh xóa toàn bộ các khối lệnh đã được tạo ra trước đó trong dự án"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Lệnh hướng về phía đối tượng (point towards) kết hợp với bước di chuyển\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll16-th4-q4",
+              "type": "scenario",
+              "prompt": "Khi hai nhân vật va chạm vào nhau trong trò chơi, sự kiện này kích hoạt điều gì?",
+              "options": [
+                "Hiệu ứng âm thanh, đổi trang phục, cộng điểm hoặc thông báo chiến thắng",
+                "Làm cho máy tính tự động ngắt kết nối Internet và tắt nguồn ngay lập tức",
+                "Xóa sạch toàn bộ tệp chương trình đang được lưu trữ trong máy tính",
+                "Tắt bỏ hoàn toàn phần mềm Scratch và khóa màn hình máy tính lại"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Hiệu ứng âm thanh, đổi trang phục, cộng điểm hoặc thông báo chiến thắng\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll16-th4-q5",
+              "type": "scenario",
+              "prompt": "Nếu tốc độ di chuyển của nhân vật quá nhanh hoặc quá chậm, em nên xử lý thế nào?",
+              "options": [
+                "Điều chỉnh thông số câu lệnh (số bước, thời gian lướt) cho vừa vặn, mượt mà",
+                "Đập bàn phím máy tính hoặc rút phích cắm điện nguồn trực tiếp của thiết bị",
+                "Xóa bỏ hoàn toàn nhân vật cũ và quyết định không làm trò chơi nữa",
+                "Tăng mức độ sáng của màn hình hiển thị lên mức cao nhất có thể"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Điều chỉnh thông số câu lệnh (số bước, thời gian lướt) cho vừa vặn, mượt mà\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            },
+            {
+              "id": "g4-th-ll16-th4-q6",
+              "type": "scenario",
+              "prompt": "Thao tác lưu tệp nào khoa học nhất khi nâng cấp một bài tập cũ thành bản mới?",
+              "options": [
+                "Sử dụng tính năng lưu tệp với tên mới để tách biệt phiên bản nâng cấp với bản cũ",
+                "Xóa sạch mọi tệp có sẵn trong máy tính rồi mới tiến hành lưu phiên bản mới này",
+                "Tắt nguồn điện máy tính ngay lập tức mà không cần bấm lưu vì hệ thống tự nhớ",
+                "Đổi tên tệp thành các dãy kí tự ngẫu nhiên không có ý nghĩa để ghi nhớ dễ hơn"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Thao tác",
+              "explanation": "Đáp án chính xác là: \"Sử dụng tính năng lưu tệp với tên mới để tách biệt phiên bản nâng cấp với bản cũ\". Bài học Tin học 4 hướng dẫn thao tác chuẩn xác và an toàn trên máy tính."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

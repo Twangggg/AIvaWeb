@@ -1,0 +1,2807 @@
+{
+  "id": "g3-tnxh",
+  "grade": 3,
+  "subjectKey": "tnxh",
+  "title": "Tự nhiên và Xã hội lớp 3",
+  "color": "#10B981",
+  "coverImage": "/mascots/bia-sach-mon-hoc.png",
+  "chapters": [
+    {
+      "id": "c1-chu-de-1",
+      "chapterNumber": 1,
+      "title": "CHỦ ĐỀ 1: GIA ĐÌNH",
+      "lessons": [
+        {
+          "id": "l1-bai-1",
+          "lessonNumber": 1,
+          "title": "BÀI 1: HỌ HÀNG VÀ NHỮNG NGÀY KỈ NIỆM CỦA GIA ĐÌNH",
+          "description": "Nhận biết họ nội, họ ngoại và cách bày tỏ tình cảm trong các ngày kỉ niệm",
+          "questions": [
+            {
+              "id": "g3-tnxh-c1-l1-q1",
+              "type": "knowledge",
+              "prompt": "Bác trai là anh của bố, dì Lan là em của mẹ. Ai thuộc họ nội, ai thuộc họ ngoại của Hoa?",
+              "options": [
+                "Bác trai thuộc họ nội, dì Lan thuộc họ ngoại",
+                "Bác trai thuộc họ ngoại, dì Lan thuộc họ nội",
+                "Cả bác trai và dì Lan đều thuộc họ nội",
+                "Cả bác trai và dì Lan đều thuộc họ ngoại"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Bác trai thuộc họ nội, dì Lan thuộc họ ngoại."
+            },
+            {
+              "id": "g3-tnxh-c1-l1-q2",
+              "type": "scenario",
+              "prompt": "Em gái của mẹ sang nhà chơi, Hoa nên gọi xưng hô và chào hỏi thế nào cho đúng phép lịch sự?",
+              "options": [
+                "Gọi là \"Bác\" và chào: \"Cháu chào bác ạ!\"",
+                "Gọi là \"Dì\" và lễ phép: \"Cháu chào chú, dì ạ!\"",
+                "Gọi là \"Cô\" và chào: \"Chào em!\"",
+                "Gọi thẳng tên riêng mà không cần thưa gửi"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Gọi là \"Dì\" và lễ phép: \"Cháu chào chú, dì ạ!\"."
+            },
+            {
+              "id": "g3-tnxh-c1-l1-q3",
+              "type": "scenario",
+              "prompt": "Mẹ rủ sang thăm dì Lan đang bị ốm, cách ứng xử ngoan ngoãn và phù hợp nhất của Hoa là gì?",
+              "options": [
+                "Từ chối không đi để ở nhà tiếp tục chơi",
+                "Vui vẻ đi cùng mẹ, hỏi thăm chúc dì mau khỏe",
+                "Đòi mẹ mua đồ chơi mới thì mới chịu đi",
+                "Ngồi giận dỗi vì mẹ ngắt giờ xem tivi"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Vui vẻ đi cùng mẹ, hỏi thăm chúc dì mau khỏe."
+            },
+            {
+              "id": "g3-tnxh-c1-l1-q4",
+              "type": "knowledge",
+              "prompt": "Tự tay làm thiệp chúc mừng sinh nhật chị họ thể hiện tình cảm và thái độ gì của Hoa?",
+              "options": [
+                "Sự lãng phí thời gian và giấy vẽ",
+                "Tình cảm yêu thương, gắn bó với người thân",
+                "Sự ép buộc, bắt buộc từ phía bố mẹ",
+                "Muốn đòi chị họ phải tặng lại quà cho mình"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Tình cảm yêu thương, gắn bó với người thân."
+            },
+            {
+              "id": "g3-tnxh-c1-l1-q5",
+              "type": "scenario",
+              "prompt": "Đường thời gian gia đình ghi chép các sự kiện qua các năm giúp em nhận biết điều gì?",
+              "options": [
+                "Gia đình không có bất kỳ thay đổi nào qua các năm",
+                "Thứ tự các sự kiện và sự thay đổi thành viên gia đình",
+                "Minh đã bắt đầu đi học lớp 1 từ năm 2009",
+                "Mẹ sinh em bé trước khi đám cưới bố mẹ diễn ra"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Thứ tự các sự kiện và sự thay đổi thành viên gia đình."
+            },
+            {
+              "id": "g3-tnxh-c1-l1-q6",
+              "type": "knowledge",
+              "prompt": "Bố thông báo vừa nhận công việc mới, em nên nói gì để động viên và ủng hộ bố?",
+              "options": [
+                "\"Con chúc mừng bố, cả nhà mình cùng cố gắng bố nhé!\"",
+                "Không quan tâm và tiếp tục ngồi xem tivi",
+                "Than thở vì sợ bố bận không đưa đi chơi",
+                "Tỏ thái độ khó chịu với quyết định của bố"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: \"Con chúc mừng bố, cả nhà mình cùng cố gắng bố nhé!\"."
+            }
+          ]
+        },
+        {
+          "id": "l2-bai-2",
+          "lessonNumber": 2,
+          "title": "BÀI 2: PHÓNG TRÁNH HOẢ HOẠN KHI Ở NHÀ",
+          "description": "Kỹ năng nhận diện nguy cơ cháy nổ và cách xử lý, thoát hiểm an toàn khi có hỏa hoạn",
+          "questions": [
+            {
+              "id": "g3-tnxh-c1-l2-q1",
+              "type": "knowledge",
+              "prompt": "Nhắc bố mang bình xịt côn trùng để xa bếp gas đun nấu giúp phòng tránh nguy cơ nào?",
+              "options": [
+                "Bình xịt gặp nhiệt độ cao từ bếp dễ gây cháy nổ",
+                "Làm cho thức ăn đang đun trên bếp bị đổ ra ngoài",
+                "Làm cho bình xịt côn trùng bị hết khí gas bên trong",
+                "Làm hư hỏng thiết bị nồi cơm điện đặt bên cạnh"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Bình xịt gặp nhiệt độ cao từ bếp dễ gây cháy nổ."
+            },
+            {
+              "id": "g3-tnxh-c1-l2-q2",
+              "type": "scenario",
+              "prompt": "Vừa cắm sạc điện thoại vừa chơi game làm ổ cắm bốc khói, nguyên nhân chập cháy do đâu?",
+              "options": [
+                "Vừa sạc vừa dùng làm quá tải, gây chập cháy điện",
+                "Do thiết bị điện thoại của Minh đã quá cũ kỹ",
+                "Do điện thoại phát ra âm thanh trò chơi quá to",
+                "Do vị trí Minh nằm thao tác ở trên giường ngủ"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Vừa sạc vừa dùng làm quá tải, gây chập cháy điện."
+            },
+            {
+              "id": "g3-tnxh-c1-l2-q3",
+              "type": "scenario",
+              "prompt": "Khói đen tràn vào hành lang chung cư khi có cháy, Nam nên khuyên Hoa thoát hiểm thế nào?",
+              "options": [
+                "\"Cậu phải di chuyển bằng thang máy mới kịp!\"",
+                "\"Dùng khăn ẩm che mũi, bò thấp người đi thang bộ!\"",
+                "\"Cậu đứng nguyên ở hành lang đợi người đến cứu\"",
+                "\"Chúng mình cùng nhảy qua ban công xuống dưới\""
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: \"Dùng khăn ẩm che mũi, bò thấp người đi thang bộ!\"."
+            },
+            {
+              "id": "g3-tnxh-c1-l2-q4",
+              "type": "knowledge",
+              "prompt": "Khi phát hiện đám cháy lớn ở nhà xóm bên cạnh, em gọi số điện thoại khẩn cấp nào?",
+              "options": [
+                "Gọi số 111",
+                "Gọi số 113",
+                "Gọi số 114",
+                "Gọi số 115"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Gọi số 114."
+            },
+            {
+              "id": "g3-tnxh-c1-l2-q5",
+              "type": "scenario",
+              "prompt": "Bước vào bếp ngửi thấy mùi gas nồng nặc, cách xử lý an toàn nhất của An là gì?",
+              "options": [
+                "Bật công tắc điện hoặc bật bếp gas để kiểm tra",
+                "Lấy bật lửa ra soi vào bình gas xem bị rò rỉ ở đâu",
+                "Bịt mũi, không bật/tắt thiết bị điện, mở cửa thoáng và báo người lớn",
+                "Đóng chặt tất cả các cửa phòng lại rồi đi ngủ"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Bịt mũi, không bật/tắt thiết bị điện, mở cửa thoáng và báo người lớn."
+            },
+            {
+              "id": "g3-tnxh-c1-l2-q6",
+              "type": "knowledge",
+              "prompt": "Thói quen an toàn đúng đắn cần thực hiện ngay sau khi đun nấu xong trên bếp gas là gì?",
+              "options": [
+                "Tắt bếp gas và thực hiện khóa van bình gas cẩn thận",
+                "Để nguyên lửa nhỏ đun tiếp cho thức ăn luôn nóng",
+                "Đặt các tệp giấy hoặc can xăng sát gần bếp lửa",
+                "Mở to ngọn lửa bếp gas rồi đi ra ngoài chơi"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Tắt bếp gas và thực hiện khóa van bình gas cẩn thận."
+            }
+          ]
+        },
+        {
+          "id": "l3-bai-3",
+          "lessonNumber": 3,
+          "title": "BÀI 3: VỆ SINH XUNG QUANH NHÀ",
+          "description": "Thói quen giữ gìn vệ sinh khuôn viên quanh nhà và bảo vệ cảnh quan chung",
+          "questions": [
+            {
+              "id": "g3-tnxh-c1-l3-q1",
+              "type": "knowledge",
+              "prompt": "Việc lật úp các vật dụng chứa nước đọng ngoài sân mang lại lợi ích trực tiếp nào?",
+              "options": [
+                "Làm cho diện tích sân nhà đỡ bị chật chội",
+                "Diệt nơi muỗi sinh sản, phòng bệnh sốt xuất huyết",
+                "Làm cho đồ dùng nhanh bị hư hỏng hơn",
+                "Giúp cho cây cối ngoài sân nhanh lớn hơn"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Diệt nơi muỗi sinh sản, phòng bệnh sốt xuất huyết."
+            },
+            {
+              "id": "g3-tnxh-c1-l3-q2",
+              "type": "scenario",
+              "prompt": "Sửa chữa, khơi thông đường ống thoát nước thải gia đình có lợi ích chính là gì?",
+              "options": [
+                "Giúp cho nước thải chảy tràn ra mặt đường",
+                "Ngăn nước đọng, đọng mùi hôi và ngừa mầm bệnh",
+                "Giúp tiết kiệm nguồn nước sinh hoạt hằng ngày",
+                "Để cho cỏ dại mọc nhiều hơn quanh nhà"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Ngăn nước đọng, đọng mùi hôi và ngừa mầm bệnh."
+            },
+            {
+              "id": "g3-tnxh-c1-l3-q3",
+              "type": "scenario",
+              "prompt": "Tiện tay vứt vỏ chai nước ngọt xuống sàn hành lang chung cư là hành vi thế nào?",
+              "options": [
+                "Đồng tình, vì vứt rác ở đâu cũng có người dọn",
+                "Không đồng tình, gây mất vệ sinh và dễ trượt ngã",
+                "Đồng tình, vì tiết kiệm thời gian tìm thùng rác",
+                "Không đồng tình, vì Nam chơi bóng làm ồn"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Không đồng tình, gây mất vệ sinh và dễ trượt ngã."
+            },
+            {
+              "id": "g3-tnxh-c1-l3-q4",
+              "type": "knowledge",
+              "prompt": "Quét dọn và phun khử trùng chuồng chăn nuôi hằng ngày nhằm mục đích gì?",
+              "options": [
+                "Giúp vật nuôi khỏe, ngừa mùi hôi và vi khuẩn",
+                "Giúp cho không gian chuồng nuôi trông rộng hơn",
+                "Làm cho vật nuôi dừng ăn các loại thức ăn",
+                "Giúp tiết kiệm chi phí mua thức ăn chăn nuôi"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Giúp vật nuôi khỏe, ngừa mùi hôi và vi khuẩn."
+            },
+            {
+              "id": "g3-tnxh-c1-l3-q5",
+              "type": "scenario",
+              "prompt": "Tay cầm túi rác nhỏ và gặp chú công nhân thu gom rác, An nên ứng xử thế nào?",
+              "options": [
+                "Ném túi rác trực tiếp xuống đất rồi bỏ đi",
+                "Lễ phép chào và bỏ túi rác vào đúng thùng",
+                "Đợi chú đi khỏi rồi vứt rác ra gầm cầu thang",
+                "Đưa túi rác cho bạn đi cùng nhờ vứt hộ"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Lễ phép chào và bỏ túi rác vào đúng thùng."
+            },
+            {
+              "id": "g3-tnxh-c1-l3-q6",
+              "type": "knowledge",
+              "prompt": "Thấy vật nuôi phóng uế bừa bãi ra ngõ xóm, em nên nhắc nhở lịch sự thế nào?",
+              "options": [
+                "\"Bác dắt vật nuôi nên dọn dẹp để giữ vệ sinh chung ạ!\"",
+                "Đứng lại quát mắng người dắt vật nuôi",
+                "Không quan tâm vì không phải vật nuôi nhà mình",
+                "Bắt chước dắt thú cưng nhà mình ra phóng uế"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: \"Bác dắt vật nuôi nên dọn dẹp để giữ vệ sinh chung ạ!\"."
+            }
+          ]
+        },
+        {
+          "id": "l4-bai-4",
+          "lessonNumber": 4,
+          "title": "BÀI 4: ÔN TẬP CHỦ ĐỀ GIA ĐÌNH",
+          "description": "Củng cố kiến thức về họ hàng, phòng tránh hỏa hoạn và giữ gìn vệ sinh gia đình",
+          "questions": [
+            {
+              "id": "g3-tnxh-c1-l4-q1",
+              "type": "knowledge",
+              "prompt": "Chú Hùng là em trai ruột của bố, An thuộc dòng họ nào và nên xưng hô như thế nào?",
+              "options": [
+                "Chú Hùng thuộc họ ngoại; An chào: \"Cháu chào bác ạ!\"",
+                "Chú Hùng thuộc họ nội; An chào: \"Cháu chào chú Hùng ạ!\"",
+                "Chú Hùng thuộc họ ngoại; An chào: \"Em chào anh!\"",
+                "Chú Hùng không phải là người thuộc họ hàng gia đình"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Chú Hùng thuộc họ nội; An chào: \"Cháu chào chú Hùng ạ!\"."
+            },
+            {
+              "id": "g3-tnxh-c1-l4-q2",
+              "type": "knowledge",
+              "prompt": "Nam nên làm việc nào dưới đây để thể hiện tình cảm yêu thương đối với họ hàng bên ngoại?",
+              "options": [
+                "Từ chối không về quê vì muốn ở lại nhà chơi game",
+                "Vui vẻ chuẩn bị đồ, làm quà nhỏ và chúc lễ phép",
+                "Về quê nhưng chỉ ngồi bấm điện thoại, không chào ai",
+                "Đòi ông bà phải cho tiền thì mới chịu nói chuyện"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Vui vẻ chuẩn bị đồ, làm quà nhỏ và chúc lễ phép."
+            },
+            {
+              "id": "g3-tnxh-c1-l4-q3",
+              "type": "knowledge",
+              "prompt": "Bức ảnh chụp lúc 1 tuổi (3 người) và lớp 3 (4 người) cho thấy gia đình Minh có thay đổi gì?",
+              "options": [
+                "Gia đình Minh không có sự thay đổi nào theo thời gian",
+                "Gia đình tăng thành viên và các thành viên yêu thương nhau",
+                "Bản thân Minh bị nhỏ đi nhiều qua các năm tháng",
+                "Số lượng thành viên gia đình Minh bị giảm bớt đi"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Gia đình tăng thành viên và các thành viên yêu thương nhau."
+            },
+            {
+              "id": "g3-tnxh-c1-l4-q4",
+              "type": "knowledge",
+              "prompt": "Việc làm nào dưới đây là đúng đắn và an toàn giúp phòng tránh nguy cơ hỏa hoạn tại nhà?",
+              "options": [
+                "Tắt bếp gas và ngắt thiết bị điện trước khi ra ngoài",
+                "Để can xăng và bình xịt côn trùng sát bếp đun củi",
+                "Vừa sạc điện thoại vừa để trên chăn bông chơi qua đêm",
+                "Đốt các loại rác củi khô ngay sát chân đống rơm"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Tắt bếp gas và ngắt thiết bị điện trước khi ra ngoài."
+            },
+            {
+              "id": "g3-tnxh-c1-l4-q5",
+              "type": "knowledge",
+              "prompt": "Hành động nào thể hiện thói quen tốt giúp giữ vệ sinh môi trường sống xung quanh nhà?",
+              "options": [
+                "Quét sân, lật úp đồ đọng nước và bỏ rác đúng nơi",
+                "Vứt tất cả các loại rác sinh hoạt bừa bãi ra ngõ xóm",
+                "Xả thẳng nước thải chăn nuôi ra ngoài đường đi chung",
+                "Để nước đọng tù túng ở các xô chậu cũ cho muỗi đẻ"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Quét sân, lật úp đồ đọng nước và bỏ rác đúng nơi."
+            },
+            {
+              "id": "g3-tnxh-c1-l4-q6",
+              "type": "knowledge",
+              "prompt": "Ngửi thấy mùi khét và khói bốc ra từ ổ điện khi ở nhà một mình, An nên làm gì?",
+              "options": [
+                "Lấy chậu nước tạt thẳng vào ổ điện đang bốc khói",
+                "Không chạm vào ổ điện, chạy ra hô nhờ người lớn giúp",
+                "Đóng chặt tất cả cửa phòng lại rồi đi ngủ tiếp",
+                "Lại gần dùng tay không rút ngay dây điện ra ngoài"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Không chạm vào ổ điện, chạy ra hô nhờ người lớn giúp."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c2-chu-de-2",
+      "chapterNumber": 2,
+      "title": "CHỦ ĐỀ 2: TRƯỜNG HỌC",
+      "lessons": [
+        {
+          "id": "l5-bai-5",
+          "lessonNumber": 5,
+          "title": "BÀI 5: HOẠT ĐỘNG KẾT NỐI VỚI CỘNG ĐỒNG",
+          "description": "Ý nghĩa của các hoạt động kết nối cộng đồng và tinh thần sẻ chia vì xã hội",
+          "questions": [
+            {
+              "id": "g3-tnxh-c2-l5-q1",
+              "type": "knowledge",
+              "prompt": "Gom sách vở, đồ dùng ủng hộ các bạn vùng lũ lụt mang lại ý nghĩa gì?",
+              "options": [
+                "Chia sẻ khó khăn, lan tỏa tình yêu thương đến các bạn",
+                "Giải tán bớt đồ dùng không sử dụng đến cho rộng nhà",
+                "Để được nhà trường thưởng cho một khoản tiền mặt",
+                "Không mang lại bất kỳ ý nghĩa đặc biệt nào cho em"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Chia sẻ khó khăn, lan tỏa tình yêu thương đến các bạn."
+            },
+            {
+              "id": "g3-tnxh-c2-l5-q2",
+              "type": "scenario",
+              "prompt": "Ý nghĩa lớn nhất của phong trào \"Đổi rác lấy cây xanh\" tại trường học là gì?",
+              "options": [
+                "Làm cho không gian sân trường trở nên đông đúc hơn",
+                "Nâng cao ý thức phân loại rác, bảo vệ môi trường",
+                "Giúp học sinh bán rác lấy tiền tiêu xài cá nhân",
+                "Tạo điều kiện cho học sinh nghỉ các giờ học chính khóa"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Nâng cao ý thức phân loại rác, bảo vệ môi trường."
+            },
+            {
+              "id": "g3-tnxh-c2-l5-q3",
+              "type": "scenario",
+              "prompt": "Chủ động giải thích biển báo cấm qua đường cho em nhỏ có tác dụng gì?",
+              "options": [
+                "Nâng cao nhận thức giao thông, phòng tránh tai nạn",
+                "Làm cho em nhỏ bị muộn giờ đi chơi cùng bạn bè",
+                "Thể hiện sự kiêu ngạo của bản thân trước mọi người",
+                "Không mang lại lợi ích gì cho cộng đồng xung quanh"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Nâng cao nhận thức giao thông, phòng tránh tai nạn."
+            },
+            {
+              "id": "g3-tnxh-c2-l5-q4",
+              "type": "knowledge",
+              "prompt": "Tham gia trồng và chăm sóc cây xanh khu vực công cộng mang lại lợi ích gì?",
+              "options": [
+                "Tạo cảnh quan xanh sạch đẹp, bảo vệ môi trường sống",
+                "Làm tốn thời gian học tập chính khóa của học sinh",
+                "Làm cho khu vực đất xung quanh bị bẩn thỉu hơn",
+                "Chỉ nhằm mục đích chụp ảnh kỷ niệm đăng mạng xã hội"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Tạo cảnh quan xanh sạch đẹp, bảo vệ môi trường sống."
+            },
+            {
+              "id": "g3-tnxh-c2-l5-q5",
+              "type": "scenario",
+              "prompt": "Trả lời thế nào là đúng nhất về lý do trường tổ chức các hoạt động cộng đồng?",
+              "options": [
+                "\"Giúp con học cách chia sẻ, có trách nhiệm với xã hội\"",
+                "\"Vì nhà trường bắt buộc tất cả học sinh phải làm\"",
+                "\"Để các bạn học sinh không phải làm bài tập về nhà\"",
+                "\"Để nhà trường được nổi tiếng trên các kênh truyền hình\""
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: \"Giúp con học cách chia sẻ, có trách nhiệm với xã hội\"."
+            },
+            {
+              "id": "g3-tnxh-c2-l5-q6",
+              "type": "knowledge",
+              "prompt": "Bạn rủ trốn buổi vẽ tranh làm đẹp đường làng ngõ xóm để chơi điện tử, em xử lý sao?",
+              "options": [
+                "Đồng ý đi chơi điện tử và bỏ buổi vẽ tranh của lớp",
+                "Từ chối và khuyên bạn cùng tham gia vẽ tranh với lớp",
+                "Im lặng, không tham gia vẽ tranh cũng không đi chơi",
+                "Báo công an đến bắt bạn vì rủ đi chơi điện tử"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Từ chối và khuyên bạn cùng tham gia vẽ tranh với lớp."
+            }
+          ]
+        },
+        {
+          "id": "l6-bai-6",
+          "lessonNumber": 6,
+          "title": "BÀI 6: TRUYỀN THỐNG TRƯỜNG EM",
+          "description": "Tìm hiểu và tự hào về truyền thống dạy tốt học tốt của ngôi trường thân yêu",
+          "questions": [
+            {
+              "id": "g3-tnxh-c2-l6-q1",
+              "type": "knowledge",
+              "prompt": "Những nội dung cơ bản nào cần có trong phiếu thu thập thông tin về truyền thống trường?",
+              "options": [
+                "Năm thành lập, thành tích dạy học, danh hiệu thi đua, gương tiêu biểu",
+                "Thực đơn món ăn nhà ăn và giá tiền các loại đồ dùng học tập",
+                "Danh sách chi tiết các cửa hàng bán đồ chơi xung quanh trường",
+                "Lịch trình đi du lịch nghỉ dưỡng cá nhân của các thầy cô giáo"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Năm thành lập, thành tích dạy học, danh hiệu thi đua, gương tiêu biểu."
+            },
+            {
+              "id": "g3-tnxh-c2-l6-q2",
+              "type": "knowledge",
+              "prompt": "Những thông tin, hình ảnh được lưu giữ trong phòng truyền thống của trường có ý nghĩa gì?",
+              "options": [
+                "Tôn vinh các thành tích tốt đẹp của các thế hệ thầy cô và học sinh",
+                "Trang trí cho không gian phòng truyền thống bớt bị trống trải",
+                "Bán lại các tư liệu cho các bạn học sinh lứa sau mua lại",
+                "Không mang lại bất kỳ ý nghĩa thiết thực nào cho học sinh"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Tôn vinh các thành tích tốt đẹp của các thế hệ thầy cô và học sinh."
+            },
+            {
+              "id": "g3-tnxh-c2-l6-q3",
+              "type": "knowledge",
+              "prompt": "Kiểm tra thấy phiếu thu thập còn thiếu thông tin phong trào thể thao, nhóm An nên làm gì?",
+              "options": [
+                "Bỏ qua thông tin còn thiếu và không cần ghi bổ sung",
+                "Thảo luận, tra cứu lại tư liệu và bổ sung đầy đủ thông tin",
+                "Tự bịa đặt tên một bạn bất kỳ vào trong phiếu thông tin",
+                "Xóa bỏ luôn phần nội dung thành tích thể thao trên phiếu"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Thảo luận, tra cứu lại tư liệu và bổ sung đầy đủ thông tin."
+            },
+            {
+              "id": "g3-tnxh-c2-l6-q4",
+              "type": "knowledge",
+              "prompt": "Để đại diện nhóm giới thiệu về truyền thống nhà trường trước lớp thu hút, Hoa nên làm gì?",
+              "options": [
+                "Cúi mặt đọc thuộc lòng từng chữ có trên tờ giấy ghi chép",
+                "Dùng bảng tổng hợp, tranh ảnh, tự tin trình bày mạch lạc",
+                "Trình bày thật nhanh cho xong lượt để mau chóng về chỗ",
+                "Chỉ đứng trên bục giảng cười và tuyệt đối không nói gì"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Dùng bảng tổng hợp, tranh ảnh, tự tin trình bày mạch lạc."
+            },
+            {
+              "id": "g3-tnxh-c2-l6-q5",
+              "type": "knowledge",
+              "prompt": "Bố chia sẻ từng là học sinh cũ của trường, Linh nên trò chuyện thế nào để thể hiện sự tự hào?",
+              "options": [
+                "Hỏi kỷ niệm xưa và hứa học tốt để viết tiếp truyền thống",
+                "Tỏ ra không quan tâm đến chia sẻ và quay đi xem tivi",
+                "Chê bai trường học ngày xưa không đẹp bằng bây giờ",
+                "Đòi bố phải mua quà thưởng vì trường có truyền thống tốt"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Hỏi kỷ niệm xưa và hứa học tốt để viết tiếp truyền thống."
+            },
+            {
+              "id": "g3-tnxh-c2-l6-q6",
+              "type": "knowledge",
+              "prompt": "Việc làm nào dưới đây thể hiện em đang góp phần giữ gìn và phát huy truyền thống nhà trường?",
+              "options": [
+                "Thi đua học tốt, rèn luyện đạo đức, tham gia phong trào",
+                "Chỉ tập trung chơi game, không tham gia hoạt động trường",
+                "Trốn học đi chơi cùng bạn bè và không nghe lời thầy cô",
+                "Vẽ bẩn lên các bảng khen thưởng trong phòng truyền thống"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Thi đua học tốt, rèn luyện đạo đức, tham gia phong trào."
+            }
+          ]
+        },
+        {
+          "id": "l7-bai-7",
+          "lessonNumber": 7,
+          "title": "BÀI 7: GIỮ AN TOÀN VÀ VỆ SINH Ở TRƯỜNG",
+          "description": "Nhận diện nguy cơ mất an toàn và chung tay giữ gìn vệ sinh sạch đẹp tại trường học",
+          "questions": [
+            {
+              "id": "g3-tnxh-c2-l7-q1",
+              "type": "knowledge",
+              "prompt": "Dấu hiệu nào dưới đây biểu hiện nguy cơ mất an toàn tại trường học cần xử lý ngay?",
+              "options": [
+                "Cột cầu môn ở sân bóng chắc chắn, cổng trường kiên cố",
+                "Cành cây to bị khô nguy cơ gãy và ô kính cửa sổ bị vỡ",
+                "Hành lang cao hơn đầu học sinh và có biển báo chỉ dẫn",
+                "Sàn nhà vệ sinh luôn khô ráo, sạch sẽ và thoáng mát"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Cành cây to bị khô nguy cơ gãy và ô kính cửa sổ bị vỡ."
+            },
+            {
+              "id": "g3-tnxh-c2-l7-q2",
+              "type": "scenario",
+              "prompt": "Quy tắc an toàn em cần tuân thủ khi đi khảo sát hiện trạng xung quanh trường là gì?",
+              "options": [
+                "Vừa đi vừa xô đẩy, chen lấp nhau trên các bậc cầu thang",
+                "Trèo lên cây cao để kiểm tra xem cành nào bị khô hỏng",
+                "Trang phục gọn gàng, đi cẩn thận, không đùa nghịch leo trèo",
+                "Tự ý tháo gỡ các dây điện có trong phòng học của trường"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Trang phục gọn gàng, đi cẩn thận, không đùa nghịch leo trèo."
+            },
+            {
+              "id": "g3-tnxh-c2-l7-q3",
+              "type": "scenario",
+              "prompt": "Sàn nhà vệ sinh bị đọng nhiều nước lênh láng gây ra tác hại gì và xử lý ra sao?",
+              "options": [
+                "Giúp sàn nhà mát mẻ hơn nên không cần phải xử lý",
+                "Mất vệ sinh, gây trượt ngã; cần lau khô và báo bảo vệ",
+                "Giúp học sinh tập trượt; rủ thêm các bạn vào cùng chơi",
+                "Tắt hết đèn nhà vệ sinh rồi đi ra ngoài chơi tiếp"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Mất vệ sinh, gây trượt ngã; cần lau khô và báo bảo vệ."
+            },
+            {
+              "id": "g3-tnxh-c2-l7-q4",
+              "type": "knowledge",
+              "prompt": "Phát hiện ô kính cửa sổ lớp học bị vỡ nguy hiểm, đại diện nhóm nên báo cáo gì?",
+              "options": [
+                "Đề nghị thầy cô cho cả lớp học sinh được nghỉ học hẳn",
+                "Báo rõ hiện trạng vỡ kính và đề nghị nhà trường thay mới",
+                "Giấu kín không nói với ai để tự lấy băng dính dán lại",
+                "Đẩy mảnh kính vỡ rơi thẳng xuống phía dưới sân trường"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Báo rõ hiện trạng vỡ kính và đề nghị nhà trường thay mới."
+            },
+            {
+              "id": "g3-tnxh-c2-l7-q5",
+              "type": "scenario",
+              "prompt": "Nhà trường phát động phong trào \"Cùng làm sạch ngôi nhà thứ hai\", em nên làm gì?",
+              "options": [
+                "Tích cực, tự giác tham gia để giữ trường lớp sạch đẹp",
+                "Trốn vào góc sân chơi điện tử để không phải làm việc",
+                "Đổ thêm rác ra sân trường cho các bạn khác thu dọn",
+                "Chỉ đứng nhìn và chê bai các bạn khác làm công việc chậm"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Tích cực, tự giác tham gia để giữ trường lớp sạch đẹp."
+            },
+            {
+              "id": "g3-tnxh-c2-l7-q6",
+              "type": "knowledge",
+              "prompt": "Thường xuyên khảo sát, phát hiện nguy cơ và giữ vệ sinh trường học mang lại lợi ích gì?",
+              "options": [
+                "Phòng tránh tai nạn, bảo vệ sức khỏe và môi trường học",
+                "Làm cho học sinh không còn thời gian để vui chơi nữa",
+                "Giúp cho nhà trường bán được nhiều đồ đạc cũ hỏng",
+                "Không mang lại bất kỳ lợi ích thực tế nào cho học sinh"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Phòng tránh tai nạn, bảo vệ sức khỏe và môi trường học."
+            }
+          ]
+        },
+        {
+          "id": "l8-bai-8",
+          "lessonNumber": 8,
+          "title": "BÀI 8: ÔN TẬP CHỦ ĐỀ TRƯỜNG HỌC",
+          "description": "Ôn tập tổng kết các hoạt động cộng đồng, truyền thống và an toàn trường học",
+          "questions": [
+            {
+              "id": "g3-tnxh-c2-l8-q1",
+              "type": "knowledge",
+              "prompt": "Nhận xét của Nam về hoạt động quyên góp ủng hộ và Ngày hội tái chế thể hiện điều gì?",
+              "options": [
+                "Hiểu rõ ý nghĩa nhân văn và giá trị thực tế của các hoạt động",
+                "Tham gia phong trào chỉ để lấy thành tích thi đua cho lớp",
+                "Thích nghỉ học để ra ngoài trường chơi cùng các bạn",
+                "Tỏ ý phản đối và không muốn tham gia các hoạt động sau"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Hiểu rõ ý nghĩa nhân văn và giá trị thực tế của các hoạt động."
+            },
+            {
+              "id": "g3-tnxh-c2-l8-q2",
+              "type": "scenario",
+              "prompt": "Thấy một số bạn vứt vỏ chai nhựa bừa bãi sau giờ ra chơi, em nên xử lý thế nào?",
+              "options": [
+                "Nhắc bạn gom vỏ chai để đổi cây, giúp giữ sân trường sạch",
+                "Mặc kệ bỏ đi vì vỏ chai đó không phải do mình uống",
+                "Gom tất cả chai nhựa mang đi giấu để không ai đổi được cây",
+                "To tiếng mắng chửi các bạn gây mất đoàn kết trong lớp"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Nhắc bạn gom vỏ chai để đổi cây, giúp giữ sân trường sạch."
+            },
+            {
+              "id": "g3-tnxh-c2-l8-q3",
+              "type": "scenario",
+              "prompt": "Khi kết thúc bài giới thiệu về truyền thống nhà trường, Hoa nên nói thêm điều gì?",
+              "options": [
+                "Bày tỏ lòng biết ơn thầy cô và hứa quyết tâm học tập tốt",
+                "Đòi nhà trường thưởng quà cho cá nhân mình sau báo cáo",
+                "Đọc thật nhanh danh sách tên học sinh cho xong bài nói",
+                "Phàn nàn vì nhà trường được thành lập từ lâu đời"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Bày tỏ lòng biết ơn thầy cô và hứa quyết tâm học tập tốt."
+            },
+            {
+              "id": "g3-tnxh-c2-l8-q4",
+              "type": "knowledge",
+              "prompt": "Hành vi đá bóng mạnh ở hành lang trước cửa lớp gây ra nguy cơ mất an toàn nào?",
+              "options": [
+                "Dễ vỡ kính nguy hiểm, va trúng bạn và hỏng cơ sở vật chất",
+                "Giúp các bạn rèn luyện kỹ năng đá bóng giỏi hơn",
+                "Làm cho hành lang trước cửa lớp sạch sẽ hơn",
+                "Không gây nguy hiểm vì quả bóng đá rất nhẹ"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Dễ vỡ kính nguy hiểm, va trúng bạn và hỏng cơ sở vật chất."
+            },
+            {
+              "id": "g3-tnxh-c2-l8-q5",
+              "type": "scenario",
+              "prompt": "Thấy vòi nước xả tràn lênh láng và rác vứt bừa bãi trong nhà vệ sinh, em nên làm gì?",
+              "options": [
+                "Khóa vòi nước, nhặt rác vào thùng và báo bác bảo vệ",
+                "Đứng chụp ảnh hiện trạng lại rồi đi ra ngoài ngay",
+                "Tiếp tục mở to vòi nước xả ra sàn rồi bỏ chạy",
+                "Rủ thêm các bạn học sinh khác vào đùa nghịch nước"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Khóa vòi nước, nhặt rác vào thùng và báo bác bảo vệ."
+            },
+            {
+              "id": "g3-tnxh-c2-l8-q6",
+              "type": "knowledge",
+              "prompt": "Trình tự các ý hợp lý nhất khi viết đoạn văn ngắn giới thiệu về trường em là gì?",
+              "options": [
+                "Thời gian thành lập -> Truyền thống -> Tấm gương -> Cảm xúc, lời hứa",
+                "Cảm xúc của em -> Kể tên các bạn chơi game giỏi -> Lịch nghỉ hè",
+                "Kể tên các món ăn cổng trường -> Tên thầy hiệu trưởng -> Hết",
+                "Nêu danh hiệu nhà trường đạt được -> Tắt máy đi ngủ ngay"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Thời gian thành lập -> Truyền thống -> Tấm gương -> Cảm xúc, lời hứa."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c3-chu-de-3",
+      "chapterNumber": 3,
+      "title": "CHỦ ĐỀ 3: CỘNG ĐỒNG ĐỊA PHƯƠNG",
+      "lessons": [
+        {
+          "id": "l9-bai-9",
+          "lessonNumber": 9,
+          "title": "BÀI 9: HOẠT ĐỘNG SẢN XUẤT NÔNG NGHIỆP",
+          "description": "Khám phá các hoạt động sản xuất nông nghiệp và vai trò của nông sản với đời sống",
+          "questions": [
+            {
+              "id": "g3-tnxh-c3-l9-q1",
+              "type": "knowledge",
+              "prompt": "Các hoạt động cấy lúa, nuôi gà, bảo vệ rừng và đánh bắt cá thuộc nhóm sản xuất nào?",
+              "options": [
+                "Hoạt động sản xuất công nghiệp",
+                "Hoạt động sản xuất thủ công",
+                "Hoạt động sản xuất nông nghiệp",
+                "Hoạt động dịch vụ du lịch"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Hoạt động sản xuất nông nghiệp."
+            },
+            {
+              "id": "g3-tnxh-c3-l9-q2",
+              "type": "knowledge",
+              "prompt": "Quả thanh long thuộc nhóm sản phẩm nông nghiệp nào và có vai trò gì?",
+              "options": [
+                "Sản phẩm trồng trọt, cung cấp thức ăn, trái cây tươi và làm hàng hóa",
+                "Sản phẩm chăn nuôi, cung cấp chất đạm",
+                "Sản phẩm công nghiệp khai khoáng",
+                "Sản phẩm thủ công mỹ nghệ"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Sản phẩm trồng trọt, cung cấp thức ăn, trái cây tươi và làm hàng hóa."
+            },
+            {
+              "id": "g3-tnxh-c3-l9-q3",
+              "type": "knowledge",
+              "prompt": "Việc Việt Nam là quốc gia xuất khẩu gạo lớn trên thế giới cho thấy lợi ích gì?",
+              "options": [
+                "Chỉ đủ cung cấp lương thực cho nông dân",
+                "Cung cấp lương thực cho cả nước và xuất khẩu mang lại kinh tế lớn",
+                "Làm cho đất trồng bị cằn cỗi",
+                "Không mang lại lợi ích kinh tế nào"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Cung cấp lương thực cho cả nước và xuất khẩu mang lại kinh tế lớn."
+            },
+            {
+              "id": "g3-tnxh-c3-l9-q4",
+              "type": "knowledge",
+              "prompt": "Gom lá rau già cẩn thận để ủ làm phân bón hữu cơ mang lại tác dụng gì?",
+              "options": [
+                "Tận dụng phụ phẩm làm phân bón, giảm rác thải ra môi trường",
+                "Làm cho khu vực nhà bếp bị bẩn hơn",
+                "Làm cho rau cải nhanh bị hư hỏng",
+                "Để mang đi bán lấy tiền mặt"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Tận dụng phụ phẩm làm phân bón, giảm rác thải ra môi trường."
+            },
+            {
+              "id": "g3-tnxh-c3-l9-q5",
+              "type": "knowledge",
+              "prompt": "Thấy bạn lấy tràn đĩa thức ăn nhưng bỏ dở một nửa, em nên khuyên bạn thế nào?",
+              "options": [
+                "\"Cứ lấy thoải mái, ăn không hết thì bỏ đi!\"",
+                "\"Chỉ nên lấy vừa đủ dùng, không lãng phí công sức bác nông dân!\"",
+                "\"Ăn hết đĩa đó đi nếu không sẽ bị phạt tiền!\"",
+                "Không quan tâm vì đó là việc của người khác"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: \"Chỉ nên lấy vừa đủ dùng, không lãng phí công sức bác nông dân!\"."
+            },
+            {
+              "id": "g3-tnxh-c3-l9-q6",
+              "type": "knowledge",
+              "prompt": "Việc ưu tiên sử dụng sản phẩm \"Nông nghiệp sạch\" mang lại giá trị nào?",
+              "options": [
+                "Giảm hóa chất, cung cấp thực phẩm an toàn, bảo vệ sức khỏe",
+                "Giúp thực phẩm bảo quản cả năm không hỏng",
+                "Làm cho giá thực phẩm rẻ như cho",
+                "Không khác gì sản phẩm thông thường"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Giảm hóa chất, cung cấp thực phẩm an toàn, bảo vệ sức khỏe."
+            }
+          ]
+        },
+        {
+          "id": "l10-bai-10",
+          "lessonNumber": 10,
+          "title": "BÀI 10: HOẠT ĐỘNG SẢN XUẤT THỦ CÔNG VÀ CÔNG NGHIỆP",
+          "description": "Tìm hiểu các ngành sản xuất thủ công, công nghiệp và thói quen tiêu dùng tiết kiệm",
+          "questions": [
+            {
+              "id": "g3-tnxh-c3-l10-q1",
+              "type": "knowledge",
+              "prompt": "Dệt vải lụa chủ yếu dùng tay cùng khung dệt gỗ đơn giản thuộc nhóm sản xuất nào?",
+              "options": [
+                "Sản xuất nông nghiệp",
+                "Sản xuất thủ công",
+                "Sản xuất công nghiệp",
+                "Khai thác khoáng sản"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Sản xuất thủ công."
+            },
+            {
+              "id": "g3-tnxh-c3-l10-q2",
+              "type": "scenario",
+              "prompt": "Vì sao nên ưu tiên chọn chiếc rổ làm bằng mây tre đan thủ công thay vì rổ nhựa?",
+              "options": [
+                "Làm từ nguyên liệu thiên nhiên, bảo vệ môi trường và ủng hộ làng nghề",
+                "Rổ mây tre đan dùng để bán lấy tiền nhanh hơn",
+                "Rổ nhựa dễ bị hư hỏng ngay sau 1 ngày sử dụng",
+                "Rổ nhựa không thể sử dụng để đựng các loại rau"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Làm từ nguyên liệu thiên nhiên, bảo vệ môi trường và ủng hộ làng nghề."
+            },
+            {
+              "id": "g3-tnxh-c3-l10-q3",
+              "type": "scenario",
+              "prompt": "Tủ lạnh, máy giặt, xe máy, thực phẩm đóng hộp do ngành nào tạo ra và có lợi ích gì?",
+              "options": [
+                "Sản xuất nông nghiệp -> Cung cấp rau củ quả tươi",
+                "Sản xuất công nghiệp -> Chế tạo máy móc, chế biến thực phẩm",
+                "Sản xuất thủ công -> Làm hoàn toàn bằng tay",
+                "Lâm nghiệp -> Khai thác cây gỗ trong rừng"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Sản xuất công nghiệp -> Chế tạo máy móc, chế biến thực phẩm."
+            },
+            {
+              "id": "g3-tnxh-c3-l10-q4",
+              "type": "knowledge",
+              "prompt": "Khi thấy bạn xé trang giấy trắng trong vở để gấp máy bay, em nên khuyên bạn thế nào?",
+              "options": [
+                "\"Cậu không được xé vì làm như vậy sẽ bị phạt tiền!\"",
+                "\"Sản xuất giấy tốn nhiều gỗ, cần dùng tiết kiệm để bảo vệ môi trường!\"",
+                "\"Cậu xé giấy sẽ làm cho máy bay không bay cao được!\"",
+                "Mặc kệ bạn và không cần giải thích gì thêm"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: \"Sản xuất giấy tốn nhiều gỗ, cần dùng tiết kiệm để bảo vệ môi trường!\"."
+            },
+            {
+              "id": "g3-tnxh-c3-l10-q5",
+              "type": "scenario",
+              "prompt": "Đã có lợn đất tiết kiệm ở nhà nhưng vẫn đòi mua con mới, lời khuyên nào là tiết kiệm?",
+              "options": [
+                "\"Nên dùng tiếp đồ cũ, chưa cần thiết không mua để tránh lãng phí\"",
+                "\"Cứ mua thêm 5 con nữa về chơi rồi vứt đi!\"",
+                "\"Mua con lợn đất mới để đập con lợn cũ đi\"",
+                "Mua ngay lập tức mà không cần khuyên bảo gì"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: \"Nên dùng tiếp đồ cũ, chưa cần thiết không mua để tránh lãng phí\"."
+            },
+            {
+              "id": "g3-tnxh-c3-l10-q6",
+              "type": "knowledge",
+              "prompt": "Hành động nào khi đi mua sắm thể hiện tiêu dùng tiết kiệm và bảo vệ môi trường?",
+              "options": [
+                "Yêu cầu dùng thật nhiều túi ni-lông nhỏ để bọc riêng",
+                "Mang theo túi vải sử dụng nhiều lần, hạn chế túi ni-lông",
+                "Mua thật nhiều đồ không xài đến rồi vứt vào thùng rác",
+                "Vứt rác vỏ bánh kẹo trực tiếp ra sàn siêu thị"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Mang theo túi vải sử dụng nhiều lần, hạn chế túi ni-lông."
+            }
+          ]
+        },
+        {
+          "id": "l11-bai-11",
+          "lessonNumber": 11,
+          "title": "BÀI 11: DI TÍCH LỊCH SỬ – VĂN HOÁ VÀ CẢNH QUAN THIÊN NHIÊN",
+          "description": "Tự hào và giữ gìn các di tích lịch sử - văn hóa, danh lam thắng cảnh quê hương",
+          "questions": [
+            {
+              "id": "g3-tnxh-c3-l11-q1",
+              "type": "knowledge",
+              "prompt": "Khẳng định nào sau đây là đúng về Bến Nhà Rồng và danh thắng Vịnh Hạ Long?",
+              "options": [
+                "Bến Nhà Rồng là di tích lịch sử; Vịnh Hạ Long là cảnh quan thiên nhiên",
+                "Bến Nhà Rồng là cảnh quan thiên nhiên; Vịnh Hạ Long là di tích lịch sử",
+                "Cả hai địa danh đều là cảnh quan thiên nhiên do con người tạo ra",
+                "Cả hai địa danh đều thuộc nhóm khu sản xuất công nghiệp"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Bến Nhà Rồng là di tích lịch sử; Vịnh Hạ Long là cảnh quan thiên nhiên."
+            },
+            {
+              "id": "g3-tnxh-c3-l11-q2",
+              "type": "scenario",
+              "prompt": "Việc tìm hiểu các di sản thế giới do UNESCO công nhận tại Việt Nam giúp ích gì?",
+              "options": [
+                "Mở rộng hiểu biết, thêm yêu quý và tự hào về vẻ đẹp đất nước",
+                "So sánh giá cả thực phẩm giữa các địa danh du lịch",
+                "Làm cho học sinh chán nản và không muốn ở nhà nữa",
+                "Không mang lại bất kỳ lợi ích thiết thực nào cho học sinh"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Mở rộng hiểu biết, thêm yêu quý và tự hào về vẻ đẹp đất nước."
+            },
+            {
+              "id": "g3-tnxh-c3-l11-q3",
+              "type": "scenario",
+              "prompt": "Khi đến tham quan di tích tâm linh, em cần thực hiện quy định về trang phục ra sao?",
+              "options": [
+                "Mặc quần áo ngắn, đi dép lê và chạy nhảy reo hò",
+                "Mặc lịch sự, kín đáo; đi nhẹ, nói khẽ, không đùa nghịch",
+                "Mở nhạc âm lượng to bằng thiết bị điện thoại cá nhân",
+                "Leo trèo trực tiếp lên các bức tượng để chụp ảnh kỷ niệm"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Mặc lịch sự, kín đáo; đi nhẹ, nói khẽ, không đùa nghịch."
+            },
+            {
+              "id": "g3-tnxh-c3-l11-q4",
+              "type": "knowledge",
+              "prompt": "Hành vi bỏ vỏ que kem và túi ni-lông đúng thùng rác tại khu di tích thể hiện điều gì?",
+              "options": [
+                "Ý thức chấp hành quy định, tôn trọng di tích và giữ vệ sinh",
+                "Sự lãng phí thời gian chơi trong chuyến đi tham quan",
+                "Làm cho khu vực di tích lịch sử bị bẩn thỉu hơn",
+                "Chỉ thực hiện khi thấy có thầy cô giáo đứng quan sát"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Ý thức chấp hành quy định, tôn trọng di tích và giữ vệ sinh."
+            },
+            {
+              "id": "g3-tnxh-c3-l11-q5",
+              "type": "scenario",
+              "prompt": "Thấy bạn định trèo qua hàng rào sắt rờ tay vào hiện vật cổ, em nên xử lý thế nào?",
+              "options": [
+                "Trèo vượt qua hàng rào sắt vào trong cùng bạn cho vui",
+                "Nhắc bạn không được trèo vì làm hỏng hiện vật và vi phạm quy định",
+                "Đứng ở ngoài hô reo cổ vũ cho bạn trèo vào nhanh hơn",
+                "Thấy vậy liền bỏ đi nơi khác và không cần quan tâm"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Nhắc bạn không được trèo vì làm hỏng hiện vật và vi phạm quy định."
+            },
+            {
+              "id": "g3-tnxh-c3-l11-q6",
+              "type": "knowledge",
+              "prompt": "Ý nghĩa lớn nhất của dự án vẽ tranh giới thiệu cảnh quan thiên nhiên quê hương là gì?",
+              "options": [
+                "Tuyên truyền vẻ đẹp quê hương, thể hiện sự tự hào và giữ gìn di sản",
+                "Bán bức tranh vẽ được lấy tiền đi du lịch nơi khác",
+                "Thi đua xem ai vẽ nhanh nhất rồi xé bức tranh đi",
+                "Giúp cho cả nhóm không phải làm các bài tập môn khác"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Tuyên truyền vẻ đẹp quê hương, thể hiện sự tự hào và giữ gìn di sản."
+            }
+          ]
+        },
+        {
+          "id": "l12-bai-12",
+          "lessonNumber": 12,
+          "title": "BÀI 12: ÔN TẬP CHỦ ĐỀ CỘNG ĐỒNG ĐỊA PHƯƠNG",
+          "description": "Củng cố hiểu biết về các ngành nghề sản xuất và di sản văn hóa địa phương",
+          "questions": [
+            {
+              "id": "g3-tnxh-c3-l12-q1",
+              "type": "knowledge",
+              "prompt": "Phân loại các sản phẩm dưới đây vào đúng nhóm ngành sản xuất tương ứng?",
+              "options": [
+                "Lúa cá -> Nông nghiệp; Rổ mây -> Thủ công; Tủ lạnh -> Công nghiệp",
+                "Tủ lạnh -> Nông nghiệp; Lúa gạo -> Thủ công; Rổ mây -> Công nghiệp",
+                "Xe máy -> Nông nghiệp; Trồng rau -> Công nghiệp; Dệt vải -> Khai khoáng",
+                "Cả 3 nhóm ngành sản xuất đều tạo ra các sản phẩm giống hệt nhau"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Lúa cá -> Nông nghiệp; Rổ mây -> Thủ công; Tủ lạnh -> Công nghiệp."
+            },
+            {
+              "id": "g3-tnxh-c3-l12-q2",
+              "type": "scenario",
+              "prompt": "Tắt thiết bị điện, dùng lại đồ cũ và không lãng phí thức ăn mang lại lợi ích gì?",
+              "options": [
+                "Tiết kiệm tiền bạc, bảo vệ tài nguyên và giảm ô nhiễm môi trường",
+                "Làm cho các nhà máy không thể tiếp tục sản xuất đồ dùng",
+                "Làm cho cuộc sống của gia đình trở nên thiếu thốn hơn",
+                "Không mang lại bất kỳ lợi ích thiết thực nào cho gia đình"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Tiết kiệm tiền bạc, bảo vệ tài nguyên và giảm ô nhiễm môi trường."
+            },
+            {
+              "id": "g3-tnxh-c3-l12-q3",
+              "type": "scenario",
+              "prompt": "Sau khi ăn bánh uống nước tại khu di tích, Khoa nên thực hiện hành động nào?",
+              "options": [
+                "Tiện tay nhét các vỏ bánh vào khe đá của khu di tích",
+                "Thu gom gọn gàng vỏ bánh, chai nước và bỏ vào đúng thùng rác",
+                "Vứt toàn bộ vỏ chai xuống khu vực ao hồ xung quanh di tích",
+                "Đợi lúc thầy cô giáo không nhìn thấy thì ném ra đường đi"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Thu gom gọn gàng vỏ bánh, chai nước và bỏ vào đúng thùng rác."
+            },
+            {
+              "id": "g3-tnxh-c3-l12-q4",
+              "type": "knowledge",
+              "prompt": "Thấy đèn quạt ở phòng khách vẫn bật dù không có ai ngồi, Nam nên làm gì?",
+              "options": [
+                "Tắt bớt các đèn và quạt không dùng đến trước khi rời đi",
+                "Mặc kệ thiết bị vì tiền điện hằng tháng do bố mẹ chi trả",
+                "Bật thêm thiết bị tivi lên cho không gian vui vẻ hơn",
+                "Mở to toàn bộ cửa phòng khách rồi đi lên phòng ngủ"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Tắt bớt các đèn và quạt không dùng đến trước khi rời đi."
+            },
+            {
+              "id": "g3-tnxh-c3-l12-q5",
+              "type": "scenario",
+              "prompt": "Thấy vòi nước ở bồn rửa công cộng bị vặn chưa chặt làm chảy lãng phí, An nên làm gì?",
+              "options": [
+                "Chủ động đến xoay vặn chặt lại vòi nước ngay lập tức",
+                "Mở to vòi nước ra thêm nữa rồi lập tức bỏ đi nơi khác",
+                "Chỉ đứng nhìn dòng nước chảy và cười đùa với bạn",
+                "Đứng chờ xem có người khác đến khóa vòi nước hộ không"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Chủ động đến xoay vặn chặt lại vòi nước ngay lập tức."
+            },
+            {
+              "id": "g3-tnxh-c3-l12-q6",
+              "type": "knowledge",
+              "prompt": "Khi đại diện nhóm báo cáo dự án giới thiệu địa phương, em cần thể hiện thái độ gì?",
+              "options": [
+                "Tự tin trình bày rõ ràng, thể hiện tình yêu và sự tự hào quê hương",
+                "Ngượng ngùng chê bai quê hương mình không có gì đẹp",
+                "Nói thật nhanh các số liệu không liên quan rồi đi xuống",
+                "Chỉ đứng im trên bục giảng và không nói bất kỳ câu nào"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Tự tin trình bày rõ ràng, thể hiện tình yêu và sự tự hào quê hương."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c4-chu-de-4",
+      "chapterNumber": 4,
+      "title": "CHỦ ĐỀ 4: THỰC VẬT VÀ ĐỘNG VẬT",
+      "lessons": [
+        {
+          "id": "l13-bai-13",
+          "lessonNumber": 13,
+          "title": "BÀI 13: MỘT SỐ BỘ PHẬN CỦA THỰC VẬT",
+          "description": "Nhận biết đặc điểm rễ, thân, lá, hoa, quả của các loài thực vật xung quanh",
+          "questions": [
+            {
+              "id": "g3-tnxh-c4-l13-q1",
+              "type": "knowledge",
+              "prompt": "Cây bưởi có rễ chính to đâm sâu, cây lúa có nhiều rễ dài mọc chụm. Kết luận nào đúng?",
+              "options": [
+                "Cây bưởi có rễ chùm, cây lúa có rễ cọc",
+                "Cây bưởi có rễ cọc, cây lúa có rễ chùm",
+                "Cả hai loại cây đều thuộc nhóm rễ cọc",
+                "Cả hai loại cây đều thuộc nhóm rễ chùm"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Cây bưởi có rễ cọc, cây lúa có rễ chùm."
+            },
+            {
+              "id": "g3-tnxh-c4-l13-q2",
+              "type": "knowledge",
+              "prompt": "Nhóm phân loại đặc điểm thân của cây mít, cây mướp, cây dưa hấu và lúa nào đúng?",
+              "options": [
+                "Mít (thân gỗ, đứng); Mướp (thân leo); Dưa hấu (thân bò); Lúa (thân thảo, đứng)",
+                "Mít (thân bò); Mướp (thân đứng); Dưa hấu (thân leo); Lúa (thân gỗ)",
+                "Cả 4 loại cây này đều thuộc nhóm thực vật thân gỗ",
+                "Cả 4 loại cây này đều thuộc nhóm thực vật thân bò"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Mít (thân gỗ, đứng); Mướp (thân leo); Dưa hấu (thân bò); Lúa (thân thảo, đứng)."
+            },
+            {
+              "id": "g3-tnxh-c4-l13-q3",
+              "type": "knowledge",
+              "prompt": "Ba bộ phận chính cấu tạo nên một chiếc lá cây (như lá bàng) lần lượt là gì?",
+              "options": [
+                "Cuống lá, phiến lá và các đường gân lá",
+                "Rễ lá, thân lá và các bông hoa lá",
+                "Đài lá, cánh lá và các nhị lá",
+                "Vỏ lá, thịt lá và các hạt lá"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Cuống lá, phiến lá và các đường gân lá."
+            },
+            {
+              "id": "g3-tnxh-c4-l13-q4",
+              "type": "knowledge",
+              "prompt": "Quan sát lá lúa, lá sen, lá thông và lá huyết dụ giúp em rút ra nhận xét gì?",
+              "options": [
+                "Tất cả các loài cây đều có hình dạng lá giống nhau",
+                "Lá cây đa dạng về hình dạng, kích thước và màu sắc",
+                "Lá cây không bao giờ có màu đỏ hoặc màu vàng",
+                "Lá cây chỉ có duy nhất một hình dạng là hình tròn"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Lá cây đa dạng về hình dạng, kích thước và màu sắc."
+            },
+            {
+              "id": "g3-tnxh-c4-l13-q5",
+              "type": "knowledge",
+              "prompt": "Các bộ phận chính thường có của một bông hoa và một quả lần lượt bao gồm những gì?",
+              "options": [
+                "Hoa (đài, cánh, nhị, nhụy); Quả (vỏ, thịt, hạt)",
+                "Hoa (rễ, thân, lá); Quả (cành, lá, hoa)",
+                "Hoa chỉ có cánh hoa; Quả chỉ chứa hạt",
+                "Hoa và quả không chứa các bộ phận bên trong"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Hoa (đài, cánh, nhị, nhụy); Quả (vỏ, thịt, hạt)."
+            },
+            {
+              "id": "g3-tnxh-c4-l13-q6",
+              "type": "knowledge",
+              "prompt": "Khi ghi chép đặc điểm các bộ phận của cây cau, mô tả nào sau đây là chuẩn xác nhất?",
+              "options": [
+                "Rễ cọc, thân bò, lá tròn nhỏ, hoa đỏ, quả thịt mềm",
+                "Rễ chùm, thân đứng, lá dài, hoa vàng nhạt, quả xanh",
+                "Rễ cọc, thân leo, lá màu đỏ, không có hoa quả",
+                "Cây cau là loài thực vật không có rễ và thân"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Rễ chùm, thân đứng, lá dài, hoa vàng nhạt, quả xanh."
+            }
+          ]
+        },
+        {
+          "id": "l14-bai-14",
+          "lessonNumber": 14,
+          "title": "BÀI 14: CHỨC NĂNG MỘT SỐ BỘ PHẬN CỦA THỰC VẬT",
+          "description": "Tìm hiểu chức năng hấp thụ, quang hợp, hô hấp và sinh sản của các bộ phận cây",
+          "questions": [
+            {
+              "id": "g3-tnxh-c4-l14-q1",
+              "type": "knowledge",
+              "prompt": "Vì sao khi chăm sóc cây cần tưới nước và bón phân vào gốc thay vì tưới ngọn?",
+              "options": [
+                "Rễ nằm trong đất hút nước và khoáng chất, giúp cây đứng vững",
+                "Tưới nước lên ngọn sẽ làm gãy hết các cành hoa của cây",
+                "Thân cây chỉ có chức năng nâng đỡ chứ không truyền nước",
+                "Tưới vào gốc hay tưới lên ngọn cũng mang lại kết quả giống nhau"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Rễ nằm trong đất hút nước và khoáng chất, giúp cây đứng vững."
+            },
+            {
+              "id": "g3-tnxh-c4-l14-q2",
+              "type": "knowledge",
+              "prompt": "Cắm cành hoa cúc bị héo vào lọ nước một thời gian thấy tươi lại chứng minh điều gì?",
+              "options": [
+                "Thân cây vận chuyển nước từ lọ lên cành lá giúp hoa tươi",
+                "Thân cây tự tạo ra nguồn nước mới để nuôi dưỡng bông hoa",
+                "Thân cây đang thực hiện quá trình quang hợp ngoài ánh sáng",
+                "Thân cây giúp hạt mọc thành cây mới trong môi trường nước"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Thân cây vận chuyển nước từ lọ lên cành lá giúp hoa tươi."
+            },
+            {
+              "id": "g3-tnxh-c4-l14-q3",
+              "type": "knowledge",
+              "prompt": "Trùm túi ni-lông kín lên nhánh cây xanh ngoài nắng thấy đọng nước chứng tỏ điều gì?",
+              "options": [
+                "Lá cây đang thực hiện chức năng thoát hơi nước",
+                "Lá cây đang thực hiện chức năng tạo ra hạt giống",
+                "Lá cây đang hút nước từ không khí vào trong túi",
+                "Túi ni-lông tự tiết ra các hạt nước trên bề mặt"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Lá cây đang thực hiện chức năng thoát hơi nước."
+            },
+            {
+              "id": "g3-tnxh-c4-l14-q4",
+              "type": "knowledge",
+              "prompt": "Vì sao không nên để nhiều cây xanh trong phòng ngủ đóng kín cửa vào ban đêm?",
+              "options": [
+                "Ban đêm cây hô hấp hút ô-xi, thải các-bô-níc gây thiếu khí",
+                "Cây xanh sẽ tự chuyển hóa thành cây thân gỗ vào ban đêm",
+                "Rễ cây sẽ tự bò ra ngoài chậu nhựa vào thời gian ban đêm",
+                "Ban đêm cây xanh sẽ làm hư hỏng các đồ đạc trong phòng ngủ"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Ban đêm cây hô hấp hút ô-xi, thải các-bô-níc gây thiếu khí."
+            },
+            {
+              "id": "g3-tnxh-c4-l14-q5",
+              "type": "knowledge",
+              "prompt": "Chức năng quan trọng nhất của hoa và quả đối với sự phát triển của cây là gì?",
+              "options": [
+                "Hoa tạo quả; Quả chứa hạt để mọc thành cây mới",
+                "Hoa và quả chỉ dùng trang trí chứ không duy trì giống",
+                "Hoa hút nước trong đất, quả giúp cây hô hấp hằng ngày",
+                "Quả giúp cây bám chặt vào lòng đất không bị gãy đổ"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Hoa tạo quả; Quả chứa hạt để mọc thành cây mới."
+            },
+            {
+              "id": "g3-tnxh-c4-l14-q6",
+              "type": "knowledge",
+              "prompt": "Thiết kế hộp giấy gửi tặng cây con đi xa thế nào để cây không bị hư hỏng?",
+              "options": [
+                "Đục lỗ nhỏ cho cây trao đổi khí và chọn kích thước vừa vặn",
+                "Dán kín tất cả các góc hộp không cho không khí lọt vào",
+                "Cắt bỏ hết rễ và thân cây trước khi xếp gọn vào hộp",
+                "Đổ đầy nước vào trong hộp giấy rồi đậy nắp kín lại"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Đục lỗ nhỏ cho cây trao đổi khí và chọn kích thước vừa vặn."
+            }
+          ]
+        },
+        {
+          "id": "l15-bai-15",
+          "lessonNumber": 15,
+          "title": "BÀI 15: MỘT SỐ BỘ PHẬN CỦA ĐỘNG VẬT VÀ CHỨC NĂNG CỦA CHÚNG",
+          "description": "Khám phá các lớp che phủ bên ngoài và cơ quan di chuyển của thế giới động vật",
+          "questions": [
+            {
+              "id": "g3-tnxh-c4-l15-q1",
+              "type": "knowledge",
+              "prompt": "Quan sát cá chép, chim bồ câu, mèo và rùa, kết luận nào về lớp che phủ bên ngoài là đúng?",
+              "options": [
+                "Cá chép (vảy), bồ câu (lông vũ), mèo (lông mao), rùa (mai cứng)",
+                "Cá chép (lông mao), bồ câu (vảy), mèo (vỏ cứng), rùa (lông vũ)",
+                "Cả 4 con vật đều có lớp che phủ bên ngoài giống hệt nhau",
+                "Cả 4 con vật đều không có lớp che phủ bảo vệ bên ngoài"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Cá chép (vảy), bồ câu (lông vũ), mèo (lông mao), rùa (mai cứng)."
+            },
+            {
+              "id": "g3-tnxh-c4-l15-q2",
+              "type": "knowledge",
+              "prompt": "Lớp che phủ bên ngoài cơ thể động vật có chức năng chính là gì?",
+              "options": [
+                "Bảo vệ cơ thể, giữ ấm và tránh các tác động từ môi trường",
+                "Chỉ dùng làm đẹp cho vẻ bề ngoài của các con vật",
+                "Giúp cho con vật sinh sống mà không cần ăn uống",
+                "Làm cho con vật di chuyển chậm hơn trong tự nhiên"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Bảo vệ cơ thể, giữ ấm và tránh các tác động từ môi trường."
+            },
+            {
+              "id": "g3-tnxh-c4-l15-q3",
+              "type": "knowledge",
+              "prompt": "Cơ quan di chuyển tương ứng của đại bàng, cá sấu và thỏ lần lượt là gì?",
+              "options": [
+                "Cánh (đại bàng), vây và đuôi (cá sấu), chân (thỏ)",
+                "Chân (đại bàng), cánh (cá sấu), vây (thỏ)",
+                "Vỏ cứng (đại bàng), lông vũ (cá sấu), vảy (thỏ)",
+                "Cả 3 con vật đều sử dụng vây để di chuyển"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Cánh (đại bàng), vây và đuôi (cá sấu), chân (thỏ)."
+            },
+            {
+              "id": "g3-tnxh-c4-l15-q4",
+              "type": "knowledge",
+              "prompt": "Phân loại vịt, cá rô, ngựa, bướm theo cơ quan di chuyển, cách xếp nào đúng?",
+              "options": [
+                "Cánh (vịt, bướm); Vây (cá rô); Chân (ngựa, vịt)",
+                "Vây (ngựa); Chân (cá rô); Cánh (không có)",
+                "Tất cả các con vật trên đều di chuyển bằng cánh",
+                "Không thể phân loại các con vật theo nhóm di chuyển"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Cánh (vịt, bướm); Vây (cá rô); Chân (ngựa, vịt)."
+            },
+            {
+              "id": "g3-tnxh-c4-l15-q5",
+              "type": "knowledge",
+              "prompt": "Điểm khác biệt ở cơ quan di chuyển giúp vịt bơi được dưới nước còn gà thì không là gì?",
+              "options": [
+                "Chân vịt có màng nối giữa các ngón, chân gà không có màng",
+                "Con vịt có 4 chân còn con gà chỉ có 2 chân",
+                "Con gà có vây còn con vịt có bộ mai cứng",
+                "Cả hai con vật đều sở hữu đặc điểm giống hệt nhau"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Chân vịt có màng nối giữa các ngón, chân gà không có màng."
+            },
+            {
+              "id": "g3-tnxh-c4-l15-q6",
+              "type": "knowledge",
+              "prompt": "Tiêu chí cơ bản để lập sơ đồ phân loại động vật khoa học và dễ hiểu là gì?",
+              "options": [
+                "Phân loại theo cơ quan di chuyển và lớp bao phủ bên ngoài",
+                "Phân loại theo màu sắc đôi mắt của từng con vật",
+                "Phân loại dựa trên giá tiền mua các con vật",
+                "Phân loại dựa trên độ tuổi đời của từng con vật"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Phân loại theo cơ quan di chuyển và lớp bao phủ bên ngoài."
+            }
+          ]
+        },
+        {
+          "id": "l16-bai-16",
+          "lessonNumber": 16,
+          "title": "BÀI 16: SỬ DỤNG HỢP LÍ THỰC VẬT VÀ ĐỘNG VẬT",
+          "description": "Ý thức sử dụng hợp lý, tiết kiệm và bảo vệ các loài thực vật, động vật",
+          "questions": [
+            {
+              "id": "g3-tnxh-c4-l16-q1",
+              "type": "knowledge",
+              "prompt": "Dùng sữa tươi, ép dầu gấc, tết chổi rơm và ủ phân từ rau củ thừa cho thấy điều gì?",
+              "options": [
+                "Thực, động vật cung cấp thức ăn, đồ dùng và nguyên liệu",
+                "Con người chỉ sử dụng động vật chứ không dùng thực vật",
+                "Các sản phẩm từ thực vật và động vật đều không có giá trị",
+                "Chỉ có cây gỗ mới tạo ra sản phẩm hữu ích cho con người"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Thực, động vật cung cấp thức ăn, đồ dùng và nguyên liệu."
+            },
+            {
+              "id": "g3-tnxh-c4-l16-q2",
+              "type": "scenario",
+              "prompt": "Hành vi nào dưới đây thể hiện việc sử dụng tiết kiệm giấy vở trong học tập?",
+              "options": [
+                "Xé giấy trắng trong vở ra làm máy bay, gấp thuyền giấy",
+                "Viết cẩn thận, dùng cả hai mặt và giữ lại giấy cũ làm nháp",
+                "Viết được vài dòng rồi bỏ cả cuốn vở mới đi mua vở khác",
+                "Vứt tất cả vở cũ vào thùng rác thải nhựa chung của lớp"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Viết cẩn thận, dùng cả hai mặt và giữ lại giấy cũ làm nháp."
+            },
+            {
+              "id": "g3-tnxh-c4-l16-q3",
+              "type": "scenario",
+              "prompt": "Lấy bát cơm đầy nhưng ăn vài miếng rồi đổ đi là hành vi không nên vì sao?",
+              "options": [
+                "Gây lãng phí thức ăn, công sức lao động và tiền bạc",
+                "Vì đổ thức ăn đi sẽ làm cho bát bị nứt vỡ ngay",
+                "Vì làm như vậy sẽ giúp cho món ăn trở nên ngon hơn",
+                "Việc làm này hoàn toàn không có ảnh hưởng gì xấu"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Gây lãng phí thức ăn, công sức lao động và tiền bạc."
+            },
+            {
+              "id": "g3-tnxh-c4-l16-q4",
+              "type": "knowledge",
+              "prompt": "Sửa chiếc quần jeans cũ thành chiếc túi xách nhỏ mang lại ý nghĩa gì?",
+              "options": [
+                "Tận dụng đồ cũ thành sản phẩm có ích, tiết kiệm và giảm rác",
+                "Làm cho chiếc quần jeans bị hư hỏng hoàn toàn không dùng được",
+                "Tốn thời gian làm việc mà không mang lại bất kỳ lợi ích nào",
+                "Để mang đi bán lấy thật nhiều tiền từ người tiêu dùng"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Tận dụng đồ cũ thành sản phẩm có ích, tiết kiệm và giảm rác."
+            },
+            {
+              "id": "g3-tnxh-c4-l16-q5",
+              "type": "scenario",
+              "prompt": "Bố mẹ định ghé vào nhà hàng bán thịt thú rừng, chim trời, Minh nên nói gì?",
+              "options": [
+                "\"Bố mẹ không nên ăn vì cần bảo vệ động vật hoang dã ạ!\"",
+                "\"Bố mẹ gọi thật nhiều món thịt thú rừng cho con ăn nhé!\"",
+                "Tỏ thái độ im lặng và đi vào nhà hàng ăn cùng gia đình",
+                "Tự ý bỏ chạy đi chỗ khác chơi mà không nói với bố mẹ"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: \"Bố mẹ không nên ăn vì cần bảo vệ động vật hoang dã ạ!\"."
+            },
+            {
+              "id": "g3-tnxh-c4-l16-q6",
+              "type": "knowledge",
+              "prompt": "Gom vỏ hoa quả, gốc rau củ thừa và vỏ trứng để làm gì là hợp lý nhất?",
+              "options": [
+                "Tùy ý vứt bừa bãi tất cả ra khu vực đường làng ngõ xóm",
+                "Đem ủ làm phân bón hữu cơ bón cho cây trồng trong vườn",
+                "Đem nhóm lửa đốt cháy ngay trực tiếp ở trong bếp",
+                "Xả trực tiếp tất cả rác thải xuống các cống rãnh"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Đem ủ làm phân bón hữu cơ bón cho cây trồng trong vườn."
+            }
+          ]
+        },
+        {
+          "id": "l17-bai-17",
+          "lessonNumber": 17,
+          "title": "BÀI 17: ÔN TẬP CHỦ ĐỀ THỰC VẬT VÀ ĐỘNG VẬT",
+          "description": "Ôn tập và hệ thống hóa kiến thức về thế giới thực vật và động vật",
+          "questions": [
+            {
+              "id": "g3-tnxh-c4-l17-q1",
+              "type": "knowledge",
+              "prompt": "Khẳng định nào dưới đây mô tả đúng nhất về chức năng các bộ phận của thực vật?",
+              "options": [
+                "Rễ hút nước; Thân vận chuyển; Lá quang hợp, hô hấp; Hoa tạo quả",
+                "Rễ giúp cây quang hợp; Thân hút nước; Lá giúp nâng đỡ cây",
+                "Cây chỉ cần có lá là có thể phát triển bình thường",
+                "Hoa và quả giúp cây cắm sâu vào lòng đất không bị đổ"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Rễ hút nước; Thân vận chuyển; Lá quang hợp, hô hấp; Hoa tạo quả."
+            },
+            {
+              "id": "g3-tnxh-c4-l17-q2",
+              "type": "knowledge",
+              "prompt": "Việc phân loại cây xoài (thân gỗ, rễ cọc) và cây lúa (thân thảo, rễ chùm) cho thấy điều gì?",
+              "options": [
+                "Sự đa dạng về hình dạng, kích thước và đặc điểm của thực vật",
+                "Cây xoài và cây lúa không thuộc nhóm thực vật trong tự nhiên",
+                "Tất cả các loài cây đều có các bộ phận giống hệt nhau",
+                "Cây xoài là loài thực vật hoàn toàn không có bộ phận rễ"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Sự đa dạng về hình dạng, kích thước và đặc điểm của thực vật."
+            },
+            {
+              "id": "g3-tnxh-c4-l17-q3",
+              "type": "knowledge",
+              "prompt": "Loài động vật nào có lớp bao phủ bên ngoài là lông vũ và cơ quan di chuyển là cánh?",
+              "options": [
+                "Con cá chép (lớp bao phủ vảy, di chuyển bằng vây)",
+                "Con chim bồ câu (lớp bao phủ lông vũ, di chuyển bằng cánh)",
+                "Con mèo (lớp bao phủ lông mao, di chuyển bằng chân)",
+                "Con rùa (lớp bao phủ vỏ cứng, di chuyển bằng chân)"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Con chim bồ câu (lớp bao phủ lông vũ, di chuyển bằng cánh)."
+            },
+            {
+              "id": "g3-tnxh-c4-l17-q4",
+              "type": "knowledge",
+              "prompt": "Khi mẹ hỏi về quyển vở cũ còn nhiều trang giấy trắng, An nên trả lời thế nào?",
+              "options": [
+                "\"Con giữ lại làm nháp để tiết kiệm giấy, bảo vệ cây rừng ạ!\"",
+                "\"Con bỏ đi luôn cho rộng góc bàn học của con ạ!\"",
+                "\"Con sẽ xé tất cả các trang ra làm máy bay đồ chơi ạ!\"",
+                "\"Con không cần sử dụng đến các trang giấy nháp ạ!\""
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: \"Con giữ lại làm nháp để tiết kiệm giấy, bảo vệ cây rừng ạ!\"."
+            },
+            {
+              "id": "g3-tnxh-c4-l17-q5",
+              "type": "knowledge",
+              "prompt": "Gom phân gà, vỏ trứng và vỏ trái cây ủ thành phân bón hữu cơ mang lại lợi ích gì?",
+              "options": [
+                "Tận dụng phụ phẩm làm phân bón, giảm ô nhiễm và tiết kiệm",
+                "Làm cho các cây ăn quả trong vườn bị héo khô hoàn toàn",
+                "Tốn thời gian làm việc mà không mang lại tác dụng gì",
+                "Làm bẩn thỉu môi trường sống xung quanh khu vực nhà"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Tận dụng phụ phẩm làm phân bón, giảm ô nhiễm và tiết kiệm."
+            },
+            {
+              "id": "g3-tnxh-c4-l17-q6",
+              "type": "knowledge",
+              "prompt": "Hành động nào nên đưa vào bức tranh tuyên truyền \"Sử dụng hợp lý thực vật và động vật\"?",
+              "options": [
+                "Không lãng phí thức ăn, không ăn thú rừng, tận dụng giấy cũ",
+                "Rủ nhau đi vào trong rừng để săn bắt các loài chim trời",
+                "Lấy ra thật nhiều thức ăn trong bữa ăn rồi bỏ dở",
+                "Xé các trang vở mới ra để làm các loại đồ chơi"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Không lãng phí thức ăn, không ăn thú rừng, tận dụng giấy cũ."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c5-chu-de-5",
+      "chapterNumber": 5,
+      "title": "CHỦ ĐỀ 5: CON NGƯỜI VÀ SỨC KHOẺ",
+      "lessons": [
+        {
+          "id": "l18-bai-18",
+          "lessonNumber": 18,
+          "title": "BÀI 18: CƠ QUAN TIÊU HOÁ",
+          "description": "Cấu tạo và chức năng của các cơ quan trong hệ tiêu hóa của con người",
+          "questions": [
+            {
+              "id": "g3-tnxh-c5-l18-q1",
+              "type": "knowledge",
+              "prompt": "Thức ăn khi vào cơ thể sẽ di chuyển lần lượt qua các bộ phận nào của ống tiêu hóa?",
+              "options": [
+                "Miệng -> Thực quản -> Dạ dày -> Ruột non -> Ruột già -> Hậu môn",
+                "Miệng -> Ruột non -> Dạ dày -> Thực quản -> Hậu môn",
+                "Thực quản -> Miệng -> Ruột già -> Ruột non -> Dạ dày",
+                "Miệng -> Gan -> Túi mật -> Hậu môn"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Miệng -> Thực quản -> Dạ dày -> Ruột non -> Ruột già -> Hậu môn."
+            },
+            {
+              "id": "g3-tnxh-c5-l18-q2",
+              "type": "knowledge",
+              "prompt": "Gan, túi mật và tuyến nước bọt thuộc nhóm bộ phận nào trong cơ quan tiêu hóa?",
+              "options": [
+                "Thuộc nhóm các cơ quan của ống tiêu hóa",
+                "Thuộc tuyến tiêu hóa hỗ trợ biến đổi thức ăn",
+                "Thuộc nhóm các cơ quan của hệ hô hấp",
+                "Thuộc nhóm các cơ quan của hệ vận động"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Thuộc tuyến tiêu hóa hỗ trợ biến đổi thức ăn."
+            },
+            {
+              "id": "g3-tnxh-c5-l18-q3",
+              "type": "knowledge",
+              "prompt": "Việc tập thói quen nhai kỹ thức ăn ở khoang miệng mang lại lợi ích trực tiếp nào?",
+              "options": [
+                "Nghiền nhỏ thức ăn, tẩm ướt nước bọt giúp giảm gánh nặng co bóp cho dạ dày",
+                "Giúp thức ăn di chuyển thẳng xuống ruột già mà không cần đi qua dạ dày",
+                "Làm cho cơ quan dạ dày ngưng hoạt động nhào trộn hoàn toàn",
+                "Chỉ nhằm mục đích kéo dài thời gian diễn ra bữa ăn hằng ngày"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Nghiền nhỏ thức ăn, tẩm ướt nước bọt giúp giảm gánh nặng co bóp cho dạ dày."
+            },
+            {
+              "id": "g3-tnxh-c5-l18-q4",
+              "type": "knowledge",
+              "prompt": "Quá trình biến đổi quan trọng nhất diễn ra đối với thức ăn tại vị trí ruột non là gì?",
+              "options": [
+                "Thức ăn chỉ lưu giữ tạm thời mà không có bất kỳ sự biến đổi nào",
+                "Biến đổi thành chất dinh dưỡng và hấp thu vào máu nuôi cơ thể",
+                "Biến đổi toàn bộ thức ăn thành chất cặn bã để thải ra ngoài ngay",
+                "Tuyến nước bọt tiết ra nhiều hơn để hòa tan toàn bộ lượng thức ăn"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Biến đổi thành chất dinh dưỡng và hấp thu vào máu nuôi cơ thể."
+            },
+            {
+              "id": "g3-tnxh-c5-l18-q5",
+              "type": "knowledge",
+              "prompt": "Chức năng chính của ruột già trong quá trình tiêu hóa và thải chất cặn bã là gì?",
+              "options": [
+                "Hấp thu nước từ cặn bã, tạo thành phân rồi đưa đến hậu môn thải ra ngoài",
+                "Tiếp tục biến đổi và tạo ra nguồn thức ăn mới cho cơ thể",
+                "Tiết ra nhiều nước bọt để diệt các loại vi khuẩn có hại",
+                "Thực hiện co bóp mạnh để nghiền nát các loại thức ăn dạng cứng"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Hấp thu nước từ cặn bã, tạo thành phân rồi đưa đến hậu môn thải ra ngoài."
+            },
+            {
+              "id": "g3-tnxh-c5-l18-q6",
+              "type": "knowledge",
+              "prompt": "Để cải thiện tình trạng hay bị táo bón và khó đi đại tiện, em nên thực hiện lời khuyên nào?",
+              "options": [
+                "Uống đủ nước, ăn nhiều rau xanh, trái cây có xơ và đi đại tiện đều đặn",
+                "Nhịn ăn uống hoàn toàn để cơ thể không tạo ra chất cặn bã",
+                "Chỉ tập trung ăn các loại thịt, bánh kẹo và tuyệt đối không ăn rau",
+                "Uống nhiều nước ngọt có gas để thay thế hoàn toàn cho nước lọc"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Uống đủ nước, ăn nhiều rau xanh, trái cây có xơ và đi đại tiện đều đặn."
+            }
+          ]
+        },
+        {
+          "id": "l19-bai-19",
+          "lessonNumber": 19,
+          "title": "BÀI 19: CHĂM SÓC VÀ BẢO VỆ CƠ QUAN TIÊU HOÁ",
+          "description": "Rèn luyện thói quen ăn uống khoa học, vệ sinh để chăm sóc hệ tiêu hóa khỏe mạnh",
+          "questions": [
+            {
+              "id": "g3-tnxh-c5-l19-q1",
+              "type": "knowledge",
+              "prompt": "Loại thực phẩm nào dưới đây thực sự có lợi cho cơ quan tiêu hóa?",
+              "options": [
+                "Bim bim và nước ngọt có gas",
+                "Sữa tươi, rau xanh và trái cây tươi",
+                "Kẹo ngọt và đồ chiên rán nhiều dầu mỡ",
+                "Thức ăn cay nóng và các loại ô-mai"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Sữa tươi, rau xanh và trái cây tươi."
+            },
+            {
+              "id": "g3-tnxh-c5-l19-q2",
+              "type": "scenario",
+              "prompt": "Ăn quả chưa rửa hoặc thức ăn ôi thiu gây ra tác hại gì cho cơ quan tiêu hóa?",
+              "options": [
+                "Dễ bị ngộ độc, đau bụng, tiêu chảy và mắc bệnh giun sán",
+                "Giúp cho dạ dày thực hiện co bóp tốt hơn",
+                "Giúp cơ thể hấp thu chất dinh dưỡng nhanh hơn",
+                "Không gây bất kỳ ảnh hưởng nào đến sức khỏe"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Dễ bị ngộ độc, đau bụng, tiêu chảy và mắc bệnh giun sán."
+            },
+            {
+              "id": "g3-tnxh-c5-l19-q3",
+              "type": "scenario",
+              "prompt": "Vì sao không nên vận động mạnh hay chạy nhảy ngay sau khi vừa ăn no?",
+              "options": [
+                "Cản trở dạ dày co bóp tiêu hóa, dễ gây đau sóc bụng",
+                "Khiến cho thức ăn bị trào ngược ra ngoài ngay lập tức",
+                "Vì làm cho cơ thể nhanh buồn ngủ hơn",
+                "Việc làm này hoàn toàn không có lý do nào cả"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Cản trở dạ dày co bóp tiêu hóa, dễ gây đau sóc bụng."
+            },
+            {
+              "id": "g3-tnxh-c5-l19-q4",
+              "type": "knowledge",
+              "prompt": "Rửa tay bằng xà phòng trước khi ăn nhằm mục đích gì cho hệ tiêu hóa?",
+              "options": [
+                "Loại bỏ vi khuẩn và trứng giun không chui vào đường tiêu hóa",
+                "Giúp đôi bàn tay có mùi thơm để ăn ngon miệng hơn",
+                "Chỉ nhằm mục đích làm mát cho đôi bàn tay",
+                "Làm cho các món ăn trên bàn không bị nguội đi"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Loại bỏ vi khuẩn và trứng giun không chui vào đường tiêu hóa."
+            },
+            {
+              "id": "g3-tnxh-c5-l19-q5",
+              "type": "scenario",
+              "prompt": "Ngửi thấy đĩa thức ăn thừa từ hôm qua có mùi và màu sắc lạ, em nên làm gì?",
+              "options": [
+                "Cứ ăn tiếp cho đỡ lãng phí thức ăn của gia đình",
+                "Báo người lớn thức ăn đã hỏng và không tiếp tục ăn",
+                "Cất đĩa thức ăn vào tủ lạnh để dành chiều ăn tiếp",
+                "Đổ thêm nhiều nước mắm vào cho hết mùi rồi ăn"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Báo người lớn thức ăn đã hỏng và không tiếp tục ăn."
+            },
+            {
+              "id": "g3-tnxh-c5-l19-q6",
+              "type": "knowledge",
+              "prompt": "Thói quen ăn uống khoa học nào giúp bảo vệ cơ quan tiêu hóa hằng ngày?",
+              "options": [
+                "Ăn đúng giờ, đủ chất, nhai kỹ, ăn chín uống sôi, nghỉ ngơi sau ăn",
+                "Bỏ bữa ăn sáng, trưa ăn thật nhiều rồi tối nhịn ăn",
+                "Vừa ăn vừa xem tivi, chơi game và ăn thật nhanh",
+                "Thường xuyên ăn đồ chiên rán và uống nước ngọt có gas"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Ăn đúng giờ, đủ chất, nhai kỹ, ăn chín uống sôi, nghỉ ngơi sau ăn."
+            }
+          ]
+        },
+        {
+          "id": "l20-bai-20",
+          "lessonNumber": 20,
+          "title": "BÀI 20: CƠ QUAN TUẦN HOÀN",
+          "description": "Cấu tạo và chức năng tuần hoàn máu của tim và hệ thống mạch máu",
+          "questions": [
+            {
+              "id": "g3-tnxh-c5-l20-q1",
+              "type": "knowledge",
+              "prompt": "Đặt tay lên ngực trái thấy nhịp rung đập liên tục là do bộ phận nào tạo ra?",
+              "options": [
+                "Do dạ dày đang co bóp nhào trộn thức ăn",
+                "Do tim đập co bóp đẩy máu lưu thông trong mạch",
+                "Do phổi đang thực hiện trao đổi không khí",
+                "Do các đốt xương cột sống đang cử động"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Do tim đập co bóp đẩy máu lưu thông trong mạch."
+            },
+            {
+              "id": "g3-tnxh-c5-l20-q2",
+              "type": "knowledge",
+              "prompt": "Cơ quan tuần hoàn gồm những bộ phận chính nào cấu tạo thành?",
+              "options": [
+                "Tim và hệ thống các mạch máu lưu thông",
+                "Miệng, thực quản, dạ dày và ruột",
+                "Không khí, phổi và đường khí quản",
+                "Não bộ, tủy sống và dây thần kinh"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Tim và hệ thống các mạch máu lưu thông."
+            },
+            {
+              "id": "g3-tnxh-c5-l20-q3",
+              "type": "knowledge",
+              "prompt": "Mạch máu nào đưa máu từ tim đi và mạch nào đưa máu từ cơ quan về tim?",
+              "options": [
+                "Động mạch đưa máu đi, tĩnh mạch đưa máu về",
+                "Tĩnh mạch đưa máu đi, động mạch đưa máu về",
+                "Mao mạch chịu trách nhiệm co bóp thay cho tim",
+                "Động mạch và tĩnh mạch chỉ đưa máu trở về tim"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Động mạch đưa máu đi, tĩnh mạch đưa máu về."
+            },
+            {
+              "id": "g3-tnxh-c5-l20-q4",
+              "type": "knowledge",
+              "prompt": "Chức năng quan trọng nhất của cơ quan tuần hoàn đối với cơ thể là gì?",
+              "options": [
+                "Biến đổi thức ăn thành chất dinh dưỡng dạng lỏng",
+                "Vận chuyển ô-xi, dinh dưỡng nuôi cơ thể và thu chất thải",
+                "Điều khiển mọi suy nghĩ và cảm xúc của con người",
+                "Lọc bớt nước thải ra khỏi cơ thể qua đường tiểu"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Vận chuyển ô-xi, dinh dưỡng nuôi cơ thể và thu chất thải."
+            },
+            {
+              "id": "g3-tnxh-c5-l20-q5",
+              "type": "knowledge",
+              "prompt": "So sánh nhịp đập của mạch cổ tay khi ngồi yên và sau khi chạy nhảy vận động?",
+              "options": [
+                "Nhịp đập khi ngồi yên cao hơn khi vận động",
+                "Nhịp đập sau khi vận động tăng cao hơn ngồi yên",
+                "Nhịp đập ở cả hai trạng thái bằng nhau hoàn toàn",
+                "Mạch cổ tay sẽ ngừng đập hoàn toàn sau vận động"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Nhịp đập sau khi vận động tăng cao hơn ngồi yên."
+            },
+            {
+              "id": "g3-tnxh-c5-l20-q6",
+              "type": "knowledge",
+              "prompt": "Bác sĩ đo nhịp tim trẻ em (88 lần/phút) cao hơn người lớn (72 lần/phút) do đâu?",
+              "options": [
+                "Nhịp tim bình thường của trẻ em cao hơn người lớn",
+                "Vì cơ thể trẻ em đang bị mệt nên tim đập nhanh",
+                "Vì người lớn không có tim nên nhịp đập thấp hơn",
+                "Do thiết bị đo nhịp tim bị sai lệch kết quả"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Nhịp tim bình thường của trẻ em cao hơn người lớn."
+            }
+          ]
+        },
+        {
+          "id": "l21-bai-21",
+          "lessonNumber": 21,
+          "title": "BÀI 21: CHĂM SÓC VÀ BẢO VỆ CƠ QUAN TUẦN HOÀN",
+          "description": "Các biện pháp bảo vệ tim mạch, phòng tránh các bệnh tim và thấp tim nguy hiểm",
+          "questions": [
+            {
+              "id": "g3-tnxh-c5-l21-q1",
+              "type": "knowledge",
+              "prompt": "Loại thức ăn, đồ uống nào dưới đây có lợi cho sức khỏe của cơ quan tuần hoàn?",
+              "options": [
+                "Rau xanh, trái cây tươi, cá, nước lọc và sữa tươi",
+                "Rượu, bia, nước ngọt có gas và cà phê đậm đặc",
+                "Mỡ động vật, đồ ăn nhanh chiên đi chiên lại nhiều lần",
+                "Thức ăn nêm thật nhiều gia vị muối và đường"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Rau xanh, trái cây tươi, cá, nước lọc và sữa tươi."
+            },
+            {
+              "id": "g3-tnxh-c5-l21-q2",
+              "type": "scenario",
+              "prompt": "Thói quen ăn quá mặn và thích ăn đồ chiên rán kéo dài sẽ gây ra tác hại gì?",
+              "options": [
+                "Dễ dẫn đến béo phì, tăng huyết áp, hại tim mạch",
+                "Giúp tim đập khỏe hơn và mạch máu co dãn tốt hơn",
+                "Giúp cho cơ thể tiêu hóa các loại thức ăn nhanh hơn",
+                "Hoàn toàn không gây tác hại gì cho sức khỏe con người"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Dễ dẫn đến béo phì, tăng huyết áp, hại tim mạch."
+            },
+            {
+              "id": "g3-tnxh-c5-l21-q3",
+              "type": "scenario",
+              "prompt": "Việc đi giày, dép quá chật ảnh hưởng như thế nào đến cơ quan tuần hoàn?",
+              "options": [
+                "Giúp cho máu lưu thông nhanh hơn đến các ngón chân",
+                "Giúp giảm bớt sự cọ xát và bảo vệ cho đôi bàn chân",
+                "Chèn ép mạch máu, gây cản trở lưu thông máu",
+                "Hoàn toàn không ảnh hưởng đến sự lưu thông của máu"
+              ],
+              "correctIndex": 2,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Chèn ép mạch máu, gây cản trở lưu thông máu."
+            },
+            {
+              "id": "g3-tnxh-c5-l21-q4",
+              "type": "knowledge",
+              "prompt": "Vì sao khi bị viêm họng kéo dài cần phải đi khám bác sĩ để điều trị dứt điểm?",
+              "options": [
+                "Tránh biến chứng bệnh thấp tim nguy hiểm ở học sinh",
+                "Vì đi khám bác sĩ là để bác sĩ thực hiện nhổ răng",
+                "Vì bệnh viêm họng làm cho đôi bàn chân bị đau nhức",
+                "Vì đi khám bệnh là để học sinh được xin nghỉ học"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Tránh biến chứng bệnh thấp tim nguy hiểm ở học sinh."
+            },
+            {
+              "id": "g3-tnxh-c5-l21-q5",
+              "type": "scenario",
+              "prompt": "Sau khi vận động đá bóng quá sức khiến tim đập dồn dập, Nam nên làm gì?",
+              "options": [
+                "Tiếp tục chạy nhảy thêm nhiều vòng nữa quanh sân",
+                "Nghỉ ngơi, báo người thân và chỉ vận động vừa sức",
+                "Nhịn ăn tối và lập tức uống nước lạnh thật nhanh",
+                "Nằm gục ngay xuống sàn nhà và không nói với ai"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Nghỉ ngơi, báo người thân và chỉ vận động vừa sức."
+            },
+            {
+              "id": "g3-tnxh-c5-l21-q6",
+              "type": "knowledge",
+              "prompt": "Thói quen tốt nào giúp chăm sóc và bảo vệ cơ quan tuần hoàn hằng ngày?",
+              "options": [
+                "Ăn đủ chất, tập vừa sức, giữ tinh thần vui vẻ, tránh đồ chật",
+                "Thường xuyên uống nhiều rượu, bia, cà phê và hút thuốc",
+                "Thức thật khuya để chơi game và nhịn ăn bữa sáng",
+                "Ăn thật nhiều đồ mặn và tập luyện vận động kiệt sức"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Ăn đủ chất, tập vừa sức, giữ tinh thần vui vẻ, tránh đồ chật."
+            }
+          ]
+        },
+        {
+          "id": "l22-bai-22",
+          "lessonNumber": 22,
+          "title": "BÀI 22: CƠ QUAN THẦN KINH",
+          "description": "Tìm hiểu vai trò của não, tủy sống và các dây thần kinh trong cơ quan thần kinh",
+          "questions": [
+            {
+              "id": "g3-tnxh-c5-l22-q1",
+              "type": "knowledge",
+              "prompt": "Cơ quan thần kinh bao gồm những bộ phận chính nào cấu tạo thành?",
+              "options": [
+                "Não, tủy sống, và các dây thần kinh",
+                "Tim, hệ thống động mạch và tĩnh mạch",
+                "Miệng, dạ dày, ruột non và ruột già",
+                "Phổi, hệ thống phế quản và khí quản"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Não, tủy sống, và các dây thần kinh."
+            },
+            {
+              "id": "g3-tnxh-c5-l22-q2",
+              "type": "knowledge",
+              "prompt": "Vị trí chuẩn xác của não và tủy sống trên cơ thể để được bảo vệ là gì?",
+              "options": [
+                "Não nằm trong lồng ngực, tủy sống ở cánh tay",
+                "Não nằm trong hộp sọ, tủy sống nằm trong cột sống.",
+                "Nằm ở bất kỳ vị trí nào bên dưới lớp da",
+                "Cả não và tủy sống đều nằm ở hai bàn chân"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Não nằm trong hộp sọ, tủy sống nằm trong cột sống.."
+            },
+            {
+              "id": "g3-tnxh-c5-l22-q3",
+              "type": "knowledge",
+              "prompt": "Bộ phận nào điều khiển suy nghĩ, cảm xúc và cách ứng xử của con người?",
+              "options": ["Tủy sống", "Não", "Các mạch máu", "Dạ dày"],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Não."
+            },
+            {
+              "id": "g3-tnxh-c5-l22-q4",
+              "type": "knowledge",
+              "prompt": "Vô tình chạm tay vào vật nóng rồi tự động rụt lại nhanh do bộ phận nào?",
+              "options": [
+                "Gọi là phản xạ, do tủy sống điều khiển.",
+                "Gọi là cảm xúc, do cơ quan tim điều khiển",
+                "Gọi là tư duy, do dạ dày thực hiện điều khiển",
+                "Gọi là thói quen, do các cơ bắp tự thực hiện"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Gọi là phản xạ, do tủy sống điều khiển.."
+            },
+            {
+              "id": "g3-tnxh-c5-l22-q5",
+              "type": "knowledge",
+              "prompt": "Bộ phận nào phối hợp mắt nhìn, tai nghe, tay viết hoạt động nhịp nhàng?",
+              "options": [
+                "Ruột non thực hiện hấp thu chất dinh dưỡng",
+                "Cơ quan thần kinh",
+                "Tim co bóp đẩy máu lưu thông khắp cơ thể",
+                "Phổi thực hiện hít thở trao đổi không khí"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Cơ quan thần kinh."
+            },
+            {
+              "id": "g3-tnxh-c5-l22-q6",
+              "type": "knowledge",
+              "prompt": "Vì sao trong giờ học sinh cần tập trung cao độ, tránh làm việc riêng?",
+              "options": [
+                "Não tiếp nhận, xử lý thông tin chính xác và chỉ dẫn hiệu quả",
+                "Vì tập trung giúp tủy sống không làm việc",
+                "Vì làm việc riêng khiến cho tim ngừng đập",
+                "Hoàn toàn không có lý do nào đặc biệt cả"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Não tiếp nhận, xử lý thông tin chính xác và chỉ dẫn hiệu quả."
+            }
+          ]
+        },
+        {
+          "id": "l23-bai-23",
+          "lessonNumber": 23,
+          "title": "BÀI 23: CHĂM SÓC VÀ BẢO VỆ CƠ QUAN THẦN KINH",
+          "description": "Thói quen học tập, nghỉ ngơi, ngủ đủ giấc giúp bảo vệ và nuôi dưỡng trí não",
+          "questions": [
+            {
+              "id": "g3-tnxh-c5-l23-q1",
+              "type": "knowledge",
+              "prompt": "Hoạt động nào dưới đây được xác định là có hại cho cơ quan thần kinh?",
+              "options": [
+                "Đi ngủ đúng giờ, giữ tâm trạng vui vẻ và tập thể dục",
+                "Thức khuya chơi game, uống cà phê và xem phim bạo lực",
+                "Ăn uống đầy đủ chất dinh dưỡng và nghỉ ngơi điều độ",
+                "Trò chuyện cởi mở, lắng nghe lời động viên từ cha mẹ"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Thức khuya chơi game, uống cà phê và xem phim bạo lực."
+            },
+            {
+              "id": "g3-tnxh-c5-l23-q2",
+              "type": "scenario",
+              "prompt": "Rượu, bia, thuốc lá và cà phê gây ra tác hại chính nào cho cơ quan thần kinh?",
+              "options": [
+                "Chứa chất kích thích gây nghiện, làm tổn hại thần kinh",
+                "Làm cho cơ thể bị béo phì ngay lập tức sau khi dùng",
+                "Giúp cho não bộ phát triển thông minh và sáng suốt hơn",
+                "Hoàn toàn không gây hại gì cho sức khỏe con người"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Chứa chất kích thích gây nghiện, làm tổn hại thần kinh."
+            },
+            {
+              "id": "g3-tnxh-c5-l23-q3",
+              "type": "scenario",
+              "prompt": "Giấc ngủ đủ và sâu (ngủ ít nhất 9 tiếng/ngày) mang lại lợi ích gì cho trí não?",
+              "options": [
+                "Giúp não bộ nghỉ ngơi, tăng tập trung và giảm mệt mỏi",
+                "Làm cho cơ quan não bộ ngừng hoạt động vĩnh viễn",
+                "Giúp học sinh không cần phải ăn sáng vào hôm sau",
+                "Chỉ nhằm mục đích làm cho thời gian ngày ngắn lại"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Giúp não bộ nghỉ ngơi, tăng tập trung và giảm mệt mỏi."
+            },
+            {
+              "id": "g3-tnxh-c5-l23-q4",
+              "type": "knowledge",
+              "prompt": "Việc lập và tuân thủ thời gian biểu hợp lý trong ngày giúp ích gì cho An?",
+              "options": [
+                "Cân bằng học tập, vui chơi, nghỉ ngơi giúp bảo vệ thần kinh",
+                "Làm cho thời gian trôi qua nhanh hơn bình thường",
+                "Khiến cho bản thân bị mệt mỏi và áp lực nhiều hơn",
+                "Chỉ nhằm mục đích khoe khoang với các bạn trong lớp"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Cân bằng học tập, vui chơi, nghỉ ngơi giúp bảo vệ thần kinh."
+            },
+            {
+              "id": "g3-tnxh-c5-l23-q5",
+              "type": "scenario",
+              "prompt": "Thấy bạn ngồi chơi game suốt 2 tiếng làm mắt đỏ và đau đầu, em khuyên gì?",
+              "options": [
+                "\"Nên tắt máy, nghỉ ngơi, vận động vì chơi lâu rất hại thần kinh!\"",
+                "\"Cứ chơi tiếp thêm 3 tiếng nữa cho tăng điểm thi đấu!\"",
+                "\"Uống một ly cà phê đậm đặc vào rồi tiếp tục chơi game!\"",
+                "Không quan tâm và lập tức ngồi xuống chơi game cùng bạn"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: \"Nên tắt máy, nghỉ ngơi, vận động vì chơi lâu rất hại thần kinh!\"."
+            },
+            {
+              "id": "g3-tnxh-c5-l23-q6",
+              "type": "knowledge",
+              "prompt": "Rèn luyện thói quen suy nghĩ và hành động tích cực giúp ích gì cho em?",
+              "options": [
+                "Tinh thần thoải mái, nuôi dưỡng cảm xúc vui vẻ và tốt cho thần kinh",
+                "Làm cho cơ quan não bộ bị rơi vào trạng thái căng thẳng hơn",
+                "Khiến cho bạn bè xung quanh không còn muốn chơi cùng em",
+                "Hoàn toàn không mang lại bất kỳ tác dụng thực tế nào"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Tinh thần thoải mái, nuôi dưỡng cảm xúc vui vẻ và tốt cho thần kinh."
+            }
+          ]
+        },
+        {
+          "id": "l24-bai-24",
+          "lessonNumber": 24,
+          "title": "BÀI 24: THU THẬP THÔNG TIN VỀ CÁC CHẤT VÀ HOẠT ĐỘNG CÓ HẠI CHO SỨC KHOẺ",
+          "description": "Nhận diện các chất kích thích và hoạt động có hại đối với sức khỏe con người",
+          "questions": [
+            {
+              "id": "g3-tnxh-c5-l24-q1",
+              "type": "knowledge",
+              "prompt": "Rượu, bia, thuốc lá, ma túy và đồ ăn ôi thiu gây ra tác hại chung nào cho cơ thể?",
+              "options": [
+                "Tổn hại tiêu hóa, tuần hoàn, thần kinh và suy giảm sức khỏe",
+                "Giúp cho cơ thể phát triển cao lớn và thông minh hơn",
+                "Hoàn toàn không gây tác hại gì nếu sử dụng hằng ngày",
+                "Tăng cường hệ miễn dịch giúp cơ thể chống lại bệnh tật"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Tổn hại tiêu hóa, tuần hoàn, thần kinh và suy giảm sức khỏe."
+            },
+            {
+              "id": "g3-tnxh-c5-l24-q2",
+              "type": "scenario",
+              "prompt": "Hít phải khói thuốc lá từ người khác ở nơi công cộng gây ra nguy cơ gì?",
+              "options": [
+                "Ảnh hưởng xấu tới hô hấp, tim mạch tương tự người hút",
+                "Không bị ảnh hưởng gì vì không trực tiếp cầm điếu thuốc",
+                "Giúp cho lá phổi của em trở nên khỏe mạnh hơn",
+                "Chỉ làm cay mắt chứ không gây tổn thương cho lá phổi"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Ảnh hưởng xấu tới hô hấp, tim mạch tương tự người hút."
+            },
+            {
+              "id": "g3-tnxh-c5-l24-q3",
+              "type": "scenario",
+              "prompt": "Thức khuya, bỏ bữa sáng, đi giày quá chật và vận động quá sức gây ảnh hưởng gì?",
+              "options": [
+                "Căng thẳng thần kinh, suy nhược cơ thể, cản trở lưu thông máu",
+                "Giúp cơ thể trở nên dẻo dai và phản xạ nhanh nhạy hơn",
+                "Tăng cường khả năng ghi nhớ kiến thức cho học sinh",
+                "Giúp cho tim và dạ dày hoạt động hiệu quả hơn"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Căng thẳng thần kinh, suy nhược cơ thể, cản trở lưu thông máu."
+            },
+            {
+              "id": "g3-tnxh-c5-l24-q4",
+              "type": "knowledge",
+              "prompt": "Để thu thập thông tin về chất và hoạt động có hại cho sức khỏe, em nên làm gì?",
+              "options": [
+                "Quan sát thực tế, đọc sách báo và phỏng vấn người lớn",
+                "Tự bịa ra các số liệu mà không cần phải tìm hiểu",
+                "Chỉ ngồi chơi game và hỏi bạn bè trong giờ ra chơi",
+                "Sao chép lại bài của lớp khác mà không cần kiểm tra"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Quan sát thực tế, đọc sách báo và phỏng vấn người lớn."
+            },
+            {
+              "id": "g3-tnxh-c5-l24-q5",
+              "type": "scenario",
+              "prompt": "Khi bị người khác rủ rê uống thử rượu bia, em nên xử lý thế nào cho an toàn?",
+              "options": [
+                "Kiên quyết từ chối vì đó là chất có hại cho sức khỏe",
+                "Lập tức uống hết ly rượu để chứng tỏ mình đã lớn",
+                "Uống thử một ít xem rượu có vị như thế nào",
+                "Mắng chửi người rủ rê gay gắt rồi lập tức bỏ đi"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Kiên quyết từ chối vì đó là chất có hại cho sức khỏe."
+            },
+            {
+              "id": "g3-tnxh-c5-l24-q6",
+              "type": "knowledge",
+              "prompt": "Khẩu hiệu nào dưới đây phù hợp nhất để tuyên truyền bảo vệ sức khỏe?",
+              "options": [
+                "\"Nói không với chất kích thích - Tránh xa thói quen có hại!\"",
+                "\"Thức thật khuya - Chơi game nhiều - Ăn đồ chiên rán!\"",
+                "\"Uống nhiều rượu bia để tăng cường sức khỏe hằng ngày!\"",
+                "\"Bỏ bữa ăn sáng hằng ngày để tiết kiệm thời gian học tập!\""
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: \"Nói không với chất kích thích - Tránh xa thói quen có hại!\"."
+            }
+          ]
+        },
+        {
+          "id": "l25-bai-25",
+          "lessonNumber": 25,
+          "title": "BÀI 25: ÔN TẬP CHỦ ĐỀ CON NGƯỜI VÀ SỨC KHOẺ",
+          "description": "Tổng kết mối liên hệ giữa các hệ cơ quan và lối sống lành mạnh, khoa học",
+          "questions": [
+            {
+              "id": "g3-tnxh-c5-l25-q1",
+              "type": "knowledge",
+              "prompt": "Khẳng định nào mô tả đúng nhất sự phối hợp hoạt động giữa các cơ quan trong cơ thể?",
+              "options": [
+                "Tiêu hóa tạo dinh dưỡng -> Tuần hoàn vận chuyển -> Thần kinh điều khiển",
+                "Thần kinh biến đổi thức ăn -> Tiêu hóa vận chuyển máu -> Tuần hoàn điều khiển",
+                "Cả 3 cơ quan hoạt động hoàn toàn độc lập và không liên quan đến nhau",
+                "Các cơ quan chỉ phối hợp hoạt động khi con người tham gia tập thể dục"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Tiêu hóa tạo dinh dưỡng -> Tuần hoàn vận chuyển -> Thần kinh điều khiển."
+            },
+            {
+              "id": "g3-tnxh-c5-l25-q2",
+              "type": "scenario",
+              "prompt": "Nhóm nào dưới đây tập hợp các yếu tố hoàn toàn có lợi cho sức khỏe?",
+              "options": [
+                "Ăn chín uống sôi, tập vừa sức, ngủ đủ 9 tiếng, giữ tinh thần vui vẻ",
+                "Bỏ bữa ăn sáng, uống nước ngọt có gas, thức thật khuya chơi game",
+                "Thường xuyên ăn đồ chiên rán, uống rượu bia, đi giày dép quá chật",
+                "Ăn thật mặn, tập luyện vận động kiệt sức dưới thời tiết nắng nóng"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Ăn chín uống sôi, tập vừa sức, ngủ đủ 9 tiếng, giữ tinh thần vui vẻ."
+            },
+            {
+              "id": "g3-tnxh-c5-l25-q3",
+              "type": "scenario",
+              "prompt": "Học sinh cần duy trì thói quen nào để phòng tránh bệnh tiêu chảy, thấp tim và thần kinh?",
+              "options": [
+                "Rửa tay xà phòng, chữa dứt điểm viêm họng, đi ngủ đúng giờ",
+                "Ăn quả chưa rửa, nhịn ăn sáng và uống cà phê thật đậm đặc",
+                "Chạy nhảy mạnh ngay sau khi ăn no và đi giày dép thật chật",
+                "Thường xuyên tức giận và chơi game liên tục trong nhiều giờ"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Rửa tay xà phòng, chữa dứt điểm viêm họng, đi ngủ đúng giờ."
+            },
+            {
+              "id": "g3-tnxh-c5-l25-q4",
+              "type": "knowledge",
+              "prompt": "Thấy bạn rủ đá bóng ngay sau khi ăn no, em nên khuyên bạn thế nào?",
+              "options": [
+                "\"Không nên đá bóng ngay vì vận động mạnh lúc này gây đau sóc bụng!\"",
+                "Đồng ý chạy ngay ra sân để đá bóng cùng bạn cho khỏe người",
+                "Rủ bạn đi uống nước ngọt có gas rồi mới ra sân đá bóng",
+                "To tiếng mắng chửi bạn rồi lập tức bỏ đi ra chỗ khác"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: \"Không nên đá bóng ngay vì vận động mạnh lúc này gây đau sóc bụng!\"."
+            },
+            {
+              "id": "g3-tnxh-c5-l25-q5",
+              "type": "scenario",
+              "prompt": "Thấy bố thức khuya làm việc, hút thuốc và uống cà phê, em nên khuyên bố thế nào?",
+              "options": [
+                "Khuyên bố ngủ sớm, hạn chế cà phê và thuốc lá vì hại tim, thần kinh",
+                "Không nói gì với bố vì đó là công việc riêng của người lớn",
+                "Lấy thuốc lá và cà phê ra dùng thử cùng với bố cho vui",
+                "Đòi bố mua thêm game mới về để cùng thức khuya chơi"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Tình huống",
+              "explanation": "Đáp án đúng là: Khuyên bố ngủ sớm, hạn chế cà phê và thuốc lá vì hại tim, thần kinh."
+            },
+            {
+              "id": "g3-tnxh-c5-l25-q6",
+              "type": "knowledge",
+              "prompt": "Thông điệp tuyên truyền nào dưới đây là đầy đủ, ngắn gọn và ý nghĩa nhất?",
+              "options": [
+                "\"Ăn uống đủ chất - Vận động vừa sức - Ngủ đủ đúng giờ - Tránh xa chất hại!\"",
+                "\"Thức thật khuya - Chơi game nhiều - Ăn thật nhiều đồ chiên rán!\"",
+                "\"Ăn thật mặn - Uống nước ngọt thay nước lọc - Đi giày thật chật!\"",
+                "\"Bỏ bữa ăn sáng - Nhịn đi đại tiện - Uống thật nhiều rượu bia!\""
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: \"Ăn uống đủ chất - Vận động vừa sức - Ngủ đủ đúng giờ - Tránh xa chất hại!\"."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c6-chu-de-6",
+      "chapterNumber": 6,
+      "title": "CHỦ ĐỀ 6: TRÁI ĐẤT VÀ BẦU TRỜI",
+      "lessons": [
+        {
+          "id": "l26-bai-26",
+          "lessonNumber": 26,
+          "title": "BÀI 26: XÁC ĐỊNH CÁC PHƯƠNG TRONG KHÔNG GIAN",
+          "description": "Kỹ năng xác định 4 phương chính Đông - Tây - Nam - Bắc bằng Mặt Trời và la bàn",
+          "questions": [
+            {
+              "id": "g3-tnxh-c6-l26-q1",
+              "type": "knowledge",
+              "prompt": "Trong không gian có 4 phương chính để định hướng, đó là những phương nào?",
+              "options": [
+                "Phương Đông, phương Tây, phương Nam và phương Bắc",
+                "Phương Trên, phương Dưới, phương Trái và phương Phải",
+                "Phương Trước, phương Sau, phương Đông và phương Tây",
+                "Phương Đông Bắc, phương Tây Nam, phương Đông Nam và Tây Bắc"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Phương Đông, phương Tây, phương Nam và phương Bắc."
+            },
+            {
+              "id": "g3-tnxh-c6-l26-q2",
+              "type": "knowledge",
+              "prompt": "Buổi sáng thấy Mặt Trời mọc phía trước mặt, phía trước và sau lưng là phương nào?",
+              "options": [
+                "Phía trước mặt là phương Đông; Phía sau lưng là phương Tây",
+                "Phía trước mặt là phương Tây; Phía sau lưng là phương Đông",
+                "Phía trước mặt là phương Bắc; Phía sau lưng là phương Nam",
+                "Phía trước mặt là phương Nam; Phía sau lưng là phương Bắc"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Phía trước mặt là phương Đông; Phía sau lưng là phương Tây."
+            },
+            {
+              "id": "g3-tnxh-c6-l26-q3",
+              "type": "knowledge",
+              "prompt": "Buổi sáng dang tay phải chỉ về Mặt Trời mọc, các phương xung quanh An là gì?",
+              "options": [
+                "Tay phải (Đông), tay trái (Tây), trước mặt (Bắc), sau lưng (Nam)",
+                "Tay phải (Tây), tay trái (Đông), trước mặt (Nam), sau lưng (Bắc)",
+                "Tay phải (Nam), tay trái (Bắc), trước mặt (Đông), sau lưng (Tây)",
+                "Tay phải (Bắc), tay trái (Nam), trước mặt (Tây), sau lưng (Đông)"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Tay phải (Đông), tay trái (Tây), trước mặt (Bắc), sau lưng (Nam)."
+            },
+            {
+              "id": "g3-tnxh-c6-l26-q4",
+              "type": "knowledge",
+              "prompt": "Buổi chiều đi về nhà thấy Mặt Trời lặn ngay trước mặt, em đang đi về phương nào?",
+              "options": [
+                "Em đang đi về phương Tây (phía Mặt Trời lặn)",
+                "Em đang đi về phương Đông (phía Mặt Trời mọc)",
+                "Em đang đi về phương Bắc",
+                "Em đang đi về phương Nam"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Em đang đi về phương Tây (phía Mặt Trời lặn)."
+            },
+            {
+              "id": "g3-tnxh-c6-l26-q5",
+              "type": "knowledge",
+              "prompt": "Kim la bàn luôn có đặc điểm tự nhiên nào khi nằm ở vị trí cân bằng?",
+              "options": [
+                "Đầu kim chỉ hướng Bắc luôn luôn chỉ về phương Bắc",
+                "Kim la bàn sẽ tự động quay tròn liên tục không dừng",
+                "Cả hai đầu của kim la bàn luôn luôn chỉ về phương Đông",
+                "Đầu kim la bàn luôn luôn chỉ về hướng Mặt Trời lặn"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Đầu kim chỉ hướng Bắc luôn luôn chỉ về phương Bắc."
+            },
+            {
+              "id": "g3-tnxh-c6-l26-q6",
+              "type": "knowledge",
+              "prompt": "Khi trời nhiều mây không có Mặt Trời, dùng la bàn thế nào để tìm phương Bắc?",
+              "options": [
+                "Đặt phẳng la bàn, xoay cho đầu kim Bắc trùng vạch chữ N",
+                "Chỉ quan sát bóng của các cây xanh ở trên mặt đất",
+                "Tung đồng xu lên cao để lựa chọn hướng đi ngẫu nhiên",
+                "Đứng yên tại chỗ nghỉ ngơi chờ đến lúc chiều muộn"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Đặt phẳng la bàn, xoay cho đầu kim Bắc trùng vạch chữ N."
+            }
+          ]
+        },
+        {
+          "id": "l27-bai-27",
+          "lessonNumber": 27,
+          "title": "BÀI 27: TRÁI ĐẤT VÀ CÁC ĐỚI KHÍ HẬU",
+          "description": "Khám phá cấu tạo Quả Địa Cầu và đặc điểm các đới khí hậu trên Trái Đất",
+          "questions": [
+            {
+              "id": "g3-tnxh-c6-l27-q1",
+              "type": "knowledge",
+              "prompt": "Đường ranh giới ở giữa chia Quả Địa Cầu thành hai nửa bán cầu gọi là gì?",
+              "options": [
+                "Đường Xích đạo",
+                "Đường kinh tuyến gốc",
+                "Cực Bắc",
+                "Cực Nam"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Đường Xích đạo."
+            },
+            {
+              "id": "g3-tnxh-c6-l27-q2",
+              "type": "knowledge",
+              "prompt": "Trái Đất được chia thành 3 đới khí hậu chính nào từ Xích đạo về hai cực?",
+              "options": [
+                "Đới nóng, đới hòa bình và đới đóng băng",
+                "Đới nóng, hai đới ôn hòa và hai đới lạnh",
+                "Đới sa mạc, đới mưa nhiều và đới tuyết phủ",
+                "Đới mùa Xuân, đới mùa Hạ và đới mùa Thu"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Đới nóng, hai đới ôn hòa và hai đới lạnh."
+            },
+            {
+              "id": "g3-tnxh-c6-l27-q3",
+              "type": "knowledge",
+              "prompt": "Khí hậu ở đới nóng (Nhiệt đới) có đặc điểm nổi bật nào dưới đây?",
+              "options": [
+                "Thời tiết quanh năm nóng, lượng mưa nhiều",
+                "Thời tiết quanh năm giá lạnh, tuyết phủ quanh năm",
+                "Thời tiết quanh năm rất lạnh và không bao giờ mưa",
+                "Mùa hè rất ngắn, mùa đông kéo dài tới 12 tháng"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Thời tiết quanh năm nóng, lượng mưa nhiều."
+            },
+            {
+              "id": "g3-tnxh-c6-l27-q4",
+              "type": "knowledge",
+              "prompt": "Vùng cực Bắc và cực Nam quanh năm đóng băng tuyết thuộc đới khí hậu nào?",
+              "options": [
+                "Đới lạnh (Hàn đới) – quanh năm rất lạnh, có băng tuyết",
+                "Đới nóng (Nhiệt đới) – thời tiết nắng gắt quanh năm",
+                "Đới ôn hòa (Ôn đới) – thời tiết ôn hòa, ấm áp",
+                "Đới Xích đạo – quanh năm xuất hiện mưa rất nhiều"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Đới lạnh (Hàn đới) – quanh năm rất lạnh, có băng tuyết."
+            },
+            {
+              "id": "g3-tnxh-c6-l27-q5",
+              "type": "knowledge",
+              "prompt": "Nước Việt Nam nằm ở bán cầu nào và thuộc đới khí hậu nào trên Trái Đất?",
+              "options": [
+                "Nằm ở Bán cầu Bắc và thuộc đới nóng (Nhiệt đới)",
+                "Nằm ở Bán cầu Nam và thuộc đới lạnh (Hàn đới)",
+                "Nằm ở khu vực cực Bắc và thuộc đới ôn hòa",
+                "Nằm ở giữa khu vực cực Nam và thuộc đới lạnh"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Nằm ở Bán cầu Bắc và thuộc đới nóng (Nhiệt đới)."
+            },
+            {
+              "id": "g3-tnxh-c6-l27-q6",
+              "type": "knowledge",
+              "prompt": "Đi du lịch đến quốc gia thuộc đới lạnh vào mùa đông, em nên chuẩn bị đồ gì?",
+              "options": [
+                "Áo phông ngắn tay, quần đùi và dép lê",
+                "Áo khoác dày, mũ len, găng tay, khăn và bốt ấm",
+                "Mũ rộng vành, kính râm và áo may-ô",
+                "Các loại trang phục bơi và kính bơi"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Áo khoác dày, mũ len, găng tay, khăn và bốt ấm."
+            }
+          ]
+        },
+        {
+          "id": "l28-bai-28",
+          "lessonNumber": 28,
+          "title": "BÀI 28: BỀ MẶT TRÁI ĐẤT",
+          "description": "Tìm hiểu bề mặt lục địa, đại dương, các dạng địa hình đồi núi, đồng bằng, sông hồ",
+          "questions": [
+            {
+              "id": "g3-tnxh-c6-l28-q1",
+              "type": "knowledge",
+              "prompt": "Màu xanh lam và các màu lục, vàng, nâu đại diện cho phần nào trên Quả Địa Cầu?",
+              "options": [
+                "Xanh lam là đại dương (nước); Lục, vàng, nâu là lục địa (đất)",
+                "Xanh lam là lục địa (đất); Lục, vàng, nâu là đại dương (nước)",
+                "Cả hai nhóm màu đều biểu thị cho các vùng đất liền",
+                "Cả hai nhóm màu đều biểu thị cho bầu không khí"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Xanh lam là đại dương (nước); Lục, vàng, nâu là lục địa (đất)."
+            },
+            {
+              "id": "g3-tnxh-c6-l28-q2",
+              "type": "knowledge",
+              "prompt": "Bề mặt Trái Đất bao gồm bao nhiêu lục địa và bao nhiêu đại dương lớn?",
+              "options": [
+                "6 lục địa và 4 đại dương lớn",
+                "4 lục địa và 6 đại dương lớn",
+                "5 lục địa và 5 đại dương lớn",
+                "7 lục địa và 3 đại dương lớn"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: 6 lục địa và 4 đại dương lớn."
+            },
+            {
+              "id": "g3-tnxh-c6-l28-q3",
+              "type": "knowledge",
+              "prompt": "So sánh nào dưới đây là đúng về điểm khác biệt giữa dạng địa hình Đồi và Núi?",
+              "options": [
+                "Đồi thấp hơn, đỉnh tròn, sườn thoải; Núi cao hơn, đỉnh nhọn, sườn dốc",
+                "Đồi cao hơn núi và thường có tuyết phủ quanh năm",
+                "Núi và đồi hoàn toàn giống hệt nhau về độ cao và hình dáng",
+                "Đồi nằm dưới biển sâu còn núi nằm trên đất liền"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Đồi thấp hơn, đỉnh tròn, sườn thoải; Núi cao hơn, đỉnh nhọn, sườn dốc."
+            },
+            {
+              "id": "g3-tnxh-c6-l28-q4",
+              "type": "knowledge",
+              "prompt": "Vùng đất rộng lớn, tương đối bằng phẳng nằm ở độ cao lớn gọi là dạng địa hình gì?",
+              "options": [
+                "Đồng bằng",
+                "Cao nguyên",
+                "Sông hẻm vực",
+                "Đảo xa bờ"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Cao nguyên."
+            },
+            {
+              "id": "g3-tnxh-c6-l28-q5",
+              "type": "knowledge",
+              "prompt": "Dòng nước chảy thường xuyên và vùng nước đọng rộng lớn trong đất liền gọi là gì?",
+              "options": [
+                "Sông (dòng chảy thường xuyên) và Hồ (vùng nước đọng)",
+                "Hồ (dòng chảy thường xuyên) và Sông (vùng nước đọng)",
+                "Suối nhỏ và Biển khơi rộng lớn",
+                "Đại dương sâu và Bán đảo"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Sông (dòng chảy thường xuyên) và Hồ (vùng nước đọng)."
+            },
+            {
+              "id": "g3-tnxh-c6-l28-q6",
+              "type": "knowledge",
+              "prompt": "Quê ngoại ở Nam Bộ với đất đai rộng lớn, bằng phẳng thuộc dạng địa hình chính nào?",
+              "options": [
+                "Vùng núi cao hiểm trở",
+                "Vùng đồng bằng trù phú",
+                "Vùng đồi trọc khô hạn",
+                "Vùng cao nguyên bạt ngàn"
+              ],
+              "correctIndex": 1,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Vùng đồng bằng trù phú."
+            }
+          ]
+        },
+        {
+          "id": "l29-bai-29",
+          "lessonNumber": 29,
+          "title": "BÀI 29: MẶT TRỜI, TRÁI ĐẤT, MẶT TRĂNG",
+          "description": "Chuyển động của Trái Đất, Mặt Trời, Mặt Trăng và hiện tượng ngày đêm luân phiên",
+          "questions": [
+            {
+              "id": "g3-tnxh-c6-l29-q1",
+              "type": "knowledge",
+              "prompt": "Khẳng định nào sau đây mô tả đúng về sự chuyển động của Trái Đất?",
+              "options": [
+                "Trái Đất vừa tự quay quanh mình, vừa quay quanh Mặt Trời",
+                "Trái Đất đứng yên một chỗ, Mặt Trời quay quanh Trái Đất",
+                "Trái Đất chỉ chuyển động quay xung quanh Mặt Trăng",
+                "Trái Đất và Mặt Trời đều đứng yên không bao giờ di chuyển"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Trái Đất vừa tự quay quanh mình, vừa quay quanh Mặt Trời."
+            },
+            {
+              "id": "g3-tnxh-c6-l29-q2",
+              "type": "knowledge",
+              "prompt": "Mặt Trăng thực hiện chuyển động như thế nào so với Trái Đất trong không gian?",
+              "options": [
+                "Mặt Trăng là vệ tinh tự nhiên quay quanh Trái Đất",
+                "Mặt Trăng đứng yên ở tâm còn Trái Đất quay xung quanh",
+                "Mặt Trăng tự do bay khắp nơi không theo quỹ đạo nào",
+                "Mặt Trăng tự phát ra ánh sáng mạnh hơn Mặt Trời"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Mặt Trăng là vệ tinh tự nhiên quay quanh Trái Đất."
+            },
+            {
+              "id": "g3-tnxh-c6-l29-q3",
+              "type": "knowledge",
+              "prompt": "Vì sao trên Trái Đất lại xuất hiện hiện tượng ngày và đêm luân phiên nhau?",
+              "options": [
+                "Do Trái Đất hình cầu và tự quay quanh trục của nó",
+                "Do Mặt Trời liên tục bật và tắt ánh sáng hằng ngày",
+                "Do Mặt Trăng bay đến che khuất hoàn toàn Mặt Trời",
+                "Do các đám mây đen lớn che mất ánh sáng Mặt Trời"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Do Trái Đất hình cầu và tự quay quanh trục của nó."
+            },
+            {
+              "id": "g3-tnxh-c6-l29-q4",
+              "type": "knowledge",
+              "prompt": "Vì sao khi Việt Nam đang là ban ngày thì ở Mỹ lại đang là ban đêm?",
+              "options": [
+                "Do Trái Đất hình cầu tự quay, hai nửa bán cầu nhận ánh sáng khác nhau",
+                "Do đường truyền mạng điện thoại kết nối bị nghẽn",
+                "Do Mặt Trời chỉ thực hiện chiếu sáng cho nước Việt Nam",
+                "Do nước Mỹ là vùng đất không có Mặt Trời chiếu sáng"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Do Trái Đất hình cầu tự quay, hai nửa bán cầu nhận ánh sáng khác nhau."
+            },
+            {
+              "id": "g3-tnxh-c6-l29-q5",
+              "type": "knowledge",
+              "prompt": "Vì sao hình dạng quan sát được của Mặt Trăng lại thay đổi trong tháng?",
+              "options": [
+                "Do Mặt Trăng quay quanh Trái Đất và phản xạ ánh sáng Mặt Trời",
+                "Do Mặt Trăng tự gọt bớt rồi lại phình to kích thước ra",
+                "Do mây che phủ làm thay đổi hình dáng thực của Mặt Trăng",
+                "Do Mặt Trăng tự đổi màu sắc và hình dạng mỗi đêm"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Do Mặt Trăng quay quanh Trái Đất và phản xạ ánh sáng Mặt Trời."
+            },
+            {
+              "id": "g3-tnxh-c6-l29-q6",
+              "type": "knowledge",
+              "prompt": "Chiếu đèn pin cố định vào quả bóng và xoay quả bóng sẽ mô phỏng hiện tượng gì?",
+              "options": [
+                "Hiện tượng ngày và đêm luân phiên trên bề mặt Trái Đất",
+                "Quả bóng bàn tự phát ra ánh sáng màu xanh lục",
+                "Chiếc đèn pin chiếu sáng tự động bị tắt đi",
+                "Quả bóng bàn tự biến đổi thành hình khối vuông"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Hiện tượng ngày và đêm luân phiên trên bề mặt Trái Đất."
+            }
+          ]
+        },
+        {
+          "id": "l30-bai-30",
+          "lessonNumber": 30,
+          "title": "BÀI 30: ÔN TẬP CHỦ ĐỀ TRÁI ĐẤT VÀ BẦU TRỜI",
+          "description": "Ôn tập tổng kết toàn diện các kiến thức về Trái Đất và bầu trời",
+          "questions": [
+            {
+              "id": "g3-tnxh-c6-l30-q1",
+              "type": "knowledge",
+              "prompt": "Đứng dang tay phải chỉ về Mặt Trời mọc (phương Đông), các phương xung quanh Nam là gì?",
+              "options": [
+                "Tay trái (Tây), trước mặt (Bắc), sau lưng (Nam)",
+                "Tay trái (Nam), trước mặt (Tây), sau lưng (Bắc)",
+                "Tay trái (Bắc), trước mặt (Đông), sau lưng (Tây)",
+                "Tay trái (Đông), trước mặt (Nam), sau lưng (Bắc)"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Tay trái (Tây), trước mặt (Bắc), sau lưng (Nam)."
+            },
+            {
+              "id": "g3-tnxh-c6-l30-q2",
+              "type": "knowledge",
+              "prompt": "Cách nối đặc điểm thời tiết với các đới khí hậu nào dưới đây là chuẩn xác nhất?",
+              "options": [
+                "Đới nóng (nóng, mưa nhiều); Đới lạnh (rất lạnh, băng tuyết); Đới ôn hòa (4 mùa)",
+                "Đới nóng (băng tuyết bao phủ); Đới lạnh (nắng gắt quanh năm)",
+                "Cả 3 đới khí hậu đều sở hữu đặc điểm thời tiết giống hệt nhau",
+                "Trái Đất là hành tinh chỉ tồn tại duy nhất một đới lạnh"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Đới nóng (nóng, mưa nhiều); Đới lạnh (rất lạnh, băng tuyết); Đới ôn hòa (4 mùa)."
+            },
+            {
+              "id": "g3-tnxh-c6-l30-q3",
+              "type": "knowledge",
+              "prompt": "Khẳng định nào mô tả chính xác nhất về tỉ lệ và các dạng địa hình trên Trái Đất?",
+              "options": [
+                "Đại dương lớn hơn đất liền; Đất liền có núi, đồi, đồng bằng, cao nguyên, sông, hồ",
+                "Diện tích phần đất liền chiếm đến $90\\%$ tổng bề mặt Trái Đất",
+                "Bề mặt Trái Đất hoàn toàn phẳng lặng, không xuất hiện núi đồi",
+                "Trái Đất chỉ tồn tại duy nhất 1 đại dương và 1 lục địa"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Đại dương lớn hơn đất liền; Đất liền có núi, đồi, đồng bằng, cao nguyên, sông, hồ."
+            },
+            {
+              "id": "g3-tnxh-c6-l30-q4",
+              "type": "knowledge",
+              "prompt": "Nguyên nhân chính tạo ra hiện tượng ngày và đêm luân phiên trên Trái Đất là gì?",
+              "options": [
+                "Trái Đất hình cầu tự quay quanh trục khi được Mặt Trời chiếu sáng",
+                "Mặt Trời tự thực hiện việc tắt và bật ánh sáng liên tục",
+                "Mặt Trăng bay đến che khuất hoàn toàn Mặt Trời vào ban đêm",
+                "Do các đám mây đen lớn bao phủ toàn bộ Trái Đất"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Trái Đất hình cầu tự quay quanh trục khi được Mặt Trời chiếu sáng."
+            },
+            {
+              "id": "g3-tnxh-c6-l30-q5",
+              "type": "knowledge",
+              "prompt": "Muốn xác định phương Bắc bằng la bàn khi bị mất phương hướng, Linh nên làm gì?",
+              "options": [
+                "Đặt phẳng la bàn, xoay sao cho đầu kim Bắc trùng vạch chữ N",
+                "Lắc thật mạnh la bàn rồi đi theo một hướng ngẫu nhiên",
+                "Ném chiếc la bàn đi và đứng yên tại chỗ để khóc",
+                "Đi ngược lại hoàn toàn so với chiều kim la bàn chỉ"
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: Đặt phẳng la bàn, xoay sao cho đầu kim Bắc trùng vạch chữ N."
+            },
+            {
+              "id": "g3-tnxh-c6-l30-q6",
+              "type": "knowledge",
+              "prompt": "Thông điệp nào phù hợp nhất để thể hiện ý thức bảo vệ môi trường sống trên Trái Đất?",
+              "options": [
+                "\"Giữ gìn Trái Đất xanh - Hạn chế rác thải - Tiết kiệm năng lượng!\"",
+                "\"Hãy chặt phá hết cây xanh trong rừng để làm nhà ở\"",
+                "\"Tùy ý xả rác thải xuống sông hồ để làm sạch nhà mình\"",
+                "\"Hoàn toàn không cần phải tiết kiệm nguồn điện và nước\""
+              ],
+              "correctIndex": 0,
+              "typeLabel": "Kiến thức",
+              "explanation": "Đáp án đúng là: \"Giữ gìn Trái Đất xanh - Hạn chế rác thải - Tiết kiệm năng lượng!\"."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
