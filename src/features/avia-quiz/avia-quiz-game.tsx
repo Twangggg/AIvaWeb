@@ -1,12 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useQuizGame } from "./use-quiz-game";
 import { GradeSelectScreen } from "./components/grade-select-screen";
 import { BookSelectScreen } from "./components/book-select-screen";
 import { LessonSelectScreen } from "./components/lesson-select-screen";
 import { QuizPlayScreen } from "./components/quiz-play-screen";
 import { QuizResultScreen } from "./components/quiz-result-screen";
+import { CrossyFrogMinigame } from "./components/crossy-frog-minigame";
 import { quizSound } from "./sound";
 
 interface AviaQuizGameProps {
@@ -22,11 +23,24 @@ export function AviaQuizGame({ onBackToLobby }: AviaQuizGameProps) {
     quizSound.enabled = nextState;
   };
 
+  useEffect(() => {
+    quizSound.enabled = soundEnabled;
+    if (soundEnabled) {
+      quizSound.startBgm();
+    } else {
+      quizSound.stopBgm();
+    }
+    return () => {
+      quizSound.stopBgm();
+    };
+  }, [soundEnabled]);
+
   const {
     screen,
     selectedGrade,
     selectedBook,
     selectedChapter,
+    selectedLesson,
     isLoadingBook,
     availableBooks,
     currentQuestion,
@@ -49,6 +63,8 @@ export function AviaQuizGame({ onBackToLobby }: AviaQuizGameProps) {
     startChapterReview,
     answerQuestion,
     restartCurrent,
+    startBonusMinigame,
+    completeMiniGame,
     nextLessonInfo,
     startNextLesson,
   } = useQuizGame();
@@ -108,6 +124,15 @@ export function AviaQuizGame({ onBackToLobby }: AviaQuizGameProps) {
         />
       )}
 
+      {screen === "minigame" && (
+        <CrossyFrogMinigame
+          soundEnabled={soundEnabled}
+          lessonTitle={selectedLesson?.title || selectedChapter?.title}
+          onComplete={(res) => completeMiniGame(res)}
+          onSkip={() => completeMiniGame()}
+        />
+      )}
+
       {screen === "summary" && summary && (
         <QuizResultScreen
           summary={summary}
@@ -115,6 +140,7 @@ export function AviaQuizGame({ onBackToLobby }: AviaQuizGameProps) {
           onNextLesson={nextLessonInfo ? startNextLesson : undefined}
           onRestart={restartCurrent}
           onChooseOtherLesson={backToLessonSelect}
+          onPlayBonusGame={startBonusMinigame}
         />
       )}
     </div>

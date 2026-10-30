@@ -999,7 +999,7 @@
 }
 .home-loading-stage {
   position: relative;
-  width: clamp(210px, 29svh, 270px);
+  width: clamp(200px, 26svh, 260px);
   aspect-ratio: 1;
   margin: 0 auto 20px;
 }

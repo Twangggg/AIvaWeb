@@ -24,6 +24,7 @@ import { SiteIntro, useSiteIntro } from "@/components/home/site-intro";
 import { useGardenStore } from "@/features/landing-garden/store/useGardenStore";
 import { GardenJournalModal } from "@/features/landing-garden/components/garden-journal-modal";
 import { LandingModePill } from "@/features/landing-garden/components/landing-mode-pill";
+import { WelcomeRoleGate } from "@/components/home/welcome-role-gate";
 
 // Dynamically import 3D Canvas to prevent SSR WebGL mismatch
 const LandingGardenCanvas = dynamic(
@@ -45,7 +46,7 @@ const LandingGardenCanvas = dynamic(
 );
 
 export default function HomePage() {
-  const { mode, journalOpen, setJournalOpen, initHydration } = useGardenStore();
+  const { mode, persona, journalOpen, setJournalOpen, initHydration, roleModalOpen, setRoleModalOpen } = useGardenStore();
   const [preorderOpen, setPreorderOpen] = useState(false);
   const { showIntro, completeIntro } = useSiteIntro();
 
@@ -54,12 +55,15 @@ export default function HomePage() {
     initHydration();
   }, [initHydration]);
 
-  // Only enable fullpage scroll coordinator when in standard scroll mode
-  useFullpageScroll(!showIntro && mode === "scroll");
+  // Show role gate if user hasn't selected their role yet (first visit) or if opened via switch button
+  const showRoleGate = !showIntro && (persona === null || roleModalOpen);
 
-  // Lock body scroll in 3D garden mode
+  // Only enable fullpage scroll coordinator when in standard scroll mode and no intro/gate blocking
+  useFullpageScroll(!showIntro && !showRoleGate && mode === "scroll");
+
+  // Lock body scroll in 3D garden mode or while role gate is open
   useEffect(() => {
-    if (mode === "garden") {
+    if (mode === "garden" || showRoleGate) {
       document.body.style.overflow = "hidden";
       document.documentElement.style.overflow = "hidden";
     } else {
@@ -70,7 +74,7 @@ export default function HomePage() {
       document.body.style.overflow = "";
       document.documentElement.style.overflow = "";
     };
-  }, [mode]);
+  }, [mode, showRoleGate]);
 
   return (
     <>
@@ -208,6 +212,11 @@ export default function HomePage() {
         </AnimatePresence>
 
         {/* Global Modals */}
+        <WelcomeRoleGate
+          open={showRoleGate}
+          onClose={() => setRoleModalOpen(false)}
+          canDismiss={persona !== null}
+        />
         <GardenJournalModal
           open={journalOpen}
           onClose={() => setJournalOpen(false)}

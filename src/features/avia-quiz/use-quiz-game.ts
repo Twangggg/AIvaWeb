@@ -56,6 +56,14 @@ export function useQuizGame() {
   const [startTime, setStartTime] = useState<number>(0);
   const [elapsedSeconds, setElapsedSeconds] = useState(0);
 
+  // Pending Stats before Minigame
+  const [pendingStats, setPendingStats] = useState<{
+    finalCorrect: number;
+    finalWrong: number;
+    finalMaxCombo: number;
+    finalScore: number;
+  } | null>(null);
+
   // Summary
   const [summary, setSummary] = useState<QuizScoreSummary | null>(null);
   const [lastReward, setLastReward] = useState<{
@@ -316,7 +324,13 @@ export function useQuizGame() {
   };
 
   const finishGame = useCallback(
-    (finalCorrect: number, finalWrong: number, finalMaxCombo: number, finalScore: number) => {
+    (
+      finalCorrect: number,
+      finalWrong: number,
+      finalMaxCombo: number,
+      finalScore: number,
+      minigameBonus?: { won: boolean; bonusPoints: number; stars: number }
+    ) => {
       if (timerRef.current) clearInterval(timerRef.current);
       const totalTime = Math.max(1, Math.round((Date.now() - startTime) / 1000));
       const totalQ = questions.length;
@@ -345,6 +359,7 @@ export function useQuizGame() {
         elapsedSeconds: totalTime,
         praise,
         isPerfect,
+        minigameBonus,
       };
 
       setSummary(sum);
@@ -375,12 +390,36 @@ export function useQuizGame() {
       setFrogState("idle");
       setLastReward(null);
     } else {
+      if (timerRef.current) clearInterval(timerRef.current);
       const finalCorrect = correctCount + (wasCorrect ? 1 : 0);
       const finalWrong = wrongCount + (wasCorrect ? 0 : 1);
       const finalMaxCombo = maxCombo;
       const finalScore = score;
       finishGame(finalCorrect, finalWrong, finalMaxCombo, finalScore);
     }
+  };
+
+  const startBonusMinigame = () => {
+    setScreen("minigame");
+  };
+
+  const completeMiniGame = (result?: { won: boolean; bonusPoints: number; stars: number }) => {
+    if (summary && result) {
+      setSummary((prev) =>
+        prev
+          ? {
+              ...prev,
+              score: prev.score + (result.bonusPoints || 0),
+              minigameBonus: result,
+            }
+          : null
+      );
+    }
+    setScreen("summary");
+  };
+
+  const backToSummary = () => {
+    setScreen("summary");
   };
 
   const restartCurrent = () => {
@@ -423,6 +462,9 @@ export function useQuizGame() {
     startChapterReview,
     answerQuestion,
     restartCurrent,
+    startBonusMinigame,
+    completeMiniGame,
+    backToSummary,
     nextLessonInfo: getNextLessonInfo(),
     startNextLesson,
   };

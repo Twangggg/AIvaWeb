@@ -45,6 +45,7 @@ export type GameScreen =
   | "book-select"
   | "lesson-select"
   | "playing"
+  | "minigame"
   | "summary";
 
 export interface QuizScoreSummary {
@@ -60,6 +61,11 @@ export interface QuizScoreSummary {
   elapsedSeconds: number;
   praise: string;
   isPerfect: boolean;
+  minigameBonus?: {
+    won: boolean;
+    bonusPoints: number;
+    stars: number;
+  };
 }
 
 export interface NextLessonInfo {

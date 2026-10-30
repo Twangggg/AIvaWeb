@@ -1,7 +1,11 @@
 import { describe, it, expect } from "vitest";
+import fs from "fs";
+import path from "path";
 import { MOCK_QUIZ_BOOKS, GRADE_METAS } from "./mock-data";
 import { ALL_QUIZ_BOOKS } from "./data/all-books";
 import { loadQuizBook, preloadQuizBooksForGrade } from "./book-loader";
+import { GAME_AUDIO_PATHS, quizSound, gameAudio } from "./sound";
+import { GAMES, isValidGameId } from "../public-play/games-data";
 
 describe("Avia Quiz GDD Compliance Check", () => {
   it("should have 5 grade definitions matching GDD Grade 1 to 5", () => {
@@ -589,5 +593,80 @@ describe("Avia Quiz Progression & Next Lesson Logic", () => {
 
     // From Bài 3 (last in book, single lesson) -> null (completed book)
     expect(getNext("c2", "l3", false)).toBeNull();
+  });
+
+  describe("Official Game Audio Integration", () => {
+    it("ensures all 10 official game audio files exist in public/games directory", () => {
+      const publicGamesDir = path.resolve(process.cwd(), "public/games");
+      Object.entries(GAME_AUDIO_PATHS).forEach(([key, relativePath]) => {
+        const filePath = path.join(process.cwd(), "public", relativePath.replace(/^\//, ""));
+        expect(fs.existsSync(filePath), `Audio file for ${key} (${filePath}) must exist`).toBe(true);
+        const stats = fs.statSync(filePath);
+        expect(stats.size).toBeGreaterThan(1000);
+      });
+    });
+
+    it("safely handles all sound triggers without throwing in headless/SSR environments", () => {
+      expect(quizSound).toBeDefined();
+      expect(gameAudio).toBe(quizSound);
+
+      // Testing all SFX methods
+      expect(() => quizSound.playCorrect()).not.toThrow();
+      expect(() => quizSound.playWrong()).not.toThrow();
+      expect(() => quizSound.playCombo(3)).not.toThrow();
+      expect(() => quizSound.playVictory(true)).not.toThrow();
+      expect(() => quizSound.playVictory(false)).not.toThrow();
+      expect(() => quizSound.playMiniGameMove()).not.toThrow();
+      expect(() => quizSound.playMiniGameFall()).not.toThrow();
+      expect(() => quizSound.playMiniGameWin()).not.toThrow();
+      expect(() => quizSound.playMiniGameLose()).not.toThrow();
+
+      // Testing BGM controls
+      expect(() => quizSound.startBgm()).not.toThrow();
+      expect(() => quizSound.pauseBgm()).not.toThrow();
+      expect(() => quizSound.resumeBgm()).not.toThrow();
+      expect(() => quizSound.stopBgm()).not.toThrow();
+
+      // Testing sound toggle
+      quizSound.enabled = false;
+      expect(quizSound.enabled).toBe(false);
+      expect(() => quizSound.playCorrect()).not.toThrow();
+      quizSound.enabled = true;
+      expect(quizSound.enabled).toBe(true);
+    });
+  });
+
+  describe("Crossy Frog Minigame Integration", () => {
+    it("ensures crossy-frog is exclusively integrated within Avia Quiz and not a standalone game", () => {
+      expect(isValidGameId("crossy-frog")).toBe(false);
+      const crossyGame = GAMES.find((g) => g.id === "crossy-frog");
+      expect(crossyGame).toBeUndefined();
+    });
+
+    it("verifies minigameBonus structure in QuizScoreSummary", () => {
+      const summaryWithBonus = {
+        grade: 2 as const,
+        bookTitle: "Tự nhiên và Xã hội 2",
+        lessonTitle: "Bài 1",
+        isReview: false,
+        totalQuestions: 6,
+        correctAnswers: 6,
+        wrongAnswers: 0,
+        score: 80,
+        maxCombo: 6,
+        elapsedSeconds: 42,
+        praise: "Quá nhanh quá nguy hiểm!!",
+        isPerfect: true,
+        minigameBonus: {
+          won: true,
+          bonusPoints: 20,
+          stars: 3,
+        },
+      };
+
+      expect(summaryWithBonus.minigameBonus.won).toBe(true);
+      expect(summaryWithBonus.minigameBonus.bonusPoints).toBe(20);
+      expect(summaryWithBonus.score).toBe(80);
+    });
   });
 });

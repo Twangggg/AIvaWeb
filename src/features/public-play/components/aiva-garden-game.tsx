@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState, useCallback } from "react";
+import { gameAudio } from "@/features/avia-quiz/sound";
 
 export type GardenGameUpdate = {
   collected: number;
@@ -266,6 +267,23 @@ export function AivaGardenGame({ onUpdate, round, level = 1 }: AivaGardenGamePro
 
         private playSound(type: "step" | "shard" | "gate" | "win" | "fail" | "zap" | "trap") {
           try {
+            if (type === "step") {
+              gameAudio.playMiniGameMove();
+              return;
+            }
+            if (type === "zap" || type === "trap") {
+              gameAudio.playMiniGameFall();
+              return;
+            }
+            if (type === "win") {
+              gameAudio.playMiniGameWin();
+              return;
+            }
+            if (type === "fail") {
+              gameAudio.playMiniGameLose();
+              return;
+            }
+
             if (!this.audioCtx) {
               const AudioCtx =
                 window.AudioContext ||
@@ -279,14 +297,7 @@ export function AivaGardenGame({ onUpdate, round, level = 1 }: AivaGardenGamePro
             osc.connect(gain);
             gain.connect(ctx.destination);
 
-            if (type === "step") {
-              osc.type = "sine";
-              osc.frequency.setValueAtTime(320, ctx.currentTime);
-              gain.gain.setValueAtTime(0.04, ctx.currentTime);
-              gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.07);
-              osc.start();
-              osc.stop(ctx.currentTime + 0.07);
-            } else if (type === "shard") {
+            if (type === "shard") {
               osc.type = "triangle";
               osc.frequency.setValueAtTime(659.25, ctx.currentTime);
               osc.frequency.setValueAtTime(880, ctx.currentTime + 0.09);
@@ -295,15 +306,6 @@ export function AivaGardenGame({ onUpdate, round, level = 1 }: AivaGardenGamePro
               gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.35);
               osc.start();
               osc.stop(ctx.currentTime + 0.35);
-            } else if (type === "zap" || type === "trap") {
-              osc.type = "sawtooth";
-              osc.frequency.setValueAtTime(140, ctx.currentTime);
-              osc.frequency.setValueAtTime(280, ctx.currentTime + 0.06);
-              osc.frequency.setValueAtTime(90, ctx.currentTime + 0.14);
-              gain.gain.setValueAtTime(0.3, ctx.currentTime);
-              gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.3);
-              osc.start();
-              osc.stop(ctx.currentTime + 0.3);
             } else if (type === "gate") {
               osc.type = "sine";
               osc.frequency.setValueAtTime(523.25, ctx.currentTime);
@@ -312,24 +314,6 @@ export function AivaGardenGame({ onUpdate, round, level = 1 }: AivaGardenGamePro
               gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.45);
               osc.start();
               osc.stop(ctx.currentTime + 0.45);
-            } else if (type === "win") {
-              osc.type = "triangle";
-              osc.frequency.setValueAtTime(523.25, ctx.currentTime);
-              osc.frequency.setValueAtTime(659.25, ctx.currentTime + 0.12);
-              osc.frequency.setValueAtTime(783.99, ctx.currentTime + 0.24);
-              osc.frequency.setValueAtTime(1046.5, ctx.currentTime + 0.36);
-              gain.gain.setValueAtTime(0.25, ctx.currentTime);
-              gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.6);
-              osc.start();
-              osc.stop(ctx.currentTime + 0.6);
-            } else if (type === "fail") {
-              osc.type = "sawtooth";
-              osc.frequency.setValueAtTime(220, ctx.currentTime);
-              osc.frequency.setValueAtTime(150, ctx.currentTime + 0.15);
-              gain.gain.setValueAtTime(0.25, ctx.currentTime);
-              gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.4);
-              osc.start();
-              osc.stop(ctx.currentTime + 0.4);
             }
           } catch {
             // Audio fallback

@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useEffect, useRef, useState, useCallback } from "react";
 import { GameHeaderBar } from "@/features/public-play/components/game-fullscreen-wrapper";
+import { gameAudio } from "@/features/avia-quiz/sound";
 
 type Point = { x: number; y: number };
 type Command = "up" | "right" | "down" | "left";
@@ -220,7 +221,7 @@ export function RouteBuilderGame() {
 
         setRunning(false);
         if (reachedGoal && gotAllGems) {
-          playTone(659.25, 0.4);
+          gameAudio.playMiniGameWin();
           let stars = 2;
           if (commands.length <= mission.optimalCommands) {
             stars = 3;
@@ -230,10 +231,10 @@ export function RouteBuilderGame() {
           setCompleted(true);
           setMessage(stars === 3 ? "Xuất sắc! Lộ trình tối ưu đạt 3 Sao ⭐⭐⭐" : "Hoàn thành! Bạn nhận 2 Sao ⭐⭐");
         } else if (reachedGoal && !gotAllGems) {
-          playTone(220, 0.3);
+          gameAudio.playMiniGameLose();
           setMessage(`Chưa đủ năng lượng! Cần nhặt đủ ${requiredGems} tinh thể năng lượng trước khi vào cổng.`);
         } else {
-          playTone(220, 0.3);
+          gameAudio.playMiniGameLose();
           setMessage("Chưa tới cổng không gian. Hãy điều chỉnh chuỗi lệnh.");
         }
         return;
@@ -245,7 +246,7 @@ export function RouteBuilderGame() {
 
       if (!valid) {
         setRunning(false);
-        playTone(180, 0.35);
+        gameAudio.playMiniGameFall();
         setMessage("AIVA gặp chướng ngại vật hoặc va vào tường! Hãy sửa lại lệnh.");
         return;
       }
@@ -255,7 +256,7 @@ export function RouteBuilderGame() {
         playTone(880, 0.3);
         next = { ...mission.portalB! };
       } else {
-        playTone(440 + index * 40, 0.15);
+        gameAudio.playMiniGameMove();
       }
 
       // Check Gem Collection

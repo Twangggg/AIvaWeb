@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState, useCallback } from "react";
 import { GameHeaderBar } from "@/features/public-play/components/game-fullscreen-wrapper";
+import { gameAudio } from "@/features/avia-quiz/sound";
 
 type Difficulty = "easy" | "medium" | "hard";
 
@@ -87,6 +88,7 @@ export function EnergySequenceGame() {
           window.clearInterval(intervalRef.current);
           intervalRef.current = null;
         }
+        gameAudio.playMiniGameLose();
         setFailReason("timeout");
         setMode("failed");
       }
@@ -156,6 +158,7 @@ export function EnergySequenceGame() {
 
     if (sequence[nextEntered.length - 1] !== padId) {
       if (intervalRef.current) window.clearInterval(intervalRef.current);
+      gameAudio.playMiniGameLose();
       setLit(padId);
       setFailReason("wrong");
       setMode("failed");
@@ -165,6 +168,7 @@ export function EnergySequenceGame() {
 
     if (nextEntered.length === sequence.length) {
       if (intervalRef.current) window.clearInterval(intervalRef.current);
+      gameAudio.playMiniGameWin();
       const newScore = score + sequence.length * (difficulty === "hard" ? 30 : difficulty === "medium" ? 20 : 10);
       setScore(newScore);
       setBest((value) => Math.max(value, sequence.length));

@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useRef } from "react";
 import Image from "next/image";
+import { gameAudio } from "@/features/avia-quiz/sound";
 import { GameHeaderBar, FullscreenToggleBtn, RotateToggleBtn, useGameFullscreen } from "@/features/public-play/components/game-fullscreen-wrapper";
 
 interface QuestItem {
@@ -161,6 +162,19 @@ export function AivaVisionQuestGame() {
   // Synthesize Web Audio Effects
   const playSoundEffect = (type: "scan" | "correct" | "wrong" | "win" | "speak") => {
     try {
+      if (type === "correct") {
+        gameAudio.playCorrect();
+        return;
+      }
+      if (type === "wrong") {
+        gameAudio.playWrong();
+        return;
+      }
+      if (type === "win") {
+        gameAudio.playMiniGameWin();
+        return;
+      }
+
       if (!audioCtxRef.current) {
         const AudioContextClass = window.AudioContext || (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext;
         audioCtxRef.current = new AudioContextClass();
@@ -183,23 +197,6 @@ export function AivaVisionQuestGame() {
         gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.35);
         osc.start();
         osc.stop(ctx.currentTime + 0.35);
-      } else if (type === "correct") {
-        osc.type = "triangle";
-        osc.frequency.setValueAtTime(523.25, ctx.currentTime); // C5
-        osc.frequency.setValueAtTime(659.25, ctx.currentTime + 0.1); // E5
-        osc.frequency.setValueAtTime(783.99, ctx.currentTime + 0.2); // G5
-        gain.gain.setValueAtTime(0.2, ctx.currentTime);
-        gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.4);
-        osc.start();
-        osc.stop(ctx.currentTime + 0.4);
-      } else if (type === "wrong") {
-        osc.type = "sawtooth";
-        osc.frequency.setValueAtTime(240, ctx.currentTime);
-        osc.frequency.setValueAtTime(180, ctx.currentTime + 0.15);
-        gain.gain.setValueAtTime(0.2, ctx.currentTime);
-        gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.3);
-        osc.start();
-        osc.stop(ctx.currentTime + 0.3);
       } else if (type === "speak") {
         osc.type = "sine";
         osc.frequency.setValueAtTime(600, ctx.currentTime);
@@ -208,16 +205,6 @@ export function AivaVisionQuestGame() {
         gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.2);
         osc.start();
         osc.stop(ctx.currentTime + 0.2);
-      } else if (type === "win") {
-        osc.type = "sine";
-        osc.frequency.setValueAtTime(523.25, ctx.currentTime);
-        osc.frequency.setValueAtTime(659.25, ctx.currentTime + 0.15);
-        osc.frequency.setValueAtTime(783.99, ctx.currentTime + 0.3);
-        osc.frequency.setValueAtTime(1046.5, ctx.currentTime + 0.45);
-        gain.gain.setValueAtTime(0.25, ctx.currentTime);
-        gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.7);
-        osc.start();
-        osc.stop(ctx.currentTime + 0.7);
       }
     } catch {
       // Audio fallback

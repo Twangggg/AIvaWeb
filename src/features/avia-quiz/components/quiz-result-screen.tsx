@@ -10,6 +10,7 @@ interface QuizResultScreenProps {
   onNextLesson?: () => void;
   onRestart: () => void;
   onChooseOtherLesson: () => void;
+  onPlayBonusGame?: () => void;
 }
 
 export function QuizResultScreen({
@@ -18,6 +19,7 @@ export function QuizResultScreen({
   onNextLesson,
   onRestart,
   onChooseOtherLesson,
+  onPlayBonusGame,
 }: QuizResultScreenProps) {
   const percentCorrect = Math.round(
     (summary.correctAnswers / summary.totalQuestions) * 100
@@ -101,6 +103,87 @@ export function QuizResultScreen({
             {summary.bookTitle} • {summary.lessonTitle}
           </p>
         </motion.div>
+
+        {/* Mini-Game Bonus Badge if played */}
+        {summary.minigameBonus && (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.35 }}
+            className={`my-3 flex items-center justify-between gap-3 p-3 sm:p-3.5 rounded-2xl border ${
+              summary.minigameBonus.won
+                ? "bg-gradient-to-r from-emerald-500/15 via-teal-500/15 to-emerald-500/10 border-emerald-400 text-emerald-950 dark:text-emerald-200"
+                : "bg-amber-500/15 border-amber-400 text-amber-950 dark:text-amber-200"
+            }`}
+          >
+            <div className="flex items-center gap-2.5">
+              <span className="text-2xl">{summary.minigameBonus.won ? "👑" : "🐸"}</span>
+              <div className="text-left">
+                <p className="text-xs sm:text-sm font-black">
+                  {summary.minigameBonus.won ? "Huy Hiệu: Vua Vượt Sông Avia ⭐⭐⭐" : "Thử thách: Vượt Sông Cùng Avia"}
+                </p>
+                <p className="text-[11px] opacity-80 font-medium">
+                  {summary.minigameBonus.won ? "Đã sang bờ thành công an toàn!" : "Đã tham gia chặng vượt sông tích lũy kinh nghiệm"}
+                </p>
+              </div>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="rounded-xl bg-white dark:bg-slate-900 px-3 py-1 text-xs font-black text-emerald-600 dark:text-emerald-400 shadow-sm border border-emerald-300 dark:border-emerald-700">
+                +{summary.minigameBonus.bonusPoints} Điểm
+              </span>
+              {onPlayBonusGame && (
+                <button
+                  type="button"
+                  onClick={onPlayBonusGame}
+                  className="px-2.5 py-1 rounded-xl bg-emerald-100 hover:bg-emerald-200 dark:bg-emerald-900/60 dark:hover:bg-emerald-800 text-emerald-800 dark:text-emerald-200 text-xs font-bold transition active:scale-95"
+                  title="Chơi lại thử thách vượt sông"
+                >
+                  Chơi lại ↺
+                </button>
+              )}
+            </div>
+          </motion.div>
+        )}
+
+        {/* Optional Bonus Challenge Invitation (Chỉ hiển thị khi bé chưa chơi) */}
+        {!summary.minigameBonus && onPlayBonusGame && (
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.35 }}
+            className="my-3.5 p-3.5 sm:p-4 rounded-2xl bg-gradient-to-r from-emerald-500/10 via-teal-500/15 to-sky-500/10 border-2 border-emerald-400/70 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-3 text-left"
+          >
+            <div className="flex items-center gap-3">
+              <span className="text-3xl sm:text-4xl">🐸</span>
+              <div>
+                <div className="flex items-center gap-1.5">
+                  <span className="text-[10px] font-black uppercase tracking-wider px-2 py-0.5 rounded-full bg-emerald-500 text-white">
+                    Trò chơi phụ
+                  </span>
+                  <span className="text-xs font-bold text-amber-600 dark:text-amber-400">
+                    +20 Điểm thưởng ⭐
+                  </span>
+                </div>
+                <h4 className="text-xs sm:text-sm font-black text-slate-900 dark:text-white mt-0.5">
+                  Vượt Sông Cùng Avia
+                </h4>
+                <p className="text-[11px] text-slate-600 dark:text-slate-300">
+                  Bé có muốn thử tài điều khiển Ếch qua đường và vượt sông sen không?
+                </p>
+              </div>
+            </div>
+
+            <motion.button
+              type="button"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={onPlayBonusGame}
+              className="w-full sm:w-auto px-4 py-2 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white font-black text-xs shadow-md shadow-emerald-500/25 whitespace-nowrap active:scale-95 transition cursor-pointer"
+            >
+              Chơi thử ➔
+            </motion.button>
+          </motion.div>
+        )}
 
         {/* Key Metrics Grid */}
         <div className="my-6 grid grid-cols-2 gap-3 sm:grid-cols-4">

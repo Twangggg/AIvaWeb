@@ -23,7 +23,7 @@ export function LandingModePill() {
         }}
       >
         <div className="relative flex items-center rounded-full p-0.5 bg-black/[0.04] dark:bg-white/[0.06]">
-          {/* 3D Mode Option - Minimum 44px touch target per mobile-web-design */}
+          {/* 3D Mode Option */}
           <button
             type="button"
             onClick={() => setMode("garden")}
@@ -44,7 +44,7 @@ export function LandingModePill() {
             <span className="relative z-10">3D</span>
           </button>
 
-          {/* Scroll Mode Option - Minimum 44px touch target per mobile-web-design */}
+          {/* Scroll Mode Option */}
           <button
             type="button"
             onClick={() => setMode("scroll")}

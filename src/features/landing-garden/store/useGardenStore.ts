@@ -1,6 +1,7 @@
 import { create } from "zustand";
 
 export type GardenMode = "garden" | "scroll";
+export type UserPersona = "parent" | "student";
 
 export type GardenStationId =
   | "gate"
@@ -199,37 +200,82 @@ interface GardenState {
   setJoystick: (vec: { x: number; y: number }) => void;
   jumpCount: number;
   triggerJump: () => void;
+  persona: UserPersona | null;
+  setPersona: (persona: UserPersona | null) => void;
+  selectPersonaAndMode: (persona: UserPersona) => void;
+  roleModalOpen: boolean;
+  setRoleModalOpen: (open: boolean) => void;
   initHydration: () => void;
 }
 
 const STORAGE_MODE_KEY = "aiva_home_view_mode_v2";
+const STORAGE_PERSONA_KEY = "aiva_home_persona_v2";
 const STORAGE_STAMPS_KEY = "aiva_garden_stamps_v2";
 const STORAGE_SHARDS_KEY = "aiva_garden_shards_v2";
 const STORAGE_SOUND_KEY = "aiva_garden_sound_v2";
 const STORAGE_NAME_KEY = "aiva_garden_kid_name_v2";
 
 export const useGardenStore = create<GardenState>((set) => ({
-  mode: "garden",
+  mode: "scroll",
+  persona: null,
+  roleModalOpen: false,
+  setRoleModalOpen: (open) => set({ roleModalOpen: open }),
+  setPersona: (persona) => {
+    set({ persona });
+    try {
+      if (persona) {
+        localStorage.setItem(STORAGE_PERSONA_KEY, persona);
+      } else {
+        localStorage.removeItem(STORAGE_PERSONA_KEY);
+      }
+    } catch {}
+  },
+  selectPersonaAndMode: (persona) => {
+    const nextMode: GardenMode = persona === "parent" ? "scroll" : "garden";
+    set({ persona, mode: nextMode, roleModalOpen: false });
+    try {
+      localStorage.setItem(STORAGE_PERSONA_KEY, persona);
+      localStorage.setItem(STORAGE_MODE_KEY, nextMode);
+    } catch {}
+  },
   setMode: (mode) => {
     set({ mode });
     try {
       localStorage.setItem(STORAGE_MODE_KEY, mode);
+      if (mode === "scroll") {
+        localStorage.setItem(STORAGE_PERSONA_KEY, "parent");
+        set({ persona: "parent" });
+      } else if (mode === "garden") {
+        localStorage.setItem(STORAGE_PERSONA_KEY, "student");
+        set({ persona: "student" });
+      }
     } catch {}
   },
   initHydration: () => {
     if (typeof window === "undefined") return;
     try {
+      const savedPersona = localStorage.getItem(STORAGE_PERSONA_KEY) as UserPersona | null;
       const savedMode = localStorage.getItem(STORAGE_MODE_KEY);
       const savedStamps = localStorage.getItem(STORAGE_STAMPS_KEY);
       const savedShards = localStorage.getItem(STORAGE_SHARDS_KEY);
       const savedSound = localStorage.getItem(STORAGE_SOUND_KEY);
       const savedName = localStorage.getItem(STORAGE_NAME_KEY);
 
+      const resolvedPersona: UserPersona | null =
+        savedPersona === "parent" || savedPersona === "student" ? savedPersona : null;
+
+      let resolvedMode: GardenMode = "scroll";
+      if (savedMode === "garden" || savedMode === "scroll") {
+        resolvedMode = savedMode as GardenMode;
+      } else if (resolvedPersona === "student") {
+        resolvedMode = "garden";
+      } else if (resolvedPersona === "parent") {
+        resolvedMode = "scroll";
+      }
+
       set((state) => ({
-        mode:
-          savedMode === "garden" || savedMode === "scroll"
-            ? (savedMode as GardenMode)
-            : state.mode,
+        persona: resolvedPersona,
+        mode: resolvedMode,
         unlockedStamps: savedStamps ? JSON.parse(savedStamps) : state.unlockedStamps,
         collectedShards: savedShards ? JSON.parse(savedShards) : state.collectedShards,
         soundEnabled: savedSound !== null ? savedSound === "true" : state.soundEnabled,
