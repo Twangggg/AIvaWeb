@@ -42,12 +42,17 @@ const PlaygroundCanvas = dynamic(
 
 export default function PublicPlayPage() {
   const router = useRouter();
-  const { mode, setDukyOpen, addStamp } = usePlayModeStore();
+  const { mode, isHydrated, hydrateFromStorage, setDukyOpen, addStamp } =
+    usePlayModeStore();
   const [preorderOpen, setPreorderOpen] = useState(false);
+
+  useEffect(() => {
+    hydrateFromStorage();
+  }, [hydrateFromStorage]);
 
   // Manage body scroll based on 3D mode vs Scroll mode
   useEffect(() => {
-    if (mode === "3d") {
+    if (isHydrated && mode === "3d") {
       document.body.style.overflow = "hidden";
       document.documentElement.style.overflow = "hidden";
     } else {
@@ -58,7 +63,7 @@ export default function PublicPlayPage() {
       document.body.style.overflow = "";
       document.documentElement.style.overflow = "";
     };
-  }, [mode]);
+  }, [isHydrated, mode]);
 
   const openGame = (game: GameId) => {
     addStamp(game);
@@ -83,7 +88,7 @@ export default function PublicPlayPage() {
       <KidDukyModal onSelectStation={handleInteractStation} />
 
       {/* MODE 1: 3D PLAYGROUND */}
-      {mode === "3d" ? (
+      {isHydrated && mode === "3d" ? (
         <main className="fixed inset-0 h-screen w-screen overflow-hidden">
           <PlaygroundCanvas onInteractStation={handleInteractStation} />
         </main>

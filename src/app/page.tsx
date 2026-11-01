@@ -46,7 +46,16 @@ const LandingGardenCanvas = dynamic(
 );
 
 export default function HomePage() {
-  const { mode, persona, journalOpen, setJournalOpen, initHydration, roleModalOpen, setRoleModalOpen } = useGardenStore();
+  const {
+    mode,
+    persona,
+    isHydrated,
+    journalOpen,
+    setJournalOpen,
+    initHydration,
+    roleModalOpen,
+    setRoleModalOpen,
+  } = useGardenStore();
   const [preorderOpen, setPreorderOpen] = useState(false);
   const { showIntro, completeIntro } = useSiteIntro();
 
@@ -55,15 +64,15 @@ export default function HomePage() {
     initHydration();
   }, [initHydration]);
 
-  // Show role gate if user hasn't selected their role yet (first visit) or if opened via switch button
-  const showRoleGate = !showIntro && (persona === null || roleModalOpen);
+  // Show role gate if user hasn't selected their role yet (first visit) or if opened via switch button, only after hydration
+  const showRoleGate = isHydrated && !showIntro && (persona === null || roleModalOpen);
 
   // Only enable fullpage scroll coordinator when in standard scroll mode and no intro/gate blocking
   useFullpageScroll(!showIntro && !showRoleGate && mode === "scroll");
 
   // Lock body scroll in 3D garden mode or while role gate is open
   useEffect(() => {
-    if (mode === "garden" || showRoleGate) {
+    if ((isHydrated && mode === "garden") || showRoleGate) {
       document.body.style.overflow = "hidden";
       document.documentElement.style.overflow = "hidden";
     } else {
@@ -74,7 +83,7 @@ export default function HomePage() {
       document.body.style.overflow = "";
       document.documentElement.style.overflow = "";
     };
-  }, [mode, showRoleGate]);
+  }, [isHydrated, mode, showRoleGate]);
 
   return (
     <>
@@ -87,7 +96,7 @@ export default function HomePage() {
 
         {/* Animated View Transition between 3D Garden and Scroll Landing (framer-motion-aiva tokens) */}
         <AnimatePresence mode="wait">
-          {mode === "garden" ? (
+          {isHydrated && mode === "garden" ? (
             /* MODE 1: 3D DISCOVERY GARDEN (Khu Vườn Khám Phá 3D) */
             <motion.main
               key="garden-mode-view"

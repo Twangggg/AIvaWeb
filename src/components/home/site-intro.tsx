@@ -16,7 +16,27 @@ const DUR_MID = 0.55;
 const MIN_DISPLAY_MS = 1400;
 const MAX_WAIT_MS = 8000;
 let introPending = true;
+let introActive = false;
+let introInitialized = false;
+
 const listeners = new Set<() => void>();
+
+function getIntroActiveSnapshot() {
+  if (typeof window === "undefined") return false;
+  if (!introInitialized) {
+    introInitialized = true;
+    introActive = !isIntroSeen();
+    introPending = introActive;
+  }
+  return introActive;
+}
+
+function setIntroActive(active: boolean) {
+  introActive = active;
+  introPending = active;
+  listeners.forEach((listener) => listener());
+}
+
 function setIntroPending(pending: boolean) {
   introPending = pending;
   listeners.forEach((listener) => listener());
@@ -386,22 +406,26 @@ export function SiteIntro({ onComplete }: { onComplete: () => void }) {
 }
 
 export function useSiteIntro() {
-  const [showIntro, setShowIntro] = useState(true);
+  const showIntro = useSyncExternalStore(
+    subscribe,
+    getIntroActiveSnapshot,
+    () => false
+  );
+
   useEffect(() => {
-    setIntroPending(true);
     const replay = () => {
-      setIntroPending(true);
-      setShowIntro(true);
+      setIntroActive(true);
     };
     window.addEventListener(INTRO_SHOW_EVENT, replay);
     return () => window.removeEventListener(INTRO_SHOW_EVENT, replay);
   }, []);
+
   const completeIntro = useCallback(() => {
-    setShowIntro(false);
-    setIntroPending(false);
     markIntroSeen();
+    setIntroActive(false);
     window.dispatchEvent(new Event(INTRO_COMPLETE_EVENT));
   }, []);
+
   return { showIntro, completeIntro };
 }
 

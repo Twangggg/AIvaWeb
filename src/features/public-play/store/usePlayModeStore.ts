@@ -1,4 +1,9 @@
 import { create } from "zustand";
+import {
+  getSavedGlobalViewMode,
+  saveGlobalViewMode,
+  VIEW_MODE_CHANGE_EVENT,
+} from "@/lib/view-mode-preference";
 
 export type PlayMode = "3d" | "scroll";
 
@@ -93,13 +98,13 @@ const STORAGE_MODE_KEY = "aiva_play_mode_v1";
 const STORAGE_STAMPS_KEY = "aiva_unlocked_stamps_v1";
 const STORAGE_NAME_KEY = "aiva_kid_name_v1";
 
+let playModeListenerAttached = false;
+
 export const usePlayModeStore = create<PlayModeState>((set) => ({
-  mode: "3d", // Deterministic initial value across SSR and initial client render
+  mode: "scroll", // Deterministic initial value across SSR and initial client render (scroll-first safe default)
   setMode: (mode) => {
     set({ mode });
-    try {
-      localStorage.setItem(STORAGE_MODE_KEY, mode);
-    } catch {}
+    saveGlobalViewMode(mode);
   },
   nearbyStation: null,
   setNearbyStation: (nearbyStation) => set({ nearbyStation }),
@@ -130,14 +135,32 @@ export const usePlayModeStore = create<PlayModeState>((set) => ({
   isHydrated: false,
   hydrateFromStorage: () => {
     if (typeof window === "undefined") return;
+
+    if (!playModeListenerAttached) {
+      playModeListenerAttached = true;
+      const onModeChange = (e: Event) => {
+        const detail = (e as CustomEvent<"scroll" | "3d">).detail;
+        if (detail === "scroll" || detail === "3d") {
+          set({ mode: detail });
+        }
+      };
+      window.addEventListener(VIEW_MODE_CHANGE_EVENT, onModeChange);
+      window.addEventListener("storage", (e) => {
+        if (e.key === "aiva_global_view_mode" || e.key === STORAGE_MODE_KEY) {
+          const next = getSavedGlobalViewMode();
+          set({ mode: next });
+        }
+      });
+    }
+
     try {
-      const savedMode = localStorage.getItem(STORAGE_MODE_KEY);
+      const savedMode = getSavedGlobalViewMode();
       const savedStamps = localStorage.getItem(STORAGE_STAMPS_KEY);
       const savedName = localStorage.getItem(STORAGE_NAME_KEY);
-      const updates: Partial<PlayModeState> = { isHydrated: true };
-      if (savedMode === "3d" || savedMode === "scroll") {
-        updates.mode = savedMode;
-      }
+      const updates: Partial<PlayModeState> = {
+        isHydrated: true,
+        mode: savedMode,
+      };
       if (savedStamps) {
         const parsed = JSON.parse(savedStamps);
         if (Array.isArray(parsed)) updates.unlockedStamps = parsed;

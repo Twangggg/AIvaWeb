@@ -328,9 +328,9 @@ export function FriendlyFeaturesChapter() {
             </span>
             <h3>{scene.title}</h3>
             <p>{scene.desc}</p>
-            <a href="/product" className="garden-text-link">
+            <Link href="/product" className="garden-text-link">
               {c("Ba mẹ tìm hiểu thêm", "More for parents")} →
-            </a>
+            </Link>
           </div>
         </SceneSwap>
       </div>
