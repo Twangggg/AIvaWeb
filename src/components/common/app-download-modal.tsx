@@ -1,5 +1,7 @@
 "use client";
 
+import { useEffect, useCallback, useSyncExternalStore } from "react";
+import { createPortal } from "react-dom";
 import Image from "next/image";
 import { APP_DOWNLOAD } from "@/lib/app-download";
 
@@ -8,37 +10,59 @@ interface AppDownloadModalProps {
   onClose: () => void;
 }
 
+const emptySubscribe = () => () => {};
+
 export function AppDownloadModal({ open, onClose }: AppDownloadModalProps) {
-  if (!open) return null;
+  const mounted = useSyncExternalStore(emptySubscribe, () => true, () => false);
 
+  const handleKeyDown = useCallback(
+    (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+    },
+    [onClose]
+  );
 
-  return (
+  useEffect(() => {
+    if (open) {
+      document.addEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = "hidden";
+    }
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = "";
+    };
+  }, [open, handleKeyDown]);
+
+  if (!open || !mounted) return null;
+
+  const content = (
     <div
       onClick={(e) => {
         if (e.target === e.currentTarget) onClose();
       }}
-      className="fixed inset-0 z-[100] flex items-center justify-center p-4 backdrop-blur-md animate-fadeIn"
-      style={{ backgroundColor: "var(--overlay-bg)" }}
+      className="fixed inset-0 z-[9999] flex items-center justify-center p-4 backdrop-blur-md animate-fadeIn"
+      style={{ backgroundColor: "var(--overlay-bg, rgba(0, 0, 0, 0.6))" }}
     >
       <div
-        className="relative w-full max-w-md overflow-hidden rounded-3xl p-6 md:p-7 shadow-2xl transition-all border"
+        className="relative w-full max-w-md overflow-hidden rounded-3xl p-6 md:p-7 shadow-2xl transition-all border animate-in fade-in zoom-in-95 duration-200"
         style={{
-          backgroundColor: "var(--modal-bg)",
-          borderColor: "var(--border-subtle)",
-          boxShadow: "var(--shadow-modal)",
+          backgroundColor: "var(--modal-bg, #ffffff)",
+          borderColor: "var(--border-subtle, rgba(0,0,0,0.1))",
+          boxShadow: "var(--shadow-modal, 0 25px 50px -12px rgba(0,0,0,0.25))",
         }}
       >
         {/* Subtle Ambient Glow */}
         <div
           className="absolute -top-20 -right-20 w-60 h-60 rounded-full blur-[80px] pointer-events-none opacity-30"
-          style={{ background: "var(--ocean)" }}
+          style={{ background: "var(--ocean, #0ea5e9)" }}
         />
 
         {/* Close Button */}
         <button
+          type="button"
           onClick={onClose}
-          className="absolute top-5 right-5 w-8 h-8 rounded-full flex items-center justify-center transition-colors hover:bg-white/10"
-          style={{ color: "var(--text-dim)" }}
+          className="absolute top-5 right-5 w-8 h-8 rounded-full flex items-center justify-center transition-colors hover:bg-black/10 dark:hover:bg-white/10"
+          style={{ color: "var(--text-dim, #64748b)" }}
           aria-label="Đóng"
         >
           <span className="material-symbols-outlined text-xl">close</span>
@@ -57,12 +81,12 @@ export function AppDownloadModal({ open, onClose }: AppDownloadModalProps) {
               priority
             />
             <h2
-              className="text-xl font-bold tracking-tight"
+              className="text-xl font-bold tracking-tight text-slate-900 dark:text-white"
               style={{ color: "var(--text-on-glass)" }}
             >
               Tải App AIVA Companion
             </h2>
-            <p className="text-xs mt-0.5" style={{ color: "var(--text-dim)" }}>
+            <p className="text-xs mt-0.5 text-slate-500 dark:text-slate-400" style={{ color: "var(--text-dim)" }}>
               Đồng hành cùng con khám phá thế giới thực.
             </p>
           </div>
@@ -85,20 +109,20 @@ export function AppDownloadModal({ open, onClose }: AppDownloadModalProps) {
             download={APP_DOWNLOAD.filename}
             className="w-full relative overflow-hidden group flex items-center justify-between p-3.5 rounded-2xl font-semibold shadow-lg transition-all transform hover:-translate-y-0.5 active:translate-y-0"
             style={{
-              background: "var(--gradient-ocean)",
-              color: "var(--text-on-accent)",
-              boxShadow: "var(--shadow-glow)",
+              background: "var(--gradient-ocean, linear-gradient(135deg, #0ea5e9, #0284c7))",
+              color: "#ffffff",
+              boxShadow: "var(--shadow-glow, 0 4px 14px rgba(14, 165, 233, 0.4))",
             }}
           >
             <div className="flex items-center gap-3 text-left">
-              <div className="w-9 h-9 rounded-xl bg-black/10 flex items-center justify-center shrink-0">
+              <div className="w-9 h-9 rounded-xl bg-black/15 flex items-center justify-center shrink-0">
                 <span className="material-symbols-outlined text-xl">
                   download
                 </span>
               </div>
               <div>
                 <div className="text-sm font-bold">Tải trực tiếp (Bản APK)</div>
-                <div className="text-[11px] opacity-80 font-normal">
+                <div className="text-[11px] opacity-90 font-normal">
                   Android • v{APP_DOWNLOAD.version} Preview •{" "}
                   {(APP_DOWNLOAD.sizeBytes / 1_000_000).toFixed(1)} MB
                 </div>
@@ -115,7 +139,7 @@ export function AppDownloadModal({ open, onClose }: AppDownloadModalProps) {
             <a
               href={APP_DOWNLOAD.path}
               download={APP_DOWNLOAD.filename}
-              className="flex items-center gap-2.5 p-3 rounded-2xl border transition-all text-left group"
+              className="flex items-center gap-2.5 p-3 rounded-2xl border transition-all text-left group bg-slate-50 dark:bg-stone-800/60 hover:border-sky-400"
               style={{
                 backgroundColor: "var(--bg-subtle)",
                 borderColor: "var(--border-subtle)",
@@ -124,8 +148,8 @@ export function AppDownloadModal({ open, onClose }: AppDownloadModalProps) {
               <div
                 className="w-8 h-8 rounded-xl flex items-center justify-center shrink-0"
                 style={{
-                  backgroundColor: "var(--ocean-alpha)",
-                  color: "var(--ocean)",
+                  backgroundColor: "var(--ocean-alpha, rgba(14, 165, 233, 0.15))",
+                  color: "var(--ocean, #0ea5e9)",
                 }}
               >
                 <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -140,7 +164,7 @@ export function AppDownloadModal({ open, onClose }: AppDownloadModalProps) {
                   Android
                 </div>
                 <div
-                  className="text-xs font-bold truncate"
+                  className="text-xs font-bold truncate text-slate-800 dark:text-white"
                   style={{ color: "var(--text-on-glass)" }}
                 >
                   Tải bản APK
@@ -150,14 +174,14 @@ export function AppDownloadModal({ open, onClose }: AppDownloadModalProps) {
 
             {/* Apple iOS (Coming Soon) */}
             <div
-              className="flex items-center gap-2.5 p-3 rounded-2xl border opacity-60 cursor-not-allowed text-left select-none"
+              className="flex items-center gap-2.5 p-3 rounded-2xl border opacity-60 cursor-not-allowed text-left select-none bg-slate-50 dark:bg-stone-800/60"
               style={{
                 backgroundColor: "var(--bg-subtle)",
                 borderColor: "var(--border-subtle)",
               }}
             >
               <div
-                className="w-8 h-8 rounded-xl flex items-center justify-center shrink-0"
+                className="w-8 h-8 rounded-xl flex items-center justify-center shrink-0 bg-slate-200 dark:bg-stone-700 text-slate-600 dark:text-slate-300"
                 style={{
                   backgroundColor: "var(--bg-card)",
                   color: "var(--text-dim)",
@@ -170,13 +194,13 @@ export function AppDownloadModal({ open, onClose }: AppDownloadModalProps) {
               </div>
               <div className="min-w-0">
                 <div
-                  className="text-[10px] uppercase font-semibold"
+                  className="text-[10px] uppercase font-semibold text-sky-600 dark:text-sky-400"
                   style={{ color: "var(--ocean)" }}
                 >
                   Coming Soon
                 </div>
                 <div
-                  className="text-xs font-bold truncate"
+                  className="text-xs font-bold truncate text-slate-400 dark:text-stone-500"
                   style={{ color: "var(--text-dim)" }}
                 >
                   App Store (iOS)
@@ -187,29 +211,33 @@ export function AppDownloadModal({ open, onClose }: AppDownloadModalProps) {
 
           {/* Real Scannable QR Code Section */}
           <div
-            className="p-3.5 rounded-2xl border flex items-center gap-3.5"
+            className="p-3.5 rounded-2xl border flex items-center gap-3.5 bg-slate-50 dark:bg-stone-800/60"
             style={{
               backgroundColor: "var(--bg-subtle)",
               borderColor: "var(--border-subtle)",
             }}
           >
-              <a href={APP_DOWNLOAD.landingUrl} aria-label="Mở trang tải ứng dụng AIVA" className="p-1.5 bg-white rounded-xl shadow-md shrink-0 border border-slate-200">
+            <a
+              href={APP_DOWNLOAD.landingUrl}
+              aria-label="Mở trang tải ứng dụng AIVA"
+              className="p-1.5 bg-white rounded-xl shadow-md shrink-0 border border-slate-200"
+            >
               <Image
                 src="/app/aiva-companion-qr.png"
                 alt="QR Code Tải App AIVA"
                 width={140}
                 height={140}
-                className="w-28 h-28 sm:w-36 sm:h-36 object-contain"
+                className="w-24 h-24 sm:w-28 sm:h-28 object-contain"
                 unoptimized
               />
             </a>
             <div>
               <div
-                className="text-xs font-bold mb-0.5 flex items-center gap-1"
+                className="text-xs font-bold mb-0.5 flex items-center gap-1 text-slate-800 dark:text-white"
                 style={{ color: "var(--text-on-glass)" }}
               >
                 <span
-                  className="material-symbols-outlined text-sm"
+                  className="material-symbols-outlined text-sm text-sky-600 dark:text-sky-400"
                   style={{ color: "var(--ocean)" }}
                 >
                   qr_code_scanner
@@ -217,7 +245,7 @@ export function AppDownloadModal({ open, onClose }: AppDownloadModalProps) {
                 Quét mã QR bằng điện thoại
               </div>
               <p
-                className="text-[11px] leading-relaxed"
+                className="text-[11px] leading-relaxed text-slate-600 dark:text-slate-300"
                 style={{ color: "var(--text-dim)" }}
               >
                 Quét mã để mở trang tải ứng dụng, sau đó chọn tải cho Android.
@@ -228,4 +256,6 @@ export function AppDownloadModal({ open, onClose }: AppDownloadModalProps) {
       </div>
     </div>
   );
+
+  return createPortal(content, document.body);
 }

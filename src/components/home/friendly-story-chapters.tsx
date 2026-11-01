@@ -14,6 +14,7 @@ import Link from "next/link";
 import { useI18n } from "@/lib/i18n/provider";
 import { useFpSceneSync } from "@/hooks/use-fp-scene-sync";
 import { AppDownloadModal } from "@/components/common/app-download-modal";
+import { APP_DOWNLOAD } from "@/lib/app-download";
 import { COLORS, GlassesPreview } from "@/components/home/color-picker-section";
 import "./friendly-story-chapters.css";
 
@@ -526,13 +527,58 @@ export function FriendlyParentChapter() {
               active={step}
               onSelect={setScene}
             />
-            <button
-              className="garden-button"
-              type="button"
-              onClick={() => setDownloadOpen(true)}
-            >
-              {c("Tải ứng dụng cho ba mẹ", "Get the parent app")} ↓
-            </button>
+
+            {/* Direct QR Code & Download Action Card */}
+            <div className="storybook-parent-download mt-4 flex items-center gap-3.5 p-3 sm:p-3.5 rounded-2xl bg-white/90 dark:bg-stone-900/90 border border-slate-200/80 dark:border-stone-700/80 shadow-md backdrop-blur-md">
+              <button
+                type="button"
+                onClick={() => setDownloadOpen(true)}
+                className="shrink-0 p-1.5 bg-white rounded-xl shadow-sm border border-slate-200 cursor-pointer hover:scale-105 transition-transform"
+                title={c("Bấm để phóng to mã QR", "Click to enlarge QR code")}
+              >
+                <Image
+                  src="/app/aiva-companion-qr.png"
+                  alt="Mã QR tải ứng dụng AIVA"
+                  width={84}
+                  height={84}
+                  className="w-16 h-16 sm:w-20 sm:h-20 object-contain rounded"
+                  unoptimized
+                />
+              </button>
+              <div className="flex-1 min-w-0">
+                <div className="flex items-center gap-1.5 text-xs sm:text-sm font-bold text-slate-800 dark:text-white">
+                  <span className="material-symbols-outlined text-base text-sky-600 dark:text-sky-400">
+                    qr_code_scanner
+                  </span>
+                  <span>{c("Quét mã QR tải ứng dụng", "Scan QR to get app")}</span>
+                </div>
+                <p className="text-[11px] sm:text-xs text-slate-600 dark:text-slate-300 mt-0.5 leading-snug">
+                  {c(
+                    "Dùng camera điện thoại quét mã hoặc bấm nút tải bên dưới.",
+                    "Scan with phone camera or tap download below."
+                  )}
+                </p>
+                <div className="mt-2.5 flex flex-wrap items-center gap-2">
+                  <a
+                    href={APP_DOWNLOAD.path}
+                    download={APP_DOWNLOAD.filename}
+                    className="inline-flex items-center gap-1 px-3 py-1.5 rounded-xl text-xs font-bold text-white shadow-sm hover:brightness-105 transition-all"
+                    style={{ background: "var(--gradient-ocean, #0284c7)" }}
+                  >
+                    <span className="material-symbols-outlined text-xs">download</span>
+                    {c("Tải APK Android", "Android APK")}
+                  </a>
+                  <button
+                    type="button"
+                    onClick={() => setDownloadOpen(true)}
+                    className="inline-flex items-center gap-1 px-3 py-1.5 rounded-xl text-xs font-medium border border-slate-300 dark:border-stone-600 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-stone-800 transition-colors"
+                  >
+                    <span>{c("Tùy chọn khác", "Options")}</span>
+                    <span className="material-symbols-outlined text-xs">open_in_new</span>
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

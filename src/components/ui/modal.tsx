@@ -1,6 +1,7 @@
 "use client";
 
-import { useCallback, useEffect, useRef, type ReactNode } from "react";
+import { useCallback, useEffect, useRef, useSyncExternalStore, type ReactNode } from "react";
+import { createPortal } from "react-dom";
 
 interface ModalProps {
   open: boolean;
@@ -9,8 +10,11 @@ interface ModalProps {
   title?: string;
 }
 
+const emptySubscribe = () => () => {};
+
 export function Modal({ open, onClose, children, title }: ModalProps) {
   const overlayRef = useRef<HTMLDivElement>(null);
+  const mounted = useSyncExternalStore(emptySubscribe, () => true, () => false);
 
   const handleKeyDown = useCallback(
     (e: KeyboardEvent) => {
@@ -30,30 +34,39 @@ export function Modal({ open, onClose, children, title }: ModalProps) {
     };
   }, [open, handleKeyDown]);
 
-  if (!open) return null;
+  if (!open || !mounted) return null;
 
-  return (
+  const content = (
     <div
       ref={overlayRef}
       onClick={(e) => {
         if (e.target === overlayRef.current) onClose();
       }}
-      className="fixed inset-0 z-[100] flex items-center justify-center p-4 backdrop-blur-sm"
-        style={{ backgroundColor: "var(--overlay-bg)" }}
+      className="fixed inset-0 z-[9999] flex items-center justify-center p-4 backdrop-blur-sm"
+      style={{ backgroundColor: "var(--overlay-bg, rgba(0, 0, 0, 0.6))" }}
     >
       <div
         className="relative w-full max-w-md rounded-2xl border animate-in fade-in zoom-in-95 duration-200"
         style={{
-          backgroundColor: "var(--modal-bg)",
-          borderColor: "var(--border-subtle)",
-          boxShadow: "var(--shadow-modal)"
+          backgroundColor: "var(--modal-bg, #ffffff)",
+          borderColor: "var(--border-subtle, rgba(0,0,0,0.1))",
+          boxShadow: "var(--shadow-modal, 0 25px 50px -12px rgba(0,0,0,0.25))",
         }}
       >
-        <div className="flex items-center justify-between px-6 py-4"
-          style={{ borderBottom: "1px solid", borderColor: "var(--border-subtle)" }}
+        <div
+          className="flex items-center justify-between px-6 py-4"
+          style={{
+            borderBottom: "1px solid",
+            borderColor: "var(--border-subtle, rgba(0,0,0,0.1))",
+          }}
         >
           {title ? (
-            <h3 className="text-lg font-bold tracking-[0.05em]" style={{ color: "var(--text-on-glass)" }}>{title}</h3>
+            <h3
+              className="text-lg font-bold tracking-[0.05em]"
+              style={{ color: "var(--text-on-glass)" }}
+            >
+              {title}
+            </h3>
           ) : (
             <div />
           )}
@@ -78,4 +91,6 @@ export function Modal({ open, onClose, children, title }: ModalProps) {
       </div>
     </div>
   );
+
+  return createPortal(content, document.body);
 }
