@@ -21,7 +21,10 @@ import {
 } from "@/components/home/friendly-story-chapters";
 import { FriendlyHome } from "@/components/home/friendly-home";
 import { SiteIntro, useSiteIntro } from "@/components/home/site-intro";
-import { useGardenStore } from "@/features/landing-garden/store/useGardenStore";
+import {
+  IS_GARDEN_3D_ENABLED,
+  useGardenStore,
+} from "@/features/landing-garden/store/useGardenStore";
 import { GardenJournalModal } from "@/features/landing-garden/components/garden-journal-modal";
 import { LandingModePill } from "@/features/landing-garden/components/landing-mode-pill";
 import { WelcomeRoleGate } from "@/components/home/welcome-role-gate";
@@ -66,13 +69,14 @@ export default function HomePage() {
 
   // Show role gate if user hasn't selected their role yet (first visit) or if opened via switch button, only after hydration
   const showRoleGate = isHydrated && !showIntro && (persona === null || roleModalOpen);
+  const is3DGardenActive = IS_GARDEN_3D_ENABLED && isHydrated && mode === "garden";
 
   // Only enable fullpage scroll coordinator when in standard scroll mode and no intro/gate blocking
-  useFullpageScroll(!showIntro && !showRoleGate && mode === "scroll");
+  useFullpageScroll(!showIntro && !showRoleGate && !is3DGardenActive);
 
   // Lock body scroll in 3D garden mode or while role gate is open
   useEffect(() => {
-    if ((isHydrated && mode === "garden") || showRoleGate) {
+    if (is3DGardenActive || showRoleGate) {
       document.body.style.overflow = "hidden";
       document.documentElement.style.overflow = "hidden";
     } else {
@@ -83,7 +87,7 @@ export default function HomePage() {
       document.body.style.overflow = "";
       document.documentElement.style.overflow = "";
     };
-  }, [isHydrated, mode, showRoleGate]);
+  }, [is3DGardenActive, showRoleGate]);
 
   return (
     <>
@@ -96,7 +100,7 @@ export default function HomePage() {
 
         {/* Animated View Transition between 3D Garden and Scroll Landing (framer-motion-aiva tokens) */}
         <AnimatePresence mode="wait">
-          {isHydrated && mode === "garden" ? (
+          {is3DGardenActive ? (
             /* MODE 1: 3D DISCOVERY GARDEN (Khu Vườn Khám Phá 3D) */
             <motion.main
               key="garden-mode-view"

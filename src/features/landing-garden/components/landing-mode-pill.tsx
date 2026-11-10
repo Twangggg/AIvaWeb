@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
-import { useGardenStore } from "../store/useGardenStore";
+import { IS_GARDEN_3D_ENABLED, useGardenStore } from "../store/useGardenStore";
 
 // Tokens from framer-motion-aiva skill
 const EASE_OUT_EXPO = [0.16, 1, 0.3, 1] as const;
@@ -10,6 +10,11 @@ const DUR_FAST = 0.35;
 export function LandingModePill() {
   const { mode, setMode } = useGardenStore();
   const is3D = mode === "garden";
+
+  // When 3D mode is disabled/under development, hide the floating toggle entirely
+  if (!IS_GARDEN_3D_ENABLED) {
+    return null;
+  }
 
   return (
     <div className="fixed top-3.5 right-4 sm:top-4 sm:right-6 z-50 pointer-events-none">

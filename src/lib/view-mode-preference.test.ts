@@ -69,4 +69,30 @@ describe("view-mode-preference", () => {
     playStore.hydrateFromStorage();
     expect(usePlayModeStore.getState().mode).toBe("scroll");
   });
+
+  it("locks usePlayModeStore to scroll mode even when global 3d mode is saved", () => {
+    const playStore = usePlayModeStore.getState();
+    saveGlobalViewMode("3d");
+    playStore.hydrateFromStorage();
+    expect(usePlayModeStore.getState().mode).toBe("scroll");
+
+    // setMode("3d") should also safely fallback to scroll mode while 3D play is disabled
+    playStore.setMode("3d");
+    expect(usePlayModeStore.getState().mode).toBe("scroll");
+  });
+
+  it("locks useGardenStore to scroll mode even when global 3d mode is saved", () => {
+    const gardenStore = useGardenStore.getState();
+    saveGlobalViewMode("3d");
+    gardenStore.initHydration();
+    expect(useGardenStore.getState().mode).toBe("scroll");
+
+    // setMode("garden") should also safely fallback to scroll mode while 3D is disabled
+    gardenStore.setMode("garden");
+    expect(useGardenStore.getState().mode).toBe("scroll");
+
+    // selectPersonaAndMode("student") should stay in scroll mode
+    gardenStore.selectPersonaAndMode("student");
+    expect(useGardenStore.getState().mode).toBe("scroll");
+  });
 });

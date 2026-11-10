@@ -13,6 +13,7 @@ import { PreorderModal } from "@/features/preorder/components/preorder-modal";
 import { PlayModeSwitcher } from "@/features/public-play/components/play-mode-switcher";
 import { KidDukyModal } from "@/features/public-play/components/duky/kid-duky-modal";
 import {
+  IS_PLAY_3D_ENABLED,
   usePlayModeStore,
   type StationId,
 } from "@/features/public-play/store/usePlayModeStore";
@@ -42,17 +43,25 @@ const PlaygroundCanvas = dynamic(
 
 export default function PublicPlayPage() {
   const router = useRouter();
-  const { mode, isHydrated, hydrateFromStorage, setDukyOpen, addStamp } =
-    usePlayModeStore();
+  const {
+    mode,
+    isHydrated,
+    hydrateFromStorage,
+    setDukyOpen,
+    addStamp,
+    unlockedStamps,
+  } = usePlayModeStore();
   const [preorderOpen, setPreorderOpen] = useState(false);
 
   useEffect(() => {
     hydrateFromStorage();
   }, [hydrateFromStorage]);
 
+  const is3DActive = IS_PLAY_3D_ENABLED && isHydrated && mode === "3d";
+
   // Manage body scroll based on 3D mode vs Scroll mode
   useEffect(() => {
-    if (isHydrated && mode === "3d") {
+    if (is3DActive) {
       document.body.style.overflow = "hidden";
       document.documentElement.style.overflow = "hidden";
     } else {
@@ -63,7 +72,7 @@ export default function PublicPlayPage() {
       document.body.style.overflow = "";
       document.documentElement.style.overflow = "";
     };
-  }, [isHydrated, mode]);
+  }, [is3DActive]);
 
   const openGame = (game: GameId) => {
     addStamp(game);
@@ -87,8 +96,8 @@ export default function PublicPlayPage() {
       <PlayModeSwitcher />
       <KidDukyModal onSelectStation={handleInteractStation} />
 
-      {/* MODE 1: 3D PLAYGROUND */}
-      {isHydrated && mode === "3d" ? (
+      {/* MODE 1: 3D PLAYGROUND (Disabled while under development) */}
+      {is3DActive ? (
         <main className="fixed inset-0 h-screen w-screen overflow-hidden">
           <PlaygroundCanvas onInteractStation={handleInteractStation} />
         </main>
@@ -100,6 +109,29 @@ export default function PublicPlayPage() {
             <div className="pointer-events-none absolute left-1/2 top-20 h-80 w-80 -translate-x-1/2 rounded-full bg-yellow-400/20 blur-[100px]" />
             <section className="relative mx-auto max-w-6xl play-lobby space-y-6">
               <FamilyGreeting topic="play" />
+
+              {/* Maintenance & Development Notice Banner */}
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-3.5 sm:p-4 rounded-2xl bg-amber-500/[0.08] dark:bg-amber-500/[0.12] border border-amber-500/25 text-stone-800 dark:text-stone-200">
+                <div className="flex items-center gap-2.5">
+                  <span className="text-xl">🛠️</span>
+                  <div>
+                    <p className="text-xs font-bold text-amber-900 dark:text-amber-300">
+                      Khu Vui Chơi 3D đang được đóng để nâng cấp &amp; phát triển
+                    </p>
+                    <p className="text-[11px] text-stone-600 dark:text-stone-400 mt-0.5">
+                      AIVA đang hoàn thiện không gian 3D tương tác. Bé và gia đình hãy cùng khám phá các trò chơi học tập bên dưới!
+                    </p>
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  onClick={() => setDukyOpen(true)}
+                  className="inline-flex items-center justify-center gap-2 rounded-xl border border-amber-600/30 bg-white dark:bg-stone-900 px-3.5 py-2 text-xs font-bold text-amber-900 dark:text-amber-200 shadow-sm transition hover:bg-amber-50 dark:hover:bg-stone-800 active:scale-95 shrink-0 cursor-pointer"
+                >
+                  <span>📖</span>
+                  <span>Sổ Du Ký &amp; Tem ({unlockedStamps.length}/6)</span>
+                </button>
+              </div>
 
               {/* Game Cards Grid */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 auto-rows-fr">

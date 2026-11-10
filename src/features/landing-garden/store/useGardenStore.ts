@@ -6,6 +6,13 @@ import {
 } from "@/lib/view-mode-preference";
 
 export type GardenMode = "garden" | "scroll";
+
+/**
+ * Feature flag for 3D garden landing experience.
+ * Disabled / closed while in development as requested.
+ */
+export const IS_GARDEN_3D_ENABLED = false;
+
 export type UserPersona = "parent" | "student";
 
 export type GardenStationId =
@@ -246,9 +253,11 @@ export const useGardenStore = create<GardenState>((set) => ({
       (localStorage.getItem("aiva_global_view_mode") !== null ||
         localStorage.getItem(STORAGE_MODE_KEY) !== null);
 
-    let nextMode: GardenMode = persona === "parent" ? "scroll" : "garden";
+    let nextMode: GardenMode =
+      !IS_GARDEN_3D_ENABLED || persona === "parent" ? "scroll" : "garden";
     if (hasExplicitMode) {
-      nextMode = savedGlobal === "3d" ? "garden" : "scroll";
+      nextMode =
+        IS_GARDEN_3D_ENABLED && savedGlobal === "3d" ? "garden" : "scroll";
     }
     set({ persona, mode: nextMode, roleModalOpen: false });
     try {
@@ -257,8 +266,9 @@ export const useGardenStore = create<GardenState>((set) => ({
     } catch {}
   },
   setMode: (mode) => {
-    set({ mode });
-    saveGlobalViewMode(mode === "garden" ? "3d" : "scroll");
+    const nextMode = !IS_GARDEN_3D_ENABLED && mode === "garden" ? "scroll" : mode;
+    set({ mode: nextMode });
+    saveGlobalViewMode(nextMode === "garden" ? "3d" : "scroll");
   },
   initHydration: () => {
     if (typeof window === "undefined") return;
@@ -267,7 +277,7 @@ export const useGardenStore = create<GardenState>((set) => ({
       gardenModeListenerAttached = true;
       const onModeChange = (e: Event) => {
         const detail = (e as CustomEvent<"scroll" | "3d">).detail;
-        if (detail === "scroll" || detail === "3d") {
+        if (detail === "scroll" || (detail === "3d" && IS_GARDEN_3D_ENABLED)) {
           set({ mode: detail === "3d" ? "garden" : "scroll" });
         }
       };
@@ -275,7 +285,7 @@ export const useGardenStore = create<GardenState>((set) => ({
       window.addEventListener("storage", (e) => {
         if (e.key === "aiva_global_view_mode" || e.key === STORAGE_MODE_KEY) {
           const next = getSavedGlobalViewMode();
-          set({ mode: next === "3d" ? "garden" : "scroll" });
+          set({ mode: IS_GARDEN_3D_ENABLED && next === "3d" ? "garden" : "scroll" });
         }
       });
     }
@@ -291,7 +301,8 @@ export const useGardenStore = create<GardenState>((set) => ({
         savedPersona === "parent" || savedPersona === "student" ? savedPersona : null;
 
       const globalViewMode = getSavedGlobalViewMode();
-      const resolvedMode: GardenMode = globalViewMode === "3d" ? "garden" : "scroll";
+      const resolvedMode: GardenMode =
+        IS_GARDEN_3D_ENABLED && globalViewMode === "3d" ? "garden" : "scroll";
 
       set((state) => ({
         isHydrated: true,

@@ -2,7 +2,7 @@
 
 import { useEffect, useSyncExternalStore } from "react";
 import { motion } from "motion/react";
-import { usePlayModeStore } from "../store/usePlayModeStore";
+import { IS_PLAY_3D_ENABLED, usePlayModeStore } from "../store/usePlayModeStore";
 
 // Tokens from framer-motion-aiva skill
 const EASE_OUT_EXPO = [0.16, 1, 0.3, 1] as const;
@@ -18,9 +18,13 @@ export function PlayModeSwitcher() {
     hydrateFromStorage();
   }, [hydrateFromStorage]);
 
+  // When 3D play mode is disabled/under development, hide the switcher entirely
+  if (!IS_PLAY_3D_ENABLED) {
+    return null;
+  }
+
   const is3D = mode === "3d";
 
-  // Before hydration, render with deterministic SSR state without animation mismatch
   return (
     <div className="fixed top-3.5 right-4 sm:top-4 sm:right-6 z-50 pointer-events-none">
       <div

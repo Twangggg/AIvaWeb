@@ -95,7 +95,7 @@ export function WelcomeRoleGate({ open, onClose, canDismiss = false }: WelcomeRo
                 {en ? "Student" : "Học sinh"}
               </span>
               <span className="text-xs text-zinc-500 dark:text-zinc-400 mt-1">
-                {en ? "3D Discovery Garden" : "Khu vườn 3D khám phá"}
+                {en ? "Explore AIVA" : "Khám phá thế giới AIVA"}
               </span>
             </button>
           </div>

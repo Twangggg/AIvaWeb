@@ -7,6 +7,12 @@ import {
 
 export type PlayMode = "3d" | "scroll";
 
+/**
+ * Feature flag for 3D playground game.
+ * Currently disabled / under development as requested.
+ */
+export const IS_PLAY_3D_ENABLED = false;
+
 export type StationId =
   | "avia-quiz"
   | "vision-quest"
@@ -103,8 +109,9 @@ let playModeListenerAttached = false;
 export const usePlayModeStore = create<PlayModeState>((set) => ({
   mode: "scroll", // Deterministic initial value across SSR and initial client render (scroll-first safe default)
   setMode: (mode) => {
-    set({ mode });
-    saveGlobalViewMode(mode);
+    const nextMode = !IS_PLAY_3D_ENABLED && mode === "3d" ? "scroll" : mode;
+    set({ mode: nextMode });
+    saveGlobalViewMode(nextMode);
   },
   nearbyStation: null,
   setNearbyStation: (nearbyStation) => set({ nearbyStation }),
@@ -140,7 +147,7 @@ export const usePlayModeStore = create<PlayModeState>((set) => ({
       playModeListenerAttached = true;
       const onModeChange = (e: Event) => {
         const detail = (e as CustomEvent<"scroll" | "3d">).detail;
-        if (detail === "scroll" || detail === "3d") {
+        if (detail === "scroll" || (detail === "3d" && IS_PLAY_3D_ENABLED)) {
           set({ mode: detail });
         }
       };
@@ -148,7 +155,7 @@ export const usePlayModeStore = create<PlayModeState>((set) => ({
       window.addEventListener("storage", (e) => {
         if (e.key === "aiva_global_view_mode" || e.key === STORAGE_MODE_KEY) {
           const next = getSavedGlobalViewMode();
-          set({ mode: next });
+          set({ mode: IS_PLAY_3D_ENABLED ? next : "scroll" });
         }
       });
     }
@@ -159,7 +166,7 @@ export const usePlayModeStore = create<PlayModeState>((set) => ({
       const savedName = localStorage.getItem(STORAGE_NAME_KEY);
       const updates: Partial<PlayModeState> = {
         isHydrated: true,
-        mode: savedMode,
+        mode: IS_PLAY_3D_ENABLED ? savedMode : "scroll",
       };
       if (savedStamps) {
         const parsed = JSON.parse(savedStamps);
