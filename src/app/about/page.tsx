@@ -155,6 +155,68 @@ const FSCHOOL_ACTIVITIES_ITEMS = [
   },
 ];
 
+const FPTU_ACTIVITIES_ITEMS = [
+  {
+    id: "fptu-photo-1",
+    src: "/activities/FPTU-CanTho/863471781_122136073167338894_5227908516427967607_n.jpg",
+    alt: "Không gian gian hàng và các bạn sinh viên tham gia thử thách cùng AIVA",
+    span: "md:col-span-7",
+    aspect: "aspect-[16/10]",
+  },
+  {
+    id: "fptu-photo-2",
+    src: "/activities/FPTU-CanTho/870640878_122136378753338894_5254323113943386824_n.jpg",
+    alt: "Trải nghiệm đeo kính thông minh AIVA và khám phá tính năng tương tác",
+    span: "md:col-span-5",
+    aspect: "aspect-[16/10] sm:aspect-[4/3] md:aspect-[16/10]",
+  },
+  {
+    id: "fptu-photo-3",
+    src: "/activities/FPTU-CanTho/870468783_122136380025338894_6982592475999728079_n.jpg",
+    alt: "Chinh phục thử thách Mật mã năng lượng và sáng tạo cùng Vẽ tiếp đi nào",
+    span: "md:col-span-5",
+    aspect: "aspect-[16/10] sm:aspect-[4/3] md:aspect-[16/10]",
+  },
+  {
+    id: "fptu-photo-4",
+    src: "/activities/FPTU-CanTho/870582835_122136380805338894_3747846795525196431_n.jpg",
+    alt: "Ghi nhận phản hồi thực tế và lưu giữ kỷ niệm cùng CLB F-AI",
+    span: "md:col-span-7",
+    aspect: "aspect-[16/10]",
+  },
+];
+
+const BINHMINH_ACTIVITIES_ITEMS = [
+  {
+    id: "binhminh-photo-1",
+    src: "/activities/THPTBinhMinh/855053266_122136512913338894_5432508632360490856_n.jpg",
+    alt: "Gặp gỡ và trao đổi cùng cô Hiệu trưởng Trường THPT Bình Minh",
+    span: "md:col-span-7",
+    aspect: "aspect-[16/10]",
+  },
+  {
+    id: "binhminh-photo-2",
+    src: "/activities/THPTBinhMinh/848787178_122136510351338894_7634439257958564484_n.jpg",
+    alt: "Ký biên bản bàn giao sản phẩm kính thông minh AIVA đầu tiên",
+    span: "md:col-span-5",
+    aspect: "aspect-[16/10] sm:aspect-[4/3] md:aspect-[16/10]",
+  },
+  {
+    id: "binhminh-photo-3",
+    src: "/activities/THPTBinhMinh/862347955_122136513009338894_6033024015743163423_n.jpg",
+    alt: "Giới thiệu nguyên mẫu và định hướng ứng dụng STEM cho học sinh THPT",
+    span: "md:col-span-5",
+    aspect: "aspect-[16/10] sm:aspect-[4/3] md:aspect-[16/10]",
+  },
+  {
+    id: "binhminh-photo-4",
+    src: "/activities/THPTBinhMinh/884080108_122136511023338894_7732893983390752590_n.jpg",
+    alt: "Cột mốc đáng nhớ đánh dấu sản phẩm đầu tiên của AIVA được đưa vào trường học",
+    span: "md:col-span-7",
+    aspect: "aspect-[16/10]",
+  },
+];
+
 /** Đoạn đường cong uốn lượn liên kết giữa các mục - Trực tiếp điều khiển theo thao tác cuộn (Scroll-driven) */
 function SectionConnectorRoad({
   variant = "team-to-survey",
@@ -163,7 +225,9 @@ function SectionConnectorRoad({
     | "team-to-survey"
     | "survey-to-event"
     | "event-to-school"
-    | "school-to-fschool";
+    | "school-to-fschool"
+    | "fschool-to-fptu"
+    | "fptu-to-binhminh";
 }) {
   const reduced = useReducedMotion();
   const containerRef = useRef<HTMLDivElement>(null);
@@ -192,23 +256,26 @@ function SectionConnectorRoad({
   });
   const [currentProgress, setCurrentProgress] = useState(0);
 
-  const roadPath =
-    variant === "survey-to-event" || variant === "school-to-fschool"
-      ? "M 200 0 C 320 80, 350 140, 240 180 C 130 220, 40 250, 110 320 C 180 370, 290 390, 230 440 C 200 465, 200 475, 200 480"
-      : "M 200 0 C 80 80, 50 140, 160 180 C 270 220, 360 250, 290 320 C 220 370, 110 390, 170 440 C 200 465, 200 475, 200 480";
+  const isCurveRight =
+    variant === "survey-to-event" ||
+    variant === "school-to-fschool" ||
+    variant === "fptu-to-binhminh";
 
-  const milestonePoints =
-    variant === "survey-to-event" || variant === "school-to-fschool"
-      ? [
-          { cx: 240, cy: 180, threshold: 0.35 },
-          { cx: 110, cy: 320, threshold: 0.68 },
-          { cx: 230, cy: 440, threshold: 0.9 },
-        ]
-      : [
-          { cx: 160, cy: 180, threshold: 0.35 },
-          { cx: 290, cy: 320, threshold: 0.68 },
-          { cx: 170, cy: 440, threshold: 0.9 },
-        ];
+  const roadPath = isCurveRight
+    ? "M 200 0 C 320 80, 350 140, 240 180 C 130 220, 40 250, 110 320 C 180 370, 290 390, 230 440 C 200 465, 200 475, 200 480"
+    : "M 200 0 C 80 80, 50 140, 160 180 C 270 220, 360 250, 290 320 C 220 370, 110 390, 170 440 C 200 465, 200 475, 200 480";
+
+  const milestonePoints = isCurveRight
+    ? [
+        { cx: 240, cy: 180, threshold: 0.35 },
+        { cx: 110, cy: 320, threshold: 0.68 },
+        { cx: 230, cy: 440, threshold: 0.9 },
+      ]
+    : [
+        { cx: 160, cy: 180, threshold: 0.35 },
+        { cx: 290, cy: 320, threshold: 0.68 },
+        { cx: 170, cy: 440, threshold: 0.9 },
+      ];
 
   // Đồng bộ vị trí của Mascot trực tiếp theo thao tác cuộn của người dùng
   useMotionValueEvent(smoothProgress, "change", (latest) => {
@@ -696,6 +763,180 @@ function FSchoolStoryGallery() {
   );
 }
 
+function FptuStoryGallery() {
+  return (
+    <section className="relative">
+      {/* Tiêu đề chặng FPTU Cần Thơ */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
+        className="max-w-2xl mx-auto text-center mb-10 sm:mb-14"
+      >
+        <div
+          className="inline-block px-3 py-1 rounded-full text-xs font-medium tracking-wider uppercase mb-4"
+          style={{
+            backgroundColor: "var(--ocean-alpha)",
+            color: "var(--ocean-glow)",
+          }}
+        >
+          Giao lưu & Trải nghiệm
+        </div>
+        <h3
+          className="text-2xl sm:text-3xl font-bold tracking-tight"
+          style={{ color: "var(--text-on-glass)" }}
+        >
+          Nhìn lại một ngày làm học sinh cùng AIVA
+        </h3>
+        <p
+          className="mt-3 text-sm sm:text-base leading-relaxed"
+          style={{ color: "var(--text-dim)" }}
+        >
+          Sự kiện ngày 29/10 đã mang đến không gian trải nghiệm sôi nổi với các
+          thử thách &ldquo;Mật mã năng lượng&rdquo;, &ldquo;Vẽ tiếp đi
+          nào!&rdquo; và cơ hội trực tiếp đeo thử kính thông minh AIVA. Sự đồng
+          hành của CLB F-AI cùng những chia sẻ thực tế từ các bạn sinh viên là
+          gợi ý thiết thực để nhóm tiếp tục hoàn thiện sản phẩm.
+        </p>
+      </motion.div>
+
+      {/* 4 Khung hình nghệ thuật xuất hiện theo nhịp mượt mà (không có chữ dưới ảnh) */}
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-4 sm:gap-6">
+        {FPTU_ACTIVITIES_ITEMS.map((item, idx) => (
+          <motion.div
+            key={item.id}
+            initial={{ opacity: 0, y: 35, scale: 0.96 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{
+              duration: 0.65,
+              delay: idx * 0.12,
+              ease: [0.16, 1, 0.3, 1],
+            }}
+            className={item.span}
+          >
+            <div
+              className={`relative ${item.aspect} w-full rounded-2xl sm:rounded-3xl overflow-hidden bg-[var(--bg-subtle)] border border-[var(--glass-border)] shadow-sm`}
+            >
+              <Image
+                src={item.src}
+                alt={item.alt}
+                fill
+                sizes="(min-width: 768px) 60vw, 100vw"
+                className="object-cover"
+              />
+            </div>
+          </motion.div>
+        ))}
+      </div>
+
+      {/* Thông điệp kết thúc chặng */}
+      <motion.div
+        initial={{ opacity: 0, y: 15 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.5, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+        className="mt-8 text-center"
+      >
+        <p
+          className="text-xs sm:text-sm font-medium tracking-wide"
+          style={{ color: "var(--ocean-glow)" }}
+        >
+          AIVA — Học từ thế giới thật.
+        </p>
+      </motion.div>
+    </section>
+  );
+}
+
+function BinhMinhStoryGallery() {
+  return (
+    <section className="relative">
+      {/* Tiêu đề chặng THPT Bình Minh */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
+        className="max-w-2xl mx-auto text-center mb-10 sm:mb-14"
+      >
+        <div
+          className="inline-block px-3 py-1 rounded-full text-xs font-medium tracking-wider uppercase mb-4"
+          style={{
+            backgroundColor: "var(--ocean-alpha)",
+            color: "var(--ocean-glow)",
+          }}
+        >
+          Cột mốc bàn giao
+        </div>
+        <h3
+          className="text-2xl sm:text-3xl font-bold tracking-tight"
+          style={{ color: "var(--text-on-glass)" }}
+        >
+          Chiếc kính đầu tiên đã tìm được điểm đến
+        </h3>
+        <p
+          className="mt-3 text-sm sm:text-base leading-relaxed"
+          style={{ color: "var(--text-dim)" }}
+        >
+          Nhóm AIVA đã trực tiếp đến Trường THPT Bình Minh (Vĩnh Long) để gặp gỡ
+          cô Hiệu trưởng, trao đổi và ký biên bản bàn giao chiếc kính thông minh
+          đầu tiên. Cột mốc đáng nhớ mở ra hướng ứng dụng AIVA tại bậc THPT, hỗ
+          trợ các bạn học sinh tiếp cận STEM, trí tuệ nhân tạo và tương tác âm
+          thanh qua trải nghiệm thực tế.
+        </p>
+      </motion.div>
+
+      {/* 4 Khung hình nghệ thuật xuất hiện theo nhịp mượt mà (không có chữ dưới ảnh) */}
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-4 sm:gap-6">
+        {BINHMINH_ACTIVITIES_ITEMS.map((item, idx) => (
+          <motion.div
+            key={item.id}
+            initial={{ opacity: 0, y: 35, scale: 0.96 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{
+              duration: 0.65,
+              delay: idx * 0.12,
+              ease: [0.16, 1, 0.3, 1],
+            }}
+            className={item.span}
+          >
+            <div
+              className={`relative ${item.aspect} w-full rounded-2xl sm:rounded-3xl overflow-hidden bg-[var(--bg-subtle)] border border-[var(--glass-border)] shadow-sm`}
+            >
+              <Image
+                src={item.src}
+                alt={item.alt}
+                fill
+                sizes="(min-width: 768px) 60vw, 100vw"
+                className="object-cover"
+              />
+            </div>
+          </motion.div>
+        ))}
+      </div>
+
+      {/* Thông điệp kết thúc chặng */}
+      <motion.div
+        initial={{ opacity: 0, y: 15 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.5, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+        className="mt-8 text-center"
+      >
+        <p
+          className="text-xs sm:text-sm font-medium tracking-wide"
+          style={{ color: "var(--ocean-glow)" }}
+        >
+          AIVA — Học từ thế giới thật.
+        </p>
+      </motion.div>
+    </section>
+  );
+}
+
 function AboutUs() {
   const { t } = useI18n();
 
@@ -839,6 +1080,18 @@ function AboutUs() {
 
         {/* Cảm ơn Sóc Trăng vì cuộc hẹn cùng AIVA */}
         <FSchoolStoryGallery />
+
+        {/* Đoạn đường uốn lượn liên kết giữa Fschool Sóc Trăng và FPTU Cần Thơ */}
+        <SectionConnectorRoad variant="fschool-to-fptu" />
+
+        {/* Một ngày làm học sinh cùng AIVA */}
+        <FptuStoryGallery />
+
+        {/* Đoạn đường uốn lượn liên kết giữa FPTU Cần Thơ và THPT Bình Minh */}
+        <SectionConnectorRoad variant="fptu-to-binhminh" />
+
+        {/* Chiếc kính đầu tiên đã tìm được điểm đến */}
+        <BinhMinhStoryGallery />
 
         <div className="mt-20 text-center">
           <div
