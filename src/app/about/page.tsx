@@ -163,7 +163,7 @@ function LeftJourneyProgress() {
           </div>
         </div>
 
-        {/* Nhãn báo hiệu còn bài bên dưới */}
+        {/* Nút mũi tên chuyển nhanh đến bài viết tiếp theo */}
         <AnimatePresence>
           {hasMoreBelow && (
             <motion.button
@@ -178,18 +178,18 @@ function LeftJourneyProgress() {
                   scrollToMilestone(MILESTONES[nextIdx].id);
                 }
               }}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] font-medium backdrop-blur-md border border-[var(--glass-border)] shadow-sm self-center text-[var(--text-dim)] bg-[var(--glass-bg)] hover:text-[var(--ocean-glow)] hover:border-[var(--ocean-glow)]/50 transition-all cursor-pointer"
-              title="Nhấn để cuộn đến bài viết tiếp theo"
+              className="flex items-center justify-center w-7 h-7 rounded-full backdrop-blur-md border border-[var(--glass-border)] shadow-sm self-center text-[var(--ocean-glow)] bg-[var(--glass-bg)] hover:border-[var(--ocean-glow)]/60 hover:scale-105 transition-all cursor-pointer"
+              title="Cuộn đến bài viết tiếp theo"
+              aria-label="Cuộn đến bài viết tiếp theo"
             >
-              <span>Còn bài dưới</span>
               <motion.span
-                animate={{ y: [0, 3, 0] }}
+                animate={{ y: [0, 2, 0] }}
                 transition={{
                   repeat: Infinity,
                   duration: 1.5,
                   ease: "easeInOut",
                 }}
-                className="text-xs text-[var(--ocean-glow)]"
+                className="text-sm leading-none"
               >
                 ↓
               </motion.span>
