@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import {
+  AnimatePresence,
   motion,
   useMotionValueEvent,
   useReducedMotion,
@@ -16,6 +17,189 @@ import { Nav } from "@/components/common/nav";
 import { Footer } from "@/components/common/footer";
 import { PreorderModal } from "@/features/preorder/components/preorder-modal";
 import { useI18n } from "@/lib/i18n/provider";
+
+const MILESTONES = [
+  { id: "story-team", title: "Đội ngũ sáng lập" },
+  { id: "story-survey", title: "Khảo sát Cần Thơ" },
+  { id: "story-event", title: "Sự kiện AI ơi" },
+  { id: "story-school", title: "TH Trung Hiệp" },
+  { id: "story-fschool", title: "Fschool Sóc Trăng" },
+  { id: "story-fptu", title: "ĐH FPT Cần Thơ" },
+  { id: "story-binhminh", title: "THPT Bình Minh" },
+];
+
+/** Thanh tiến trình hành trình bên trái màn hình giúp người xem theo dõi và biết còn bài ở dưới */
+function LeftJourneyProgress() {
+  const { scrollYProgress } = useScroll();
+  const smoothProgress = useSpring(scrollYProgress, {
+    stiffness: 160,
+    damping: 24,
+    restDelta: 0.001,
+  });
+
+  const [activeId, setActiveId] = useState<string>("story-team");
+  const [currentProgress, setCurrentProgress] = useState(0);
+
+  useMotionValueEvent(smoothProgress, "change", (latest) => {
+    setCurrentProgress(latest);
+  });
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + window.innerHeight * 0.35;
+      for (let i = MILESTONES.length - 1; i >= 0; i--) {
+        const el = document.getElementById(MILESTONES[i].id);
+        if (el) {
+          const top = el.getBoundingClientRect().top + window.scrollY;
+          if (scrollPosition >= top) {
+            setActiveId(MILESTONES[i].id);
+            break;
+          }
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToMilestone = (id: string) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
+  const hasMoreBelow = currentProgress < 0.88;
+
+  return (
+    <>
+      {/* Mobile/Tablet: Thanh vệt tiến trình siêu mỏng ở mép trái màn hình */}
+      <div
+        className="fixed left-1 top-24 bottom-24 w-1 rounded-full bg-[var(--glass-border)]/50 z-40 pointer-events-none lg:hidden"
+        aria-hidden="true"
+      >
+        <motion.div
+          className="w-full bg-gradient-to-b from-[var(--ocean)] via-[var(--ocean-glow)] to-[var(--ocean)] rounded-full origin-top shadow-[0_0_8px_var(--ocean-glow)]"
+          style={{ height: "100%", scaleY: smoothProgress }}
+        />
+      </div>
+
+      {/* Desktop: Cột mốc hành trình trực quan bên trái */}
+      <nav
+        aria-label="Tiến trình hành trình AIVA"
+        className="hidden lg:flex fixed left-4 xl:left-7 top-1/2 -translate-y-1/2 z-40 flex-col items-start gap-3 select-none"
+      >
+        <div
+          className="relative flex flex-col items-center py-4 px-2.5 rounded-full backdrop-blur-md"
+          style={{
+            backgroundColor: "var(--glass-bg)",
+            border: "1px solid var(--glass-border)",
+            boxShadow: "0 8px 32px 0 rgba(0, 0, 0, 0.08)",
+          }}
+        >
+          {/* Đường ray nền */}
+          <div
+            className="absolute top-4 bottom-4 w-[2px] bg-[var(--glass-border)] rounded-full left-1/2 -translate-x-1/2"
+            aria-hidden="true"
+          />
+
+          {/* Dải tiến trình lấp đầy theo cuộn trang */}
+          <motion.div
+            className="absolute top-4 w-[2px] bg-gradient-to-b from-[var(--ocean)] via-[var(--ocean-glow)] to-[var(--ocean)] rounded-full left-1/2 -translate-x-1/2 origin-top shadow-[0_0_8px_var(--ocean-glow)]"
+            style={{
+              bottom: "16px",
+              scaleY: smoothProgress,
+            }}
+            aria-hidden="true"
+          />
+
+          {/* Các điểm mốc bài viết */}
+          <div className="relative z-10 flex flex-col gap-5 items-center">
+            {MILESTONES.map((m, idx) => {
+              const isActive = activeId === m.id;
+              return (
+                <button
+                  key={m.id}
+                  onClick={() => scrollToMilestone(m.id)}
+                  className="group relative flex items-center justify-center p-1 cursor-pointer focus:outline-none"
+                  aria-label={`Chuyển đến ${m.title}`}
+                >
+                  {/* Vòng sáng khi đang ở bài này */}
+                  {isActive && (
+                    <motion.span
+                      layoutId="activeMilestoneIndicator"
+                      className="absolute w-5 h-5 rounded-full border border-[var(--ocean-glow)]/80"
+                      transition={{ duration: 0.25 }}
+                    />
+                  )}
+
+                  {/* Nút điểm mốc */}
+                  <span
+                    className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+                      isActive
+                        ? "bg-[var(--ocean-glow)] scale-125 shadow-[0_0_10px_var(--ocean-glow)]"
+                        : "bg-[var(--glass-border)] group-hover:bg-[var(--ocean)] group-hover:scale-110"
+                    }`}
+                  />
+
+                  {/* Tooltip hiển thị tên bài viết */}
+                  <span
+                    className={`absolute left-8 px-2.5 py-1 rounded-md text-xs whitespace-nowrap transition-all duration-200 pointer-events-none backdrop-blur-md shadow-sm border border-[var(--glass-border)] ${
+                      isActive
+                        ? "opacity-100 translate-x-0 font-semibold text-[var(--ocean-glow)] bg-[var(--glass-bg)]"
+                        : "opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 text-[var(--text-dim)] bg-[var(--glass-bg)]"
+                    }`}
+                  >
+                    <span className="opacity-60 text-[10px] mr-1.5 font-mono">
+                      0{idx + 1}
+                    </span>
+                    {m.title}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* Nhãn báo hiệu còn bài bên dưới */}
+        <AnimatePresence>
+          {hasMoreBelow && (
+            <motion.button
+              type="button"
+              initial={{ opacity: 0, y: -4 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -4 }}
+              onClick={() => {
+                const nextIdx =
+                  MILESTONES.findIndex((m) => m.id === activeId) + 1;
+                if (nextIdx < MILESTONES.length) {
+                  scrollToMilestone(MILESTONES[nextIdx].id);
+                }
+              }}
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] font-medium backdrop-blur-md border border-[var(--glass-border)] shadow-sm self-center text-[var(--text-dim)] bg-[var(--glass-bg)] hover:text-[var(--ocean-glow)] hover:border-[var(--ocean-glow)]/50 transition-all cursor-pointer"
+              title="Nhấn để cuộn đến bài viết tiếp theo"
+            >
+              <span>Còn bài dưới</span>
+              <motion.span
+                animate={{ y: [0, 3, 0] }}
+                transition={{
+                  repeat: Infinity,
+                  duration: 1.5,
+                  ease: "easeInOut",
+                }}
+                className="text-xs text-[var(--ocean-glow)]"
+              >
+                ↓
+              </motion.span>
+            </motion.button>
+          )}
+        </AnimatePresence>
+      </nav>
+    </>
+  );
+}
 
 const SURVEY_ITEMS = [
   {
@@ -435,7 +619,7 @@ function SectionConnectorRoad({
 
 function SurveyStoryGallery() {
   return (
-    <section className="relative">
+    <section id="story-survey" className="relative scroll-mt-24">
       {/* Tiêu đề phần khảo sát thực địa */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -504,7 +688,7 @@ function SurveyStoryGallery() {
 
 function EventStoryGallery() {
   return (
-    <section className="relative">
+    <section id="story-event" className="relative scroll-mt-24">
       {/* Tiêu đề sự kiện */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -590,7 +774,7 @@ function EventStoryGallery() {
 
 function SchoolStoryGallery() {
   return (
-    <section className="relative">
+    <section id="story-school" className="relative scroll-mt-24">
       {/* Tiêu đề chặng hợp tác học đường */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -677,7 +861,7 @@ function SchoolStoryGallery() {
 
 function FSchoolStoryGallery() {
   return (
-    <section className="relative">
+    <section id="story-fschool" className="relative scroll-mt-24">
       {/* Tiêu đề chặng FSchool Sóc Trăng */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -765,7 +949,7 @@ function FSchoolStoryGallery() {
 
 function FptuStoryGallery() {
   return (
-    <section className="relative">
+    <section id="story-fptu" className="relative scroll-mt-24">
       {/* Tiêu đề chặng FPTU Cần Thơ */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -852,7 +1036,7 @@ function FptuStoryGallery() {
 
 function BinhMinhStoryGallery() {
   return (
-    <section className="relative">
+    <section id="story-binhminh" className="relative scroll-mt-24">
       {/* Tiêu đề chặng THPT Bình Minh */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -1012,7 +1196,7 @@ function AboutUs() {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div id="story-team" className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 scroll-mt-24">
           {TEAM.map((member, index) => (
             <EditorialPanel
               key={member.name}
@@ -1174,6 +1358,7 @@ export default function AboutPage() {
   return (
     <>
       <Nav onPreorder={() => setPreorderOpen(true)} />
+      <LeftJourneyProgress />
       <main className="family-page min-h-screen">
         <AboutUs />
       </main>
